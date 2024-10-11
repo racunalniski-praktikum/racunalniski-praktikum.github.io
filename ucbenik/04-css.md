@@ -104,11 +104,11 @@ Dodatni viri:
 
 ### Merske enote
 
-Velikosti in razdalje na spletnih straneh podajamo bodisi z absolutnimi enotami, bodisi z relativnimi enotami.
-Primera:
+Velikosti in razdalje na spletnih straneh podajamo bodisi z absolutnimi enotami bodisi z relativnimi enotami.
+Primeri:
 
 * [točke na zaslonu](https://en.wikipedia.org/wiki/Pixel):`200px` pomeni točno 200 točk na zaslonu.
-* enota [em](https://en.wikipedia.org/wiki/Em_(typography)): `2em` pomeni 2-krat velikost pisave: _v primeru določanja velikosti pisave_ glede na velikost pisave na enem nivoju višje (če pa ta ni določena, pa glede na privzeto velikost pisave v brskalniku), _v primeru določanje širine elementa_ pa glede na velikost pisave v elementu.
+* Enota [em](https://en.wikipedia.org/wiki/Em_(typography)): `2em` pomeni 2-krat velikost pisave: _v primeru določanja velikosti pisave_ glede na velikost pisave na enem nivoju višje (če pa ta ni določena, pa glede na privzeto velikost pisave v brskalniku), _v primeru določanje širine elementa_ pa glede na velikost pisave v elementu.
 * Še ena relativna enota, ki se pogosto uporablja, je `%`. Pri pisavah se obnaša podobno kot `em` (`200%` je enako kot `2em`). V primeru določanje širine elementa se računa glede na širino elementa na enem nivoju višje.
 
 Več o tem boste izvedeli tudi pri posameznih nalogah in v dodatnih virih:
