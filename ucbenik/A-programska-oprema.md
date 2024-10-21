@@ -13,7 +13,7 @@ Priporočamo se za pripombe in popravke (ki jih predlagajte na Discordu, na foru
 (namestitev:ukazna)=
 ## Orodja za ukazno vrstico
 
-Sledite navodilom za vaš operacijski sistem, nato pa še [navodilom za nastavitve za `git`](faq:git-nastavitve).
+Sledite navodilom za vaš operacijski sistem, nato pa še [navodilom za nastavitve za `git`](git:nastavitve).
 
 ### Navodila za operacijski sistem Windows
 
@@ -63,7 +63,7 @@ Pri namestitvi bodite pozorni na možnosti, še posebej na to, da imate obkljuka
 * Ne uporabljajte namestitve z ZIP datoteko, ker se stvari ne bodo pravilno nastavile.
 * Prenesli ste `.exe` datoteko, ki jo poženete kot adminstrator za vse uporabnike.
 * Ena od nastavitev pri namestivi sprašuje, ali naj se VSCode doda v `PATH`. Tu **morate odgovoriti pritrdilno**. ([Kaj je `PATH`?](https://en.wikipedia.org/wiki/PATH_(variable)))
-* Priporočamo, da naredite asociacijo med VSCode in tipi datotek, ki jih znan urejati (angl. _file associations_).
+* Priporočamo, da naredite asociacijo med VSCode in tipi datotek, ki jih zna urejati (angl. _file associations_).
 
 ### Dodatna navodila za operacijski sistem MacOS
 
