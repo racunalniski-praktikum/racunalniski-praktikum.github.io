@@ -117,6 +117,8 @@ HTML značke lahko pišemo bodisi z velikimi ali malimi črkami.
 Običajno pišemo vse z malo, razen značke `DOCTYPE`.
 Tudi mi se bomo držali tega dogovora.
 
+Če tega še niste naredili, [pripravite svoj računalnik za delo z Git-om](git:vscode).
+
 Če ste sledili domači nalogi in vajam, imate dva repozitorija:
 tistega iz domače naloge, ki ste ga večinoma poimenovali `racunalniski-praktikum`,
 ter kopijo repozitorija `rp-git-zgodba`, ki ste ga uporabili na prejšnjih vajah.
