@@ -234,7 +234,7 @@ boste skoraj gotovo rešitev našli na spletu.
 ## Domača naloga
 
 0. Na svojem GitHub repozitoriju dodajte dostop uporabniku
-   `` po [navodilih v GitHub dokumentaciji](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository).
+   `ul-fmf-bot` po [navodilih v GitHub dokumentaciji](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository).
 1. Rešite [HTML in CSS](04-css/dn-html-css.zip) nalogo,
    da dobite občutek, kako bodo izgledale naloge na izpitu.
    Na pravem izpitu bo morda naloga nekoliko težja, ker boste že več znali.
