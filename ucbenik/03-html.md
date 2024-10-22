@@ -117,9 +117,14 @@ HTML značke lahko pišemo bodisi z velikimi ali malimi črkami.
 Običajno pišemo vse z malo, razen značke `DOCTYPE`.
 Tudi mi se bomo držali tega dogovora.
 
-Najprej [pripravite svoj računalnik za delo z Git-om](git:vscode).
+Če tega še niste naredili, [pripravite svoj računalnik za delo z Git-om](git:vscode).
 
-1. V VSCode odprite imenik s svojim repozitorijem.
+Če ste sledili domači nalogi in vajam, imate dva repozitorija:
+tistega iz domače naloge, ki ste ga večinoma poimenovali `racunalniski-praktikum`,
+ter kopijo repozitorija `rp-git-zgodba`, ki ste ga uporabili na prejšnjih vajah.
+Prvega bomo še naprej uporabljali na vajah.
+
+1. V VSCode odprite imenik s svojim repozitorijem (verjetno ste mu dali ime `racunalniski-praktikum`).
    V njem naredite nov imenik `03-html`, v njem pa novo datoteko `stran.html` in jo odprite.
    V urejevalniku odprite okno _Problems_.
    Spodaj levo lahko kliknete na ikoni s križcem v krogu in klicajem v trikotniku, 

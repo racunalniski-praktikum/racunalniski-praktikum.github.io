@@ -81,7 +81,6 @@ Domača naloga
 - [ ] Izberite si še tri bližnjice, ki jih še ne uporabljate redno, in se jih naučite. 
       Dodajte jih v prvi razdelek tega dokumenta.
 - [ ] Sinhronizirajte spremembe z repozitorijem na GitHubu: najprej naredite `commit` (smiselno sporočilo bi bilo npr. "dopolni README z vajami za Markdown"), nato pa še `push`.
-- [ ] Imenik z repozitorijem stisnite v arhiv, ga preimenujte v nekaj oblike `ImePriimek.zip` in ga oddajte na učilnico.
 
 <!-- 2. nivojski razdelek -->
 Uporabne povezave
@@ -110,10 +109,11 @@ in sledite spodnjim navodilom.
 6. V razdelku "Uporabne povezave" oblikujte oštevilčen seznam.
 7. V seznamu oblikujte povezave. V vsaki vrstici je po ena povezava: besedilo naj bo besedilo povezave (tisto, kar kliknemo), 
    naslov v komentarju pa naj bo tarča povezave (tja, kamor nas povezava pelje).
-8. Razmislite, kako boste prenašali svoje datoteke med računalniki v računalniških učilnicah in svojim računalnikom doma. 
-   Možne rešitve so Dropbox, Google Drive, OneDrive (uporabljate lahko vmesnik v brskalniku) in podobno, ter pošiljanje datotek po elektronski pošti. 
+8. Razmislite, kako boste na domač računalnik prenesli datoteko, ki ste jo pripravili, da boste lahko naredili domačo nalogo.
+   Možne rešitve so Dropbox, Google Drive, OneDrive (uporabljate lahko vmesnik v brskalniku) in podobno, ter pošiljanje datotek po elektronski pošti.
    Shranjevanje na USB ključek odsvetujemo. Za malo naprednejše uporabnike seveda priporočamo git.
-   Datoteko, ki ste jo pripravili, shranite tako, da boste lahko naredili domačo nalogo.
+   
+   
 
 ## Git, orodje za nadzor različic
 
