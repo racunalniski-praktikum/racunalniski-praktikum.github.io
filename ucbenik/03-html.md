@@ -292,12 +292,12 @@ kot pri enem samem kurzorju.
 4. Formula, ki ste jo ravnokar napisali, je zapisana v posebni sintaksi
    oz. kontroliranem jeziku, ki omogoča računalniku, da vsaj do neke mere razume, kaj želimo narediti.
    Poskusite razbrati, kako deluje sintaksa matematičnega izraza zgoraj.
-   Najdete ukaze in parametre, ter kako so označeni?
+   Najdete ukaze in parametre ter kako so označeni?
 
 5. Pomagajte si s formulo zgoraj, da napišete enačbo $e^{i\pi} + 1 = 0$ 
    (poskusite uganiti, kako bi napisali črko $\pi$).
 
-6. Sklicevanje znotraj dokumenta naredimo z značkami `a`, kjer želimo, da je povezava
+6. Sklicevanje znotraj dokumenta naredimo z značkami `a`, kjer želimo, da je povezava,
    in atributi `id`, kamor želimo, da povezava kaže.
    Če naslovu "Criticism" dodamo atribut `id` z vrednostjo `criticism` takole: 
    `<h2 id="criticism">Criticism</h2>`, nas bo povezava `<a href="#criticism">Criticism</a>`
