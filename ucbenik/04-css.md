@@ -62,7 +62,7 @@ Prav vam bodo prišli spodnji enostavni izbiralci
   ima več oblik, tu omenimo samo dve najenostavnejši:
     - `[⟨atribut⟩]` izbere vse značke v dokumentu, ki imajo atribut `atribut`,
     - `[⟨atribut⟩=⟨vrednost⟩]` izbere vse značke v dokumentu, ki imajo atribut `atribut`, z vrednostjo `vrednost`.
-- [Izbiralec za razrede]() `.⟨razred⟩` (angl. _class selector_) izbere vse značke v dokumentu, ki imajo atribut `class` z vrednostjo `razred`.
+- [Izbiralec za razrede](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) `.⟨razred⟩` (angl. _class selector_) izbere vse značke v dokumentu, ki imajo atribut `class` z vrednostjo `razred`.
 - [Izbiralec po identifikatorju](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) `#⟨id-elementa⟩` 
   (angl. _ID selector_) izbere natanko tisto značko v dokumentu, ki ima atribut `id` z vrednostjo `id-elementa`.
 - [Univerzalni izbiralec](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) `*` (angl. _universal selector_), 
@@ -151,7 +151,7 @@ Bližnjice so:
 ## 2. naloga: oblikovanje dokumenta
 
  1. V datoteki `oblikovanje.css` dodajte deklaracijo za naslove `h1`, v katerem določite barvo pisave, npr. na `#330066`.
- 2. Na strani _The standard CSS box model_ je lep diagram robov okrog elementov:
+ 2. Na strani [The standard CSS box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#the_standard_css_box_model) je lep diagram robov okrog elementov:
     `padding` je prazen prostor med robom elementa in vsebino,
     `border` je rob, ki mu lahko določimo npr. širino, stil in barvo,
     `margin` prazen prostor na zunanji strani roba.
