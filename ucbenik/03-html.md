@@ -172,7 +172,7 @@ Tudi mi se bomo držali tega dogovora.
       Kadar zabeležite spremembo (naredite _commit_), 
       se v repozitorij shranijo natanko spremembe, ki so naštete pod tem napisom.
       Da naredite commit, napišite sporočilo v vnosno polje nad gumbom <kbd>Commit</kbd>,
-      v katerem v nekaj besedah opišete, kaj ste naredili, npr. `Pripravil strukturo HTML dokumenta`.
+      v katerem v nekaj besedah opišete, kaj ste naredili, npr. `Pripravil/a strukturo HTML dokumenta`.
 
 Za reševanje skupaj: na tablo narišite drevesno strukturo značk.
 
