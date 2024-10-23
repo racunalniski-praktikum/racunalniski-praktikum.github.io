@@ -10,7 +10,7 @@ Po tem načelu se vizualni in oblikovni vidiki (predstavitev in slog) ločijo od
 Različni brskalniki imajo različne načine za prikazovanje nekaterih elementov spletnih strani.
 Zato skoraj vse spletne strani najprej uporabijo CSS, ki poenoti prikazovanje elementov.
 Take CSS datoteke skoraj nihče ne naredi od začetka, ampak se uporabi eno od že obstoječih, kar bomo naredili tudi mi.
-V resnici se ponavadi uporabi kar enego od obstoječih ogrodij za izdelavo spletnih strani (npr. Bootstrap).
+V resnici se ponavadi uporabi kar eno od obstoječih ogrodij za izdelavo spletnih strani (npr. Bootstrap).
 
 `````{admonition} Programska oprema
 :class: important
@@ -234,7 +234,7 @@ boste skoraj gotovo rešitev našli na spletu.
 ## Domača naloga
 
 0. Na svojem GitHub repozitoriju dodajte dostop uporabniku
-   `` po [navodilih v GitHub dokumentaciji](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository).
+   `ul-fmf-bot` po [navodilih v GitHub dokumentaciji](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository).
 1. Rešite [HTML in CSS](04-css/dn-html-css.zip) nalogo,
    da dobite občutek, kako bodo izgledale naloge na izpitu.
    Na pravem izpitu bo morda naloga nekoliko težja, ker boste že več znali.
