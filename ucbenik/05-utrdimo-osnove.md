@@ -105,36 +105,36 @@ V tej nalogi boste postavili svojo stran.
    Repozitorij klonirajte z urejevalnikom VSCode.
 2. V repozitoriju naredite novo HTML datoteko z imenom `index.html`.
    Ime je pomembno, spletna stran sicer ne bo delovala.
-   V datoteko lahko prilepite osnovno vsebino 
-   ```
-<!DOCTYPE html>
-<html lang="sl">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Moja spletna stran</title>
-   <style>
-       body {
-           font-family: Arial, sans-serif;
-           color: #333;
-           text-align: center;
-           padding: 20px;
-       }
-       h1 {
-           color: #0077cc;
-           margin-bottom: 20px;
-       }
-       p {
-           font-size: 1.2em;
-           margin-bottom: 10px;
-       }
-   </style>
-</head>
-<body>
-   <h1>Naslov polepša stran</h1>
-   <p>Tu lahko kaj napišete, ali pa tudi ne.</p>
-</body>
-</html>
+   V datoteko lahko prilepite spodnjo vsebino in jo po želji popravite.
+   ```html
+   <!DOCTYPE html>
+   <html lang="sl">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Moja spletna stran</title>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+         }
+         h1 {
+            color: #0077cc;
+            margin-bottom: 20px;
+         }
+         p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Naslov polepša stran</h1>
+      <p>Tu lahko kaj napišete, ali pa tudi ne.</p>
+   </body>
+   </html>
    ```
 3. [Zabeležite spremembe](git:osnovni-ukazi) in jih pošljite na strežnik.
 4. V brskalniku obiščite svoj repozitorij in pojdite na zavihek _Settings_.
