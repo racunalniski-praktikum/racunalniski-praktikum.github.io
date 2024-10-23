@@ -228,7 +228,7 @@ kot pri enem samem kurzorju.
  4. Z ustreznimi značkami označite še podnaslove (`h2`) 
     "Details", "Pot and bowl", "Criticism" in "Competing standards".
     in podpodnaslov (`h3`) "Contents" na začetku besedila.
-    _Namig:_ <kbd>Alt</kbd>/<kbd>Option</kbd> + desni klik
+    _Namig:_ <kbd>Alt</kbd>/<kbd>Option</kbd> + levi klik
 
  5. Pod podpodnaslovom "Contents" so našteta podpoglavja. Oblikovali bomo preprost seznam vsebine.
     Najprej bomo pomočjo večih kurzorjev vsako vrstico s podpoglavjem obdali z značko.
