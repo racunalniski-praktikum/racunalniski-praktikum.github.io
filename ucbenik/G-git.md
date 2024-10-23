@@ -15,7 +15,8 @@ povezave na dokumentacijo za posamezne ukaze pa so spodaj.
   zbira datoteke s spremembami, ki jih želite vključiti v naslednjo zabeleženo spremembo. 
   V ukazno vrstico napišete `git add`, in naštejete datoteke, s spremembami, ki jih želite vključiti, npr.
   `git add README.md`.
-  V pogledu _Source Control_ v VSCode to naredite tako, da prestavite datoteke iz _Changes_ v _Staged Changes_.
+  V pogledu _Source Control_ v VSCode to naredite tako, da prestavite datoteke iz _Changes_ v _Staged Changes_
+  tako, da kliknete na _+_ poleg imen datotek.
 - Ukaz [`commit`](https://github.com/git-guides/git-commit)
   v repozitorij zabeleži spremembe, ki ste jih vključili z `add`.
   Vsak tak zabeležek je posnetek stanja v tistem trenutku.
@@ -42,18 +43,28 @@ ob kliku pa uskladi v obe smeri.
 (git:init)=
 ## Priprava novega repozitorija
 
+V večini primerov boste želeli najprej narediti nov repozitorij na GitHubu.
+Če veste, da boste repozitorij uporabljali samo lokalno, si poglejte razdelek Postavitev na računalniku (spodaj).
+
+Sledite navodilom v GitHub dokumentaciji na strani 
+[Quickstart for repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories).
+Nato repozitorij klonirajte:
+- **v ukazni vrstici** to naredite z ukazom `git clone`, ki mu poveste naslov repozitorija
+  (npr. `git clone git@github.com:katjabercic/rp-git-zgodba.git`),
+- v VSCode lahko klonirate s pomočjo palete ukazov z ukazom _Git: Clone_, 
+  ki vas bo prav tako vprašal za naslov repozitorija
+  (npr. `git@github.com:katjabercic/rp-git-zgodba.git`).
+
+### Postavitev na računalniku
+
 V ukazni vrstici poženete ukaz `git init` v imeniku, v katerem želite vzpostaviti repozitorij. 
 Če imate imenik odprt v VSCode, lahko repozitorij vzpostavite tudi z ukazom _Git: Initialize repository_ iz palete ukazov.
 Tudi če repozitorija nimate namena deliti z nikomer, je lahko koristen - kot varnostna kopija, ali pa za pregled zgodovine.
 
-Če želite imeti repozitorij tudi na strežniku (npr. GitHub), lahko nanj naložite lokalnega. 
-Še bolj enostavno pa je, če ga ustvarite na strežniku in od tam klonirate. 
-V ukazni vrstici to naredite z ukazom `git clone`, ki mu poveste naslov repozitorija
-(npr. `git clone git@github.com:katjabercic/rp-git-zgodba.git`).
-V VSCode to lahko naredite z ukazom _Git: Clone_, ki vas bo prav tako vprašal za naslov repozitorija
-(npr. `git@github.com:katjabercic/rp-git-zgodba.git`).
-Če ste povezali GitHub z VSCode, boste repozitorij verjetno lahko izbrali s seznama.
-S tem ukazu se na našem računalniku ustvari popoln klon repozitorija na strežniku.
+Tudi če ste repozitorij najprej ustvarili na računalniku, ga lahko kasneje povežete s kopijo na GitHubu:
+tam naredite nov repozitorij, vendar bo v tem primeru lažje, če ne izberete možnosti za ustvarjanje `README.md` datoteke.
+Potem na računalniku odprete repozitorij v VSCode, v paleti ukazov izberete _Git: Add Remote_ in pogovorno okno prilepite
+naslov repozitorija.
 
 (git:gitignore)=
 ## Datoteka `.gitignore`
