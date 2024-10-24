@@ -298,7 +298,7 @@ kot pri enem samem kurzorju.
    Popravite elemente seznama pod "Contents" tako, da bodo delujoče povezave na ustrezne
    dele strani.
 
-7. Zabeležite spremembo: dodajte datoteki `stran.html`
+7. Zabeležite spremembo: dodajte datoteko `stran.html`
    ter napišite uporabno sporočilo, npr. `Dodaj formule in sklicevanje`.
 
 ## Domača naloga
