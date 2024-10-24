@@ -50,10 +50,10 @@ Sledite navodilom v GitHub dokumentaciji na strani
 [Quickstart for repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories).
 Nato repozitorij klonirajte:
 - **v ukazni vrstici** to naredite z ukazom `git clone`, ki mu poveste naslov repozitorija
-  (npr. `git clone git@github.com:katjabercic/rp-git-zgodba.git`),
+  (npr. `git clone git@github.com:racunalniski-praktikum/git-zgodba.git`),
 - v VSCode lahko klonirate s pomočjo palete ukazov z ukazom _Git: Clone_, 
   ki vas bo prav tako vprašal za naslov repozitorija
-  (npr. `git@github.com:katjabercic/rp-git-zgodba.git`).
+  (npr. `git@github.com:racunalniski-praktikum/git-zgodba.git`).
 
 ### Postavitev na računalniku
 

@@ -121,7 +121,7 @@ Tudi mi se bomo držali tega dogovora.
 
 Če ste sledili domači nalogi in vajam, imate dva repozitorija:
 tistega iz domače naloge, ki ste ga večinoma poimenovali `racunalniski-praktikum`,
-ter kopijo repozitorija `rp-git-zgodba`, ki ste ga uporabili na prejšnjih vajah.
+ter kopijo repozitorija `git-zgodba`, ki ste ga uporabili na prejšnjih vajah.
 Prvega bomo še naprej uporabljali na vajah.
 
 1. V VSCode odprite imenik s svojim repozitorijem (verjetno ste mu dali ime `racunalniski-praktikum`).
@@ -264,7 +264,8 @@ kot pri enem samem kurzorju.
     (npr. za avtomatsko branje vsebine).
     Preverite v brskalniku, če se slika prikaže.
     Verjetno bo prevelika, tako da jo za zdaj zakomentirajte:
-    v paleti ukazov poiščete `comment` in izberete _Add Line Comment_.
+    v paleti ukazov poiščete `comment` in izberete _Add Line Comment_.,
+    ,
 
 12. Počistite vse napake in opozorila, preden nadaljujete z naslednjo nalogo.
 

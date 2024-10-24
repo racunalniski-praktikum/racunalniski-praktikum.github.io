@@ -178,7 +178,7 @@ Sledite navodilom za [nastavitve `git`-a](git:nastavitve).
 V tem primeru sledite navodilom, ki se izpišejo, na koncu pa morate še enkrat pognati `git commit -m "⟨sporočilo⟩"`
 `````
 
-Pojdite na repozitorij [rp-git-zgodba](https://github.com/katjabercic/rp-git-zgodba/) in sledite navodilom.
+Pojdite na repozitorij [git-zgodba](https://github.com/racunalniski-praktikum/git-zgodba) in sledite navodilom.
 Bodite pozorni na to, kam boste klonirali repozitorij.
 Priporočamo, da v isti imenik, v katerega ste že klonirali svoj prvi repozitorij.
 
