@@ -243,13 +243,14 @@ boste skoraj gotovo rešitev našli na spletu.
    stisnite v arhiv z imenom `⟨ime⟩-⟨priimek⟩.zip` 
    (ustrezno popravite; če imate v imenu ali priimku kak presledek, ga nadomestite z vezajem `-`) in ga 
    [oddajte na učilnico do ponedeljka, 11. novembra 2024, ob 23:55](https://ucilnica.fmf.uni-lj.si/mod/assign/view.php?id=70566).
-   Točka za domačo nalogo se vam bo upoštevala, če boste oddali pravilno poimenovan arhiv
-   s pravimi datotekami.
 3. [Namestite LaTeX](namestitev:latex) na svoj računalnik. 
    Če ga uporabljate tudi na vajah, vam toplo priporočamo, 
    da ga poskusite namestiti pred naslednjimi vajami.
    Pri LaTeX-u gre namreč rado kaj narobe, tako boste lahko prosili za pomoč,
    preden ga boste rabili čez dva tedna.
+
+Točka za domačo nalogo se vam bo upoštevala, če boste pravočasno
+oddali pravilno poimenovan arhiv s pravimi datotekami (točka 2).
 
 Pregledali bomo nekaj domačih nalog ter nekaj oddanih nalog.
 Glavni namen tega je, da dobite povratne informacije.
