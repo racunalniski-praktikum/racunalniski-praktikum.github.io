@@ -46,7 +46,7 @@ V programu Explorer si spremenite nastavitve:
 *   Končnice datotek (file extensions) naj bodo vidne.
 *   Skrite datoteke (hidden files) naj bodo vidne.
 
-Ne veste, kako se to naredi? Pomagajte si z Google, an primer ["make file extensions visible"](https://www.google.com/search?hl=en&q=make%20file%20extensions%20visible).
+Ne veste, kako se to naredi? Pomagajte si z Google, na primer ["make file extensions visible"](https://www.google.com/search?hl=en&q=make%20file%20extensions%20visible).
 
 ## Spremenljivke okolja
 
