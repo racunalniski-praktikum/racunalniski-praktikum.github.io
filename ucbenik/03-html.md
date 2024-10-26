@@ -231,7 +231,7 @@ kot pri enem samem kurzorju.
     _Namig:_ <kbd>Alt</kbd>/<kbd>Option</kbd> + levi klik
 
  5. Pod podpodnaslovom "Contents" so našteta podpoglavja. Oblikovali bomo preprost seznam vsebine.
-    Najprej bomo pomočjo večih kurzorjev vsako vrstico s podpoglavjem obdali z značko.
+    Najprej bomo s pomočjo večih kurzorjev vsako vrstico s podpoglavjem obdali z značko.
     Postavite kurzor na začetek vsake vrstice (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>↑↓</kbd> oz. <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>↑↓</kbd>),
     stisnite in držite tipko <kbd>Shift</kbd> (za označevanje), nato pa še <kbd>End</kbd> oz. <kbd>Cmd</kbd>+<kbd>→</kbd> (za skok na konec vrstice).
     Zdaj bi morali imeti označene vse vrstice kazala vsebine, vsako vrstico s svojim kurzorjem.
