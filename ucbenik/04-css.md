@@ -98,6 +98,16 @@ Vsak element strani, recimo odstavek ali slika, je obravnavan kot škatla ali ok
 &nbsp; Škatlasti model
 :::
 
+#### Slovarček
+
+Slovarček slovenskih v angleške izraze za boljšo preglednost:
+
+ * zunanji rob - margin,
+ * notranji rob - padding,
+ * obroba - border,
+ * višina - height,
+ * širina - width.
+
 Dodatni viri:
 
 * [The standard CSS box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#the_standard_css_box_model)
