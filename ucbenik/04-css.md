@@ -102,9 +102,9 @@ Vsak element strani, recimo odstavek ali slika, je obravnavan kot škatla ali ok
 
 Slovarček slovenskih v angleške izraze za boljšo preglednost:
 
- * zunanji rob: angl. _margin_,
- * notranji rob: angl. _padding_,
- * obroba: angl. _border_,
+ * zunanji prazen prostor: angl. _margin_,
+ * notranji prazen prostor: angl. _padding_,
+ * obroba oz. rob: angl. _border_,
  * višina: angl. _height_,
  * širina: angl. _width_.
 
