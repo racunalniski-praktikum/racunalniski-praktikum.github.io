@@ -3,7 +3,7 @@
 LaTeX je sistem za stavljenje besedila. 
 Je pravzaprav prevajalnik, ki LaTeX datoteko s končnico `.tex`, 
 ki vsebuje navadno besedilo, označeno s posebnimi okolji in ukazi, 
-pretvori v lepo stavljeno besedila in ga shrani v datoteko PDF s končnico `.pdf`.
+pretvori v lepo sestavljeno besedilo in ga shrani v datoteko PDF s končnico `.pdf`.
 
 LaTeX-ov prevajalnik (mi bomo uporabljali `pdflatex`) je ponavadi treba pognati večkrat, 
 da lahko preračuna sklice na izreke in številke strani. 
