@@ -8,6 +8,9 @@ parts:
   - file: 03-html.md
   - file: 04-css.md
   - file: 05-utrdimo-osnove.md
+- caption: Matematični dokumenti
+  chapters:
+  - file: 06-uvod-v-latex.md
 - caption: Plonkci in ostali dodatki
   chapters:
   - file: A-programska-oprema.md
