@@ -7,6 +7,7 @@ parts:
   - file: 02-git-in-markdown.md
   - file: 03-html.md
   - file: 04-css.md
+  - file: 05-utrdimo-osnove.md
 - caption: Plonkci in ostali dodatki
   chapters:
   - file: A-programska-oprema.md

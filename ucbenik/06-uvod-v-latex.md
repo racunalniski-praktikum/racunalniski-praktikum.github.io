@@ -3,7 +3,7 @@
 LaTeX je sistem za stavljenje besedila. 
 Je pravzaprav prevajalnik, ki LaTeX datoteko s končnico `.tex`, 
 ki vsebuje navadno besedilo, označeno s posebnimi okolji in ukazi, 
-pretvori v lepo stavljeno besedila in ga shrani v datoteko PDF s končnico `.pdf`.
+pretvori v lepo stavljeno besedilo in ga shrani v datoteko PDF s končnico `.pdf`.
 
 LaTeX-ov prevajalnik (mi bomo uporabljali `pdflatex`) je ponavadi treba pognati večkrat, 
 da lahko preračuna sklice na izreke in številke strani. 
@@ -37,7 +37,7 @@ Ustrezno zamenjajte oklepaje in njihovo vsebino.
 \⟨ime-ukaza⟩
 ```
 
-Najprej boste srečali ukaz `documentclass` in okolje `document`:
+Najprej boste srečali ukaz `documentclass` in okolje `document`
 
 ```tex
 \documentclass{article}
@@ -71,7 +71,7 @@ Ker bi bilo zelo zamudno pisati `\begin{math}1 + 1\end{math}`, ima LaTeX za ti d
 
 ali `\(⟨matematični izraz v vrstici⟩\)`.
 Včasih boste morda videli tudi starejši okrajšavi `$$` za prikazni in `$` za vrstični način.
-Uporabo teh dveh okrajšav močno odsvetujemo - ko boste naleteli na napako, jo boste veliko težje razbrali.
+Uporabo teh dveh okrajšav odsvetujemo - ko boste naleteli na napako, jo boste veliko težje razbrali.
 
 `````{admonition} Ukazi za matematične izraze
 :class: tip
@@ -88,7 +88,7 @@ glavno datoteko.
 Struktura glavne LaTeX datoteke je videti takole:
 
 ```tex
-\documentclass[...]{...}
+\documentclass[⟨nastavitve⟩]{⟨vrsta dokumenta⟩}
 
 ⟨preambula⟩
 
@@ -105,7 +105,8 @@ Možne zvrsti dokumentov so vnaprej definirane in se razlikujejo tudi po oblikov
 Dodatne nastavitve, kot na primer za velikost strani, lahko zapišemo v oglate oklepaje:
 `\documentclass[a4paper]{article}`.
 
-V preambuli v dokument vključimo razne pakete, uredimo nastavitve in definiramo nove makroje in okolja:
+V preambulo se nikoli ne piše vsebine, ampak samo ukaze in nastavitve.
+V preambuli v dokument vključimo pakete, uredimo nastavitve in definiramo nove makroje in okolja:
 
 * paket vključimo z ukazom `\usepackage[⟨nastavitve⟩]{⟨ime-paketa⟩}`.
 * nove ukaze in okolja definiramo ga z ukazoma `newcommand` in `newenvironment`.
