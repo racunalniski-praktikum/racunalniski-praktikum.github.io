@@ -204,7 +204,9 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
 
 V datoteki `urnik.tex` je vsebina že označena z okoljem `document`, vrsta
 dokumenta pa je že nastavljena na `article`. 
-V paleti ukazov boste pod `latex surround` našli dva uporabna ukaza:
+
+Podobno, kot ste paleto ukazov uporabljali za HTML, vam bo prišla prav tudi zdaj.
+V paleti ukazov napišite `latex surround`, in našli boste dva uporabna ukaza:
 
 * _LaTeX Workshop: Surround selection with LaTeX command_, 
   ki izbrano besedilo obda z ukazom, `\ukaz{izbrano besedilo}`. 
