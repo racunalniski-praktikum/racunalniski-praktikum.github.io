@@ -283,7 +283,8 @@ bližnjice poiščite v [plonkcu](bliznjice:vscode).
 
 Točka za domačo nalogo se vam bo upoštevala, 
 če bo v vašem repozitoriju (na glavni oz. privzeti veji)
-sprememba (oz. _commit_) datoteke `urnik.tex`
+prisotna v glavnem imeniku datoteka `.gitignore` in
+sprememba (oz. _commit_) datoteke `urnik.tex`,
 (ta je lahko tudi prazna, čeprav to odsvetujemo).
 V repozitoriju ne sme biti LaTeX-ovih pomožnih datotek.
 Sprememba mora imeti čas med
