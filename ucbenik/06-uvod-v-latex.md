@@ -199,9 +199,9 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
 - V glavnem imeniku repozitorija naredite nov imenik, `latex-pregled` in 
   v njem odpakirajte arhiv [`latex-pregled.zip`](06-uvod-v-latex/latex-pregled.zip).
   Te datoteke vam bodo v pomoč pri reševanju nalog.
-- V imenik `06-uvod-v-latex` shranite [datoteke za nalogo Urnik](06-uvod-v-latex/urnik.tex)
+- V imenik `06-uvod-v-latex` shranite [datoteke za nalogo Urnik](06-uvod-v-latex/urnik.zip)
 - Besedilo v datoteki `urnik.tex` oblikujte v LaTeX-u tako, 
-  da bo prevedena PDF datoteka čim bolj podobna [rešitvi](06-uvod-v-latex/urnik-resitev.pdf).
+  da bo prevedena PDF datoteka čim bolj podobna rešitvi (`urnik-resitev.pdf`).
   Pri reševanju si pomagajte z uvodno pregledno datoteko.
 
 V datoteki `urnik.tex` je vsebina že označena z okoljem `document`, vrsta
