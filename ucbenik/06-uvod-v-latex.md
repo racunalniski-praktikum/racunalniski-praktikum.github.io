@@ -198,9 +198,10 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
 
 - V glavnem imeniku repozitorija naredite nov imenik, `latex-pregled` in 
   v njem odpakirajte arhiv [`latex-pregled.zip`](06-uvod-v-latex/latex-pregled.zip).
-- V imenik `06-uvod-v-latex` shranite [datoteke za nalogo Urnik](TODO)
+  Te datoteke vam bodo v pomoč pri reševanju nalog.
+- V imenik `06-uvod-v-latex` shranite [datoteke za nalogo Urnik](06-uvod-v-latex/urnik.tex)
 - Besedilo v datoteki `urnik.tex` oblikujte v LaTeX-u tako, 
-  da bo prevedena PDF datoteka čim bolj podobna rešitvi.
+  da bo prevedena PDF datoteka čim bolj podobna [rešitvi](06-uvod-v-latex/urnik-resitev.pdf).
   Pri reševanju si pomagajte z uvodno pregledno datoteko.
 
 V datoteki `urnik.tex` je vsebina že označena z okoljem `document`, vrsta
@@ -223,19 +224,32 @@ bližnjice poiščite v [plonkcu](bliznjice:vscode).
 
 1. Velikost strani naj bo `A4`, osnovna velikost pisave pa `10pt` (to so
    nastavitve za ukaz `documentclass`, ki jih ločite z vejicami).
+   Poglejte, kako je to narejeno v datoteki `1-osnove.tex` v imeniku
+   `latex-pregled`.
 
 2. V datoteki so naslovi razdelkov, podrazdelkov in podpodrazdelkov
    označeni s komentarji `% razdelek`, `% podrazdelek` in `% podpodrazdelek`.
-   Pomagajte si z orodjem _Replace_ iz palete ukazov in regularnimi izrazi, 
-   da jih označite kot take. 
-   V polju za iskanje (<kbd>Ctrl</kbd> + <kbd>F</kbd> oz. 🍎 <kbd>Cmd</kbd> + <kbd>F</kbd>) 
-   izberite možnost za iskanje z regularnimi izrazi (gumb z napisom `.*`).
-   Za razdelek uporabite vzorec `^(.*) % razdelek`: poiščemo vrstice, 
-   ki se začnejo s poljubnim nizom znakov (tega si zapomnimo, ker je v `()`), 
-   ki se nadaljuje točno z nizom znakov ` % razdelek`.
-   Za zamenjavo vpišemo `\section{$1}`: niz `$1` se bo zamenjal s tistim, 
-   kar se je ujelo z vzorcem `(.*)`.
-   Podobno popravite še podrazdelke in podpodrazdelke.
+   Na vseh mestih uporabite ustrezen ukaz (`section`, `subsection` ali `subsubsection`),
+   to pa lahko naredite na dva načina, ki sta opisana v spodnjih dveh točkah
+   za razdelke, podobno pa popravite še podrazdelke in podpodrazdelke.
+    - Uporabite več kurzorjev. Izberite npr. niz `% razdelek` in v paleti ukazov
+      uporabite _Select All Occurences of Find Match_. 
+      Ta naredi kurzor za vsako pojavitvijo niza `% razdelek`.
+      Zdaj lahko uredite vse vrstice hkrati, tako da:
+         1. pobrišete niz `% razdelek` tako da stisnete tipko <kbd>← Backspace</kbd>
+            (pa še enkrat, da izbrišete presledek na koncu vrstice),
+         2. napišete znak `}` na koncu vrstice,
+         3. se postavite na začetek vrstice <kbd>Home</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>←</kbd>) in
+         4. napišete `\section{`.
+    - Pomagajte si z orodjem _Replace_ iz palete ukazov in regularnimi izrazi, 
+      da jih označite kot take. 
+      V polju za iskanje (<kbd>Ctrl</kbd> + <kbd>F</kbd> oz. 🍎 <kbd>Cmd</kbd> + <kbd>F</kbd>) 
+      izberite možnost za iskanje z regularnimi izrazi (gumb z napisom `.*`).
+      Za razdelek uporabite vzorec `^(.*) % razdelek`: poiščemo vrstice, 
+      ki se začnejo s poljubnim nizom znakov (tega si zapomnimo, ker je v `()`), 
+      ki se nadaljuje točno z nizom znakov ` % razdelek`.
+      Za zamenjavo vpišemo `\section{$1}`: niz `$1` se bo zamenjal s tistim, 
+      kar se je ujelo z vzorcem `(.*)`.
 
 3. Sledite navodilom v komentarjih v datoteki `urnik.tex`.
    Pomagajte si s pregledno datoteko `1-osnove.tex`.
@@ -260,7 +274,7 @@ bližnjice poiščite v [plonkcu](bliznjice:vscode).
    Napačni načini pisanja narekovajev: znaka za levi in desni narekovaj nista enaka, 
    zato se *ne* piše ``'takole'`` ali ``''takole''``. Še posebej pa se ne piše ``"takole"``.
    Uporabite iskanje in zamenjavo z regularnimi izrazi. 
-   Vzorec iz prejšnjih nalog morate samo malo popraviti.
+   Vzorec iz ene od prejšnjih nalog morate samo malo popraviti.
 
 6. Poskrbite, da presledki za pikami, ki ne pomenijo konca stavka, ne bodo
    preveliki. Taki so na primer presledki v datumu ter za kraticami npr. in t.i.
