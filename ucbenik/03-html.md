@@ -190,22 +190,9 @@ Za reševanje skupaj: na tablo narišite drevesno strukturo značk.
 Datoteko, ki jo boste pripravili, boste potrebovali za domačo nalogo.
 `````
 
-Pri tej nalogi vam bo v pomoč paleta ukazov (Command Palette) v urejevalniku, 
-do katere dostopate preko bližnjice <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).
-V paleti ukazov začnete tipkati ime ukaza, z vnašalko <kbd>↵</kbd> pa izberete ukaz, 
-ki je prvi na seznamu najdenih ukazov.
-
-Ukaz _Wrap with Abbreviation_ označeno besedilo obda z značko, ki jo napišete.
-Če besedilo ni označeno, bo urejevalnik značko postavil okrog vrstice, v kateri je kurzor.
-Ko ste v paleti ukazov, lahko poiščete zobato kolo na desni strani vrstice z ukazom.
-To je ikona za nastavitve. Če jo kliknete, pridete na stran z nastavitvami,
-kjer si lahko za ta ukaz nastavite svojo neposredno bližnjico.
-Primer uporabe ukaza je opisan v točki 3.
-
-VSCode vam dovoli uporabljati [več kurzorjev hkrati](bliznjice:kurzorji), kar se da lepo uporabiti z
-ukazom _Wrap with Abbreviation_.
-Ko ste pripravili kurzorje, uporabite bližnjico za paleto ukazov in nadaljujete enako,
-kot pri enem samem kurzorju.
+Pri pisanju HTML značk vam bo v pomoč ukaz _Wrap with Abbreviation_ 
+iz palete ukazov (angl. _Command Palette_) v urejevalniku, 
+več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
 
  1. Datoteko odprite v brskalniku, da vidite, kako izgleda.
 

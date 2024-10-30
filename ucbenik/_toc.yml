@@ -16,6 +16,7 @@ parts:
   - file: A-programska-oprema.md
   - file: B-tipkovnica.md
   - file: C-ukazna-vrstica.md
+  - file: D-paleta-ukazov.md
   - file: E-posta.md
   - file: F-pogosta-vprasanja.md
   - file: G-git.md

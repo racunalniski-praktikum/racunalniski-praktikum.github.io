@@ -208,16 +208,8 @@ V datoteki `urnik.tex` je vsebina že označena z okoljem `document`, vrsta
 dokumenta pa je že nastavljena na `article`. 
 
 Podobno, kot ste paleto ukazov uporabljali za HTML, vam bo prišla prav tudi zdaj.
-V paleti ukazov napišite `latex surround`, in našli boste dva uporabna ukaza:
-
-* _LaTeX Workshop: Surround selection with LaTeX command_, 
-  ki izbrano besedilo obda z ukazom, `\ukaz{izbrano besedilo}`. 
-  Ko izberete ta ukaz, se vam pokaže še vnosno polje, 
-  v katerem izberete LaTeX-ov ukaz (`title`, `section`, itd.).
-* _LaTeX Workshop: Surround selection with \begin{}...\end{}_. 
-  Ta ukaz izbrano besedilo obda z `\begin{}` in `\end{}` in pripravi dva kurzorja 
-  (enega v `begin` in drugega v `end`), s katerima lahko napišete ime okolja. 
-  Dveh kurzorjev se iznebite tako, da stisnete tipko `Esc`.
+V paleti ukazov napišite `latex surround`, in našli boste dva uporabna ukaza,
+ki sta nekoliko podrobneje opisana v [plonkcu za paleto ukazov](paleta-ukazov:latex).
 
 Pri nekaterih nalogah se splača uporabiti več kurzorjev hkrati;
 bližnjice poiščite v [plonkcu](bliznjice:vscode).
@@ -232,8 +224,9 @@ bližnjice poiščite v [plonkcu](bliznjice:vscode).
    Na vseh mestih uporabite ustrezen ukaz (`section`, `subsection` ali `subsubsection`),
    to pa lahko naredite na dva načina, ki sta opisana v spodnjih dveh točkah
    za razdelke, podobno pa popravite še podrazdelke in podpodrazdelke.
-    - Uporabite več kurzorjev. Izberite npr. niz `% razdelek` in v paleti ukazov
-      uporabite _Select All Occurences of Find Match_. 
+    - Uporabite več kurzorjev in ukaz _Select All Occurences of Find Match_ iz palete ukazov
+      (več preberite v [plonkcu za paleto ukazov](D-paleta-ukazov)). 
+      Izberite niz `% razdelek` in uporabite _Select All Occurences of Find Match_. 
       Ta naredi kurzor za vsako pojavitvijo niza `% razdelek`.
       Zdaj lahko uredite vse vrstice hkrati, tako da:
          1. pobrišete niz `% razdelek` tako da stisnete tipko <kbd>← Backspace</kbd>
