@@ -154,6 +154,8 @@ posodobila tudi spletna stran.
 0. Če želite naslednje vaje reševati na svojem računalniku, [namestite LaTeX](namestitev:latex).
 1. Preberite si začetek [poglavja o LaTeX-u](06-uvod-v-latex) (do 1. naloge).
 2. Če še niste, dokončajte 3. nalogo (postavitev spletne strani) z vaj.
+3. Če želite naslednje vaje reševati na svojem računalniku, 
+   do naslednjih vaj [namestite LaTeX](namestitev:latex), če ga še niste.
 
 Točka za domačo nalogo se vam bo upoštevala, 
 če bo do 18. novembra na naslovu `⟨vase-uporabnisko-ime⟩.github.io`

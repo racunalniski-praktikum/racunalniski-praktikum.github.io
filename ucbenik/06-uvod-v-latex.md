@@ -198,42 +198,51 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
 
 - V glavnem imeniku repozitorija naredite nov imenik, `latex-pregled` in 
   v njem odpakirajte arhiv [`latex-pregled.zip`](06-uvod-v-latex/latex-pregled.zip).
-- V imenik `06-uvod-v-latex` shranite [datoteke za nalogo Urnik](TODO)
+  Te datoteke vam bodo v pomoč pri reševanju nalog.
+- V imenik `06-uvod-v-latex` shranite [datoteke za nalogo Urnik](06-uvod-v-latex/urnik.zip)
 - Besedilo v datoteki `urnik.tex` oblikujte v LaTeX-u tako, 
-  da bo prevedena PDF datoteka čim bolj podobna rešitvi.
+  da bo prevedena PDF datoteka čim bolj podobna rešitvi (`urnik-resitev.pdf`).
   Pri reševanju si pomagajte z uvodno pregledno datoteko.
 
 V datoteki `urnik.tex` je vsebina že označena z okoljem `document`, vrsta
 dokumenta pa je že nastavljena na `article`. 
-V paleti ukazov boste pod `latex surround` našli dva uporabna ukaza:
 
-* _LaTeX Workshop: Surround selection with LaTeX command_, 
-  ki izbrano besedilo obda z ukazom, `\ukaz{izbrano besedilo}`. 
-  Ko izberete ta ukaz, se vam pokaže še vnosno polje, 
-  v katerem izberete LaTeX-ov ukaz (`title`, `section`, itd.).
-* _LaTeX Workshop: Surround selection with \begin{}...\end{}_. 
-  Ta ukaz izbrano besedilo obda z `\begin{}` in `\end{}` in pripravi dva kurzorja 
-  (enega v `begin` in drugega v `end`), s katerima lahko napišete ime okolja. 
-  Dveh kurzorjev se iznebite tako, da stisnete tipko `Esc`.
+Podobno, kot ste paleto ukazov uporabljali za HTML, vam bo prišla prav tudi zdaj.
+V paleti ukazov napišite `latex surround`, in našli boste dva uporabna ukaza,
+ki sta nekoliko podrobneje opisana v [plonkcu za paleto ukazov](paleta-ukazov:latex).
 
 Pri nekaterih nalogah se splača uporabiti več kurzorjev hkrati;
 bližnjice poiščite v [plonkcu](bliznjice:vscode).
 
 1. Velikost strani naj bo `A4`, osnovna velikost pisave pa `10pt` (to so
    nastavitve za ukaz `documentclass`, ki jih ločite z vejicami).
+   Poglejte, kako je to narejeno v datoteki `1-osnove.tex` v imeniku
+   `latex-pregled`.
 
 2. V datoteki so naslovi razdelkov, podrazdelkov in podpodrazdelkov
    označeni s komentarji `% razdelek`, `% podrazdelek` in `% podpodrazdelek`.
-   Pomagajte si z orodjem _Replace_ iz palete ukazov in regularnimi izrazi, 
-   da jih označite kot take. 
-   V polju za iskanje (<kbd>Ctrl</kbd> + <kbd>F</kbd> oz. 🍎 <kbd>Cmd</kbd> + <kbd>F</kbd>) 
-   izberite možnost za iskanje z regularnimi izrazi (gumb z napisom `.*`).
-   Za razdelek uporabite vzorec `^(.*) % razdelek`: poiščemo vrstice, 
-   ki se začnejo s poljubnim nizom znakov (tega si zapomnimo, ker je v `()`), 
-   ki se nadaljuje točno z nizom znakov ` % razdelek`.
-   Za zamenjavo vpišemo `\section{$1}`: niz `$1` se bo zamenjal s tistim, 
-   kar se je ujelo z vzorcem `(.*)`.
-   Podobno popravite še podrazdelke in podpodrazdelke.
+   Na vseh mestih uporabite ustrezen ukaz (`section`, `subsection` ali `subsubsection`),
+   to pa lahko naredite na dva načina, ki sta opisana v spodnjih dveh točkah
+   za razdelke, podobno pa popravite še podrazdelke in podpodrazdelke.
+    - Uporabite več kurzorjev in ukaz _Select All Occurences of Find Match_ iz palete ukazov
+      (več preberite v [plonkcu za paleto ukazov](D-paleta-ukazov)). 
+      Izberite niz `% razdelek` in uporabite _Select All Occurences of Find Match_. 
+      Ta naredi kurzor za vsako pojavitvijo niza `% razdelek`.
+      Zdaj lahko uredite vse vrstice hkrati, tako da:
+         1. pobrišete niz `% razdelek` tako da stisnete tipko <kbd>← Backspace</kbd>
+            (pa še enkrat, da izbrišete presledek na koncu vrstice),
+         2. napišete znak `}` na koncu vrstice,
+         3. se postavite na začetek vrstice <kbd>Home</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>←</kbd>) in
+         4. napišete `\section{`.
+    - Pomagajte si z orodjem _Replace_ iz palete ukazov in regularnimi izrazi, 
+      da jih označite kot take. 
+      V polju za iskanje (<kbd>Ctrl</kbd> + <kbd>F</kbd> oz. 🍎 <kbd>Cmd</kbd> + <kbd>F</kbd>) 
+      izberite možnost za iskanje z regularnimi izrazi (gumb z napisom `.*`).
+      Za razdelek uporabite vzorec `^(.*) % razdelek`: poiščemo vrstice, 
+      ki se začnejo s poljubnim nizom znakov (tega si zapomnimo, ker je v `()`), 
+      ki se nadaljuje točno z nizom znakov ` % razdelek`.
+      Za zamenjavo vpišemo `\section{$1}`: niz `$1` se bo zamenjal s tistim, 
+      kar se je ujelo z vzorcem `(.*)`.
 
 3. Sledite navodilom v komentarjih v datoteki `urnik.tex`.
    Pomagajte si s pregledno datoteko `1-osnove.tex`.
@@ -258,7 +267,7 @@ bližnjice poiščite v [plonkcu](bliznjice:vscode).
    Napačni načini pisanja narekovajev: znaka za levi in desni narekovaj nista enaka, 
    zato se *ne* piše ``'takole'`` ali ``''takole''``. Še posebej pa se ne piše ``"takole"``.
    Uporabite iskanje in zamenjavo z regularnimi izrazi. 
-   Vzorec iz prejšnjih nalog morate samo malo popraviti.
+   Vzorec iz ene od prejšnjih nalog morate samo malo popraviti.
 
 6. Poskrbite, da presledki za pikami, ki ne pomenijo konca stavka, ne bodo
    preveliki. Taki so na primer presledki v datumu ter za kraticami npr. in t.i.
@@ -281,7 +290,8 @@ bližnjice poiščite v [plonkcu](bliznjice:vscode).
 
 Točka za domačo nalogo se vam bo upoštevala, 
 če bo v vašem repozitoriju (na glavni oz. privzeti veji)
-sprememba (oz. _commit_) datoteke `urnik.tex`
+prisotna v glavnem imeniku datoteka `.gitignore` in
+sprememba (oz. _commit_) datoteke `urnik.tex`,
 (ta je lahko tudi prazna, čeprav to odsvetujemo).
 V repozitoriju ne sme biti LaTeX-ovih pomožnih datotek.
 Sprememba mora imeti čas med
