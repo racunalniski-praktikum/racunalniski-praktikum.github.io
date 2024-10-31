@@ -87,7 +87,7 @@ Uporabne povezave
 
 FMF učilnica <!-- https://ucilnica.fmf.uni-lj.si/ -->
 Računalniški sistemi, storitve in oprema za študente <!-- https://ucilnica.fmf.uni-lj.si/mod/page/view.php?id=51619 -->
-Zapiski in vaje za Računalniški praktikum <!-- http://katjabercic.github.io/racunalniski-praktikum -->
+Zapiski in vaje za Računalniški praktikum <!-- https://racunalniski-praktikum.github.io/ -->
 Dokumentacija za Markdown na GitHubu <!-- https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax -->
 
 ```
