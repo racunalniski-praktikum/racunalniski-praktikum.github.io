@@ -146,7 +146,7 @@ V tej nalogi boste postavili svojo stran.
    vaše spletne strani, ki bi moral biti `⟨uporabnisko-ime⟩.github.io`.
    Pisalo bo _"Your site is live at ..."_.
 
-Če boste urejali katero od datotek spletne strani, ter zabeležene spremembe
+Če boste urejali katero od datotek spletne strani ter zabeležene spremembe
 poslali na strežnik, se bo v nekaj minutah (ponavadi hitreje kot v desetih)
 posodobila tudi spletna stran.
 
