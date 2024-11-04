@@ -12,15 +12,16 @@
 (angl. _regular expressions_ ali kratko _regex_) so zaporedja znakov, 
 s katerimi lahko opišemo vzorce v navadnem besedilu.
 
-Natančno ujemanje ste gotovo že kdaj videli - to je najbolj enostavna vrsta regularnega izraza.
-V besedilu bi lahko poiskali vse pojavitve besede `kuža` z regularnim izrazom `kuža`.
-Kaj pa če želite poiskati vse številke v besedilu?
-To bi naredili z regularnim izrazom `\d+`: 
-`\d` je vzorec ki predstavlja eno (katerokoli) števko,
-`+` pa pomeni eno ali več ponovitev tistega, kar piše pred znakom.
+Natančno ujemanje ste gotovo že kdaj videli - to je najbolj enostavna vrsta
+regularnega izraza. V besedilu bi lahko poiskali vse pojavitve besede `kuža` z
+regularnim izrazom `kuža`. Kaj pa če želite poiskati vse številke v besedilu? To
+bi naredili z regularnim izrazom `\d+`: `\d` je vzorec ki predstavlja eno
+(katerokoli) števko, `+` pa pomeni eno ali več ponovitev tistega, kar piše pred
+znakom.
 
-Obstaja več verzij regularnih izrazov, ki so si precej sorodne, lahko pa se tudi razlikujejo.
-Nekatere npr. nimajo posebnega vzorca za števke, tako da je treba števke opisati z vzorcem `[0-9]`
+Obstaja več verzij regularnih izrazov, ki so si precej sorodne, lahko pa se tudi
+razlikujejo. Nekatere npr. nimajo posebnega vzorca za števke, tako da je treba
+števke opisati z vzorcem `[0-9]`.
 
 Regularni izrazi so lahko sila uporabni, in ta naloga je namenjena temu,
 da se z njimi na kratko seznanite. 
