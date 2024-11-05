@@ -147,7 +147,7 @@ V tej nalogi boste postavili svojo stran.
    Pisalo bo _"Your site is live at ..."_.
 
 Če boste urejali katero od datotek spletne strani, ter zabeležene spremembe
-poslali na strežnik, se bo v nekaj minutah (ponavadi hitreje kot v desetih)
+poslali na strežnik, se bo v nekaj minutah (ponavadi hitreje, kot v desetih)
 posodobila tudi spletna stran.
 
 ## Domača naloga
