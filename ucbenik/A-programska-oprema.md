@@ -88,7 +88,7 @@ Ta navodila predpostavljajo, da imate že nameščen urejevalnik [Visual Studio 
    * Pazite, da se bo med namestitvijo Perl dodal v `PATH` (morda boste morali prej še enkrat zagnati računalnik).
 2. Namestite [MikTeX](https://miktex.org).
    *Pomembno*: Ko vas vpraša, ali naj samodejno namesti manjkajoče pakete, priporočamo, da izberete samodejno nameščanje. Če boste izbrali, da naj vas sprašuje pred vsako namestitvijo, vas pri prvem zagonu LaTeX-a čaka veliko klikanja.
-3. Popravite znake `{`, `}` in `@` v VSCode: sledite navodilom v razdelku [VSCode, LaTeX, Windows in slovenska tipkovnica](faq:vscode-latex-si) pod pogostimi vprašanji.
+3. Če je treba, popravite znake `{`, `}` in `@` v VSCode: sledite navodilom v razdelku [VSCode, LaTeX, Windows in slovenska tipkovnica](faq:vscode-latex-si) pod pogostimi vprašanji.
 4. [Preverite namestitev](A:latex-preverjanje) (navodila so v kasnejšem razdelku).
 
 #### Nekatere pogoste težave

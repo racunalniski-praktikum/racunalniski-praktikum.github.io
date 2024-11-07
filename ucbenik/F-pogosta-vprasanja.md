@@ -76,7 +76,10 @@ Kliknite na vrstico, v kateri piše "Git Bash".
 (faq:vscode-latex-si)=
 ### LaTeX in slovenska tipkovnica
 
-Ko delamo s slovensko tipkovnico, v urejevalnik VSCode v načinu dela LaTeX ne delujejo znaki `{`, `}`, `@`, ki jih natipkamo z <kbd>AltGr</kbd>+<kbd>B</kbd>, <kbd>AltGr</kbd>+<kbd>N</kbd> in <kbd>AltGr</kbd>+<kbd>V</kbd>.
+Ko delamo s slovensko tipkovnico, v urejevalnik VSCode v načinu dela LaTeX včasih ne delujejo znaki `{`, `}`, `@`, ki jih natipkamo z <kbd>AltGr</kbd>+<kbd>B</kbd>, <kbd>AltGr</kbd>+<kbd>N</kbd> in <kbd>AltGr</kbd>+<kbd>V</kbd>.
+
+Najprej preverite, če sploh morate kaj popraviti. Odprite VSCode in naredite novo datoteko, ki jo poimenujte npr. `test.tex` (važno je, da ima končnico `.tex`).
+V datoteko napišite zgornje znake. Če jih lahko napišete, je vse ok, sicer pa berite naprej.
 
 Težava je v tem, da ima VSCode definirane bližnjice (angl. _keyboard shortcut_)
 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>, <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd> in <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> ter še nekatere druge, hkrati pa <kbd>AltGr</kbd> obravnava kot <kbd>Ctrl</kbd>+<kbd>Alt</kbd>. Ko torej pritisnemo <kbd>AltGr</kbd>+<kbd>V</kbd>, to za VSCode pomeni <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> in izvede se ukaz, ki je prirejen tej kombinaciji tipk (ta ukaz je "Build LaTeX project"), namesto da bi vstavil želeni znak `{`.
