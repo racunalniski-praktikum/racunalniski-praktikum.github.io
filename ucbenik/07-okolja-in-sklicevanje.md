@@ -14,6 +14,8 @@ Priporočamo, da preostanek naredite doma.
 Vaje rešujte v vrstnem redu, saj so pomembnejše uvrščene proti začetku.
 `````
 
+### Magični kvadrati
+
 Datoteko `magic.tex` pripravite tako, da boste z njo dobili PDF dokument, 
 čimbolj podoben datoteki `magic-resitve.pdf`.
 Pomagajte si s preglednimi datotekami, ki ste jih na prejšnjih vajah shranili v imenik `latex-pregled`
@@ -24,11 +26,8 @@ Poleg tega si vam morda pridejo prav tudi naslednji viri.
 
 * [tabela matematičnih simbolov](07-okolja-in-sklicevanje/LaTeX_Simboli.pdf),
 * **na lastno odgovornost** lahko uporabite orodje [Detexify](https://detexify.kirelabs.org/classify.html) (na primer, ukaza `in` in `epsilon` izpišeta podobna znaka, ampak v vsaki situaciji je samo en od teh znakov pravi),
-* **na lastno odgovornost** lahko uporabite orodje [Detexify](https://detexify.kirelabs.org/classify.html) (na primer, ukaza `in` in `epsilon` izpišeta podobna znaka, ampak v vsaki situaciji je samo en od teh znakov pravi),
 * [generator tabel](https://www.tablesgenerator.com/) pride včasih prav,
 * na portalu [Overleaf](https://www.overleaf.com) je zelo dobra [dokumentacija](https://www.overleaf.com/learn). 
-
-### Magični kvadrati
 
 Na koncu vsakega razdelka, predvsem pa, preden zaključite z vajami, naredite _commit_ in _push_.
 Pri tej nalogi si pomagajte z preglednimi datotekami.
@@ -38,7 +37,7 @@ V `.tex` datotekah je namreč veliko koristnih informacih skritih tudi v komenta
 
 #### 1. Uvodne naloge
 
-- V svoj repozitorij v imenik `07-magicni-kvadrati` shranite [datoteke za nalogo Magični kvadrati](07-okolja-in-sklicevanje/magic.zip)
+- V svoj repozitorij v imenik `07-magicni-kvadrati` shranite [datoteke za nalogo Magični kvadrati](07-okolja-in-sklicevanje/magic.zip).
 - Rešite prvi sklop nalog (navodila najdete v datoteki `magic.tex`).
 
 #### 2. Okolja AMS
@@ -181,7 +180,7 @@ Predstavljate si lahko, da je ukaz samo okrajšava za tisto, kar napišete v def
 7.  Če prevedete datoteko in pogledate pdf, boste opazili, da so zdaj vsi pojmi `Magični kvadrat`! To lahko popravite tako, da v definiciji ukaza besedilo `Magični kvadrat` nadomestite z `#1`. LaTeX namreč zamenja `#1` v definiciji ukaza z vrednostjo 1. parametra (pa tudi `#2` z vrednostjo 2. parametra, itd., če bi imeli več kot en parameter).
 
 
-### Dodatna naloga: definicije novih okolij (`dokaz` in `magic`)
+#### Dodatna naloga: definicije novih okolij (`dokaz` in `magic`)
 
 Kot zdaj že veste, okolja v LaTeX-u uporabljamo takole:
 
@@ -205,7 +204,7 @@ Pisanje novih okolij je lahko zahtevno, zato si ga lahko takole razbijemo na man
 * **[K3]** *V oblikovanem delu vsebine zamenjajte tisto, kar ste napisali v drugi parameter z ukazom `\begin{⟨ime-okolja⟩}`, konec pa z ukazom `\end{⟨ime-okolja⟩}`.*
 * **[K4]** *Definiramo morebitne parametre okolja.*
 
-#### 1. Okolje `dokaz`
+##### 1. Okolje `dokaz`
 
 Oblikujte dokaz izreka z novim okoljem `dokaz`.
 To okolje naj bo kar enako okolju `proof` iz paketa `amsthm`, le da namesto besede *"Dokaz"* piše *"Dokaz izreka"*.
@@ -213,7 +212,7 @@ To okolje naj bo kar enako okolju `proof` iz paketa `amsthm`, le da namesto bese
 1. **[K1]** Na spletu poiščite, kako se naredi dokaz s poljubnim besedilom namesto besede Dokaz. Poglejte, kakšne rezultate dobite za iskanje `latex proof custom text`.
 2. Sledite korakoma **[K2]** in **[K3]**.
 
-#### 2. Okolje `magic`
+##### 2. Okolje `magic`
 
 Definirajte novo okolje `magic` s tremi parametri: velikost kvadrata, opis tabele in ime tabele (za sklicevanje).
 
