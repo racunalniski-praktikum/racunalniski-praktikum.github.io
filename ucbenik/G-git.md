@@ -192,6 +192,24 @@ vam ponudi seznam repozitorijev, do katerih imate dostop.
 Zaenkrat je videti, kot da ta ukaz uporablja manj varno kloniranje s protokolom HTTPS,
 pri tem predmetu pa bomo uporabljali protokol SSH.
 
+(git:issues)=
+## Vprašanja, naloge, težave: _issues_
+
+_Issue_ je zadeva (težava, naloga, vprašanje, itd.), ki se beleži ob repozitoriju.
+Na ta način se lahko beleži razprava, ali pa razrešuje težava ali napaka.
+Lahko predstavlja napako v kodi, novo funkcionalnost, vprašanje ali predlog za izboljšavo. Uporabniki lahko odprejo _issue_, dodajo opis, komentirajo in sledijo napredku, dokler ta ni rešen ali zaprt. O tem, kako v repozitoriju odprete novo zadevo, si lahko preberete v 
+[GitHub dokumentaciji](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue#creating-an-issue-from-a-repository); 
+je pa podobno, kot da bi odprli novo temo na forumu o vašem repozitoriju.
+
+Ko je razprava zaključena, lahko avtorji repozitorija _issue_ zaprejo.
+Še posebej, če gre za nekaj, kar se je rezrešilo v _commit_-u, je lepo, da 
+se do označi v sporočilu _commit_-a.
+To se naredi tako, da poiščete identifikator zadeve
+(to je številka za znakom `#`, ki stoji za naslovom, kot na primer `#14` 
+[tule](https://github.com/racunalniski-praktikum/racunalniski-praktikum.github.io/issues/14). Nato naredite _commit_ s sporočilom, ki vsebuje niz `⟨kljucna-beseda⟩ #⟨id⟩` z eno od ključnih besed `close`, `closes`, `closed`, `fix`, `fixes`, `fixed`, `resolve`, `resolves`, `resolved` 
+([dokumentacija](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)),
+ki ji sledi Id. Primeri ustreznih sporočil: `closes #1`, `Opravljeno, resolve #42` in `fix #8, zdaj pa zares`. Primeri neustreznih sporočil: `zapri #13`, `Tako ne gre, fix #⟨507⟩`, ali `resolved 37`.
+
 (git:konflikti)=
 ## Zlivanje sprememb in konflikti
 
