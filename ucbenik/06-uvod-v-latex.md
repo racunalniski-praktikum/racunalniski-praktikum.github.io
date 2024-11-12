@@ -109,7 +109,7 @@ V preambulo se nikoli ne piše vsebine, ampak samo ukaze in nastavitve.
 V preambuli v dokument vključimo pakete, uredimo nastavitve in definiramo nove makroje in okolja:
 
 * paket vključimo z ukazom `\usepackage[⟨nastavitve⟩]{⟨ime-paketa⟩}`.
-* nove ukaze in okolja definiramo ga z ukazoma `newcommand` in `newenvironment`.
+* nove ukaze in okolja definiramo z ukazoma `newcommand` in `newenvironment`.
 
 LaTeX ima okoli [6000 paketov](https://www.ctan.org). Najbolj uporabni so že vključeni v
 distribucijo LaTeXa, ki ste jo namestili na svojo računalnik.
