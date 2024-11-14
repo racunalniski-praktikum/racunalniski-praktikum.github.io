@@ -52,7 +52,7 @@ Prehajanje med izvorno kodo v `.tex` datoteki in PDF datoteko v VSCode:
     Kadar delate s paketom `beamer` je pomembno, da so ukazi `section` vedno izven okolij `frame`.
     V nadaljevanju boste videli, da se ti ukazi obnašajo malo drugače, kot ste bili vajeni do sedaj.
 
-## 2. Vključevanje datotek in posebnosti paketa `beamer`
+## 2. Vključevanje datotek in posebnosti predstavitev
 
 1.  Kadar imamo opravka z velikimi `.tex` datotekami, pride prav, 
     če jih lahko razbijemo na manjše. 
