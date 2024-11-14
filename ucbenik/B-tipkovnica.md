@@ -115,6 +115,7 @@ Do njih lahko dostopate z bližnjico <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd
 | Odpiranje datoteke             | <kbd>Ctrl</kbd>+<kbd>O</kbd>                              | <kbd>Cmd</kbd>+<kbd>O</kbd>                      |
 | Odpiranje imenika              | <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>O</kbd> | <kbd>Cmd</kbd>+<kbd>O</kbd>                      |
 | Odpri predogled <sup>2</sup>   | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>             | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>     |
+| Išči po datotekah <sup>3</sup> | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>             | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>     |
 
 <sup>2</sup> Predogled lahko odprete tudi tako, da desno kliknete na ime datoteke in izberete "Open Preview", ampak to ni učinkovita raba tipkovnice.
 
@@ -144,10 +145,9 @@ Opombe:
     - z bližnjico za vaš operacijski sistem dodate nove kurzorje (opazujte, kako je označen začetni rezultat),
     - s tipko <kbd>Esc</kbd> preskočite v okno urejevalnika (kjer bodo tudi ustrezno postavljeni kurzorji).
 
+### LaTeX
 
-### Paleta ukazov:
-
-Nekaj primerov; našteli smo jih po ključnih besedah, preko katerih jih lahko najdete.
-
-- `uppercase` (_Transform to Uppercase_): črke označenega besedila spremeni v velike začetnice.
-- `wrap` (_Wrap with Abbreviation_):  označeno besedilo obda s HTML značko.
+|                 | Windows                                     |  MacOS                                        |
+|:----------------|:-------------------------------------------:|:---------------------------------------------:|
+| iz `.tex` v PDF | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> | <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> |
+| iz PDF v `.tex` | <kbd>Ctrl</kbd>+klik                        | <kbd>Ctrl</kbd>+klik                          |

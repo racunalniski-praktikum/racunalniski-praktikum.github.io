@@ -6,9 +6,11 @@ ki je prvi na seznamu najdenih ukazov.
 
 ## Splošni ukazi
 
-Ukaz _Select All Occurences of Find Match_ lahko uporabite v kombinaciji z iskanjem in zamenjavo
-(angl. _Find_ in _Replace_), ali tako, da najprej označite niz znakov.
-Ukaz naredi kurzor za vsako pojavitvijo iskalnega ali izbranega niza.
+-   `uppercase` (_Transform to Uppercase_): črke označenega besedila spremeni v velike začetnice.
+-   `wrap` (_Wrap with Abbreviation_):  označeno besedilo obda s HTML značko.
+-   `select all occ` (_Select All Occurences of Find Match_) lahko uporabite v kombinaciji z iskanjem in zamenjavo
+    (angl. _Find_ in _Replace_), ali tako, da najprej označite niz znakov.
+    Ukaz naredi kurzor za vsako pojavitvijo iskalnega ali izbranega niza.
 
 
 (paleta-ukazov:html)=
