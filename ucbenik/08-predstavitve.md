@@ -58,9 +58,9 @@ Prehajanje med izvorno kodo v `.tex` datoteki in PDF datoteko v VSCode:
     če jih lahko razbijemo na manjše. 
     Tako bomo naredili tudi tokrat.
     Pod ukazom `section` z naslovom Paket `beamer` prilepite ukaz
-    `\input{prosojnice-resitve/1-paket-beamer.tex}`.
+    `\input{prosojnice/1-paket-beamer.tex}`.
     Ta ukaz vključi vsebino datoteke `1-paket-beamer.tex`, ki se nahaja v imeniku
-    `1-paket-beamer.tex`.
+    `prosojnice`.
     Parametru, ki smo ga podali ukazu `input`, to je `prosojnice-resitve/1-paket-beamer.tex`,
     rečemo **relativna pot**, saj podamo navodila, kako od datoteke z ukazom `input` 
     (v tem primer `prosojnice.tex`) pridemo do datoteke, ki jo vključujemo.
