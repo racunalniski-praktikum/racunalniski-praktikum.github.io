@@ -187,8 +187,8 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
    Na desni strani bi moralo pisati _↻ Build_, ko se prevajanje konča, pa bi morali videti kljukico ✓.
    V nadaljevanju bi za prevajanje moralo zadoščati, da datoteko shranite z bližnjico
    <kbd>Ctrl</kbd>+<kbd>S</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>S</kbd>).
-6. Oglejte si dobljeni rezultat (datoteka `latex.pdf`).
-7. V urejevalniku spremenite datoteko `latex.tex` tako, da bo na koncu enačbe znak za piko `.`. 
+6. Oglejte si dobljeni rezultat (datoteka `latex-test.pdf`).
+7. V urejevalniku spremenite datoteko `latex-test.tex` tako, da bo na koncu enačbe znak za piko `.`. 
    Lahko dopišete tudi enačbo z izraženo hipotenuzo `c = ...` (poiščite LaTeX ukaz za koren).
 8. Ponovite 5. in 6. korak.
 9. Če ste na operacijskem sistemu Windows in uporabljate slovensko tipkovnico, 
