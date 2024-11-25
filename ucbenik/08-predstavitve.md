@@ -109,7 +109,7 @@ Tokrat smo paket `amsmath` že vključili (v paketu `predavanja`),
 tako da ga vam ni treba posebej vključevati.
 
 1.  V datoteki `prosojnice.tex` pod razdelek 
-    paketa `amsmath` in `amsfonts` vključite ustrezno datoteko.
+    *Paketa `amsmath` in `amsfonts`* vključite ustrezno datoteko.
 2.  Oblikujte matematično vsebino na prosojnicah v tem razdelku.
     Podrobnejša navodila so v datoteki.
 
