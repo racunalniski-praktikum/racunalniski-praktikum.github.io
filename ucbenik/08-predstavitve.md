@@ -120,3 +120,9 @@ tako da ga vam ni treba posebej vključevati.
 1.  V datoteki `prosojnice.tex` pod razdelek 
     "Matematika, 1. del" vključite ustrezno datoteko.
 2.  Povsod, kjer v datoteki najdete `??`, vprašaje nadomestite z ustreznim matematičnim izrazom.
+
+## Domača naloga
+
+1.  Na svoj računalnik namestite [Excel](namestitev:microsoft).
+2.  Preverite svoje znanje LaTeX-a s kratkim [kvizom](08-predstavitve/latex-kviz.zip).
+    Kviza ni treba oddati. Čez kak teden bodo objavljene rešitve s komentarji.

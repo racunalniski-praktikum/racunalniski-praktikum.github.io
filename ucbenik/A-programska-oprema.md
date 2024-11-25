@@ -124,6 +124,7 @@ Mathematica je sistem za numerično in simbolno računanje. Namestite jo na doma
 
 V navodilih zgoraj (morda) manjka korak. Ko se registrirate, pridobite aktivacijsko kodo, ter se prijavite in potrdite svojo e-pošto, lahko program prenesete s strani, na kateri ste pridobili aktivacijsko kodo.
 
+(namestitev:microsoft)=
 ## Oprema in storitve Microsoft
 
 Univerza v Ljubljani vsem študentom omogoča dostop do programske opreme in storitev Microsoft, glejte navodila o [informacijskih storitvah Univerze v Ljubljani](https://www.uni-lj.si/studentsko_zivljenje/informacijske_storitve/). Po lastni izbiri si namestite, kar se vam zdi uporabno. Pri predmetu bomo uporabljali Microsoft Excel.
