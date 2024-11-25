@@ -22,7 +22,7 @@ Pomagajte si s preglednimi datotekami, ki ste jih na prejšnjih vajah shranili v
 (predvsem `1-osnove.tex`, `2-matematika.tex`, `3-tabele.tex`in `4-citati.tex`).
 Če jih še niste shranili v svoj repozitorij, to naredite zdaj.
 
-Poleg tega si vam morda pridejo prav tudi naslednji viri.
+Poleg tega si vam morda pridejo prav tudi naslednji viri:
 
 * [tabela matematičnih simbolov](07-okolja-in-sklicevanje/LaTeX_Simboli.pdf),
 * **na lastno odgovornost** lahko uporabite orodje [Detexify](https://detexify.kirelabs.org/classify.html) (na primer, ukaza `in` in `epsilon` izpišeta podobna znaka, ampak v vsaki situaciji je samo en od teh znakov pravi),
@@ -30,7 +30,7 @@ Poleg tega si vam morda pridejo prav tudi naslednji viri.
 * na portalu [Overleaf](https://www.overleaf.com) je zelo dobra [dokumentacija](https://www.overleaf.com/learn). 
 
 Na koncu vsakega razdelka, predvsem pa, preden zaključite z vajami, naredite _commit_ in _push_.
-Pri tej nalogi si pomagajte z preglednimi datotekami.
+Pri tej nalogi si pomagajte s preglednimi datotekami.
 Kadar v nalogi piše, da preberite del katere od preglednih datotek, 
 je ponavadi mišljeno, da preberete `.tex` datoteko in ne prevedene PDF datoteke.
 V `.tex` datotekah je namreč veliko koristnih informacih skritih tudi v komentarjih.
@@ -42,12 +42,12 @@ V `.tex` datotekah je namreč veliko koristnih informacih skritih tudi v komenta
 
 #### 2. Okolja AMS
 
-V tem delu boste pripravili in uporabili okolji za definicije in izrek.
+V tem delu boste pripravili in uporabili okolji za definicije in izreke.
 
 1.  Preberite razdelek Izreki in dokazi v datoteki `2-matematika.tex`. 
     Poglejte tudi preambulo te datoteke in bodite pozorni na to, kako sta uporabljena ukaza `theoremstyle` in `newtheorem`.
     Več primerov lahko najdete tudi na 
-    [Overleaf-u](https://www.overleaf.com/learn/latex/Theorems_and_proofs#Theorem_styles)
+    [Overleaf-u](https://www.overleaf.com/learn/latex/Theorems_and_proofs#Theorem_styles).
 2.  Ukaza `theoremstyle` in `newtheorem` sta v paketu `amsthm`. 
     Preden lahko uporabite ta dva ukaza, morate najprej paket najprej vključiti v preambuli z ukazom `\usepackage{amsthm}`.
 3.  V preambuli definirajte okolje `definicija` s slogom `definition`, 
@@ -57,10 +57,10 @@ V tem delu boste pripravili in uporabili okolji za definicije in izrek.
     že pripravljeni, le še odkomentirati jih morate.
     Ker jih je veliko, uporabite iskanje in zamenjavo: <kbd>Ctrl</kbd>+<kbd>H</kbd> oz. 🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>F</kbd>.
     Nize `% \begin{definicija}` morate nadomestiti z nizi `\begin{definicija}`, nato pa podobno še s konci okolij.
-5.  Okolje za izrek uporabite sami, z uporabom palete ukazov in ukaza 
+5.  Okolje za izrek vključite sami, z uporabo palete ukazov in ukaza 
     `latex surround` (podrobnejša navodila pa so v prejšnjih vajah).
-    Začetek in konec okolja sta označena s komentarjem (`% Začetek okolja izrek`).
-6.  Označite še dokaz z okoljem `proof` (začetek in konec sta označena s komentarjem `% Začetek dokaza`).
+    Začetek in konec okolja sta označena s komentarjem (`% Začetek/Konec okolja izrek`).
+6.  Označite še dokaz z okoljem `proof` (začetek in konec sta označena s komentarjem `% Začetek/Konec dokaza`).
 
 #### 3. Seznam literature
 
@@ -71,7 +71,7 @@ V tem delu boste pripravili in uporabili okolji za definicije in izrek.
     `% ključ` (poiščite vse z iskanjem), ki vsebuje enega ali več sklicev.
 3.  V teh odstavkih morate zamenjati niz `???` z ukazom `cite` 
     z ustrezen sklic (tisti iz komentarja).
-4.  Zdaj če zdaj prevedete datoteko, se poglavje literatura še ne izpiše.
+4.  Če zdaj prevedete datoteko, se poglavje literatura še ne izpiše.
     Čisto na koncu dokumenta vam manjkata še ukaza `bibliographystyle` in `bibliography`.
     Uporabite datoteko `magic.bib` in slog `siam`. 
 
@@ -79,11 +79,11 @@ Pogosta napaka je, da uporabite samo ukaza `bibliographystyle` in `bibliography`
 ne da bi uporabili ukaz `cite`. Ker LaTeX v seznamu literature izpiše samo 
 literaturo, na katero se skličete v besedilu, se v takem primeru ne izpiše nič.
 
-#### 4. Oblikujte sliki
+#### 4. Oblikovanje slik
 
 Oblikujte obe sliki v besedilu (izpustite tisto na prvi strani) z okoljem `figure` (poiščite ukaz `includegraphics`).
 
-1.  Preberite si razdelek Slike v datoteki `3-tabele.tex`,
+1.  Preberite si razdelek *Slike* v datoteki `3-tabele.tex`,
     pri čemer si pozorno oglejte, kako se uporabi okolje `figure`.
 2.  Sliki, ki ju oblikujete, označite z okoljem `figure`.
     Pri tem začetku okolja dodajte pomožni parameter `!ht` 
@@ -97,10 +97,10 @@ Oblikujte obe sliki v besedilu (izpustite tisto na prvi strani) z okoljem `figur
 
 #### 5. Oblikujte tabelo in prvi magični kvadrat
 
-1.  Preberite si poglavje Okolji `table` in `tabular` v datoteki `3-tabele.tex`,
+1.  Preberite si poglavje *Okolji* `table` in `tabular` v datoteki `3-tabele.tex`,
     pri čemer bodite pozorni na to, kako se pravilno gnezdi okolji `table` in `tabular`,
     ter v katerega od njih sodijo ukazi `centering`, `caption` in `label`.
-2.  V datoteki poiščite tabelo, ki je označena s komentarjem `% Začetek tabele`.
+2.  V datoteki poiščite tabelo, ki je označena s komentarjem `% Začetek tabele`
     in njeno vsebino najprej označite z okoljem `tabular`.
     Okolje začnite z `\begin{tabular}{|l|c|c|c|c|c|c|}`: drugi parameter pove, 
     da ima tabela 7 stolpcev, od katerih je prvi levo poravnan (`l` za _left_),
@@ -162,22 +162,22 @@ Sledite naslednjim korakom. Tako zaporedje lahko uporabite vsakič, ko definirat
 Predstavljate si lahko, da je ukaz samo okrajšava za tisto, kar napišete v definicijo ukaza.
     
 
-2.  Najprej oblikujte pojem v prvi definiciji. V parameter ukaza `emph` pred besedilo
+1.  Najprej oblikujte pojem v prvi definiciji. V parameter ukaza `emph` pred besedilo
     dodajte ukaz `\color{purple}`, ki bo barvo spremenil na vijolično.
     Barvo lahko izberete sami, o tem, kako jo uporabite, pa si preberite na [Overleaf-u](https://www.overleaf.com/learn/latex/Using_colours_in_LaTeX).
-3.  V preambulo napišite osnutek definicije novega ukaza: 
+2.  V preambulo napišite osnutek definicije novega ukaza: 
     `\newcommand{\⟨ime-ukaza⟩}[⟨st-parametrov⟩]{⟨definicija⟩}`. 
     Datoteke še ne prevajajte, ker ta definicija še ni sintaktično pravilna.
     Popravite ime ukaza, tako da zamenjate `⟨ime-ukaza⟩` z `pojem`.
-4.  Ukaz bo potreboval samo en parameter (besedilo, ki ga oblikujemo), zato nadomestite
+3.  Ukaz bo potreboval samo en parameter (besedilo, ki ga oblikujemo), zato nadomestite
     `⟨st-parametrov⟩` z `1`.
-5.  Zamenjajte `⟨definicija⟩` z oblikovanim besedilom iz prve definicije 
+4.  Zamenjajte `⟨definicija⟩` z oblikovanim besedilom iz prve definicije 
     (`\emph{\color{purple}Magični kvadrat}`).
-6.  V prvi definiciji pobrišite `\color{purple}` in zamenjajte vse pojavitve ukaza `emph`
+5.  V prvi definiciji pobrišite `\color{purple}` in zamenjajte vse pojavitve ukaza `emph`
     z ukazom `pojem`, ki ste ga ravno definirali.
     LaTeX bo med prevajanjem nadomestil vse pojavitve ukaza `pojem` (in parametrov)
     s tistim, kar ste napisali v definicijo novega ukaza.
-7.  Če prevedete datoteko in pogledate pdf, boste opazili, da so zdaj vsi pojmi `Magični kvadrat`! To lahko popravite tako, da v definiciji ukaza besedilo `Magični kvadrat` nadomestite z `#1`. LaTeX namreč zamenja `#1` v definiciji ukaza z vrednostjo 1. parametra (pa tudi `#2` z vrednostjo 2. parametra, itd., če bi imeli več kot en parameter).
+6.  Če prevedete datoteko in pogledate pdf, boste opazili, da so zdaj vsi pojmi `Magični kvadrat`! To lahko popravite tako, da v definiciji ukaza besedilo `Magični kvadrat` nadomestite z `#1`. LaTeX namreč zamenja `#1` v definiciji ukaza z vrednostjo 1. parametra (pa tudi `#2` z vrednostjo 2. parametra, itd., če bi imeli več kot en parameter).
 
 
 #### Dodatna naloga: definicije novih okolij (`dokaz` in `magic`)
