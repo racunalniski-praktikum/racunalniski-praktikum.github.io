@@ -101,7 +101,7 @@ predstavljamo si, da vsebino razdelimo v stolpce (ločene z znakom `&`)
 in vrstice (ločene z `\\`).
 Primeri takih okolij so okolja za matrike (več preberite v 
 [Overleaf dokumentaciji](https://www.overleaf.com/learn/latex/Matrices)),
-okolje `cases` in posebna okolji za enačbe: `align` in `multline` 
+okolje `cases` in posebni okolji za enačbe: `align` in `multline` 
 (brez črke `i` za `mult`).
 Več o teh okoljih lahko preberete v 
 [dokumentaciji paketa `amsmath`](https://ctan.org/pkg/amsmath) (poiščite _User guide_).
@@ -109,7 +109,7 @@ Tokrat smo paket `amsmath` že vključili (v paketu `predavanja`),
 tako da ga vam ni treba posebej vključevati.
 
 1.  V datoteki `prosojnice.tex` pod razdelek 
-    Paketa `amsmath` in `amsfonts` vključite ustrezno datoteko.
+    paketa `amsmath` in `amsfonts` vključite ustrezno datoteko.
 2.  Oblikujte matematično vsebino na prosojnicah v tem razdelku.
     Podrobnejša navodila so v datoteki.
 
