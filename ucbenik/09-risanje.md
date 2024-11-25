@@ -109,7 +109,7 @@ Nekaj splošnih napotkov:
 2. Datoteke (`dokument.tex`, `knjiga.bib` in `PerrinPlot2.pdf`) 
    stisnite v arhiv z imenom `⟨ime⟩-⟨priimek⟩.zip` 
    (ustrezno popravite; če imate v imenu ali priimku kak presledek, ga nadomestite z vezajem `-`) in ga 
-   [oddajte na učilnico do ponedeljka, 16. decembra 2024, ob 23:55](https://ucilnica.fmf.uni-lj.si/mod/assign/view.php?id=70566).
+   [oddajte na učilnico do ponedeljka, 16. decembra 2024, ob 23:55](https://ucilnica.fmf.uni-lj.si/mod/assign/view.php?id=71491).
 
 Točka za domačo nalogo se vam bo upoštevala, če boste pravočasno
 oddali pravilno poimenovan arhiv s pravimi datotekami (točka 2).
