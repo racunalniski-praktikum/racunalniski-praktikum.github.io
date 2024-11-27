@@ -5,6 +5,8 @@
 - [Excel](namestitev:microsoft)
 `````
 
+Datoteke za vaje najdete v arhivu [`10-razpredelnice.zip`](10-razpredelnice/10-razpredelnice.zip).
+
 ## Pripravljalne naloge
 
 ## Rezultati
@@ -16,53 +18,50 @@ pisali v treh skupinah.
 
 1.  Odstranite stolpec `H` in študente uredite naraščajoče po
     priimkih.
-
 2.  V stolpcu `F` s funkcijo `IF` sestavite formulo, ki pove, ali
     ima študent vsaj $50$ točk. V stolpcu `I` sestavite formulo, ki
     prešteje, koliko študentov je pisalo test v vsaki skupini (uporabite
     `COUNTIF`). V stolpcu `J` s funkcijo `AVERAGEIF` izračunajte
     povprečno število točk za vsako skupino. Rezultat naj bo izpisan na
     dve decimalki (ne zaokrožen).
-
 3.  Tabelo podobno zgornji sestavite še z vrtilno tabelo. Prikažite
     udeležbo, povprečje, minimalno ter maksimalno število točk. *Namig:*
     polje Točke lahko v vrednostih vrtilne tabele uporabite več kot
     enkrat, z različnimi funkcijami združevanja.
-
 4.  Sestavite 3D tortni diagram z udeležbo po skupinah. Odmaknite
     največji kos in dodajte oznake z udeležbo. Sestavite stolpični
     diagram s povprečji točk po skupinah za leti 2021 in 2022. Popravite
     število decimalk na navpični osi, dodajte oznake osi in legendo.
-
 5.  Točke manjše od $50$ s pogojnim oblikovanjem pobarvajte rdeče, prav
-    tako pa tudi priimki in imena študentov, ki niso opravili testa.
-    *Namig:* v meniju za pogojno oblikovanje poiščite in izberite slog
-    ter oblikovanje s formulo: `$E5<50`.
+    tako pa tudi priimke in imena študentov, ki niso opravili testa.
+    *Namig:* v meniju za pogojno oblikovanje poiščite **New Rule** in izberite slog
+    **Classic** ter oblikovanje s formulo: `$E5<50`.
 
-## Smučanje
+## Smučanje (vrtilna tabela)
 
 V datoteki `smucanje.csv` so zbrani podatki o skupnih zmagah v
 svetovnem pokalu v alpskem smučanju. Podatki so ločeni z vejicami,
 uporabljena je kodna tabela `UTF-8`. Podatke uvozite v delovni zvezek
-`smucanje.xlsx` na list `Podatki`. Uvožene podatke označite kot
-tabelo: in jo poimenujte `Zmagovalci`. Naredite nov list `Zmage` na
-katerem sestavite pivotni tabelo in diagram, kot je prikazano na sliki.
-Pri izbiri podatkov za pivotno tabelo lahko napišete kar
-`Podatki!Zmagovalci`.
+`smucanje.xlsx` na list `Podatki`. 
+Tabelo z uvoženimi podatki poimenujte `Zmagovalci`. 
 
-Prva pivotna tabela naj vsebuje pregled zmag po državah in spolu
-tekmovalcev. Pivotno tabelo poimenujte `PoDrzavah`. Tabelo uredite
-padajoče po skupnem številu zmag.
-
-Druga pivotna tabela naj prikazuje zmagovalce iz Evrope, ki so zmagali
-vsaj dvakrat. Ustrezen filter najdete v meniju, ki vam ga odpre gumb za
-filtriranje v glavi tabele. Izberite ustrezno polje in uredite
-filtriranje po vrednost. Te razdelite na moške in ženske kot prikazuje
-slika in tabelo uredite padajoče po skupnem številu zmag.
+1.  [Poglejte](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576), 
+    kako se v Excelu naredi vrtilno tabelo.
+2.  Naredite nov list `Zmage` na katerem sestavite vrtilno tabelo in diagram, 
+    kot je prikazano na sliki.
+    Pri izbiri podatkov za vrtilno tabelo lahko napišete kar `Podatki!Zmagovalci`.
+3.  Prva vrtilna tabela naj vsebuje pregled zmag po državah in spolu
+    tekmovalcev. Vrtilno tabelo poimenujte `PoDrzavah`. Tabelo uredite
+    padajoče po skupnem številu zmag.
+4.  Druga vrtilna tabela naj prikazuje zmagovalce iz Evrope, ki so zmagali
+    vsaj dvakrat. Ustrezen filter najdete v meniju, ki vam ga odpre gumb za
+    filtriranje v glavi tabele. Izberite ustrezno polje in uredite
+    filtriranje po vrednost. Te razdelite na moške in ženske kot prikazuje
+    slika in tabelo uredite padajoče po skupnem številu zmag.
 
 ![image](10-razpredelnice/smucanje.png)
 
-## Poraba
+## Poraba (`MATCH` in `INDEX`)
 
 V delovnem zvezku `poraba.xlsx` so vpisani podatki o tem, kdaj in
 koliko goriva smo dotočili v avto. Predpostavite, da gorivo vedno
@@ -71,19 +70,16 @@ dotočimo do polnega.
 1.  Izračunajte prevožene kilometre (pri tem izpustite prvo vrstico).
     Gumbe v glavi tabele lahko skrijete na zavihku *Table* (možnost
     *Filter Button*).
-
 2.  S pomočjo funkcij `MATCH` in `INDEX` izračunajte ceno natočenega
     goriva.
-
 3.  Porabo (litre na 100 km) izračunate po formuli
     $100 \cdot \frac{\text{litri}}{\text{prevoženo}}$.
-
 4.  V zadnjem stolpcu grafično prikaži porabo. S formulo kopirajte
     vrednost iz stolpca Poraba. Za zadnji stolpec uporabite pogojno
-    oblikovanje: . Za *minimum* in *maksimum* iz menija izberite *Lowest
+    oblikovanje: **Conditional Formatting** > **Highest Value**. 
+    Za *minimum* in *maksimum* iz menija izberite *Lowest
     Value* in *Highest Value*.
-
-5.  Sestavite pivotno tabelo s pregledom prevoženih kilometrov in porabe
+5.  Sestavite vrtilno tabelo s pregledom prevoženih kilometrov in porabe
     po mesecih. Stolpec skupno lahko skrijete na zavihku *Design*.
 
 ![image](10-razpredelnice/poraba.png)
@@ -98,14 +94,11 @@ plusa in krogca pa so različne pri posameznih nalogah.
 ![image](10-razpredelnice/tockovanje.png)
 
 1.  Stolpce uredite tako, da bodo priimki študentov urejeni po abecednem
-    vrstnem redu: , pod pa izberete . Ni nujno, da se bodo šumniki
-    uredili pravilno, to je za zdaj ok.
-
+    vrstnem redu: **Data** > **Sort**, pod **Options** pa izberete **Sort from left to right**. 
+    Ni nujno, da se bodo šumniki uredili pravilno, to je za zdaj ok.
 2.  Na obarvanih poljih (vrstice 14, 24, 43 in 45), izračunajte dosežene
     točke s funkcijama `SUM` in `SUMIF`. Formule najprej sestavite
     za enega študenta in jih kopirajte k drugim.
-
-3.  Pod \"\>Rezultati testa\"\< kopirajte imena, priimke in dosežene
-    točke (vrednosti, ne formul): uporabite in .
-
+3.  Pod "Rezultati testa" kopirajte imena, priimke in dosežene
+    točke (vrednosti, ne formul): uporabite menija **Copy** in **Paste Special**.
 4.  Študente uredite padajoče po doseženih točkah in izračunajte ocene.
