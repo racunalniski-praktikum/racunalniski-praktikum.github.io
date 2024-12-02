@@ -14,6 +14,9 @@ parts:
   - file: 07-okolja-in-sklicevanje.md
   - file: 08-predstavitve.md
   - file: 09-risanje.md
+- caption: Razpredelnice
+  chapters:
+  - file: 10-razpredelnice.md
 - caption: Plonkci in ostali dodatki
   chapters:
   - file: A-programska-oprema.md
