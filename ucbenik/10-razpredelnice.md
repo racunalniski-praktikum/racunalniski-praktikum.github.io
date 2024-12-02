@@ -5,9 +5,28 @@
 - [Excel](namestitev:microsoft)
 `````
 
-Datoteke za vaje najdete v arhivu [`10-razpredelnice.zip`](10-razpredelnice/10-razpredelnice.zip).
+Ponavadi se izkaže, da ste se s programom Excel že kdaj prej spoznali,
+zato bomo pri vajah skočili na naprednejše teme.
+Predpostavljamo, da znate začetna poglavja 
+[vodiča po Excelu](https://support.microsoft.com/en-us/office/what-is-excel-94b00f50-5896-479c-b0c5-ff74603b35a3),
+do vključno poglavja o diagramih ("Charts"), od tega pri poglavju "Formulas & functions" le razdelek "Overview of formulas in Excel"; 
+Še posebej pomembno je, da znate:
 
-## Pripravljalne naloge
+- urejati stolpce, vrstice in liste zvezka, izbirati in premikati celice in razpone celic,
+- urejati tabele in diagrame,
+- znate [kopirati vsebino celic z okvirčkom](https://support.microsoft.com/en-us/office/fill-data-automatically-in-worksheet-cells-74e31bdd-d993-45da-aa82-35a236c5b5db), 
+- narediti [sklic na drugo celico ali razpon celic](https://support.microsoft.com/en-us/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173),
+
+Kljub temu bomo na vajah nekaj pozornosti posvetili nekaterim pomembnim temam iz teh poglavij:
+
+- [pretvarjanje besedila v stolpce](https://support.microsoft.com/en-us/office/split-text-into-different-columns-with-the-convert-text-to-columns-wizard-30b14928-5550-41f5-97ca-7a3e9c363ed7) in
+- [uvoz podatkov iz datotek](https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba),
+- [pogojno oblikovanje](https://support.microsoft.com/en-us/office/conditional-formatting-7957ee2d-c54e-4230-961f-175fad32972c),
+
+## Datoteke z nalogami
+
+1. Za vajo lahko doma rešujete [uvodne naloge iz Excela](10-razpredelnice/excel-uvodne.zip).
+2. Datoteke za vaje najdete v arhivu [`10-razpredelnice.zip`](10-razpredelnice/10-razpredelnice.zip).
 
 ## Rezultati
 
@@ -84,7 +103,7 @@ dotočimo do polnega.
 
 ![image](10-razpredelnice/poraba.png)
 
-## Točkovanje
+## Točkovanje (dodatna naloga)
 
 V delovnem zvezku `tockovanje.xlsx` so zbrani podatki o točkovanju
 testa, ki so ga pisali študenti. Vsaka naloga je bila točkovana s
