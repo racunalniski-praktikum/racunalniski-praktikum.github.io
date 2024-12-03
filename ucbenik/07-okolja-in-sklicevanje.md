@@ -247,4 +247,4 @@ ki ga bo naredil `ul-fmf-bot`, v katerem bo narejena sprememba,
 za katero vas bo prosil bot.
 Sprememba mora imeti čas med
 ponedeljkom, 11. novembra 2024, ob 00:00 in
-ponedeljkom,  2. decembra 2024, ob 23:55.
+ponedeljkom, 23. decembra 2024, ob 23:55.
