@@ -54,7 +54,7 @@ pisali v treh skupinah.
 5.  Točke manjše od $50$ s pogojnim oblikovanjem pobarvajte rdeče, prav
     tako pa tudi priimke in imena študentov, ki niso opravili testa.
     *Namig:* v meniju za pogojno oblikovanje poiščite **New Rule** in izberite slog
-    **Classic** ter oblikovanje s formulo: `$E5<50`.
+    **Classic** ter oblikovanje s formulo: `$E3<50`.
 
 ## Smučanje (vrtilna tabela)
 
