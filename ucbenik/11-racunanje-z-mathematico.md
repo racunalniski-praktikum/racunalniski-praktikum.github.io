@@ -1,5 +1,12 @@
 # Osnovna uporaba Mathematice
 
+`````{admonition} Programska oprema
+:class: important
+- [Mathematica](namestitev:mathematica)
+`````
+
+
+
 ## Celice
 
 Zvezki v Mathematici imajo tri vrste celic: celice z besedilom, vhodne celice in izhodne celice.
@@ -54,3 +61,7 @@ Mathematica ima dva prireditvena operatorja, s katerima lahko definiramo (ali sp
 ## Naloga
 
 Rešujte naloge v [zvezku](11-racunanje-z-mathematico/mathematica1.nb).
+
+## Domača naloga
+
+Bo objavljena kmalu.
