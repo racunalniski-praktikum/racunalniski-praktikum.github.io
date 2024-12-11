@@ -17,6 +17,9 @@ parts:
 - caption: Razpredelnice
   chapters:
   - file: 10-razpredelnice.md
+- caption: Simbolno računanje
+  chapters:
+  - file: 11-racunanje-z-mathematico.md
 - caption: Plonkci in ostali dodatki
   chapters:
   - file: A-programska-oprema.md
