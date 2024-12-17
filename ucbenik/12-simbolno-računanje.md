@@ -1,1 +1,0 @@
-# Simbolno računanje

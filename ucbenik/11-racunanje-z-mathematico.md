@@ -51,13 +51,6 @@ Mathematica barva izvorno kodo v vhodnih celicah:
 * **Vezane spremenljivke** so zelene. Na primer, v izrazu za vsoto `Sum[1/(k^2), {k, 1, Infinity}]` je `k`
   pobarvan zeleno.
 
-### Prirejanje
-
-Mathematica ima dva prireditvena operatorja, s katerima lahko definiramo (ali spreminjamo) vrednosti simbolov.
-
-* `=` - takojšnje prirejanje in
-* `:=` - zakasnjeno prirejanje.
-
 ## Naloga
 
 Rešujte naloge v [zvezku](11-racunanje-z-mathematico/mathematica1.nb).
