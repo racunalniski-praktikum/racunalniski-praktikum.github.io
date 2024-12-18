@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     26044,        690]
-NotebookOptionsPosition[     23055,        628]
-NotebookOutlinePosition[     23614,        648]
-CellTagsIndexPosition[     23571,        645]
+NotebookDataLength[     29146,        784]
+NotebookOptionsPosition[     25609,        713]
+NotebookOutlinePosition[     26169,        733]
+CellTagsIndexPosition[     26126,        730]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -453,6 +453,91 @@ Cell[TextData[{
 }], "Subsection",
  CellChangeTimes->{{3.7841038598013687`*^9, 3.7841038647076144`*^9}, {
   3.7841091087701426`*^9, 3.7841091100201426`*^9}, {3.9091249382658157`*^9, 
+  3.9091249448005333`*^9}},ExpressionUUID->"4c9474e1-16f8-43c3-9358-\
+50cff4b93e34"],
+
+Cell[TextData[{
+ "1. Numeri\[CHacek]no izra\[CHacek]unaj ni\[CHacek]le polinoma  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "7"], "-", 
+    RowBox[{"2", 
+     SuperscriptBox["x", "6"]}], "-", 
+    SuperscriptBox["x", "5"], "-", 
+    RowBox[{"2", 
+     SuperscriptBox["x", "4"]}], "+", 
+    RowBox[{"12", 
+     SuperscriptBox["x", "2"]}], "-", "x", "+", "1"}], TraditionalForm]],
+  ExpressionUUID->"1b7e2e11-a8c1-4257-8eb5-71f2ffc9de52"],
+ ". \n2. Preberite dokumentacijo funkcije NSolve in izra\[CHacek]unajte samo \
+realne ni\[CHacek]le."
+}], "Text",
+ CellChangeTimes->{
+  3.9435072272151337`*^9, {3.943507270122199*^9, 3.943507270480451*^9}, {
+   3.943507302394718*^9, 
+   3.9435073222312717`*^9}},ExpressionUUID->"f88567c1-c8e2-4a37-b0f0-\
+ec40c27b4d0a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"x", "^", "7"}], "-", 
+    RowBox[{"2", 
+     RowBox[{"x", "^", "6"}]}], "-", 
+    RowBox[{"x", "^", "5"}], " ", "-", " ", 
+    RowBox[{"2", 
+     RowBox[{"x", "^", "4"}]}], " ", "+", " ", 
+    RowBox[{"12", 
+     RowBox[{"x", "^", "2"}]}], " ", "-", " ", "x", " ", "+", " ", "1"}], " ",
+    "*)"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.943507234838275*^9, 3.9435072752598658`*^9}, 
+   3.943508782506404*^9},ExpressionUUID->"961d7cbf-0ff7-4515-8b09-\
+efb2083f043c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.7841038598013687`*^9, 3.7841038647076144`*^9}, {
+  3.7841091087701426`*^9, 3.7841091100201426`*^9}, {3.9091249382658157`*^9, 
+  3.9091249448005333`*^9}},ExpressionUUID->"08fd1102-ba8e-4627-8568-\
+3383b3e83695"],
+
+Cell[TextData[{
+ "Dolo\[CHacek]i vsa realna \[SHacek]tevila, ki zado\[SHacek]\[CHacek]ajo \
+neena\[CHacek]bi  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"|", 
+      RowBox[{"x", "-", "3"}], "|"}], 
+     RowBox[{"x", "+", "1"}]], ">", 
+    SqrtBox[
+     RowBox[{"3", "-", 
+      RowBox[{"2", "x"}]}]]}], TraditionalForm]],ExpressionUUID->
+  "ce67004d-9465-4271-9bf8-7a5b57affd8d"]
+}], "Text",
+ CellChangeTimes->{
+  3.943507490833331*^9},ExpressionUUID->"c5a411ea-54f2-4a84-b948-\
+1b95513f550e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.7841038598013687`*^9, 3.7841038647076144`*^9}, {
+  3.7841091087701426`*^9, 3.7841091100201426`*^9}, {3.9091249382658157`*^9, 
   3.9091249448005333`*^9}},ExpressionUUID->"f2e993f7-7ed3-4542-9d75-\
 9c328827cd46"],
 
@@ -628,13 +713,13 @@ napi\[SHacek]ete vsoto ",
 },
 WindowToolbars->{},
 WindowSize->{712, 794},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowMargins->{{Automatic, 44}, {Automatic, 0}},
 TaggingRules->{
  "PresenterSettings" -> {"SlideBreakStyles" -> {}, "ShowSlideBreaks" -> True},
    "NewCellStyle" -> "Text", "StatusMessage" -> ""},
 FrontEndVersion->"14.1 for Mac OS X x86 (64-bit) (July 16, 2024)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"ada8e28a-a3f6-4f3a-a75a-559ec1dee676"
+ExpressionUUID->"ae63b1c8-7e55-4d64-ac08-a9c693e9cc07"
 ]
 (* End of Notebook Content *)
 
@@ -675,20 +760,29 @@ Cell[15270, 397, 1596, 36, 164, "Text",ExpressionUUID->"d6b7e2cf-1b65-4b1c-afec-
 Cell[CellGroupData[{
 Cell[16915, 439, 326, 5, 66, "Section",ExpressionUUID->"f2bc2259-9049-4724-80fe-56cd6e3aee9f"],
 Cell[CellGroupData[{
-Cell[17266, 448, 308, 8, 53, "Subsection",ExpressionUUID->"f2e993f7-7ed3-4542-9d75-9c328827cd46"],
-Cell[17577, 458, 1747, 53, 124, "Text",ExpressionUUID->"db09552c-ccf7-4243-b4bb-49d9a01883d1"]
+Cell[17266, 448, 308, 8, 53, "Subsection",ExpressionUUID->"4c9474e1-16f8-43c3-9358-50cff4b93e34"],
+Cell[17577, 458, 779, 21, 55, "Text",ExpressionUUID->"f88567c1-c8e2-4a37-b0f0-ec40c27b4d0a"],
+Cell[18359, 481, 555, 15, 49, "Input",ExpressionUUID->"961d7cbf-0ff7-4515-8b09-efb2083f043c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19361, 516, 308, 8, 53, "Subsection",ExpressionUUID->"f904c094-4ed1-4178-898a-3a2243b1d171"],
-Cell[19672, 526, 1034, 30, 77, "Text",ExpressionUUID->"ad8e69d2-2a98-4c92-8575-8794b9d1f72e"]
+Cell[18951, 501, 308, 8, 53, "Subsection",ExpressionUUID->"08fd1102-ba8e-4627-8568-3383b3e83695"],
+Cell[19262, 511, 521, 17, 38, "Text",ExpressionUUID->"c5a411ea-54f2-4a84-b948-1b95513f550e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20743, 561, 299, 8, 53, "Subsection",ExpressionUUID->"5927276d-a418-4a49-ab4f-2459fdb4af57"],
-Cell[21045, 571, 597, 10, 77, "Text",ExpressionUUID->"d833d40b-1d33-44aa-b458-2a1d78b60fb3"]
+Cell[19820, 533, 308, 8, 53, "Subsection",ExpressionUUID->"f2e993f7-7ed3-4542-9d75-9c328827cd46"],
+Cell[20131, 543, 1747, 53, 124, "Text",ExpressionUUID->"db09552c-ccf7-4243-b4bb-49d9a01883d1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[21679, 586, 299, 8, 53, "Subsection",ExpressionUUID->"2fd727b1-4da0-4dc8-a9fe-5df80f2b53f4"],
-Cell[21981, 596, 1034, 27, 55, "Text",ExpressionUUID->"55266f88-95a7-47e9-8bbd-3473317b837e"]
+Cell[21915, 601, 308, 8, 53, "Subsection",ExpressionUUID->"f904c094-4ed1-4178-898a-3a2243b1d171"],
+Cell[22226, 611, 1034, 30, 77, "Text",ExpressionUUID->"ad8e69d2-2a98-4c92-8575-8794b9d1f72e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23297, 646, 299, 8, 53, "Subsection",ExpressionUUID->"5927276d-a418-4a49-ab4f-2459fdb4af57"],
+Cell[23599, 656, 597, 10, 77, "Text",ExpressionUUID->"d833d40b-1d33-44aa-b458-2a1d78b60fb3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24233, 671, 299, 8, 53, "Subsection",ExpressionUUID->"2fd727b1-4da0-4dc8-a9fe-5df80f2b53f4"],
+Cell[24535, 681, 1034, 27, 55, "Text",ExpressionUUID->"55266f88-95a7-47e9-8bbd-3473317b837e"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

@@ -20,6 +20,7 @@ parts:
 - caption: Simbolno računanje
   chapters:
   - file: 11-racunanje-z-mathematico.md
+  - file: 12-risanje-in-enacbe.md
 - caption: Plonkci in ostali dodatki
   chapters:
   - file: A-programska-oprema.md
