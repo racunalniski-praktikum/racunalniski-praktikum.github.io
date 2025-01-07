@@ -21,6 +21,7 @@ parts:
   chapters:
   - file: 11-racunanje-z-mathematico.md
   - file: 12-risanje-in-enacbe.md
+  - file: 13-animiranje-vektorji-matrike.md
 - caption: Plonkci in ostali dodatki
   chapters:
   - file: A-programska-oprema.md

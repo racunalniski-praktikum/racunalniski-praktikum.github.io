@@ -1,1 +1,0 @@
-# Naprednejša matematika
