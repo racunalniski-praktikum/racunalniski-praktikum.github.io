@@ -100,7 +100,7 @@ Nekaj splošnih napotkov:
 * `displaystyle` preklopi v prikazni način v vrstici,
 * `textstyle` pa preklopi v vrstični način znotraj okolja, kjer je privzet prikazni.
 
-## Domača naloga
+## Domača naloga (9.)
 
 1. Rešite [LaTeX](09-risanje/dn-latex.zip) nalogo,
    da dobite občutek, kako bodo izgledale naloge na izpitu.

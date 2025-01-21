@@ -230,7 +230,7 @@ Zdaj lahko dokončate dokument:
 - uporabite okolje `magic` za vse magične kvadrate in
 - kjer se v besedilu pojavi niz `?!?` naredite sklic na ustrezen magični kvadrat.
 
-## Domača naloga
+## Domača naloga (7.)
 
 1.  Dokončajte vaje, še posebej tiste do dodatne naloge.
 2.  Sodelujte z našim botom: če tega še niste naredili, na svojem GitHub repozitoriju dodajte dostop uporabniku

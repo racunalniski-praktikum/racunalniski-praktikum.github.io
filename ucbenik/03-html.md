@@ -296,7 +296,7 @@ več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
 7. Zabeležite spremembo: dodajte datoteko `stran.html`
    ter napišite uporabno sporočilo, npr. `Dodaj formule in sklicevanje`.
 
-## Domača naloga
+## Domača naloga (3.)
 
 1. Če za študij uporabljate še kak drug računalnik, ga pripravite za delo z Git-om in VSCode.
 2. Dokončajte vaje, če jih še niste.

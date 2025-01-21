@@ -156,7 +156,7 @@ Z branjem nadaljujte šele, ko opravite vse, kar piše.
 Sedaj lahko sledite navodilom v PDF datoteki.
 Veliko zabave in pazite na glavo, stropi so nizki!
 
-## Domača naloga
+## Domača naloga (1.)
 
 1. Rešite [anketo o predznanju računalništva](https://ucilnica.fmf.uni-lj.si/mod/feedback/view.php?id=32277) na učilnici.
 2. Izberite tri izmed bližnjic na tipkovnici, ki ste jih srečali na vajah, pa jih še ne uporabljate.

@@ -284,7 +284,7 @@ bližnjice poiščite v [plonkcu](bliznjice:vscode).
    Spremembi zabeležite in pošljite na strežnik.
 
 
-## Domača naloga
+## Domača naloga (6.)
 
 1. Dokončajte vaje, če jih še niste.
 

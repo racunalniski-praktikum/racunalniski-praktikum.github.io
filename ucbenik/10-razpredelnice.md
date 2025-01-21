@@ -122,7 +122,7 @@ plusa in krogca pa so različne pri posameznih nalogah.
     točke (vrednosti, ne formul): uporabite menija **Copy** in **Paste Special**.
 4.  Študente uredite padajoče po doseženih točkah in izračunajte ocene.
 
-## Domača naloga
+## Domača naloga (10.)
 
 1. Rešite [Excel](10-razpredelnice/dn-excel.zip) nalogo,
    da dobite občutek, kako bodo izgledale naloge na izpitu.

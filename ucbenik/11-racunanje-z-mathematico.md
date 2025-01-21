@@ -54,7 +54,3 @@ Mathematica barva izvorno kodo v vhodnih celicah:
 ## Naloga
 
 Rešujte naloge v [zvezku](11-racunanje-z-mathematico/mathematica1.nb).
-
-## Domača naloga
-
-Bo objavljena kmalu.

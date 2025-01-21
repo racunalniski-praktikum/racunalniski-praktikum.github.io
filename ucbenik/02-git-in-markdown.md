@@ -205,7 +205,7 @@ touch ⟨ime-datoteke⟩
 * [Learn Git Branching](https://learngitbranching.js.org), nekoliko naprednejša spletna igra za spoznavanje Gita s poudarkom na delu z vejami.
 * [Oh My Git!](https://ohmygit.org), igra za spoznavanje gita, ki kmalu predstavi, kako lahko na datotekah sodeluje več avtorjev.
 
-## Domača naloga
+## Domača naloga (2.)
 
 1. [Napravite končnice in skrite datoteke vidne na domačem računalniku](faq:koncnice-skrite).
 2. V svoj prvi repozitorij (ki ste ga klonirali v 2. nalogi) shranite datoteko `README.md`, 

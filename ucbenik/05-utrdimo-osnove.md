@@ -150,7 +150,7 @@ V tej nalogi boste postavili svojo stran.
 poslali na strežnik, se bo v nekaj minutah (ponavadi hitreje, kot v desetih)
 posodobila tudi spletna stran.
 
-## Domača naloga
+## Domača naloga (5.)
 
 0. Če želite naslednje vaje reševati na svojem računalniku, [namestite LaTeX](namestitev:latex).
 1. Preberite si začetek [poglavja o LaTeX-u](06-uvod-v-latex) (do 1. naloge).

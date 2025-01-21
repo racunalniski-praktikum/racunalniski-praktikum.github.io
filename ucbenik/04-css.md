@@ -241,7 +241,7 @@ boste skoraj gotovo rešitev našli na spletu.
    ter napišite uporabno sporočilo, npr. `Dopolni CSS`.
 
 
-## Domača naloga
+## Domača naloga (4.)
 
 0. Na svojem GitHub repozitoriju dodajte dostop uporabniku
    `ul-fmf-bot` po [navodilih v GitHub dokumentaciji](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository).
