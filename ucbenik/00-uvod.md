@@ -20,7 +20,7 @@ Učbenik črpa tudi iz gradiv iz prejšnjih let: iz zapiskov za predavanja, ki j
 Pripombe in dopolnitve k vajam so prispevali tudi demonstratorji:
 
 - Maja Abraham,
-- Lenart Bučar
+- Lenart Bučar,
 - Ana Luetić,
 - Matej Rojec,
 - Anej Rozman,
