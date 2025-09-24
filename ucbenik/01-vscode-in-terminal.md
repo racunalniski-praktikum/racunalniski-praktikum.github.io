@@ -93,10 +93,16 @@ Najprej preberite spodnja pravila in se pripravite na izvajanje naloge.
 Vnaprej poiščite potrebno dokumentacijo (na primer, kako se v VSCode besedilo z bližnjico spremeni v same velike
 črke?), da ne boste brskali kasneje.
 
+`````{admonition} Pozor, uvajamo standarden zapis
+:class: important
+Včasih boste v navodilih opazili besedilo v čudnih oklepajih `⟨besedilo-v-cudnih-oklepajih⟩` (ki bo pogosto napisano brez šumnikov, presledki pa bodo nadomeščeni z vezaji). Te oklepaje uporabljamo zato, da poudarimo, da gre za del besedila, ki ga nadomesti vsak zase. Besedilo v oklepajih vam pove, s čim je treba vse skupaj (z oklepaji vred) nadomestiti.
+Prvi primer boste srečali spodaj, `C:\Users\⟨uporabnisko-ime⟩`. Če je vaše uporabniško ime `Gandalf`, potem je prej omenjena pot v vašem primeru   `C:\Users\Gandalf` (**in ne** `C:\Users\⟨Gandalf⟩`).
+`````
+
 S tipkovnico in čim manjšo uporabo miške naredite naslednja opravila:
 
  1. Poženite urejevalnik VSCode.
- 2. V urejevalniku v domačem imeniku (na Windows `C:\Users\⟨uporabnisko-ime⟩`, na MacOS pa `/Users/⟨domace-uporabnisko-ime⟩`)
+ 2. V urejevalniku v domačem imeniku (na Windows `C:\Users\⟨uporabnisko-ime⟩`, na MacOS pa `/Users/⟨uporabnisko-ime⟩`)
     ustvarite in odprite imenik za Računalniški praktikum (npr. `C:\Users\⟨uporabnisko-ime⟩\RP`).
  3. Ustvarite novo datoteko in jo takoj shranite v domači imenik. Poimenujte jo `besedilo.txt`.
  4. Poskrbite, da bo kodiranje nastavljeno na `UTF-8` (glejte spodaj desno v statusno vrstico v VSCode).
@@ -174,7 +180,7 @@ Veliko zabave in pazite na glavo, stropi so nizki!
     - v istem razdelku pod točko 7 napišite na primer `dopolni README` (in se ne ukvarjajte z dodajanjem avtorjev),
     - še vedno v razdelku _Commit your first change_, točka 8, izberite _Commit directly to the main branch_,
     - navodilom sledite samo do razdelka _Next steps_.
-5. Na [učilnici](https://ucilnica.fmf.uni-lj.si/mod/assign/view.php?id=70431) oddajte naslov repozitorija: `https://github.com/⟨uporabnisko-ime⟩/⟨ime repozitorija⟩`.
+5. Na [učilnici](https://ucilnica.fmf.uni-lj.si/mod/assign/view.php?id=70431) oddajte naslov repozitorija: `https://github.com/⟨uporabnisko-ime⟩/⟨ime-repozitorija⟩`.
    Pred oddajo preverite, da je naslov pravi (sicer ne boste dobili točk).
 6. Preberite si stran o [računalniških sistemih, storitvah in opremi za študente](https://ucilnica.fmf.uni-lj.si/mod/page/view.php?id=51619).
 7. Pridružite se Discord strežniku, ki ga uporabljamo pri nekaterih predmetih. 
