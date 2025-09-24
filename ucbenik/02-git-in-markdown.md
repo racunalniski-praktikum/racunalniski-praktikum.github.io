@@ -205,27 +205,3 @@ touch ⟨ime-datoteke⟩
 * [Learn Git Branching](https://learngitbranching.js.org), nekoliko naprednejša spletna igra za spoznavanje Gita s poudarkom na delu z vejami.
 * [Oh My Git!](https://ohmygit.org), igra za spoznavanje gita, ki kmalu predstavi, kako lahko na datotekah sodeluje več avtorjev.
 
-## Domača naloga (2.)
-
-1. [Napravite končnice in skrite datoteke vidne na domačem računalniku](faq:koncnice-skrite).
-2. V svoj prvi repozitorij (ki ste ga klonirali v 2. nalogi) shranite datoteko `README.md`, 
-   ki ste jo pripravili v 1. nalogi: potrebovali boste ukaza `add` in `commit`.
-   Sporočilo commita (tisto med dvojnimi narekovaji) naj vsebuje besedilo `2. domača naloga`,
-   sicer ne boste dobili točke.
-3. Shranite spremembe, ki ste jih ravnokar naredili, še na GitHub: `git push origin main` oz. 
-   `git push origin master`. 
-   (Ime vaše glavne veje je `main` ali `master`. 
-   Katero je pravo, lahko preverite z ukazom `git branch`).
-4. Če se še niste, se na [učilnici](http://ucilnica.fmf.uni-lj.si/) prijavite k predmetom, ki jih obiskujete.
-5. Preko [ID portala](https://id.uni-lj.si/) Univerze v Ljubljani se prijavite v spletni vmesnik za elektronsko pošto in pošljite mail kateremu od svojih sošolcev. 
-   Tako boste preverili, ali je vse pravilno nastavljeno.
-   Če uporabljte kakšno drugo e-pošto, vam svetujemo, da si naredite preusmeritev iz
-   študenske e-pošte nanjo, saj boste na študentski naslov prejemali tudi pomembna obvestila
-   o študiju. Sami ugotovite, kako se to naredi, ali pa vprašajte.
-
-Točka za domačo nalogo se vam bo upoštevala, 
-če bo v vašem repozitoriju (na glavni oz. privzeti veji)
-sprememba (oz. _commit_) datoteke `README.md` s sporočilom, ki vsebuje besedilo `2. domača naloga`. 
-Sprememba mora imeti čas med
-ponedeljkom,  7. oktobra 2024, ob 00:00 in
-ponedeljkom, 28. oktobra 2024, ob 23:55.
