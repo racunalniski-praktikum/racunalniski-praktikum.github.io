@@ -97,6 +97,8 @@ Vnaprej poiščite potrebno dokumentacijo (na primer, kako se v VSCode besedilo 
 :class: important
 Včasih boste v navodilih opazili besedilo v čudnih oklepajih `⟨besedilo-v-cudnih-oklepajih⟩` (ki bo pogosto napisano brez šumnikov, presledki pa bodo nadomeščeni z vezaji). Te oklepaje uporabljamo zato, da poudarimo, da gre za del besedila, ki ga nadomesti vsak zase. Besedilo v oklepajih vam pove, s čim je treba vse skupaj (z oklepaji vred) nadomestiti.
 Prvi primer boste srečali spodaj, `C:\Users\⟨uporabnisko-ime⟩`. Če je vaše uporabniško ime `Gandalf`, potem je prej omenjena pot v vašem primeru   `C:\Users\Gandalf` (**in ne** `C:\Users\⟨Gandalf⟩`).
+
+Ta (ali podoben) način označevanja je kar običajen za mesta, kjer morate vnesti svoje podatke (drugi avtorji včasih uporabijo tudi drugačne oklepaje).
 `````
 
 S tipkovnico in čim manjšo uporabo miške naredite naslednja opravila:

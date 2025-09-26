@@ -36,6 +36,11 @@ Datoteko, ki jo boste pripravili, boste potrebovali za domačo nalogo.
 
 ### 1. 1. Pripravite se za delo
 
+`````{admonition} Pozor, uporabljamo standardni zapis
+:class: important
+V navodilih bo spet pisalo `⟨uporabnisko-ime⟩`. Če je vaše uporabniško ime `Gandalf`, potem je prej omenjena pot v vašem primeru   `C:\Users\Gandalf\RP\02-git-md` (**in ne** `C:\Users\⟨Gandalf⟩\RP\02-git-md`).
+`````
+
 1. V VSCode ustvarite in odprite nov imenik (npr. `C:\Users\⟨uporabnisko-ime⟩\RP\02-git-md` oz. 🍎 `/Users/⟨uporabnisko-ime⟩/RP/02-git-md`). 
    V njem naredite novo datoteko z bližnjico <kbd>Ctrl</kbd>+<kbd>N</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>N</kbd>).
 2. Datoteko shranite z bližnjico <kbd>Ctrl</kbd>+<kbd>S</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>S</kbd>). 
