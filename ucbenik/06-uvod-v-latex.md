@@ -282,21 +282,3 @@ bližnjice poiščite v [plonkcu](bliznjice:vscode).
    Pravilno bo napisana, ko boste med spremembami
    videli samo datoteki `urnik.tex` in `.gitignore`.
    Spremembi zabeležite in pošljite na strežnik.
-
-
-## Domača naloga (6.)
-
-1. Dokončajte vaje, če jih še niste.
-
-Točka za domačo nalogo se vam bo upoštevala, 
-če bo v vašem repozitoriju (na glavni oz. privzeti veji)
-prisotna v glavnem imeniku datoteka `.gitignore` in
-sprememba (oz. _commit_) datoteke `urnik.tex`,
-(ta je lahko tudi prazna, čeprav to odsvetujemo).
-V repozitoriju ne sme biti LaTeX-ovih pomožnih datotek.
-Sprememba mora imeti čas med
-ponedeljkom,  4. novembra 2024, ob 00:00 in
-ponedeljkom, 25. novembra 2024, ob 23:55.
-
-Pregledali bomo nekaj oddanih nalog z vaj (datoteke `stran.html` v imeniku `03-html`).
-Glavni namen tega je, da dobite povratne informacije, predvsem o najpogostejših napakah.
