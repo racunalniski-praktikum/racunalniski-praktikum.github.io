@@ -199,7 +199,7 @@ Priporočamo, da v isti imenik, v katerega ste že klonirali svoj prvi repozitor
 touch ⟨ime-datoteke⟩
 ```
 
-## Dodatni viri:
+## Dodatni viri
 
 * [Git Time](https://git.bradwoods.io/), spletna igrica za spoznavanje Gita, ki jo je razvil Brad Woods.
 * [Learn Git Branching](https://learngitbranching.js.org), nekoliko naprednejša spletna igra za spoznavanje Gita s poudarkom na delu z vejami.
