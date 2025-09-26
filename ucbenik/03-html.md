@@ -296,24 +296,3 @@ več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
 7. Zabeležite spremembo: dodajte datoteko `stran.html`
    ter napišite uporabno sporočilo, npr. `Dodaj formule in sklicevanje`.
 
-## Domača naloga (3.)
-
-1. Če za študij uporabljate še kak drug računalnik, ga pripravite za delo z Git-om in VSCode.
-2. Dokončajte vaje, če jih še niste.
-3. Nekaj časa (recimo 20 minut) igrajte [Bashcrawl](https://gitlab.com/slackermedia/bashcrawl)
-    1. Odprite ukazno vrstico in se premaknite v imenik, kjer imate spravljene repozitorije.
-    2. Klonirajte repozitorij: `git clone https://gitlab.com/slackermedia/bashcrawl.git bashcrawl`.
-    3. Premaknite se na začetek igre: `cd bashcrawl/entrance`.
-    4. Preberite zvitek z navodili: `cat scroll`.
-4. Enkrat pred naslednjimi vajami si preberite začetek [poglavja o CSS](04-css) (do 1. naloge).
-
-Točka za domačo nalogo se vam bo upoštevala, 
-če bo v vašem repozitoriju (na glavni oz. privzeti veji)
-sprememba (oz. _commit_) datotek `stran.html` in `tea-bowl.jpg`.
-Datoteka `stran.html` je lahko tudi prazna, čeprav to odsvetujemo.
-Sprememba mora imeti čas med
-ponedeljkom, 14. oktobra  2024, ob 00:00 in
-ponedeljkom,  4. novembra 2024, ob 23:55.
-
-Pregledali bomo nekaj oddanih nalog z vaj (datoteke `stran.html` v imeniku `03-html`).
-Glavni namen tega je, da dobite povratne informacije, predvsem o najpogostejših napakah.
