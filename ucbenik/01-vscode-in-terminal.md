@@ -121,6 +121,12 @@ S tipkovnico in čim manjšo uporabo miške naredite naslednja opravila:
 
 Morda vam bo v pomoč tudi [plonkec za uporabo tipkovnice](plonkec:tipkovnica).
 
+:::{figure-md} markdown-fig
+<img src="01-vscode-in-terminal/vsebina-imenika-miska.png" width="60%" alt="Vsebina imenika RP na koncu vaje">
+
+&nbsp; Strukturo imenikov bomo prikazovali kot zgoraj. Oglejte si vsebino imenika za Računalniški praktikum (če ste sledili navodilom, je to `C:\Users\⟨uporabnisko-ime⟩\RP`). Primerjajte vsebino z zgornjo sliko.
+:::
+
 ## 4. naloga: škrati
 
 V tej nalogi boste srečali ukazno vrstico, glavni namen vaje pa je, 
@@ -137,9 +143,12 @@ Taka imena je treba postaviti med znaka `"`, na primer: `"To je dolgo ime z veli
 
 1. Na računalnik naložite arhiv za svoj operacijski sistem: [`skrati-windows.zip`](01-vscode-in-terminal/skrati-windows.zip)
    ali [`skrati-macosx.zip`](01-vscode-in-terminal/skrati-macosx.zip) (ta bo pravi tudi za Linux) in ga [odpakirajte](faq:zip).
+   Do konca te vaje si zapomnite, kam ste arhiv shranili.
 2. Na računalnik shranite tudi PDF datoteko [`skrati.pdf`](01-vscode-in-terminal/skrati.pdf) in jo odprite.
 3. [Odprite imenik `rudnik` v ukazni vrstici](faq:ukazna-imenik).
-4. V ukazno vrstico kopirajte spodnji ukaz in pritisnite vnašalko <kbd>↵</kbd> (angl. _enter_ ali _return_). 
+4. Preverite, da ste v pravem imeniku: v ukazno vrstico napišite `pwd` in stisnite vnašalko <kbd>↵</kbd> (angl. _enter_ ali _return_). 
+   Izpisala se bo nova vrstica. Če na koncu piše `rudnik` je vse ok, sicer pa poiščite pomoč.
+5. V ukazno vrstico kopirajte spodnji ukaz in pritisnite vnašalko <kbd>↵</kbd>.
    - `cd "Vhodna dvorana/Dolgočasna pravokotna dvorana/Radegastov kot/Zahodno križišče"`
 
 `````{admonition} Nasvet za operacijski sistem Windows

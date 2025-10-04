@@ -38,8 +38,14 @@ Datoteko, ki jo boste pripravili, boste potrebovali za domačo nalogo.
 
 `````{admonition} Pozor, uporabljamo standardni zapis
 :class: important
-V navodilih bo spet pisalo `⟨uporabnisko-ime⟩`. Če je vaše uporabniško ime `Gandalf`, potem je prej omenjena pot v vašem primeru   `C:\Users\Gandalf\RP\02-git-md` (**in ne** `C:\Users\⟨Gandalf⟩\RP\02-git-md`).
+V navodilih bo spet pisalo `⟨uporabnisko-ime⟩`. Če je vaše uporabniško ime `Gandalf`, potem bo pot v vašem primeru `C:\Users\Gandalf\RP\02-git-md` (**in ne** `C:\Users\⟨Gandalf⟩\RP\02-git-md`).
 `````
+
+:::{figure-md} markdown-fig
+<img src="02-git-in-markdown/vsebina-imenika-readme.png" width="60%" alt="Vsebina imenika RP na koncu vaje">
+
+&nbsp; Če besedilnih datotek s prejšnjih vaj še niste pobrisali, bo vsebina vašega imenika za Računalniški praktikum po koncu te vaje kot na sliki.
+:::
 
 1. V VSCode ustvarite in odprite nov imenik (npr. `C:\Users\⟨uporabnisko-ime⟩\RP\02-git-md` oz. 🍎 `/Users/⟨uporabnisko-ime⟩/RP/02-git-md`). 
    V njem naredite novo datoteko z bližnjico <kbd>Ctrl</kbd>+<kbd>N</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>N</kbd>).
@@ -159,7 +165,7 @@ Sledite navodilom za [nastavitve `git`-a](git:nastavitve).
 
 ### Klonirajte svoj prvi repozitorij na računalnik
 
-1. Izberite imenik na disku, kjer boste imeli spravljene repozitorije, s katerimi boste delali pri tem predmetu.
+1. Izberite imenik na disku, kjer boste imeli spravljene repozitorije, s katerimi boste delali pri tem predmetu; predlagamo vam, da kar v imenik `RP` (to bodo predpostavila tudi navodila v nadaljevanju).
 2. V ukazni vrstici se premaknite v ta repozitorij.
 3. Kopirajte naslov vašega repozitorija z GitHub-a: 
     - odprite stran z vašim repozitorijem v brskalniku, kliknite na puščico na zelenem gumbu Code,
@@ -173,6 +179,15 @@ Sledite navodilom za [nastavitve `git`-a](git:nastavitve).
    Pri prvem kloniranju vas `git` morda vpraša, če zaupate GitHubu (_The authenticity of host can't be established._).
    V tem primeru je treba napisati _yes_, preden se kloniranje izvede.
 5. Preverite, da vam je uspelo: podobno kot na vajah prejšnji teden poženite ukaz `ls`, da izpišete vsebino trenutnega imenika. Videti bi morali tudi ime vašega repozitorija.
+6. Če datotek `besedilo.txt` in `besedilo2.txt` še niste pobrisali, to lahko naredite zdaj v ukazni vrstici. Ukaz je `rm *.txt`, ampak preden ga poženete, razmislite, kaj naredi.
+6. Oglejte si še vsebino svojega imenika `RP` in jo primerjajte s spodnjo.
+
+:::{figure-md} markdown-fig
+<img src="02-git-in-markdown/vsebina-imenika-kloniranje.png" width="60%" alt="Vsebina imenika RP na koncu vaje">
+
+&nbsp; Važno je, kam ste klonirali repozitorij `racunalniski-praktikum`.
+:::
+
 
 ## 3. naloga: Git zgodba
 
@@ -186,6 +201,12 @@ V tem primeru sledite navodilom, ki se izpišejo, na koncu pa morate še enkrat 
 Pojdite na repozitorij [git-zgodba](https://github.com/racunalniski-praktikum/git-zgodba) in sledite navodilom.
 Bodite pozorni na to, kam boste klonirali repozitorij.
 Priporočamo, da v isti imenik, v katerega ste že klonirali svoj prvi repozitorij.
+
+:::{figure-md} markdown-fig
+<img src="02-git-in-markdown/vsebina-imenika-zgodba.png" width="60%" alt="Kloniranje repozitorija git-zgodba">
+
+&nbsp; Važno je, kam ste klonirali repozitorij `git-zgodba`.
+:::
 
 ### Urejanje datotek iz ukazne vrstice
 
