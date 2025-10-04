@@ -1,0 +1,640 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pogosta vprašanja &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=db6da3aa" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'F-pogosta-vprasanja';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Plonkec za Git" href="G-git.html" />
+    <link rel="prev" title="Pisanje e-pošte profesorjem in asistentom" href="E-posta.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-vscode-in-terminal.html">Urejevalnik in ukazna vrstica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-git-in-markdown.html">Git in Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-html.html">Označevalni jezik HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-css.html">Oblikovanje HTML dokumentov s CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-utrdimo-osnove.html">Utrdimo osnove</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matematični dokumenti</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="06-uvod-v-latex.html">Uvod v LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-okolja-in-sklicevanje.html">Okolja in sklicevanje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-predstavitve.html">Predstavitve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-risanje.html">Risanje</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Razpredelnice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="10-razpredelnice.html">Razpredelnice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simbolno računanje</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11-racunanje-z-mathematico.html">Osnovna uporaba Mathematice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-risanje-in-enacbe.html">Reševanje enačb in risanje</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/F-pogosta-vprasanja.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pogosta vprašanja</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arhiviranje">Arhiviranje</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#koncnice-datotek-in-skrite-datoteke">Končnice datotek in skrite datoteke</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Windows</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spremenljivke-okolja">Spremenljivke okolja</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shranjevanje-v-oblak">Shranjevanje v oblak</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode-in-windows">VSCode in Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#odpiranje-imenika">Odpiranje imenika</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#izbira-privzete-ukazne-vrstice">Izbira privzete ukazne vrstice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latex-in-slovenska-tipkovnica">LaTeX in slovenska tipkovnica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odpiranje-ukazne-vrstice-git-bash-v-imeniku">Odpiranje ukazne vrstice Git Bash v imeniku</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Windows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">MacOS</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pogosta-vprasanja">
+<h1>Pogosta vprašanja<a class="headerlink" href="#pogosta-vprasanja" title="Link to this heading">#</a></h1>
+<section id="arhiviranje">
+<span id="faq-zip"></span><h2>Arhiviranje<a class="headerlink" href="#arhiviranje" title="Link to this heading">#</a></h2>
+<p>ZIP je format datotek, ki omogoča stiskanje in arhiviranje več datotek v eno samo.
+To pomeni, da lahko vzamemo eno ali več datotek (npr. dokumente, slike, videe) in/ali imenikov in jih zapakiramo v eno samo ZIP datoteko.
+To pakiranje vključuje tudi kompresijo, kar pomeni, da datoteke potem zasedejo manj prostora na disku.
+Poleg tega, da datoteke potem zasedejo manj prostora, je to tudi priročen način za pošiljanje ali prenos več datotek naenkrat.</p>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading">#</a></h3>
+<p>Operacijski sistem Windows precej dobro zakriva razlike med stisnjenimi in navadnimi imeniki.
+V večini primerov ne boste imeli težav, če ZIP datoteke ne boste odpakirali, sta pa vsaj dve izjemi:
+do čudnega obnašanja lahko pride pri HTML in CSS datotekah, ter pri LaTeX datotekah.</p>
+<p>Stisnjene imenike prepoznate po zadrgi na ikoni in po končnici ZIP.</p>
+<p>Za odpakiranje arhiva desno kliknete na arhiv in izberete “Extract All…”</p>
+</section>
+<section id="macos">
+<h3>MacOS<a class="headerlink" href="#macos" title="Link to this heading">#</a></h3>
+<p>Odvisno programov, ki jih imate nameščene, morda zadošča že kar, da dvakrat kliknete na arhiv.</p>
+</section>
+</section>
+<section id="koncnice-datotek-in-skrite-datoteke">
+<span id="faq-koncnice-skrite"></span><h2>Končnice datotek in skrite datoteke<a class="headerlink" href="#koncnice-datotek-in-skrite-datoteke" title="Link to this heading">#</a></h2>
+<p>Končnica imena datoteke (angl. <a class="reference external" href="https://en.wikipedia.org/wiki/Filename_extension"><em>filename extension</em></a>) je
+tisti del imena datoteke, ki pride za piko <code class="docutils literal notranslate"><span class="pre">.</span></code>.
+Končnice datotek omogočajo računalnikom in uporabnikom, da hitro prepoznajo vrsto datoteke.
+Na primer:</p>
+<ul class="simple">
+<li><p>.jpg je slika,</p></li>
+<li><p>.docx je Microsoft Word dokument,</p></li>
+<li><p>.txt je datoteka z navadnim besedilom.</p></li>
+</ul>
+<p>Moderni operacijski sistemi končnice datotek pogosto skrijejo (takšno je recimo privzeto obnašanje operacijskega sistema Windows) - na primer namesto <code class="docutils literal notranslate"><span class="pre">cat.jpg</span></code> pokaže samo <code class="docutils literal notranslate"><span class="pre">cat</span></code>.
+Za večino uporabnikov to morda izboljša uporabniško izkušnjo, nekoliko naprednejšim pa je lahko v napoto.
+Upamo, da boste kot študenti te fakultete med slednjimi, če še niste.
+Že pri Računalniškem praktikumu boste kdaj želeli vedeti, kakšna je končnica imena datoteke.</p>
+<section id="id1">
+<h3>Windows<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>V programu Explorer si spremenite nastavitve:</p>
+<ul class="simple">
+<li><p>Končnice datotek (file extensions) naj bodo vidne.</p></li>
+<li><p>Skrite datoteke (hidden files) naj bodo vidne.</p></li>
+</ul>
+<p>Ne veste, kako se to naredi? Pomagajte si z Google, na primer z iskanjem “make file extensions visible”.</p>
+</section>
+</section>
+<section id="spremenljivke-okolja">
+<h2>Spremenljivke okolja<a class="headerlink" href="#spremenljivke-okolja" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><em>Kako urediti PATH na operacijskem sistemu Windows:</em> <code class="docutils literal notranslate"><span class="pre">Settings</span> <span class="pre">&gt;</span> <span class="pre">System</span> <span class="pre">&gt;</span> <span class="pre">About</span> <span class="pre">&gt;</span> <span class="pre">Advanced</span> <span class="pre">system</span> <span class="pre">settings</span> <span class="pre">&gt;</span> <span class="pre">Envirnonment</span> <span class="pre">Variables</span> <span class="pre">&gt;</span> <span class="pre">Path</span></code></p></li>
+</ul>
+</section>
+<section id="shranjevanje-v-oblak">
+<h2>Shranjevanje v oblak<a class="headerlink" href="#shranjevanje-v-oblak" title="Link to this heading">#</a></h2>
+</section>
+<section id="vscode-in-windows">
+<span id="faq-vscode-windows"></span><h2>VSCode in Windows<a class="headerlink" href="#vscode-in-windows" title="Link to this heading">#</a></h2>
+<section id="odpiranje-imenika">
+<h3>Odpiranje imenika<a class="headerlink" href="#odpiranje-imenika" title="Link to this heading">#</a></h3>
+<p>Na operacijskem sistemu Windows v programu Explorer (Raziskovalec) desno kliknete na imenik in izberete
+“Show more options” in “Open with Code”.</p>
+</section>
+<section id="izbira-privzete-ukazne-vrstice">
+<span id="faq-vscode-bash"></span><h3>Izbira privzete ukazne vrstice<a class="headerlink" href="#izbira-privzete-ukazne-vrstice" title="Link to this heading">#</a></h3>
+<p>Odprite okno z ukazno vrstico (<strong>Terminal</strong> &gt; <strong>New Terminal</strong>).
+V spodnjem desnem delu VSCode okna bi se vam moral odpreti nov razdelek z ukazno vrstico.
+Znotraj tega razdelka desno zgoraj poiščite ikone za opravila.
+Če pred ikonami piše <code class="docutils literal notranslate"><span class="pre">bash</span></code>, je to to. Če piše <code class="docutils literal notranslate"><span class="pre">powershell</span></code>, poiščite gumb + in <strong>kliknite na puščico navzdol ki se dotika gumba +</strong>.
+Izberite možnost “Select default profile”.
+Čisto na vrhu VSCode okna bi se moral odpreti meni, v katerem so naštete možnosti za ukazno vrstico.
+Kliknite na vrstico, v kateri piše “Git Bash”.</p>
+</section>
+<section id="latex-in-slovenska-tipkovnica">
+<span id="faq-vscode-latex-si"></span><h3>LaTeX in slovenska tipkovnica<a class="headerlink" href="#latex-in-slovenska-tipkovnica" title="Link to this heading">#</a></h3>
+<p>Ko delamo s slovensko tipkovnico, v urejevalnik VSCode v načinu dela LaTeX včasih ne delujejo znaki <code class="docutils literal notranslate"><span class="pre">{</span></code>, <code class="docutils literal notranslate"><span class="pre">}</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, ki jih natipkamo z <kbd>AltGr</kbd>+<kbd>B</kbd>, <kbd>AltGr</kbd>+<kbd>N</kbd> in <kbd>AltGr</kbd>+<kbd>V</kbd>.</p>
+<p>Najprej preverite, če sploh morate kaj popraviti. Odprite VSCode in naredite novo datoteko, ki jo poimenujte npr. <code class="docutils literal notranslate"><span class="pre">test.tex</span></code> (važno je, da ima končnico <code class="docutils literal notranslate"><span class="pre">.tex</span></code>).
+V datoteko napišite zgornje znake. Če jih lahko napišete, je vse ok, sicer pa berite naprej.</p>
+<p>Težava je v tem, da ima VSCode definirane bližnjice (angl. <em>keyboard shortcut</em>)
+<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>, <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd> in <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> ter še nekatere druge, hkrati pa <kbd>AltGr</kbd> obravnava kot <kbd>Ctrl</kbd>+<kbd>Alt</kbd>. Ko torej pritisnemo <kbd>AltGr</kbd>+<kbd>V</kbd>, to za VSCode pomeni <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> in izvede se ukaz, ki je prirejen tej kombinaciji tipk (ta ukaz je “Build LaTeX project”), namesto da bi vstavil želeni znak <code class="docutils literal notranslate"><span class="pre">{</span></code>.</p>
+<p>Težavo odpravimo tako, da v spisku bližnjic odstranimo povezavo <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> (in ostale neželene bližnjice), takole:</p>
+<ol class="arabic simple">
+<li><p>Odpremo datoteko LaTeX, da se aktivira LaTeX paket.</p></li>
+<li><p><kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>S</kbd>, prikaže se spisek vseh bližnjic.</p></li>
+<li><p>V iskalnik vtipkamo neželeno bližnjico (se pravi, natipkamo besedilo <code class="docutils literal notranslate"><span class="pre">ctrl+alt+b</span></code>)</p></li>
+<li><p>Poiščemo <em>Build LaTeX Project</em> in z desnim gumbkom kliknjemo nanj.</p></li>
+<li><p>Izberemo “remove keyboard binding”.</p></li>
+</ol>
+<p>Sedaj bi moral delati znak <code class="docutils literal notranslate"><span class="pre">{</span></code>. Podobno popravimo ostale znake. Mimogrede, “Build LaTeX project” lahko še vedno dobimo, ker je vezan tudi na bližnjico <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>. Sicer pa lahko sami dodajamo nove bližnjice v spisku vseh bližnjic.</p>
+</section>
+</section>
+<section id="odpiranje-ukazne-vrstice-git-bash-v-imeniku">
+<span id="faq-ukazna-imenik"></span><h2>Odpiranje ukazne vrstice Git Bash v imeniku<a class="headerlink" href="#odpiranje-ukazne-vrstice-git-bash-v-imeniku" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3>Windows<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Na operacijskem sistemu Windows v programu Explorer (Raziskovalec) desno kliknete na imenik in izberete
+“Show more options” in “Open Git Bash here”.</p>
+<p>Odprite ukazno vrstico Git Bash (<a class="reference internal" href="B-tipkovnica.html#bliznjice-zaganjanje"><span class="std std-ref">poženite jo s tipkovnice</span></a>):
+Zadnja vrstica v oknu bi morala biti oblike <code class="docutils literal notranslate"><span class="pre">$</span></code> (temu rečemo ukazni poziv).</p>
+<p>Preverite, kje ste: natipkajte <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (skupaj s pozivom bo videti kot <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pwd</span></code>) in stisnite vnašalko (angl. <em>enter</em> ali <em>return</em>).
+Verjetno se je izpisala nova vrstica, ki ima približno tako vsebino: <code class="docutils literal notranslate"><span class="pre">/c/Users/⟨vaše</span> <span class="pre">uporabniško</span> <span class="pre">ime⟩</span></code>.
+Če je tako, ali če veste kako nadaljevati, nadaljujte, sicer pa prosite za pomoč.</p>
+</section>
+<section id="id3">
+<h3>MacOS<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>V meniju izberite  <code class="docutils literal notranslate"><span class="pre">Service</span> <span class="pre">&gt;</span> <span class="pre">New</span> <span class="pre">Terminal</span> <span class="pre">at</span> <span class="pre">Folder</span></code>. Odprlo se bo novo okno z ukazno vrstico.
+Zadnja vrstica v oknu bi morala biti oblike <code class="docutils literal notranslate"><span class="pre">uporabnisko_ime&#64;ime_racunalnika</span> <span class="pre">rudnik</span>&#160; <span class="pre">%</span></code>.
+Za znakom <code class="docutils literal notranslate"><span class="pre">%</span></code> stoji tudi kurzor (angl. <em>cursor</em>).</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="E-posta.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pisanje e-pošte profesorjem in asistentom</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="G-git.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Plonkec za Git</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arhiviranje">Arhiviranje</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#koncnice-datotek-in-skrite-datoteke">Končnice datotek in skrite datoteke</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Windows</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spremenljivke-okolja">Spremenljivke okolja</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shranjevanje-v-oblak">Shranjevanje v oblak</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode-in-windows">VSCode in Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#odpiranje-imenika">Odpiranje imenika</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#izbira-privzete-ukazne-vrstice">Izbira privzete ukazne vrstice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latex-in-slovenska-tipkovnica">LaTeX in slovenska tipkovnica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odpiranje-ukazne-vrstice-git-bash-v-imeniku">Odpiranje ukazne vrstice Git Bash v imeniku</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Windows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">MacOS</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
