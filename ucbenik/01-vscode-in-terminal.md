@@ -122,7 +122,7 @@ S tipkovnico in čim manjšo uporabo miške naredite naslednja opravila:
 Morda vam bo v pomoč tudi [plonkec za uporabo tipkovnice](plonkec:tipkovnica).
 
 :::{figure-md} markdown-fig
-<img src="01-vscode-in-terminal/vsebina-imenika-miska.png" width="60%" alt="Vsebina imenika RP na koncu vaje">
+<img src="01-vscode-in-terminal/vsebina-imenika-miska.png" alt="Vsebina imenika RP na koncu vaje">
 
 &nbsp; Strukturo imenikov bomo prikazovali kot zgoraj. Oglejte si vsebino imenika za Računalniški praktikum (če ste sledili navodilom, je to `C:\Users\⟨uporabnisko-ime⟩\RP`). Primerjajte vsebino z zgornjo sliko.
 :::

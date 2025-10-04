@@ -42,7 +42,7 @@ V navodilih bo spet pisalo `⟨uporabnisko-ime⟩`. Če je vaše uporabniško im
 `````
 
 :::{figure-md} markdown-fig
-<img src="02-git-in-markdown/vsebina-imenika-readme.png" width="60%" alt="Vsebina imenika RP na koncu vaje">
+<img src="02-git-in-markdown/vsebina-imenika-readme.png" alt="Vsebina imenika RP na koncu vaje">
 
 &nbsp; Če besedilnih datotek s prejšnjih vaj še niste pobrisali, bo vsebina vašega imenika za Računalniški praktikum po koncu te vaje kot na sliki.
 :::
@@ -183,7 +183,7 @@ Sledite navodilom za [nastavitve `git`-a](git:nastavitve).
 6. Oglejte si še vsebino svojega imenika `RP` in jo primerjajte s spodnjo.
 
 :::{figure-md} markdown-fig
-<img src="02-git-in-markdown/vsebina-imenika-kloniranje.png" width="60%" alt="Vsebina imenika RP na koncu vaje">
+<img src="02-git-in-markdown/vsebina-imenika-kloniranje.png" alt="Vsebina imenika RP na koncu vaje">
 
 &nbsp; Važno je, kam ste klonirali repozitorij `racunalniski-praktikum`.
 :::
@@ -203,7 +203,7 @@ Bodite pozorni na to, kam boste klonirali repozitorij.
 Priporočamo, da v isti imenik, v katerega ste že klonirali svoj prvi repozitorij.
 
 :::{figure-md} markdown-fig
-<img src="02-git-in-markdown/vsebina-imenika-zgodba.png" width="60%" alt="Kloniranje repozitorija git-zgodba">
+<img src="02-git-in-markdown/vsebina-imenika-zgodba.png" alt="Kloniranje repozitorija git-zgodba">
 
 &nbsp; Važno je, kam ste klonirali repozitorij `git-zgodba`.
 :::

@@ -133,6 +133,12 @@ Prvega bomo še naprej uporabljali na vajah.
    `Doctype must be declared first. (doctype-first) [1, 1]`. 
    Enici v oglatih oklepajih nam povesta, da je težava v prvi vrstici (in prvem stolpcu).
 
+   :::{figure-md} markdown-fig
+   <img src="03-html/vsebina-imenika-html.png" alt="Vsebina repozitorija po tej točki">
+
+   &nbsp; Struktura repozitorija `racunalniski-praktikum` po tej točki.
+   :::
+
 2. Težavo odpravimo tako, da napišemo značko `DOCTYPE`.
    Ta brskalniku pove, za kakšno vrsto dokumenta gre.
    Napišite `<` in počakajte, da se vam v priročnem meniju pokaže možnost `DOCTYPE`.
