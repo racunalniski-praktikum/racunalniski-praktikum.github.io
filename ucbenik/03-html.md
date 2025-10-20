@@ -270,7 +270,7 @@ več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
    in oblikovanje (CSS, ki ga bomo srečali na naslednjih vajah).
 
 2. Dodali bomo [MathJax](https://www.mathjax.org/) za lepe matematične formule z LaTeX-om.
-   Sledite navodilom [Getting Started](https://www.mathjax.org/#gettingstarted) (za verzijo MathJax 3).
+   Sledite navodilom [Getting Started](https://www.mathjax.org/#gettingstarted) (za verzijo MathJax 4).
    Košček kode, ki bo vaši strani dodal skripto MathJax, dodate v glavo dokumenta.
    Spletni strani dodajte formulo, npr. `\[x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\]`.
    Za zdaj še ni treba, da razumete, kako formule delujejo. 
