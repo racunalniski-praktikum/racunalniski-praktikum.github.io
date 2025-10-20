@@ -99,19 +99,3 @@ Nekaj splošnih napotkov:
 
 * `displaystyle` preklopi v prikazni način v vrstici,
 * `textstyle` pa preklopi v vrstični način znotraj okolja, kjer je privzet prikazni.
-
-## Domača naloga
-
-1. Rešite [LaTeX](09-risanje/dn-latex.zip) nalogo,
-   da dobite občutek, kako bodo izgledale naloge na izpitu.
-   Na pravem izpitu bo morda naloga nekoliko težja, ker boste že več znali.
-   Nalogo poskusite rešiti v največ pol ure.
-2. Datoteke (`dokument.tex`, `knjiga.bib` in `PerrinPlot2.pdf`)
-   stisnite v arhiv z imenom `⟨ime⟩-⟨priimek⟩.zip`
-   (ustrezno popravite; če imate v imenu ali priimku kak presledek, ga nadomestite z vezajem `-`) in ga
-   [oddajte na učilnico do ponedeljka, 16. decembra 2024, ob 23:55](https://ucilnica.fmf.uni-lj.si/mod/assign/view.php?id=71491).
-
-Točka za domačo nalogo se vam bo upoštevala, če boste pravočasno
-oddali pravilno poimenovan arhiv s pravimi datotekami (točka 2).
-
-Datoteke oddane do roka bomo pregledali, da vidite, kako se ocenjuje na izpitu.

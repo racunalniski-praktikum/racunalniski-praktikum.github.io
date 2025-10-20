@@ -93,10 +93,18 @@ Najprej preberite spodnja pravila in se pripravite na izvajanje naloge.
 Vnaprej poiščite potrebno dokumentacijo (na primer, kako se v VSCode besedilo z bližnjico spremeni v same velike
 črke?), da ne boste brskali kasneje.
 
+`````{admonition} Pozor, uvajamo standarden zapis
+:class: important
+Včasih boste v navodilih opazili besedilo v čudnih oklepajih `⟨besedilo-v-cudnih-oklepajih⟩` (ki bo pogosto napisano brez šumnikov, presledki pa bodo nadomeščeni z vezaji). Te oklepaje uporabljamo zato, da poudarimo, da gre za del besedila, ki ga nadomesti vsak zase. Besedilo v oklepajih vam pove, s čim je treba vse skupaj (z oklepaji vred) nadomestiti.
+Prvi primer boste srečali spodaj, `C:\Users\⟨uporabnisko-ime⟩`. Če je vaše uporabniško ime `Gandalf`, potem je prej omenjena pot v vašem primeru   `C:\Users\Gandalf` (**in ne** `C:\Users\⟨Gandalf⟩`).
+
+Ta (ali podoben) način označevanja je kar običajen za mesta, kjer morate vnesti svoje podatke (drugi avtorji včasih uporabijo tudi drugačne oklepaje).
+`````
+
 S tipkovnico in čim manjšo uporabo miške naredite naslednja opravila:
 
  1. Poženite urejevalnik VSCode.
- 2. V urejevalniku v domačem imeniku (na Windows `C:\Users\⟨uporabnisko-ime⟩`, na MacOS pa `/Users/⟨domace-uporabnisko-ime⟩`)
+ 2. V urejevalniku v domačem imeniku (na Windows `C:\Users\⟨uporabnisko-ime⟩`, na MacOS pa `/Users/⟨uporabnisko-ime⟩`)
     ustvarite in odprite imenik za Računalniški praktikum (npr. `C:\Users\⟨uporabnisko-ime⟩\RP`).
  3. Ustvarite novo datoteko in jo takoj shranite v domači imenik. Poimenujte jo `besedilo.txt`.
  4. Poskrbite, da bo kodiranje nastavljeno na `UTF-8` (glejte spodaj desno v statusno vrstico v VSCode).
@@ -112,6 +120,12 @@ S tipkovnico in čim manjšo uporabo miške naredite naslednja opravila:
 14. Shranite datoteko `besedilo2.txt`.
 
 Morda vam bo v pomoč tudi [plonkec za uporabo tipkovnice](plonkec:tipkovnica).
+
+:::{figure-md} markdown-fig
+<img src="01-vscode-in-terminal/vsebina-imenika-miska.png" alt="Vsebina imenika RP na koncu vaje">
+
+&nbsp; Strukturo imenikov bomo prikazovali kot zgoraj. Oglejte si vsebino imenika za Računalniški praktikum (če ste sledili navodilom, je to `C:\Users\⟨uporabnisko-ime⟩\RP`). Primerjajte vsebino z zgornjo sliko.
+:::
 
 ## 4. naloga: škrati
 
@@ -129,9 +143,12 @@ Taka imena je treba postaviti med znaka `"`, na primer: `"To je dolgo ime z veli
 
 1. Na računalnik naložite arhiv za svoj operacijski sistem: [`skrati-windows.zip`](01-vscode-in-terminal/skrati-windows.zip)
    ali [`skrati-macosx.zip`](01-vscode-in-terminal/skrati-macosx.zip) (ta bo pravi tudi za Linux) in ga [odpakirajte](faq:zip).
+   Do konca te vaje si zapomnite, kam ste arhiv shranili.
 2. Na računalnik shranite tudi PDF datoteko [`skrati.pdf`](01-vscode-in-terminal/skrati.pdf) in jo odprite.
 3. [Odprite imenik `rudnik` v ukazni vrstici](faq:ukazna-imenik).
-4. V ukazno vrstico kopirajte spodnji ukaz in pritisnite vnašalko <kbd>↵</kbd> (angl. _enter_ ali _return_). 
+4. Preverite, da ste v pravem imeniku: v ukazno vrstico napišite `pwd` in stisnite vnašalko <kbd>↵</kbd> (angl. _enter_ ali _return_). 
+   Izpisala se bo nova vrstica. Če na koncu piše `rudnik` je vse ok, sicer pa poiščite pomoč.
+5. V ukazno vrstico kopirajte spodnji ukaz in pritisnite vnašalko <kbd>↵</kbd>.
    - `cd "Vhodna dvorana/Dolgočasna pravokotna dvorana/Radegastov kot/Zahodno križišče"`
 
 `````{admonition} Nasvet za operacijski sistem Windows
@@ -155,41 +172,3 @@ V zgodbi so navodila in namigi za posamezni odsek podani ležeče.
 Z branjem nadaljujte šele, ko opravite vse, kar piše.
 Sedaj lahko sledite navodilom v PDF datoteki.
 Veliko zabave in pazite na glavo, stropi so nizki!
-
-## Domača naloga
-
-1. Rešite [anketo o predznanju računalništva](https://ucilnica.fmf.uni-lj.si/mod/feedback/view.php?id=32277) na učilnici.
-2. Izberite tri izmed bližnjic na tipkovnici, ki ste jih srečali na vajah, pa jih še ne uporabljate.
-   Zapomnite si jih. Lahko si začnete pripravljati tudi svoj plonkec za vaje pri Računalniškem praktikumu.
-3. Naredite si uporabniški račun (če ga še nimate) na platformi [GitHub](https://github.com/signup).
-   Predlagamo, da si izberete tako uporabniško ime, da ga boste lahko uporabili še pri kakem predmetu tekom študija.
-   (Tudi profesorji in asistenti večinoma nimajo uporabniških imen, kot je `FunnyBunny42`.)
-4. Prijavite se v GitHub in ustvarite svoj prvi repozitorij po navodilih, ki jih najdete na strani 
-   [Quickstart for repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories),
-   pri čemer upoštevajte še naslednje:
-    - predlagamo, da repozitorij poimenujete `racunalniski-praktikum`,
-    - repozitorij naj bo _Public_ (zato, da bomo lahko pregledali vaše oddane domače naloge),
-    - v razdelku _Commit your first change_, točka 3, popravite prvo vrstico tako, da bo pisalo `# Računalniški praktikum`,
-    - v vrstico spodaj napišite bližnjice iz druge točke domače naloge (skupaj z opisom),
-    - v istem razdelku pod točko 7 napišite na primer `dopolni README` (in se ne ukvarjajte z dodajanjem avtorjev),
-    - še vedno v razdelku _Commit your first change_, točka 8, izberite _Commit directly to the main branch_,
-    - navodilom sledite samo do razdelka _Next steps_.
-5. Na [učilnici](https://ucilnica.fmf.uni-lj.si/mod/assign/view.php?id=70431) oddajte naslov repozitorija: `https://github.com/⟨uporabnisko-ime⟩/⟨ime repozitorija⟩`.
-   Pred oddajo preverite, da je naslov pravi (sicer ne boste dobili točk).
-6. Preberite si stran o [računalniških sistemih, storitvah in opremi za študente](https://ucilnica.fmf.uni-lj.si/mod/page/view.php?id=51619).
-7. Pridružite se Discord strežniku, ki ga uporabljamo pri nekaterih predmetih. 
-   Uporabite povezavo [https://discord.gg/bgC7gjQmTq](https://discord.gg/bgC7gjQmTq) in si v kanalu `#dobrodošli` izberite predmete, ki jih poslušate.
-
-Točka za domačo nalogo se vam bo upoštevala, če boste oddali naslov javnega repozitorija
-z datoteko `README.md`, v kateri v prvi vrstici piše `# Računalniški praktikum`.
-Prva sprememba (oz. _commit_) v tem repozitoriju mora biti med 
-torkom, 1. oktobra 2024, ob 00:00 in
-torkom, 22. oktobra 2024, ob 23:55.
-Za vse nadaljnje domače naloge bomo predpostavljali, da uporabljate ta repozitorij.
-
-Toplo priporočamo še naslednje naloge:
-
-- Poženite VSCode in vsaj 3 minute pregledujte [dokumentacijo](https://code.visualstudio.com/docs).
-- Pred spanjem si oglejte [Introductory Videos](https://code.visualstudio.com/docs/getstarted/introvideos#VSCode). 
-  Ni treba, da veste kaj so programski jeziki, poglejte si, kako se uporablja urejevalnik.
-- Ob jutranji kavici prebirajte [User guide](https://code.visualstudio.com/docs/editor/codebasics).

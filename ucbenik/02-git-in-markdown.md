@@ -36,6 +36,17 @@ Datoteko, ki jo boste pripravili, boste potrebovali za domačo nalogo.
 
 ### 1. 1. Pripravite se za delo
 
+`````{admonition} Pozor, uporabljamo standardni zapis
+:class: important
+V navodilih bo spet pisalo `⟨uporabnisko-ime⟩`. Če je vaše uporabniško ime `Gandalf`, potem bo pot v vašem primeru `C:\Users\Gandalf\RP\02-git-md` (**in ne** `C:\Users\⟨Gandalf⟩\RP\02-git-md`).
+`````
+
+:::{figure-md} markdown-fig
+<img src="02-git-in-markdown/vsebina-imenika-readme.png" alt="Vsebina imenika RP na koncu vaje">
+
+&nbsp; Če besedilnih datotek s prejšnjih vaj še niste pobrisali, bo vsebina vašega imenika za Računalniški praktikum po koncu te vaje kot na sliki.
+:::
+
 1. V VSCode ustvarite in odprite nov imenik (npr. `C:\Users\⟨uporabnisko-ime⟩\RP\02-git-md` oz. 🍎 `/Users/⟨uporabnisko-ime⟩/RP/02-git-md`). 
    V njem naredite novo datoteko z bližnjico <kbd>Ctrl</kbd>+<kbd>N</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>N</kbd>).
 2. Datoteko shranite z bližnjico <kbd>Ctrl</kbd>+<kbd>S</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>S</kbd>). 
@@ -154,7 +165,7 @@ Sledite navodilom za [nastavitve `git`-a](git:nastavitve).
 
 ### Klonirajte svoj prvi repozitorij na računalnik
 
-1. Izberite imenik na disku, kjer boste imeli spravljene repozitorije, s katerimi boste delali pri tem predmetu.
+1. Izberite imenik na disku, kjer boste imeli spravljene repozitorije, s katerimi boste delali pri tem predmetu; predlagamo vam, da kar v imenik `RP` (to bodo predpostavila tudi navodila v nadaljevanju).
 2. V ukazni vrstici se premaknite v ta repozitorij.
 3. Kopirajte naslov vašega repozitorija z GitHub-a: 
     - odprite stran z vašim repozitorijem v brskalniku, kliknite na puščico na zelenem gumbu Code,
@@ -168,6 +179,15 @@ Sledite navodilom za [nastavitve `git`-a](git:nastavitve).
    Pri prvem kloniranju vas `git` morda vpraša, če zaupate GitHubu (_The authenticity of host can't be established._).
    V tem primeru je treba napisati _yes_, preden se kloniranje izvede.
 5. Preverite, da vam je uspelo: podobno kot na vajah prejšnji teden poženite ukaz `ls`, da izpišete vsebino trenutnega imenika. Videti bi morali tudi ime vašega repozitorija.
+6. Če datotek `besedilo.txt` in `besedilo2.txt` še niste pobrisali, to lahko naredite zdaj v ukazni vrstici. Ukaz je `rm *.txt`, ampak preden ga poženete, razmislite, kaj naredi.
+6. Oglejte si še vsebino svojega imenika `RP` in jo primerjajte s spodnjo.
+
+:::{figure-md} markdown-fig
+<img src="02-git-in-markdown/vsebina-imenika-kloniranje.png" alt="Vsebina imenika RP na koncu vaje">
+
+&nbsp; Važno je, kam ste klonirali repozitorij `racunalniski-praktikum`.
+:::
+
 
 ## 3. naloga: Git zgodba
 
@@ -181,6 +201,12 @@ V tem primeru sledite navodilom, ki se izpišejo, na koncu pa morate še enkrat 
 Pojdite na repozitorij [git-zgodba](https://github.com/racunalniski-praktikum/git-zgodba) in sledite navodilom.
 Bodite pozorni na to, kam boste klonirali repozitorij.
 Priporočamo, da v isti imenik, v katerega ste že klonirali svoj prvi repozitorij.
+
+:::{figure-md} markdown-fig
+<img src="02-git-in-markdown/vsebina-imenika-zgodba.png" alt="Kloniranje repozitorija git-zgodba">
+
+&nbsp; Važno je, kam ste klonirali repozitorij `git-zgodba`.
+:::
 
 ### Urejanje datotek iz ukazne vrstice
 
@@ -199,33 +225,9 @@ Priporočamo, da v isti imenik, v katerega ste že klonirali svoj prvi repozitor
 touch ⟨ime-datoteke⟩
 ```
 
-## Dodatni viri:
+## Dodatni viri
 
 * [Git Time](https://git.bradwoods.io/), spletna igrica za spoznavanje Gita, ki jo je razvil Brad Woods.
 * [Learn Git Branching](https://learngitbranching.js.org), nekoliko naprednejša spletna igra za spoznavanje Gita s poudarkom na delu z vejami.
 * [Oh My Git!](https://ohmygit.org), igra za spoznavanje gita, ki kmalu predstavi, kako lahko na datotekah sodeluje več avtorjev.
 
-## Domača naloga
-
-1. [Napravite končnice in skrite datoteke vidne na domačem računalniku](faq:koncnice-skrite).
-2. V svoj prvi repozitorij (ki ste ga klonirali v 2. nalogi) shranite datoteko `README.md`, 
-   ki ste jo pripravili v 1. nalogi: potrebovali boste ukaza `add` in `commit`.
-   Sporočilo commita (tisto med dvojnimi narekovaji) naj vsebuje besedilo `2. domača naloga`,
-   sicer ne boste dobili točke.
-3. Shranite spremembe, ki ste jih ravnokar naredili, še na GitHub: `git push origin main` oz. 
-   `git push origin master`. 
-   (Ime vaše glavne veje je `main` ali `master`. 
-   Katero je pravo, lahko preverite z ukazom `git branch`).
-4. Če se še niste, se na [učilnici](http://ucilnica.fmf.uni-lj.si/) prijavite k predmetom, ki jih obiskujete.
-5. Preko [ID portala](https://id.uni-lj.si/) Univerze v Ljubljani se prijavite v spletni vmesnik za elektronsko pošto in pošljite mail kateremu od svojih sošolcev. 
-   Tako boste preverili, ali je vse pravilno nastavljeno.
-   Če uporabljte kakšno drugo e-pošto, vam svetujemo, da si naredite preusmeritev iz
-   študenske e-pošte nanjo, saj boste na študentski naslov prejemali tudi pomembna obvestila
-   o študiju. Sami ugotovite, kako se to naredi, ali pa vprašajte.
-
-Točka za domačo nalogo se vam bo upoštevala, 
-če bo v vašem repozitoriju (na glavni oz. privzeti veji)
-sprememba (oz. _commit_) datoteke `README.md` s sporočilom, ki vsebuje besedilo `2. domača naloga`. 
-Sprememba mora imeti čas med
-ponedeljkom,  7. oktobra 2024, ob 00:00 in
-ponedeljkom, 28. oktobra 2024, ob 23:55.

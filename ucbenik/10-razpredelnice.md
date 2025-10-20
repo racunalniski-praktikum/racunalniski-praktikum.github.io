@@ -122,17 +122,3 @@ plusa in krogca pa so različne pri posameznih nalogah.
     točke (vrednosti, ne formul): uporabite menija **Copy** in **Paste Special**.
 4.  Študente uredite padajoče po doseženih točkah in izračunajte ocene.
 
-## Domača naloga
-
-1. Rešite [Excel](10-razpredelnice/dn-excel.zip) nalogo,
-   da dobite občutek, kako bodo izgledale naloge na izpitu.
-   Na pravem izpitu bo morda naloga nekoliko težja, ker boste že več znali.
-   Nalogo poskusite rešiti v največ 20 minutah.
-2. Oddajte datoteko `⟨ime⟩-⟨priimek⟩.xlsx`
-   (ustrezno popravite; če imate v imenu ali priimku kak presledek, ga nadomestite z vezajem `-`)
-   [na učilnico do ponedeljka, 23. decembra 2024, ob 23:55](https://ucilnica.fmf.uni-lj.si/mod/assign/view.php?id=71491).
-
-Točka za domačo nalogo se vam bo upoštevala, če boste pravočasno
-oddali pravilno poimenovano Excel datoteko.
-
-Datoteke oddane do roka bomo pregledali, da vidite, kako se ocenjuje na izpitu.

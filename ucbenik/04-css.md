@@ -239,28 +239,4 @@ boste skoraj gotovo rešitev našli na spletu.
    Kaj se zgodi, če slikama nastavite zaobljenost robov na `50%`?
 4. Zabeležite spremembe: dodajte datoteke v imeniku `04-css`, ki ste jih spremenili
    ter napišite uporabno sporočilo, npr. `Dopolni CSS`.
-
-
-## Domača naloga
-
-0. Na svojem GitHub repozitoriju dodajte dostop uporabniku
-   `ul-fmf-bot` po [navodilih v GitHub dokumentaciji](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository).
-1. Rešite [HTML in CSS](04-css/dn-html-css.zip) nalogo,
-   da dobite občutek, kako bodo izgledale naloge na izpitu.
-   Na pravem izpitu bo morda naloga nekoliko težja, ker boste že več znali.
-   Nalogo poskusite rešiti v največ pol ure.
-2. Vse tri datoteke (`avatar.jpg`, `dokument.html` in `oblikovanje.css`) 
-   stisnite v arhiv z imenom `⟨ime⟩-⟨priimek⟩.zip` 
-   (ustrezno popravite; če imate v imenu ali priimku kak presledek, ga nadomestite z vezajem `-`) in ga 
-   [oddajte na učilnico do ponedeljka, 11. novembra 2024, ob 23:55](https://ucilnica.fmf.uni-lj.si/mod/assign/view.php?id=70566).
-3. [Namestite LaTeX](namestitev:latex) na svoj računalnik. 
-   Če ga uporabljate tudi na vajah, vam toplo priporočamo, 
-   da ga poskusite namestiti pred naslednjimi vajami.
-   Pri LaTeX-u gre namreč rado kaj narobe, tako boste lahko prosili za pomoč,
-   preden ga boste rabili čez dva tedna.
-
-Točka za domačo nalogo se vam bo upoštevala, če boste pravočasno
-oddali pravilno poimenovan arhiv s pravimi datotekami (točka 2).
-
-Pregledali bomo nekaj domačih nalog ter nekaj oddanih nalog.
-Glavni namen tega je, da dobite povratne informacije.
+   

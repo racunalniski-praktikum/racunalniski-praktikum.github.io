@@ -61,7 +61,7 @@ Pri namestitvi bodite pozorni na možnosti, še posebej na to, da imate obkljuka
 Če imate že nameščeno ukazno vrstico Git Bash, [jo nastavite za privzeto ukazno vrstico še v urejevalniku](faq:vscode-bash).
 
 * Ne uporabljajte namestitve z ZIP datoteko, ker se stvari ne bodo pravilno nastavile.
-* Prenesli ste `.exe` datoteko, ki jo poženete kot adminstrator za vse uporabnike.
+* Prenesli ste `.exe` datoteko, ki jo poženete kot administrator za vse uporabnike.
 * Ena od nastavitev pri namestivi sprašuje, ali naj se VSCode doda v `PATH`. Tu **morate odgovoriti pritrdilno**. ([Kaj je `PATH`?](https://en.wikipedia.org/wiki/PATH_(variable)))
 * Priporočamo, da naredite asociacijo med VSCode in tipi datotek, ki jih zna urejati (angl. _file associations_).
 

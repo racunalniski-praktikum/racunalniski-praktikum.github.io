@@ -79,7 +79,7 @@ Ko se program pojavi v seznamu rezultatov, se nanj premaknite s puščicami <kbd
 | Odpiranje novega zavihka (**T**ab)       | <kbd>Ctrl</kbd>+<kbd>T</kbd>                  | <kbd>Cmd</kbd>+<kbd>T</kbd>                  |
 | Zapiranje zavihka                        | <kbd>Ctrl</kbd>+<kbd>W</kbd>                  | <kbd>Cmd</kbd>+<kbd>W</kbd>                  |
 
-Marsikatera od teh bližnjice deluje tudi drugih programih, ki imajo zavihke.
+Marsikatera od teh bližnjic deluje tudi v drugih programih, ki imajo zavihke.
 
 [Vimium](https://vimium.github.io)
 - f: link picker
