@@ -234,9 +234,10 @@ več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
 
  6. Preverite, če ste osvojili tehniko iz prejšnje točke.
     Pod podnaslovom "Details" naj bodo vsi odstavki razen prvega
-    elementi neurejenega seznama (angl. _unordered list_, značka `ul`).
+    elementi (značka `li`) neurejenega seznama (angl. _unordered list_, značka `ul`).
     Odstavki so ločeni s praznimi vrsticami, v katerih nočemo narediti elementov seznama, 
     zato kurzorje postavite s klikanjem.
+    Bodite pozorni na to, da sta dva elementa seznama zapisana v večih vrsticah (tista dva, ki imata tabeli).
 
  7. Citat (odstavek pod besedilom "The abstract states the following:") 
     označimo z značko `blockquote`.
