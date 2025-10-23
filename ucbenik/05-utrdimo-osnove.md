@@ -84,7 +84,8 @@ V navodilih bo včasih tudi povezava na bolj podrobna navodila.
  9. S paleto ukazov vrstice uredite naraščajoče po abecedi: najprej izberite vse, odprite paleto ukazov (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> oz. 🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) in napišite _Sort Lines Ascending_ (ko se ta ukaz pojavi na vrhu seznama, lahko stisnete <kbd>↵</kbd>).
 10. Zdaj je QR koda že skoraj prava: počistiti je treba samo še `*`.
     V _Find and Replace_ <kbd>Ctrl</kbd>+<kbd>F</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>F</kbd>) poiščite vse `*` in jih zamenjajte s praznim nizom znakov.
-11. Poskenirajte QR kodo. Na naslovu, kamor boste prišli, bo preostanek navodil za to nalogo.
+11. Po potrebi spremenite barvno temo v urejevalniku tako, da boste imeli svetlo besedilo na temnem ozadju.
+    Poskenirajte QR kodo. Na naslovu, kamor boste prišli, bo preostanek navodil za to nalogo.
     Na računalniku lahko naredite zajem zaslona (lahko si pomagate s pomočjo za operacijski sistem 
     [Windows](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b) ali
     [MacOS](https://support.apple.com/en-us/102646)) 
