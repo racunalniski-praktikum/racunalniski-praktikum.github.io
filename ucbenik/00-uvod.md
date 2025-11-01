@@ -28,5 +28,5 @@ Pripombe in dopolnitve k vajam so prispevali tudi demonstratorji:
 - Jakob Schrader,
 - Jure Smolar,
 - Beno Učakar,
-- Patrik Žnidaršič.
-
+- Patrik Žnidaršič
+- Filip Štamcar.
