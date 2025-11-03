@@ -1,0 +1,943 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     34902,        935]
+NotebookOptionsPosition[     29790,        844]
+NotebookOutlinePosition[     30353,        864]
+CellTagsIndexPosition[     30310,        861]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Ra\[CHacek]unanje z Mathematico", "Title",
+ CellChangeTimes->{{3.909124690291402*^9, 3.909124694114336*^9}, {
+  3.942728108303742*^9, 
+  3.942728114356806*^9}},ExpressionUUID->"fb3caf73-8ebf-4a89-a9b3-\
+35bf4821f55a"],
+
+Cell[TextData[{
+ "Matemati\[CHacek]ne izraze pi\[SHacek]emo podobno, kot smo to \
+po\[CHacek]eli v ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]],ExpressionUUID->
+  "b6d26bc8-43a9-4f90-860c-f6c80b8755a3"],
+ "-u; videli pa boste, da obstaja tudi nekaj razlik.\nPrimer izraza z \
+eksponentom in mno\[ZHacek]enjem: ",
+ StyleBox["x^20+5 x/(2+x)", "Code"],
+ ". Kot vidite, lahko namesto znaka za mno\[ZHacek]enje napi\[SHacek]ete \
+presledek (lahko pa tudi ",
+ StyleBox["*", "Code"],
+ ").\n",
+ StyleBox["Opozorilo:",
+  FontWeight->"Bold"],
+ " \[CHacek]e boste samo kopirali izraz v nalogi v vnosno celico, to ne bo \
+vedno delovalo.\nProgramerji lahko ta zvezek preletite na hitro in \
+za\[CHacek]nete brati ",
+ ButtonBox["Fast introduction for programmers",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.wolfram.com/language/fast-introduction-for-programmers/\
+en/"], None},
+  ButtonNote->
+   "https://www.wolfram.com/language/fast-introduction-for-programmers/en/"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.909124696165965*^9, 3.909124716906651*^9}, {
+   3.909126154179185*^9, 3.9091262354774942`*^9}, {3.909126285784913*^9, 
+   3.909126294770338*^9}, {3.909126359844692*^9, 3.909126437031476*^9}, {
+   3.909126491121591*^9, 3.909126494823577*^9}, {3.9091265361196203`*^9, 
+   3.9091266163547373`*^9}, {3.909130148010005*^9, 3.909130165601824*^9}, 
+   3.9091302361800013`*^9, 3.9091303761013803`*^9, {3.909130409944355*^9, 
+   3.909130504901675*^9}, {3.942725876911131*^9, 
+   3.942725877493052*^9}},ExpressionUUID->"be207164-db31-4a6e-a579-\
+4e28bff477e0"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.784103669941997*^9, 3.7841036803482323`*^9}, {
+   3.909124752756357*^9, 3.9091247528668833`*^9}, 3.909124787128665*^9, {
+   3.909124842103194*^9, 
+   3.9091248778782387`*^9}},ExpressionUUID->"bf599847-785e-472f-b474-\
+810472a85444"],
+
+Cell[TextData[{
+ "Mathematica je jezik, pa tudi uporabni\[SHacek]ki vmesnik. Preletite ",
+ ButtonBox["bli\[ZHacek]njice na tipkovnici",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://reference.wolfram.com/language/tutorial/\
+KeyboardShortcutListing.html"], None},
+  ButtonNote->
+   "https://reference.wolfram.com/language/tutorial/KeyboardShortcutListing.\
+html"],
+ ", da boste vedeli, kako si lahko olaj\[SHacek]ate delo."
+}], "Text",
+ CellChangeTimes->{{3.909130672952077*^9, 3.909130672969949*^9}, {
+  3.909131149901249*^9, 
+  3.9091312522225313`*^9}},ExpressionUUID->"e0287bd3-0ecd-4742-80f5-\
+37c2626e5799"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.784103669941997*^9, 3.7841036803482323`*^9}, {
+   3.909124752756357*^9, 3.9091247528668833`*^9}, 3.909124787128665*^9, {
+   3.909124842103194*^9, 
+   3.9091248778782387`*^9}},ExpressionUUID->"f69184ca-fe37-4e60-a668-\
+550a07d4aedd"],
+
+Cell[TextData[{
+ "Pi\[SHacek]emo lahko tudi gr\[SHacek]ke \[CHacek]rke in nekatere druge \
+posebne znake. To naredimo tako, da stisnemo tipko ",
+ StyleBox["Esc",
+  FontWeight->"Bold"],
+ " (napi\[SHacek]e se znak \[OpenCurlyDoubleQuote]\[VerticalEllipsis]\
+\[CloseCurlyDoubleQuote]), nato ime posebnega znaka, npr. \
+\[OpenCurlyDoubleQuote]alpha\[CloseCurlyDoubleQuote], nato pa \[SHacek]e \
+enkrat .\[LineSeparator]V spodnjo celico napi\[SHacek]ite \[Beta] in znak za \
+stopinje \[Degree]."
+}], "Text",
+ CellChangeTimes->{
+  3.942728818016677*^9, {3.9427288527405567`*^9, 
+   3.942728896752048*^9}},ExpressionUUID->"cd682f39-0eda-441d-a93e-\
+77a32dd6cff4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mathematica je lahko kalkulator", "Section",
+ CellChangeTimes->{{3.9427285493225927`*^9, 
+  3.9427285580247393`*^9}},ExpressionUUID->"ff320985-4821-4319-a105-\
+ffedef1635a9"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.784103669941997*^9, 3.7841036803482323`*^9}, {
+   3.909124752756357*^9, 3.9091247528668833`*^9}, 3.909124787128665*^9, {
+   3.909124842103194*^9, 
+   3.9091248778782387`*^9}},ExpressionUUID->"55291396-05bf-4b22-9610-\
+1821bdaf438c"],
+
+Cell[TextData[{
+ "Izra\[CHacek]unajte vrednost izraza  ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"20", "+", "316"}], ")"}], "7"], "-", "55"}], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"33", "\[CenterDot]", "12"}], ")"}], "3"]], TraditionalForm]],
+  ExpressionUUID->"79f1869b-e399-4946-a78b-cc6832224c93"],
+ ".\[LineSeparator]Izraz zapi\[SHacek]ite v celico pod tem navodilom in jo po\
+\[ZHacek]enite tako, da stisnete ",
+ StyleBox["Shift+Enter",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.7840898458341017`*^9, 3.7840899702872343`*^9}, 
+   3.784094879677851*^9, 3.784103600051442*^9, {3.909126744841741*^9, 
+   3.9091268122057657`*^9}, {3.90913076742387*^9, 3.909130848620963*^9}, {
+   3.9091308989509068`*^9, 3.9091309428404016`*^9}, {3.94272845226641*^9, 
+   3.942728453131715*^9}},ExpressionUUID->"92d02d20-42e0-446e-ad87-\
+ca42acb371e2"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}],
+   "*)"}]], "Input",
+ CellChangeTimes->{{3.7840900311622257`*^9, 3.78409006492787*^9}, {
+  3.7840901149591*^9, 3.78409014286535*^9}, {3.9091266283524227`*^9, 
+  3.909126629130085*^9}, {3.909717381838698*^9, 3.9097173871805277`*^9}, {
+  3.9427317992819557`*^9, 
+  3.942731829085516*^9}},ExpressionUUID->"9ee45c6f-120d-4108-b0b9-\
+0b6a5cfbf2c5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.784103669941997*^9, 3.7841036803482323`*^9}, {
+   3.909124752756357*^9, 3.9091247528668833`*^9}, 3.909124787128665*^9, {
+   3.909124842103194*^9, 
+   3.9091248778782387`*^9}},ExpressionUUID->"bdf197f2-37b2-4872-a3de-\
+da5657b34412"],
+
+Cell[TextData[{
+ "Izra\[CHacek]unajte vrednost izraza  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"30", "!"}], " ", "-", 
+    RowBox[{"20", "!"}], " ", "+", "110"}], TraditionalForm]],ExpressionUUID->
+  "fa243cca-da6f-4e51-a6b3-2c3468993776"]
+}], "Text",
+ CellChangeTimes->{{3.942728239457254*^9, 
+  3.942728243251832*^9}},ExpressionUUID->"7f817788-25b6-43b3-8be0-\
+7e8c9ea6cb1a"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}],
+   "*)"}]], "Input",
+ CellChangeTimes->{{3.7840900311622257`*^9, 3.78409006492787*^9}, {
+   3.7840901149591*^9, 3.78409014286535*^9}, {3.9091266283524227`*^9, 
+   3.909126629130085*^9}, {3.909717381838698*^9, 3.9097173871805277`*^9}, 
+   3.942731801034191*^9, 
+   3.942731832891885*^9},ExpressionUUID->"e96e7980-f0f1-47a0-bea3-\
+8d469637b384"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.784103669941997*^9, 3.7841036803482323`*^9}, {
+  3.9091248495315*^9, 3.909124850036941*^9}, {3.909124886571678*^9, 
+  3.909124888317031*^9}},ExpressionUUID->"951439be-ceb0-46ba-8abf-\
+aaf4efc94d0c"],
+
+Cell[TextData[{
+ "Mathematica ima bogato knji\[ZHacek]nico funkcij, ki jih lahko uporabite. \
+Zapomnili si boste najbolj pogosto uporabne, za ostale pa je pomembno, da se \
+jih nau\[CHacek]ite najti.\[LineSeparator]Za primer si poglejmo funkcijo ",
+ StyleBox["N", "Code"],
+ ", ki vrne numeri\[CHacek]no vrednost izraza. Sprejme dva parametra, izraz \
+in \[SHacek]tevilo decimalk. Funkcijo pokli\[CHacek]ete tako, da \
+napi\[SHacek]ete ime funkcije, nato pa v oglatih oklepajih na\[SHacek]tejete \
+parametre: ",
+ StyleBox["N[22/7,3]", "Code"],
+ ". Imena vseh funkcij in konstant se za\[CHacek]nejo z veliko \
+za\[CHacek]etnico."
+}], "Text",
+ CellChangeTimes->{{3.7840902016934757`*^9, 3.7840902715372725`*^9}, 
+   3.784103685160739*^9, {3.909127409564679*^9, 3.9091274292159767`*^9}, 
+   3.9091274673813877`*^9, {3.90912751688622*^9, 3.909127526160631*^9}, {
+   3.909127568940365*^9, 3.90912764807975*^9}, {3.9091276943082542`*^9, 
+   3.909127812654455*^9}, {3.909128029914894*^9, 3.909128102065969*^9}, {
+   3.909128146379443*^9, 3.9091281550114202`*^9}, {3.909128256426222*^9, 
+   3.9091282714475393`*^9}, {3.909128314820222*^9, 3.909128547122555*^9}, 
+   3.9097172653514223`*^9},ExpressionUUID->"5d1d5f64-eaf1-4f7c-afe7-\
+49ccb314d8ee"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{"N", "[", 
+    RowBox[{
+     RowBox[{"22", "/", "7"}], ",", "3"}], "]"}], " ", 
+   RowBox[{
+    StyleBox[
+     RowBox[{"(", "*"}]], " ", 
+    RowBox[{
+     RowBox[{"Po\[ZHacek]enite", " ", "celico"}], ",", " ", 
+     RowBox[{"da", " ", "dobite", " ", "rezultat"}]}], " ", 
+    StyleBox[
+     RowBox[{"*", ")"}]]}]}], "Code"]], "Input",
+ CellChangeTimes->{{3.909128578250636*^9, 3.909128578256505*^9}, {
+  3.9427267424720497`*^9, 3.942726750657896*^9}, {3.942726843937028*^9, 
+  3.942726850164938*^9}, {3.942726901361631*^9, 3.942727021973926*^9}, {
+  3.942727089204039*^9, 3.942727141971806*^9}},
+ CellLabel->"",ExpressionUUID->"6f26580e-d129-4794-933e-58643324b7c3"],
+
+Cell[TextData[{
+ "V eni celici lahko izra\[CHacek]unate tudi ve\[CHacek] izrazov tako, da \
+vsakega zapi\[SHacek]ete v svojo vrstico. Naslednje naloge re\[SHacek]ujte v \
+eni celici.\n1. Izra\[CHacek]unajte numeri\[CHacek]no vrednost izraza iz prej\
+\[SHacek]nje naloge na 20 mest natan\[CHacek]no.\n2. S funkcijo ",
+ StyleBox["Simplify", "Code"],
+ " poenostavite izraz  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["2", "x"], "+", 
+    RowBox[{"5", "a", " ", 
+     SuperscriptBox["2", "x"]}], "+", 
+    SuperscriptBox["2", 
+     RowBox[{"x", "+", "2"}]]}], TraditionalForm]],ExpressionUUID->
+  "ff9595e9-75de-4167-8caf-d8deedcfd952"],
+ ". Poglejte si \[SHacek]e kak primer uporabe te funkcije v dokumentaciji: \
+spremenite ga in po\[ZHacek]enite celico.\n3. V dokumentaciji poi\[SHacek]\
+\[CHacek]ite funkcijo za ra\[CHacek]unanje logaritmov in izra\[CHacek]unajte ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["log", "10"], "10", "x"}], TraditionalForm]],ExpressionUUID->
+  "105fad09-8492-4194-919b-061461d47477"],
+ ".\[LineSeparator]4. Poi\[SHacek]\[CHacek]ite funkcijo, ki izra\[CHacek]una \
+najve\[CHacek]ji skupni delitelj \[SHacek]tevil, ter ga izra\[CHacek]unajte \
+za \[SHacek]tevila 536, 1248, 2320. "
+}], "Text",
+ CellChangeTimes->{{3.7840902016934757`*^9, 3.7840902715372725`*^9}, 
+   3.784103685160739*^9, {3.909127409564679*^9, 3.9091274292159767`*^9}, 
+   3.9091274673813877`*^9, {3.90912751688622*^9, 3.909127526160631*^9}, {
+   3.909127568940365*^9, 3.90912764807975*^9}, {3.9091276943082542`*^9, 
+   3.909127812654455*^9}, {3.909128029914894*^9, 3.909128102065969*^9}, {
+   3.909128146379443*^9, 3.9091281550114202`*^9}, {3.909128256426222*^9, 
+   3.9091282714475393`*^9}, {3.909128314820222*^9, 3.909128547122555*^9}, {
+   3.942727171094713*^9, 
+   3.942727223723308*^9}},ExpressionUUID->"a406bc0b-f314-46d2-8c5a-\
+26af71049228"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}],
+   "*)"}]], "Input",
+ CellChangeTimes->{{3.7840900311622257`*^9, 3.78409006492787*^9}, {
+   3.7840901149591*^9, 3.78409014286535*^9}, {3.9091266283524227`*^9, 
+   3.909126629130085*^9}, {3.909717381838698*^9, 3.9097173871805277`*^9}, {
+   3.9427272072531347`*^9, 3.942727208659981*^9}, 
+   3.942731839746826*^9},ExpressionUUID->"faae66ae-536b-45df-bd13-\
+a24b5a048259"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.784105795504492*^9, 3.7841058015044894`*^9}, 
+   3.784692604442301*^9, {3.8826173370765676`*^9, 3.882617337260689*^9}, {
+   3.9091258200716*^9, 
+   3.909125825130577*^9}},ExpressionUUID->"cabdeb6d-edb1-4084-b380-\
+fd8543f31fd8"],
+
+Cell[TextData[{
+ "V dokumentaciji poi\[SHacek]\[CHacek]ite funkcijo ",
+ StyleBox["Derivative", "Code"],
+ " in njeni okraj\[SHacek]avi ",
+ StyleBox["D", "Code"],
+ " in ",
+ StyleBox["\[OpenCurlyQuote]", "Code"],
+ ".\[LineSeparator]Uporabite jo, da izra\[CHacek]unate:\n1. prvi in drugi \
+odvod funkcije ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", "arctan", " "}], TraditionalForm]],ExpressionUUID->
+  "e4517c8b-7712-4ff1-bd6f-201ecb6323df"],
+ ",\n2. prvi odvod funkcije ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RadicalBox[
+     RowBox[{
+      RowBox[{"3", "x"}], "-", "2"}], "3"], 
+    SqrtBox[
+     RowBox[{
+      RowBox[{"2", "x"}], "+", "1"}]]], TraditionalForm]],ExpressionUUID->
+  "0f832ba9-1c86-4f9e-9ff0-e4c1dc0a643a"],
+ ",\n\[CapitalCHacek]e ste v eni od prej\[SHacek]njih nalog dolo\[CHacek]ili \
+vrednost x na 2, boste dobili \[CHacek]uden rezultat. Vrednost spremenljivke \
+lahko po\[CHacek]istimo s funkcijo ",
+ StyleBox["Clear", "Code"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.784776941523417*^9, 3.784776951492104*^9}, {
+  3.784777239882728*^9, 3.78477726797648*^9}, {3.882617310071211*^9, 
+  3.882617323165637*^9}, {3.909125776917292*^9, 3.90912578458634*^9}, {
+  3.909125920962283*^9, 3.909125941807008*^9}, {3.909125976801716*^9, 
+  3.9091259787045937`*^9}, {3.90913905543439*^9, 3.90913905640556*^9}, {
+  3.9091391694473467`*^9, 3.909139174849658*^9}, {3.909139208684463*^9, 
+  3.90913923268508*^9}, {3.90913930434781*^9, 3.909139409226351*^9}, {
+  3.909717316767968*^9, 3.909717323123197*^9}, {3.942731919937669*^9, 
+  3.942731988381562*^9}},ExpressionUUID->"7f0e0fb2-2c51-48a7-8585-\
+53600bd43f3a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "x", "]"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}], 
+   "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.7847772710546*^9, 3.784777280445223*^9}, {
+   3.882617314640277*^9, 3.882617328322936*^9}, {3.9091257185853*^9, 
+   3.909125728076741*^9}, {3.909125760428022*^9, 3.909125790810872*^9}, {
+   3.909125860740494*^9, 3.909125888565947*^9}, {3.9091259281882877`*^9, 
+   3.909125936129861*^9}, {3.90913914329713*^9, 3.909139152851877*^9}, 
+   3.909717420116262*^9, 3.9427318051893473`*^9, {3.942731842489706*^9, 
+   3.942731845970091*^9}},ExpressionUUID->"a6ffc045-c04c-4272-84d6-\
+fda1f6eeabc9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.784103732473241*^9, 3.7841037393169937`*^9}, {
+  3.9091395302477703`*^9, 
+  3.909139535502603*^9}},ExpressionUUID->"d6966373-d033-4b39-958c-\
+afd3ac37c92c"],
+
+Cell[TextData[{
+ "1. Se\[SHacek]tejte vsa ",
+ StyleBox["soda",
+  FontWeight->"Bold"],
+ " \[SHacek]tevila na intervalu ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"1", ",", "100"}], "]"}], TraditionalForm]],ExpressionUUID->
+  "7b6377e1-b8a6-44a6-99a7-808dcc232a04"],
+ ".\n2. Izra\[CHacek]unajte  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"k", "=", "1"}], "\[Infinity]"], 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["k", "2"], "+", "1"}], 
+     SuperscriptBox["k", "4"]]}], TraditionalForm]],ExpressionUUID->
+  "7af7846e-ebe1-48fc-8641-fcd1883ba3a6"]
+}], "Text",
+ CellChangeTimes->{{3.4086153710625*^9, 3.408615387453125*^9}, 
+   3.40861832053125*^9, 3.4086213871875*^9, {3.472365547734375*^9, 
+   3.47236555071875*^9}, {3.7840966188845563`*^9, 3.7840966559782953`*^9}, 
+   3.784103742660742*^9, {3.909139653115765*^9, 3.909139663710232*^9}, {
+   3.942727586839048*^9, 
+   3.94272760616013*^9}},ExpressionUUID->"ae1a7a8d-eaab-4169-a541-\
+62297c7a4e16"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}],
+   "*)"}]], "Input",
+ CellChangeTimes->{3.942731791224133*^9, 
+  3.942731853485815*^9},ExpressionUUID->"59c8d5ff-c1b5-4308-9298-\
+987249ef66de"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.784103732473241*^9, 3.7841037393169937`*^9}, {
+  3.9091395302477703`*^9, 
+  3.909139535502603*^9}},ExpressionUUID->"1b80c138-ff07-4f83-a877-\
+f8c1622e3172"],
+
+Cell[TextData[{
+ "Na kocko s stranico ",
+ Cell[BoxData[
+  FormBox["a", TraditionalForm]],ExpressionUUID->
+  "b5f3e715-e0d6-4f56-88ba-fdead7faa6c7"],
+ " postavimo drugo kocko s telesno diagonalo, enako stranici prve kocke, na \
+drugo kocko spet tretjo s telesno diagonalo, enako stranici druge kocke, in \
+to ponavljamo brez konca. Izra\[CHacek]unajte vi\[SHacek]ino tako dobljenega \
+telesa: ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{
+            StyleBox["i", "TI"], "\[LongEqual]", "0"}], "\[Infinity]", 
+          LimitsPositioning -> True], 
+         FractionBox[
+          StyleBox["a", "TI"], 
+          SuperscriptBox[
+           SqrtBox["3"], 
+           StyleBox["i", "TI"]]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\sum_{i=0}^\\infty \\frac{a}{\\sqrt{3}^i}", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "a15efc02-9cbb-4330-b1ff-8d02d41d8adb"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.628208824755512*^9, 3.6282089461776237`*^9}, {
+   3.6282119731210423`*^9, 3.628211978042946*^9}, {3.784089253505983*^9, 
+   3.78408925492785*^9}, 3.7840894632403507`*^9, 3.784090007646613*^9, 
+   3.784103912113864*^9, 3.942727868839651*^9, {3.942728166653715*^9, 
+   3.942728166750477*^9}, {3.942728940185213*^9, 3.942728947167438*^9}, {
+   3.942729103752623*^9, 
+   3.942729113199786*^9}},ExpressionUUID->"db357066-6951-4836-a663-\
+e6cc741ebbda"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}],
+   "*)"}]], "Input",
+ CellChangeTimes->{3.9427317950940847`*^9, 
+  3.942731858016595*^9},ExpressionUUID->"d30d0dd9-551f-44b5-87ad-\
+a281184ca4f8"],
+
+Cell["Izra\[CHacek]unajte \[SHacek]e prostornino tako dobljenega telesa.", \
+"Text",
+ CellChangeTimes->{{3.7840894735841017`*^9, 3.784089491334172*^9}, 
+   3.7841095678951173`*^9, {3.942728169631624*^9, 
+   3.9427281697086*^9}},ExpressionUUID->"827ee14b-5b6a-4206-ae1f-\
+f3d0fd8e1e0b"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}],
+   "*)"}]], "Input",
+ CellChangeTimes->{
+  3.942731862879264*^9},ExpressionUUID->"91753f02-8edb-44e0-9f05-\
+0c28f186a15a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.784103732473241*^9, 3.7841037393169937`*^9}, {
+  3.9091395302477703`*^9, 
+  3.909139535502603*^9}},ExpressionUUID->"295b05c1-1373-4e59-8980-\
+83eb8d650645"],
+
+Cell[TextData[{
+ "1. Izra\[CHacek]unajte  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"x", "\[Rule]", "0"}]], 
+    FractionBox[
+     RowBox[{"arctg", " ", 
+      RowBox[{"(", 
+       RowBox[{"7", "x"}], ")"}]}], 
+     RowBox[{"arcsin", " ", 
+      RowBox[{"(", 
+       RowBox[{"8", "x"}], ")"}]}]]}], TraditionalForm]],ExpressionUUID->
+  "a0cdc544-eb31-4144-b8f5-60b398de5389"],
+ "\n2. Izra\[CHacek]unajte  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"x", "\[Rule]", "\[Pi]"}]], 
+    FractionBox[
+     RowBox[{"1", "+", 
+      RowBox[{"cos", " ", "x"}]}], 
+     RowBox[{
+      RowBox[{"2", 
+       SqrtBox[
+        RowBox[{"\[Pi]", " ", "x"}]]}], "-", "\[Pi]", "-", "x"}]]}], 
+   TraditionalForm]],ExpressionUUID->"270b6a20-a683-4d5d-b34e-77077063fed1"],
+ "\n3. Izra\[CHacek]unajte levo limito:  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"x", "\[Rule]", 
+      SuperscriptBox["0", "-"]}]], 
+    RowBox[{"|", "x", "|", 
+     RowBox[{"ctg", " ", "x"}]}]}], TraditionalForm]],ExpressionUUID->
+  "ddd823e5-1ff3-445d-b160-e3d07fb78af4"]
+}], "Text",
+ CellChangeTimes->{{3.7846899138904214`*^9, 3.784689988171682*^9}, {
+  3.942731625322433*^9, 3.9427316253967943`*^9}, {3.942731657783091*^9, 
+  3.942731708287301*^9}},ExpressionUUID->"4fad9617-3cf4-4c89-b2df-\
+298380d60102"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}],
+   "*)"}]], "Input",
+ CellChangeTimes->{
+  3.942731862879264*^9},ExpressionUUID->"9efd14da-e84c-4bea-af7d-\
+b98e59281943"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Spremenljivke in funkcije", "Section",
+ CellChangeTimes->{{3.942728728243444*^9, 
+  3.942728735338703*^9}},ExpressionUUID->"955df8f7-717f-47c6-a431-\
+f5ba7423e72f"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.7841038598013687`*^9, 3.7841038647076144`*^9}, {
+  3.7841091087701426`*^9, 3.7841091100201426`*^9}, {3.9091249382658157`*^9, 
+  3.9091249448005333`*^9}},ExpressionUUID->"38acbdff-ea3f-44d2-989d-\
+11d3857cd0ec"],
+
+Cell["Vrednosti izrazov lahko spravimo v spremenljivko, takole:", "Text",
+ CellChangeTimes->{{3.9091292519923267`*^9, 
+  3.909129270516055*^9}},ExpressionUUID->"d6b7e2cf-1b65-4b1c-afec-\
+e4fbada39829"],
+
+Cell[BoxData[
+ RowBox[{"g", "=", 
+  RowBox[{"6.674", " ", 
+   RowBox[{"10", "^", 
+    RowBox[{"(", 
+     RowBox[{"\[Minus]", "11"}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.909129354495674*^9, 3.909129369511435*^9}},
+ CellLabel->"In[97]:=",ExpressionUUID->"c6da634c-3d84-4b59-85a1-e5a721f35a47"],
+
+Cell[TextData[{
+ "1. V dokumentaciji poi\[SHacek]\[CHacek]ite definicijo konstante ",
+ StyleBox["Degree", "Code"],
+ ", ki jo uporabite, da napi\[SHacek]ete 1830\[Degree] in 270\[Degree].\n2. \
+Ti dve vrednosti spravite v spremenljivki \[Alpha] in \[Beta].\n3. Izra\
+\[CHacek]unajte vrednost izraza ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     RowBox[{"sin", " ", "\[Alpha]"}], " ", "+", " ", 
+     RowBox[{"sin", " ", "\[Beta]"}]}], 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["cos", "2"], "(", 
+      RowBox[{"\[Alpha]", " ", "-", " ", "\[Beta]"}], ")"}], " ", "-", " ", 
+     RowBox[{
+      SuperscriptBox["sin", "2"], "(", 
+      RowBox[{"\[Beta]", "-", "\[Alpha]"}], ")"}]}]], TraditionalForm]],
+  ExpressionUUID->"827d52c8-6ab4-400a-bc5c-b9b1880d5c15"],
+ " za kota ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Alpha]", "=", 
+    RowBox[{"1830", "\[Degree]"}]}], TraditionalForm]],ExpressionUUID->
+  "65ec95a4-a610-4997-b60e-fcf10c62c966"],
+ "  in  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Beta]", "=", 
+    RowBox[{"270", "\[Degree]"}]}], TraditionalForm]],ExpressionUUID->
+  "a46cf43b-ce8b-4477-8e90-551b7c0d9450"],
+ ". Pri tem uporabite spremenljivki, ki se ju ravno definirali.\n\
+\[CapitalCHacek]e ne \[ZHacek]elite, da se izpi\[SHacek]e vrednost nekega \
+izraza, lahko tisto vrstico kon\[CHacek]ate s podpi\[CHacek]jem ",
+ StyleBox[";", "Code"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.6281908759094143`*^9, 3.628190911487608*^9}, {
+   3.6281909573783216`*^9, 3.6281911693318605`*^9}, {3.628211934605344*^9, 
+   3.6282119373240967`*^9}, {3.7840888715997257`*^9, 
+   3.7840889306778507`*^9}, {3.7840889847091084`*^9, 3.784089003505985*^9}, 
+   3.784089991287238*^9, 3.78410386769199*^9, {3.909128858420991*^9, 
+   3.909129275267568*^9}, {3.909129386894897*^9, 3.909129479243683*^9}, {
+   3.9091306012334642`*^9, 3.909130610859573*^9}, {3.942727292303672*^9, 
+   3.9427272969673033`*^9}, {3.9427287979409857`*^9, 
+   3.9427288000782013`*^9}, {3.942732151015088*^9, 
+   3.942732166419607*^9}},ExpressionUUID->"5d082ded-9162-4e82-a000-\
+cd8609822132"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}],
+   "*)"}]], "Input",
+ CellChangeTimes->{
+  3.942731862879264*^9},ExpressionUUID->"22e68aaf-bfce-455e-b82c-\
+6fa70a539aee"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.7841038598013687`*^9, 3.7841038647076144`*^9}, {
+  3.7841091087701426`*^9, 3.7841091100201426`*^9}, {3.9091249382658157`*^9, 
+  3.9091249448005333`*^9}},ExpressionUUID->"a3cab2c7-b6d0-4563-aaa9-\
+55dc87ae46c8"],
+
+Cell[TextData[{
+ "1. Priredite polinom  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "7"], "+", 
+    RowBox[{"2", 
+     SuperscriptBox["x", "6"]}], "-", 
+    RowBox[{"80", 
+     SuperscriptBox["x", "5"]}], "+", 
+    RowBox[{"232", 
+     SuperscriptBox["x", "4"]}], "+", 
+    RowBox[{"175", 
+     SuperscriptBox["x", "3"]}], "-", 
+    RowBox[{"826", 
+     SuperscriptBox["x", "2"]}], "+", 
+    RowBox[{"256", "x"}], "-", "1056"}], TraditionalForm]],ExpressionUUID->
+  "d9e3546f-60b8-49ce-a597-e30c246a1930"],
+ "  spremenljivki ",
+ StyleBox["p", "Code"],
+ ".\n2. Razcepite ta polinom na linearne in kvadratne faktorje s \
+pomo\[CHacek]jo funkcije ",
+ ButtonBox["Factor",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Factor"],
+ ".\n3. Polinom razcepite \[SHacek]e na same linearne faktorje. Funkciji \
+boste morali povedati, da \[ZHacek]elite upo\[SHacek]tevati tudi kompleksne \
+ni\[CHacek]le oz. da naj i\[SHacek]\[CHacek]e re\[SHacek]itve v obsegu \
+realnih \[SHacek]tevil raz\[SHacek]irjenim s \[SHacek]tevilom i.\
+\[LineSeparator]V dokumentaciji poglejte, kako funkciji Factor \
+dolo\[CHacek]ite raz\[SHacek]iritev (ko boste na\[SHacek]li ime nastavitve, \
+vam bo pri pisanju pomagal vmesnik)."
+}], "Text",
+ CellChangeTimes->{{3.942732103391829*^9, 3.942732143692503*^9}, {
+   3.942732200528261*^9, 3.9427322063475943`*^9}, {3.942732241913437*^9, 
+   3.942732258142758*^9}, 3.9427323657061577`*^9, {3.9427324293553047`*^9, 
+   3.942732438745639*^9}, {3.9427325466842613`*^9, 3.942732548650888*^9}, {
+   3.942732587263174*^9, 3.942732628855813*^9}, {3.94273266754138*^9, 
+   3.9427328789366302`*^9}, {3.942732911957967*^9, 
+   3.942732928601632*^9}},ExpressionUUID->"a78acb16-2eb1-4b92-8980-\
+3088d4caf1a2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"x", "^", "7"}], "+", 
+   RowBox[{"2", 
+    RowBox[{"x", "^", "6"}]}], "-", 
+   RowBox[{"80", 
+    RowBox[{"x", "^", "5"}]}], "+", 
+   RowBox[{"232", 
+    RowBox[{"x", "^", "4"}]}], "+", 
+   RowBox[{"175", 
+    RowBox[{"x", "^", "3"}]}], "-", 
+   RowBox[{"826", 
+    RowBox[{"x", "^", "2"}]}], "+", 
+   RowBox[{"256", "x"}], "-", "1056"}]}]], "Input",
+ CellChangeTimes->{{3.942732374351985*^9, 3.942732376255129*^9}, {
+  3.942734363096979*^9, 
+  3.9427343635641203`*^9}},ExpressionUUID->"ec879d0e-3f30-478d-9870-\
+b670c1212959"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",
+ CellChangeTimes->{{3.7841038598013687`*^9, 3.7841038647076144`*^9}, {
+  3.7841091087701426`*^9, 3.7841091100201426`*^9}, {3.9091249382658157`*^9, 
+  3.9091249448005333`*^9}},ExpressionUUID->"978d1fbe-31a9-4b03-ae4e-\
+fccf848ef974"],
+
+Cell[TextData[{
+ "1. Priredite polinom  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["x", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"y", "-", "1"}], ")"}]}], "-", 
+      RowBox[{
+       SuperscriptBox["x", "3"], 
+       SuperscriptBox["y", "5"]}], "+", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"x", "-", "1"}], ")"}], "7"], "x", " ", "y", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox["x", "2"], "+", 
+         RowBox[{"2", "x", " ", "y"}], "+", 
+         SuperscriptBox["y", "3"]}], ")"}]}]}], ")"}], "2"], 
+   TraditionalForm]],ExpressionUUID->"0de55297-f911-495c-a7c1-ad07f83b627c"],
+ "  spremenljivki ",
+ StyleBox["q", "Code"],
+ ".\n2. Raz\[SHacek]irite ga tako, da dobite vsoto monomov. Poi\[SHacek]\
+\[CHacek]ite ustrezno funkcijo v dokumentaciji.\n3. Razvijte polinom po \
+potencah ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "adc22a02-b63c-4229-ac99-1b2abd160066"],
+ "  (koeficienti bodo polinomi v ",
+ Cell[BoxData[
+  FormBox["y", TraditionalForm]],ExpressionUUID->
+  "add2dbfe-6681-4756-99b2-8f2a923a2a42"],
+ "). Pomagajte si s funkcijo ",
+ ButtonBox["Collect",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Collect"],
+ ".\n4. S funkcijo ",
+ ButtonBox["Exponent",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Exponent"],
+ " poi\[SHacek]\[CHacek]ite najvi\[SHacek]ji potenci spremenljivk, ki se \
+pojavita v polinomu."
+}], "Text",
+ CellChangeTimes->{{3.7847525225458164`*^9, 3.784752771358223*^9}, {
+  3.784754173846651*^9, 3.7847541804872246`*^9}, {3.942732990868391*^9, 
+  3.942733202069211*^9}},ExpressionUUID->"3ed3f7ec-319f-46a4-aec3-\
+43ed970b3fa0"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}],
+   "*)"}]], "Input",ExpressionUUID->"93c74958-ad46-4fbd-84b2-0349589bfc9b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->{},
+WindowSize->{1392, 1133},
+WindowMargins->{{850, Automatic}, {Automatic, 38}},
+TaggingRules->{
+ "PresenterSettings" -> {"SlideBreakStyles" -> {}, "ShowSlideBreaks" -> True},
+   "NewCellStyle" -> "Text", "StatusMessage" -> ""},
+FrontEndVersion->"13.3 for Mac OS X ARM (64-bit) (June 3, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ada8e28a-a3f6-4f3a-a75a-559ec1dee676"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 223, 4, 98, "Title",ExpressionUUID->"fb3caf73-8ebf-4a89-a9b3-35bf4821f55a"],
+Cell[806, 28, 1881, 46, 104, "Text",ExpressionUUID->"be207164-db31-4a6e-a579-4e28bff477e0"],
+Cell[CellGroupData[{
+Cell[2712, 78, 330, 9, 54, "Subsection",ExpressionUUID->"bf599847-785e-472f-b474-810472a85444"],
+Cell[3045, 89, 624, 15, 35, "Text",ExpressionUUID->"e0287bd3-0ecd-4742-80f5-37c2626e5799"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3706, 109, 330, 9, 54, "Subsection",ExpressionUUID->"f69184ca-fe37-4e60-a668-550a07d4aedd"],
+Cell[4039, 120, 656, 14, 58, "Text",ExpressionUUID->"cd682f39-0eda-441d-a93e-77a32dd6cff4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4732, 139, 180, 3, 67, "Section",ExpressionUUID->"ff320985-4821-4319-a105-ffedef1635a9"],
+Cell[CellGroupData[{
+Cell[4937, 146, 330, 9, 54, "Subsection",ExpressionUUID->"55291396-05bf-4b22-9610-1821bdaf438c"],
+Cell[5270, 157, 945, 24, 69, "Text",ExpressionUUID->"92d02d20-42e0-446e-ad87-ca42acb371e2"],
+Cell[6218, 183, 452, 9, 30, "Input",ExpressionUUID->"9ee45c6f-120d-4108-b0b9-0b6a5cfbf2c5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6707, 197, 330, 9, 54, "Subsection",ExpressionUUID->"bdf197f2-37b2-4872-a3de-da5657b34412"],
+Cell[7040, 208, 390, 11, 35, "Text",ExpressionUUID->"7f817788-25b6-43b3-8be0-7e8c9ea6cb1a"],
+Cell[7433, 221, 452, 9, 30, "Input",ExpressionUUID->"e96e7980-f0f1-47a0-bea3-8d469637b384"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7922, 235, 296, 8, 54, "Subsection",ExpressionUUID->"951439be-ceb0-46ba-8abf-aaf4efc94d0c"],
+Cell[8221, 245, 1238, 21, 81, "Text",ExpressionUUID->"5d1d5f64-eaf1-4f7c-afe7-49ccb314d8ee"],
+Cell[9462, 268, 714, 18, 30, "Input",ExpressionUUID->"6f26580e-d129-4794-933e-58643324b7c3"],
+Cell[10179, 288, 1875, 37, 127, "Text",ExpressionUUID->"a406bc0b-f314-46d2-8c5a-26af71049228"],
+Cell[12057, 327, 478, 9, 30, "Input",ExpressionUUID->"faae66ae-536b-45df-bd13-a24b5a048259"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12572, 341, 326, 9, 54, "Subsection",ExpressionUUID->"cabdeb6d-edb1-4084-b380-fd8543f31fd8"],
+Cell[12901, 352, 1625, 39, 142, "Text",ExpressionUUID->"7f0e0fb2-2c51-48a7-8585-53600bd43f3a"],
+Cell[14529, 393, 739, 15, 52, "Input",ExpressionUUID->"a6ffc045-c04c-4272-84d6-fda1f6eeabc9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15305, 413, 254, 8, 54, "Subsection",ExpressionUUID->"d6966373-d033-4b39-958c-afd3ac37c92c"],
+Cell[15562, 423, 1019, 28, 66, "Text",ExpressionUUID->"ae1a7a8d-eaab-4169-a541-62297c7a4e16"],
+Cell[16584, 453, 253, 6, 30, "Input",ExpressionUUID->"59c8d5ff-c1b5-4308-9298-987249ef66de"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16874, 464, 254, 8, 54, "Subsection",ExpressionUUID->"1b80c138-ff07-4f83-a877-f8c1622e3172"],
+Cell[17131, 474, 1497, 34, 86, "Text",ExpressionUUID->"db357066-6951-4836-a663-e6cc741ebbda"],
+Cell[18631, 510, 255, 6, 30, "Input",ExpressionUUID->"d30d0dd9-551f-44b5-87ad-a281184ca4f8"],
+Cell[18889, 518, 285, 5, 35, "Text",ExpressionUUID->"827ee14b-5b6a-4206-ae1f-f3d0fd8e1e0b"],
+Cell[19177, 525, 231, 6, 30, "Input",ExpressionUUID->"91753f02-8edb-44e0-9f05-0c28f186a15a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19445, 536, 254, 8, 54, "Subsection",ExpressionUUID->"295b05c1-1373-4e59-8980-83eb8d650645"],
+Cell[19702, 546, 1381, 43, 97, "Text",ExpressionUUID->"4fad9617-3cf4-4c89-b2df-298380d60102"],
+Cell[21086, 591, 231, 6, 30, "Input",ExpressionUUID->"9efd14da-e84c-4bea-af7d-b98e59281943"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21366, 603, 170, 3, 67, "Section",ExpressionUUID->"955df8f7-717f-47c6-a431-f5ba7423e72f"],
+Cell[CellGroupData[{
+Cell[21561, 610, 308, 8, 54, "Subsection",ExpressionUUID->"38acbdff-ea3f-44d2-989d-11d3857cd0ec"],
+Cell[21872, 620, 201, 3, 35, "Text",ExpressionUUID->"d6b7e2cf-1b65-4b1c-afec-e4fbada39829"],
+Cell[22076, 625, 300, 7, 30, "Input",ExpressionUUID->"c6da634c-3d84-4b59-85a1-e5a721f35a47"],
+Cell[22379, 634, 2079, 48, 111, "Text",ExpressionUUID->"5d082ded-9162-4e82-a000-cd8609822132"],
+Cell[24461, 684, 231, 6, 30, "Input",ExpressionUUID->"22e68aaf-bfce-455e-b82c-6fa70a539aee"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24729, 695, 308, 8, 54, "Subsection",ExpressionUUID->"a3cab2c7-b6d0-4563-aaa9-55dc87ae46c8"],
+Cell[25040, 705, 1730, 40, 104, "Text",ExpressionUUID->"a78acb16-2eb1-4b92-8980-3088d4caf1a2"],
+Cell[26773, 747, 711, 22, 52, "Input",ExpressionUUID->"ec879d0e-3f30-478d-9870-b670c1212959"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27521, 774, 308, 8, 54, "Subsection",ExpressionUUID->"978d1fbe-31a9-4b03-ae4e-fccf848ef974"],
+Cell[27832, 784, 1731, 50, 106, "Text",ExpressionUUID->"3ed3f7ec-319f-46a4-aec3-43ed970b3fa0"],
+Cell[29566, 836, 184, 3, 30, "Input",ExpressionUUID->"93c74958-ad46-4fbd-84b2-0349589bfc9b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
