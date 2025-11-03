@@ -56,10 +56,10 @@ V navodilih bo včasih tudi povezava na bolj podrobna navodila.
     ```
     (Če imate enake datoteke, pa morda v drugem vrstnem redu, je ok.)
  5. Da vidite, kako so videti vrstice s QR kodo, 
-    s spodnjim ukazom izpišite vrstice 127-147 iz datoteke `poglavje05.txt`.
-    Vrstici, ki se začneta z `#17 ` in `#03 ` vsebujeta vsaka po eno vrstico QR kode.
+    s spodnjim ukazom izpišite vrstice 37-58 iz datoteke `poglavje12.txt`.
+    Vrstici, ki se začneta z `#12 ` in `#09 ` vsebujeta vsaka po eno vrstico QR kode.
     ```bash
-    head -n 147 poglavje05.txt | tail -n 20
+    head -n 58 poglavje12.txt | tail -n 21
     ```
     Kaj mislite, da naredijo posamezni deli ukaza?
  6. V tem koraku bomo poiskali vse vrstice v datotekah v tem repozitoriju, ki se začnejo z znakom `#`, ki mu sledita dve števki. 
