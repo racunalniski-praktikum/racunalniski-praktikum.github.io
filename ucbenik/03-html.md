@@ -234,9 +234,10 @@ več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
 
  6. Preverite, če ste osvojili tehniko iz prejšnje točke.
     Pod podnaslovom "Details" naj bodo vsi odstavki razen prvega
-    elementi neurejenega seznama (angl. _unordered list_, značka `ul`).
+    elementi (značka `li`) neurejenega seznama (angl. _unordered list_, značka `ul`).
     Odstavki so ločeni s praznimi vrsticami, v katerih nočemo narediti elementov seznama, 
     zato kurzorje postavite s klikanjem.
+    Bodite pozorni na to, da sta dva elementa seznama zapisana v večih vrsticah (tista dva, ki imata tabeli).
 
  7. Citat (odstavek pod besedilom "The abstract states the following:") 
     označimo z značko `blockquote`.
@@ -276,7 +277,7 @@ več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
    in oblikovanje (CSS, ki ga bomo srečali na naslednjih vajah).
 
 2. Dodali bomo [MathJax](https://www.mathjax.org/) za lepe matematične formule z LaTeX-om.
-   Sledite navodilom [Getting Started](https://www.mathjax.org/#gettingstarted) (za verzijo MathJax 3).
+   Sledite navodilom [Getting Started](https://www.mathjax.org/#gettingstarted) (za verzijo MathJax 4).
    Košček kode, ki bo vaši strani dodal skripto MathJax, dodate v glavo dokumenta.
    Spletni strani dodajte formulo, npr. `\[x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\]`.
    Za zdaj še ni treba, da razumete, kako formule delujejo. 

@@ -174,6 +174,10 @@ Sledite navodilom v [GitHub dokumentaciji](https://docs.github.com/en/enterprise
 
 Ime ključa nastavite tako, da boste vedeli, na katerem računalniku ste ga naredili.
 
+<!-- ### 4. Gesla za ključ nočete prepogosto vpisovati
+
+- MacOS: sledite navodilom v dokumentaciji, razdelek [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent). -->
+
 (git:vscode)=
 ## Git, GitHub in VSCode
 
