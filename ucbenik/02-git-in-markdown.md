@@ -6,6 +6,11 @@
 - [Visual Studio Code](namestitev:vscode).
 `````
 
+`````{admonition} Branje navodil
+:class: tip
+Priporočamo, da si vsako navodilo najprej natančno preberete do konca.
+`````
+
 ## Označevalni jeziki
 
 Preden se posvetimo označevalnim jezikom, moramo vedeti, kaj je navadno besedilo (angl. _plain text_). 
@@ -120,11 +125,7 @@ in sledite spodnjim navodilom.
 6. V razdelku "Uporabne povezave" oblikujte oštevilčen seznam.
 7. V seznamu oblikujte povezave. V vsaki vrstici je po ena povezava: besedilo naj bo besedilo povezave (tisto, kar kliknemo), 
    naslov v komentarju pa naj bo tarča povezave (tja, kamor nas povezava pelje).
-8. Razmislite, kako boste na domač računalnik prenesli datoteko, ki ste jo pripravili, da boste lahko naredili domačo nalogo.
-   Možne rešitve so Dropbox, Google Drive, OneDrive (uporabljate lahko vmesnik v brskalniku) in podobno, ter pošiljanje datotek po elektronski pošti.
-   Shranjevanje na USB ključek odsvetujemo. Za malo naprednejše uporabnike seveda priporočamo git.
-   
-   
+8. Če vaje rešujete na šolskem računalniku, poskrbite, da boste do datoteke lahko dostopali tudi doma, saj jo boste potrebovali pri domači nalogi. Lahko uporabite na primer Dropbox, Google Drive, OneDrive (uporabljate lahko vmesnik v brskalniku) in podobno, ter pošiljanje datotek po elektronski pošti. Shranjevanje na USB ključek odsvetujemo. Za malo naprednejše uporabnike seveda priporočamo Git.
 
 ## Git, orodje za nadzor različic
 
@@ -161,26 +162,33 @@ Preverite, ali za kopiranje in lepljenje v programu Git Bash delujeta običajni 
 Če ne, bosta morda delovali <kbd>Ctrl</kbd>+<kbd>Ins</kbd> in <kbd>Shift</kbd>+<kbd>Ins</kbd>.
 `````
 
-Sledite navodilom za [nastavitve `git`-a](git:nastavitve).
+`````{admonition} Nasvet za pomikanje po ukazni vrstici
+:class: tip
+Po ukazni vrstici se lahko premikate s puščicami na tipkovnici.
+Za pomikanje po trenutni vrstici lahko uporabite puščici <kbd>←</kbd> in <kbd>→</kbd>.
+Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kbd>↓</kbd>.
+`````
+
+Sledite navodilom za [nastavitve `git`-a](git:nastavitve), da si nastavite uporabniške nastavitve ter SSH ključ.
 
 ### Klonirajte svoj prvi repozitorij na računalnik
 
 1. Izberite imenik na disku, kjer boste imeli spravljene repozitorije, s katerimi boste delali pri tem predmetu; predlagamo vam, da kar v imenik `RP` (to bodo predpostavila tudi navodila v nadaljevanju).
-2. V ukazni vrstici se premaknite v ta repozitorij.
-3. Kopirajte naslov vašega repozitorija z GitHub-a: 
-    - odprite stran z vašim repozitorijem v brskalniku, kliknite na puščico na zelenem gumbu Code,
-    - izberite zavihek Local, pod njim pa zavihek SSH,
-    - kopirajte naslov, ki izgleda takole nekako:
-      `git@github.com:⟨moje-uporabnisko-ime⟩/⟨moj-repozitorij⟩.git`.
-4. V ukazni vrstici napišite ukaz
+2. V ukazni vrstici se premaknite v ta imenik.
+3. Kopirajte naslov vašega repozitorija (ki ste ga ustvarili in oddali v 1. domači nalogi) z GitHub-a: 
+    - Odprite stran z vašim repozitorijem v brskalniku in kliknite na zelen gumb _Code_.
+    - Izberite zavihek _Local_, pod njim pa zavihek _SSH_.
+    - Kopirajte naslov, ki izgleda takole nekako:
+      `git@github.com:⟨moje-uporabnisko-ime⟩/⟨moj-repozitorij⟩.git`
+4. V ukazni vrstici napišite ukaz:
    ```shell
    git clone ⟨naslov-iz-zgornje-tocke⟩
    ```
    Pri prvem kloniranju vas `git` morda vpraša, če zaupate GitHubu (_The authenticity of host can't be established._).
    V tem primeru je treba napisati _yes_, preden se kloniranje izvede.
-5. Preverite, da vam je uspelo: podobno kot na vajah prejšnji teden poženite ukaz `ls`, da izpišete vsebino trenutnega imenika. Videti bi morali tudi ime vašega repozitorija.
+5. Preverite, da vam je uspelo: Podobno kot na vajah prejšnji teden poženite ukaz `ls`, da izpišete vsebino trenutnega imenika. Videti bi morali tudi ime vašega repozitorija.
 6. Če datotek `besedilo.txt` in `besedilo2.txt` še niste pobrisali, to lahko naredite zdaj v ukazni vrstici. Ukaz je `rm *.txt`, ampak preden ga poženete, razmislite, kaj naredi.
-6. Oglejte si še vsebino svojega imenika `RP` in jo primerjajte s spodnjo.
+7. Oglejte si še vsebino svojega imenika `RP` in jo primerjajte s spodnjo.
 
 :::{figure-md} markdown-fig
 <img src="02-git-in-markdown/vsebina-imenika-kloniranje.png" alt="Vsebina imenika RP na koncu vaje">
@@ -230,4 +238,3 @@ touch ⟨ime-datoteke⟩
 * [Git Time](https://git.bradwoods.io/), spletna igrica za spoznavanje Gita, ki jo je razvil Brad Woods.
 * [Learn Git Branching](https://learngitbranching.js.org), nekoliko naprednejša spletna igra za spoznavanje Gita s poudarkom na delu z vejami.
 * [Oh My Git!](https://ohmygit.org), igra za spoznavanje gita, ki kmalu predstavi, kako lahko na datotekah sodeluje več avtorjev.
-
