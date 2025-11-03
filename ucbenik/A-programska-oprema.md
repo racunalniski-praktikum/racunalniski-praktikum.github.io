@@ -75,7 +75,7 @@ Pri namestitvi bodite pozorni na možnosti, še posebej na to, da imate obkljuka
 Za začetek v VSCode namestite paket LaTeX Workshop:
 1. v meniju View:Extensions (razdelek se bo odprl na levi) 
 2. v iskalno polje zgoraj levo vpišete "LaTeX Workshop",
-3. izberete podaljšek [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) in ga namestite.
+3. izberete podaljšek [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) in ga namestite, ki olajša delo z LaTeX-om v urejevalniku Visual Studio Code (v naslednjih korakih boste namestili še verzijo LaTeX-a za vaš operacijski sistem). 
 
 Če ne uporabljate urejevalnika VSCode, poglejte, če za vaš urejevalnik obstaja kak podaljšek za LaTeX.
 
@@ -86,7 +86,7 @@ Ta navodila predpostavljajo, da imate že nameščen urejevalnik [Visual Studio 
 1. Namestite [Perl](https://www.perl.org/get.html). To je programski jezik, ki ga potrebujete, da vam bo deloval ukaz `latexmk` (ta vam res olajša delo).
    * Prenesite in namestite [Strawberry Perl](https://strawberryperl.com).
    * Pazite, da se bo med namestitvijo Perl dodal v `PATH` (morda boste morali prej še enkrat zagnati računalnik).
-2. Namestite [MikTeX](https://miktex.org).
+2. Namestite [MikTeX](https://miktex.org) (LaTeX distribucija za operacijski sistem Windows).
    *Pomembno*: Ko vas vpraša, ali naj samodejno namesti manjkajoče pakete, priporočamo, da izberete samodejno nameščanje. Če boste izbrali, da naj vas sprašuje pred vsako namestitvijo, vas pri prvem zagonu LaTeX-a čaka veliko klikanja.
 3. Če je treba, popravite znake `{`, `}` in `@` v VSCode: sledite navodilom v razdelku [VSCode, LaTeX, Windows in slovenska tipkovnica](faq:vscode-latex-si) pod pogostimi vprašanji.
 4. [Preverite namestitev](A:latex-preverjanje) (navodila so v kasnejšem razdelku).

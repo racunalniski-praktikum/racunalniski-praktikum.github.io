@@ -102,8 +102,8 @@ Vsak element strani, recimo odstavek ali slika, je obravnavan kot škatla ali ok
 
 Slovarček slovenskih v angleške izraze za boljšo preglednost:
 
- * zunanji prazen prostor: angl. _margin_,
- * notranji prazen prostor: angl. _padding_,
+ * zunanji prazen prostor (zunanji rob): angl. _margin_,
+ * notranji prazen prostor (notranji rob): angl. _padding_,
  * obroba oz. rob: angl. _border_,
  * višina: angl. _height_,
  * širina: angl. _width_.
@@ -117,7 +117,7 @@ Dodatni viri:
 Velikosti in razdalje na spletnih straneh podajamo bodisi z absolutnimi enotami bodisi z relativnimi enotami.
 Primeri:
 
-* [točke na zaslonu](https://en.wikipedia.org/wiki/Pixel):`200px` pomeni točno 200 točk na zaslonu.
+* slikovna točka oz. [piksel](https://sl.wikipedia.org/wiki/Piksel) (angl. _[pixel](https://en.wikipedia.org/wiki/Pixel)_): `200px` pomeni točno 200 točk na zaslonu (če ne veste, kaj so piksli, si preberite stran na Wikipedii).
 * Enota [em](https://en.wikipedia.org/wiki/Em_(typography)): `2em` pomeni 2-krat velikost pisave: _v primeru določanja velikosti pisave_ glede na velikost pisave na enem nivoju višje (če pa ta ni določena, pa glede na privzeto velikost pisave v brskalniku), _v primeru določanje širine elementa_ pa glede na velikost pisave v elementu.
 * Še ena relativna enota, ki se pogosto uporablja, je `%`. Pri pisavah se obnaša podobno kot `em` (`200%` je enako kot `2em`). V primeru določanje širine elementa se računa glede na širino elementa na enem nivoju višje.
 
