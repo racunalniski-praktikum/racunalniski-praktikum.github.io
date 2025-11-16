@@ -114,7 +114,7 @@ V navodilih zgoraj (morda) manjka korak. Ko se registrirate, pridobite aktivacij
 (namestitev:microsoft)=
 ## Oprema in storitve Microsoft
 
-Univerza v Ljubljani vsem študentom omogoča dostop do programske opreme in storitev Microsoft, glejte navodila o [informacijskih storitvah Univerze v Ljubljani](https://www.uni-lj.si/studentsko_zivljenje/informacijske_storitve/). Po lastni izbiri si namestite, kar se vam zdi uporabno. Pri predmetu bomo uporabljali Microsoft Excel.
+Univerza v Ljubljani vsem študentom omogoča dostop do programske opreme in storitev Microsoft, glejte navodila o [programski opremi za študente in zaposlene Univerze v Ljubljani](https://www.uni-lj.si/studij/informacijske-storitve/programska-oprema). Po lastni izbiri si namestite, kar se vam zdi uporabno. Pri predmetu bomo uporabljali Microsoft Excel.
 
 ## Zoom
 
