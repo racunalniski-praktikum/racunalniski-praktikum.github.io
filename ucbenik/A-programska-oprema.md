@@ -89,11 +89,7 @@ Ta navodila predpostavljajo, da imate že nameščen urejevalnik [Visual Studio 
 2. Namestite [MikTeX](https://miktex.org) (LaTeX distribucija za operacijski sistem Windows).
    *Pomembno*: Ko vas vpraša, ali naj samodejno namesti manjkajoče pakete, priporočamo, da izberete samodejno nameščanje. Če boste izbrali, da naj vas sprašuje pred vsako namestitvijo, vas pri prvem zagonu LaTeX-a čaka veliko klikanja.
 3. Če je treba, popravite znake `{`, `}` in `@` v VSCode: sledite navodilom v razdelku [VSCode, LaTeX, Windows in slovenska tipkovnica](faq:vscode-latex-si) pod pogostimi vprašanji.
-4. [Preverite namestitev](A:latex-preverjanje) (navodila so v kasnejšem razdelku).
-
-#### Nekatere pogoste težave
-
-- [`The Perl interpreter could not be found.`](https://tex.stackexchange.com/questions/158796/miktex-and-perl-scripts-and-one-python-script): preverite, da imate res nameščen Perl in da operacijski sistem ve, [kje je](https://www.wikihow.com/Change-the-PATH-Environment-Variable-on-Windows). Poti ne spreminjajte sami. Pogosto zadošča, da ponovno zaženete računalnik.
+4. [Preverite namestitev](latex:preverjanje-namestitve).
 
 ### Navodila za operacijski sistem MacOS
 
@@ -102,20 +98,11 @@ Ta navodila predpostavljajo, da imate že nameščen urejevalnik [Visual Studio 
 1. Preverite, da imate nameščen Perl tako, da v ukazno vrstico napišete `perl -v`. 
    Če je vse ok, se bodo izpisale informacije o verziji programa, sicer pa `zsh: command not found: perl` (v tem primeru namestite Perl, npr. s Homebrew).
 2. Namestite [MacTeX](https://www.tug.org/mactex/) distribucijo [TeX live](https://tug.org/texlive/) za MacOS. Če imate že nameščen Homebrew, poženite program Terminal in v ukazno vrstico prilepite [ustrezno formulo, ki jo kopirate s Homebrew strani](https://formulae.brew.sh/cask/mactex). Sicer sledite navodilom na strani distribucije.
-3. [Preverite namestitev](A:latex-preverjanje)  (navodila so v kasnejšem razdelku).
+3. [Preverite namestitev](latex:preverjanje-namestitve).
 
 ### Navodila za operacijski sistem Linux
 
-Če uporabljate Linux, verjetno ne potrebujete naših navodil.
-
-(A:latex-preverjanje)=
-### Preverjanje namestitve
-
-Preverite, ali vam deluje LaTeX: odprite ukazno vrstico in poženite spodnja ukaza.
-V obeh primerih poganjamo program (`pdflatex` in `latexmk`) z dodatkom, da nas zanima samo verzija (`-version`).
-
-1. `pdflatex -version`
-2. `latexmk -version`
+Če uporabljate Linux, verjetno ne potrebujete naših navodil. V vsakem primeru priporočamo, da [preverite namestitev](latex:preverjanje-namestitve).
 
 (namestitev:mathematica)=
 ## Mathematica
