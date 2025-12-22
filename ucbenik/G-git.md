@@ -93,9 +93,11 @@ Primer ustrezne datoteke `.gitignore` bi bil:
 *.toc
 *.fls
 *.log
+*.nav
 *.out
 *.pdf
 *.pyc
+*.snm
 *.synctex.gz
 
 # MacOS
