@@ -1,0 +1,759 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Oblikovanje HTML dokumentov s CSS &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=db6da3aa" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04-css';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Utrdimo osnove" href="05-utrdimo-osnove.html" />
+    <link rel="prev" title="Označevalni jezik HTML" href="03-html.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-vscode-in-terminal.html">Urejevalnik in ukazna vrstica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-git-in-markdown.html">Git in Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-html.html">Označevalni jezik HTML</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Oblikovanje HTML dokumentov s CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-utrdimo-osnove.html">Utrdimo osnove</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matematični dokumenti</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="06-uvod-v-latex.html">Uvod v LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-okolja-in-sklicevanje.html">Okolja in sklicevanje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-predstavitve.html">Predstavitve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-risanje.html">Risanje</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Razpredelnice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="10-razpredelnice.html">Razpredelnice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simbolno računanje</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11-racunanje-z-mathematico.html">Osnovna uporaba Mathematice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-risanje-in-enacbe.html">Reševanje enačb in risanje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13-animiranje-vektorji-matrike.html">Animiranje, vektorji in matrike</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/04-css.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Oblikovanje HTML dokumentov s CSS</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#osnovni-pojmi-in-orodja">Osnovni pojmi in orodja</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#skatlasti-model">Škatlasti model</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#slovarcek">Slovarček</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merske-enote">Merske enote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#osvezevanje-spletne-strani">Osveževanje spletne strani</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-dodajanje-pravil-za-oblikovanje-v-dokument">1. naloga: dodajanje pravil za oblikovanje v dokument</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-oblikovanje-dokumenta">2. naloga: oblikovanje dokumenta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-naprednejse-oblikovanje">3. naloga: naprednejše oblikovanje</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="oblikovanje-html-dokumentov-s-css">
+<h1>Oblikovanje HTML dokumentov s CSS<a class="headerlink" href="#oblikovanje-html-dokumentov-s-css" title="Link to this heading">#</a></h1>
+<p>CSS (angl. <em><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</em>) je jezik, s katerim lahko predpišemo izgled spletne strani.
+S HTML ustvarimo strukturo spletne strani: besedilo, naslove, gumbe, slike in tabele,
+s CSS pa določimo barve, pisave, postavitev, velikosti in druge vizualne lastnosti elementov na strani.</p>
+<p>Jezika HTML in CSS sta primer <a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_content_and_presentation">ločevanja vsebine in predstavitve</a>.
+Po tem načelu se vizualni in oblikovni vidiki (predstavitev in slog) ločijo od osnovnega materiala in strukture (vsebine) dokumenta.</p>
+<p>Različni brskalniki imajo različne načine za prikazovanje nekaterih elementov spletnih strani.
+Zato skoraj vse spletne strani najprej uporabijo CSS, ki poenoti prikazovanje elementov.
+Take CSS datoteke skoraj nihče ne naredi od začetka, ampak se uporabi eno od že obstoječih, kar bomo naredili tudi mi.
+V resnici se ponavadi uporabi kar eno od obstoječih ogrodij za izdelavo spletnih strani (npr. Bootstrap).</p>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-vscode"><span class="std std-ref">Visual Studio Code</span></a>,</p></li>
+<li><p>razširitev <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint">HTMLHint</a> in</p></li>
+<li><p>razširitev <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode">HTML Preview</a>.</p></li>
+</ul>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Shranite vaje na strežnik</p>
+<p>Na koncu vsake naloge zabeležite spremembe.
+Če naloge slučajno ne končate na vajah, vseeno zabeležite spremembe -
+v sporočilo napišite na primer <code class="docutils literal notranslate"><span class="pre">V</span> <span class="pre">delu:</span> <span class="pre">...</span></code> s kratkim opisom narejenega.
+<a class="reference external" href="https://www.reddit.com/r/ProgrammerHumor/comments/3nc531/in_case_of_fire/">Preden odidete iz predavalnice</a>,
+pošljite spremembe na strežnik s paleto ukazov:
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) &gt;
+<strong>Git: Push</strong>.</p>
+</div>
+<section id="osnovni-pojmi-in-orodja">
+<h2>Osnovni pojmi in orodja<a class="headerlink" href="#osnovni-pojmi-in-orodja" title="Link to this heading">#</a></h2>
+<p>Glavni gradniki jezika CSS so deklaracije, ki so sestavljene iz lastnosti in vrednosti za to lastnost.
+Sintaksa deklaracije zgleda takole: <code class="docutils literal notranslate"><span class="pre">⟨lastnost⟩:</span> <span class="pre">⟨vrednost⟩;</span></code>
+(na podpičje na koncu deklaracije je lahko pozabiti, ampak se nikoli ne konča dobro).
+Primeri:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">font-size:</span> <span class="pre">12px;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">#FFFF00;</span></code></p></li>
+</ul>
+<p>Deklaracije sestavimo v bloke (tako da jih obdamo z zavitimi oklepaji) in jim dodamo izbiralce,
+ki določajo, na katerih elementih se bodo uporabile deklaracije:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#FFFF00</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>V zgornjem primeru določimo vsebini vseh značk velikost in barvo pisave.
+Nekoliko poenostavljeno lahko rečemo, da je css datoteka sestavljena iz blokov deklaracij z izbiralci.</p>
+<p>Prav vam bodo prišli spodnji enostavni izbiralci
+(zadnjo vrsto, <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector">gnezdenje</a>, smo izpustili).</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors">Izbiralec za značke</a>
+<code class="docutils literal notranslate"><span class="pre">⟨znacka⟩</span></code> (angl. <em>type selector</em>) izbere vse značke <code class="docutils literal notranslate"><span class="pre">znacka</span></code> v dokumentu (kot zgoraj za značko <code class="docutils literal notranslate"><span class="pre">h1</span></code>).</p></li>
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Izbiralec za atribute</a> (angl. <em>attribute selector</em>)
+ima več oblik, tu omenimo samo dve najenostavnejši:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[⟨atribut⟩]</span></code> izbere vse značke v dokumentu, ki imajo atribut <code class="docutils literal notranslate"><span class="pre">atribut</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[⟨atribut⟩=⟨vrednost⟩]</span></code> izbere vse značke v dokumentu, ki imajo atribut <code class="docutils literal notranslate"><span class="pre">atribut</span></code>, z vrednostjo <code class="docutils literal notranslate"><span class="pre">vrednost</span></code>.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">Izbiralec za razrede</a> <code class="docutils literal notranslate"><span class="pre">.⟨razred⟩</span></code> (angl. <em>class selector</em>) izbere vse značke v dokumentu, ki imajo atribut <code class="docutils literal notranslate"><span class="pre">class</span></code> z vrednostjo <code class="docutils literal notranslate"><span class="pre">razred</span></code>.</p></li>
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">Izbiralec po identifikatorju</a> <code class="docutils literal notranslate"><span class="pre">#⟨id-elementa⟩</span></code>
+(angl. <em>ID selector</em>) izbere natanko tisto značko v dokumentu, ki ima atribut <code class="docutils literal notranslate"><span class="pre">id</span></code> z vrednostjo <code class="docutils literal notranslate"><span class="pre">id-elementa</span></code>.</p></li>
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors">Univerzalni izbiralec</a> <code class="docutils literal notranslate"><span class="pre">*</span></code> (angl. <em>universal selector</em>),
+ki izbere vse značke v dokumentu.</p></li>
+</ul>
+<p>Enostavne izbiralce lahko združimo v <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector">sestavljene izbiralce</a>, tako da jih staknemo brez presledkov;
+pri tem moramo paziti na to, da najprej napišemo izbiralec za značke ali univerzalni izbiralec.
+Primer: <code class="docutils literal notranslate"><span class="pre">p.poudarjeno</span></code> združi izbiralca <code class="docutils literal notranslate"><span class="pre">p</span></code> in <code class="docutils literal notranslate"><span class="pre">.poudarjeno</span></code>:
+izbere vse značke <code class="docutils literal notranslate"><span class="pre">p</span></code> (za odstavke), ki imajo določen atribut <code class="docutils literal notranslate"><span class="pre">class</span></code> z vrednostjo <code class="docutils literal notranslate"><span class="pre">poudarjeno</span></code>.</p>
+<p>Izbiralce se da sestavljati v kompleksne izbiralce s t.i. kombinatorji, vendar tu omenimo le dva enostavna primera;
+za kaj več si poglejte <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors">dokumentacijo</a>.</p>
+<ul class="simple">
+<li><p>Potomce izbiramo s kombinatorjem <code class="docutils literal notranslate"> </code> (presledek).
+Na primer, izbiralec <code class="docutils literal notranslate"><span class="pre">li</span> <span class="pre">a</span></code> izbere vse povezave (<code class="docutils literal notranslate"><span class="pre">a</span></code>), ki so v elementih seznama (<code class="docutils literal notranslate"><span class="pre">li</span></code>).</p></li>
+<li><p>Z vejico <code class="docutils literal notranslate"><span class="pre">,</span></code> združimo več izbiralcev v enega: izbiralec <code class="docutils literal notranslate"><span class="pre">h1,</span> <span class="pre">h2</span></code> izbere vse značke <code class="docutils literal notranslate"><span class="pre">h1</span></code> in <code class="docutils literal notranslate"><span class="pre">h2</span></code>.</p></li>
+</ul>
+<p>Včasih pridejo prav tudi t.i. psevdo-razredi, s katerimi izbiramo elemente, ki imajo posebno stanje.
+Ponavadi jih uporabimo tako, da jih pritaknemo na koncu izbiralca.
+Primer: elemente, nad katerimi je miška, izberemo s <code class="docutils literal notranslate"><span class="pre">:hover</span></code>.
+Tako lahko npr. izberemo vse povezave, nad katerimi je miška (<code class="docutils literal notranslate"><span class="pre">a:hover</span></code>), da jim spremenimo barvo.</p>
+<section id="skatlasti-model">
+<h3>Škatlasti model<a class="headerlink" href="#skatlasti-model" title="Link to this heading">#</a></h3>
+<p>Že prejšnji teden smo omenili, da si lahko HTML značke (elemente spletne strani) predstavljate kot škatle,
+ki držijo vsebino in druge škatle.
+Ta analogija pride prav tudi pri oblikovanju elementov.
+Vsak element strani, recimo odstavek ali slika, je obravnavan kot škatla ali okvir, ki je sestavljena iz štirih glavnih delov:</p>
+<figure class="align-default" id="markdown-fig">
+<img alt="Škatlasti model" src="_images/box-model.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">  Škatlasti model</span><a class="headerlink" href="#markdown-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="slovarcek">
+<h4>Slovarček<a class="headerlink" href="#slovarcek" title="Link to this heading">#</a></h4>
+<p>Slovarček slovenskih v angleške izraze za boljšo preglednost:</p>
+<ul class="simple">
+<li><p>zunanji prazen prostor (zunanji rob): angl. <em>margin</em>,</p></li>
+<li><p>notranji prazen prostor (notranji rob): angl. <em>padding</em>,</p></li>
+<li><p>obroba oz. rob: angl. <em>border</em>,</p></li>
+<li><p>višina: angl. <em>height</em>,</p></li>
+<li><p>širina: angl. <em>width</em>.</p></li>
+</ul>
+<p>Dodatni viri:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#the_standard_css_box_model">The standard CSS box model</a></p></li>
+</ul>
+</section>
+</section>
+<section id="merske-enote">
+<h3>Merske enote<a class="headerlink" href="#merske-enote" title="Link to this heading">#</a></h3>
+<p>Velikosti in razdalje na spletnih straneh podajamo bodisi z absolutnimi enotami bodisi z relativnimi enotami.
+Primeri:</p>
+<ul class="simple">
+<li><p>slikovna točka oz. <a class="reference external" href="https://sl.wikipedia.org/wiki/Piksel">piksel</a> (angl. <em><a class="reference external" href="https://en.wikipedia.org/wiki/Pixel">pixel</a></em>): <code class="docutils literal notranslate"><span class="pre">200px</span></code> pomeni točno 200 točk na zaslonu (če ne veste, kaj so piksli, si preberite stran na Wikipedii).</p></li>
+<li><p>Enota <a class="reference external" href="https://en.wikipedia.org/wiki/Em_(typography)">em</a>: <code class="docutils literal notranslate"><span class="pre">2em</span></code> pomeni 2-krat velikost pisave: <em>v primeru določanja velikosti pisave</em> glede na velikost pisave na enem nivoju višje (če pa ta ni določena, pa glede na privzeto velikost pisave v brskalniku), <em>v primeru določanje širine elementa</em> pa glede na velikost pisave v elementu.</p></li>
+<li><p>Še ena relativna enota, ki se pogosto uporablja, je <code class="docutils literal notranslate"><span class="pre">%</span></code>. Pri pisavah se obnaša podobno kot <code class="docutils literal notranslate"><span class="pre">em</span></code> (<code class="docutils literal notranslate"><span class="pre">200%</span></code> je enako kot <code class="docutils literal notranslate"><span class="pre">2em</span></code>). V primeru določanje širine elementa se računa glede na širino elementa na enem nivoju višje.</p></li>
+</ul>
+<p>Več o tem boste izvedeli tudi pri posameznih nalogah in v dodatnih virih:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">CSS values and units</a></p></li>
+<li><p><a class="reference external" href="https://gist.github.com/basham/2175a16ab7c60ce8e001">Uporaba enot za velikost v CSS</a></p></li>
+</ul>
+</section>
+<section id="osvezevanje-spletne-strani">
+<h3>Osveževanje spletne strani<a class="headerlink" href="#osvezevanje-spletne-strani" title="Link to this heading">#</a></h3>
+<p>Včasih želite brskalniku povedati, naj ponovno naloži datoteke.
+Temu rečemo osveževanje oz. po angleško <em>refresh</em>.
+Bližnjice so:</p>
+<ul class="simple">
+<li><p>Windows: <kbd>Ctrl</kbd>+<kbd>R</kbd> ali <kbd>F5</kbd>,</p></li>
+<li><p>MacOS: <kbd>Cmd</kbd>+<kbd>R</kbd>.</p></li>
+</ul>
+<p>CSS datoteke v brskalniku pogosto pristanejo v predpomnilniku (angl. <em>cache</em>), kar pomeni,
+da se ne naložijo na novo ob vsakem osveževanju strani.
+Brskalnik lahko prisilimo, da jih osveži, s t.i. <em>hard refresh</em>.
+Bližnjice so:</p>
+<ul class="simple">
+<li><p>Windows: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>,</p></li>
+<li><p>MacOS (Chrome, Firefox): <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>,</p></li>
+<li><p>MacOS (Safari): <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>E</kbd> (oz. <strong>Develop</strong> &gt; <strong>Empty Caches</strong>).</p></li>
+</ul>
+</section>
+</section>
+<section id="naloga-dodajanje-pravil-za-oblikovanje-v-dokument">
+<h2>1. naloga: dodajanje pravil za oblikovanje v dokument<a class="headerlink" href="#naloga-dodajanje-pravil-za-oblikovanje-v-dokument" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>V VSCode odprite imenik s svojim repozitorijem.
+V njem naredite nov imenik <code class="docutils literal notranslate"><span class="pre">04-css</span></code> in vanj shranite arhiv <a class="reference download internal" download="" href="_downloads/5e79edfed0186a506e1503bce00f6d40/css.zip"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">css.zip</span></code></span></a>.
+Arhiv odpakirajte (če to naredi novo mapo, prestavite datoteke v imenik <code class="docutils literal notranslate"><span class="pre">04-css</span></code>).</p></li>
+<li><p>Na spletu poiščite <code class="docutils literal notranslate"><span class="pre">normalize.css</span></code> in datoteko prekopirajte v imenik <code class="docutils literal notranslate"><span class="pre">04-css</span></code>.</p></li>
+<li><p>CSS vključite v HTML dokument v glavi z značko <code class="docutils literal notranslate"><span class="pre">&lt;link</span> <span class="pre">rel=&quot;stylesheet&quot;</span> <span class="pre">href=&quot;ime_datoteke.css&quot;&gt;</span></code>.
+V brskalniku poglejte, če je kaj razlike med HTML dokumentom z vključenim CSS-jem <code class="docutils literal notranslate"><span class="pre">normalize.css</span></code> in brez vključenega CSS-ja.</p></li>
+<li><p>V HTML dokumentu za <code class="docutils literal notranslate"><span class="pre">normalize.css</span></code> vključite še priloženo datoteko <code class="docutils literal notranslate"><span class="pre">oblikovanje.css</span></code>,
+ki jo boste v nadaljevanju dopolnili.
+V brskalniku poglejte, kaj je drugače zdaj, ko ste vključili to datoteko.</p></li>
+<li><p>Zabeležite spremembe: dodajte vse nove datoteke v imeniku <code class="docutils literal notranslate"><span class="pre">04-css</span></code>
+ter napišite uporabno sporočilo, npr. <code class="docutils literal notranslate"><span class="pre">Pripravi</span> <span class="pre">datoteke</span> <span class="pre">za</span> <span class="pre">CSS</span></code>.</p></li>
+</ol>
+</section>
+<section id="naloga-oblikovanje-dokumenta">
+<h2>2. naloga: oblikovanje dokumenta<a class="headerlink" href="#naloga-oblikovanje-dokumenta" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>V datoteki <code class="docutils literal notranslate"><span class="pre">oblikovanje.css</span></code> dodajte deklaracijo za naslove <code class="docutils literal notranslate"><span class="pre">h1</span></code>, v katerem določite barvo pisave, npr. na <code class="docutils literal notranslate"><span class="pre">#330066</span></code>.</p></li>
+<li><p>Na strani <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#the_standard_css_box_model">The standard CSS box model</a> je lep diagram robov okrog elementov:
+<code class="docutils literal notranslate"><span class="pre">padding</span></code> je prazen prostor med robom elementa in vsebino,
+<code class="docutils literal notranslate"><span class="pre">border</span></code> je rob, ki mu lahko določimo npr. širino, stil in barvo,
+<code class="docutils literal notranslate"><span class="pre">margin</span></code> prazen prostor na zunanji strani roba.
+Naslovom <code class="docutils literal notranslate"><span class="pre">h2</span></code> določite prostor nad zgornjim robom (<code class="docutils literal notranslate"><span class="pre">margin-top</span></code>) na <code class="docutils literal notranslate"><span class="pre">2em</span></code>,
+zgornji rob naj bo širok <code class="docutils literal notranslate"><span class="pre">1px</span></code>, barve <code class="docutils literal notranslate"><span class="pre">#AAAAAA</span></code> in stila <code class="docutils literal notranslate"><span class="pre">solid</span></code>.
+Notranji prazen prostor zgoraj naj bo visok <code class="docutils literal notranslate"><span class="pre">0.5em</span></code>.</p></li>
+<li><p>Prvi razdelek bomo oblikovali malo drugače kot ostale tri.
+Znački <code class="docutils literal notranslate"><span class="pre">section</span></code> dodajte atribut <code class="docutils literal notranslate"><span class="pre">id</span></code> z imenom, na katerega se boste sklicevali, npr. <code class="docutils literal notranslate"><span class="pre">uvod</span></code>.
+V HTML dokumentu ne smeta imeti dva elementa enakega <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p></li>
+<li><p>V <code class="docutils literal notranslate"><span class="pre">oblikovanje.css</span></code> za element <code class="docutils literal notranslate"><span class="pre">uvod</span></code> napišite izbiralec (selektor) <code class="docutils literal notranslate"><span class="pre">#uvod</span></code>
+z deklaracijami za notranji prostor (<code class="docutils literal notranslate"><span class="pre">padding</span></code>) širine <code class="docutils literal notranslate"><span class="pre">2em</span></code> na vseh stranicah in
+barvo ozadja (<code class="docutils literal notranslate"><span class="pre">background-color</span></code>) <code class="docutils literal notranslate"><span class="pre">rgb(51,</span> <span class="pre">0,</span> <span class="pre">102,</span> <span class="pre">0.1)</span></code>.
+Tu so prve tri številke vrednosti za rdečo, zeleno in modro med 0 in 255, zadnja pa
+prosojnost med 0 (povsem prosojno) in 1 (neprosojno, privzeta vrednost).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#uvod { ... }</span>
+</pre></div>
+</div>
+</li>
+<li><p>V datoteko <code class="docutils literal notranslate"><span class="pre">oblikovanje.css</span></code> dodajte deklaracijo za rdeč rob
+(poiščite na spletu, kako) za <code class="docutils literal notranslate"><span class="pre">div</span></code>.
+Nastaviti boste morali tudi debelino črte.
+V brskalniku poglejte, kje se pojavijo rdeči robovi.
+Rob smo dodali zato, da vidimo, na kaj vse bomo z novim oblikovanjem vplivali oz. kaj zajame
+izbiralec <code class="docutils literal notranslate"><span class="pre">div</span></code>.
+Ko bodo stvari v izbranih <code class="docutils literal notranslate"><span class="pre">div</span></code>-ih dokončno oblikovane, bomo rob odstranili.</p></li>
+<li><p>Značka <code class="docutils literal notranslate"><span class="pre">div</span></code> (iz angl. <em>division</em>) se pogosto uporablja za združevanje elementov,
+tako je tudi tu.
+Oblikovali bomo oba elementa <code class="docutils literal notranslate"><span class="pre">div</span></code>, ki vsebujeta sliki, zato jima dodamo
+atribut <code class="docutils literal notranslate"><span class="pre">class</span></code> z vrednostjo npr. <code class="docutils literal notranslate"><span class="pre">slika</span></code>.
+V CSS datoteki popravite <code class="docutils literal notranslate"><span class="pre">div</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code> v <code class="docutils literal notranslate"><span class="pre">.slika</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code>.
+Zdaj bi se moral rdeč rob risati le še okrog slik.
+Deklaracijo za rob zdaj lahko izbrišete.
+Dodajte deklaracijo za velikost pisave <code class="docutils literal notranslate"><span class="pre">0.9em</span></code> in širino <code class="docutils literal notranslate"><span class="pre">40%</span></code>.
+V brskalniku zdaj lahko preverite, da se širina slike še ni zmanjšala
+(širina slike prisili v večjo širino element, ki jo vsebuje).
+Tako ozko besedilo ne izgleda dobro obojestransko poravnano, zato spremenite
+<code class="docutils literal notranslate"><span class="pre">text-align</span></code> v <code class="docutils literal notranslate"><span class="pre">left</span></code>.</p></li>
+<li><p>Če dva izbiralca ločimo s presledkom, npr. <code class="docutils literal notranslate"><span class="pre">.slika</span> <span class="pre">img</span></code>,
+bomo določali lastnosti za vse elemente, ki jih ujame drugi izbiralec,
+ki so gnezdeni v elementih, ki jih ujame prvi izbiralec.
+V našem primeru to pomeni vse značke <code class="docutils literal notranslate"><span class="pre">img</span></code>, ki se nahajajo v elementu z
+atributom <code class="docutils literal notranslate"><span class="pre">class=&quot;slika&quot;</span></code>
+Širino slike (<code class="docutils literal notranslate"><span class="pre">width</span></code>) nastavite na npr. <code class="docutils literal notranslate"><span class="pre">100%</span></code> (širina starša), višino (<code class="docutils literal notranslate"><span class="pre">height</span></code>) pa na <code class="docutils literal notranslate"><span class="pre">auto</span></code>.
+Slednje povzroči, da se bo ohranilo razmerje med višino in širino slike.</p></li>
+<li><p>Želimo, da se besedilo oblije okrog slik.
+To naredimo tako, da pri <code class="docutils literal notranslate"><span class="pre">.slika</span></code> dodamo deklaracijo <code class="docutils literal notranslate"><span class="pre">float:</span> <span class="pre">right</span></code>.
+Deklaracija <code class="docutils literal notranslate"><span class="pre">float</span></code> (in njej sorodna <code class="docutils literal notranslate"><span class="pre">clear</span></code>) je širše uporabna tudi pri
+bolj zapletenih postavitvah spletnih strani, kar pa pošteno presega okvire tega predmeta.
+Poglejte, kaj se je zgodilo v brskalniku.
+Da bo malo lepše, pri <code class="docutils literal notranslate"><span class="pre">.slika</span></code> dodajte še deklaracijo <code class="docutils literal notranslate"><span class="pre">margin-left:</span> <span class="pre">2em</span></code>.</p></li>
+<li><p>V brskalniku pri orodjih za izvajalce poiščite CSS.
+Večina orodij te vrste vam bo pustila na licu mesta urejati izvorno kodo (tako HTML kot tudi CSS).
+Preizkusite, kako to izgleda na kakem primeru.
+V Chromu in Safariju je to v zavihku Sources (lahko tudi še kje drugje).</p></li>
+<li><p>Zabeležite spremembe: dodajte datoteke v imeniku <code class="docutils literal notranslate"><span class="pre">04-css</span></code>, ki ste jih spremenili
+ter napišite uporabno sporočilo, npr. <code class="docutils literal notranslate"><span class="pre">Dopolni</span> <span class="pre">CSS</span></code>.</p></li>
+</ol>
+</section>
+<section id="naloga-naprednejse-oblikovanje">
+<h2>3. naloga: naprednejše oblikovanje<a class="headerlink" href="#naloga-naprednejse-oblikovanje" title="Link to this heading">#</a></h2>
+<p>Spodnji primeri ilustrirajo del stvari, ki jih lahko naredite s CSS.
+To vsekakor ni izčrpen seznam. Če vas zanima, kako se nekaj naredi s CSS,
+boste skoraj gotovo rešitev našli na spletu.</p>
+<ol class="arabic simple">
+<li><p>Zadnjemu odstavku v <code class="docutils literal notranslate"><span class="pre">.slika</span></code> zmanjšamo velikost pisave tako, da pritaknemo
+<em>pseudo-class</em> <code class="docutils literal notranslate"><span class="pre">:last-child</span></code> za <code class="docutils literal notranslate"><span class="pre">p</span></code>, takole: <code class="docutils literal notranslate"><span class="pre">.slika</span> <span class="pre">p:last-child</span></code>.
+S tem izberemo vse elemente <code class="docutils literal notranslate"><span class="pre">p</span></code>, ki so gnezdeni v elementu z <code class="docutils literal notranslate"><span class="pre">class=&quot;slika&quot;</span></code>,
+ki so med vsemi <code class="docutils literal notranslate"><span class="pre">p</span></code> v njem zadnji.
+Ok bi moralo biti npr. <code class="docutils literal notranslate"><span class="pre">0.8em</span></code>. Če niste prepričani, da dela ok, uporabite kako
+zelo očitno deklaracijo (<code class="docutils literal notranslate"><span class="pre">background-color:</span> <span class="pre">#cc0000;</span></code>).
+Zmanjšajte tudi prostor nad odstavkom.
+Splošnejša oblika je <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child"><code class="docutils literal notranslate"><span class="pre">nth-child</span></code></a>,
+s katero lahko izbiramo tudi sode ali lihe elemente.</p></li>
+<li><p>Psevdo-element <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before"><code class="docutils literal notranslate"><span class="pre">::before</span></code></a>
+lahko uporabimo, da pred vsako povezavo dodamo nek znak (poglejte primer v dokumentaciji).</p></li>
+<li><p>Z deklaracijo <code class="docutils literal notranslate"><span class="pre">border-radius</span></code> določimo zaobljene robove.
+Kaj se zgodi, če slikama nastavite zaobljenost robov na <code class="docutils literal notranslate"><span class="pre">50%</span></code>?</p></li>
+<li><p>Zabeležite spremembe: dodajte datoteke v imeniku <code class="docutils literal notranslate"><span class="pre">04-css</span></code>, ki ste jih spremenili
+ter napišite uporabno sporočilo, npr. <code class="docutils literal notranslate"><span class="pre">Dopolni</span> <span class="pre">CSS</span></code>.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03-html.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Označevalni jezik HTML</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05-utrdimo-osnove.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Utrdimo osnove</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#osnovni-pojmi-in-orodja">Osnovni pojmi in orodja</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#skatlasti-model">Škatlasti model</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#slovarcek">Slovarček</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merske-enote">Merske enote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#osvezevanje-spletne-strani">Osveževanje spletne strani</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-dodajanje-pravil-za-oblikovanje-v-dokument">1. naloga: dodajanje pravil za oblikovanje v dokument</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-oblikovanje-dokumenta">2. naloga: oblikovanje dokumenta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-naprednejse-oblikovanje">3. naloga: naprednejše oblikovanje</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Utrdimo osnove &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=db6da3aa" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '05-utrdimo-osnove';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Uvod v LaTeX" href="06-uvod-v-latex.html" />
+    <link rel="prev" title="Oblikovanje HTML dokumentov s CSS" href="04-css.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-vscode-in-terminal.html">Urejevalnik in ukazna vrstica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-git-in-markdown.html">Git in Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-html.html">Označevalni jezik HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-css.html">Oblikovanje HTML dokumentov s CSS</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Utrdimo osnove</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matematični dokumenti</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="06-uvod-v-latex.html">Uvod v LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-okolja-in-sklicevanje.html">Okolja in sklicevanje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-predstavitve.html">Predstavitve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-risanje.html">Risanje</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Razpredelnice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="10-razpredelnice.html">Razpredelnice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simbolno računanje</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11-racunanje-z-mathematico.html">Osnovna uporaba Mathematice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-risanje-in-enacbe.html">Reševanje enačb in risanje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13-animiranje-vektorji-matrike.html">Animiranje, vektorji in matrike</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/05-utrdimo-osnove.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Utrdimo osnove</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-opisovanje-vzorcev-z-regularnimi-izrazi">1. naloga: opisovanje vzorcev z regularnimi izrazi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-ukazna-vrstica-urejevalnik-in-git">2. naloga: ukazna vrstica, urejevalnik in Git</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-postavite-spletno-stran">3. naloga: postavite spletno stran</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="utrdimo-osnove">
+<h1>Utrdimo osnove<a class="headerlink" href="#utrdimo-osnove" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-ukazna"><span class="std std-ref">ukazna vrstica</span></a>,</p></li>
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-vscode"><span class="std std-ref">Visual Studio Code</span></a>.</p></li>
+</ul>
+</div>
+<section id="naloga-opisovanje-vzorcev-z-regularnimi-izrazi">
+<h2>1. naloga: opisovanje vzorcev z regularnimi izrazi<a class="headerlink" href="#naloga-opisovanje-vzorcev-z-regularnimi-izrazi" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Regular_expression">Regularni izrazi</a>
+(angl. <em>regular expressions</em> ali kratko <em>regex</em>) so zaporedja znakov,
+s katerimi lahko opišemo vzorce v navadnem besedilu.</p>
+<p>Natančno ujemanje ste gotovo že kdaj videli - to je najbolj enostavna vrsta
+regularnega izraza. V besedilu bi lahko poiskali vse pojavitve besede <code class="docutils literal notranslate"><span class="pre">kuža</span></code> z
+regularnim izrazom <code class="docutils literal notranslate"><span class="pre">kuža</span></code>. Kaj pa če želite poiskati vse številke v besedilu? To
+bi naredili z regularnim izrazom <code class="docutils literal notranslate"><span class="pre">\d+</span></code>: <code class="docutils literal notranslate"><span class="pre">\d</span></code> je vzorec ki predstavlja eno
+(katerokoli) števko, <code class="docutils literal notranslate"><span class="pre">+</span></code> pa pomeni eno ali več ponovitev tistega, kar piše pred
+znakom.</p>
+<p>Obstaja več verzij regularnih izrazov, ki so si precej sorodne, lahko pa se tudi
+razlikujejo. Nekatere npr. nimajo posebnega vzorca za števke, tako da je treba
+števke opisati z vzorcem <code class="docutils literal notranslate"><span class="pre">[0-9]</span></code>.</p>
+<p>Regularni izrazi so lahko sila uporabni, in ta naloga je namenjena temu,
+da se z njimi na kratko seznanite.</p>
+<p>Kakih 20 minut rešujte lekcije na spletni strani <a class="reference external" href="https://regexone.com">RegexOne</a>,
+na spletni strani <a class="reference external" href="https://regexlearn.com/learn/regex101">RegexLearn</a>, ali pa na obeh.
+Na gumb <em>Continue</em> vam ni treba klikniti, dovolj je, da stisnete vnašalko <kbd>↵</kbd>.
+Če ste regularne izraze že kdaj uporabljali, se lahko preizkusite v
+<a class="reference external" href="https://regexcrossword.com">regex križanki</a>.</p>
+</section>
+<section id="naloga-ukazna-vrstica-urejevalnik-in-git">
+<h2>2. naloga: ukazna vrstica, urejevalnik in Git<a class="headerlink" href="#naloga-ukazna-vrstica-urejevalnik-in-git" title="Link to this heading">#</a></h2>
+<p>Spodaj so navodila za prvi del te naloge.
+Navodila za drugi del boste dobili na naslovu, ki ga boste našli na koncu prvega dela.
+Navodila pozorno preberite, včasih bo v njih pisalo kaj, kar boste rabili šele kasneje.
+V navodilih bo včasih tudi povezava na bolj podrobna navodila.</p>
+<div class="tip admonition">
+<p class="admonition-title">Za napredne uporabnike</p>
+<p>Če obvladate ukazno vrstico, urejevalnik in Git, se lahko poskusite skozi nalogo prebiti brez navodil.</p>
+</div>
+<ol class="arabic">
+<li><p>Začnite tako, da naložite arhiv (stisnjeni imenik) s <a class="reference download internal" download="" href="_downloads/0431296f8f4f5e6f205853c176461fc0/visoska-kronika.zip"><span class="xref download myst">poglavji Visoške kronike</span></a>.</p></li>
+<li><p>Imenik morate <a class="reference internal" href="F-pogosta-vprasanja.html#faq-zip"><span class="std std-ref">odpakirati</span></a>, sicer ne boste mogli nadaljevati.
+V poglavjih Visoške kronike je skrita QR koda, do katere boste prišli v naslednjih korakih.</p></li>
+<li><p><a class="reference internal" href="F-pogosta-vprasanja.html#faq-ukazna-imenik"><span class="std std-ref">Odprite imenik <code class="docutils literal notranslate"><span class="pre">visoska-kronika</span></code> v ukazni vrstici</span></a>.
+Z ukazom <code class="docutils literal notranslate"><span class="pre">pwd</span></code> lahko preverite, če ste v pravem imeniku: na koncu poti mora pisati <code class="docutils literal notranslate"><span class="pre">visoska-kronika</span></code>.</p></li>
+<li><p>Z ukazom <code class="docutils literal notranslate"><span class="pre">ls</span></code> izpišite vsebino direktorija, ki bi morala izgledati približno tako:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>naslovnica.txt<span class="w">  </span>poglavje01.txt<span class="w">  </span>poglavje03.txt<span class="w">  </span>poglavje05.txt<span class="w">  </span>poglavje07.txt<span class="w">  </span>poglavje09.txt<span class="w">  </span>poglavje11.txt<span class="w">  </span>poglavje13.txt
+o-izdaji.txt<span class="w">    </span>poglavje02.txt<span class="w">  </span>poglavje04.txt<span class="w">  </span>poglavje06.txt<span class="w">  </span>poglavje08.txt<span class="w">  </span>poglavje10.txt<span class="w">  </span>poglavje12.txt<span class="w">  </span>poglavje14.txt
+</pre></div>
+</div>
+<p>(Če imate enake datoteke, pa morda v drugem vrstnem redu, je ok.)</p>
+</li>
+<li><p>Da vidite, kako so videti vrstice s QR kodo,
+s spodnjim ukazom izpišite vrstice 37-58 iz datoteke <code class="docutils literal notranslate"><span class="pre">poglavje12.txt</span></code>.
+Vrstici, ki se začneta z <code class="docutils literal notranslate"><span class="pre">#12</span> </code> in <code class="docutils literal notranslate"><span class="pre">#09</span> </code> vsebujeta vsaka po eno vrstico QR kode.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">58</span><span class="w"> </span>poglavje12.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">21</span>
+</pre></div>
+</div>
+<p>Kaj mislite, da naredijo posamezni deli ukaza?</p>
+</li>
+<li><p>V tem koraku bomo poiskali vse vrstice v datotekah v tem repozitoriju, ki se začnejo z znakom <code class="docutils literal notranslate"><span class="pre">#</span></code>, ki mu sledita dve števki.
+To naredimo z ukazom <code class="docutils literal notranslate"><span class="pre">grep</span></code> za iskanje z regularnimi izrazi:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;#[0-9][0-9]&quot;</span><span class="w"> </span>.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">grep</span></code> je ime ukaza,</p></li>
+<li><p>z <code class="docutils literal notranslate"><span class="pre">-r</span></code> ukazu povemo, da želimo preiskati vse datoteke v imeniku (bolj natančno, da iščemo rekurzivno po imeniku),</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;#[0-9][0-9]&quot;</span></code> je vzorec; tega vedno podamo v narekovajih <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, vzorec sam pa pomeni, da iščemo pojavitve znaka <code class="docutils literal notranslate"><span class="pre">#</span></code>,
+ki mu sledita dve števki (oz. znaka med <code class="docutils literal notranslate"><span class="pre">0</span></code> in <code class="docutils literal notranslate"><span class="pre">9</span></code>),</p></li>
+<li><p>na koncu z znakom <code class="docutils literal notranslate"><span class="pre">.</span></code> povemo, da preiskujemo trenutni imenik.</p></li>
+</ul>
+</li>
+<li><p>Označite in kopirajte vrstice, ki so se izpisale.
+Prilepite jih v novo datoteko v urejevalniku VSCode.</p></li>
+<li><p>V nadaljevanju boste vrstice uredili naraščajoče po številkah ob znakih <code class="docutils literal notranslate"><span class="pre">#</span></code>.
+Če vrstice uredite naraščajoče zdaj, se bodo uredile po številkah poglavij (ker je to prvo mesto, kjer se razlikujejo).
+Zato moramo pobrisati začetke vrstic:</p>
+<ul class="simple">
+<li><p>v prvi vrstici postavite kurzor tik pred znak <code class="docutils literal notranslate"><span class="pre">#</span></code>,</p></li>
+<li><p>pod tem kurzorjem naredite kurzorje še v vseh naslednjih vrsticah: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>↑↓</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>↑↓</kbd>),</p></li>
+<li><p>stisnite tipko <kbd>Shift</kbd> in jo držite, da se vrnete na začetek vrstice: <kbd>Home</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>←</kbd>),</p></li>
+<li><p>izbrišite začetke vrstic, ki ste jih izbrali.</p></li>
+</ul>
+</li>
+<li><p>S paleto ukazov vrstice uredite naraščajoče po abecedi: najprej izberite vse, odprite paleto ukazov (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> oz. 🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) in napišite <em>Sort Lines Ascending</em> (ko se ta ukaz pojavi na vrhu seznama, lahko stisnete <kbd>↵</kbd>).</p></li>
+<li><p>Zdaj je QR koda že skoraj prava: počistiti je treba samo še <code class="docutils literal notranslate"><span class="pre">*</span></code>.
+V <em>Find and Replace</em> <kbd>Ctrl</kbd>+<kbd>F</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>F</kbd>) poiščite vse <code class="docutils literal notranslate"><span class="pre">*</span></code> in jih zamenjajte s praznim nizom znakov.</p></li>
+<li><p>Po potrebi spremenite barvno temo v urejevalniku tako, da boste imeli svetlo besedilo na temnem ozadju.
+Poskenirajte QR kodo. Na naslovu, kamor boste prišli, bo preostanek navodil za to nalogo.
+Na računalniku lahko naredite zajem zaslona (lahko si pomagate s pomočjo za operacijski sistem
+<a class="reference external" href="https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b">Windows</a> ali
+<a class="reference external" href="https://support.apple.com/en-us/102646">MacOS</a>)
+in uporabite spletno orodje, kot je npr. <a class="reference external" href="https://qrcodedynamic.com/qr-reader">QR code reader</a></p></li>
+</ol>
+</section>
+<section id="naloga-postavite-spletno-stran">
+<h2>3. naloga: postavite spletno stran<a class="headerlink" href="#naloga-postavite-spletno-stran" title="Link to this heading">#</a></h2>
+<p>To nalogo lahko naredite tudi doma.</p>
+<p>Zdaj ste videli že kar nekaj repozitorijev, ki uporabljajo GitHub-ovo
+podporo za postavitev spletne strani: zapiski, ter obe strani,
+ki ste jih obiskali v prejšnji nalogi.
+V tej nalogi boste postavili svojo stran.</p>
+<ol class="arabic">
+<li><p><a class="reference internal" href="G-git.html#git-init"><span class="std std-ref">Naredite nov repozitorij</span></a> z imenom <code class="docutils literal notranslate"><span class="pre">⟨uporabnisko-ime⟩.github.io</span></code>:
+niz <code class="docutils literal notranslate"><span class="pre">⟨uporabnisko-ime⟩</span></code> zamenjajte z vašim uporabniškim imenom na GitHubu.
+Če boste repozitorij poimenovali drugače, bo vaša spletna stran stala
+na drugem naslovu, kot bo zahtevala domača naloga.
+Repozitorij klonirajte z urejevalnikom VSCode.</p></li>
+<li><p>V repozitoriju naredite novo HTML datoteko z imenom <code class="docutils literal notranslate"><span class="pre">index.html</span></code>.
+Ime je pomembno, spletna stran sicer ne bo delovala.
+V datoteko lahko prilepite spodnjo vsebino in jo po želji popravite.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;sl&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Moja spletna stran<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">         </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="w">         </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">         </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#0077cc</span><span class="p">;</span>
+<span class="w">         </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">         </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Naslov polepša stran<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Tu lahko kaj napišete, ali pa tudi ne.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p><a class="reference internal" href="G-git.html#git-osnovni-ukazi"><span class="std std-ref">Zabeležite spremembe</span></a> in jih pošljite na strežnik.</p></li>
+<li><p>V brskalniku obiščite svoj repozitorij in pojdite na zavihek <em>Settings</em>.</p></li>
+<li><p>V stranskem meniju izberite <em>Pages</em>.</p></li>
+<li><p>V razdelku <em>Build and deployment</em> pod <em>Branch</em> izberite glavno vejo
+(<code class="docutils literal notranslate"><span class="pre">main</span></code> ali <code class="docutils literal notranslate"><span class="pre">master</span></code>) in kliknite na gumb <em>Save</em>.</p></li>
+<li><p>Čez nekaj časa (do 10 minut) se bo stran posodobila z naslovom
+vaše spletne strani, ki bi moral biti <code class="docutils literal notranslate"><span class="pre">⟨uporabnisko-ime⟩.github.io</span></code>.
+Pisalo bo <em>“Your site is live at …”</em>.</p></li>
+</ol>
+<p>Če boste urejali katero od datotek spletne strani, ter zabeležene spremembe
+poslali na strežnik, se bo v nekaj minutah (ponavadi hitreje, kot v desetih)
+posodobila tudi spletna stran.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04-css.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Oblikovanje HTML dokumentov s CSS</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="06-uvod-v-latex.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Uvod v LaTeX</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-opisovanje-vzorcev-z-regularnimi-izrazi">1. naloga: opisovanje vzorcev z regularnimi izrazi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-ukazna-vrstica-urejevalnik-in-git">2. naloga: ukazna vrstica, urejevalnik in Git</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-postavite-spletno-stran">3. naloga: postavite spletno stran</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
