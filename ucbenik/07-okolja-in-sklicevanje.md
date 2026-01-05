@@ -177,6 +177,14 @@ Predstavljate si lahko, da je ukaz samo okrajšava za tisto, kar napišete v def
     z ukazom `pojem`, ki ste ga ravno definirali.
     LaTeX bo med prevajanjem nadomestil vse pojavitve ukaza `pojem` (in parametrov)
     s tistim, kar ste napisali v definicijo novega ukaza.
+`````{admonition} Globalno spreminjanje ukaza `emph` v `pojem`
+Če boste samo globalno zamenjali vse pojavitve `emph` v `pojem`, boste dobili
+ukaz `\newcommand{\pojem}[1]{\pojem{#1}}`. Tu sedaj ukaz `pojem` rekurzivno
+kliče samega sebe, kar pomeni, da naj bi se po definiciji `\pojem{Magični
+kvadrat}` prevedel v `\pojem{\pojem{\pojem{` v neskončnost (kar v našem končnem
+svetu ni najbolje). Preden dokument prevedete preverite, da definicija ukaza
+`\pojem` ne kliče samega sebe, temveč samo ukaz `\emph`.
+`````
 6.  Če prevedete datoteko in pogledate pdf, boste opazili, da so zdaj vsi pojmi `Magični kvadrat`! To lahko popravite tako, da v definiciji ukaza besedilo `Magični kvadrat` nadomestite z `#1`. LaTeX namreč zamenja `#1` v definiciji ukaza z vrednostjo 1. parametra (pa tudi `#2` z vrednostjo 2. parametra, itd., če bi imeli več kot en parameter).
 
 
