@@ -11,3 +11,7 @@ jupyter-book build ucbenik
 ```bash
 ghp-import --no-jekyll --no-history --force --push ucbenik/_build/html
 ```
+
+## Povezave
+
+Slike za direktorijsko strukturo: [folder2image.com](https://www.folder2image.com).
