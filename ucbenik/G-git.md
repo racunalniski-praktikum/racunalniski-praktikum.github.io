@@ -122,53 +122,89 @@ Git morate nastaviti na vsakem računalniku, kjer ga uporabljate, tudi na račun
 Najprej [poženite ukazno vrstico](bliznjice:zaganjanje-ukazna), nato pa poženite spodnje ukaze.
 (To naredite tako, da ukaz kopirate, prilepite v ukazno vrstico, ustrezno pokažete, ter izvedete tako, da stisnete vnašalko <kbd>↵</kbd>.)
 
-1. Nastavite svoje ime z ukazom `git config --global user.name "⟨vaše ime⟩"` (npr. `git config --global user.name "Emmy Noether"`).
-2. Nastavite svojo e-pošto (tisto, ki jo uporabljate za GitHub) z ukazom `git config --global user.email ⟨vaša pošta⟩` (npr. `git config --global user.email en3141@student.uni-lj.si`).
-3. Nastavite privzeti urejevalnik na nekaj prijaznega (če znate uporabljati `vim`, vam tega seveda ni treba) `git config --global core.editor nano`.
-4. Preverite, če ste nastavitve uspešno shranili: `git config --list`.
+1. Nastavite svoje ime z ukazom:
+
+   ```shell
+   git config --global user.name "⟨vaše ime⟩"
+   ```
+
+   Na primer, če vam je ime Emmy Noether, napišite:
+
+   ```shell
+   git config --global user.name "Emmy Noether"
+   ```
+
+2. Nastavite svojo e-pošto (tisto, ki jo uporabljate za GitHub) z ukazom:
+
+   ```basb
+   git config --global user.email ⟨vaša pošta⟩
+   ```
+   
+   Na primer, če je vaša e-pošta en3141@student.uni-lj.si, napišite:
+
+   ```basb
+   git config --global user.email en3141@student.uni-lj.si
+   ```
+
+3. Nastavite privzeti urejevalnik na nekaj prijaznega (če znate uporabljati `vim`, vam tega seveda ni treba) z ukazom:
+
+   ```shell
+   git config --global core.editor nano
+   ```
+
+4. Preverite, če ste nastavitve uspešno shranili z ukazom:
+
+   ```shell
+   git config --list
+   ```
+   
+   V izpisu bi morali videti nastavitve, ki ste jih pravkar naredili.
+   Če je vaše okno z ukazno vrstico majhno, boste morali morda držati vnašalko, da pridete do konca seznama.
+   V tem primeru lahko seznam zaprete s tipko <kbd>q</kbd>.
 
 ### 1. Zgenerirajte SSH ključ
+
+Da programu Git omogočite dostop do svojega GitHub računa, morate najprej s programom [`ssh-keygen`](https://en.wikipedia.org/wiki/Ssh-keygen) ustvariti SSH ključ.
+V ukazno vrstico napišite:
 
 ```shell
 ssh-keygen
 ```
 
-Klic programa [`ssh-keygen`](https://en.wikipedia.org/wiki/Ssh-keygen) je dovolj, da se vaš ključ zgenerira in spravi na pravo mesto.
+Ko vas program vpraša, kam naj se ključ shrani, s pritiskom na vnašalko potrdite predlagano mesto.
 Privzeto ime datoteke bo verjetno `id_rsa.pub` ali `id_ed25519.pub` v imeniku `.ssh` v vašem domačem imeniku 
 (npr. `/c/Users/⟨fmf-uporabnisko-ime⟩/` oz. 🍎 `/Users/⟨domace-uporabnisko-ime⟩`).
-Še posebej, če ste na računalniku na fakulteti, si izberite dobro geslo (zapomnite si ga).
+Priporočamo, da si nastavite dobro geslo, še posebej, če ste na računalniku na fakulteti.
+Gesla ne pozabite, saj ga boste potrebovali pri kloniranju in nalaganju repozitorijev.
 
-Če boste git uporabljali na več računalnikih, potrebujete na vsakem računalniku svoj ključ.
+Če boste Git uporabljali na več računalnikih, potrebujete na vsakem računalniku svoj ključ.
 
 ### 2. Kopirajte javni ključ na odložišče
 
-Najprej sestavimo pot do ključa. Takole se bomo sklicevali na vaš domači imenik`⟨domaci-imenik⟩`,
-ki je videti takole:
-- na fakulteti (Windows): `/c/Users/⟨fmf-uporabnisko-ime⟩`,
-- vaš računalnik (Windows): `/c/Users/⟨domace-uporabnisko-ime⟩`,
-- MacOS: `/Users/⟨domace-uporabnisko-ime⟩`.
+Vaš SSH ključ se je shranil v imenik `.ssh` v vašem domačem imeniku. Do [domačega imenika](faq:domaci-imenik)
+lahko iz ukazne vrstice najenostavneje dostopamo z znakom `~` (tilda).
 
-Z ukazom `ls ⟨domaci-imenik⟩/.ssh` preverite, da se v vašem domačem imeniku nahaja imenik `.ssh` v katerem je spravljen ključ:
-v izpisu poiščite datoteko s končnico `.pub`.
+Z ukazom `ls ~/.ssh` preverite, da se v vašem domačem imeniku nahaja imenik `.ssh` v katerem je spravljen ključ.
+V izpisu poiščite datoteko s končnico `.pub`.
 Če je ne najdete, prosite za pomoč, če pa jo najdete, si zapomnite ime, tu bomo napisali `⟨datoteka-s-kljucem⟩`.
-Na operacijskem sistemu Windows na fakulteti bo ime najverjetneje `id_rsa.pub`, na operacijskem sistemu MacOS pa `id_ed25519.pub`. 
+To bo najverjetneje `id_ed25519.pub` ali `id_rsa.pub`.
 
 Uporabite ukaz za vaš operacijski sistem, ki ga ustrezno popravite.
 
 Windows (Git Bash):
 ```shell
-cat ⟨domaci-imenik⟩/.ssh/⟨datoteka-s-kljucem⟩ | clip
+cat ~/.ssh/⟨datoteka-s-kljucem⟩ | clip
 ```
 
 MacOS (Terminal)
 ```shell
-cat ⟨domaci-imenik⟩/.ssh/⟨datoteka-s-kljucem⟩ | pbcopy
+cat ~/.ssh/⟨datoteka-s-kljucem⟩ | pbcopy
 ```
 
 Program [`cat`](https://en.wikipedia.org/wiki/Cat_(Unix)) ste spoznali na prvih vajah.
-Navpična črta `|` ([pipa, angl. _pipe_](https://en.wikipedia.org/wiki/Pipeline_(Unix))) 
-preusmeri rezultat programa na levi strani (v tem primeru `cat`) na vhod programa na desni strani črte. 
-V našem primeru sta to `clip` oz. `pbcopy`, ki skopirata vhod na odložišče.
+Navpična črta `|` ([pipa, angl. _pipe_](https://en.wikipedia.org/wiki/Pipeline_(Unix)))
+preusmeri rezultat programa na levi strani (v tem primeru `cat`) na vhod programa na desni strani črte.
+V našem primeru sta to `clip` oz. `pbcopy`, ki skopirata vhod na odložišče (angl. _clipboard_)..
 
 ### 3. Nastavite javni ključ na svojem GitHub računu
 
