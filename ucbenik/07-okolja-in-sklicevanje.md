@@ -70,7 +70,7 @@ V tem delu boste pripravili in uporabili okolji za definicije in izreke.
 2.  V datoteki `magic.tex` je na koncu nekaterih odstavkov komentar 
     `% ključ` (poiščite vse z iskanjem), ki vsebuje enega ali več sklicev.
 3.  V teh odstavkih morate zamenjati niz `???` z ukazom `cite` 
-    z ustrezen sklic (tisti iz komentarja).
+    z ustreznim sklicem (tistim iz komentarja).
 4.  Če zdaj prevedete datoteko, se poglavje literatura še ne izpiše.
     Čisto na koncu dokumenta vam manjkata še ukaza `bibliographystyle` in `bibliography`.
     Uporabite datoteko `magic.bib` in slog `siam`. 
