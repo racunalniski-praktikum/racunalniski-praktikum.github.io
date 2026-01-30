@@ -88,7 +88,7 @@ Plot[
 Še nekaj splošnih informacij.
 
 - AspectRatio pogosto želimo nastaviti na `Automatic`.
-- Epilog je nastavitev, v kateri določimo, katere dodatni grafične elementi naj se še narišejo (poleg glavnega dela). Ponavadi želimo tako narisati točke: `Epilog->{PointSize[Large],Point[{{-1,0},{1,0}}]}`.
+- Epilog je nastavitev, v kateri določimo, kateri dodatni grafične elementi naj se še narišejo (poleg glavnega dela). Ponavadi želimo tako narisati točke: `Epilog->{PointSize[Large],Point[{{-1,0},{1,0}}]}`.
 - Z nastavitvijo `PlotRange` določimo, kaj naj se prikaže na grafu (poglejte si primere v dokumentaciji).
 - `ExclusionsStyle` določi, kako se narišejo izključena območja (npr. poli)
 - Z nastavitvijo `Filling` določimo, kako se barvajo območja na grafu (npr. območje pod grafom).
