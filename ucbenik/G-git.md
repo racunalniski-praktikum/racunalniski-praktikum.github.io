@@ -209,7 +209,7 @@ je pa podobno, kot da bi odprli novo temo na forumu o vašem repozitoriju.
 
 Ko je razprava zaključena, lahko avtorji repozitorija _issue_ zaprejo.
 Še posebej, če gre za nekaj, kar se je rezrešilo v _commit_-u, je lepo, da 
-se do označi v sporočilu _commit_-a.
+se to označi v sporočilu _commit_-a.
 To se naredi tako, da poiščete identifikator zadeve
 (to je številka za znakom `#`, ki stoji za naslovom, kot na primer `#14` 
 [tule](https://github.com/racunalniski-praktikum/racunalniski-praktikum.github.io/issues/14). Nato naredite _commit_ s sporočilom, ki vsebuje niz `⟨kljucna-beseda⟩ #⟨id⟩` z eno od ključnih besed `close`, `closes`, `closed`, `fix`, `fixes`, `fixed`, `resolve`, `resolves`, `resolved` 
