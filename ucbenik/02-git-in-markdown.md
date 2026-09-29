@@ -176,7 +176,7 @@ Sledite navodilom za [nastavitve `git`-a](git:nastavitve), da si nastavite upora
 1. Izberite imenik na disku, kjer boste imeli spravljene repozitorije, s katerimi boste delali pri tem predmetu; predlagamo vam, da kar v imenik `RP` (to bodo predpostavila tudi navodila v nadaljevanju).
 2. V ukazni vrstici se premaknite v ta imenik.
 3. Kopirajte naslov vašega repozitorija (ki ste ga ustvarili in oddali v 1. domači nalogi) z GitHub-a: 
-    - Odprite stran z vašim repozitorijem v brskalniku in kliknite na zelen gumb _Code_.
+    - Odprite stran z vašim repozitorijem v brskalniku in kliknite na zeleni gumb _Code_.
     - Izberite zavihek _Local_, pod njim pa zavihek _SSH_.
     - Kopirajte naslov, ki izgleda takole nekako:
       `git@github.com:⟨moje-uporabnisko-ime⟩/⟨moj-repozitorij⟩.git`
@@ -186,7 +186,7 @@ Sledite navodilom za [nastavitve `git`-a](git:nastavitve), da si nastavite upora
    ```
    Pri prvem kloniranju vas `git` morda vpraša, če zaupate GitHubu (_The authenticity of host can't be established._).
    V tem primeru je treba napisati _yes_, preden se kloniranje izvede.
-5. Preverite, da vam je uspelo: Podobno kot na vajah prejšnji teden poženite ukaz `ls`, da izpišete vsebino trenutnega imenika. Videti bi morali tudi ime vašega repozitorija.
+5. Preverite, da vam je uspelo: podobno kot na vajah prejšnji teden poženite ukaz `ls`, da izpišete vsebino trenutnega imenika. Videti bi morali tudi ime vašega repozitorija.
 6. Če datotek `besedilo.txt` in `besedilo2.txt` še niste pobrisali, to lahko naredite zdaj v ukazni vrstici. Ukaz je `rm *.txt`, ampak preden ga poženete, razmislite, kaj naredi.
 7. Oglejte si še vsebino svojega imenika `RP` in jo primerjajte s spodnjo.
 
