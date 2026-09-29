@@ -48,6 +48,16 @@ V programu Explorer si spremenite nastavitve:
 
 Ne veste, kako se to naredi? Pomagajte si z Google, na primer z iskanjem "make file extensions visible".
 
+(faq:domaci-imenik)=
+## Domači imenik
+
+- Na fakulteti (Windows): `/c/Users/⟨fmf-uporabnisko-ime⟩`
+- Vaš računalnik (Windows): `/c/Users/⟨domace-uporabnisko-ime⟩`
+- MacOS: `/Users/⟨domace-uporabnisko-ime⟩`
+
+Na domači imenik se lahko v ukazni vrstici sklicujete z znakom `~` (tilda).
+Na primer, če se želite premakniti v domači imenik, lahko napišete `cd ~`.
+
 ## Spremenljivke okolja
 
 - *Kako urediti PATH na operacijskem sistemu Windows:* `Settings > System > About > Advanced system settings > Envirnonment Variables > Path`
