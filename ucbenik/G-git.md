@@ -134,13 +134,13 @@ Najprej [poženite ukazno vrstico](bliznjice:zaganjanje-ukazna), nato pa poženi
 
 2. Nastavite svojo e-pošto (tisto, ki jo uporabljate za GitHub) z ukazom:
 
-   ```basb
+   ```shell
    git config --global user.email ⟨vaša pošta⟩
    ```
    
    Na primer, če je vaša e-pošta en3141@student.uni-lj.si, napišite:
 
-   ```basb
+   ```shell
    git config --global user.email en3141@student.uni-lj.si
    ```
 
@@ -202,7 +202,7 @@ cat ~/.ssh/⟨datoteka-s-kljucem⟩ | pbcopy
 Program [`cat`](https://en.wikipedia.org/wiki/Cat_(Unix)) ste spoznali na prvih vajah.
 Navpična črta `|` ([pipa, angl. _pipe_](https://en.wikipedia.org/wiki/Pipeline_(Unix)))
 preusmeri rezultat programa na levi strani (v tem primeru `cat`) na vhod programa na desni strani črte.
-V našem primeru sta to `clip` oz. `pbcopy`, ki skopirata vhod na odložišče (angl. _clipboard_)..
+V našem primeru sta to `clip` oz. `pbcopy`, ki skopirata vhod na odložišče (angl. _clipboard_).
 
 ### 3. Nastavite javni ključ na svojem GitHub računu
 
