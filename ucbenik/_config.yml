@@ -1,6 +1,23 @@
 title: Računalniški praktikum
 author: Katja Berčič, Matija Pretnar
 copyright: "2024"
+
+# Skrita poglavja se sploh ne zgradijo: brez strani, brez iskalnega indeksa.
+# Poglavje razkrijemo tako, da ga odstranimo od tod IN odkomentiramo v _toc.yml.
+exclude_patterns:
+  - 01-vscode-in-terminal.md
+  - 02-git-in-markdown.md
+  - 03-html.md
+  - 04-css.md
+  - 05-utrdimo-osnove.md
+  - 06-uvod-v-latex.md
+  - 07-okolja-in-sklicevanje.md
+  - 08-predstavitve.md
+  - 09-risanje.md
+  - 10-razpredelnice.md
+  - 11-racunanje-z-mathematico.md
+  - 12-risanje-in-enacbe.md
+  - 13-animiranje-vektorji-matrike.md
 repository:
   url: 'https://github.com/katjabercic/racunalniski-praktikum'
 
