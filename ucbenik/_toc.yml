@@ -34,3 +34,4 @@ parts:
   - file: E-posta.md
   - file: F-pogosta-vprasanja.md
   - file: G-git.md
+  - file: H-regex.md
