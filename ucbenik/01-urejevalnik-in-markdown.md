@@ -17,6 +17,19 @@ Tipkanje na dotik (znano tudi kot slepo ali desetprstno tipkanje) je slog tipkan
 S tem slogom tipkanja naj bi povprečno lahko dosegli hitrost med 30 in 40 besed na minuto, 60 do 80 besed na minuto pa bi potrebovali, da bi pisali tako hitro, kot mislimo.
 Tipkanje postane lažje, ker smo lahko s pogledom osredotočeni na zaslon.
 
+Kazalca postavite na črki <kbd>F</kbd> in <kbd>J</kbd>. Ti dve tipki sta na tipkovnicah pogosto označeni z izbočenima pikama ali črticama. Ostale prste postavimo na isto vrstico. Vsakemu prstu so dodeljene tipke:
+
+:::{figure-md} slika:polozaji-prstov
+![Položaji prstov za desetprstno tipkanje](01-urejevalnik-in-markdown/Typing-colour_for-finger-positions.png)
+
+&nbsp; Položaji prstov za desetprstno tipkanje\
+<span class="avtor">
+   [Cy21](https://commons.wikimedia.org/wiki/User:Cy21),
+   [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0),
+   via ([Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Typing-colour_for-finger-positions.svg.png))
+</span>
+:::
+
 Hitri programerji ne uporabljajo miške, ker jih le-ta upočasni.
 Pomembno je, da se naučite uporabljati bližnjice v vseh programih, ki jih uporabljate pogosto.
 Veliko bližnjic se da uporabiti z eno roko.
@@ -110,19 +123,6 @@ Več informacij:
 - [bližnjice na tipkovnici za svoj operacijski sistem](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference).
 
 ## 1. naloga: tipkanje
-
-Kazalca postavite na črki <kbd>F</kbd> in <kbd>J</kbd>. Ti dve tipki sta na tipkovnicah pogosto označeni z izbočenima pikama ali črticama. Ostale prste postavimo na isto vrstico. Vsakemu prstu so dodeljene tipke:
-
-:::{figure-md} slika:polozaji-prstov
-![Položaji prstov za desetprstno tipkanje](01-urejevalnik-in-markdown/Typing-colour_for-finger-positions.png)
-
-&nbsp; Položaji prstov za desetprstno tipkanje\
-<span class="avtor">
-   [Cy21](https://commons.wikimedia.org/wiki/User:Cy21),
-   [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0),
-   via ([Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Typing-colour_for-finger-positions.svg.png))
-</span>
-:::
 
 1. Preizkusite se na spletni strani [TypingTest.com](http://www.typingtest.com) (Izberite "1 minute" in "Medium").
 2. Zapomnite si svoj rezultat (WPM – words per minute), saj ga boste vpisali v anketo, ki jo boste reševali za domačo nalogo.
