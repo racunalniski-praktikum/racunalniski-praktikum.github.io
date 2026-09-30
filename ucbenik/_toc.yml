@@ -4,9 +4,9 @@ parts:
 # Poglavja so skrita do obravnave na predavanjih in vajah.
 # Poglavje razkrijemo tako, da odkomentiramo njegovo vrstico
 # IN ga odstranimo iz exclude_patterns v _config.yml.
-# - caption: Osnovne veščine
-#   chapters:
-#   - file: 01-vscode-in-terminal.md
+- caption: Osnovne veščine
+  chapters:
+  - file: 01-urejevalnik-in-markdown.md
 #   - file: 02-git-in-markdown.md
 #   - file: 03-html.md
 #   - file: 04-css.md

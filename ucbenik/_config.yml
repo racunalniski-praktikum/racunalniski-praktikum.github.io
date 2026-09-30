@@ -5,7 +5,6 @@ copyright: "2024"
 # Skrita poglavja se sploh ne zgradijo: brez strani, brez iskalnega indeksa.
 # Poglavje razkrijemo tako, da ga odstranimo od tod IN odkomentiramo v _toc.yml.
 exclude_patterns:
-  - 01-vscode-in-terminal.md
   - 02-git-in-markdown.md
   - 03-html.md
   - 04-css.md
