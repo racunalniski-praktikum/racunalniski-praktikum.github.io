@@ -6,9 +6,11 @@ Pomožni repozitorij s prosojnicami in datotekami s predavanj pri predmetu Raču
 
 0. Uvod (o predmetu, ocenjevanje)
    - [prosojnice (HTML)](00-uvod/prosojnice.html)
-1. Urejanje besedil (VS Code, Markdown)
-   <!-- - [prosojnice](01-urejanje-besedil/…) -->
-2. Ukazna vrstica (datotečni sistem, ukazna vrstica, kodne tabele, regularni izrazi)
+1. Besedilne datoteke (VS Code, Markdown, kodne tabele)
+   - [prosojnice](01-besedilne-datoteke/prosojnice.html)
+   - isto besedilo v različnih datotekah: [`.docx`](01-besedilne-datoteke/o-predmetu.docx), [`.txt`](01-besedilne-datoteke/o-predmetu.txt), [`.md`](01-besedilne-datoteke/o-predmetu.md)
+   - podnapisi v različnih kodnih tabelah: [ISO-8859-2](01-besedilne-datoteke/podnapisi/iso8859-2.srt), [CP-1250](01-besedilne-datoteke/podnapisi/cp1250.srt), [UTF-8](01-besedilne-datoteke/podnapisi/utf8.srt)
+2. Ukazna vrstica (datotečni sistem, ukazna vrstica, regularni izrazi)
    <!-- - [prosojnice](02-ukazna-vrstica/…) -->
 3. Nadzor različic (nadzor različic, oblačne storitve, Git, sinhronizacija, konflikti)
    <!-- - [prosojnice](03-nadzor-različic/…) -->
