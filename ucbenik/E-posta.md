@@ -27,12 +27,12 @@ Verjetno bi najprej odprli tisto, ki je drugačno.
 ```
 Pozdravljeni/Spoštovani,
 
-Sem študent/ka na smeri ___ pri predmetu ___.
+Sem študent/ka na programu ⟨ime-programa⟩ pri predmetu ⟨ime-predmeta⟩.
 
 ___
 
 Lep pozdrav/S spoštovanjem,
-Ime Priimek (_vpisna št._)
+Ime Priimek ⟨vpisna-številka⟩
 
 ```
 
