@@ -1,0 +1,818 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Urejevalnik in Markdown &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=db6da3aa" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01-urejevalnik-in-markdown';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Nameščanje programske opreme" href="A-programska-oprema.html" />
+    <link rel="prev" title="Uvod" href="00-uvod.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Urejevalnik in Markdown</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="H-regex.html">Regularni izrazi</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/01-urejevalnik-in-markdown.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Urejevalnik in Markdown</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipkanje">Tipkanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navadno-besedilo-in-oznacevalni-jeziki">Navadno besedilo in označevalni jeziki</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#urejevalnik-vscode">Urejevalnik VSCode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-tipkanje">1. naloga: tipkanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-spoznajte-vscode">2. naloga: spoznajte VSCode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-pripravite-datoteko-readme">3. naloga: pripravite datoteko README</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pripravite-se-za-delo-brez-miske">3.1 Pripravite se za delo (brez miške)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uredite-dokument">3.2 Uredite dokument</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zakljucite-delo-brez-miske">3.3 Zaključite delo (brez miške)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="urejevalnik-in-markdown">
+<h1>Urejevalnik in Markdown<a class="headerlink" href="#urejevalnik-in-markdown" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-vscode"><span class="std std-ref">Visual Studio Code</span></a>.</p></li>
+</ul>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Branje navodil</p>
+<p>Priporočamo, da si vsako navodilo najprej natančno preberete do konca.</p>
+</div>
+<section id="tipkanje">
+<h2>Tipkanje<a class="headerlink" href="#tipkanje" title="Link to this heading">#</a></h2>
+<p>Med študijem boste pisali matematična besedila, programirali in se pogovarjali z umetno inteligenco, zato boste veliko tipkali.
+Tipkanje na dotik (znano tudi kot slepo ali desetprstno tipkanje) je slog tipkanja, pri katerem se ne zanašamo na vid, ampak prave tipke najdemo s pomočjo mišičnega spomina.
+S tem slogom tipkanja naj bi povprečno lahko dosegli hitrost med 30 in 40 besed na minuto, 60 do 80 besed na minuto pa bi potrebovali, da bi pisali tako hitro, kot mislimo.
+Tipkanje postane lažje, ker smo lahko s pogledom osredotočeni na zaslon.</p>
+<p>Kazalca postavite na črki <kbd>F</kbd> in <kbd>J</kbd>. Ti dve tipki sta na tipkovnicah pogosto označeni z izbočenima pikama ali črticama. Ostale prste postavimo na isto vrstico. Vsakemu prstu so dodeljene tipke:</p>
+<figure class="align-default" id="slika-polozaji-prstov">
+<img alt="Položaji prstov za desetprstno tipkanje" src="_images/Typing-colour_for-finger-positions.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">  Položaji prstov za desetprstno tipkanje<br />
+<span class="avtor">
+<a class="reference external" href="https://commons.wikimedia.org/wiki/User:Cy21">Cy21</a>,
+<a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>,
+via (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Typing-colour_for-finger-positions.svg.png">Wikimedia Commons</a>)
+</span></span><a class="headerlink" href="#slika-polozaji-prstov" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Hitri programerji ne uporabljajo miške, ker jih le-ta upočasni.
+Pomembno je, da se naučite uporabljati bližnjice v vseh programih, ki jih uporabljate pogosto.
+Veliko bližnjic se da uporabiti z eno roko.
+Desničarji lahko na primer z levo roko uporabijo bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (<kbd>Cmd</kbd>+<kbd>Tab</kbd> na MacOS) za preklapljanje med okni, medtem ko imajo desno roko na miški.</p>
+</section>
+<section id="navadno-besedilo-in-oznacevalni-jeziki">
+<h2>Navadno besedilo in označevalni jeziki<a class="headerlink" href="#navadno-besedilo-in-oznacevalni-jeziki" title="Link to this heading">#</a></h2>
+<p>Navadno besedilo (angl. <em>plain text</em>) je besedilo, ki vsebuje samo znake (črke, številke, ločila), brez dodatnih informacij o izgledu.
+V navadnem besedilu urejamo samo znake, ne pa tudi vrste pisave, barve ali velikosti in ne moremo uporabljati krepkega ali poševnega tiska, tabel in slik.</p>
+<div class="tip admonition">
+<p class="admonition-title">Primer oblikovanega besedila</p>
+<p>Besedilo lahko poudarimo <strong>krepko</strong>, <em>ležeče</em>, <span style="color: magenta">z barvo</span> ter z <span style="font-size: 0.7em">različnimi</span> <span style="font-size: 1.5em">velikostmi</span>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Primer navadnega besedila</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Navadno besedilo je samo po sebi videti precej dolgočasno.
+</pre></div>
+</div>
+</div>
+<p>Kako torej v navadnem besedilu povemo, kaj posamezni deli besedila pomenijo?</p>
+<p>Pri tem predmetu bomo navadno besedilo uporabljali predvsem v kombinaciji z označevalnimi jeziki (angl. <em>markup languages</em>).
+V besedilu bomo uporabljali vnaprej določena zaporedja znakov, ki imajo poseben pomen: z njimi označimo, kateri del besedila je naslov, kateri seznam in kateri povezava.
+Pravilom, po katerih so ta zaporedja sestavljena, rečemo sintaksa.
+Kako bodo ti deli videti, določi program, ki besedilo prikaže.</p>
+<p><a class="reference external" href="https://www.markdownguide.org">Markdown</a> je preprost, a zelo razširjen označevalni jezik, ki omogoča hitro pisanje strukturiranih dokumentov brez zapletenih orodij.
+Zasnoval ga je John Gruber, da bi olajšal pisanje za splet v čisti, berljivi obliki.
+Ključne prednosti Markdowna so:</p>
+<ul class="simple">
+<li><p>berljivost izvornega besedila,</p></li>
+<li><p>združljivost s sistemi za nadzor različic in s programsko kodo,</p></li>
+<li><p>pretvorljivost v različne formate (HTML, PDF, LaTeX …).</p></li>
+</ul>
+<p>Takole je zapisano besedilo v Markdownu:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Naslov</span>
+
+Besedilo je lahko <span class="gs">**poudarjeno**</span> ter
+vsebuje [<span class="nt">povezave</span>](<span class="na">https://www.fmf.uni-lj.si/</span>),
+<span class="sb">`programsko kodo`</span> in sezname:
+<span class="k">-</span><span class="w"> </span>prva točka
+<span class="k">-</span><span class="w"> </span>druga točka
+<span class="k">-</span><span class="w"> </span>tretja točka
+</pre></div>
+</div>
+<p>Tudi če Markdowna še ne poznate, verjetno lahko uganete, kateri del besedila je naslov, katera beseda je poudarjena in kaj je seznam.
+Prav to pomeni berljivost izvornega besedila.</p>
+<p>Kako je Markdown videti, ko ga prikažemo, lahko preverite kar v urejevalniku:
+VSCode zna poleg izvornega besedila odpreti še predogled (angl. <em>Open Preview</em>), ki se osvežuje sproti, medtem ko pišete.
+Isti zapis bo v drugem programu (na primer na GitHubu) videti nekoliko drugače: videz določi program, ki besedilo prikaže, ne zapis sam.</p>
+<p>V 3. nalogi boste v Markdownu pripravili datoteko README — po dogovoru je to datoteka, ki jo v imeniku preberemo najprej.
+Kasneje boste spoznali še dva označevalna jezika: HTML, v katerem so napisane spletne strani, in LaTeX, v katerem boste pisali matematična besedila.</p>
+</section>
+<section id="urejevalnik-vscode">
+<span id="id1"></span><h2>Urejevalnik VSCode<a class="headerlink" href="#urejevalnik-vscode" title="Link to this heading">#</a></h2>
+<p>Programe in matematična besedila boste pisali kot navadno besedilo, zato je pomembno, da se naučite kompetentno uporabljati profesionalni urejevalnik.
+Priporočamo <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> (na kratko “VSCode”), odprtokodni urejevalnik z dobro podporo za programiranje in pisanje besedil v LaTeX-u.
+Navodila za vaje bodo predpostavljala, da uporabljate VSCode.
+Seveda pa lahko uporabljate kak drug urejevalnik, pod pogojem, da ga res dobro poznate!</p>
+<p>Urejevalniki, kot je VSCode, so namenjeni predvsem razvijalcem programske opreme in omogočajo urejanje izvorne kode programov.
+V primerjavi s programi, kot je Microsoft Word, v VSCode ne določate, kako naj bo naslov videti, ampak označite, kateri del besedila je naslov.
+Kmalu boste opazili, da urejevalnik sam od sebe spreminja izgled določenih delov besedila.
+Temu rečemo poudarjanje sintakse (angl. <em>syntax highlighting</em>).
+Pomaga nam, da hitreje razberemo pomen izvorne kode (ali pa najdemo napake v njej).
+Barve, ki jih pri tem vidite, niso shranjene v datoteki: urejevalnik jih sproti določi sam, zato se spremenijo, ko zamenjate temo.</p>
+<p>Glavni deli uporabniškega vmesnika VSCode so:</p>
+<ul class="simple">
+<li><p>opravilni stolpec (angl. <em>Activity Bar</em>), v katerem preklapljate med različnimi pogledi stranskega menija, kot so datoteke (angl. <em>Explorer</em>), nadzor nad verzijami (angl. <em>Source Control</em>) in razširitve (angl. <em>Extensions</em>),</p></li>
+<li><p>glavni stranski meni (angl. <em>Primary Side Bar</em>), ki prikazuje izbrani pogled,</p></li>
+<li><p>skupine urejevalnikov (angl. <em>Editor Groups</em>), v katerih urejate odprte datoteke,</p></li>
+<li><p>podokno (angl. <em>Panel</em>), ki vsebuje npr. ukazno vrstico in sporočila o napakah,</p></li>
+<li><p>statusna vrstica (angl. <em>Status Bar</em>) z uporabnimi informacijami, ki jih bomo spoznali kasneje.</p></li>
+</ul>
+<figure class="align-default" id="slika-vmesnik-vscode">
+<img alt="Uporabniški vmesnik urejevalnika VSCode" src="_images/vscode-ui.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">  Uporabniški vmesnik urejevalnika VSCode</span><a class="headerlink" href="#slika-vmesnik-vscode" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Več informacij:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs">dokumentacija za VSCode</a>, kjer začnite z razdelkom “Get started”,</p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/editor/codebasics">poglavje o osnovnem urejanju kode</a>,</p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference">bližnjice na tipkovnici za svoj operacijski sistem</a>.</p></li>
+</ul>
+</section>
+<section id="naloga-tipkanje">
+<h2>1. naloga: tipkanje<a class="headerlink" href="#naloga-tipkanje" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Preizkusite se na spletni strani <a class="reference external" href="http://www.typingtest.com">TypingTest.com</a> (Izberite “1 minute” in “Medium”).</p></li>
+<li><p>Zapomnite si svoj rezultat (WPM – words per minute), saj ga boste vpisali v anketo, ki jo boste reševali za domačo nalogo.
+Rezultati bodo objavljeni anonimno, vi pa boste videli, kam se uvrščate.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Nasvet za operacijski sistem MacOS</p>
+<p>Za tipkanje redkejših znakov si pomagajte s programom <a class="reference external" href="https://support.apple.com/en-gb/guide/mac-help/mchlp1015/mac">Keyboard Viewer</a>,
+ki je že nameščen na vašem sistemu.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Vaja za doma</p>
+<p>Odločite se za postavitev tipkovnice (slovensko, angleško, Dvořak, …) in približno 15 minut vadite tipkanje. Izberite vaje tako, da bo tipkovnica v lekcijah čim bolj podobna izbrani.</p>
+<ul class="simple">
+<li><p>Na strani <a class="reference external" href="https://www.typingstudy.com/sl-slovenian-1/lesson/1/part/1">Touch Typing Study</a> so lekcije nekoliko manj barvite, imate pa veliko izbiro postavitev tipkovnic, vključno s slovensko.</p></li>
+<li><p>Če uporabljate angleško tipkovnico, lahko začnete s <a class="reference external" href="https://www.typingtest.com/trainer/applet.html?course_url=course_descriptions/fl5_us_sr_touchtyping.xml&amp;amp;lesson_id=A001">prvo lekcijo na TypingTest.com</a> ali z lekcijami na <a class="reference external" href="https://www.typing.com/student/lessons">Typing.com</a>.</p></li>
+<li><p>Na spletnih straneh <a class="reference external" href="https://www.typingtutor-online.com">Typing Tutor</a>, <a class="reference external" href="https://type-fu.com">Type Fu</a> in <a class="reference external" href="https://www.edclub.com/sportal/program-3.game">Typing Club</a> najdete vaje za manjši izbor postavitev tipkovnic v več jezikih.</p></li>
+<li><p>Vaje tipkanja, ki so neodvisne od postavitve tipkovnice, najdete na <a class="reference external" href="https://www.keybr.com">Keybr.com</a>.
+Na tej spletni strani vam ne pomagajo s sliko tipkovnice.</p></li>
+</ul>
+<p>Petnajst minut vaje je seveda premalo, da bi se naučili desetprstnega tipkanja.
+Če se želite naučiti, bo najlažje, če si vzamete vsak dan četrt ure za vedno težje vaje.
+Po kakih 10 urah vaje bi vaši prsti že morali biti dovolj seznanjeni s tipkami,
+da boste lahko počasi tipkali desetprstno.
+Ob rednih vajah boste tekoče tipkali do konca semestra.</p>
+</div>
+</section>
+<section id="naloga-spoznajte-vscode">
+<h2>2. naloga: spoznajte VSCode<a class="headerlink" href="#naloga-spoznajte-vscode" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Poženite VSCode.</p></li>
+<li><p>Preletite razdelek o <a class="reference external" href="https://code.visualstudio.com/docs/getstarted/userinterface">uporabniškem vmesniku</a>.
+Bodite pozorni na osnovno razporeditev in na svojem računalniku poiščite glavne dele vmesnika, opisane v razdelku <a class="reference internal" href="#urejevalnik-vscode"><span class="std std-ref">Urejevalnik VSCode</span></a>.</p></li>
+<li><p>V dokumentaciji poiščite, kako spremenite temo (izgled, angl. <em>Color Theme</em>) urejevalnika in jo spremenite na tako, ki vam je všeč.</p></li>
+<li><p>Zaprite urejevalnik.</p></li>
+</ol>
+</section>
+<section id="naloga-pripravite-datoteko-readme">
+<h2>3. naloga: pripravite datoteko README<a class="headerlink" href="#naloga-pripravite-datoteko-readme" title="Link to this heading">#</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Del domače naloge</p>
+<p>Datoteko, ki jo boste pripravili, boste potrebovali za domačo nalogo.</p>
+</div>
+<p>Datoteko boste pripravili, shranili in ponovno odprli brez miške, pri urejanju vsebine pa lahko uporabljate tudi miško.
+Dela brez miške rešujte skupaj z asistentko/om ali demonstratorko/jem, ki pa vam ne sme pomagati pri iskanju bližnjic (lahko si pomagate med sabo).
+Najprej preberite spodnja pravila in se pripravite na izvajanje naloge.
+Vnaprej poiščite potrebno dokumentacijo (na primer, kako v VSCode z bližnjico odprete imenik?), da ne boste brskali kasneje.
+Pri tem vam bo v pomoč <a class="reference internal" href="B-tipkovnica.html#plonkec-tipkovnica"><span class="std std-ref">plonkec za uporabo tipkovnice</span></a>, predvsem razdelka <a class="reference internal" href="B-tipkovnica.html#bliznjice-zaganjanje"><span class="std std-ref">Zaganjanje programov</span></a> in <a class="reference internal" href="B-tipkovnica.html#bliznjice-vscode-splosne"><span class="std std-ref">Splošne bližnjice</span></a>.</p>
+<div class="important admonition">
+<p class="admonition-title">Pozor, uvajamo standarden zapis</p>
+<p>Včasih boste v navodilih opazili besedilo v čudnih oklepajih <code class="docutils literal notranslate"><span class="pre">⟨besedilo-v-cudnih-oklepajih⟩</span></code> (ki bo pogosto napisano brez šumnikov, presledki pa bodo nadomeščeni z vezaji). Te oklepaje uporabljamo zato, da poudarimo, da gre za del besedila, ki ga nadomesti vsak zase. Besedilo v oklepajih vam pove, s čim je treba vse skupaj (z oklepaji vred) nadomestiti.
+Prvi primer boste srečali spodaj, <code class="docutils literal notranslate"><span class="pre">C:\Users\⟨uporabnisko-ime⟩</span></code>. Če je vaše uporabniško ime <code class="docutils literal notranslate"><span class="pre">Gandalf</span></code>, potem je prej omenjena pot v vašem primeru   <code class="docutils literal notranslate"><span class="pre">C:\Users\Gandalf</span></code> (<strong>in ne</strong> <code class="docutils literal notranslate"><span class="pre">C:\Users\⟨Gandalf⟩</span></code>).</p>
+<p>Ta (ali podoben) način označevanja je kar običajen za mesta, kjer morate vnesti svoje podatke (drugi avtorji včasih uporabijo tudi drugačne oklepaje).</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Pozor, uvajamo standarden zapis</p>
+<p>Z znakom 🍎 označujemo, kar velja za MacOS.</p>
+</div>
+<section id="pripravite-se-za-delo-brez-miske">
+<h3>3.1 Pripravite se za delo (brez miške)<a class="headerlink" href="#pripravite-se-za-delo-brez-miske" title="Link to this heading">#</a></h3>
+<p>S tipkovnico in čim manjšo uporabo miške naredite naslednja opravila:</p>
+<ol class="arabic simple">
+<li><p>Odprite svoj domači imenik v upravitelju datotek:</p>
+<ul class="simple">
+<li><p>na Windows v Raziskovalcu (angl. <em>File Explorer</em>): <code class="docutils literal notranslate"><span class="pre">C:\Users\⟨uporabnisko-ime⟩</span></code>,</p></li>
+<li><p>na MacOS v Finderju: <code class="docutils literal notranslate"><span class="pre">/Users/⟨uporabnisko-ime⟩</span></code>,</p></li>
+<li><p>na Linuxu: <code class="docutils literal notranslate"><span class="pre">/home/⟨uporabnisko-ime⟩</span></code>.</p></li>
+</ul>
+</li>
+<li><p>V njem ustvarite imenik za Računalniški praktikum (npr. <code class="docutils literal notranslate"><span class="pre">C:\Users\⟨uporabnisko-ime⟩\rp</span></code>), v njem pa imenik <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code>.
+Zunanji imenik je vaš: poimenujete ga lahko po svoje in vanj boste dali vse, kar je povezano s predmetom.
+Za notranjega priporočamo ime <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code>: tako ga bodo imenovala navodila v nadaljevanju semestra.</p></li>
+<li><p>Poženite urejevalnik VSCode.</p></li>
+<li><p>V urejevalniku odprite imenik <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code> (npr. <code class="docutils literal notranslate"><span class="pre">C:\Users\⟨uporabnisko-ime⟩\rp\racunalniski-praktikum</span></code> oz. 🍎 <code class="docutils literal notranslate"><span class="pre">/Users/⟨uporabnisko-ime⟩/rp/racunalniski-praktikum</span></code>).</p></li>
+<li><p>Ustvarite novo datoteko in jo takoj shranite v ta imenik.
+Odprlo se bo pogovorno okno z aktivnim vnosnim poljem, v katerega že takoj lahko začnete pisati ime datoteke; poimenujte jo <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.
+S pritiskom na vnašalko <kbd>↵</kbd> potrdite ime.</p></li>
+<li><p>Poiščite, kje v statusni vrstici piše, kakšne vrste datoteko urejate. Vrsto je urejevalnik ugotovil iz končnice <code class="docutils literal notranslate"><span class="pre">.md</span></code>.</p></li>
+<li><p>V upravitelju datotek preverite, ali se vsebina imenika za Računalniški praktikum ujema s spodnjo sliko.</p></li>
+</ol>
+<figure class="align-default" id="slika-vsebina-imenika">
+<img alt="Imenik rp z imenikom racunalniski-praktikum, v katerem je README.md" src="_images/vsebina-imenika-readme.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">  Strukturo imenikov bomo prikazovali kot zgoraj.</span><a class="headerlink" href="#slika-vsebina-imenika" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="uredite-dokument">
+<h3>3.2 Uredite dokument<a class="headerlink" href="#uredite-dokument" title="Link to this heading">#</a></h3>
+<p>Pri urejanju lahko uporabljate tudi miško.</p>
+<ol class="arabic">
+<li><p>Odprite <a class="reference internal" href="B-tipkovnica.html#bliznjice-vscode-splosne"><span class="std std-ref">predogled</span></a>. Zavihek s predogledom z miško povlecite proti desnemu zgornjemu kotu okna urejevalnika,
+da preklopite v pogled, v katerem boste videli datoteko in predogled hkrati (če vam ni všeč, zavihek prestavite nazaj).</p></li>
+<li><p>Kopirajte in prilepite spodnje besedilo v datoteko <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.</p>
+<ul class="simple">
+<li><p><strong>Kopirajte:</strong> z miško se zapeljite zgoraj desno v okvirček in kliknite na ikono, ali pa označite besedilo in pritisnite <kbd>Ctrl</kbd>+<kbd>C</kbd> oz. 🍎 <kbd>Cmd</kbd>+<kbd>C</kbd>.</p></li>
+<li><p><strong>Prilepite:</strong> <kbd>Ctrl</kbd>+<kbd>V</kbd> oz. 🍎 <kbd>Cmd</kbd>+<kbd>V</kbd>.</p></li>
+</ul>
+<p>Oglejte si predogled.</p>
+</li>
+</ol>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>&lt;!-- glavni naslov --&gt;
+Računalniški praktikum
+&lt;!-- To je komentar, ki bo na prikazanem Markdownu skrit. 
+     V tem besedilu so v komentarjih napisana navodila za reševanje. Pustite jih v datoteki. --&gt;
+
+&lt;!-- 2. nivojski razdelek --&gt;
+Bližnjice na tipkovnici
+
+Kopiraj označeno v odložišče: Ctrl+C (<span class="gs">**C**</span>opy)
+Izreži označeno v odložišče: Ctrl+X
+Prilepi vsebino odložišča: Ctrl+V
+
+&lt;!-- 2. nivojski razdelek --&gt;
+Koda
+
+Včasih pride prav značka kbd za tipke. Značko uporabimo takole:
+
+&lt;!-- začetek bloka kode --&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;
+&lt;!-- konec bloka kode --&gt;
+
+&lt;!-- 2. nivojski razdelek --&gt;
+Domača naloga
+
+&lt;!-- Spodnji seznam bo pripravil seznam nalog. Na GitHubu bodo lepo vidna potrditvena polja, 
+     VSCode pa bo prikazal samo oglate oklepaje. Ko nalogo opravite, si to lahko zabeležite tako,
+     da spremenite [ ] v [x]. --&gt;
+<span class="k">- [ ]</span> Izberite si še tri bližnjice, ki jih še ne uporabljate redno, in se jih naučite. 
+      Dodajte jih v prvi razdelek tega dokumenta.
+
+&lt;!-- 2. nivojski razdelek --&gt;
+Uporabne povezave
+
+FMF učilnica &lt;!-- https://ucilnica.fmf.uni-lj.si/ --&gt;
+Računalniški sistemi, storitve in oprema za študente &lt;!-- https://ucilnica.fmf.uni-lj.si/mod/page/view.php?id=51619 --&gt;
+Zapiski in vaje za Računalniški praktikum &lt;!-- https://racunalniski-praktikum.github.io/ --&gt;
+Dokumentacija za Markdown na GitHubu &lt;!-- https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax --&gt;
+</pre></div>
+</div>
+<p>Pomagajte si z <a class="reference external" href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">dokumentacijo za Markdown na GitHubu</a>
+in sledite spodnjim navodilom.</p>
+<ol class="arabic simple" start="3">
+<li><p>Označite glavni naslov in razdelke. V navadnem besedilu jih lahko prepoznate po tem, da je v vrstici nad njimi <em>komentar</em>
+(besedilo med znaki <code class="docutils literal notranslate"><span class="pre">&lt;!--</span></code> in <code class="docutils literal notranslate"><span class="pre">--&gt;</span></code>, ki se ne izpiše).</p></li>
+<li><p>V razdelku “Bližnjice na tipkovnici” uredite vrstice tako, da se bodo izpisale kot neoštevilčen seznam.
+Pomagajte si z <a class="reference internal" href="B-tipkovnica.html#bliznjice-kurzorji"><span class="std std-ref">večimi kurzorji</span></a> (angl. <em>multi-cursor</em>).</p></li>
+<li><p>V seznamu besede “Kopiraj”, “Izreži” in “Prilepi” označite kot ležeče (angl. <em>italic</em>).
+Tudi tu si lahko pomagate z večimi kurzorji: s <kbd>Ctrl</kbd>+<kbd>←→</kbd> (🍎 <kbd>Option</kbd>+<kbd>←→</kbd>) se lahko premikate med besedami.</p></li>
+<li><p>V prvem odstavku razdelka “Koda” označite <code class="docutils literal notranslate"><span class="pre">kbd</span></code> kot kodo v besedilu (angl. <em>inline code</em>).</p></li>
+<li><p>Označite blok kode (angl. <em>code block</em>). Komentarja povesta, kje se blok začne in kje konča.</p></li>
+<li><p>V razdelku “Uporabne povezave” vrstice označite kot oštevilčen seznam.</p></li>
+<li><p>V seznamu označite povezave. V vsaki vrstici je po ena povezava: besedilo naj bo besedilo povezave (tisto, kar kliknemo),
+naslov v komentarju pa naj bo tarča povezave (tja, kamor nas povezava pelje).</p></li>
+</ol>
+</section>
+<section id="zakljucite-delo-brez-miske">
+<h3>3.3 Zaključite delo (brez miške)<a class="headerlink" href="#zakljucite-delo-brez-miske" title="Link to this heading">#</a></h3>
+<p>S tipkovnico in čim manjšo uporabo miške naredite naslednja opravila:</p>
+<ol class="arabic simple">
+<li><p>Shranite datoteko <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.</p></li>
+<li><p>Zaprite datoteko <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.</p></li>
+<li><p>Ponovno odprite datoteko <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Če delate na šolskem računalniku</p>
+<p>Poskrbite, da boste do datoteke lahko dostopali tudi doma, saj jo boste potrebovali pri domači nalogi.
+Uporabite na primer Dropbox, Google Drive ali OneDrive — do vseh lahko dostopate tudi v brskalniku — ali pa si datoteko pošljite po elektronski pošti.</p>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="00-uvod.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Uvod</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="A-programska-oprema.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Nameščanje programske opreme</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipkanje">Tipkanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navadno-besedilo-in-oznacevalni-jeziki">Navadno besedilo in označevalni jeziki</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#urejevalnik-vscode">Urejevalnik VSCode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-tipkanje">1. naloga: tipkanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-spoznajte-vscode">2. naloga: spoznajte VSCode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-pripravite-datoteko-readme">3. naloga: pripravite datoteko README</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pripravite-se-za-delo-brez-miske">3.1 Pripravite se za delo (brez miške)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uredite-dokument">3.2 Uredite dokument</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zakljucite-delo-brez-miske">3.3 Zaključite delo (brez miške)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
