@@ -27,13 +27,26 @@ Verjetno bi najprej odprli tisto, ki je drugačno.
 ```
 Pozdravljeni/Spoštovani,
 
-Sem študent/ka na programu ⟨ime-programa⟩ pri predmetu ⟨ime-predmeta⟩.
+Sem študent/ka na programu ⟨program⟩ pri predmetu ⟨predmet⟩.
 
-___
+⟨vsebina-sporocila⟩
 
-Lep pozdrav/S spoštovanjem
-Ime Priimek ⟨vpisna-številka⟩
+Lep pozdrav/S spoštovanjem,
+⟨ime⟩ ⟨priimek⟩ ⟨vpisna-stevilka⟩
 
+```
+
+Primer izpolnjene predloge:
+
+```
+Spoštovani,
+
+Sem študentka na programu Matematika pri predmetu Računalniški praktikum.
+
+Pri včerajšnji domači nalogi se mi v predogledu datoteke README.md ne prikaže slika, čeprav je slika v istem imeniku kot datoteka. Preverila sem pot do slike, a napake nisem našla. Bi se lahko ta teden oglasila pri vas na govorilnih urah, da mi pomagate?
+
+S spoštovanjem,
+Ana Novak 27201234
 ```
 
 ## Jezik in vsebina

@@ -45,7 +45,7 @@ Preverite, da je bila namestitev uspešna tako, da v ukazno vrstico napišete `x
 ### Navodila za operacijski sistem Linux
 
 1. Če se še niste, se spoznajte z upraviteljem paketov (angl. _package manager_) na vaši distribuciji (npr. `apt` na Ubuntu/Debian ali `yum`/`dnf` na Red Hat distribucijah).
-2. Če še nimate nameščenega git-a, ga namestite zdaj s svojim upraviteljem paketov (če vam je to še neznano, v brskalnik vpišite `<vaš Linux> install git`).
+2. Če še nimate nameščenega Gita, ga namestite zdaj s svojim upraviteljem paketov (če vam je to še neznano, v brskalnik vpišite `<vaš Linux> install git`).
    Za Ubuntu boste verjetno našli [`sudo apt install git-all`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 (namestitev:vscode)=
@@ -120,5 +120,5 @@ Univerza v Ljubljani vsem študentom omogoča dostop do programske opreme in sto
 
 Na domačem računalniku imejte nameščeno aplikacijo [Zoom](https://zoom.us). Upamo, da je ne boste potrebovali. Aplikacijo lahko namestite tudi na svoj telefon.
 
-Če na Zoom-u še nimate uporabniškega imena, ga ustvarite. Nastavite svoje pravo ime in
+Če na Zoomu še nimate uporabniškega imena, ga ustvarite. Nastavite svoje pravo ime in
 priimek, ker se tako spodobi. Tudi profesorji ne predavanjo pod vzdevkom `FunnyBunny42`.
