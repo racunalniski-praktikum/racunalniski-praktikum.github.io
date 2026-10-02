@@ -31,7 +31,7 @@ Sem študent/ka na programu ⟨ime-programa⟩ pri predmetu ⟨ime-predmeta⟩.
 
 ___
 
-Lep pozdrav/S spoštovanjem,
+Lep pozdrav/S spoštovanjem
 Ime Priimek ⟨vpisna-številka⟩
 
 ```
