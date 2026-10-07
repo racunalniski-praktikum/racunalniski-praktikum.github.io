@@ -5,3 +5,5 @@ ucbenik/_build/
 _minted*
 
 ucbenik/06-uvod-v-latex/urnik.pdf
+# uv virtual environment
+.venv/

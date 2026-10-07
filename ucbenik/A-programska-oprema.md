@@ -85,7 +85,7 @@ Ta navodila predpostavljajo, da imate že nameščen urejevalnik [Visual Studio 
 
 1. Namestite [Perl](https://www.perl.org/get.html). To je programski jezik, ki ga potrebujete, da vam bo deloval ukaz `latexmk` (ta vam res olajša delo).
    * Prenesite in namestite [Strawberry Perl](https://strawberryperl.com).
-   * Pazite, da se bo med namestitvijo Perl dodal v `PATH` (morda boste morali prej še enkrat zagnati računalnik).
+   * Pazite, da se bo med namestitvijo Perl dodal v `PATH` (morda boste morali prej še enkrat zagnati računalnik); če se ni, [ga dodajte sami](faq:path).
 2. Namestite [MikTeX](https://miktex.org) (LaTeX distribucija za operacijski sistem Windows).
    *Pomembno*: Ko vas vpraša, ali naj samodejno namesti manjkajoče pakete, priporočamo, da izberete samodejno nameščanje. Če boste izbrali, da naj vas sprašuje pred vsako namestitvijo, vas pri prvem zagonu LaTeX-a čaka veliko klikanja.
 3. Če je treba, popravite znake `{`, `}` in `@` v VSCode: sledite navodilom v razdelku [VSCode, LaTeX, Windows in slovenska tipkovnica](faq:vscode-latex-si) pod pogostimi vprašanji.

@@ -1,3 +1,4 @@
+(plonkec:ukazna-vrstica)=
 # Plonkec za ukazno vrstico
 
 - Ukaz [`pwd`](https://en.wikipedia.org/wiki/Pwd) (_**p**rint **w**orking **d**irectory_) izpiše 
@@ -13,7 +14,7 @@
       (če smo se nazadnje premaknili iz `Users/racunalniski-praktikum/vaje1` v `Users/racunalniski-praktikum/vaje2`, 
       premaknemo nazaj v `Users/racunalniski-praktikum/vaje1`).
 - Ukaz [`ls`](https://en.wikipedia.org/wiki/Ls) (_**l**i**s**t_) izpiše seznam datotek in imenikov. 
-  Če ne podamo dodatnih parametrov ali oznak, to naredi za trenutni delovni imenik.
+  Če ne podamo dodatnih argumentov ali možnosti, to naredi za trenutni delovni imenik.
   Če podamo pot, izpiše seznam vsebine za imenik na koncu poti.
 - Ukaz [`cat`](https://en.wikipedia.org/wiki/Cat_(Unix))(_[**cat**enate](https://en.wiktionary.org/wiki/catenate)_) izpiše vsebino datoteke (ali datotek) na standardni izhod.
   Primeri:

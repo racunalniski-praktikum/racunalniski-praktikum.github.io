@@ -38,15 +38,14 @@ Moderni operacijski sistemi končnice datotek pogosto skrijejo (takšno je recim
 Za večino uporabnikov to morda izboljša uporabniško izkušnjo, nekoliko naprednejšim pa je lahko v napoto.
 Upamo, da boste kot študenti te fakultete med slednjimi, če še niste.
 Že pri Računalniškem praktikumu boste kdaj želeli vedeti, kakšna je končnica imena datoteke.
-
-### Windows
-
-V programu Explorer si spremenite nastavitve:
+Nastavite si torej:
 
 *   Končnice datotek (file extensions) naj bodo vidne.
 *   Skrite datoteke (hidden files) naj bodo vidne.
 
-Ne veste, kako se to naredi? Pomagajte si z Google, na primer z iskanjem "make file extensions visible".
+V sistemu Windows v Raziskovalcu odprite meni _View_ > _Show_ in obkljukajte _File name extensions_ in _Hidden items_ (v sistemu Windows 10 sta obe možnosti na zavihku _View_).
+Na macOS v Finderju izberite _Finder_ > _Settings_ > _Advanced_ in vklopite _Show all filename extensions_ (v starejših različicah se meni imenuje _Preferences_);
+skrite datoteke pokažete ali spet skrijete s <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>.</kbd>.
 
 (faq:domaci-imenik)=
 ## Domači imenik
@@ -58,11 +57,10 @@ Ne veste, kako se to naredi? Pomagajte si z Google, na primer z iskanjem "make f
 Na domači imenik se lahko v ukazni vrstici sklicujete z znakom `~` (tilda).
 Na primer, če se želite premakniti v domači imenik, lahko napišete `cd ~`.
 
+(faq:path)=
 ## Spremenljivke okolja
 
-- *Kako urediti PATH na operacijskem sistemu Windows:* `Settings > System > About > Advanced system settings > Envirnonment Variables > Path`
-
-## Shranjevanje v oblak
+- *Kako urediti PATH na operacijskem sistemu Windows:* `Settings > System > About > Advanced system settings > Environment Variables > Path`
 
 (faq:vscode-windows)=
 ## VSCode in Windows
@@ -109,18 +107,17 @@ Sedaj bi moral delati znak `{`. Podobno popravimo ostale znake. Mimogrede, "Buil
 
 ### Windows
 
-Na operacijskem sistemu Windows v programu Explorer (Raziskovalec) desno kliknete na imenik in izberete
-"Show more options" in "Open Git Bash here".
+V Raziskovalcu desno kliknite na imenik in izberite _Show more options_ > _Open Git Bash here_.
+Ukazna vrstica se odpre v tem imeniku.
 
-Odprite ukazno vrstico Git Bash ([poženite jo s tipkovnice](bliznjice:zaganjanje)): 
-   Zadnja vrstica v oknu bi morala biti oblike `$` (temu rečemo ukazni poziv). 
+Lahko pa Git Bash [poženete s tipkovnice](bliznjice:zaganjanje): tedaj se odpre v vašem domačem imeniku, `/c/Users/⟨uporabnisko-ime⟩`, in se v želeni imenik premaknete z `cd`.
 
-Preverite, kje ste: natipkajte `pwd` (skupaj s pozivom bo videti kot `$ pwd`) in stisnite vnašalko (angl. *enter* ali *return*).
-   Verjetno se je izpisala nova vrstica, ki ima približno tako vsebino: `/c/Users/⟨vaše uporabniško ime⟩`.
-   Če je tako, ali če veste kako nadaljevati, nadaljujte, sicer pa prosite za pomoč.
+V obeh primerih je zadnja vrstica v oknu oblike `$`: to je pozivnik, za katerim pišete ukaze.
+Preverite, kje ste: natipkajte `pwd` in pritisnite vnašalko <kbd>↵</kbd>; izpiše se pot do imenika, v katerem ste.
+Če ni pravi ali če ne veste, kako naprej, prosite za pomoč.
 
 ### MacOS
 
-V meniju izberite  `Service > New Terminal at Folder`. Odprlo se bo novo okno z ukazno vrstico.
-Zadnja vrstica v oknu bi morala biti oblike `uporabnisko_ime@ime_racunalnika rudnik  %`.
+V Finderju desno kliknite na imenik in izberite _Services_ > _New Terminal at Folder_. Odprlo se bo novo okno z ukazno vrstico.
+Zadnja vrstica v oknu bi morala biti oblike `⟨uporabnisko-ime⟩@⟨ime-racunalnika⟩ ⟨imenik⟩ %`.
 Za znakom `%` stoji tudi kurzor (angl. *cursor*).
