@@ -76,6 +76,7 @@ Legacy material that is not in the tree:
 - Exercise format: numbered headings `## N. naloga: <naslov>` (legacy ucbenik style).
 - Chapter structure: prose first, exercises at the end. An exercise keeps only what the student needs to carry it out; explanation goes into the prose.
 - Terminology, command line: a *ukaz* is *ime programa* followed by *argumenti*; an argument starting with `-` is a *možnost*; the `$` is the *pozivnik*. *Argument* is reused for LaTeX and Mathematica (not *parameter*), *pozivnik* replaces the legacy FAQ's *ukazni poziv*. Both per Islovar.
+- Terminology, version control: *upravljanje različic* (per Islovar), also for VSCode's *Source Control* view.
 - Spelling: *VSCode* (full name *Visual Studio Code* only at first mention and in the software admonitions).
 - Platform baseline: prose states the behaviour of Git Bash on Windows (in the VSCode terminal) as the plain fact; what works elsewhere is an add-on in parentheses naming the system, e.g. `(na macOS \d sicer deluje)`.
 - Figures: MyST `:::{figure-md}` directives (legacy ucbenik style); each figure gets its own label, namespaced `slika:<ime>`.
@@ -132,6 +133,7 @@ Legacy material that is not in the tree:
 - 2026-10-08 — The repositories `prenova` and `predavanja` are merged into `racunalniski-praktikum.github.io`, which is now the only repository for the course content. `predavanja` keeps its history. `prenova` gives only its latest working tree, without its history and without `imported/`: the legacy textbook is already in this repository, the legacy slides are in the history of `predavanja`, and the selected content stays in `zbornica`. This supersedes the 2026-07-15 import decision and the 2026-09-30 decision on where slide decks are canonical.
 - 2026-10-08 — `COURSE.md` is split by audience and status: the public part goes to a to-do list for the README in `MIGRATION.md`, the guidance for authors to *Course principles* above, the lecture plans (drafts) to `MIGRATION.md`, and the exam design to the private `zbornica`. Its summary of changes from the previous run and its table of lecture hours are dropped: the entries above record them.
 - 2026-10-08 — The slides are published with the textbook, at <https://racunalniski-praktikum.github.io/predavanja/>. The Sphinx extension `ucbenik/extensions/predavanja.py` copies `predavanja/` into the book's HTML output and renders `predavanja/README.md` as its `index.html`, so `jupyter-book build ucbenik` and `ghp-import` publish both.
+- 2026-10-08 — Version control is *upravljanje različic*, the Islovar term, throughout the course. It replaces *nadzor različic* and *nadzor nad verzijami*. VSCode's *Source Control* view is glossed the same way, not with Islovar's *upravljanje izvorne kode*: students keep versions of text, not only of source code.
 
 ## Open questions
 

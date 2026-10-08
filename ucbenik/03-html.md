@@ -177,7 +177,7 @@ Prvega bomo še naprej uporabljali na vajah.
 
 9. Zabeležite spremembo:
    1. V opravilnem stolpcu poiščite ikono za Git (če se zapeljete nanjo z miško, bo pisalo _Source Control_) 
-      in jo kliknite, da dobite stranski meni za nadzor nad verzijami.
+      in jo kliknite, da dobite stranski meni za upravljanje različic.
    2. Pod napisom _Changes_ bi morala biti našteta datoteka `stran.html`.
       Če se nad vrstico z imenom datoteke zapeljete z miško, boste na desni strani videli ikone za opravila.
       Kliknite na <kbd>+</kbd> (_Stage Changes_, ki izvede ukaz [`add`](git:osnovni-ukazi)).

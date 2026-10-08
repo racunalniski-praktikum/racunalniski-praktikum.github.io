@@ -18,7 +18,7 @@ Sledite navodilom za vaš operacijski sistem, nato pa še [navodilom za nastavit
 ### Navodila za operacijski sistem Windows
 
 S spletne strani [git](https://git-scm.com/download/win) prenesite in namestite Git for Windows.
-Git je orodje za nadzor različic, poleg tega pa Git for Windows ponuja še močno ukazno vrstico.
+Git je orodje za upravljanje različic, poleg tega pa Git for Windows ponuja še močno ukazno vrstico.
 
 ### Navodila za operacijski sistem MacOS
 
