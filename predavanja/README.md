@@ -1,6 +1,6 @@
 # Gradiva s predavanj
 
-Pomožni repozitorij s prosojnicami in datotekami s predavanj pri predmetu Računalniški praktikum. Glavno gradivo pri predmetu je [učbenik](https://racunalniski-praktikum.github.io/).
+Prosojnice in datoteke s predavanj pri predmetu Računalniški praktikum. Glavno gradivo pri predmetu je [učbenik](https://racunalniski-praktikum.github.io/).
 
 ## Vsebina predmeta
 
@@ -39,4 +39,4 @@ Pomožni repozitorij s prosojnicami in datotekami s predavanj pri predmetu Raču
 
 ## V katerem orodju so narejene prosojnice?
 
-Prosojnice so narejene v različnih orodjih, odvisno od snovi: osnove v HTML-ju, LaTeX z Beamerjem, … Izvorno kodo lahko najdete na [GitHubu](https://github.com/racunalniski-praktikum/predavanja).
+Prosojnice so narejene v različnih orodjih, odvisno od snovi: osnove v HTML-ju, LaTeX z Beamerjem, … Izvorno kodo lahko najdete na [GitHubu](https://github.com/racunalniski-praktikum/racunalniski-praktikum.github.io/tree/main/predavanja).
