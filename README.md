@@ -1,16 +1,23 @@
 # Zapiski
 
-Za izdelavo HTML datotek si morate namestiti paket [`jupyter-book`](https://jupyterbook.org/). Nato pa pokličete
+Orodja za gradnjo so opisana v `pyproject.toml`, poganjamo pa jih z [uv](https://docs.astral.sh/uv/),
+ki si okolje uredi sam, zato ni treba ničesar namestiti vnaprej:
 
 ```bash
-jupyter-book build ucbenik
+uv run jupyter-book build ucbenik
 ```
 
-Če imate ustrezne pravice, lahko HTML najenostavneje objavite kar prek [GitHub pages](https://pages.github.com) tako, da si namestite še paket [`ghp-import`](https://github.com/c-w/ghp-import) in poženete
+Različica `jupyter-book` je omejena na `<2`, ker učbenik opisujeta `_config.yml` in `_toc.yml`,
+druga različica pa je drugo orodje (mystmd) in teh datotek ne prebere.
+
+Če imate ustrezne pravice, lahko HTML najenostavneje objavite kar prek [GitHub pages](https://pages.github.com):
 
 ```bash
-ghp-import --no-jekyll --no-history --force --push ucbenik/_build/html
+uv run --with ghp-import ghp-import --no-jekyll --no-history --force --push ucbenik/_build/html
 ```
+
+Objava s silo prepiše vejo `gh-pages`, zato pred njo zgradite učbenik na novo.
+Preden se spremembe pokažejo na spletu, mine minuta ali dve.
 
 ## Povezave
 
