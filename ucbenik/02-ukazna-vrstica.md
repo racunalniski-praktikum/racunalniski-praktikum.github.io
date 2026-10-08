@@ -169,8 +169,7 @@ Tudi sicer bo tipka <kbd>Tab</kbd> pri tej nalogi hudo uporabna:
 dopolni vam ukaz, kar še posebej pride prav pri dolgih imenih s presledki.
 Ne pozabite, da taka imena postavimo med narekovaje: `"To je dolgo ime z veliko presledki"`.
 
-1. Prenesite arhiv [`skrati.zip`](02-ukazna-vrstica/skrati.zip) in ga [odpakirajte](faq:zip).
-   Do konca naloge si zapomnite, kam ste ga shranili.
+1. Prenesite arhiv [`skrati.zip`](02-ukazna-vrstica/skrati.zip) in ga [odpakirajte](faq:zip) v imenik, ki ste ga naredili na prejšnjih vajah,  `rp`, poleg imenika `racunalniski-praktikum` in ne vanj.
 2. V VSCode odprite imenik `rudnik` (_File_ > _Open Folder_) in nato ukazno vrstico (_Terminal_ > _New Terminal_).
    Če vas VSCode vpraša, ali avtorjem imenika zaupate (_Do you trust the authors?_), potrdite, sicer ukazna vrstica ne deluje.
 3. Odprite še datoteko `skrati.pdf`.
