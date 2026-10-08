@@ -1,0 +1,808 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ukazna vrstica &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=db6da3aa" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02-ukazna-vrstica';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Nameščanje programske opreme" href="A-programska-oprema.html" />
+    <link rel="prev" title="Urejevalnik in Markdown" href="01-urejevalnik-in-markdown.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-urejevalnik-in-markdown.html">Urejevalnik in Markdown</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Ukazna vrstica</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="H-regex.html">Regularni izrazi</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/02-ukazna-vrstica.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ukazna vrstica</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datoteke-in-imeniki">Datoteke in imeniki</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ukazi">Ukazi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regularni-izrazi">Regularni izrazi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-skrati">1. naloga: škrati</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-opisovanje-vzorcev-z-regularnimi-izrazi">2. naloga: opisovanje vzorcev z regularnimi izrazi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-podnapisi">3. naloga: podnapisi</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ukazna-vrstica">
+<h1>Ukazna vrstica<a class="headerlink" href="#ukazna-vrstica" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-ukazna"><span class="std std-ref">ukazna vrstica</span></a>,</p></li>
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-vscode"><span class="std std-ref">Visual Studio Code</span></a>.</p></li>
+</ul>
+</div>
+<section id="datoteke-in-imeniki">
+<h2>Datoteke in imeniki<a class="headerlink" href="#datoteke-in-imeniki" title="Link to this heading">#</a></h2>
+<p>Vsi podatki na računalniku so shranjeni v datotekah (angl. <em>files</em>),
+poimenovanih kosih podatkov, kot so slike, besedila, zvočni posnetki ali programi.
+Organiziramo jih tako kot liste papirja v kartonskih mapah:
+razporedimo jih po imenikih (angl. <em>directories</em> ali <em>folders</em>),
+ki lahko poleg datotek vsebujejo tudi druge imenike.</p>
+<p>Ime datoteke ima dva dela: pred zadnjo piko je ime, za njo pa končnica, na primer <code class="docutils literal notranslate"><span class="pre">.jpg</span></code> v <code class="docutils literal notranslate"><span class="pre">pocitnice.jpg</span></code> ali <code class="docutils literal notranslate"><span class="pre">.docx</span></code> v <code class="docutils literal notranslate"><span class="pre">esej-na-maturi.docx</span></code>.
+Po končnici operacijski sistem ve, s katerim programom naj datoteko odpre;
+če jo spremenite, se datoteka pogosto ne odpre več.
+Današnji operacijski sistemi končnic ponavadi ne prikazujejo, zato <a class="reference internal" href="F-pogosta-vprasanja.html#faq-koncnice-skrite"><span class="std std-ref">vklopite prikazovanje končnic in skritih datotek</span></a>.</p>
+<p>Isto vrsto podatkov lahko shranimo na več načinov in vsak ima ponavadi svojo končnico. Nekaj pogostih:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Slike</p></th>
+<th class="head"><p>Dokumenti</p></th>
+<th class="head"><p>Zvok</p></th>
+<th class="head"><p>Video</p></th>
+<th class="head"><p>Ostalo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.jpg</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.docx</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.mp3</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.mp4</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.zip</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.jpeg</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.pptx</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.wav</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.mov</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.rar</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.gif</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.xlsx</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.ogg</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.avi</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.dmg</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.bmp</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.pdf</span></code></p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.mpg</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.exe</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.psd</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.txt</span></code></p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.mkv</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.py</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.svg</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code></p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.wmv</span></code></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- 
+Computer Skills Course: File Management, Part 2
+https://www.youtube.com/watch?v=DGd48PGbnBs
+ -->
+<p>Datoteke in imenike na svojem računalniku pregledujete v upravitelju datotek:
+v sistemu Windows je to Raziskovalec (angl. <em>File Explorer</em>), na macOS pa Finder.
+Vse, kar je vaše, je v vašem domačem imeniku (angl. <em>home directory</em>),
+skupaj z imeniki, kot so Desktop, Documents in Downloads, ki jih je ustvaril operacijski sistem.
+V učbeniku predpostavljamo angleška privzeta imena, kakršna so na računalnikih v učilnici; če so na vašem računalniku drugačna, uporabite svoja.
+Pozor: v sistemu Windows v slovenščini jih Raziskovalec le prikazuje kot Namizje, Dokumenti in Prenosi, v ukazni vrstici pa so še vedno angleška.
+Upravitelj datotek lahko vsebino imenika pokaže kot mrežo ikon ali kot seznam.
+Seznam je uporabnejši: pri vsaki datoteki vidite tudi vrsto, velikost in datum zadnje spremembe, s klikom na naslov stolpca pa seznam po tem stolpcu uredite.
+Na macOS se ta pogled imenuje <em>List</em>, v sistemu Windows <em>Details</em>.
+Kadar datoteko preimenujete, upravitelj izbere samo ime brez končnice, da je po nesreči ne spremenite.</p>
+<p>Umetna inteligenca, ki dela z vašimi datotekami, se po njih znajde enako kot vi: po imenih datotek in imenikov.
+Pospravljene datoteke s smiselnimi imeni ji torej pomagajo prav toliko kot vam.
+Datoteke pospravljate tako, da ustvarite imenike (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>) in datoteke vanje premaknete.
+Lažje gre z dvema oknoma: imenik odprite v novem zavihku in zavihek odvlecite v svoje okno.
+Več datotek izberete hkrati: s pritisnjeno tipko <kbd>Ctrl</kbd> (🍎 <kbd>Cmd</kbd>) dodajate posamezne datoteke, s <kbd>Shift</kbd> pa izberete vse med dvema.
+Isti tipki delujeta tudi pri izbiranju besed v urejevalniku ali celic v preglednici.
+Datoteko lahko namesto premika tudi kopirate.
+Kopiranje velikih datotek lahko traja dlje, premik znotraj istega diska pa se zgodi v trenutku:
+datoteka se v resnici ne premakne, spremeni se le zapis o tem, v katerem imeniku je.</p>
+<p>Imenik lahko vsebuje druge imenike, ti spet svoje, in tako naprej.
+To strukturo si lahko predstavljamo kot podrto drevo, kot na <a class="reference internal" href="#slika-drevo-domaci"><span class="std std-numref">Fig. 4</span></a>:
+korenski imenik, ki vsebuje vse druge, je skrajno levo, vsak imenik je zamaknjen pod tistega, v katerem je, datoteke pa so listi na koncih vej.
+Pot (angl. <em>path</em>) do datoteke našteje imenike od korena do nje.</p>
+<div class="note admonition">
+<p class="admonition-title">Opomba</p>
+<p>Imena imenikov in datotek v poti ločujejo poševnice: v ukazni vrstici poševnica <code class="docutils literal notranslate"><span class="pre">/</span></code>, tudi v Git Bash v sistemu Windows, v Raziskovalcu pa leva poševnica <code class="docutils literal notranslate"><span class="pre">\</span></code>.</p>
+</div>
+<figure class="align-center" id="slika-drevo-domaci" style="width: 80%">
+<img alt="Drevo domačega imenika" src="_images/drevo-domaci.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">  Domači imenik z imeniki iz 1. poglavja in pot do datoteke <code class="docutils literal notranslate"><span class="pre">README.md</span></code></span><a class="headerlink" href="#slika-drevo-domaci" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Več datotek lahko stisnemo v eno samo, arhiv (angl. <em>archive</em>),
+ki ga prepoznamo po končnicah <code class="docutils literal notranslate"><span class="pre">.zip</span></code>, <code class="docutils literal notranslate"><span class="pre">.rar</span></code>, <code class="docutils literal notranslate"><span class="pre">.7z</span></code>, <code class="docutils literal notranslate"><span class="pre">.tar</span></code> ali <code class="docutils literal notranslate"><span class="pre">.gz</span></code> in po ikoni z zadrgo.
+Windows vsebino arhiva pokaže, kot da bi bil navaden imenik, a to je le videz:
+za (skoraj) vsa opravila pri tem predmetu je treba arhiv najprej <a class="reference internal" href="F-pogosta-vprasanja.html#faq-zip"><span class="std std-ref">odpakirati</span></a>.</p>
+</section>
+<section id="ukazi">
+<h2>Ukazi<a class="headerlink" href="#ukazi" title="Link to this heading">#</a></h2>
+<p>Ukazna vrstica je uporabniški vmesnik, ki so ga največ uporabljali v bakreni dobi računalništva,
+naprednejšim uporabnikom računalnika pa še vedno pride prav.
+Če še niste med njimi, boste do konca študija prav gotovo tudi vi.</p>
+<p>Ukazi v ukazni vrstici so programi.
+Besede za imenom programa so njegovi <em>argumenti</em>: podatki, ki jih program potrebuje za izvedbo svoje naloge.
+Argument, ki se začne z <code class="docutils literal notranslate"><span class="pre">-</span></code>, je <em>možnost</em>: ne pove, s čim naj program dela, ampak kako.
+Program <code class="docutils literal notranslate"><span class="pre">cd</span></code> (kratko za angl. <em>change directory</em>) uporabimo z enim argumentom, potjo do imenika, v katerega se hočemo prestaviti,
+program <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (kratko za angl. <em>print working directory</em>) pa argumentov ne potrebuje.</p>
+<figure class="align-center" id="slika-anatomija-ukaza" style="width: 80%">
+<img alt="Sestavni deli ukaza" src="_images/anatomija-ukaza.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">  Sestavni deli ukaza v ukazni vrstici</span><a class="headerlink" href="#slika-anatomija-ukaza" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Dele ukaza ločijo presledki, zato ime s presledki postavimo med narekovaje:
+brez njih bi <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Vhodna</span> <span class="pre">dvorana</span></code> pomenilo premik v imenik <code class="docutils literal notranslate"><span class="pre">Vhodna</span></code> z odvečnim argumentom <code class="docutils literal notranslate"><span class="pre">dvorana</span></code>.
+Ukazi imajo lahko še druge dele, a te bomo spoznavali sproti, ko jih bomo potrebovali.</p>
+<p>Ukazno vrstico boste uporabljali kar v urejevalniku VSCode: odprete jo z ukazom <em>Terminal</em> &gt; <em>New Terminal</em>, pokaže pa se v podoknu (angl. <em>Panel</em>) na dnu okna.
+Začne v imeniku, ki ga imate odprtega v urejevalniku, zato imenik, v katerem želite delati, najprej odprite v VSCode (<em>File</em> &gt; <em>Open Folder</em>).
+V sistemu Windows preverite, da v podoknu desno zgoraj piše <code class="docutils literal notranslate"><span class="pre">bash</span></code> in ne <code class="docutils literal notranslate"><span class="pre">powershell</span></code>; če ne, kliknite puščico ob gumbu <code class="docutils literal notranslate"><span class="pre">+</span></code> in izberite <em>Git Bash</em>.
+Da vam tega ne bo treba ponavljati, <a class="reference internal" href="F-pogosta-vprasanja.html#faq-vscode-bash"><span class="std std-ref">nastavite Git Bash za privzeto ukazno vrstico</span></a>.
+Ukazno vrstico lahko odprete tudi brez urejevalnika, <a class="reference internal" href="F-pogosta-vprasanja.html#faq-ukazna-imenik"><span class="std std-ref">naravnost iz upravitelja datotek</span></a>.</p>
+<p>Najpogostejše ukaze smo zbrali v <a class="reference internal" href="C-ukazna-vrstica.html#plonkec-ukazna-vrstica"><span class="std std-ref">plonkcu za ukazno vrstico</span></a>.
+Nekaj primerov:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span><span class="w">                          </span><span class="c1"># izpiše pot do trenutnega delovnega imenika</span>
+ls<span class="w">                           </span><span class="c1"># izpiše vsebino trenutnega delovnega imenika</span>
+<span class="nb">cd</span><span class="w"> </span>rp<span class="w">                        </span><span class="c1"># premakne nas v podimenik rp</span>
+<span class="nb">cd</span><span class="w"> </span>racunalniski-praktikum<span class="w">    </span><span class="c1"># in še en imenik globlje</span>
+cat<span class="w"> </span>README.md<span class="w">                </span><span class="c1"># izpiše vsebino datoteke README.md</span>
+<span class="nb">cd</span><span class="w"> </span>..<span class="w">                        </span><span class="c1"># premakne nas en imenik višje, nazaj v rp</span>
+<span class="nb">cd</span><span class="w"> </span>~<span class="w">                         </span><span class="c1"># premakne nas v domači imenik, od koderkoli</span>
+<span class="nb">cd</span><span class="w"> </span>rp/racunalniski-praktikum<span class="w"> </span><span class="c1"># po poti se premaknemo za več imenikov naenkrat</span>
+</pre></div>
+</div>
+</section>
+<section id="regularni-izrazi">
+<h2>Regularni izrazi<a class="headerlink" href="#regularni-izrazi" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Regular_expression">Regularni izrazi</a> (angl. <em>regular expressions</em> ali kratko <em>regex</em>) so zaporedja znakov, s katerimi opišemo vzorce v navadnem besedilu.
+Najpreprostejši regularni izraz je natančno ujemanje, ki ste ga gotovo že kdaj uporabili: vse pojavitve besede <code class="docutils literal notranslate"><span class="pre">kuža</span></code> poiščemo z regularnim izrazom <code class="docutils literal notranslate"><span class="pre">kuža</span></code>.
+Kaj pa če želite poiskati vse številke v besedilu?
+To naredimo z regularnim izrazom <code class="docutils literal notranslate"><span class="pre">\d+</span></code>: <code class="docutils literal notranslate"><span class="pre">\d</span></code> je vzorec, ki predstavlja eno (katerokoli) števko, <code class="docutils literal notranslate"><span class="pre">+</span></code> pa pomeni eno ali več ponovitev tistega, kar piše pred njim.</p>
+<p>Z nekaj dodatnimi znaki opišemo bolj zapletene vzorce: en znak iz nabora, ponovitve, izbiro med možnostmi in skupine.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Vzorec</p></th>
+<th class="head"><p>Pomen</p></th>
+<th class="head"><p>Primer</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.</span></code></p></td>
+<td><p>en poljuben znak</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">k.ža</span></code> se ujema s <code class="docutils literal notranslate"><span class="pre">kuža</span></code> in <code class="docutils literal notranslate"><span class="pre">koža</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[…]</span></code></p></td>
+<td><p>en znak izmed naštetih</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[0-9]</span></code> je števka, <code class="docutils literal notranslate"><span class="pre">[čšž]</span></code> šumnik, <code class="docutils literal notranslate"><span class="pre">[a-z]</span></code> mala črka</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td><p>ena ali več ponovitev</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[0-9]+</span></code> se ujema s <code class="docutils literal notranslate"><span class="pre">7</span></code> in <code class="docutils literal notranslate"><span class="pre">21</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p>nič ali več ponovitev</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[0-9]+,[0-9]*</span></code> se ujema s <code class="docutils literal notranslate"><span class="pre">3,</span></code> in <code class="docutils literal notranslate"><span class="pre">3,14</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
+<td><p>nič ali ena ponovitev (neobvezen del)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">kuž[ae]k?</span></code> se ujema s <code class="docutils literal notranslate"><span class="pre">kuža</span></code>, <code class="docutils literal notranslate"><span class="pre">kuže</span></code>, <code class="docutils literal notranslate"><span class="pre">kužak</span></code> in <code class="docutils literal notranslate"><span class="pre">kužek</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">|</span></code></p></td>
+<td><p>izbira</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pes|kuža|maček</span></code> se ujema s katerokoli od treh besed</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">(…)</span></code></p></td>
+<td><p>skupina</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(ha)+</span></code> se ujema s <code class="docutils literal notranslate"><span class="pre">ha</span></code>, <code class="docutils literal notranslate"><span class="pre">haha</span></code>, <code class="docutils literal notranslate"><span class="pre">hahaha</span></code> …</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Ponovitev in izbira veljata za en znak ali za skupino v okroglih oklepajih.
+Oklepaji hkrati označijo skupino (angl. <em>capture group</em>): del besedila, ki se ujema z vsebino oklepajev, si iskalnik zapomni, zato se nanj lahko sklicujemo.</p>
+<p>Regularne izraze boste uporabljali na dveh mestih.
+V urejevalniku VSCode jih vklopite z ikono <code class="docutils literal notranslate"><span class="pre">.*</span></code> v iskalnem polju (<kbd>Ctrl</kbd>+<kbd>F</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>F</kbd>) ali v polju za zamenjavo (<kbd>Ctrl</kbd>+<kbd>H</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>F</kbd>).
+Pri zamenjavi <code class="docutils literal notranslate"><span class="pre">$1</span></code> pomeni prvo skupino, <code class="docutils literal notranslate"><span class="pre">$2</span></code> drugo in tako naprej:
+z iskanjem <code class="docutils literal notranslate"><span class="pre">(\d+),(\d+)</span></code> in zamenjavo <code class="docutils literal notranslate"><span class="pre">$1.$2</span></code> bi v vseh časih v podnapisih decimalno vejico zamenjali s piko.
+V ukazni vrstici z regularnimi izrazi iščemo z ukazom <code class="docutils literal notranslate"><span class="pre">grep</span></code>, ki izpiše vrstice, v katerih se vzorec ujema — na primer v podnapisih iz 3. naloge, ko jih shranite v UTF-8:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"Grozd|Gornik"</span><span class="w"> </span>podnapisi.srt<span class="w">     </span><span class="c1"># vrstice, v katerih nastopa Grozd ali Gornik</span>
+grep<span class="w"> </span>-c<span class="w"> </span>-E<span class="w"> </span><span class="s2">"Grozd|Gornik"</span><span class="w"> </span>podnapisi.srt<span class="w">  </span><span class="c1"># samo število takih vrstic</span>
+</pre></div>
+</div>
+<p>Regularni izrazi obstajajo v več različicah, ki se razlikujejo v podrobnostih.
+Nekatere na primer nimajo posebnega vzorca za števke, zato jih je treba opisati z <code class="docutils literal notranslate"><span class="pre">[0-9]</span></code>; <code class="docutils literal notranslate"><span class="pre">grep</span></code> pozna izbiro <code class="docutils literal notranslate"><span class="pre">|</span></code> in skupine šele z možnostjo <code class="docutils literal notranslate"><span class="pre">-E</span></code> (angl. <em>extended</em>).
+Tu smo opisali le majhen del; kar boste še potrebovali, boste našli sami.</p>
+</section>
+<section id="naloga-skrati">
+<h2>1. naloga: škrati<a class="headerlink" href="#naloga-skrati" title="Link to this heading">#</a></h2>
+<p>Glavni namen te naloge je, da začnete razvijati boljši občutek za to, kako računalnik deluje v ozadju.</p>
+<p>Za hitrejše preklapljanje med oknom z navodili in oknom z ukazno vrstico priporočamo
+bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Tab</kbd>).
+Tudi sicer bo tipka <kbd>Tab</kbd> pri tej nalogi hudo uporabna:
+dopolni vam ukaz, kar še posebej pride prav pri dolgih imenih s presledki.
+Ne pozabite, da taka imena postavimo med narekovaje: <code class="docutils literal notranslate"><span class="pre">&quot;To</span> <span class="pre">je</span> <span class="pre">dolgo</span> <span class="pre">ime</span> <span class="pre">z</span> <span class="pre">veliko</span> <span class="pre">presledki&quot;</span></code>.</p>
+<ol class="arabic">
+<li><p>Prenesite arhiv <a class="reference download internal" download="" href="_downloads/04bdabf9a215f3438082c3c5e6f0262b/skrati.zip"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">skrati.zip</span></code></span></a> in ga <a class="reference internal" href="F-pogosta-vprasanja.html#faq-zip"><span class="std std-ref">odpakirajte</span></a>.
+Nastali imenik <code class="docutils literal notranslate"><span class="pre">skrati</span></code> premaknite v imenik <code class="docutils literal notranslate"><span class="pre">rp</span></code>, ki ste ga naredili na prejšnjih vajah, poleg imenika <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code>, kot na <a class="reference internal" href="#slika-drevo-domaci"><span class="std std-numref">Fig. 4</span></a>.</p></li>
+<li><p>V VSCode odprite imenik <code class="docutils literal notranslate"><span class="pre">rudnik</span></code> (<em>File</em> &gt; <em>Open Folder</em>) in nato ukazno vrstico (<em>Terminal</em> &gt; <em>New Terminal</em>).
+Če vas VSCode vpraša, ali avtorjem imenika zaupate (<em>Do you trust the authors?</em>), potrdite, sicer ukazna vrstica ne deluje.</p></li>
+<li><p>Odprite še datoteko <code class="docutils literal notranslate"><span class="pre">skrati.pdf</span></code>.</p></li>
+<li><p>Preverite, da ste v pravem imeniku: v ukazno vrstico napišite <code class="docutils literal notranslate"><span class="pre">pwd</span></code> in pritisnite vnašalko <kbd>↵</kbd> (angl. <em>enter</em> ali <em>return</em>).
+Izpisala se bo nova vrstica. Če na koncu piše <code class="docutils literal notranslate"><span class="pre">rudnik</span></code>, je vse ok, sicer pa poiščite pomoč.</p></li>
+<li><p>V ukazno vrstico prilepite spodnji ukaz in pritisnite vnašalko <kbd>↵</kbd>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="s2">"Vhodna dvorana/Dolgočasna pravokotna dvorana/Radegastov kot/Zahodno križišče"</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<!-- Nasvet za samostojni Git Bash (zunaj VSCode) na Windows:
+Preverite, ali za kopiranje in lepljenje v programu Git Bash delujeta običajni bližnjici.
+Če ne, bosta morda delovali Ctrl+Ins in Shift+Ins.
+-->
+<!-- Dodatno za Windows Powershell (staro)
+$OutputEncoding = [System.Console]::OutputEncoding =[System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 
+$PSDefaultParameterValues['*:Encoding'] = 'utf8'
+? https://stackoverflow.com/questions/10651975/unicode-utf-8-with-git-bash
+-->
+<p>Naloga je interaktivna zgodba, v kateri boste uporabljali uroke, ki pa so v resnici programi.
+V zgodbi so navodila in namigi za posamezni odsek podani ležeče.
+Z branjem nadaljujte šele, ko opravite vse, kar piše.
+Sedaj lahko sledite navodilom v PDF datoteki.
+Veliko zabave in pazite na glavo, stropi so nizki!</p>
+</section>
+<section id="naloga-opisovanje-vzorcev-z-regularnimi-izrazi">
+<h2>2. naloga: opisovanje vzorcev z regularnimi izrazi<a class="headerlink" href="#naloga-opisovanje-vzorcev-z-regularnimi-izrazi" title="Link to this heading">#</a></h2>
+<p>Kakih 20 minut rešujte lekcije na spletni strani <a class="reference external" href="https://regexone.com">RegexOne</a> ali <a class="reference external" href="https://regexlearn.com/learn/regex101">RegexLearn</a>, ali pa na obeh.
+Na gumb <em>Continue</em> vam ni treba klikniti, dovolj je, da pritisnete vnašalko <kbd>↵</kbd>.
+Če ste regularne izraze že kdaj uporabljali, se lahko preizkusite v <a class="reference external" href="https://regexcrossword.com">regex križanki</a>.</p>
+</section>
+<section id="naloga-podnapisi">
+<h2>3. naloga: podnapisi<a class="headerlink" href="#naloga-podnapisi" title="Link to this heading">#</a></h2>
+<p>S spleta ste prenesli podnapise za film, a so nekatere črke napačne.</p>
+<ol class="arabic">
+<li><p>Prenesite datoteko <a class="reference download internal" download="" href="_downloads/741f17565748232989162ff059f0b6d4/podnapisi.srt"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">podnapisi.srt</span></code></span></a> in jo odprite v urejevalniku VSCode.
+Datoteke ne urejajte in je še ne shranjujte, sicer se napačne črke shranijo in jih ne boste mogli več popraviti.</p></li>
+<li><p>Poiščite podnapis številka 76. Katere črke so napačne?
+Če je podnapis videti pravilen, prosite za pomoč.</p></li>
+<li><p>V statusni vrstici kliknite na kodiranje (tam piše <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>) in izberite <em>Reopen with Encoding</em>.
+Poiščite kodiranje, pri katerem je podnapis 76 videti takole:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Če ste nedolžni nad njim, zakaj se bojite
+njegovih pisem? — On je bil pošten človek.
+</pre></div>
+</div>
+<p>Besedilo je slovensko, zato poskusite s srednjeevropskimi kodiranji (angl. <em>Central European</em>).
+Preverite vse tri šumnike: pri napačnem kodiranju so lahko nekateri pravilni, drugi pa ne.</p>
+</li>
+<li><p>V statusni vrstici še enkrat kliknite na kodiranje, izberite <em>Save with Encoding</em> in nato <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>.</p></li>
+<li><p>Odprite iskanje (<kbd>Ctrl</kbd>+<kbd>F</kbd> oz. 🍎 <kbd>Cmd</kbd>+<kbd>F</kbd>) in vklopite regularne izraze:
+kliknite na ikono <code class="docutils literal notranslate"><span class="pre">.*</span></code> v iskalnem polju ali pritisnite <kbd>Alt</kbd>+<kbd>R</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>R</kbd>).
+Napišite regularni izraz, ki se ujema s časom v podnapisih, na primer z <code class="docutils literal notranslate"><span class="pre">00:00:21,480</span></code>.
+Preverite: vsak podnapis ima dva časa, zato mora biti zadetkov dvakrat toliko, kot je podnapisov.</p></li>
+<li><p>Odprite ukazno vrstico (<em>Terminal</em> &gt; <em>New Terminal</em>), se s <code class="docutils literal notranslate"><span class="pre">cd</span></code> premaknite v imenik, kamor ste shranili datoteko, in čase preštejte še z ukazom</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-cE<span class="w"> </span><span class="s2">"⟨vzorec⟩"</span><span class="w"> </span>podnapisi.srt
+</pre></div>
+</div>
+<p>Z možnostjo <code class="docutils literal notranslate"><span class="pre">-c</span></code> (angl. <em>count</em>) ukazu povemo, naj izpiše samo število zadetkov,
+z možnostjo <code class="docutils literal notranslate"><span class="pre">-E</span></code> (angl. <em>extended</em>) pa, naj vzorec bere v razširjeni sintaksi, isti, kot jo pozna VSCode.
+Vzorca <code class="docutils literal notranslate"><span class="pre">\d</span></code> <code class="docutils literal notranslate"><span class="pre">grep</span></code> ne pozna, zato števke opišite z <code class="docutils literal notranslate"><span class="pre">[0-9]</span></code> (na macOS <code class="docutils literal notranslate"><span class="pre">\d</span></code> sicer deluje).
+Zakaj je število pol manjše kot v urejevalniku?</p>
+</li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01-urejevalnik-in-markdown.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Urejevalnik in Markdown</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="A-programska-oprema.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Nameščanje programske opreme</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datoteke-in-imeniki">Datoteke in imeniki</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ukazi">Ukazi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regularni-izrazi">Regularni izrazi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-skrati">1. naloga: škrati</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-opisovanje-vzorcev-z-regularnimi-izrazi">2. naloga: opisovanje vzorcev z regularnimi izrazi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-podnapisi">3. naloga: podnapisi</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

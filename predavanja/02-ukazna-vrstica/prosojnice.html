@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ukazna vrstica</title>
+
+    <link rel="stylesheet" href="../pomozno/prosojnice.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section class="center">
+                <h1>Ukazna vrstica</h1>
+            </section>
+
+            <section data-markdown class="center">
+                <textarea data-template>
+
+```plaintext
+> Kolikokrat je Gornik omenjen v podnapisih?
+```
+<!-- .element: style="font-size: 0.42em" -->
+
+- - -
+
+```plaintext
+● Bash(cd /tmp/claude/-c-Users-ana-rp/5e0f2c7a/scratchpad)
+
+● Bash(ls ~/Downloads | grep -E "srt|pdf")
+  ⎿  podnapisi.srt
+     skrati.pdf
+
+● Bash(cat ~/Downloads/podnapisi.srt | grep -E "Gornik(a|u|om)?|Grozd" > omembe.txt)
+
+● Bash(grep -c "Gornik" omembe.txt)
+  ⎿  91
+
+Gornik je omenjen v 91 vrsticah. Vse omembe sem shranil v omembe.txt.
+```
+<!-- .element: style="font-size: 0.42em" -->
+
+</textarea>
+            </section>
+
+            <section class="center">
+                <h2>Datotečni sistem</h2>
+            </section>
+            <section class="center">
+                <div
+                    style="display: grid; grid-template-columns: auto 1fr 1fr; gap: 0.2em 1em; align-items: center; justify-items: center;">
+                    <span></span>
+                    <span>imenik</span>
+                    <span>ZIP arhiv</span>
+                    <span>macOS</span>
+                    <img src="mac-folder.png" alt="Imenik na macOS" style="height: 200px; margin: 0;" />
+                    <img src="mac-zip.png" alt="ZIP arhiv na macOS" style="height: 200px; margin: 0;" />
+                    <span>Windows</span>
+                    <img src="win-folder.svg" alt="Imenik v sistemu Windows" style="height: 200px; margin: 0;" />
+                    <img src="win-zip.svg" alt="ZIP arhiv v sistemu Windows" style="height: 200px; margin: 0;" />
+                </div>
+            </section>
+            <section class="center">
+                <img class="r-stretch" src="drevo-domaci.svg" alt="Drevo domačega imenika" />
+                <p>Domači imenik</p>
+            </section>
+
+            <section data-markdown class="center">
+                <textarea data-template>
+## Absolutna pot
+
+od korena do datoteke, velja od koderkoli
+
+| pot | kje |
+| --- | --- |
+| `C:\Users\ana\rp\racunalniski-praktikum\README.md` | Windows |
+| `/Users/ana/rp/racunalniski-praktikum/README.md` | macOS & Linux |
+| `/c/Users/ana/rp/racunalniski-praktikum/README.md` | Git Bash |
+<!-- .element: style="font-size: 60%" -->
+
+---
+
+## Posebne poti
+
+| pot | pomen |
+| --- | --- |
+| `.` | trenutni imenik |
+| `..` | starševski imenik |
+| `~` | domači imenik (`/c/Users/ana`) |
+
+---
+
+## Relativna pot
+
+od trenutnega delovnega imenika, ki je `/c/Users/ana`
+
+| absolutna pot | relativna pot |
+| --- | --- |
+| `/c/Users/ana/rp` | `rp` |
+| `/c/Users/ana/rp/racunalniski-praktikum/README.md` | `rp/racunalniski-praktikum/README.md` |
+| `/c/Users/ana/Downloads/podnapisi.srt` | `Downloads/podnapisi.srt` |
+<!-- .element: style="font-size: 60%" -->
+
+---
+
+## Relativna pot
+
+od trenutnega delovnega imenika, ki je `/c/Users/ana/rp/racunalniski-praktikum`
+
+| absolutna pot | relativna pot |
+| --- | --- |
+| `/c/Users/ana/rp` | `..` |
+| `/c/Users/ana/rp/racunalniski-praktikum/README.md` | `README.md` |
+| `/c/Users/ana/Downloads/podnapisi.srt` | `../../Downloads/podnapisi.srt` |
+<!-- .element: style="font-size: 60%" -->
+
+---
+
+## Relativna pot
+
+od trenutnega delovnega imenika, ki je `/c/Users/ana/Downloads`
+
+| absolutna pot | relativna pot |
+| --- | --- |
+| `/c/Users/ana/rp` | `../rp` |
+| `/c/Users/ana/rp/racunalniski-praktikum/README.md` | `../rp/racunalniski-praktikum/README.md` |
+| `/c/Users/ana/Downloads/podnapisi.srt` | `podnapisi.srt` |
+<!-- .element: style="font-size: 60%" -->
+
+</textarea>
+            </section>
+
+            <section class="center">
+                <img class="r-stretch" src="terminal.png" alt="Ukazna vrstica" />
+                <p>Ukazna vrstica</p>
+            </section>
+
+            <section data-markdown class="center">
+                <textarea data-template>
+## `pwd`, `ls`, `cd`
+
+```shell
+$ pwd
+/c/Users/ana
+$ ls
+Desktop  Documents  Downloads  rp
+$ cd rp/racunalniski-praktikum
+$ pwd
+/c/Users/ana/rp/racunalniski-praktikum
+$ cd ..
+$ pwd
+/c/Users/ana/rp
+```
+
+---
+
+## `cat`
+
+```shell
+$ cd ~/Downloads
+$ cat podnapisi.srt
+1
+00:00:38,756 --> 00:00:44,116
+... Takó je torej današnji dan — dan
+veselja in svečanih občutkov za ves naš
+…
+```
+
+---
+
+## `>`
+
+```shell
+$ echo Zdravo > pozdrav.txt
+$ cat pozdrav.txt
+Zdravo
+$ echo Adijo > pozdrav.txt
+$ cat pozdrav.txt
+Adijo
+```
+
+`>` datoteko prepiše brez vprašanja
+<!-- .element: class="fragment" -->
+
+---
+
+## `|`
+
+```shell
+$ ls ~/Downloads
+podnapisi.srt  skrati.pdf
+$ ls ~/Downloads | grep srt
+podnapisi.srt
+```
+
+---
+
+## `grep`
+
+```shell
+$ grep Gornik podnapisi.srt
+Oprede naj ga, omreži in ovije; Gornik je
+Gornika torej. Videl sem ga: debel človek
+…
+$ grep -c Gornik podnapisi.srt
+91
+```
+
+</textarea>
+            </section>
+
+            <section data-markdown class="center">
+                <textarea data-template>
+## Regularni izrazi
+
+---
+
+| vzorec | pomen |
+| --- | --- |
+| `.` | poljuben znak |
+| `[Gg]` | eden od naštetih |
+| `[a-z]` | eden iz razpona |
+| `\d` | števka |
+</textarea></section>
+
+            <section class="center">
+                <img class="r-stretch" src="../01-besedilne-datoteke/vs-code.png" alt="Visual Studio Code" />
+                <p>Regularni izrazi v VS Code</p>
+            </section>
+
+            <section data-markdown class="center">
+                <textarea data-template>
+| vzorec | pomen |
+| --- | --- |
+| `?` | nič ali enkrat |
+| `+` | enkrat ali večkrat |
+| `*` | nič ali večkrat |
+| `\|` | izbira |
+| `(…)` | skupina |
+
+---
+
+## `grep -E`
+
+```shell
+$ grep -cE "Gornik|Grozd" podnapisi.srt
+119
+```
+</textarea>
+            </section>
+
+            <section data-markdown class="center">
+                <textarea data-template>
+```plaintext
+> Kolikokrat je Gornik omenjen v podnapisih?
+```
+<!-- .element: style="font-size: 0.42em" -->
+
+- - -
+
+```plaintext
+● Bash(cd /tmp/claude/-c-Users-ana-rp/5e0f2c7a/scratchpad)
+
+● Bash(ls ~/Downloads | grep -E "srt|pdf")
+  ⎿  podnapisi.srt
+     skrati.pdf
+
+● Bash(cat ~/Downloads/podnapisi.srt | grep -E "Gornik(a|u|om)?|Grozd" > omembe.txt)
+
+● Bash(grep -c "Gornik" omembe.txt)
+  ⎿  91
+
+Gornik je omenjen v 91 vrsticah. Vse omembe sem shranil v omembe.txt.
+```
+<!-- .element: style="font-size: 0.42em" -->
+</textarea>
+            </section>
+        </div>
+    </div>
+
+    <script src="../pomozno/prosojnice.js" type="module"></script>
+</body>
+
+</html>
