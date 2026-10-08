@@ -1,9 +1,26 @@
-# MyST build outputs
-ucbenik/_build/
-*.DS_Store
+# MyST / Jupyter Book build outputs
+_build/
 *.md#
+
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
 _minted*
 
 ucbenik/06-uvod-v-latex/urnik.pdf
-# uv virtual environment
+
+# Python
+__pycache__/
 .venv/
+
+# OS / editor
+.DS_Store
+*~

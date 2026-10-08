@@ -76,10 +76,14 @@ Na operacijskem sistemu Windows v programu Explorer (Raziskovalec) desno kliknet
 Odprite okno z ukazno vrstico (**Terminal** > **New Terminal**).
 V spodnjem desnem delu VSCode okna bi se vam moral odpreti nov razdelek z ukazno vrstico. 
 Znotraj tega razdelka desno zgoraj poiščite ikone za opravila. 
-Če pred ikonami piše `bash`, je to to. Če piše `powershell`, poiščite gumb + in **kliknite na puščico navzdol ki se dotika gumba +**.
-Izberite možnost "Select default profile".
-Čisto na vrhu VSCode okna bi se moral odpreti meni, v katerem so naštete možnosti za ukazno vrstico.
-Kliknite na vrstico, v kateri piše "Git Bash".
+Če pred ikonami piše `bash`, je to to. Če piše `powershell`, poiščite gumb + in **kliknite na puščico navzdol, ki se dotika gumba +**.
+Odpre se meni, v katerem so naštete ukazne vrstice, ki jih VSCode pozna.
+
+Za enkratno uporabo v meniju kliknite na "Git Bash": odpre se nova ukazna vrstica Git Bash, privzeta pa ostane PowerShell, zato boste to morali ponoviti ob vsakem odpiranju.
+
+Da bo Git Bash privzeta, v istem meniju izberite možnost "Select Default Profile".
+Čisto na vrhu VSCode okna se odpre seznam z istimi ukaznimi vrsticami; kliknite na vrstico, v kateri piše "Git Bash".
+Od zdaj naprej se bo z ukazom **Terminal** > **New Terminal** odprl Git Bash.
 
 (faq:vscode-latex-si)=
 ### LaTeX in slovenska tipkovnica

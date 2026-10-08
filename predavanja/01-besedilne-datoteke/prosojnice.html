@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Besedilne datoteke</title>
+
+    <link rel="stylesheet" href="../pomozno/prosojnice.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section class="center">
+                <h1>Besedilne datoteke</h1>
+            </section>
+            <section class="center">
+                <img class="r-stretch" src="word.png" alt="Microsoft Word" />
+                <p>Microsoft Word</p>
+            </section>
+            <section class="center">
+                <img class="r-stretch" src="vs-code.png" alt="Visual Studio Code" />
+                <p><a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
+            </section>
+            <section data-markdown class="center">
+                <textarea data-template>
+## Markdown
+
+---
+
+```
+[Markdown](https://www.markdownguide.org) je preprost, a zelo
+razširjen _označevalni jezik_, ki omogoča hitro pisanje
+strukturiranih dokumentov **brez zapletenih orodij**. Zanj
+običajno uporabljamo končnico `.md`. Njegov osnovni namen je:
+
+> “Olajšati pisanje za splet v čisti, berljivi obliki.”
+> — John Gruber
+
+Ključne prednosti Markdowna so:
+- **berljivost** izvornega besedila,
+- združljivost s sistemi za **nadzor različic** in s
+  `programsko kodo`,
+- **pretvorljivost** v različne formate (HTML, PDF, LaTeX …).
+```
+
+---
+
+<small style="text-align: left;"><div markdown="1">
+[Markdown](https://www.markdownguide.org) je preprost, a zelo
+razširjen _označevalni jezik_, ki omogoča hitro pisanje
+strukturiranih dokumentov **brez zapletenih orodij**. Zanj
+običajno uporabljamo končnico `.md`. Njegov osnovni namen je:
+
+> “Olajšati pisanje za splet v čisti, berljivi obliki.”
+> — John Gruber
+
+Ključne prednosti Markdowna so:
+- **berljivost** izvornega besedila,
+- združljivost s sistemi za **nadzor različic** in s
+  `programsko kodo`,
+- **pretvorljivost** v različne formate (HTML, PDF, LaTeX …).
+</div></small>
+
+</textarea>
+            </section>
+
+            <section class="center">
+                <img class="r-stretch" src="markdown-v-discordu.png" alt="Markdown v Discordu" />
+                <p>Markdown v Discordu</p>
+            </section>
+
+            <section data-markdown class="center">
+                <textarea data-template>
+## Kodne tabele
+
+---
+
+### Računalnik razume le `0` in `1`
+
+> To je prvi stavek. To je drugi stavek. To je tretji stavek. To je četrti stavek.
+
+
+```
+0101010001101111001000000110101001100101001000000111000001110010
+0111011001101001001000000111001101110100011000010111011001100101
+0110101100101110001000000101010001101111001000000110101001100101
+0010000001100100011100100111010101100111011010010000101001110011
+0111010001100001011101100110010101101011001011100010000001010100
+0110111100100000011010100110010100100000011101000111001001100101
+0111010001101010011010010010000001110011011101000110000101110110
+0110010101101011001011100010000001010100011011110000101001101010
+0110010100100000110001001000110101100101011101000111001001110100
+0110100100100000011100110111010001100001011101100110010101101011
+0010111000001010
+```
+
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+---
+
+| znak           | mesto v tabeli | dvojiški zapis |
+|:--------------:|:---:|:--------------:|
+| _nova vrstica_ | 10  | `00001010`     |
+| _presledek_    | 32  | `00100000`     |
+| 0              | 48  | `00110000`     |
+| 1              | 49  | `00110001`     |
+| @              | 64  | `01000000`     |
+| A              | 65  | `01000001`     |
+| B              | 66  | `01000010`     |
+| P              | 80  | `01010000`     |
+| a              | 97  | `01100001`     |
+| d              | 100 | `01100100`     |
+<!-- .element: style="font-size:75%" -->
+
+---
+
+|       | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| ----  |:-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| **0** | ␀ | ␁ | ␂ | ␃ | ␄ | ␅ | ␆ | ␇ | ␈ | ␉ | ␊ | ␋ | ␌ | ␍ | ␎ | ␏ |
+| **1** | ␐ | ␑ | ␒ | ␓ | ␔ | ␕ | ␖ | ␗ | ␘ | ␙ | ␚ | ␛ | ␜ | ␝ | ␞ | ␟ |
+| **2** | ␠ | ! | " | # | $ | % | & | ' | ( | ) | * | + | , | - | . | / |
+| **3** | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | = | > | ? |
+| **4** | @ | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O |
+| **5** | P | Q | R | S | T | U | V | W | X | Y | Z | [ | \ | ] | ^ | _ |
+| **6** | ` | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o |
+| **7** | p | q | r | s | t | u | v | w | x | y | z | { | ｜ | } | ~ | ␡ |
+<!-- .element: style="font-size:75%" -->
+
+kodna tabela **ASCII**
+
+---
+
+## Koliko različnih znakov lahko predstavimo z 8 biti?
+
+---
+
+|       | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| ----  |:-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| **0** | ␀ | ␁ | ␂ | ␃ | ␄ | ␅ | ␆ | ␇ | ␈ | ␉ | ␊ | ␋ | ␌ | ␍ | ␎ | ␏ |
+| **1** | ␐ | ␑ | ␒ | ␓ | ␔ | ␕ | ␖ | ␗ | ␘ | ␙ | ␚ | ␛ | ␜ | ␝ | ␞ | ␟ |
+| **2** | ␠ | ! | " | # | $ | % | & | ' | ( | ) | * | + | , | - | . | / |
+| **3** | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | = | > | ? |
+| **4** | @ | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O |
+| **5** | P | Q | R | S | T | U | V | W | X | Y | Z | [ | \ | ] | ^ | _ |
+| **6** | ` | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o |
+| **7** | p | q | r | s | t | u | v | w | x | y | z | { | ｜ | } | ~ | ␡ |
+| **8** |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| **9** |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| **A** |   | ¡ | ¢ | £ | ¤ | ¥ | ¦ | § | ¨ | © | ª | « | ¬ | - | ® | ¯ |
+| **B** | ° | ± | ² | ³ | ´ | µ | ¶ | · | ¸ | ¹ | º | » | ¼ | ½ | ¾ | ¿ |
+| **C** | À | Á | Â | Ã | Ä | Å | Æ | Ç | È | É | Ê | Ë | Ì | Í | Î | Ï |
+| **D** | Ð | Ñ | Ò | Ó | Ô | Õ | Ö | × | Ø | Ù | Ú | Û | Ü | Ý | Þ | ß |
+| **E** | à | á | â | ã | ä | å | æ | ç | è | é | ê | ë | ì | í | î | ï |
+| **F** | ð | ñ | ò | ó | ô | õ | ö | ÷ | ø | ù | ú | û | ü | ý | þ | ÿ |
+<!-- .element: style="font-size:50%" -->
+
+kodna tabela **ISO-8859-1**
+---
+
+|       | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| ----  |:-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| **0** | ␀ | ␁ | ␂ | ␃ | ␄ | ␅ | ␆ | ␇ | ␈ | ␉ | ␊ | ␋ | ␌ | ␍ | ␎ | ␏ |
+| **1** | ␐ | ␑ | ␒ | ␓ | ␔ | ␕ | ␖ | ␗ | ␘ | ␙ | ␚ | ␛ | ␜ | ␝ | ␞ | ␟ |
+| **2** | ␠ | ! | " | # | $ | % | & | ' | ( | ) | * | + | , | - | . | / |
+| **3** | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | = | > | ? |
+| **4** | @ | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O |
+| **5** | P | Q | R | S | T | U | V | W | X | Y | Z | [ | \ | ] | ^ | _ |
+| **6** | ` | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o |
+| **7** | p | q | r | s | t | u | v | w | x | y | z | { | ｜ | } | ~ | ␡ |
+| **8** |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| **9** |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| **A** |   | Ą | ˘ | Ł | ¤ | Ľ | Ś | § | ¨ | Š | Ş | Ť | Ź | - | Ž | Ż |
+| **B** | ° | ą | ˛ | ł | ´ | ľ | ś | ˇ | ¸ | š | ş | ť | ź | ˝ | ž | ż |
+| **C** | Ŕ | Á | Â | Ă | Ä | Ĺ | Ć | Ç | Č | É | Ę | Ë | Ě | Í | Î | Ď |
+| **D** | Đ | Ń | Ň | Ó | Ô | Ő | Ö | × | Ř | Ů | Ú | Ű | Ü | Ý | Ţ | ß |
+| **E** | ŕ | á | â | ă | ä | ĺ | ć | ç | č | é | ę | ë | ě | í | î | ď |
+| **F** | đ | ń | ň | ó | ô | ő | ö | ÷ | ř | ů | ú | ű | ü | ý | ţ | ˙ |
+<!-- .element: style="font-size:50%" -->
+
+kodna tabela **ISO-8859-2**
+
+---
+
+|       | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| ----  |:-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| **0** | ␀ | ␁ | ␂ | ␃ | ␄ | ␅ | ␆ | ␇ | ␈ | ␉ | ␊ | ␋ | ␌ | ␍ | ␎ | ␏ |
+| **1** | ␐ | ␑ | ␒ | ␓ | ␔ | ␕ | ␖ | ␗ | ␘ | ␙ | ␚ | ␛ | ␜ | ␝ | ␞ | ␟ |
+| **2** | ␠ | ! | " | # | $ | % | & | ' | ( | ) | * | + | , | - | . | / |
+| **3** | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | = | > | ? |
+| **4** | @ | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O |
+| **5** | P | Q | R | S | T | U | V | W | X | Y | Z | [ | \ | ] | ^ | _ |
+| **6** | ` | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o |
+| **7** | p | q | r | s | t | u | v | w | x | y | z | { | ｜ | } | ~ | ␡ |
+| **8** | € |   | ‚ |   | „ | … | † | ‡ |   | ‰ | Š | ‹ | Ś | Ť | Ž | Ź |
+| **9** |   | ‘ | ’ | “ | ” | • | – | — |   | ™ | š | › | ś | ť | ž | ź |
+| **A** |   | ˇ | ˘ | Ł | ¤ | Ą | ¦ | § | ¨ | © | Ş | « | ¬ | -­ | ® | Ż |
+| **B** | ° | ± | ˛ | ł | ´ | µ | ¶ | · | ¸ | ą | ş | » | Ľ | ˝ | ľ | ż |
+| **C** | Ŕ | Á | Â | Ă | Ä | Ĺ | Ć | Ç | Č | É | Ę | Ë | Ě | Í | Î | Ď |
+| **D** | Đ | Ń | Ň | Ó | Ô | Ő | Ö | × | Ř | Ů | Ú | Ű | Ü | Ý | Ţ | ß |
+| **E** | ŕ | á | â | ă | ä | ĺ | ć | ç | č | é | ę | ë | ě | í | î | ď |
+| **F** | đ | ń | ň | ó | ô | ő | ö | ÷ | ř | ů | ú | ű | ü | ý | ţ | ˙ |
+<!-- .element: style="font-size:50%" -->
+
+kodna tabela **Windows-1250**
+
+---
+
+| znak           | mesto v tabeli | dvojiški zapis |
+|:--------------:|:---:|:--------------:|
+| 1              | 49  | **`0`**<!-- .element: style="color: gray" -->`0110001`     |
+| 0              | 48  | **`0`**<!-- .element: style="color: gray" -->`0110000`     |
+| A              | 65  | **`0`**<!-- .element: style="color: gray" -->`1000001`     |
+| a              | 97  | **`0`**<!-- .element: style="color: gray" -->`1100001`     |
+| č              | 269 | **`110`**<!-- .element: style="color: gray" -->`00100` **`10`**<!-- .element: style="color: gray" -->`001101`     |
+| Θ              | 920 | **`110`**<!-- .element: style="color: gray" -->`01110` **`10`**<!-- .element: style="color: gray" -->`011000`     |
+| 㧔              | 14804 | **`1110`**<!-- .element: style="color: gray" -->`0011` **`10`**<!-- .element: style="color: gray" -->`100111` **`10`**<!-- .element: style="color: gray" -->`010100`     |
+| 💩              | 128169 | **`11110`**<!-- .element: style="color: gray" -->`000` **`10`**<!-- .element: style="color: gray" -->`011111` **`10`**<!-- .element: style="color: gray" -->`010010` **`10`**<!-- .element: style="color: gray" -->`101001`     |
+<!-- .element: style="font-size:70%" -->
+
+kodna tabela **UTF-8**
+
+</textarea>
+            </section>
+        </div>
+    </div>
+
+    <script src="../pomozno/prosojnice.js" type="module"></script>
+</body>
+
+</html>
