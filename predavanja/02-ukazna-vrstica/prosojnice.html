@@ -30,7 +30,7 @@
 
 ● Bash(ls ~/Downloads | grep -E "srt|pdf")
   ⎿  podnapisi.srt
-     skrati.pdf
+      skrati.pdf
 
 ● Bash(cat ~/Downloads/podnapisi.srt | grep -E "Gornik(a|u|om)?|Grozd" > omembe.txt)
 
@@ -70,13 +70,24 @@ Gornik je omenjen v 91 vrsticah. Vse omembe sem shranil v omembe.txt.
                 <textarea data-template>
 ## Absolutna pot
 
-od korena do datoteke, velja od koderkoli
-
 | pot | kje |
 | --- | --- |
 | `C:\Users\ana\rp\racunalniski-praktikum\README.md` | Windows |
 | `/Users/ana/rp/racunalniski-praktikum/README.md` | macOS & Linux |
 | `/c/Users/ana/rp/racunalniski-praktikum/README.md` | Git Bash |
+<!-- .element: style="font-size: 60%" -->
+
+---
+
+## Relativna pot
+
+`/c/Users/ana` → …
+
+| absolutna pot | relativna pot |
+| --- | --- |
+| `/c/Users/ana/rp` | `rp` |
+| `/c/Users/ana/rp/racunalniski-praktikum/README.md` | `rp/racunalniski-praktikum/README.md` |
+| `/c/Users/ana/Downloads/podnapisi.srt` | `Downloads/podnapisi.srt` |
 <!-- .element: style="font-size: 60%" -->
 
 ---
@@ -93,20 +104,7 @@ od korena do datoteke, velja od koderkoli
 
 ## Relativna pot
 
-od trenutnega delovnega imenika, ki je `/c/Users/ana`
-
-| absolutna pot | relativna pot |
-| --- | --- |
-| `/c/Users/ana/rp` | `rp` |
-| `/c/Users/ana/rp/racunalniski-praktikum/README.md` | `rp/racunalniski-praktikum/README.md` |
-| `/c/Users/ana/Downloads/podnapisi.srt` | `Downloads/podnapisi.srt` |
-<!-- .element: style="font-size: 60%" -->
-
----
-
-## Relativna pot
-
-od trenutnega delovnega imenika, ki je `/c/Users/ana/rp/racunalniski-praktikum`
+`/c/Users/ana/rp/racunalniski-praktikum` → …
 
 | absolutna pot | relativna pot |
 | --- | --- |
@@ -119,7 +117,7 @@ od trenutnega delovnega imenika, ki je `/c/Users/ana/rp/racunalniski-praktikum`
 
 ## Relativna pot
 
-od trenutnega delovnega imenika, ki je `/c/Users/ana/Downloads`
+`/c/Users/ana/Downloads` → …
 
 | absolutna pot | relativna pot |
 | --- | --- |
@@ -155,10 +153,12 @@ $ pwd
 
 ---
 
-## `cat`
+## `echo`, `cat`
 
 ```shell
 $ cd ~/Downloads
+$ echo Zdravo
+Zdravo
 $ cat podnapisi.srt
 1
 00:00:38,756 --> 00:00:44,116
@@ -194,19 +194,6 @@ $ ls ~/Downloads | grep srt
 podnapisi.srt
 ```
 
----
-
-## `grep`
-
-```shell
-$ grep Gornik podnapisi.srt
-Oprede naj ga, omreži in ovije; Gornik je
-Gornika torej. Videl sem ga: debel človek
-…
-$ grep -c Gornik podnapisi.srt
-91
-```
-
 </textarea>
             </section>
 
@@ -222,15 +209,9 @@ $ grep -c Gornik podnapisi.srt
 | `[Gg]` | eden od naštetih |
 | `[a-z]` | eden iz razpona |
 | `\d` | števka |
-</textarea></section>
 
-            <section class="center">
-                <img class="r-stretch" src="../01-besedilne-datoteke/vs-code.png" alt="Visual Studio Code" />
-                <p>Regularni izrazi v VS Code</p>
-            </section>
+---
 
-            <section data-markdown class="center">
-                <textarea data-template>
 | vzorec | pomen |
 | --- | --- |
 | `?` | nič ali enkrat |
@@ -248,6 +229,11 @@ $ grep -cE "Gornik|Grozd" podnapisi.srt
 119
 ```
 </textarea>
+            </section>
+
+            <section class="center">
+                <img class="r-stretch" src="../01-besedilne-datoteke/vs-code.png" alt="Visual Studio Code" />
+                <p>Regularni izrazi v VS Code</p>
             </section>
 
             <section data-markdown class="center">
