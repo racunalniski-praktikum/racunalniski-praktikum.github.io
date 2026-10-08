@@ -45,8 +45,8 @@
 | ------------------------ | --------------------------------- | ---------------------------------------- | --------------------------------- |
 | 1.–2. oktober            | /                                 | Urejanje besedil                         | Urejanje besedil                  |
 | 5.–9. oktober            | Urejanje besedil                  | Ukazna vrstica                           | Ukazna vrstica                    |
-| 12.–16. oktober          | Ukazna vrstica                    | Nadzor različic                          | Nadzor različic                   |
-| 19.–23. oktober          | Nadzor različic                   | HTML                                     | HTML                              |
+| 12.–16. oktober          | Ukazna vrstica                    | Upravljanje različic                     | Upravljanje različic              |
+| 19.–23. oktober          | Upravljanje različic              | HTML                                     | HTML                              |
 | 26.–30. oktober          | HTML                              | LaTeX 1: uvod                            | LaTeX 1: uvod                     |
 | 2.–6. november           | LaTeX 1: uvod                     | LaTeX 2: okolja, sklicevanje             | LaTeX 2: okolja, sklicevanje      |
 | 9.–13. november          | LaTeX 2: okolja, sklicevanje      | LaTeX 3: predstavitve                    | LaTeX 3: predstavitve             |

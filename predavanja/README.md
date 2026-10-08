@@ -12,8 +12,8 @@ Prosojnice in datoteke s predavanj pri predmetu Računalniški praktikum. Glavno
    - podnapisi v različnih kodnih tabelah: [ISO-8859-2](01-besedilne-datoteke/podnapisi/iso8859-2.srt), [CP-1250](01-besedilne-datoteke/podnapisi/cp1250.srt), [UTF-8](01-besedilne-datoteke/podnapisi/utf8.srt)
 2. Ukazna vrstica (datotečni sistem, ukazna vrstica, regularni izrazi)
    <!-- - [prosojnice](02-ukazna-vrstica/…) -->
-3. Nadzor različic (nadzor različic, oblačne storitve, Git, sinhronizacija, konflikti)
-   <!-- - [prosojnice](03-nadzor-različic/…) -->
+3. Upravljanje različic (upravljanje različic, oblačne storitve, Git, sinhronizacija, konflikti)
+   <!-- - [prosojnice](03-upravljanje-razlicic/…) -->
 4. HTML (Internet & splet, HTML, kodne tabele)
    <!-- - [prosojnice](04-html/…) -->
 5. LaTeX 1: uvod

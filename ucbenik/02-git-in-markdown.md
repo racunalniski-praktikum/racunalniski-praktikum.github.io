@@ -127,9 +127,9 @@ in sledite spodnjim navodilom.
    naslov v komentarju pa naj bo tarča povezave (tja, kamor nas povezava pelje).
 8. Če vaje rešujete na šolskem računalniku, poskrbite, da boste do datoteke lahko dostopali tudi doma, saj jo boste potrebovali pri domači nalogi. Lahko uporabite na primer Dropbox, Google Drive, OneDrive (uporabljate lahko vmesnik v brskalniku) in podobno, ter pošiljanje datotek po elektronski pošti. Shranjevanje na USB ključek odsvetujemo. Za malo naprednejše uporabnike seveda priporočamo Git.
 
-## Git, orodje za nadzor različic
+## Git, orodje za upravljanje različic
 
-Zelo poenostavljeno povedano sistemi za nadzor različic zapisujejo spremembe v datoteke na tak način, da lahko kadarkoli prikličemo poljubno različico. 
+Zelo poenostavljeno povedano sistemi za upravljanje različic zapisujejo spremembe v datoteke na tak način, da lahko kadarkoli prikličemo poljubno različico. 
 V resnici nam ponujajo še mnogo več, saj med drugim omogočajo:
 
 - povrniti datoteke ali kar celoten projekt v prejšnje stanje, 
@@ -145,8 +145,8 @@ Urejevalnik [Visual Studio Code](https://code.visualstudio.com/) ima dobro razvi
 
 Za začetek si poglejmo nekaj osnovnih izrazov, ki jih bomo uporabljali:
 
-- _delovno drevo_ (angl. _working tree_) je imenik z vsemi datotekami projekta, na katerem smo vklopili nadzor različic.
-- _sprememba_ (angl. _commit_) je osnovna enota nadzora različic, ki vsebuje zabeleženo stanje datotek skupaj s časom, avtorjem, opisom, podatkih o predhodnih spremembah in podobno. Vsaka sprememba tvori neko smiselno celoto, na primer popravek enega hrošča, dodatek nove funkcionalnosti, ...
+- _delovno drevo_ (angl. _working tree_) je imenik z vsemi datotekami projekta, na katerem smo vklopili upravljanje različic.
+- _sprememba_ (angl. _commit_) je osnovna enota upravljanja različic, ki vsebuje zabeleženo stanje datotek skupaj s časom, avtorjem, opisom, podatkih o predhodnih spremembah in podobno. Vsaka sprememba tvori neko smiselno celoto, na primer popravek enega hrošča, dodatek nove funkcionalnosti, ...
 - _repozitorij_ (angl. _repository_ ali _repo_) je zbirka vseh zabeleženih sprememb.
 - _klon_ (angl. _clone_) je ena izmed kopij repozitorija. Ena se običajno nahaja na javnem strežniku (za primer lahko pogledate gradiva za Uvod v programiranje na [GitHubu](https://github.com/matijapretnar/uvod-v-programiranje)), vsak, ki dela na projektu pa ima eno kopijo še v delovnem drevesu (skrito v imeniku `.git`).
 
