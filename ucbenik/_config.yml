@@ -20,11 +20,13 @@ exclude_patterns:
 repository:
   url: 'https://github.com/katjabercic/racunalniski-praktikum'
 
-# sphinx:
+# Prosojnice iz imenika predavanja/ objavimo skupaj z učbenikom.
+sphinx:
 #   extra_extensions:
 #     - sphinx_proof
-#   local_extensions:
-#     semantic: 'extensions/'
+  local_extensions:
+    predavanja: 'extensions/'
+    # semantic: 'extensions/'
 
 # semantic:
 #   # This can be any URI identifying your course; need not be an actual URL

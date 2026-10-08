@@ -131,6 +131,7 @@ Legacy material that is not in the tree:
 - 2026-10-07 — Diagram sources and their build tools live in the private `zbornica`: the shared tools in `orodja/slike/`, each figure's source in the `vaje/` directory of its chapter; `ucbenik` holds only the built results (`.svg`). The legacy `.ai` sources of `anatomija-znacke` retire when that figure is redone from the template.
 - 2026-10-08 — The repositories `prenova` and `predavanja` are merged into `racunalniski-praktikum.github.io`, which is now the only repository for the course content. `predavanja` keeps its history. `prenova` gives only its latest working tree, without its history and without `imported/`: the legacy textbook is already in this repository, the legacy slides are in the history of `predavanja`, and the selected content stays in `zbornica`. This supersedes the 2026-07-15 import decision and the 2026-09-30 decision on where slide decks are canonical.
 - 2026-10-08 — `COURSE.md` is split by audience and status: the public part goes to a to-do list for the README in `MIGRATION.md`, the guidance for authors to *Course principles* above, the lecture plans (drafts) to `MIGRATION.md`, and the exam design to the private `zbornica`. Its summary of changes from the previous run and its table of lecture hours are dropped: the entries above record them.
+- 2026-10-08 — The slides are published with the textbook, at <https://racunalniski-praktikum.github.io/predavanja/>. The Sphinx extension `ucbenik/extensions/predavanja.py` copies `predavanja/` into the book's HTML output and renders `predavanja/README.md` as its `index.html`, so `jupyter-book build ucbenik` and `ghp-import` publish both.
 
 ## Open questions
 
@@ -140,7 +141,6 @@ Legacy material that is not in the tree:
 - Topic numbering: unify book chapters (13 + appendices A–H) with the fourteen planned lectures?
 - Build artifacts: keep committing compiled slide PDFs, or build them (CI/locally)?
 - reveal.js loaded from CDN vs vendored.
-- Publishing pipeline: `ghp-import` publishes only `ucbenik/_build/html`. How are the slides in `predavanja/` published, and at which URL?
 - `zbornica/vaje/` contains instructor-facing solutions — confirm they may be public, or drop that unit, **before it migrates**. Its `00-izvedba-vaj.md` is now safe to drop in that sense: its ideas are recorded in *To do: the README* in `MIGRATION.md` and in *Course principles*.
 - Cruft in `ucbenik/`: stray extensionless `ucbenik/L-latex` file, `ucbenik/00-razno/` scratch directory — keep, move, or delete.
 - `ucbenik/_config.yml` still points to the old repo URL (`katjabercic/racunalniski-praktikum`) — fix when migrating book config.
