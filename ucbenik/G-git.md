@@ -1,8 +1,8 @@
 # Plonkec za Git
 
-Pogled _Source Control_ v stranskem meniju urejevalnika VSCode ima tri dele (ponavadi se ne izpišejo se vsi).
-Razdelek _Changes_ vsebuje datoteke, ki so se spremenile od zadnje zabeležene spremembe (oz. angl. _commit_-a),
-razdelek _Staged Changes_ pa datoteke, ki bodo vključene v naslednjo zabeleženo spremembo.
+Pogled _Source Control_ v stranskem meniju urejevalnika VSCode ima tri dele (ponavadi se ne izpišejo vsi).
+Razdelek _Changes_ vsebuje datoteke, ki so se spremenile od zadnjega vnosa spremembe (angl. _commit_),
+razdelek _Staged Changes_ pa datoteke, ki bodo vključene v naslednji vnos.
 
 Več o shranjevanju sprememb v Git si lahko preberete v prijaznem povzetku na 
 [Atlassian spletni strani](https://www.atlassian.com/git/tutorials/saving-changes),
@@ -12,32 +12,32 @@ povezave na dokumentacijo za posamezne ukaze pa so spodaj.
 ## Osnovni ukazi
 
 - Ukaz [`add`](https://github.com/git-guides/git-add) 
-  zbira datoteke s spremembami, ki jih želite vključiti v naslednjo zabeleženo spremembo. 
+  zbira datoteke s spremembami, ki jih želite vključiti v naslednji vnos spremembe. 
   V ukazno vrstico napišete `git add`, in naštejete datoteke, s spremembami, ki jih želite vključiti, npr.
   `git add README.md`.
   V pogledu _Source Control_ v VSCode to naredite tako, da prestavite datoteke iz _Changes_ v _Staged Changes_
   tako, da kliknete na _+_ poleg imen datotek.
 - Ukaz [`commit`](https://github.com/git-guides/git-commit)
   v repozitorij zabeleži spremembe, ki ste jih vključili z `add`.
-  Vsak tak zabeležek je posnetek stanja v tistem trenutku.
+  Vsak tak vnos spremembe je posnetek stanja v tistem trenutku.
   V ukazno vrstico napišete `git commit -m "⟨sporočilo z opisom spremembe⟩"`.
   Z oznako `-m` ukazu `commit` poveste, da sledi kratko sporočilo.
   Obstajajo tudi drugi načini pisanja teh sporočil, ki presegajo obseg tega plonkca.
   V pogledu _Source Control_ v VSCode pod `Message` napišete kratko sporočilo z opisom spremembe, 
-  ter s pritiskom na gumb _Commit_ spremembo ustvarite.
-- Spremembe pošljete na strežnik z ukazom [`push`](https://github.com/git-guides/git-push).
+  ter s pritiskom na gumb _Commit_ vnos ustvarite.
+- Vnose sprememb pošljete na strežnik z ukazom [`push`](https://github.com/git-guides/git-push).
   V ukazno vrstico napišete `git push`. 
   V VSCode uporabite ukaz _Git: Push_ iz palete ukazov.
   Če se `push` ne izvede, je najbolje, da prosite za pomoč, narobe gre lahko več stvari.
-- Spremembe povlečete s strežnika z ukazom [`pull`](https://github.com/git-guides/git-pull).
+- Vnose sprememb povlečete s strežnika z ukazom [`pull`](https://github.com/git-guides/git-pull).
   V ukazno vrstico napišete `git pull`. 
   V VSCode uporabite ukaz _Git: Pull_ iz palete ukazov.
-  Če se `push` ne izvede, je najbolje, da prosite za pomoč, narobe gre lahko več stvari.
+  Če se `pull` ne izvede, je najbolje, da prosite za pomoč, narobe gre lahko več stvari.
 
-Ukaz `add` med drugim omogoči, da veliko spremembo razdelite na več manjših
+Ukaz `add` med drugim omogoči, da veliko spremembo razdelite na več manjših vnosov
 (če ne vključite vseh datotek, ki so se spremenile), kar poenostavi branje zgodovine sprememb. 
 
-Urejevalnik VSCode ima v statusni vrstici tudi gumb za sinhronizacijo, ki kaže število čakajočih sprememb na obeh straneh,
+Urejevalnik VSCode ima v statusni vrstici tudi gumb za sinhronizacijo, ki kaže število čakajočih vnosov sprememb na obeh straneh,
 ob kliku pa uskladi v obe smeri.
 
 (git:init)=
@@ -78,7 +78,7 @@ ki jih računalnik ustvari sam (in jih zato lahko ustvarimo na novo):
 - Python (ki ga boste srečali pri Uvodu v programiranje) ustvari množico datotek v imeniku `__pycache__`, 
 - LaTeX ustvari PDF datoteke ter pomožne datoteke s končnicami `.aux`, `.log` in podobno). 
 
-S tem, ko take datoteke izključimo, poskribmo, da repozitorij ostane čist, pregleden in lažji za delo.
+S tem, ko take datoteke izključimo, poskrbimo, da repozitorij ostane čist, pregleden in lažji za delo.
 Primer ustrezne datoteke `.gitignore` bi bil:
 
 ```sh
@@ -119,8 +119,8 @@ Git morate nastaviti na vsakem računalniku, kjer ga uporabljate, tudi na račun
 (git:nastavitve-uporabnika)=
 ### 0. Uporabniške nastavitve
 
-Najprej [poženite ukazno vrstico](bliznjice:zaganjanje-ukazna), nato pa poženite spodnje ukaze.
-(To naredite tako, da ukaz kopirate, prilepite v ukazno vrstico, ustrezno pokažete, ter izvedete tako, da stisnete vnašalko <kbd>↵</kbd>.)
+Najprej [odprite ukazno vrstico v VSCode](bliznjice:vscode-ukazna), nato pa v njej poženite spodnje ukaze.
+(To naredite tako, da ukaz kopirate, prilepite v ukazno vrstico, ustrezno popravite, ter izvedete tako, da stisnete vnašalko <kbd>↵</kbd>.)
 
 1. Nastavite svoje ime z ukazom:
 
@@ -171,9 +171,10 @@ V ukazno vrstico napišite:
 ssh-keygen
 ```
 
-Ko vas program vpraša, kam naj se ključ shrani, s pritiskom na vnašalko potrdite predlagano mesto.
-Privzeto ime datoteke bo verjetno `id_rsa.pub` ali `id_ed25519.pub` v imeniku `.ssh` v vašem domačem imeniku 
+Ko vas program vpraša, kam naj se ključ shrani, s pritiskom na vnašalko potrdite predlagano mesto:
+datoteko `id_ed25519` (na starejših sistemih `id_rsa`) v imeniku `.ssh` v vašem domačem imeniku
 (npr. `/c/Users/⟨fmf-uporabnisko-ime⟩/` oz. 🍎 `/Users/⟨domace-uporabnisko-ime⟩`).
+Vanjo program shrani zasebni ključ, poleg nje pa v datoteko s končnico `.pub` še javnega.
 Priporočamo, da si nastavite dobro geslo, še posebej, če ste na računalniku na fakulteti.
 Gesla ne pozabite, saj ga boste potrebovali pri kloniranju in nalaganju repozitorijev.
 
@@ -189,19 +190,15 @@ V izpisu poiščite datoteko s končnico `.pub`.
 Če je ne najdete, prosite za pomoč, če pa jo najdete, si zapomnite ime, tu bomo napisali `⟨datoteka-s-kljucem⟩`.
 To bo najverjetneje `id_ed25519.pub` ali `id_rsa.pub`.
 
-Uporabite ukaz za vaš operacijski sistem, ki ga ustrezno popravite.
+Ključ kopirajte na odložišče z ukazom, ki ga ustrezno popravite:
 
-Windows (Git Bash):
 ```shell
 cat ~/.ssh/⟨datoteka-s-kljucem⟩ | clip
 ```
 
-MacOS (Terminal)
-```shell
-cat ~/.ssh/⟨datoteka-s-kljucem⟩ | pbcopy
-```
+(Na macOS namesto `clip` napišite `pbcopy`.)
 
-Program [`cat`](https://en.wikipedia.org/wiki/Cat_(Unix)) ste spoznali na prvih vajah.
+Program [`cat`](https://en.wikipedia.org/wiki/Cat_(Unix)) ste spoznali v poglavju o ukazni vrstici.
 Navpična črta `|` ([pipa, angl. _pipe_](https://en.wikipedia.org/wiki/Pipeline_(Unix)))
 preusmeri rezultat programa na levi strani (v tem primeru `cat`) na vhod programa na desni strani črte.
 V našem primeru sta to `clip` oz. `pbcopy`, ki skopirata vhod na odložišče (angl. _clipboard_).
@@ -244,11 +241,11 @@ Lahko predstavlja napako v kodi, novo funkcionalnost, vprašanje ali predlog za 
 je pa podobno, kot da bi odprli novo temo na forumu o vašem repozitoriju.
 
 Ko je razprava zaključena, lahko avtorji repozitorija _issue_ zaprejo.
-Še posebej, če gre za nekaj, kar se je rezrešilo v _commit_-u, je lepo, da 
-se to označi v sporočilu _commit_-a.
+Še posebej, če gre za nekaj, kar se je razrešilo v vnosu, je lepo, da 
+se to označi v sporočilu vnosa.
 To se naredi tako, da poiščete identifikator zadeve
 (to je številka za znakom `#`, ki stoji za naslovom, kot na primer `#14` 
-[tule](https://github.com/racunalniski-praktikum/racunalniski-praktikum.github.io/issues/14). Nato naredite _commit_ s sporočilom, ki vsebuje niz `⟨kljucna-beseda⟩ #⟨id⟩` z eno od ključnih besed `close`, `closes`, `closed`, `fix`, `fixes`, `fixed`, `resolve`, `resolves`, `resolved` 
+[tule](https://github.com/racunalniski-praktikum/racunalniski-praktikum.github.io/issues/14). Nato ustvarite vnos s sporočilom, ki vsebuje niz `⟨kljucna-beseda⟩ #⟨id⟩` z eno od ključnih besed `close`, `closes`, `closed`, `fix`, `fixes`, `fixed`, `resolve`, `resolves`, `resolved` 
 ([dokumentacija](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)),
 ki ji sledi Id. Primeri ustreznih sporočil: `closes #1`, `Opravljeno, resolve #42` in `fix #8, zdaj pa zares`. Primeri neustreznih sporočil: `zapri #13`, `Tako ne gre, fix #⟨507⟩`, ali `resolved 37`.
 
@@ -259,15 +256,15 @@ Ta razdelek je vključen za primer, če kaj ne bo šlo po načrtu.
 Če na repozitoriju dela več ljudi ali delate na večih računalnikih, se lahko zgodi, 
 da se sprememb ne da enostavno uskladiti. 
 
-Če je na strežniku sprememba, ki je v našem repozitoriju še ni, se lokalnih sprememb ne bo dalo poslati na strežnik. 
-Najprej je treba povleči spremembe s strežnika na računalnik, ter jih zliti (angl. _merge_) z lokalnimi.
+Če je na strežniku vnos, ki ga v našem repozitoriju še ni, se lokalnih vnosov ne bo dalo poslati na strežnik. 
+Najprej je treba povleči vnose s strežnika na računalnik ter jih zliti (angl. _merge_) z lokalnimi.
 Šele nato lahko vse skupaj pošljete na strežnik. 
 To najenostavneje naredimo z gumbom za sinhronizacijo, pri čemer Git pazi, da se nobena izmed sprememb ne izgubi. 
 Na primer, če je v spremembi na eni strani popravljena vrstica na enem koncu datoteke, 
 v spremembi na drugi strani pa vrstica na drugem koncu datoteke, bosta v združeni različici spremenjeni obe vrstici.
 
 Prelepo bi bilo, če bi bilo vedno tako :smile:. 
-Če je na obeh straneh spremenjena ista vrstica, nastane konfklit pri zlivanju (angl. _merge conflict_), 
+Če je na obeh straneh spremenjena ista vrstica, nastane konflikt pri zlivanju (angl. _merge conflict_), 
 ki ga je treba natančno pogledati in razrešiti ročno. 
 Git take konflikte označi v datoteki sami in sicer tako, da na mesto konflikta vstavi posebna ločila ter vsebini obeh različic. 
 
