@@ -106,6 +106,19 @@ Težavo odpravimo tako, da v spisku bližnjic odstranimo povezavo <kbd>Ctrl</kbd
 
 Sedaj bi moral delati znak `{`. Podobno popravimo ostale znake. Mimogrede, "Build LaTeX project" lahko še vedno dobimo, ker je vezan tudi na bližnjico <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>. Sicer pa lahko sami dodajamo nove bližnjice v spisku vseh bližnjic.
 
+(faq:vscode-bliznjice)=
+### Iskanje bližnjic
+
+Bližnjice so v dokumentaciji in na spletu (pa tudi v odgovorih jezikovnih modelov) običajno zapisane za ameriško angleško tipkovnico.
+Na drugih tipkovnicah jih je treba včasih pritisniti drugače; primer je [bližnjica za ukazno vrstico](bliznjice:vscode-ukazna).
+VSCode pa bližnjice izpiše za tipkovnico, ki jo uporabljate:
+- v menijih ob ukazih, npr. v meniju _Terminal_ ob ukazu _New Terminal_,
+- v paleti ukazov (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, na macOS <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) desno od imena ukaza,
+- v seznamu vseh bližnjic (<kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>S</kbd>, na macOS <kbd>Cmd</kbd>+<kbd>K</kbd> <kbd>Cmd</kbd>+<kbd>S</kbd>), kjer ukaz poiščete po imenu, npr. `new terminal`.
+
+V seznamu vseh bližnjic lahko iščete tudi obratno: kliknite ikono s tipkovnico v iskalnem polju (ali stisnite <kbd>Alt</kbd>+<kbd>K</kbd>, na macOS <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>K</kbd>) in pritisnite kombinacijo tipk.
+Seznam pokaže ukaze, ki so prirejeni tej kombinaciji.
+
 (faq:ukazna-imenik)=
 ## Odpiranje ukazne vrstice Git Bash v imeniku
 

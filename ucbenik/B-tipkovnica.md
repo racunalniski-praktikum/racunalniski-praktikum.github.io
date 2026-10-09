@@ -129,6 +129,20 @@ Tipko <kbd>Esc</kbd> lahko služi za:
 - izhod iz načina z večimi kurzorji,
 - izhod iz pogovornega okna za iskanje (nazaj vedno lahko skočite z ustrezno bližnjico).
 
+(bliznjice:vscode-ukazna)=
+### Ukazna vrstica
+
+Novo ukazno vrstico odprete z bližnjico, ki je odvisna od sistema in tipkovnice:
+- Windows, slovenska tipkovnica: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>¸</kbd>, kjer je <kbd>¸</kbd> tipka levo od <kbd>1</kbd>,
+- Windows, angleška (ameriška) tipkovnica: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd>, kjer je <kbd>&#96;</kbd> ista tipka levo od <kbd>1</kbd>,
+- macOS: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd>,
+- druge tipkovnice (tudi britanska angleška): bližnjica je izpisana v meniju _Terminal_ ob ukazu _New Terminal_ (kje še, piše v [pogostih vprašanjih](faq:vscode-bliznjice)).
+
+Brez tipke <kbd>Shift</kbd> bližnjica podokno z ukazno vrstico pokaže ali skrije, npr. <kbd>Ctrl</kbd>+<kbd>¸</kbd> na slovenski tipkovnici.
+
+Na slovenski tipkovnici znak &#96; sicer natipkate z <kbd>AltGr</kbd>+<kbd>7</kbd>, vendar ta kombinacija v bližnjici ne deluje.
+Bližnjica namreč ne določa znaka, ampak tipko, VSCode pa tipko <kbd>AltGr</kbd> obravnava kot <kbd>Ctrl</kbd>+<kbd>Alt</kbd> (podobno težavo opisujejo [pogosta vprašanja](faq:vscode-latex-si)).
+
 (bliznjice:kurzorji)=
 ### Delo z večimi kurzorji
 
