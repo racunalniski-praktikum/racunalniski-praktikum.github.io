@@ -27,6 +27,6 @@ Pripombe in dopolnitve k vajam so prispevali tudi demonstratorji:
 - Anja Rupnik,
 - Jakob Schrader,
 - Jure Smolar,
+- Filip Štamcar,
 - Beno Učakar,
-- Patrik Žnidaršič,
-- Filip Štamcar.
+- Patrik Žnidaršič.
