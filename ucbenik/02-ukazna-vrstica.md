@@ -102,10 +102,11 @@ Dele ukaza ločijo presledki, zato ime s presledki postavimo med narekovaje:
 brez njih bi `cd Vhodna dvorana` pomenilo premik v imenik `Vhodna` z odvečnim argumentom `dvorana`.
 Ukazi imajo lahko še druge dele, a te bomo spoznavali sproti, ko jih bomo potrebovali.
 
-Ukazno vrstico boste uporabljali kar v urejevalniku VSCode: odprete jo z ukazom _Terminal_ > _New Terminal_, pokaže pa se v podoknu (angl. _Panel_) na dnu okna.
-Začne v imeniku, ki ga imate odprtega v urejevalniku, zato imenik, v katerem želite delati, najprej odprite v VSCode (_File_ > _Open Folder_).
-V sistemu Windows preverite, da v podoknu desno zgoraj piše `bash` in ne `powershell`; če ne, kliknite puščico ob gumbu `+` in izberite _Git Bash_.
-Da vam tega ne bo treba ponavljati, [nastavite Git Bash za privzeto ukazno vrstico](faq:vscode-bash).
+Ukazno vrstico boste uporabljali kar v urejevalniku VSCode.
+Najprej odprite imenik, v katerem želite delati (_File_ > _Open Folder_), saj se ukazna vrstica odpre v njem.
+Nato pritisnite <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) in v paleti ukazov (angl. _Command Palette_) izberite ukaz _Terminal: Create New Terminal in Editor Area to the Side_.
+Ukazna vrstica se pokaže v novem zavihku ob strani, poleg datoteke, ki jo urejate.
+V sistemu Windows preverite, da na zavihku ukazne vrstice piše `bash` in ne `powershell`; če ne, v paleti ukazov izberite ukaz _Terminal: Select Default Profile_ in nato _Git Bash_, zavihek zaprite in odprite novo ukazno vrstico.
 Kako jo odprete brez urejevalnika, piše v [pogostih vprašanjih](faq:ukazna-imenik).
 
 Najpogostejše ukaze smo zbrali v [plonkcu za ukazno vrstico](plonkec:ukazna-vrstica).
@@ -171,7 +172,7 @@ Ne pozabite, da taka imena postavimo med narekovaje: `"To je dolgo ime z veliko 
 
 1. Prenesite arhiv [`skrati.zip`](02-ukazna-vrstica/skrati.zip) in ga [odpakirajte](faq:zip).
    Nastali imenik `skrati` premaknite v imenik `rp`, ki ste ga naredili na prejšnjih vajah, poleg imenika `racunalniski-praktikum`, kot na {numref}`slika:drevo-domaci`.
-2. V VSCode odprite imenik `rudnik` (_File_ > _Open Folder_) in nato ukazno vrstico (_Terminal_ > _New Terminal_).
+2. V VSCode odprite imenik `rudnik` (_File_ > _Open Folder_) in nato s paleto ukazov še ukazno vrstico (_Terminal: Create New Terminal in Editor Area to the Side_).
    Če vas VSCode vpraša, ali avtorjem imenika zaupate (_Do you trust the authors?_), potrdite, sicer ukazna vrstica ne deluje.
 3. Odprite še datoteko `skrati.pdf`.
 4. Preverite, da ste v pravem imeniku: v ukazno vrstico napišite `pwd` in pritisnite vnašalko <kbd>↵</kbd> (angl. _enter_ ali _return_).
@@ -225,7 +226,7 @@ S spleta ste prenesli podnapise za film, a so nekatere črke napačne.
    kliknite na ikono `.*` v iskalnem polju ali pritisnite <kbd>Alt</kbd>+<kbd>R</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>R</kbd>).
    Napišite regularni izraz, ki se ujema s časom v podnapisih, na primer z `00:00:21,480`.
    Preverite: vsak podnapis ima dva časa, zato mora biti zadetkov dvakrat toliko, kot je podnapisov.
-6. Odprite ukazno vrstico (_Terminal_ > _New Terminal_), se s `cd` premaknite v imenik, kamor ste shranili datoteko, in čase preštejte še z ukazom
+6. S paleto ukazov odprite ukazno vrstico (_Terminal: Create New Terminal in Editor Area to the Side_), se s `cd` premaknite v imenik, kamor ste shranili datoteko, in čase preštejte še z ukazom
    ```bash
    grep -cE "⟨vzorec⟩" podnapisi.srt
    ```

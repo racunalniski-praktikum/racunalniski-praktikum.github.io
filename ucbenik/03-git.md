@@ -61,13 +61,8 @@ Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kb
 
 1. V VSCode odprite imenik `rp` (_File_ > _Open Folder_).
    Če vas VSCode vpraša, ali avtorjem imenika zaupate (_Do you trust the authors?_), potrdite, sicer ukazna vrstica ne deluje.
-   Odprite še podokno z ukazno vrstico z bližnjico:
-   - Windows, slovenska tipkovnica: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>¸</kbd>, kjer je <kbd>¸</kbd> tipka levo od <kbd>1</kbd>,
-   - Windows, angleška tipkovnica: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd>, kjer je <kbd>&#96;</kbd> ista tipka levo od <kbd>1</kbd>,
-   - macOS: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>&#96;</kbd>,
-   - druge tipkovnice: bližnjica je izpisana v meniju _Terminal_ ob ukazu _New Terminal_.
-
-   V sistemu Windows preverite, da v podoknu desno zgoraj piše `bash` in ne `powershell`; če ne, [preklopite na Git Bash](faq:vscode-bash).
+   Odprite še ukazno vrstico: v paleti ukazov (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) izberite ukaz _Terminal: Create New Terminal in Editor Area to the Side_.
+   V sistemu Windows preverite, da na zavihku ukazne vrstice piše `bash` in ne `powershell`; če ne, v paleti ukazov izberite ukaz _Terminal: Select Default Profile_ in nato _Git Bash_, zavihek zaprite in odprite novo ukazno vrstico.
 1. Sledite navodilom za [nastavitve `git`-a](git:nastavitve), da si nastavite uporabniške nastavitve ter SSH ključ.
 1. V VSCode v pogledu z datotekami (_Explorer_) kliknite imenik `racunalniski-praktikum` in v njem datoteko `README.md`, da se odpre v urejevalniku.
    Na konec razdelka _Bližnjice na tipkovnici_ dodajte vrstice
