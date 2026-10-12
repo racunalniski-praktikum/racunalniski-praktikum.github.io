@@ -8,23 +8,23 @@
 
 ## Git, orodje za upravljanje različic
 
-Zelo poenostavljeno povedano sistemi za upravljanje različic zapisujejo spremembe v datoteke na tak način, da lahko kadarkoli prikličemo poljubno različico. 
+Zelo poenostavljeno povedano sistemi za upravljanje različic shranjujejo stanja datotek na tak način, da lahko kadarkoli prikličemo poljubno različico.
 V resnici nam ponujajo še mnogo več, saj med drugim omogočajo:
 
-- povrniti datoteke ali kar celoten projekt v prejšnje stanje, 
-- primerjati, kako so se s časom zgodile spremembe, 
-- pogledati, kdo je nazadnje kaj spremenil,
+- povrniti datoteke ali kar celoten projekt v prejšnje stanje,
+- pogledati, kaj natanko se je spremenilo med dvema različicama,
+- pogledati, kdo je kaj spremenil in kdaj,
 - sodelovanje na projektu, kjer lahko več ljudi hkrati ureja iste datoteke.
 
-Taki sistemi so najbolj razširjeni pri programiranju, vendar so koristni tudi drugje.
-Na primer, ob zaključevanju diplomskih del brez ustrezne podpore hitro nastanejo datoteke kot `diploma-koncna.tex`, `diploma-koncna2.tex`, `diploma (zadnja).tex`, `diploma (oddana).tex`, itd.
+Najbolj jih potrebujemo takrat, ko datotek ne spreminjamo samo mi.
+Kadar vaše datoteke ureja umetna inteligenca, lahko v enem koraku prepiše celo datoteko, tudi tam, kjer tega niste želeli.
+Z Gitom vidite, katere vrstice je spremenila, in se po potrebi vrnete na prejšnjo različico; brez njega je edina kopija tista, ki jo je pravkar napisala.
+Enako velja, kadar na istih datotekah dela več ljudi.
+Koristni pa so tudi, kadar delamo sami: ob zaključevanju diplomskih del brez njih hitro nastanejo datoteke kot `diploma-koncna.tex`, `diploma-koncna2.tex`, `diploma (zadnja).tex`, `diploma (oddana).tex`, itd.
 
-Tekom študija boste pri nekaterih predmetih (upamo pa, da tudi za lastne potrebe) uporabljali orodje [Git](https://git-scm.com), ki je najbolj razširjeno sodobno orodje. 
+Pri tem predmetu in še nekaterih drugih (upamo pa, da tudi za lastne potrebe) boste uporabljali orodje [Git](https://git-scm.com), ki je najbolj razširjeno sodobno orodje za upravljanje različic.
 Urejevalnik [Visual Studio Code](https://code.visualstudio.com/) ima dobro razvito [podporo za Git](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
-
-Git pride prav tudi, kadar vaše datoteke ureja umetna inteligenca.
-V zgodovini sprememb lahko kadarkoli preveri, kako so bile datoteke videti prej in zakaj so se spremenile.
-Kadar kaj pokvari, se lahko vrne k zadnji delujoči različici.
+Predvsem je pomembno, da se naučite, kaj Git z vašimi datotekami počne, in prebrati, kaj vam sporoča o njihovem stanju.
 
 Za začetek si poglejmo nekaj osnovnih izrazov, ki jih bomo uporabljali:
 
@@ -33,24 +33,24 @@ Za začetek si poglejmo nekaj osnovnih izrazov, ki jih bomo uporabljali:
 - _repozitorij_ (angl. _repository_ ali _repo_) je zbirka vseh vnosov sprememb.
 - _klon_ (angl. _clone_) je ena izmed kopij repozitorija. Ena se običajno nahaja na javnem strežniku (za primer lahko pogledate gradiva za Uvod v programiranje na [GitHubu](https://github.com/matijapretnar/uvod-v-programiranje)), vsak, ki dela na projektu pa ima eno kopijo še v delovnem drevesu (skrito v imeniku `.git`).
 
-## Ko Git odpre urejevalnik
+### Ko Git odpre urejevalnik
 
-Nekateri ukazi Gita potrebujejo besedilo, ki ga niste napisali v ukazno vrstico:
-`git commit` brez možnosti `-m` na primer sporočilo vnosa spremembe, `git pull` pa včasih sporočilo o zlivanju.
-Takrat Git kar v ukazni vrstici odpre urejevalnik, ki ste ga izbrali v [nastavitvah](git:nastavitve-uporabnika), pri tem predmetu `nano`:
+
+Nekateri ukazi Gita potrebujejo besedilo, ki ga niste napisali v ukazno vrstico. V takih primerih Git kar v ukazni vrstici odpre urejevalnik, ki ste ga izbrali v [nastavitvah](git:nastavitve-uporabnika).
 
 1. Besedilo napišete ali popravite kot običajno, po njem se premikate s puščicami <kbd>↑↓←→</kbd>.
 2. Shranite ga z bližnjico <kbd>Ctrl</kbd>+<kbd>O</kbd> in ime datoteke potrdite z vnašalko.
 3. Urejevalnik zaprete z bližnjico <kbd>Ctrl</kbd>+<kbd>X</kbd>, nato Git nadaljuje.
 
-Če urejevalnika niste nastavili, Git morda odpre urejevalnik `vim`.
+Če še niste nastavili urejevalnika za ukazno vrstico, Git morda odpre urejevalnik `vim`.
 Iz njega pridete tako, da stisnete <kbd>Esc</kbd>, napišete `:wq` in stisnete vnašalko.
 
-## 1. naloga: prvi koraki z Git-om
+## 1. naloga: prvi koraki z Gitom
 
-Glavni namen te naloge je, da računalnik pripravimo za delo z Git-om, spotoma pa še naprej vadimo uporabo ukazne vrstice. Vsi ukazi so pospremljeni z razlagami, da ne boste imeli občutka, da samo ponavljate magične uroke za učiteljem. 
+Glavni namen te naloge je, da računalnik pripravimo za delo z Gitom, spotoma pa še naprej vadimo uporabo ukazne vrstice. Vsi ukazi so pospremljeni z razlagami, da ne boste imeli občutka, da samo ponavljate magične uroke za učiteljem. 
 
-Naloga predpostavlja, da sedite pri istem računalniku kot na prejšnjih vajah. Če slučajno ni tako, morda kak del naloge ne bo imel smisla (takrat na pomoč pokličite asistenta ali demonstratorja). Imenik `racunalniski-praktikum` boste med nalogo pobrisali in ga nadomestili s klonom.
+Naloga predpostavlja, da sedite pri istem računalniku kot na prejšnjih vajah. Če ni tako in imenika `racunalniski-praktikum` z datoteko `README.md` nimate, v 1. koraku imenik `rp` najprej naredite, 3., 4., 7., 8. in 11. korak preskočite, pred 10. korakom pa vrstice iz 3. koraka dodajte v klonirano datoteko `README.md`.
+Imenik `racunalniski-praktikum` boste med nalogo pobrisali in ga nadomestili s klonom.
 
 `````{admonition} Nasvet za pomikanje po ukazni vrstici
 :class: tip
@@ -69,7 +69,8 @@ Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kb
 
    V sistemu Windows preverite, da v podoknu desno zgoraj piše `bash` in ne `powershell`; če ne, [preklopite na Git Bash](faq:vscode-bash).
 1. Sledite navodilom za [nastavitve `git`-a](git:nastavitve), da si nastavite uporabniške nastavitve ter SSH ključ.
-1. V raziskovalcu odprite datoteko `README.md` v imeniku `racunalniski-praktikum` in na konec razdelka _Bližnjice na tipkovnici_ dodajte vrstice
+1. V VSCode v pogledu z datotekami (_Explorer_) kliknite imenik `racunalniski-praktikum` in v njem datoteko `README.md`, da se odpre v urejevalniku.
+   Na konec razdelka _Bližnjice na tipkovnici_ dodajte vrstice
    ```markdown
    - VSCode paleta ukazov: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
    - Skok na začetek vrstice: <kbd>Home</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>←</kbd>)
@@ -81,7 +82,8 @@ Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kb
 1. Zaporedoma napišite ukaze:
    - `mv racunalniski-praktikum/README.md README-staro.md`: ukaz `mv` (angl. _move_) premakne datoteko, podano s prvim argumentom, na mesto, podano z drugim, pri čemer jo lahko hkrati tudi preimenujemo. V tem primeru datoteko `README.md` iz imenika `racunalniski-praktikum` premakne v trenutni imenik, torej `rp`, in jo preimenuje v `README-staro.md`.
    - `ls racunalniski-praktikum`: preverite, da datoteke `README.md` v imeniku `racunalniski-praktikum` ni več.
-   - `rm -r racunalniski-praktikum`: ukaz `rm` (angl. _remove_) z možnostjo `-r` (angl. _recursive_) pobriše imenik `racunalniski-praktikum` z vsem, kar je ostalo v njem.
+     Če izpiše še kakšno datoteko, jo prav tako premaknite v `rp` (`mv racunalniski-praktikum/⟨ime⟩ .`).
+   - `rm -r racunalniski-praktikum`: ukaz `rm` (angl. _remove_) z možnostjo `-r` (angl. _recursive_) pobriše imenik `racunalniski-praktikum` z vsem, kar je ostalo v njem, tudi s skritimi datotekami, ki jih ustvari operacijski sistem (npr. `.DS_Store`).
      Datotek ne premakne v koš, ampak jih pobriše za vedno.
 1. Kopirajte naslov svojega repozitorija (ki ste ga ustvarili in oddali v 2. domači nalogi) z GitHuba:
     - Odprite stran z vašim repozitorijem v brskalniku in kliknite na zeleni gumb _Code_.
@@ -93,18 +95,21 @@ Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kb
    git clone ⟨naslov-iz-zgornje-tocke⟩ racunalniski-praktikum
    ```
    Drugi argument pove, v kateri imenik naj Git klonira repozitorij; brez njega bi se ustvaril nov imenik z imenom repozitorija.
-   Pri prvem kloniranju vas `git` morda vpraša, če zaupate GitHubu (_The authenticity of host can't be established._).
-   V tem primeru je treba napisati _yes_, preden se kloniranje izvede.
-   Če ste ključ SSH zaščitili z geslom, vas Git vpraša še zanj (_Enter passphrase for key_), enako tudi kasneje ob ukazu `git push`.
+   Če ste ključ SSH zaščitili z geslom, vas Git vpraša zanj (_Enter passphrase for key_), enako tudi kasneje ob ukazu `git push`.
    Med tipkanjem gesla se znaki ne izpisujejo: natipkajte ga in stisnite vnašalko.
+   Če vas vpraša, ali zaupate strežniku (_The authenticity of host can't be established._), ste izpustili [preverjanje povezave](git:ssh-preverjanje): napišite `yes` in stisnite vnašalko.
+   Če se izpiše `Permission denied (publickey)`, ključ SSH ni pravilno nastavljen; [preverite povezavo z GitHubom](git:ssh-preverjanje) in kloniranje ponovite.
+   Datoteka `README-staro.md` vas varno čaka v imeniku `rp`.
 1. Preverite, da vam je uspelo: ukaz `ls racunalniski-praktikum` mora izpisati `README.md`.
+   Če ne izpiše ničesar, je repozitorij na GitHubu prazen (3. točka 2. domače naloge ni uspela); prosite za pomoč.
    Nato staro datoteko premaknite nazaj:
    ```shell
    mv README-staro.md racunalniski-praktikum
    ```
-1. V VSCode v raziskovalcu z desnim klikom na `README-staro.md` izberite _Select for Compare_, nato z desnim klikom na `README.md` še _Compare with Selected_.
+1. V pogledu z datotekami z desnim klikom na `README-staro.md` izberite _Select for Compare_, nato z desnim klikom na `README.md` še _Compare with Selected_.
    Urejevalnik prikaže datoteki vzporedno in označi vrstice, v katerih se razlikujeta.
-   V `README.md` (na desni) prenesite vse, kar želite obdržati, vsaj vrstice iz 3. koraka, in datoteko shranite.
+   Ob vsaki razliki je med datotekama puščica; s klikom nanjo vrstice z leve prenesete na desno, v `README.md`.
+   Prenesite vse, kar želite obdržati, vsaj vrstice iz 3. koraka, in datoteko shranite.
 1. Preverite, ali Git ve, kdo ste:
    ```shell
    cd racunalniski-praktikum
@@ -112,7 +117,7 @@ Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kb
    ```
    Ukaz `git config user.email` izpiše e-naslov, s katerim Git podpiše vaše vnose sprememb; to mora biti naslov, ki ga uporabljate za GitHub.
    Če ne izpiše ničesar, [uredite nastavitve uporabnika](git:nastavitve-uporabnika), preden nadaljujete.
-   Brez nastavitev Git ime in naslov včasih ugane sam, GitHub pa takih vnosov ne poveže z vašim računom.
+   To nastavitev potrebujete, da bo GitHub povezal vaše vnose sprememb z vašim uporabniškim računom.
 1. Spremembo zabeležite in jo pošljite na GitHub (glejte [osnovne ukaze](git:osnovni-ukazi)).
    V ukazni vrstici napišite ukaze
    ```shell
@@ -135,10 +140,10 @@ Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kb
 
 `````{admonition} Kloniranje repozitorija z nalogo
 :class: important
-Bodite pozorni, kje boste klonirali repozitorij, poskrbite, da boste ukaz `git clone` pognali v imeniku `rp`.
+Po 1. nalogi je ukazna vrstica v imeniku `racunalniski-praktikum`. Vrnite se v imenik `rp` z ukazom `cd ..` in s `pwd` preverite, da ste tam, šele nato poženite `git clone`. Zgodba ne sme pristati znotraj vašega repozitorija.
 `````
 
-Navodila naloge so na repozitoriju [git-zgodba](https://github.com/racunalniski-praktikum/git-zgodba).
+Navodila naloge so v repozitoriju [git-zgodba](https://github.com/racunalniski-praktikum/git-zgodba).
 
 ## Dodatni viri
 

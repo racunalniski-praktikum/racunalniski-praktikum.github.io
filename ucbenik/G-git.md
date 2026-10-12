@@ -50,10 +50,10 @@ Sledite navodilom v GitHub dokumentaciji na strani
 [Quickstart for repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories).
 Nato repozitorij klonirajte:
 - **v ukazni vrstici** to naredite z ukazom `git clone`, ki mu poveste naslov repozitorija
-  (npr. `git clone git@github.com:racunalniski-praktikum/git-zgodba.git`),
+  (npr. `git clone git@github.com:⟨uporabnisko-ime⟩/⟨ime-repozitorija⟩.git`),
 - v VSCode lahko klonirate s pomočjo palete ukazov z ukazom _Git: Clone_, 
   ki vas bo prav tako vprašal za naslov repozitorija
-  (npr. `git@github.com:racunalniski-praktikum/git-zgodba.git`).
+  (npr. `git@github.com:⟨uporabnisko-ime⟩/⟨ime-repozitorija⟩.git`).
 
 ### Postavitev na računalniku
 
@@ -159,7 +159,7 @@ Najprej [odprite ukazno vrstico v VSCode](bliznjice:vscode-ukazna), nato pa v nj
    ```
    
    V izpisu bi morali videti nastavitve, ki ste jih pravkar naredili.
-   Če je vaše okno z ukazno vrstico majhno, boste morali morda držati vnašalko, da pridete do konca seznama.
+   Če je vaše podokno z ukazno vrstico majhno, boste morali morda držati vnašalko, da pridete do konca seznama.
    V tem primeru lahko seznam zaprete s tipko <kbd>q</kbd>.
 
 ### 1. Zgenerirajte SSH ključ
@@ -176,6 +176,8 @@ datoteko `id_ed25519` (na starejših sistemih `id_rsa`) v imeniku `.ssh` v vaše
 (npr. `/c/Users/⟨fmf-uporabnisko-ime⟩/` oz. 🍎 `/Users/⟨domace-uporabnisko-ime⟩`).
 Vanjo program shrani zasebni ključ, poleg nje pa v datoteko s končnico `.pub` še javnega.
 Priporočamo, da si nastavite dobro geslo, še posebej, če ste na računalniku na fakulteti.
+Geslo vpišete dvakrat; med tipkanjem se znaki ne izpisujejo.
+Če program sporoči, da datoteka že obstaja (_already exists. Overwrite (y/n)?_), ključ na tem računalniku že imate: odgovorite `n` in nadaljujte z 2. korakom.
 Gesla ne pozabite, saj ga boste potrebovali pri kloniranju in nalaganju repozitorijev.
 
 Če boste Git uporabljali na več računalnikih, potrebujete na vsakem računalniku svoj ključ.
@@ -205,18 +207,26 @@ V našem primeru sta to `clip` oz. `pbcopy`, ki skopirata vhod na odložišče (
 
 ### 3. Nastavite javni ključ na svojem GitHub računu
 
-Sledite navodilom v [GitHub dokumentaciji](https://docs.github.com/en/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account), točkam 2-8 (v točki 6 izberite "authentication").
+Sledite navodilom v [GitHub dokumentaciji](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account), točkam 2-8 (v točki 6 izberite "authentication").
 
 Ime ključa nastavite tako, da boste vedeli, na katerem računalniku ste ga naredili.
 
-<!-- ### 4. Gesla za ključ nočete prepogosto vpisovati
+(git:ssh-preverjanje)=
+### 4. Preverite povezavo
+
+V ukazno vrstico napišite `ssh -T git@github.com`.
+Ob prvi povezavi vas program vpraša, ali zaupate strežniku (_The authenticity of host 'github.com' can't be established._); napišite `yes` in stisnite vnašalko.
+Če je vse v redu, se izpiše `Hi ⟨uporabnisko-ime⟩! You've successfully authenticated, but GitHub does not provide shell access.`
+Če se izpiše `Permission denied (publickey)`, ključ na GitHubu ni nastavljen pravilno: ponovite 2. in 3. korak.
+
+<!-- ### 5. Gesla za ključ nočete prepogosto vpisovati
 
 - MacOS: sledite navodilom v dokumentaciji, razdelek [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent). -->
 
 (git:vscode)=
 ## Git, GitHub in VSCode
 
-Pripravite VSCode za delo z Git-om. 
+Pripravite VSCode za delo z Gitom. 
 Spodaj levo kliknite na ikono _Accounts_ (nad zobnikom za nastavitve) in izberite _Sign in with GitHub..._. 
 Če te možnosti ne vidite, lahko prijavo v vaš GitHub račun poskusite sprožiti s kloniranjem: 
 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> > **Git: Clone**.
