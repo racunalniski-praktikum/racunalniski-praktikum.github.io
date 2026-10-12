@@ -106,7 +106,7 @@ Ukazno vrstico boste uporabljali kar v urejevalniku VSCode: odprete jo z ukazom 
 Začne v imeniku, ki ga imate odprtega v urejevalniku, zato imenik, v katerem želite delati, najprej odprite v VSCode (_File_ > _Open Folder_).
 V sistemu Windows preverite, da v podoknu desno zgoraj piše `bash` in ne `powershell`; če ne, kliknite puščico ob gumbu `+` in izberite _Git Bash_.
 Da vam tega ne bo treba ponavljati, [nastavite Git Bash za privzeto ukazno vrstico](faq:vscode-bash).
-Ukazno vrstico lahko odprete tudi brez urejevalnika, [naravnost iz upravitelja datotek](faq:ukazna-imenik).
+Kako jo odprete brez urejevalnika, piše v [pogostih vprašanjih](faq:ukazna-imenik).
 
 Najpogostejše ukaze smo zbrali v [plonkcu za ukazno vrstico](plonkec:ukazna-vrstica).
 Nekaj primerov:
@@ -163,7 +163,7 @@ Tu smo opisali le majhen del; kar boste še potrebovali, boste našli sami.
 
 Glavni namen te naloge je, da začnete razvijati boljši občutek za to, kako računalnik deluje v ozadju.
 
-Za hitrejše preklapljanje med oknom z navodili in oknom z ukazno vrstico priporočamo
+Za hitrejše preklapljanje med oknom z navodili in urejevalnikom VSCode priporočamo
 bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Tab</kbd>).
 Tudi sicer bo tipka <kbd>Tab</kbd> pri tej nalogi hudo uporabna:
 dopolni vam ukaz, kar še posebej pride prav pri dolgih imenih s presledki.
