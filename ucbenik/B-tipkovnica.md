@@ -62,6 +62,9 @@ Zaženite program z imenom `Visual Studio Code Start`.
 (bliznjice:zaganjanje-ukazna)=
 #### Zaganjanje ukazne vrstice
 
+Pri predmetu ukazno vrstico uporabljate v urejevalniku VSCode, kjer jo odprete z [bližnjico](bliznjice:vscode-ukazna).
+Kot samostojen program jo poženete takole:
+
 **Windows:** Stisnite tipko <kbd>Win</kbd> in začnite tipkati `git bash`. Ko se program pojavi v seznamu rezultatov,
   se nanj premaknite s puščicami <kbd>↑↓←→</kbd> in stisnite vnašalko <kbd>↵</kbd>, da ga poženete.
 
@@ -92,7 +95,7 @@ Marsikatera od teh bližnjic deluje tudi v drugih programih, ki imajo zavihke.
 Tu omenjamo samo nekaj najbolj uporabnih bližnjic za tipkovnico. Več si lahko preberete v dokumentaciji urejevalnika, kjer je tudi [seznam vseh privzetih bližnjic](https://code.visualstudio.com/docs/getstarted/keybindings#_default-keyboard-shortcuts) (prikažejo se bližnjice za vaš operacijski sistem). Nekoliko skrčen seznam se da videti tudi v preglednicah za [Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) in [MacOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf).
 
 V VSCode si lahko pogledate vse bližnjice na vašem računalniku v nastavitvah za bližnjice. 
-Do njih lahko dostopate z bližnjico <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>S</kbd> (🍎 <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>S</kbd>).
+Do njih lahko dostopate z bližnjico <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>S</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>K</kbd> <kbd>Cmd</kbd>+<kbd>S</kbd>).
 
 (bliznjice:vscode-splosne)=
 ### Splošne bližnjice
@@ -115,7 +118,7 @@ Do njih lahko dostopate z bližnjico <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd
 | Odpiranje datoteke             | <kbd>Ctrl</kbd>+<kbd>O</kbd>                              | <kbd>Cmd</kbd>+<kbd>O</kbd>                      |
 | Odpiranje imenika              | <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>O</kbd> | <kbd>Cmd</kbd>+<kbd>O</kbd>                      |
 | Odpri predogled <sup>2</sup>   | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>             | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>     |
-| Išči po datotekah <sup>3</sup> | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>             | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>     |
+| Išči po datotekah              | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>             | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>     |
 
 <sup>2</sup> Predogled lahko odprete tudi tako, da desno kliknete na ime datoteke in izberete "Open Preview", ampak to ni učinkovita raba tipkovnice.
 

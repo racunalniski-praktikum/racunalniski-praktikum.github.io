@@ -10,44 +10,6 @@ Potrudite se, da boste v vprašanju podali dovolj podrobnosti, da vam bomo lahko
 
 Priporočamo se za pripombe in popravke (ki jih predlagajte na Discordu, na forumu ali po e-pošti asistentki).
 
-(namestitev:ukazna)=
-## Orodja za ukazno vrstico
-
-Sledite navodilom za vaš operacijski sistem, nato pa še [navodilom za nastavitve za `git`](git:nastavitve).
-
-### Navodila za operacijski sistem Windows
-
-S spletne strani [git](https://git-scm.com/download/win) prenesite in namestite Git for Windows.
-Git je orodje za upravljanje različic, poleg tega pa Git for Windows ponuja še močno ukazno vrstico.
-
-### Navodila za operacijski sistem MacOS
-
-Če uporabljate MacOS, imate dve možnosti: lahko namestite XCode, ali pa samo XCode Command Line Tools. 
-XCode je Appleov paket razvojnih orodij in prevajalnikov - za potrebe Računalniškega praktikuma jih ne potrebujete.
-Namestite ga, če se boste počutili bolje z nameščenim prevajalnikom za C.
-**Opozorilo:** XCode zasede med 3GB in 4GB, za nemoteno delovanje pa potrebujete kakih 40GB prostega prostora na disku (te številke niso zelo točne).
-XCode namestite preko [Apple App Store](https://apps.apple.com/si/app/xcode/id497799835).
-
-Nato izberite eno od spodnjih možnosti. Toplo priporočamo, da se odločite za namestitev z upraviteljem paketov Homebrew.
-
-#### A. Namestitev s Homebrew
-
-1. Namestite [Homebrew](https://brew.sh). Najlažje bo, če prenesete `.pkg` datoteko in jo poženete. 
-   Če se boste lotili nameščanja z ukazno vrstico: ko boste vpisovali geslo za vaš računalnik, se ne bo nič videlo, da se kaj dogaja. Vpišite geslo in stisnite <kbd>Enter</kbd>. Homebrew se splača občasno [posodobiti](https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages).
-2. Odprite Terminal in v ukazno vrstico napišite `brew install git`. Vedno lahko preverite, kakšna je ustrezna Homebrew formula z [iskalnikom](https://brew.sh), npr. [za git](https://formulae.brew.sh/formula/git#default).
-
-#### B. Samo namestitev XCode Command Line Tools
-   
-Paket orodij za ukazno vrstico XCode Command Line Tools namestite tako, da odprete Terminal in vtipkate ukaz `xcode-select --install`.
-Preverite, da je bila namestitev uspešna tako, da v ukazno vrstico napišete `xcode-select -p`.
-Če je vse ok, se bo spodaj izpisalo približno `/Library/Developer/CommandLineTools`.
-
-### Navodila za operacijski sistem Linux
-
-1. Če se še niste, se spoznajte z upraviteljem paketov (angl. _package manager_) na vaši distribuciji (npr. `apt` na Ubuntu/Debian ali `yum`/`dnf` na Red Hat distribucijah).
-2. Če še nimate nameščenega Gita, ga namestite zdaj s svojim upraviteljem paketov (če vam je to še neznano, v brskalnik vpišite `<vaš Linux> install git`).
-   Za Ubuntu boste verjetno našli [`sudo apt install git-all`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-
 (namestitev:vscode)=
 ## Visual Studio Code
 
@@ -68,6 +30,46 @@ Pri namestitvi bodite pozorni na možnosti, še posebej na to, da imate obkljuka
 ### Dodatna navodila za operacijski sistem MacOS
 
 * Prenesli ste ZIP datoteko, ki jo odpakirajte, nato pa prestavite program v _Applications_.
+
+(namestitev:ukazna)=
+## Orodja za ukazno vrstico
+
+Sledite navodilom za vaš operacijski sistem, nato pa še [navodilom za nastavitve za `git`](git:nastavitve).
+Ukaze iz teh navodil lahko napišete v ukazno vrstico v VSCode (_Terminal_ > _New Terminal_) ali v samostojno ukazno vrstico (Git Bash na Windows, Terminal na macOS).
+
+### Navodila za operacijski sistem Windows
+
+S spletne strani [git](https://git-scm.com/download/win) prenesite in namestite Git for Windows.
+Git je orodje za upravljanje različic, poleg tega pa Git for Windows ponuja še močno ukazno vrstico.
+Nato v VSCode [nastavite Git Bash za privzeto ukazno vrstico](faq:vscode-bash).
+
+### Navodila za operacijski sistem MacOS
+
+Če uporabljate MacOS, imate dve možnosti: lahko namestite XCode, ali pa samo XCode Command Line Tools. 
+XCode je Appleov paket razvojnih orodij in prevajalnikov - za potrebe Računalniškega praktikuma jih ne potrebujete.
+Namestite ga, če se boste počutili bolje z nameščenim prevajalnikom za C.
+**Opozorilo:** XCode zasede med 3GB in 4GB, za nemoteno delovanje pa potrebujete kakih 40GB prostega prostora na disku (te številke niso zelo točne).
+XCode namestite preko [Apple App Store](https://apps.apple.com/si/app/xcode/id497799835).
+
+Nato izberite eno od spodnjih možnosti. Toplo priporočamo, da se odločite za namestitev z upraviteljem paketov Homebrew.
+
+#### A. Namestitev s Homebrew
+
+1. Namestite [Homebrew](https://brew.sh). Najlažje bo, če prenesete `.pkg` datoteko in jo poženete. 
+   Če se boste lotili nameščanja z ukazno vrstico: ko boste vpisovali geslo za vaš računalnik, se ne bo nič videlo, da se kaj dogaja. Vpišite geslo in stisnite <kbd>Enter</kbd>. Homebrew se splača občasno [posodobiti](https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages).
+2. V ukazno vrstico napišite `brew install git`. Vedno lahko preverite, kakšna je ustrezna Homebrew formula z [iskalnikom](https://brew.sh), npr. [za git](https://formulae.brew.sh/formula/git#default).
+
+#### B. Samo namestitev XCode Command Line Tools
+   
+Paket orodij za ukazno vrstico XCode Command Line Tools namestite tako, da v ukazno vrstico napišete ukaz `xcode-select --install`.
+Preverite, da je bila namestitev uspešna tako, da v ukazno vrstico napišete `xcode-select -p`.
+Če je vse ok, se bo spodaj izpisalo približno `/Library/Developer/CommandLineTools`.
+
+### Navodila za operacijski sistem Linux
+
+1. Če se še niste, se spoznajte z upraviteljem paketov (angl. _package manager_) na vaši distribuciji (npr. `apt` na Ubuntu/Debian ali `yum`/`dnf` na Red Hat distribucijah).
+2. Če še nimate nameščenega Gita, ga namestite zdaj s svojim upraviteljem paketov (če vam je to še neznano, v brskalnik vpišite `<vaš Linux> install git`).
+   Za Ubuntu boste verjetno našli [`sudo apt install git-all`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 (namestitev:latex)=
 ## LaTeX
@@ -97,7 +99,7 @@ Ta navodila predpostavljajo, da imate že nameščen urejevalnik [Visual Studio 
 
 1. Preverite, da imate nameščen Perl tako, da v ukazno vrstico napišete `perl -v`. 
    Če je vse ok, se bodo izpisale informacije o verziji programa, sicer pa `zsh: command not found: perl` (v tem primeru namestite Perl, npr. s Homebrew).
-2. Namestite [MacTeX](https://www.tug.org/mactex/) distribucijo [TeX live](https://tug.org/texlive/) za MacOS. Če imate že nameščen Homebrew, poženite program Terminal in v ukazno vrstico prilepite [ustrezno formulo, ki jo kopirate s Homebrew strani](https://formulae.brew.sh/cask/mactex). Sicer sledite navodilom na strani distribucije.
+2. Namestite [MacTeX](https://www.tug.org/mactex/) distribucijo [TeX live](https://tug.org/texlive/) za MacOS. Če imate že nameščen Homebrew, v ukazno vrstico prilepite [ustrezno formulo, ki jo kopirate s Homebrew strani](https://formulae.brew.sh/cask/mactex). Sicer sledite navodilom na strani distribucije.
 3. [Preverite namestitev](latex:preverjanje-namestitve).
 
 ### Navodila za operacijski sistem Linux
