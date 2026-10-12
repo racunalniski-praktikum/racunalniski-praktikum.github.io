@@ -136,6 +136,7 @@ Legacy material that is not in the tree:
 - 2026-10-08 — The slides are published with the textbook, at <https://racunalniski-praktikum.github.io/predavanja/>. The Sphinx extension `ucbenik/extensions/predavanja.py` copies `predavanja/` into the book's HTML output and renders `predavanja/README.md` as its `index.html`, so `jupyter-book build ucbenik` and `ghp-import` publish both.
 - 2026-10-08 — Version control is *upravljanje različic*, the Islovar term, throughout the course. It replaces *nadzor različic* and *nadzor nad verzijami*. VSCode's *Source Control* view is glossed the same way, not with Islovar's *upravljanje izvorne kode*: students keep versions of text, not only of source code.
 - 2026-10-09 — A commit is a *vnos* (verb *zabeležiti*), and *sprememba* is only an edit to files. Where students first meet it, it is *vnos spremembe*, until they are used to the short form. Islovar has no entry for *commit*; *vnos* follows Martin Vuk, *Matematični pogled na Git* (FRI, 2026). Islovar's *vnos* means input; context keeps the two senses apart. *Zabeležek* is not taken: it is in neither SSKJ nor SP, only in Pleteršnik, and the standard *zabeležka* is a jotted note. *Sprememba*, used in *Uvod v programiranje*, clashes with VSCode's *Changes* and suggests diffs, while Git stores snapshots. *Potrditev*, used by the Slovenian *Pro Git*, is not taken either: the textbook says *potrdite* for confirming a dialog or a name, and Islovar uses *potrditev* for a network acknowledgement. Nor is *uveljavitev*, used by GNOME and KDE: *uveljaviti* means to enforce. Applied in `03-git.md` and `G-git.md`; the legacy chapters that say *naredite commit* follow when they migrate.
+- 2026-10-12 — `ucbenik/L-latex` is not cruft: it is the LaTeX troubleshooting page split out of appendix A in `42e1b96`, and appendix A links to its label `latex:preverjanje-namestitve`. It is published as the appendix `L-latex.md`.
 
 ## Open questions
 
@@ -146,5 +147,5 @@ Legacy material that is not in the tree:
 - Build artifacts: keep committing compiled slide PDFs, or build them (CI/locally)?
 - reveal.js loaded from CDN vs vendored.
 - `zbornica/vaje/` contains instructor-facing solutions — confirm they may be public, or drop that unit, **before it migrates**. Its `00-izvedba-vaj.md` is now safe to drop in that sense: its ideas are recorded in *To do: the README* in `MIGRATION.md` and in *Course principles*.
-- Cruft in `ucbenik/`: stray extensionless `ucbenik/L-latex` file, `ucbenik/00-razno/` scratch directory — keep, move, or delete.
+- Cruft in `ucbenik/`: `ucbenik/00-razno/` scratch directory — keep, move, or delete.
 - `ucbenik/_config.yml` still points to the old repo URL (`katjabercic/racunalniski-praktikum`) — fix when migrating book config.
