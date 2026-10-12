@@ -82,7 +82,7 @@ until the target structure is agreed.
 | 14 | Dodatki / plonkci (A–H) | A: `ucbenik/{A..H}-*.md` | support | TBD | [M] except `H-regex.md` → L2 (C6) and `A-programska-oprema.md`, which needs new entries (G3) |
 | 15 | Slide infrastructure | B: `pomozno/` | all | TBD | [J] blocked on the slides-technology decision |
 | 16 | Book build config | A: `ucbenik/{_config.yml,_toc.yml,_toc-plan.yml,myst.yml,_static/,extensions/}` | — | TBD | [J] blocked on jupyter-book vs mystmd; fix old repo URL; both TOCs still list CSS (C2) |
-| 17 | Cleanup | A: `ucbenik/L-latex`, `ucbenik/00-razno/` | — | — | [M] likely delete, after checking nothing references them |
+| 17 | Cleanup | A: `ucbenik/00-razno/` | — | — | [M] likely delete, after checking nothing references it |
 | 18 | Vaje (navodila in rešitve za izvajalce) | C: `vaje/` | all | TBD | [J] mirrors A's chapter numbering, which the plan changes; solutions become public on push — review first. **`00-izvedba-vaj.md` holds the purpose of the course and the tutorial calibration** — both are now recorded in *To do: the README* (Purpose) and in `CLAUDE.md` (*Course principles*), so they survive this unit |
 | 19 | Gradiva (pregled poglavij) | C: `gradiva/` | L5–L8, L10–L12 | TBD | [J] LaTeX and Mathematica chapter overviews |
 | 20 | Domače naloge | C: `domace-naloge/` | bonus, submitted via Git | TBD | [J] `04-html-css/` is for a dropped topic (C2); submission through Git is what exercises unit 3 |

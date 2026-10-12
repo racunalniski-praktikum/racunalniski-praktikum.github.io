@@ -134,6 +134,7 @@ Legacy material that is not in the tree:
 - 2026-10-08 — `COURSE.md` is split by audience and status: the public part goes to a to-do list for the README in `MIGRATION.md`, the guidance for authors to *Course principles* above, the lecture plans (drafts) to `MIGRATION.md`, and the exam design to the private `zbornica`. Its summary of changes from the previous run and its table of lecture hours are dropped: the entries above record them.
 - 2026-10-08 — The slides are published with the textbook, at <https://racunalniski-praktikum.github.io/predavanja/>. The Sphinx extension `ucbenik/extensions/predavanja.py` copies `predavanja/` into the book's HTML output and renders `predavanja/README.md` as its `index.html`, so `jupyter-book build ucbenik` and `ghp-import` publish both.
 - 2026-10-08 — Version control is *upravljanje različic*, the Islovar term, throughout the course. It replaces *nadzor različic* and *nadzor nad verzijami*. VSCode's *Source Control* view is glossed the same way, not with Islovar's *upravljanje izvorne kode*: students keep versions of text, not only of source code.
+- 2026-10-12 — `ucbenik/L-latex` is not cruft: it is the LaTeX troubleshooting page split out of appendix A in `42e1b96`, and appendix A links to its label `latex:preverjanje-namestitve`. It is published as the appendix `L-latex.md`.
 
 ## Open questions
 
@@ -144,5 +145,5 @@ Legacy material that is not in the tree:
 - Build artifacts: keep committing compiled slide PDFs, or build them (CI/locally)?
 - reveal.js loaded from CDN vs vendored.
 - `zbornica/vaje/` contains instructor-facing solutions — confirm they may be public, or drop that unit, **before it migrates**. Its `00-izvedba-vaj.md` is now safe to drop in that sense: its ideas are recorded in *To do: the README* in `MIGRATION.md` and in *Course principles*.
-- Cruft in `ucbenik/`: stray extensionless `ucbenik/L-latex` file, `ucbenik/00-razno/` scratch directory — keep, move, or delete.
+- Cruft in `ucbenik/`: `ucbenik/00-razno/` scratch directory — keep, move, or delete.
 - `ucbenik/_config.yml` still points to the old repo URL (`katjabercic/racunalniski-praktikum`) — fix when migrating book config.
