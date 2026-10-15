@@ -435,7 +435,7 @@ existing mechanism of the language-model thread.
 
 **Build configuration that still lists CSS as a chapter:**
 
-- `A: ucbenik/_toc.yml` (a commented-out line, left for a later commit) and `A: ucbenik/_toc-plan.yml:9`.
+- ~~`A: ucbenik/_toc.yml`~~ (removed 2026-10-15) and `A: ucbenik/_toc-plan.yml:9`.
 - `B: README.md:12–13` — lecture 4 with its deck and example.
 
 ### C3 — Material in the wrong lecture (encodings)

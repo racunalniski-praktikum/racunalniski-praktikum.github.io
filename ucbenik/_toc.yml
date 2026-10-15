@@ -10,7 +10,6 @@ parts:
   - file: 02-ukazna-vrstica.md
   - file: 03-git.md
 #   - file: 04-html.md
-#   - file: 04-css.md
 #   - file: 05-utrdimo-osnove.md
 # - caption: Matematični dokumenti
 #   chapters:
