@@ -1,4 +1,4 @@
-# Urejevalnik in Markdown
+# Besedilne datoteke
 
 `````{admonition} Programska oprema
 :class: important
@@ -20,7 +20,7 @@ Tipkanje postane lažje, ker smo lahko s pogledom osredotočeni na zaslon.
 Kazalca postavite na črki <kbd>F</kbd> in <kbd>J</kbd>. Ti dve tipki sta na tipkovnicah pogosto označeni z izbočenima pikama ali črticama. Ostale prste postavimo na isto vrstico. Vsakemu prstu so dodeljene tipke:
 
 :::{figure-md} slika:polozaji-prstov
-![Položaji prstov za desetprstno tipkanje](01-urejevalnik-in-markdown/Typing-colour_for-finger-positions.png)
+![Položaji prstov za desetprstno tipkanje](01-besedilne-datoteke/Typing-colour_for-finger-positions.png)
 
 &nbsp; Položaji prstov za desetprstno tipkanje\
 <span class="avtor">
@@ -112,7 +112,7 @@ Glavni deli uporabniškega vmesnika VSCode so:
 - statusna vrstica (angl. _Status Bar_) z uporabnimi informacijami, ki jih bomo spoznali kasneje.
 
 :::{figure-md} slika:vmesnik-vscode
-![Uporabniški vmesnik urejevalnika VSCode](01-urejevalnik-in-markdown/vscode-ui.png)
+![Uporabniški vmesnik urejevalnika VSCode](01-besedilne-datoteke/vscode-ui.png)
 
 &nbsp; Uporabniški vmesnik urejevalnika VSCode
 :::
@@ -205,7 +205,7 @@ S tipkovnico in čim manjšo uporabo miške naredite naslednja opravila:
 7. V upravitelju datotek preverite, ali se vsebina imenika za Računalniški praktikum ujema s spodnjo sliko.
 
 :::{figure-md} slika:vsebina-imenika
-<img src="01-urejevalnik-in-markdown/vsebina-imenika-readme.svg" alt="Imenik rp z imenikom racunalniski-praktikum, v katerem je README.md">
+<img src="01-besedilne-datoteke/vsebina-imenika-readme.svg" alt="Imenik rp z imenikom racunalniski-praktikum, v katerem je README.md">
 
 &nbsp; Strukturo imenikov bomo prikazovali kot zgoraj.
 :::
