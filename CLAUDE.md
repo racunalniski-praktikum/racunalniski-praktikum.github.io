@@ -54,8 +54,12 @@ outside an agreed migration PR.
 
 Legacy material that is not in the tree:
 
-- the legacy lecture slides are in the history of `predavanja/`, at commit
-  `261a63a^` with their original paths (`git show 261a63a^:03-html/prosojnice.html`),
+- the legacy lecture slides (term 2025/26) are in the history of `predavanja/`, at
+  commit `261a63a^` = `a236246`, with their original paths at the root of the tree,
+  not under `predavanja/` (`git show a236246:03-html/prosojnice.html`). A file
+  search of the current tree does not find them. To restore a deck next to the
+  current ones, run `git archive a236246 02-git | tar -x -C predavanja`; its links
+  to `../pomozno/` work, because `pomozno/` has not changed since,
 - selected content (`gradiva/`, `vaje/`, `domace-naloge/`, `v-pripravi.md`) is in
   the private staff repo `zbornica`.
 
