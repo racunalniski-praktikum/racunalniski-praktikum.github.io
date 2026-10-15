@@ -1,305 +1,298 @@
 # Označevalni jezik HTML
 
-HTML (angl. _**H**yper**T**ext **M**arkup **L**anguage**_, jezik za označevanje hiperteksta oz. nadbesedila), 
-je osnovni jezik za ustvarjanje spletnih strani in spletnih aplikacij.
-Spletnim brskalnikom, kot so Google Chrome, Firefox, Edge ali Safari, pove, kako naj prikažejo vsebino spletne strani.
-To naredi z označevanjem gradnikov, kot so naslovi, odstavki, slike, povezave, tabele in obrazci.
-Vsaka oznaka (značka, angl. _tag_) označuje določen del vsebine.
-Ko brskalnik prejme HTML dokument, prebere oznake in prikaže vsebino na zaslonu. 
-V ozadju te oznake pomagajo brskalniku razumeti, kaj naj prikaže in kako naj to prikaže.
-
 `````{admonition} Programska oprema
 :class: important
-- [Visual Studio Code](namestitev:vscode),
-- razširitev [HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint) in 
-- razširitev [HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode).
+- [Visual Studio Code](namestitev:vscode) z razširitvijo [HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint),
+- spletni brskalnik, na primer Chrome, Firefox ali Safari.
 `````
 
-`````{admonition} Shranite vaje na strežnik
+`````{admonition} Shranite vaje na GitHub
 :class: important
-Na koncu 2.-4. naloge zabeležite spremembe.
-Če naloge slučajno ne končate na vajah, vseeno zabeležite spremembe - 
-v sporočilo napišite na primer `V delu: ...` s kratkim opisom narejenega.
-[Preden odidete iz predavalnice](https://www.reddit.com/r/ProgrammerHumor/comments/3nc531/in_case_of_fire/), 
-pošljite spremembe na strežnik s paleto ukazov:
-<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) >
-**Git: Push**.
+Na koncu 2. do 5. naloge zabeležite spremembe.
+Če naloge na vajah ne končate, spremembe vseeno zabeležite in v sporočilo napišite na primer `V delu: ...` s kratkim opisom narejenega.
+[Preden odidete iz predavalnice](https://www.reddit.com/r/ProgrammerHumor/comments/3nc531/in_case_of_fire/), vnose pošljite na GitHub:
+v paleti ukazov (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) izberite ukaz _Git: Push_.
 `````
+
+HTML (angl. _**H**yper**T**ext **M**arkup **L**anguage_, jezik za označevanje nadbesedila) je označevalni jezik, v katerem so zapisane spletne strani.
+Ideja je enaka kot pri Markdownu iz 1. poglavja: z dogovorjenimi zaporedji znakov povemo, kaj posamezni deli besedila so, na primer naslov, odstavek, seznam, povezava, tabela ali slika.
+Kako bodo ti deli videti, določi brskalnik.
+HTML pove isto kot Markdown, le bolj izrecno: kar v Markdownu zapišemo kot `# Naslov`, v HTML-ju zapišemo kot `<h1>Naslov</h1>`.
+Tudi predogled Markdowna v VSCode je pravzaprav spletna stran: urejevalnik Markdown pretvori v HTML in ga prikaže.
+
+V Wordu lahko naslov naredite tako, da besedilo povečate in odebelite.
+Na pogled je to naslov, za program pa samo večje krepko besedilo:
+ne pojavi se v samodejnem kazalu, bralnik zaslona ga ne prebere kot naslov,
+in če se odločite za drugačen videz naslovov, morate popraviti vsakega posebej.
+Word ima za to sloge, kot je _Naslov 1_ (angl. _Heading 1_), ki povedo, kaj besedilo je, in ne samo, kako je videti.
+HTML je zgrajen na tej ideji: z značkami povemo, kaj je kaj, videz pa določimo [posebej](html:videz).
 
 ## Struktura dokumenta
 
-HTML dokument je sestavljen iz vsebine in značk. _Značke_ imajo lahko lastnosti oz. atribute. 
-Prepoznamo jih po oklepajih `<` in `>`, npr. `<h1>` ali `<img>`.
-Značke bomo vedno najprej odprli (`<znacka>`) in nato zaprli (`</znacka>`).
+HTML dokument je sestavljen iz vsebine in značk (angl. _tags_).
+Značke prepoznamo po oklepajih `<` in `>`, na primer `<h1>` ali `<img>`.
+Večino značk najprej odpremo z začetno značko (`<znacka>`) in nato zapremo s končno (`</znacka>`); kar je med njima, je vsebina značke.
+Značke imajo lahko tudi atribute, ki jim dodajo podatke.
+Primer je značka za povezavo `a` (angl. _anchor_): v atribut `href` napišemo spletni naslov, na katerega kaže povezava, vsebina značke pa je besedilo povezave, ki ga prikaže brskalnik.
 
-:::{figure-md} markdown-fig
-![Anatomija značke](04-html/anatomija-znacke.png)
+:::{figure-md} slika:anatomija-znacke
+:width: 80%
+:align: center
+![Sestavni deli značke](04-html/anatomija-znacke.svg)
 
 &nbsp; Sestavni deli HTML značke
 :::
 
-Pri nekaterih značkah bomo uporabili tudi atribute.
-Primer značke z atributom je značka za povezavo `<a>` (angl. _anchor_).
-V atribut `href` napišemo spletni naslov, na katerega kaže povezava, vsebina značke pa je besedilo povezave,
-ki se bo prikazalo v brskalniku.
+Nekatere značke nimajo vsebine, zato jih samo odpremo, na primer `<img>` za sliko.
 
-Značke lahko gnezdimo eno v drugo: `<a href="http://fmf.uni-lj.si/"><em>FMF</em></a>`.
-Značke se ne smejo prekrivati.
-Če pogledamo dve znački, je bodisi ena v vsebini druge bodisi se sploh ne prekrivata.
-Narobe je npr. `<a href="http://fmf.uni-lj.si/"><em>FMF</a></em>`.
-Predstavljate si lahko, da so značke škatle, ki držijo vsebino.
+Značke lahko gnezdimo eno v drugo: `<a href="https://www.fmf.uni-lj.si/"><em>FMF</em></a>`.
+Ne smejo pa se prekrivati: od dveh značk je bodisi ena v vsebini druge bodisi se sploh ne prekrivata.
+Narobe je na primer `<a href="https://www.fmf.uni-lj.si/"><em>FMF</a></em>`.
+Značke si lahko predstavljate kot škatle, ki držijo vsebino in druge škatle.
 
-Dodatni viri:
-
-* [HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+Imena značk lahko pišemo z velikimi ali malimi črkami.
+Po dogovoru, ki se ga bomo držali tudi mi, jih pišemo z malimi, razen `DOCTYPE`.
+Zaradi preglednosti vsako gnezdeno značko zamaknemo za dva presledka glede na značko, v kateri je.
+Komentarje, ki jih brskalnik ne prikaže, pišemo med `<!--` in `-->`.
 
 ### Enostaven primer HTML dokumenta
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="sl">
   <head>
     <title>Enostavna spletna stran</title>
   </head>
   <body>
     <!-- V naslednjih dveh vrsticah je vsebina (telo) spletne strani -->
     <h1>Jaz sem naslov!</h1>
-    <p>V odstavkih imamo lahko tudi <a href="https://www.fmf.uni-lj.si/">povezave</a></p>
+    <p>V odstavkih imamo lahko tudi <a href="https://www.fmf.uni-lj.si/">povezave</a>.</p>
   </body>
 </html>
 ```
 
-Včasih si je dobro predstavljati tak dokument kot hierarhijo značk:
+Dokument se začne z deklaracijo `<!DOCTYPE html>`, ki brskalniku pove, da gre za dokument HTML; končne značke nima.
+Sledi značka `html`, v kateri je ves dokument.
+Njen atribut `lang` pove, v katerem jeziku je besedilo: `sl` za slovenščino, `en` za angleščino.
+V znački `html` sta dve znački:
+v glavi `head` so podatki o dokumentu, ki jih brskalnik ne prikaže na strani,
+v telesu `body` pa vsebina strani.
+V glavi so na primer
 
-:::{figure-md} markdown-fig
-![Hierarhija značk za zgornji primer dokumenta](04-html/html-drevo.png)
+- naslov dokumenta `title`, ki ga brskalnik prikaže na zavihku,
+- značka `<meta charset="UTF-8">`, ki pove, v katerem kodiranju je zapisana datoteka.
+  Brez nje lahko brskalnik besedilo prebere z napačnim kodiranjem, kot ste videli pri podnapisih v 2. poglavju:
+  znak `±` se na primer prikaže kot `Â±`.
+
+Dokument si lahko predstavljamo tudi kot hierarhijo značk:
+
+:::{figure-md} slika:html-drevo
+:width: 60%
+:align: center
+![Hierarhija značk za zgornji primer dokumenta](04-html/html-drevo.svg)
 
 &nbsp; Hierarhija značk za zgornji primer dokumenta
 :::
 
+### Vsebina dokumenta
+
+V telesu dokumenta najpogosteje uporabljamo naslednje značke:
+
+- naslove `h1` do `h6`: številka pove raven naslova, ne njegove velikosti.
+  Naslov strani je `h1`, naslovi razdelkov so `h2`, naslovi podrazdelkov `h3` in tako naprej.
+- odstavke `p` (angl. _paragraph_),
+- sezname: urejeni seznam `ol` (angl. _ordered list_) in neurejeni seznam `ul` (angl. _unordered list_), v katerih je vsak element v svoji znački `li` (angl. _list item_),
+- citate `blockquote`,
+- povezave `a` z atributom `href`,
+- tabele `table`, v katerih so vrstice `tr` (angl. _table row_), v vrsticah pa celice `td` (angl. _table data_) ali celice glave tabele `th` (angl. _table header_),
+- slike `img` z atributoma `src`, v katerem je pot do slike, in `alt`, v katerem je opis slike.
+  Opis se uporabi, kadar se slika ne prikaže, in za dostopnost, na primer ko stran bere bralnik zaslona.
+
+Brskalniku so presledki in prelomi vrstic v izvorni kodi vseeno: več zaporednih presledkov ali praznih vrstic prikaže kot en sam presledek.
+Zato odstavkov ne ločimo s praznimi vrsticami, ampak vsakega označimo z značko `p`.
+
+Povezava lahko kaže tudi na del iste strani.
+Značka, na katero naj kaže, dobi atribut `id`, povezava pa ima v atributu `href` njegovo vrednost za znakom `#`.
+Povezava `<a href="#criticism">Criticism</a>` tako pelje do naslova `<h2 id="criticism">Criticism</h2>`.
+Vrednost atributa `id` se v dokumentu ne sme ponoviti.
+
+Za poudarke uporabljamo znački `strong` (močan poudarek) in `em` (angl. _emphasis_, poudarek).
+Brskalnik ju običajno prikaže krepko oziroma ležeče, vendar znački povesta, da je besedilo poudarjeno, in ne, kako je videti.
+Nekoč sta se za to uporabljali znački `b` (angl. _bold_) in `i` (angl. _italic_), ki opisujeta videz.
+Dobra praksa danes loči pomen, ki ga povedo značke HTML, od videza, ki ga določi CSS.
+
+### Matematika
+
+Brskalniki matematičnih formul ne znajo prikazati sami.
+Pomagamo si s knjižnico [MathJax](https://www.mathjax.org/), ki jo v glavi dokumenta vključimo kot skripto:
+brskalnik jo prenese skupaj s stranjo, ona pa poišče formule, zapisane v sintaksi LaTeX-a, in jih izriše.
+Formule med `\[` in `\]` so prikazane v svoji vrstici.
+LaTeX boste podrobneje spoznali v naslednjem poglavju.
+
+(html:videz)=
+## Vsebina in videz
+
+Kako so videti naslovi, odstavki in tabele, določa jezik CSS (angl. _**C**ascading **S**tyle **S**heets_).
+HTML pove, kaj je kaj, CSS pa določi barve, pisave, razmike, velikosti in postavitev.
+Jezika sta primer [ločevanja vsebine in predstavitve](https://en.wikipedia.org/wiki/Separation_of_content_and_presentation), istega načela kot pri slogih v Wordu.
+
+Slogi so ponavadi v posebni datoteki s končnico `.css`, ki jo vključimo v glavi dokumenta:
+
+```html
+<link rel="stylesheet" href="oblikovanje.css">
+```
+
+Atribut `href` je pot do datoteke, tako kot pri povezavah in slikah.
+Datoteka s slogi je sestavljena iz pravil, kot je
+
+```css
+h2 {
+  color: #8b4513;
+}
+```
+
+To pravilo pove, da naj bodo vsi naslovi `h2` rjavi.
+Ker so naslovi označeni kot naslovi, z eno spremembo pravila spremenimo vse hkrati.
+Besedila, ki je samo povečano in odebeljeno, pravilo za naslove ne zajame.
+
+CSS-ja se pri tem predmetu ne bomo učili.
+Datotek s slogi skoraj nihče ne piše od začetka: vzame obstoječo in jo prilagodi, ko to potrebuje, na primer s pomočjo jezikovnega modela.
+To pa gre zlahka samo, če je HTML pravilno označen.
+
+## Orodja za razvijalce
+
+Spletni brskalniki imajo vgrajena orodja za razvijalce (angl. _developer tools_),
+s katerimi lahko pregledujete in urejate HTML in CSS strani, iščete napake v skriptah in spremljate, katere datoteke se prenesejo.
+Ko v brskalniku obiščete spletno stran, se na vaš računalnik prenese kopica datotek: dokument HTML, slogi, slike in skripte.
+Brskalnik jih uporabi, da vam prikaže stran.
+
 ## 1. naloga: orodja za razvijalce
 
-Spletni brskalniki imajo ponavadi vgrajena orodja, ki omogočajo razvijalcem in oblikovalcem pregledovanje, 
-urejanje in razhroščevanje spletnih strani in aplikacij neposredno znotraj brskalnika. 
-Ta orodja vključujejo funkcionalnosti za pregledovanje in urejanje HTML in CSS kode, 
-izvajanje in razhroščevanje JavaScript kode, spremljanje omrežnih zahtevkov, analiziranje zmogljivosti strani, 
-pregledovanje uporabe pomnilnika, itd.
+1. Odprite brskalnik in v njem orodja za razvijalce:
+   - Chrome: v stranskem meniju izberite _More tools_ > _Developer Tools_,
+   - Firefox: v stranskem meniju izberite _More tools_ > _Web Developer Tools_,
+   - Safari: v meniju _Develop_ izberite _Show Web Inspector_.
+     Če menija _Develop_ ne vidite, ga vklopite po [navodilih](https://support.apple.com/en-om/guide/safari/sfri20948/mac).
 
-Ko v brskalniku obiščete spletno stran, se na vaš računalnik naloži kopica datotek, ki jih brskalnik uporabi,
-da vam prikaže vsebino spletne strani.
-Sledite naslednjim korakom, da boste dobili boljšo predstavo o tem, kaj pomeni brskanje po spletu.
+   Orodja odpre tudi tipka <kbd>F12</kbd> ali bližnjica <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>I</kbd>).
+2. V orodjih odprite zavihek _Network_.
+3. V naslovno vrstico brskalnika vpišite `https://www.fmf.uni-lj.si/` in stisnite vnašalko <kbd>↵</kbd>.
+   Poglejte, katere datoteke so se prenesle, da se je prikazala prva stran FMF.
+4. Preklopite na zavihek z izvorno kodo strani (v Chromu in Safariju _Elements_, v Firefoxu _Inspector_) in si jo oglejte.
 
-* Odprite okno brskalnika.
-* V razdelku za brskalnik, ki ste ga odprli, sledite navodilom za orodja za razvijalce (več o tem spodaj).
-* Poiščite in odprite zavihek _Network_.
-* V naslovni vrstici brskalnika vpišite naslov `https://www.fmf.uni-lj.si/` in stisnite vnašalko <kbd>↵</kbd>.
-* Poglejte, kaj vse se je preneslo na računalnik, da se je prikazala prva stran FMF.
-* Preklopite na zavihek z izvorno kodo (spodaj za posamezni brskalnik) 
-  in si oglejte, kako izgleda izvorna koda strani.
+## 2. naloga: ogrodje dokumenta
 
-Orodja za razvijalce:
+1. V VSCode odprite imenik `racunalniski-praktikum` v imeniku `rp` (_File_ > _Open Folder_).
+   Če repozitorija na tem računalniku še nimate, ga najprej [klonirajte](git:init).
+   V njem naredite imenik `04-html`, v tem pa datoteko `stran.html` in jo odprite.
 
-* ***Chrome***: odprite stranski meni in izberite **More tools** > **Developer Tools**,
-* ***Firefox***: odprite stranski meni in izberite **More tools** > **Web Developer Tools**,
-* ***Safari***: odprite meni **Develop** in izberite **Show Web Inspector**. Če menija **Develop** ne vidite, sledite [navodilom](https://support.apple.com/en-om/guide/safari/sfri20948/mac).
-* Alternativno lahko Orodja za razvijalce neposredno odprete s pritiskom na tipko <kbd>F12</kbd> ali pa z uporabo bližnjice <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>I</kbd>).
+   :::{figure-md} slika:drevo-repozitorij
+   :width: 50%
+   :align: center
+   ![Drevo imenikov z novo datoteko](04-html/drevo-repozitorij.svg)
 
-Zavihek za izvorno kodo strani:
-
-* ***Chrome in Safari***: izvorna koda je v zavihku _Elements_,
-* ***Firefox***: izvorna koda je v zavihku _Inspector_.
- 
-## 2. naloga: delo s HTML dokumentom, glava dokumenta
-
-V tej nalogi boste spoznali osnovno ogrodje HTML dokumenta in kako za urejanje lahko uporabimo VSCode.
-
-HTML značke lahko pišemo bodisi z velikimi ali malimi črkami.
-Običajno pišemo vse z malo, razen značke `DOCTYPE`.
-Tudi mi se bomo držali tega dogovora.
-
-Če tega še niste naredili, [pripravite svoj računalnik za delo z Git-om](git:vscode).
-
-Če ste sledili domači nalogi in vajam, imate dva repozitorija:
-tistega iz domače naloge, ki ste ga večinoma poimenovali `racunalniski-praktikum`,
-ter kopijo repozitorija `git-zgodba`, ki ste ga uporabili na prejšnjih vajah.
-Prvega bomo še naprej uporabljali na vajah.
-
-1. V VSCode odprite imenik s svojim repozitorijem (verjetno ste mu dali ime `racunalniski-praktikum`).
-   V njem naredite nov imenik `03-html`, v njem pa novo datoteko `stran.html` in jo odprite.
-   V urejevalniku odprite okno _Problems_.
-   Spodaj levo lahko kliknete na ikoni s križcem v krogu in klicajem v trikotniku, 
-   ali pa ga poiščete v meniju **View**.
-   Če postavite kurzor v datoteko `stran.html`, se bo v zavihku PROBLEMS pojavilo opozorilo: 
-   `Doctype must be declared first. (doctype-first) [1, 1]`. 
-   Enici v oglatih oklepajih nam povesta, da je težava v prvi vrstici (in prvem stolpcu).
-
-   :::{figure-md} markdown-fig
-   <img src="04-html/vsebina-imenika-html.png" alt="Vsebina repozitorija po tej točki">
-
-   &nbsp; Struktura repozitorija `racunalniski-praktikum` po tej točki.
+   &nbsp; Repozitorij `racunalniski-praktikum` po tej točki
    :::
 
-2. Težavo odpravimo tako, da napišemo značko `DOCTYPE`.
-   Ta brskalniku pove, za kakšno vrsto dokumenta gre.
-   Napišite `<` in počakajte, da se vam v priročnem meniju pokaže možnost `DOCTYPE`.
-   Morda boste morali dopisati še klicaj: `<!`. Stisnite vnašalko <kbd>↵</kbd>. 
-   Zdaj bi moralo v prvi vrstici pisati `<!DOCTYPE html>`.
-   Če ne, lahko značko tudi prekopirate od tu.
-   Značka `DOCTYPE` ne potrebuje zaključne značke.
+2. Odprite pogled _Problems_ (_View_ > _Problems_).
+   Ko je kurzor v datoteki `stran.html`, se v njem pojavi opozorilo `Doctype must be declared first. (doctype-first) [1, 1]`.
+   Številki v oglatih oklepajih povesta, v kateri vrstici in v katerem stolpcu je težava.
+3. V prvo vrstico napišite `<` (morda tudi `<!`), počakajte, da se v priročnem meniju pokaže `DOCTYPE`, in ga izberite z vnašalko <kbd>↵</kbd>.
+   V vrstici mora pisati `<!DOCTYPE html>`; če ne piše, deklaracijo prepišite od tu.
+4. V naslednjo vrstico napišite `<html>`.
+   Ko napišete `>`, vam urejevalnik sam dopiše končno značko, kurzor pa ostane med njima.
+   Stisnite vnašalko.
+5. V značko `html` dodajte eno za drugo znački `head` in `body`, zamaknjeni za dva presledka.
+   V pogledu _Problems_ se pojavi novo opozorilo.
+   Odpravite ga, pa tudi tisto, ki se pojavi za njim; naslov dokumenta naj bo `ISO 3103`.
+6. V glavo dodajte še značko `<meta charset="UTF-8">`.
+7. Kodo preverite še na strani [Nu Html Checker](https://validator.w3.org/nu/#textarea), ki je strožja od razširitve HTMLHint:
+   prilepite jo v polje in kliknite _Check_.
+   Dodajte atribut za jezik, ki ga predlaga; besedilo, ki ga boste dodali v 3. nalogi, je v angleščini.
+8. Počistite vse napake in opozorila v pogledu _Problems_.
+   Če ne veste kako, prosite za pomoč.
+9. Zabeležite spremembo v pogledu za upravljanje različic:
+   1. V opravilnem stolpcu kliknite ikono za upravljanje različic (_Source Control_).
+   2. Pod napisom _Changes_ je datoteka `stran.html`.
+      Ko se z miško zapeljete nad njeno vrstico, se na desni pokažejo ikone.
+      Kliknite <kbd>+</kbd> (_Stage Changes_), ki izvede ukaz [`git add`](git:osnovni-ukazi).
+   3. Datoteka se premakne pod napis _Staged Changes_: v vnos gredo natanko spremembe pod tem napisom.
+      V polje nad gumbom _Commit_ napišite sporočilo, na primer `Pripravi ogrodje HTML dokumenta`, in kliknite _Commit_.
 
-3. V novo vrstico (zaradi preglednosti) za značko `DOCTYPE` napišite značko `html`: 
-   Kot prej, lahko napišete `<` in iz priročnega menija izberete `html`, lahko pa samo napišete `<html`.
-   Zaključno značko vam bo urejevalnik dopisal sam,
-   ko boste značko napisali do konca z znakom `>`: `<html>`.
-   V drugi vrstici bi zdaj moralo pisati `<html></html>`, kurzor pa bi moral stati med `><`.
-   Stisnite vnašalko <kbd>↵</kbd> za novo vrstico.
-
-4. V značko `html` dodajte eno za drugo še znački `head` in `body`.
-   Zamaknjeni naj bosta za dva presledka (tudi to delamo zaradi preglednosti).
-   Na splošno naj bodo gnezdene značke vedno zamaknjene za dva presledka glede na višji nivo.
-   V zavihku _Problems_ bi se moralo pojaviti novo opozorilo. 
-   Odpravite ga, pa tudi tisto opozorilo, ki se pojavi takoj za tem.
-
-5. Na spletni strani za [HTML standard](https://validator.w3.org/nu/#textarea) lahko preverite, 
-   kako se vaša izvorna koda obnese pri bolj strogem preverjanju.
-   Koda za slovenski jezik je `sl`, za angleški pa `en`.
-   Značka `html` z atributom za jezik pa izgleda takole: `<html lang="en">`.
-
-6. Značka `title` določi naslov dokumenta, kot se prikaže v naslovni vrstici brskalnika.
-   Naslov dokumenta naj bo "ISO 3103".
-
-7. V glavo dokumenta dodajte spodnjo značko, da določite kodiranje dokumenta
-   `<meta charset="UTF-8">`. Te značke ni treba zaključiti.
-   Če je ne boste dodali, se vam bo znak `±` prikazoval takole nekako: `Â±`.
-
-8. Počistite vse napake in opozorila, preden nadaljujete z naslednjo nalogo.
-   Če ne veste kako, se obrnite na asistentko ali asistenta.
-
-9. Zabeležite spremembo:
-   1. V opravilnem stolpcu poiščite ikono za Git (če se zapeljete nanjo z miško, bo pisalo _Source Control_) 
-      in jo kliknite, da dobite stranski meni za upravljanje različic.
-   2. Pod napisom _Changes_ bi morala biti našteta datoteka `stran.html`.
-      Če se nad vrstico z imenom datoteke zapeljete z miško, boste na desni strani videli ikone za opravila.
-      Kliknite na <kbd>+</kbd> (_Stage Changes_, ki izvede ukaz [`add`](git:osnovni-ukazi)).
-   3. Datoteka se bi morala premakniti pod napis _Staged Changes_. 
-      Kadar zabeležite spremembo (naredite _commit_), 
-      se v repozitorij shranijo natanko spremembe, ki so naštete pod tem napisom.
-      Da naredite commit, napišite sporočilo v vnosno polje nad gumbom <kbd>Commit</kbd>,
-      v katerem v nekaj besedah opišete, kaj ste naredili, npr. `Pripravi strukturo HTML dokumenta`.
-
-Za reševanje skupaj: na tablo narišite drevesno strukturo značk.
-
-## 3. naloga: predogled v brskalniku in vsebina
+## 3. naloga: vsebina
 
 `````{admonition} Del domače naloge
 :class: attention
-Datoteko, ki jo boste pripravili, boste potrebovali za domačo nalogo.
+Datoteki `stran.html` in `tea-bowl.jpg`, ki ju boste zabeležili na koncu te naloge, potrebujete za 4. domačo nalogo.
 `````
 
-Pri pisanju HTML značk vam bo v pomoč ukaz _Wrap with Abbreviation_ 
-iz palete ukazov (angl. _Command Palette_) v urejevalniku, 
+Pri pisanju značk vam bo v pomoč ukaz _Wrap with Abbreviation_ iz palete ukazov,
 več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
 
- 1. Datoteko odprite v brskalniku, da vidite, kako izgleda.
-
- 2. V urejevalniku v značko `body` prilepite vsebino datoteke [`vsebina.txt`](04-html/vsebina.txt).
-    Odstavki so ločeni s praznimi vrsticami.
-    Datoteko shranite. Z bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Tab</kbd>) skočite nazaj v brskalnik,
-    kjer pritisnite <kbd>Ctrl</kbd>+<kbd>R</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>R</kbd>), da osvežite stran.
-
- 3. Na začetku besedila, ki ste ga ravnokar prilepili, označite naslov "ISO 3103".
-    Stisnite tipke <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, da pridete v pogovorno okno palete ukazov.
-    Začnite tipkati ime ukaza _Wrap with Abbreviation_ `wrap...`,
-    ter ga izberite z vnašalko <kbd>↵</kbd>, ko se pojavi na vrhu seznama.
-    Naslednjič, ko boste hoteli uporabiti ta ukaz, se bo na vrhu seznama pojavil že
-    po manjšem številu natipkanih znakov.
-    Pojavi se še eno pogovorno okno, v katerega napišite ime značke za naslov (`h1`),
-    ter stisnite vnašalko <kbd>↵</kbd>.
-    V vrstici, kjer je bil prej samo označeni naslov, bi moralo zdaj pisati
-    `<h1>ISO 3103</h1>`.
-
- 4. Z ustreznimi značkami označite še podnaslove (`h2`) 
-    "Details", "Pot and bowl", "Criticism" in "Competing standards".
-    in podpodnaslov (`h3`) "Contents" na začetku besedila.
-    _Namig:_ <kbd>Alt</kbd>/<kbd>Option</kbd> + levi klik
-
- 5. Pod podpodnaslovom "Contents" so našteta podpoglavja. Oblikovali bomo preprost seznam vsebine.
-    Najprej bomo s pomočjo večih kurzorjev vsako vrstico s podpoglavjem obdali z značko.
-    Postavite kurzor na začetek vsake vrstice (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>↑↓</kbd> oz. <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>↑↓</kbd>),
-    stisnite in držite tipko <kbd>Shift</kbd> (za označevanje), nato pa še <kbd>End</kbd> oz. <kbd>Cmd</kbd>+<kbd>→</kbd> (za skok na konec vrstice).
-    Zdaj bi morali imeti označene vse vrstice kazala vsebine, vsako vrstico s svojim kurzorjem.
-    Na vseh naenkrat zdaj lahko uporabite ukaz _Wrap with Abbreviation_ z značko `li` (angl. _list item_).
-    Končno izberite vse vrstice (tokrat z enim kurzorjem) in jih obdajte z značko `ol` (angl. _ordered list_).
-    _Wrap with Abbreviation_ naredi toliko značk, kot imate kurzorjev, za vsakega eno.
-
- 6. Preverite, če ste osvojili tehniko iz prejšnje točke.
-    Pod podnaslovom "Details" naj bodo vsi odstavki razen prvega
-    elementi (značka `li`) neurejenega seznama (angl. _unordered list_, značka `ul`).
-    Odstavki so ločeni s praznimi vrsticami, v katerih nočemo narediti elementov seznama, 
-    zato kurzorje postavite s klikanjem.
-    Bodite pozorni na to, da sta dva elementa seznama zapisana v večih vrsticah (tista dva, ki imata tabeli).
-
- 7. Citat (odstavek pod besedilom "The abstract states the following:") 
-    označimo z značko `blockquote`.
-
- 8. Vsi ostali odstavki so običajni. Take označimo z značko `p`.
-
- 9. V prvem odstavku naj bo "ISO 3103" povezava na Wikipedijo.
-    To naredite z značko `a` in atributom `href`, katerega vrednost naj bo naslov strani.
-
-10. V 2. in 8. elementu v razdelku "Details" sta tabeli s po tremi stolpci, tremi vrsticami.
-    Tabelo v HTML naredimo z značko `table`, v kateri so značke `tr` za vrstice tabele.
-    V vsaki vrstici naštejemo celice z značkami `td`, celice za glavo tabele pa s `th`.
-    Celice za glavo uporabite v prvi vrstici in v prvem stolpcu.
-
-11. Prenesite in vstavite [sliko](04-html/tea-bowl.jpg) z značko `img`, ki je ni treba zaključiti.
-    Podate ji atribut `src`, v katerem podate pot do slike in atribut `alt`, v katerem podate opis.
-    Ta opis se uporabi v primerih, ko se slika ne prikaže, in za dostopnost
-    (npr. za avtomatsko branje vsebine).
-    Preverite v brskalniku, če se slika prikaže.
-    Verjetno bo prevelika, tako da jo za zdaj zakomentirajte:
-    v paleti ukazov poiščete `comment` in izberete _Add Line Comment_.,
-    ,
-
-12. Počistite vse napake in opozorila, preden nadaljujete z naslednjo nalogo.
-
-13. Zabeležite spremembo: dodajte datoteki `stran.html` in `tea-bowl.jpg`
-    ter napišite uporabno sporočilo, npr. `Dodaj vsebino HTML dokumenta`.
-    
+ 1. Datoteko `stran.html` odprite še v brskalniku, na primer tako, da jo iz upravitelja datotek povlečete v okno brskalnika.
+ 2. Odprite datoteko [`vsebina.txt`](04-html/vsebina.txt) in njeno vsebino prilepite v značko `body`.
+    Datoteko `stran.html` shranite.
+    Z bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Tab</kbd>) skočite v brskalnik
+    in stran osvežite z <kbd>Ctrl</kbd>+<kbd>R</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>R</kbd>).
+ 3. Na začetku besedila, ki ste ga prilepili, označite naslov "ISO 3103".
+    Odprite paleto ukazov (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>),
+    začnite tipkati `wrap` in ukaz _Wrap with Abbreviation_ izberite z vnašalko, ko se pojavi na vrhu seznama.
+    V pogovorno okno, ki se odpre, napišite ime značke za naslov strani (`h1`) in stisnite vnašalko.
+    V vrstici mora zdaj pisati `<h1>ISO 3103</h1>`.
+    Naslednjič se bo ukaz na vrhu seznama pojavil že po nekaj natipkanih znakih.
+ 4. Z ustreznimi značkami označite še naslove razdelkov (`h2`)
+    "Details", "Pot and bowl", "Criticism" in "Competing standards"
+    ter naslov podrazdelka (`h3`) "Contents" na začetku besedila.
+    _Namig:_ z <kbd>Alt</kbd> (🍎 <kbd>Option</kbd>) in levim klikom dodate kurzor, ukaz pa se izvede pri vseh kurzorjih hkrati.
+ 5. Pod naslovom "Contents" so našteti razdelki. Iz njih naredite urejeni seznam.
+    Postavite kurzor na začetek vsake vrstice (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>↑↓</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>↑↓</kbd>),
+    pridržite tipko <kbd>Shift</kbd> in stisnite <kbd>End</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>→</kbd>), da označite vsako vrstico s svojim kurzorjem.
+    Uporabite ukaz _Wrap with Abbreviation_ z značko `li`: naredi toliko značk, kot imate kurzorjev.
+    Nato vse vrstice označite z enim kurzorjem in jih obdajte z značko `ol`.
+ 6. Pod naslovom "Details" naj bodo vsi odstavki razen prvega elementi neurejenega seznama (`ul`).
+    Odstavki so ločeni s praznimi vrsticami, v katerih elementov seznama ne želite, zato kurzorje postavite s klikanjem.
+    Pazite, da sta dva elementa seznama zapisana v več vrsticah (tista, ki imata tabeli).
+ 7. Citat (odstavek pod besedilom "The abstract states the following:") označite z značko `blockquote`.
+ 8. Vse ostale odstavke označite z značko `p`.
+ 9. V prvem odstavku naj bo "ISO 3103" povezava na Wikipedijo: uporabite značko `a` in v atribut `href` napišite naslov strani.
+10. V 2. in 8. elementu seznama pod naslovom "Details" sta tabeli s po tremi stolpci in tremi vrsticami.
+    Zapišite ju z značkami `table`, `tr`, `td` in `th`; celice glave uporabite v prvi vrstici in v prvem stolpcu.
+11. Prenesite [sliko](04-html/tea-bowl.jpg), jo premaknite v imenik `04-html` in jo pod naslovom "Details" vstavite z značko `img`.
+    V atribut `src` napišite pot do slike, v atribut `alt` pa njen opis.
+    V brskalniku preverite, da se slika prikaže.
+    Verjetno je prevelika, zato jo za zdaj zakomentirajte: v paleti ukazov izberite _Add Line Comment_.
+12. Počistite vse napake in opozorila.
+13. Zabeležite spremembo: dodajte datoteki `stran.html` in `tea-bowl.jpg` ter napišite uporabno sporočilo, na primer `Dodaj vsebino HTML dokumenta`.
 
 ## 4. naloga: matematika in sklicevanje
 
-1. V drugem odstavku poudarite začetek "ISO 3103" z značko `strong`.
-   Besedilo "brewing tea" označite z značko `em`.
-   V starih časih se je pogosto uporabljalo znački `b` (angl. _bold_)
-   in `i` (angl. _italic_).
-   Zdaj se v dobri praksi ločuje pomen (predstavljen s HTML značkami)
-   in oblikovanje (CSS, ki ga bomo srečali na naslednjih vajah).
+1. V drugem odstavku poudarite začetek "ISO 3103" z značko `strong`, besedilo "brewing tea" pa z značko `em`.
+2. Strani dodajte MathJax: sledite navodilom [Getting Started](https://www.mathjax.org/#gettingstarted) za MathJax 4
+   in kodo, ki vključi skripto, dodajte v glavo dokumenta.
+   Na stran dodajte formulo, na primer `\[x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\]`.
+   Za zdaj še ni treba, da razumete, kako formule delujejo.
+3. V zavihku _Network_ orodij za razvijalce poglejte, kaj se zgodi, ko osvežite stran.
+4. Formula, ki ste jo napisali, je zapisana v posebni sintaksi, iz katere računalnik vsaj do neke mere razbere, kaj želimo.
+   Poskusite ugotoviti, kako deluje: kje so ukazi, kje njihovi argumenti in kako so označeni?
+5. Po zgledu zgornje formule napišite enačbo $e^{i\pi} + 1 = 0$
+   (poskusite uganiti, kako se napiše črka $\pi$).
+6. Naslovom razdelkov dodajte atribute `id`, elemente seznama pod naslovom "Contents" pa spremenite v povezave nanje,
+   tako da bo vsak vodil do svojega razdelka.
+7. Zabeležite spremembo: dodajte datoteko `stran.html` in napišite uporabno sporočilo, na primer `Dodaj formule in sklicevanje`.
 
-2. Dodali bomo [MathJax](https://www.mathjax.org/) za lepe matematične formule z LaTeX-om.
-   Sledite navodilom [Getting Started](https://www.mathjax.org/#gettingstarted) (za verzijo MathJax 4).
-   Košček kode, ki bo vaši strani dodal skripto MathJax, dodate v glavo dokumenta.
-   Spletni strani dodajte formulo, npr. `\[x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\]`.
-   Za zdaj še ni treba, da razumete, kako formule delujejo. 
+## 5. naloga: oblikovanje
 
-3. V zavihku _Network_ poglejte, kaj se zgodi, ko osvežite stran.
+1. Prenesite datoteko [`oblikovanje.css`](04-html/oblikovanje.css) in jo premaknite v imenik `04-html`.
+2. V glavo dokumenta `stran.html` dodajte značko `<link rel="stylesheet" href="oblikovanje.css">` in osvežite stran v brskalniku.
+3. Odkomentirajte sliko iz 3. naloge: v paleti ukazov izberite _Remove Line Comment_.
+   Slog omeji širino slik, zato slika ni več prevelika.
+4. V datoteki `oblikovanje.css` poiščite pravilo za naslove `h2` in barvo `#8b4513` zamenjajte s kakšno drugo, na primer `darkgreen` ali `#336699`.
+   Datoteko shranite in osvežite stran: barvo so zamenjali vsi štirje naslovi razdelkov.
+   Če se sprememba ne pokaže, stran osvežite brez predpomnilnika z <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>
+   (🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>, v Safariju <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>R</kbd>).
+5. Zabeležite spremembo: dodajte datoteki `stran.html` in `oblikovanje.css` ter napišite uporabno sporočilo, na primer `Dodaj slog`.
 
-4. Formula, ki ste jo ravnokar napisali, je zapisana v posebni sintaksi
-   oz. kontroliranem jeziku, ki omogoča računalniku, da vsaj do neke mere razume, kaj želimo narediti.
-   Poskusite razbrati, kako deluje sintaksa matematičnega izraza zgoraj.
-   Najdete ukaze in parametre ter kako so označeni?
+## Dodatni viri
 
-5. Pomagajte si s formulo zgoraj, da napišete enačbo $e^{i\pi} + 1 = 0$ 
-   (poskusite uganiti, kako bi napisali črko $\pi$).
-
-6. Sklicevanje znotraj dokumenta naredimo z značkami `a`, kjer želimo, da je povezava,
-   in atributi `id`, kamor želimo, da povezava kaže.
-   Če naslovu "Criticism" dodamo atribut `id` z vrednostjo `criticism` takole: 
-   `<h2 id="criticism">Criticism</h2>`, nas bo povezava `<a href="#criticism">Criticism</a>`
-   pod podnaslovom "Contents" peljala do naslova.
-   Popravite elemente seznama pod "Contents" tako, da bodo delujoče povezave na ustrezne
-   dele strani.
-
-7. Zabeležite spremembo: dodajte datoteko `stran.html`
-   ter napišite uporabno sporočilo, npr. `Dodaj formule in sklicevanje`.
-
+* [HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements), seznam vseh značk HTML na spletni strani MDN.
+* [CSS styling basics](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics), uvod v CSS na isti strani, če vas zanima več.
