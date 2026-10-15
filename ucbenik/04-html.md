@@ -33,7 +33,7 @@ Prepoznamo jih po oklepajih `<` in `>`, npr. `<h1>` ali `<img>`.
 Značke bomo vedno najprej odprli (`<znacka>`) in nato zaprli (`</znacka>`).
 
 :::{figure-md} markdown-fig
-![Anatomija značke](03-html/anatomija-znacke.png)
+![Anatomija značke](04-html/anatomija-znacke.png)
 
 &nbsp; Sestavni deli HTML značke
 :::
@@ -72,7 +72,7 @@ Dodatni viri:
 Včasih si je dobro predstavljati tak dokument kot hierarhijo značk:
 
 :::{figure-md} markdown-fig
-![Hierarhija značk za zgornji primer dokumenta](03-html/html-drevo.png)
+![Hierarhija značk za zgornji primer dokumenta](04-html/html-drevo.png)
 
 &nbsp; Hierarhija značk za zgornji primer dokumenta
 :::
@@ -134,7 +134,7 @@ Prvega bomo še naprej uporabljali na vajah.
    Enici v oglatih oklepajih nam povesta, da je težava v prvi vrstici (in prvem stolpcu).
 
    :::{figure-md} markdown-fig
-   <img src="03-html/vsebina-imenika-html.png" alt="Vsebina repozitorija po tej točki">
+   <img src="04-html/vsebina-imenika-html.png" alt="Vsebina repozitorija po tej točki">
 
    &nbsp; Struktura repozitorija `racunalniski-praktikum` po tej točki.
    :::
@@ -202,7 +202,7 @@ več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
 
  1. Datoteko odprite v brskalniku, da vidite, kako izgleda.
 
- 2. V urejevalniku v značko `body` prilepite vsebino datoteke [`vsebina.txt`](03-html/vsebina.txt).
+ 2. V urejevalniku v značko `body` prilepite vsebino datoteke [`vsebina.txt`](04-html/vsebina.txt).
     Odstavki so ločeni s praznimi vrsticami.
     Datoteko shranite. Z bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Tab</kbd>) skočite nazaj v brskalnik,
     kjer pritisnite <kbd>Ctrl</kbd>+<kbd>R</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>R</kbd>), da osvežite stran.
@@ -252,7 +252,7 @@ več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
     V vsaki vrstici naštejemo celice z značkami `td`, celice za glavo tabele pa s `th`.
     Celice za glavo uporabite v prvi vrstici in v prvem stolpcu.
 
-11. Prenesite in vstavite [sliko](03-html/tea-bowl.jpg) z značko `img`, ki je ni treba zaključiti.
+11. Prenesite in vstavite [sliko](04-html/tea-bowl.jpg) z značko `img`, ki je ni treba zaključiti.
     Podate ji atribut `src`, v katerem podate pot do slike in atribut `alt`, v katerem podate opis.
     Ta opis se uporabi v primerih, ko se slika ne prikaže, in za dostopnost
     (npr. za avtomatsko branje vsebine).
