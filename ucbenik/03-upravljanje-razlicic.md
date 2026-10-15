@@ -1,4 +1,4 @@
-# Git
+# Upravljanje različic
 
 `````{admonition} Programska oprema
 :class: important

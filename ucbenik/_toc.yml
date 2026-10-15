@@ -8,7 +8,7 @@ parts:
   chapters:
   - file: 01-besedilne-datoteke.md
   - file: 02-ukazna-vrstica.md
-  - file: 03-git.md
+  - file: 03-upravljanje-razlicic.md
 #   - file: 03-html.md
 #   - file: 04-css.md
 #   - file: 05-utrdimo-osnove.md
