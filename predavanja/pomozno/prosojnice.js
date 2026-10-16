@@ -1,6 +1,8 @@
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 
-mermaid.initialize();
+mermaid.initialize({
+  themeVariables: { commitLabelFontSize: '16px' },
+});
 
 // reveal-init.js
 function loadScript(src) {

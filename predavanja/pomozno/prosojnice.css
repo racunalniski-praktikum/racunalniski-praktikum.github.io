@@ -6,3 +6,44 @@
     --r-main-font: Avenir Next, Helvetica, Arial, sans-serif !important;
     --r-heading-font: Avenir Next, Helvetica, Arial, sans-serif !important;
 }
+/* Items in r-stack shrink to fit their content, and Mermaid's width="100%" then collapses. */
+.reveal .r-stack > .mermaid {
+    width: 100%;
+}
+/* A terminal window: <div class="terminal"><pre><span class="pozivnik">$</span> ukaz</pre></div> */
+.reveal .terminal {
+    position: relative;
+    width: 90%;
+    margin: 0.5em auto;
+    padding: 2em 1em 1em;
+    border-radius: 0.5em;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    font-family: var(--r-code-font);
+    font-size: 0.5em;
+    text-align: left;
+    box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.reveal .terminal::before {
+    content: "";
+    position: absolute;
+    top: 0.7em;
+    left: 1em;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    background: #ff5f56;
+    box-shadow: 1.1em 0 #ffbd2e, 2.2em 0 #27c93f;
+}
+.reveal .terminal pre {
+    width: auto;
+    margin: 0;
+    font-size: 1em;
+    background: none;
+    box-shadow: none;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+.reveal .terminal .pozivnik {
+    color: #6a9955;
+}
