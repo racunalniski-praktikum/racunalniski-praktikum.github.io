@@ -83,6 +83,7 @@ Legacy material that is not in the tree:
 - Terminology, command line: a *ukaz* is *ime programa* followed by *argumenti*; an argument starting with `-` is a *možnost*; the `$` is the *pozivnik*. *Argument* is reused for LaTeX and Mathematica (not *parameter*), *pozivnik* replaces the legacy FAQ's *ukazni poziv*. Both per Islovar.
 - Terminology, version control: *upravljanje različic* (per Islovar), also for VSCode's *Source Control* view.
 - Terminology, Git: a commit is a *vnos* and the verb is *zabeležiti*. Where students first meet it (`03-upravljanje-razlicic.md` and *Osnovni ukazi* in `G-git.md`), it is *vnos spremembe*; elsewhere, and when a sentence refers back, *vnos*. *Sprememba* is only an edit to files, as in Git's and VSCode's *Changes*.
+- Terminology, HTML: *označevalni jezik za oblikovanje večpredstavnostnih dokumentov* (per Islovar). Never *nadbesedilo* or any other gloss of *hypertext*.
 - Spelling: *VSCode* (full name *Visual Studio Code* only at first mention and in the software admonitions).
 - Platform baseline: prose states the behaviour of Git Bash on Windows (in the VSCode terminal) as the plain fact; what works elsewhere is an add-on in parentheses naming the system, e.g. `(na macOS \d sicer deluje)`.
 - Terminal: chapters and exercises use the terminal inside VSCode. A separate Git Bash or Terminal window appears only as a reference, in the keyboard appendix and the FAQ. Installation instructions (appendix A) say just *ukazna vrstica*: either the VSCode terminal or a separate one will do.
