@@ -166,7 +166,7 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
 [LaTeX](https://www.latex-project.org)-om. 
 
 1. V VSCode odprite imenik s svojim repozitorijem.
-   V njem naredite nov imenik `06-uvod-v-latex`, v tem imeniku še imenik `test`,
+   V njem naredite nov imenik `05-latex`, v tem imeniku še imenik `test`,
    v njem pa novo datoteko `latex-test.tex`, ki jo odprite.
 2. Preverite, da spodaj desno v statusni vrstici piše LaTeX;
    če ne, morate verjetno namestiti razširitev LaTeX Workshop.
@@ -197,9 +197,9 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
 ## 2. naloga: urnik 
 
 - V glavnem imeniku repozitorija naredite nov imenik, `latex-pregled` in 
-  v njem odpakirajte arhiv [`latex-pregled.zip`](06-uvod-v-latex/latex-pregled.zip).
+  v njem odpakirajte arhiv [`latex-pregled.zip`](05-latex/latex-pregled.zip).
   Te datoteke vam bodo v pomoč pri reševanju nalog.
-- V imenik `06-uvod-v-latex` shranite [datoteke za nalogo Urnik](06-uvod-v-latex/urnik.zip)
+- V imenik `05-latex` shranite [datoteke za nalogo Urnik](05-latex/urnik.zip)
 - Besedilo v datoteki `urnik.tex` oblikujte v LaTeX-u tako, 
   da bo prevedena PDF datoteka čim bolj podobna rešitvi (`urnik-resitev.pdf`).
   Pri reševanju si pomagajte z uvodno pregledno datoteko.

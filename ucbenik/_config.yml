@@ -8,7 +8,7 @@ exclude_patterns:
   - 03-html.md
   - 04-css.md
   - 05-utrdimo-osnove.md
-  - 06-uvod-v-latex.md
+  - 05-latex.md
   - 07-okolja-in-sklicevanje.md
   - 08-predstavitve.md
   - 09-risanje.md
