@@ -85,7 +85,7 @@ until the target structure is agreed.
 | 17 | Cleanup | A: `ucbenik/00-razno/` | — | — | [M] likely delete, after checking nothing references it |
 | 18 | Vaje (navodila in rešitve za izvajalce) | C: `vaje/` | all | TBD | [J] mirrors A's chapter numbering, which the plan changes; solutions become public on push — review first. **`00-izvedba-vaj.md` holds the purpose of the course and the tutorial calibration** — both are now recorded in *To do: the README* (Purpose) and in `CLAUDE.md` (*Course principles*), so they survive this unit |
 | 19 | Gradiva (pregled poglavij) | C: `gradiva/` | L5–L8, L10–L12 | TBD | [J] LaTeX and Mathematica chapter overviews |
-| 20 | Domače naloge | C: `domace-naloge/` | bonus, submitted via Git | TBD | [J] `04-html-css/` is for a dropped topic (C2); submission through Git is what exercises unit 3 |
+| 20 | Domače naloge | C: `domace-naloge/` | bonus, submitted via Git | TBD | [J] `04-html-css/` is for a dropped topic (C2); submission through Git is what exercises unit 3; the 2026/27 descriptions are in `domace-naloge/` here, synced with učilnica (Decided 2026-10-19), so only attachments and solutions are left to place |
 | 21 | V pripravi (WIP drafts) | C: `v-pripravi.md` | L2 | TBD | [J] draft on files and directories — closest existing text to the new L2 |
 
 The legacy `README.md` and `LICENSE` of B do not migrate; the top-level files
