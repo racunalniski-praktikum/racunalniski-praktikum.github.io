@@ -1,0 +1,658 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Upravljanje različic</title>
+
+<link rel="stylesheet" href="../pomozno/prosojnice.css">
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+<section class="center">
+<h1>Upravljanje različic</h1>
+<div class="mermaid">
+gitGraph
+commit
+commit
+commit
+commit
+branch develop
+checkout develop
+commit
+commit
+checkout main
+merge develop
+commit
+branch feature
+checkout feature
+commit
+commit
+checkout main
+merge feature
+</div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+            <section class="center">
+                
+                <h2>Kje hranite<br>varnostne kopije?</h2>
+            </section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+            <section data-markdown class="center">
+                <textarea data-template>
+
+### `diploma.tex`
+
+### `diploma-koncna.tex` <!-- .element: class="fragment" -->
+
+### `diploma-koncna 2.tex` <!-- .element: class="fragment" -->
+
+### `diploma-koncna-PRAVA.tex` <!-- .element: class="fragment" -->
+
+### `diploma-koncna-koncna.tex` <!-- .element: class="fragment" -->
+</textarea>
+            </section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section class="center">
+<h1 style="font-size:1000%">☁️</h1>
+<div class="mermaid fragment">
+---
+config:
+    gitGraph:
+        mainBranchName: '03-upravljanje-razlicic/prosojnice.html'
+    themeVariables:
+        'git0': '#E03127'
+---
+gitGraph
+commit id:"2026-10-14 10:01:13"
+commit id:"2026-10-14 10:07:23"
+commit id:"2026-10-14 10:12:34"
+commit id:"2026-10-14 10:13:56"
+commit id:"2026-10-14 10:15:18"
+commit id:"2026-10-14 10:25:29"
+commit id:"2026-10-14 11:01:15"
+commit id:"2026-10-14 13:10:10"
+commit id:"2026-10-14 13:15:20"
+commit id:"2026-10-14 13:30:50"
+</div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<h3>Želimo <strong>ročne vnose</strong></h3>
+<div class="mermaid">
+---
+config:
+    gitGraph:
+        mainBranchName: '03-upravljanje-razlicic/prosojnice.html'
+    themeVariables:
+        'git0': '#E03127'
+---
+gitGraph
+commit id:"2026-10-14 10:01:13"
+commit id:"2026-10-14 10:07:23"
+commit id:"2026-10-14 10:15:18"
+commit id:"2026-10-14 10:25:29"
+commit id:"2026-10-14 11:01:12"
+commit id:"2026-10-14 11:03:40"
+commit id:"2026-10-14 13:03:40"
+commit id:"2026-10-14 13:05:50"
+commit id:"2026-10-14 13:07:00"
+commit id:"2026-10-14 13:10:10"
+commit id:"2026-10-14 13:15:20"
+commit id:"2026-10-14 13:20:30"
+commit id:"2026-10-14 13:25:40"
+commit id:"2026-10-14 13:30:50"
+</div>
+<div class="mermaid fragment">
+---
+config:
+    gitGraph:
+        mainBranchName: '03-upravljanje-razlicic/prosojnice.html'
+    themeVariables:
+        'git0': '#2878AC'
+---
+gitGraph
+commit id:"začel pisati"
+commit id:"struktura prvega dela"
+commit id:"struktura drugega dela"
+commit id:"napisal terminologijo"
+commit id:"dodal slike"
+commit id:"popravil stil prosojnic"
+commit id:"popravki in povezave"
+commit id:"dodan večji primer"
+</div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<h3>Vnesti želimo <strong>več datotek hkrati</strong></h3>
+<div class="mermaid">
+---
+config:
+    gitGraph:
+        mainBranchName: '02-ukazna-vrstica/prosojnice.html'
+    themeVariables:
+        'git0': '#E03127'
+---
+gitGraph
+commit id:"dodal pozabljeno povezavo"
+commit id:"popravil stil prosojnic"
+</div>
+<div class="mermaid">
+---
+config:
+    gitGraph:
+        mainBranchName: '03-upravljanje-razlicic/prosojnice.html'
+    themeVariables:
+        'git0': '#E03127'
+---
+gitGraph
+commit id:"začel pisati"
+commit id:"struktura prvega dela"
+commit id:"struktura drugega dela"
+commit id:"napisal terminologijo"
+commit id:"dodal slike"
+commit id:"popravil stil prosojnic"
+commit id:"popravki in povezave"
+commit id:"dodan večji primer"
+</div>
+<div class="mermaid fragment">
+---
+config:
+    gitGraph:
+        mainBranchName: 'predavanja/'
+    themeVariables:
+        'git0': '#2878AC'
+---
+gitGraph
+commit id:"dodal pozabljeno povezavo (02)"
+commit id:"začel pisati (03)"
+commit id:"struktura prvega dela (03)"
+commit id:"struktura drugega dela (03)"
+commit id:"napisal terminologijo (03)"
+commit id:"dodal slike (03)"
+commit id:"popravil stil prosojnic (02, 03)"
+commit id:"popravki in povezave (03)"
+commit id:"dodan večji primer (03)"
+</div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section class="center">
+<p><a href="https://git-scm.com/"><img class="r-stretch" src="git.svg" alt="Git" /></a></p>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section data-markdown>
+<textarea data-template>
+### **Osnovni izrazi** v Gitu
+
+- **Delovno drevo** (working tree): imenik z vsemi datotekami projekta, na katerem smo vklopili upravljanje različic
+- **Vnos spremembe** (commit): zabeleženo stanje datotek skupaj s časom, avtorjem, opisom, …
+- **Repozitorij** (repository): zbirka vseh vnosov sprememb
+- **Klon** (clone): kopija repozitorija, povezana z izvorno različico
+</textarea>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section data-markdown>
+<textarea data-template>
+### `init` **ustvari** nov repozitorij
+
+```
+01-besedilne-datoteke
+02-ukazna-vrstica
+03-upravljanje-razlicic
+neurejeno.txt
+pomozno
+```
+
+`$ git init`<!-- .element: class="fragment" -->
+
+```
+.git
+01-besedilne-datoteke
+02-ukazna-vrstica
+03-upravljanje-razlicic
+neurejeno.txt
+pomozno
+```
+<!-- .element: class="fragment" -->
+</textarea>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<h3><code>commit</code> <strong>vnese</strong> spremembo</h3>
+<div class="mermaid">
+---
+config:
+    gitGraph:
+        showBranches: false
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+</div>
+
+<p class="fragment"><code>git commit ...</code></p>
+
+<div class="mermaid fragment">
+---
+config:
+    gitGraph:
+        showBranches: false
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+commit id:"8" type: HIGHLIGHT
+</div>
+
+<p class="fragment"><code>git commit ...</code></p>
+
+<div class="mermaid fragment">
+---
+config:
+    gitGraph:
+        showBranches: false
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+commit id:"8"
+commit id:"9" type: HIGHLIGHT
+</div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section data-markdown>
+<textarea data-template>
+### Git **pokaže spremembe**
+
+```diff
+diff --git a/o-predmetu.md b/o-predmetu.md
+index dab9bf1..3086446 100644
+--- a/o-predmetu.md
++++ b/o-predmetu.md
+@@ -28,7 +28,7 @@
+ - Pri predmetu dobite eno oceno.
+ - Pisno oceno pridobite z reševanjem domačih nalog in pisnim izpitom:
+   - Domače naloge: do 10 točk
+-    - Vsaka naloga bo vredna 1 točko.
++    - Vsaka naloga je vredna 1 točko.
+     - Domačo nalogo lahko rešujete kakor želite (v skupini, z UI, …)
+   - Pisni izpit: 100 točk
+     - Pisni izpit rešujete samostojno na šolskih računalnikih.
+```
+<!-- .element: style="font-size: 0.42em" -->
+
+… če se to da<!-- .element: class="fragment" data-fragment-index="1" -->
+
+```plaintext
+diff --git a/o-predmetu.docx b/o-predmetu.docx
+index afd2273..2ae1dd4 100644
+Binary files a/o-predmetu.docx and b/o-predmetu.docx differ
+```
+<!-- .element: class="fragment" data-fragment-index="1" style="font-size: 0.42em" -->
+</textarea>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<h3><code>clone</code> <strong>klonira</strong> repozitorij</h3>
+<div class="mermaid">
+---
+config:
+    gitGraph:
+        mainBranchName: 'strežnik'
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+</div>
+
+<p class="fragment"><code>git clone</code></p>
+
+<div class="mermaid fragment">
+---
+config:
+    gitGraph:
+        mainBranchName: 'računalnik'
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+</div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<h3><code>pull</code> <strong>povleče</strong> nove vnose</h3>
+<div class="mermaid">
+---
+config:
+    gitGraph:
+        mainBranchName: 'strežnik'
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+commit id:"8"
+</div>
+
+<p class="fragment" data-fragment-index="1"><code>git pull</code></p>
+
+<div class="r-stack">
+<div class="mermaid fragment fade-out" data-fragment-index="1">
+---
+config:
+    gitGraph:
+        mainBranchName: 'računalnik'
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+</div>
+<div class="mermaid fragment" data-fragment-index="1">
+---
+config:
+    gitGraph:
+        mainBranchName: 'računalnik'
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+commit id:"8" type: HIGHLIGHT
+</div>
+</div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<h3><code>push</code> <strong>potisne</strong> nove vnose</h3>
+<div class="r-stack">
+<div class="mermaid fragment fade-out" data-fragment-index="1">
+---
+config:
+    gitGraph:
+        mainBranchName: 'strežnik'
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+commit id:"8"
+</div>
+<div class="mermaid fragment" data-fragment-index="1">
+---
+config:
+    gitGraph:
+        mainBranchName: 'strežnik'
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+commit id:"8"
+commit id:"9" type: HIGHLIGHT
+</div>
+</div>
+
+<p class="fragment" data-fragment-index="1"><code>git push</code></p>
+
+<div class="mermaid">
+---
+config:
+    gitGraph:
+        mainBranchName: 'računalnik'
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+commit id:"8"
+commit id:"9"
+</div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section class="center">
+<img class="r-stretch" src="../01-besedilne-datoteke/vs-code.png" alt="Visual Studio Code" />
+<p>Delo z Gitom v VS Code</p>
+</section>
+
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<h3><code>pull</code> <strong>združi</strong> vnose obeh klonov</h3>
+<div class="r-stack">
+<div class="mermaid fragment fade-out" data-fragment-index="1">
+---
+config:
+    gitGraph:
+        mainBranchName: 'strežnik'
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+branch "računalnik"
+checkout "strežnik"
+commit id:"8"
+checkout "računalnik"
+commit id:"9"
+</div>
+<div class="mermaid fragment" data-fragment-index="1">
+---
+config:
+    gitGraph:
+        mainBranchName: 'strežnik'
+---
+gitGraph
+commit id:"1"
+commit id:"2"
+commit id:"3"
+commit id:"4"
+commit id:"5"
+commit id:"6"
+commit id:"7"
+branch "računalnik"
+checkout "strežnik"
+commit id:"8"
+checkout "računalnik"
+commit id:"9"
+merge "strežnik" id:"10" type: HIGHLIGHT
+</div>
+</div>
+
+<p class="fragment" data-fragment-index="1"><code>git pull</code></p>
+
+<p class="fragment">Če 8 in 9 spremenita iste vrstice, nastane <strong>konflikt</strong>.</p>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section class="center">
+<h1 style="font-size:1000%">🔐</h1>
+<p>SSH ključi</p>
+</section>
+
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<div class="mermaid">
+sequenceDiagram
+    participant R as računalnik
+    participant G as GitHub
+    Note over R: zasebni in javni ključ
+    R->>G: Sem Ana.
+    G->>R: Vnesi geslo.
+    R->>G: Tu je geslo.
+    G->>R: Res si Ana. Kaj bi rada?
+    R->>G: Tule je moj javni ključ.
+    Note over G: Shrani javni ključ.
+    G->>R: Zmenjeno, sem ga shranil.
+</div>
+</section>
+
+<section>
+<div class="mermaid">
+sequenceDiagram
+    participant R as računalnik<br>(zasebni in javni ključ)
+    participant G as GitHub<br>(javni ključ)
+    R->>G: Sem Ana.
+    Note over G: Izmisli si število x.
+    G->>R: Če si res, z zasebnim ključem zakleni x.
+    Note over R: zasebniKljuč(x) = x'.
+    R->>G: Zaklenjen x je x'.
+    Note over G: javniKljuč(x') = x ✓
+</div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<p>izberemo naključni praštevili: \(p = 3\), \(q = 11\)</p>
+<p class="fragment">\(n = p \cdot q = 33\)</p>
+<p class="fragment">\((p - 1) \cdot (q - 1) = 2 \cdot 10 = 20\)</p>
+<p class="fragment">poiščemo \(e\) in \(d\), da je \(e \cdot d \equiv 1 \pmod{20}\)</p>
+<p class="fragment">na primer: \(e = 13, d = 17, e \cdot d = 221\)</p>
+<p class="fragment">\((x^{17})^{13} \equiv x^{221} \equiv (x^{20})^{11} \cdot x \equiv x \pmod{33}\)</p>
+<div class="fragment">
+    <p>javni ključ: \(n = 33, e = 13\)</p>
+    <p>zasebni ključ: \(n = 33, d = 17\)</p>
+</div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<div class="mermaid">
+sequenceDiagram
+    participant R as računalnik<br>(n = 33, d = 17)
+    participant G as GitHub<br>(n = 33, e = 13)
+    R->>G: Sem Ana.
+    Note over G: Izmisli si število 5.
+    G->>R: Če si res, z zasebnim ključem zakleni 5.
+    Note over R: 5¹⁷ mod 33 = 14
+    R->>G: Zaklenjen 5 je 14.
+    Note over G: 14¹³ mod 33 = 5 ✓
+</div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<h3><code>ssh-keygen</code> <strong>ustvari</strong> par ključev</h3>
+<div class="terminal"><pre><span class="pozivnik">$</span> ssh-keygen
+Generating public/private ed25519 key pair.
+…
+Your identification has been saved in /c/Users/ana/.ssh/id_ed25519
+Your public key has been saved in /c/Users/ana/.ssh/id_ed25519.pub
+<span class="fragment"><span class="pozivnik">$</span> ls ~/.ssh
+id_ed25519  id_ed25519.pub
+</span></pre></div>
+</section>
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+<section>
+<h3>Javni ključ <strong>delimo</strong>, zasebnega <strong>nikoli</strong></h3>
+<div class="terminal"><pre><span class="pozivnik">$</span> cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICGMfzpi9GNXiYveCK/Utgc2qYtqPHYExb8leuS+5W2P ana@racunalnik
+<span class="fragment"><span class="pozivnik">$</span> cat ~/.ssh/id_ed25519
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+…
+-----END OPENSSH PRIVATE KEY-----
+</span><span class="fragment"><span class="pozivnik">$</span> ssh-keygen -y -f ~/.ssh/id_ed25519
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICGMfzpi9GNXiYveCK/Utgc2qYtqPHYExb8leuS+5W2P ana@racunalnik
+</span></pre></div>
+<p class="fragment">Javne ključe vsakogar si lahko ogledate na GitHubu: <a href="https://github.com/matijapretnar.keys">github.com/matijapretnar.keys</a></p>
+</section>
+
+
+</div>
+<script src="../pomozno/prosojnice.js" type="module"></script>
+</body>
+
+</html>
