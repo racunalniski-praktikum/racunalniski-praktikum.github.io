@@ -237,6 +237,8 @@ več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
  1. Datoteko `stran.html` odprite še v brskalniku: v pogledu datotek jo kliknite z desno tipko,
     izberite _Reveal in File Explorer_ (🍎 _Reveal in Finder_) in jo iz upravitelja datotek povlecite v okno brskalnika.
  2. Prenesite datoteko [`vsebina.txt`](04-html/vsebina.txt) (ni je treba shraniti v repozitorij), jo odprite v VSCode in njeno vsebino prilepite v značko `body`.
+    Prilepljeno besedilo zamaknite glede na `body`, tako da bo vsaka vrstica za dve ravni odmaknjena od roba:
+    označite ga in stisnite <kbd>Tab</kbd>, ki vse označene vrstice zamakne za eno raven (<kbd>Shift</kbd>+<kbd>Tab</kbd> pa nazaj).
     Datoteko `stran.html` shranite.
     Z bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Tab</kbd>) skočite v brskalnik
     in stran osvežite z <kbd>Ctrl</kbd>+<kbd>R</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>R</kbd>).
