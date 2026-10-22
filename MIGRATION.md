@@ -69,8 +69,8 @@ until the target structure is agreed.
 | 1 | Uvod (o predmetu) | A: `ucbenik/00-uvod.md`; B: `01-uvod/` (partly) | L1 | TBD | [J] B's intro slides also cover terminal/VS Code — split with unit 2; C1 is resolved in `predavanja/00-uvod/` |
 | 2 | VS Code in terminal | A: `ucbenik/01-vscode-in-terminal{.md,/}`; B: `01-uvod/` (partly) | L1 + L2 | TBD | [J] one legacy unit becomes two lectures |
 | 3 | Git in Markdown | A: `ucbenik/02-git-in-markdown{.md,/}`; B: `02-git/` | L3 (+ L1) | TBD | [J] Markdown moves out to L1 (the README exercise is already in the chapter 1 draft); L3 keeps the diff argument |
-| 4 | HTML | A: `ucbenik/03-html{.md,/}`; B: `03-html/` | L4 | TBD | [J] encodings and `podnapisi/` move out to L1 (C3) |
-| 5 | CSS | A: `ucbenik/04-css{.md,/}`; B: `04-css/` | **dropped** | — | [J] no longer taught; keep only what L4's mention and the Copilot exercise need (C2) |
+| 4 | HTML | A: `ucbenik/04-html{.md,/}` (was `03-html`); B: `03-html/` | L4 | `ucbenik/04-html{.md,/}` | [J] A migrated 2026-10-15; encodings and `podnapisi/` move out to L1 (C3) |
+| 5 | CSS | A: deleted 2026-10-15; B: `04-css/` | **dropped** | — | [J] no longer taught; the stylesheet link moved to unit 4 (*Vsebina in videz* and exercise 5) (C2) |
 | 6 | Utrdimo osnove | A: `ucbenik/05-utrdimo-osnove{.md,/}` | L2 + L3 | TBD | [J] regex task 1 → L2; the rest is a mixed revision sheet |
 | 7 | Uvod v LaTeX | A: `ucbenik/06-uvod-v-latex{.md,/}`; B: `05-latex/` | L5 | TBD | [J] |
 | 8 | Okolja in sklicevanje | A: `ucbenik/07-okolja-in-sklicevanje{.md,/}`; B: `06-sklicevanje/` | L6 | TBD | [J] |
@@ -85,7 +85,7 @@ until the target structure is agreed.
 | 17 | Cleanup | A: `ucbenik/00-razno/` | — | — | [M] likely delete, after checking nothing references it |
 | 18 | Vaje (navodila in rešitve za izvajalce) | C: `vaje/` | all | TBD | [J] mirrors A's chapter numbering, which the plan changes; solutions become public on push — review first. **`00-izvedba-vaj.md` holds the purpose of the course and the tutorial calibration** — both are now recorded in *To do: the README* (Purpose) and in `CLAUDE.md` (*Course principles*), so they survive this unit |
 | 19 | Gradiva (pregled poglavij) | C: `gradiva/` | L5–L8, L10–L12 | TBD | [J] LaTeX and Mathematica chapter overviews |
-| 20 | Domače naloge | C: `domace-naloge/` | bonus, submitted via Git | TBD | [J] `04-html-css/` is for a dropped topic (C2); submission through Git is what exercises unit 3 |
+| 20 | Domače naloge | C: `domace-naloge/` | bonus, submitted via Git | TBD | [J] `04-html-css/` is for a dropped topic (C2); submission through Git is what exercises unit 3; the 2026/27 descriptions are in `domace-naloge/` here, synced with učilnica (Decided 2026-10-19), so only attachments and solutions are left to place |
 | 21 | V pripravi (WIP drafts) | C: `v-pripravi.md` | L2 | TBD | [J] draft on files and directories — closest existing text to the new L2 |
 
 The legacy `README.md` and `LICENSE` of B do not migrate; the top-level files
@@ -239,8 +239,8 @@ the positive case: Word can do this properly.
 **Content.** HTML as the same idea as Markdown, said more loudly. Students know
 Markdown from lecture 1, so the lecture starts directly with HTML.
 
-**CSS is mentioned as existing, but not taught.** Students adjust it with Copilot in
-the exercises.
+**CSS is mentioned as existing, but not taught.** When students need it after the
+course, they adjust it with a language model.
 
 **Internet and DNS are trimmed to almost nothing.**
 
@@ -419,8 +419,8 @@ existing mechanism of the language-model thread.
 
 | Path | What it is |
 |------|------------|
-| `A: ucbenik/04-css.md` | 242-line chapter, three exercises |
-| `A: ucbenik/04-css/` | its figures and files |
+| ~~`A: ucbenik/04-css.md`~~ | 242-line chapter, three exercises; deleted 2026-10-15 |
+| ~~`A: ucbenik/04-css/`~~ | its figures and files; deleted 2026-10-15 |
 | `B: 04-css/` | reveal.js deck and the `primer/recepti.*` worked example |
 | `C: vaje/04-css/` | instructor solution (`resitev.{html,css}`), `normalize.css` |
 | `C: domace-naloge/04-html-css/` | homework built on CSS |
@@ -428,15 +428,14 @@ existing mechanism of the language-model thread.
 
 **Exercise text that still promises CSS teaching:**
 
-- `A: ucbenik/03-html.md:277` — "in oblikovanje (CSS, ki ga bomo srečali na naslednjih
-  vajah)" — *and formatting (CSS, which we will meet in the next tutorial)*. The plan
-  has no next CSS tutorial. This sentence is the natural place to put the new
-  "mentioned, not taught" framing instead.
+- ~~`A: ucbenik/03-html.md:277` — "in oblikovanje (CSS, ki ga bomo srečali na naslednjih
+  vajah)"~~ — **Resolved 2026-10-15** in `ucbenik/04-html.md`, *Vsebina in videz*,
+  which states that CSS is not taught.
 - `C: vaje/00-izvedba-vaj.md:83` — an `## HTML/CSS` section in the instructor notes.
 
 **Build configuration that still lists CSS as a chapter:**
 
-- `A: ucbenik/_toc.yml:9` and `A: ucbenik/_toc-plan.yml:9`.
+- ~~`A: ucbenik/_toc.yml`~~ (removed 2026-10-15) and `A: ucbenik/_toc-plan.yml:9`.
 - `B: README.md:12–13` — lecture 4 with its deck and example.
 
 ### C3 — Material in the wrong lecture (encodings)
@@ -450,8 +449,8 @@ demo (a file is bytes; an encoding says what those bytes mean).
   same text in three encodings. These already match the plan's torrent-subtitle
   example and should move with the slides.
 
-Note that `A: ucbenik/03-html.md` teaches encoding only as
-`<meta charset="UTF-8">` (line 172). The textbook therefore loses almost nothing
+Note that `A: ucbenik/04-html.md` teaches encoding only as
+`<meta charset="UTF-8">`, with a pointer back to the subtitles in chapter 2. The textbook therefore loses almost nothing
 here, while the slides lose close to half of theirs (about 100 of 225 lines).
 
 ### C4 — A lecture that is no longer a lecture
@@ -529,7 +528,7 @@ These are not contradictions. They are lectures with no source to migrate.
   thread.
 - **G3 — No installation instructions for any model.** `A: ucbenik/A-programska-oprema.md`
   covers the command line, VS Code, LaTeX, Mathematica, Microsoft and Zoom. The plan
-  needs Copilot (lecture 4 exercises) and a local model (lecture 14).
+  needs a local model (lecture 14).
 - **G4 — The text-file exam task has to be written from scratch.** Nothing in the
   legacy material can be adapted. The exam itself is not in this repo and stays in
   the private `zbornica`, with its design in `preverjanje-znanja/README.md`.

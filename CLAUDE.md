@@ -45,6 +45,7 @@ the README (*To do: the README* in `MIGRATION.md`); the exam design is in the pr
 
 - `ucbenik/` — the textbook, published as the course website. It holds migrated chapters next to legacy chapters that wait for migration; `MIGRATION.md` tells which is which.
 - `predavanja/` — the lecture slides. It holds only the decks prepared for the 2026/27 term; the legacy decks are in the history (below).
+- `domace-naloge/` — the homework descriptions of the current term, `dnNN.md`, in the Markdown that the *Opis* field of the activity on učilnica holds. `sync_descriptions.py` in `redovalnica` keeps them and učilnica in step both ways, so either side can be edited. Not part of the book build. Drafts for later homework, attachments and solutions stay in `zbornica`.
 - `README.md` — the public description of the repository, written by the authors. Material for it is in *To do: the README* in `MIGRATION.md`.
 - `MIGRATION.md` — migration rule, the unit checklist (doubles as the to-do list), the plan for each lecture, and the list of places where the legacy material contradicts the plan. **Which files move where.**
 
@@ -54,10 +55,14 @@ outside an agreed migration PR.
 
 Legacy material that is not in the tree:
 
-- the legacy lecture slides are in the history of `predavanja/`, at commit
-  `261a63a^` with their original paths (`git show 261a63a^:03-html/prosojnice.html`),
-- selected content (`gradiva/`, `vaje/`, `domace-naloge/`, `v-pripravi.md`) is in
-  the private staff repo `zbornica`.
+- the legacy lecture slides (term 2025/26) are in the history of `predavanja/`, at
+  commit `261a63a^` = `a236246`, with their original paths at the root of the tree,
+  not under `predavanja/` (`git show a236246:03-html/prosojnice.html`). A file
+  search of the current tree does not find them. To restore a deck next to the
+  current ones, run `git archive a236246 02-git | tar -x -C predavanja`; its links
+  to `../pomozno/` work, because `pomozno/` has not changed since,
+- selected content (`gradiva/`, `vaje/`, `domace-naloge/` with its attachments and
+  solutions, `v-pripravi.md`) is in the private staff repo `zbornica`.
 
 ### History access
 
@@ -78,6 +83,7 @@ Legacy material that is not in the tree:
 - Terminology, command line: a *ukaz* is *ime programa* followed by *argumenti*; an argument starting with `-` is a *možnost*; the `$` is the *pozivnik*. *Argument* is reused for LaTeX and Mathematica (not *parameter*), *pozivnik* replaces the legacy FAQ's *ukazni poziv*. Both per Islovar.
 - Terminology, version control: *upravljanje različic* (per Islovar), also for VSCode's *Source Control* view.
 - Terminology, Git: a commit is a *vnos* and the verb is *zabeležiti*. Where students first meet it (`03-upravljanje-razlicic.md` and *Osnovni ukazi* in `G-git.md`), it is *vnos spremembe*; elsewhere, and when a sentence refers back, *vnos*. *Sprememba* is only an edit to files, as in Git's and VSCode's *Changes*.
+- Terminology, HTML: *označevalni jezik za oblikovanje večpredstavnostnih dokumentov* (per Islovar). Never *nadbesedilo* or any other gloss of *hypertext*.
 - Spelling: *VSCode* (full name *Visual Studio Code* only at first mention and in the software admonitions).
 - Platform baseline: prose states the behaviour of Git Bash on Windows (in the VSCode terminal) as the plain fact; what works elsewhere is an add-on in parentheses naming the system, e.g. `(na macOS \d sicer deluje)`.
 - Terminal: chapters and exercises use the terminal inside VSCode. A separate Git Bash or Terminal window appears only as a reference, in the keyboard appendix and the FAQ. Installation instructions (appendix A) say just *ukazna vrstica*: either the VSCode terminal or a separate one will do.
@@ -107,7 +113,7 @@ Legacy material that is not in the tree:
 - 2026-09-21 — Lecture format: open on a bad practice a student would genuinely reach for, then improve it by explaining how the thing works.
 - 2026-09-21 — LLM use runs through the course as a weekly thread (ask, check, state the verdict), not as a separate unit. Lectures 13 and 14 are its payoff.
 - 2026-09-21 — Rule to students: they may use language models as they wish. They have no access to them at the exam, because the network is shut down. This withdraws the old rule (`uporaba umetne inteligence ni dovoljena`).
-- 2026-09-21 — CSS is dropped as a taught topic. It is mentioned in lecture 4 and adjusted with Copilot in the exercises.
+- 2026-09-21 — CSS is dropped as a taught topic. It is mentioned in lecture 4, as something students will adjust with a language model when they need it after the course. The tutorials do not use Copilot. *(Clarified 2026-10-15: the first wording, "adjusted with Copilot in the exercises", was read as a tutorial step.)*
 - 2026-09-21 — Lecture count: fourteen planned lectures replace **twelve** old lecture hours (the slides repo keeps one directory, `10-mathematica/`, for three hours). The old first lecture splits in two; the common-LaTeX-mistakes lecture is broken into ten-minute openers. Net growth is +2 hours, and they are lectures 13 and 14.
 - 2026-09-21 — Contact hours: one hour of lectures and three hours of tutorials each week. The tutorials carry most of the teaching, so `COURSE.md` covers them too.
 - 2026-09-21 — Purpose of the course, unchanged by the redesign and older than it: the skills to survive a mathematics degree, not a list of commands. Its three threads — syntax exists, debugging, find help yourself — are recorded in `COURSE.md`, lifted from `imported/zbornica/vaje/00-izvedba-vaj.md`.
@@ -138,6 +144,7 @@ Legacy material that is not in the tree:
 - 2026-10-08 — Version control is *upravljanje različic*, the Islovar term, throughout the course. It replaces *nadzor različic* and *nadzor nad verzijami*. VSCode's *Source Control* view is glossed the same way, not with Islovar's *upravljanje izvorne kode*: students keep versions of text, not only of source code.
 - 2026-10-09 — A commit is a *vnos* (verb *zabeležiti*), and *sprememba* is only an edit to files. Where students first meet it, it is *vnos spremembe*, until they are used to the short form. Islovar has no entry for *commit*; *vnos* follows Martin Vuk, *Matematični pogled na Git* (FRI, 2026). Islovar's *vnos* means input; context keeps the two senses apart. *Zabeležek* is not taken: it is in neither SSKJ nor SP, only in Pleteršnik, and the standard *zabeležka* is a jotted note. *Sprememba*, used in *Uvod v programiranje*, clashes with VSCode's *Changes* and suggests diffs, while Git stores snapshots. *Potrditev*, used by the Slovenian *Pro Git*, is not taken either: the textbook says *potrdite* for confirming a dialog or a name, and Islovar uses *potrditev* for a network acknowledgement. Nor is *uveljavitev*, used by GNOME and KDE: *uveljaviti* means to enforce. Applied in `03-upravljanje-razlicic.md` and `G-git.md`; the legacy chapters that say *naredite commit* follow when they migrate.
 - 2026-10-09 — Students use the terminal inside VSCode throughout the course, unless that makes something very complicated. A separate Git Bash or Terminal window is kept as a reference (keyboard appendix, FAQ), not as a route that chapters and exercises take. Installation is the exception: students do not necessarily attend every tutorial, so appendix A cannot assume VSCode is already set up, and its steps accept either terminal. Appendix A lists VSCode first.
+- 2026-10-19 — Homework descriptions live in `domace-naloge/` here, moved from `redovalnica/opisi/`: they are course content, public once the activity is visible, and belong where the rest of the material is edited. `redovalnica` keeps the sync script and the record of the last sync (`data/ucilnica/⟨cmid⟩.md`), `zbornica` the drafts, attachments and solutions.
 - 2026-10-12 — `ucbenik/L-latex` is not cruft: it is the LaTeX troubleshooting page split out of appendix A in `42e1b96`, and appendix A links to its label `latex:preverjanje-namestitve`. It is published as the appendix `L-latex.md`.
 
 ## Open questions
