@@ -55,8 +55,10 @@ ki so lahko obvezni (v zavitih oklepajih `{}`) ali neobvezni (v oglatih oklepaji
 
 Pri teh vajah boste srečali okolja `abstract`, `verbatim` (oznaka ` ``` ` v Markdownu),
 `itemize` in `enumerate` (znački `ul` in `ol` v HTML-ju), v katerih vsak element seznama začne ukaz `\item`.
-Glavo dokumenta z naslovom, avtorjem in datumom sestavimo z ukazi `\title`, `\author` in `\date`,
-izpiše pa jo šele ukaz `\maketitle` na začetku okolja `document`.
+Naslov, avtorja in datum dokumenta nastavimo z ukazi `\title`, `\author` in `\date`.
+Ti ukazi ne izpišejo ničesar: LaTeX si podatke o dokumentu (metapodatke) le zapomni.
+Izpiše jih šele ukaz `\maketitle`, in sicer tam, kjer ga uporabimo, zato morajo ukazi za nastavljanje stati pred njim.
+Če datuma ne nastavimo, `\maketitle` izpiše današnjega.
 
 ### Matematika
 
@@ -271,33 +273,40 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
    Vsebina je že označena z okoljem `document`, vrsta dokumenta pa je že nastavljena na `article`.
    Pri reševanju si pomagajte s pregledno datoteko `1-osnove.tex` v imeniku `latex-pregled`.
 3. Velikost strani naj bo `A4`, osnovna velikost pisave pa `10pt`.
-4. V datoteki so naslovi razdelkov, podrazdelkov in podpodrazdelkov
+4. Prve tri vrstice v okolju `document` so naslov, avtor in datum.
+   Zapišite jih kot argumente ukazov `\title`, `\author` in `\date`.
+   Shranite in si oglejte PDF: naslova, avtorja in datuma v njem ni več.
+   Tako je prav: besedilo, ki ga je LaTeX prej izpisal, ste zamenjali z ukazi,
+   ki LaTeXu le povedo, kakšni so naslov, avtor in datum.
+5. Za temi ukazi dodajte ukaz `\maketitle`.
+   Shranite in si oglejte PDF: naslov, avtor in datum so spet v njem, tokrat oblikovani kot naslov članka.
+6. V datoteki so naslovi razdelkov, podrazdelkov in podpodrazdelkov
    označeni s komentarji `% razdelek`, `% podrazdelek` in `% podpodrazdelek`.
    Na vseh mestih uporabite ustrezen ukaz (`section`, `subsection` ali `subsubsection`).
    Uporabite enega od [načinov za urejanje več mest hkrati](latex:urejanje-vscode):
    več kurzorjev ali iskanje in zamenjavo z regularnimi izrazi.
-5. Sledite navodilom v komentarjih v datoteki `urnik.tex`.
+7. Sledite navodilom v komentarjih v datoteki `urnik.tex`.
    Kjer v besedilu najdete dva vprašaja `??`, ju nadomestite z ustreznim
    matematičnim izrazom.
    **Pozor:** dva izraza sta zapisana sredinsko poravnano v svoji vrstici:
    tam morate uporabiti prikazni način, ne vrstičnega.
-6. V besedilu je *16* vezajev in pomišljajev, ki so vsi napisani z znakom `-`.
+8. V besedilu je *16* vezajev in pomišljajev, ki so vsi napisani z znakom `-`.
    Pomišljaje popravite, vezaje pa pustite takšne, kot so.
    Popravite lahko vse naenkrat s pomočjo iskanja in zamenjave.
-7. Na dveh mestih je del besedila zapisan v dvojnih narekovajih;
+9. Na dveh mestih je del besedila zapisan v dvojnih narekovajih;
    poskrbite, da bodo ti pravilni slovenski.
    Uporabite iskanje in zamenjavo z regularnimi izrazi:
-   vzorec iz 4. točke morate samo malo popraviti.
-8. Poskrbite, da presledki za pikami, ki ne pomenijo konca stavka, ne bodo
-   preveliki. Taki so na primer presledki v datumu ter za kraticami npr. in t.i.
-   Pomagate si lahko z iskanjem in zamenjavo z regularnimi izrazi;
-   vključite tudi razlikovanje velikih in malih črk.
-   Kaj naredi vzorec `\. ([a-z])`?
-9. V glavni imenik repozitorija dodajte datoteko [`.gitignore`](git:gitignore),
-   v kateri naštejete pomožne datoteke, ki jih naredi LaTeX.
-   Pravilno bo napisana, ko boste med spremembami
-   videli samo datoteki `urnik.tex` in `.gitignore`.
-10. Zabeležite spremembo in vnose pošljite na GitHub.
+   vzorec iz 6. točke morate samo malo popraviti.
+10. Poskrbite, da presledki za pikami, ki ne pomenijo konca stavka, ne bodo
+    preveliki. Taki so na primer presledki v datumu ter za kraticami npr. in t.i.
+    Pomagate si lahko z iskanjem in zamenjavo z regularnimi izrazi;
+    vključite tudi razlikovanje velikih in malih črk.
+    Kaj naredi vzorec `\. ([a-z])`?
+11. V glavni imenik repozitorija dodajte datoteko [`.gitignore`](git:gitignore),
+    v kateri naštejete pomožne datoteke, ki jih naredi LaTeX.
+    Pravilno bo napisana, ko boste med spremembami
+    videli samo datoteki `urnik.tex` in `.gitignore`.
+12. Zabeležite spremembo in vnose pošljite na GitHub.
 
 ## Dodatni viri
 
