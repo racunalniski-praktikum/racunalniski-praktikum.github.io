@@ -7,9 +7,10 @@
 `````
 
 LaTeX je sistem za stavljenje besedila.
-Je pravzaprav prevajalnik, ki datoteko s končnico `.tex`,
-ki vsebuje navadno besedilo, označeno s posebnimi okolji in ukazi,
+Datoteko s končnico `.tex`, ki vsebuje navadno besedilo, označeno s posebnimi okolji in ukazi,
 pretvori v lepo stavljeno besedilo in ga shrani v datoteko PDF s končnico `.pdf`.
+Temu koraku pravimo _prevajanje_ (angl. _compile_), programu, ki ga opravi, pa _prevajalnik_:
+izraz je izposojen iz programiranja, kjer prevajalnik izvorno kodo pretvori v program.
 Ideja je enaka kot pri Markdownu in HTML-ju: z dogovorjenimi zaporedji znakov povemo, kaj posamezni deli besedila so,
 kako bodo videti, pa določi LaTeX.
 
@@ -177,6 +178,7 @@ Ponavadi ga je treba pognati večkrat,
 da lahko preračuna sklice na izreke in številke strani.
 Uporabnik lahko to stori bodisi sam bodisi uporabi program `latexmk`,
 ki požene `pdflatex` in nekatere druge programe v sklopu sistema LaTeX.
+Celotnemu postopku v angleščini pravijo tudi _build_, zato ga boste pod tem imenom srečali v VSCode.
 Razširitev LaTeX Workshop v VSCode požene `latexmk` vsakič, ko datoteko shranite;
 prvič pa prevajanje poženete sami, z ukazom _LaTeX Workshop: Build LaTeX project_ iz palete ukazov.
 Kako gre prevajanje, kaže statusna vrstica spodaj levo: med prevajanjem piše _↻ Build_, ko se konča, pa se pokaže kljukica ✓.
