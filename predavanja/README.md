@@ -11,19 +11,20 @@ Prosojnice in datoteke s predavanj pri predmetu Računalniški praktikum. Glavno
    - isto besedilo v različnih datotekah: [`.docx`](01-besedilne-datoteke/o-predmetu.docx), [`.md`](01-besedilne-datoteke/o-predmetu.md)
    - podnapisi v različnih kodnih tabelah: [ISO-8859-2](01-besedilne-datoteke/podnapisi/iso8859-2.srt), [CP-1250](01-besedilne-datoteke/podnapisi/cp1250.srt), [UTF-8](01-besedilne-datoteke/podnapisi/utf8.srt)
 2. Ukazna vrstica (datotečni sistem, ukazna vrstica, regularni izrazi)
-   <!-- - [prosojnice](02-ukazna-vrstica/…) -->
+   - [prosojnice](02-ukazna-vrstica/prosojnice.html)
 3. Upravljanje različic (upravljanje različic, oblačne storitve, Git, sinhronizacija, konflikti)
-   <!-- - [prosojnice](03-upravljanje-razlicic/…) -->
-4. HTML (Internet & splet, HTML, kodne tabele)
-   <!-- - [prosojnice](04-html/…) -->
+   - [prosojnice](03-upravljanje-razlicic/prosojnice.html)
+4. HTML (značke, struktura dokumenta, branje CSS)
+   - [prosojnice](04-html/prosojnice.html)
+   - recepti kot spletna stran: [`recepti.html`](04-html/recepti.html) s slogom [`recepti.css`](04-html/recepti.css)
 5. LaTeX 1: uvod
    <!-- - [prosojnice](05-latex-1-uvod/…) -->
 6. LaTeX 2: okolja, sklicevanje (oznake, sklici, citati, BibTeX)
    <!-- - [prosojnice](06-latex-2-okolja-sklicevanje/…) -->
-7. LaTeX 3: predstavitve (Beamer, različni formati slik)
-   <!-- - [prosojnice](07-latex-3-predstavitve/…) -->
-8. LaTeX 4: slike (različni formati slik, TiKZ)
-   <!-- - [prosojnice](08-latex-4-slike/…) -->
+7. LaTeX 3: slike (različni formati slik, TiKZ)
+   <!-- - [prosojnice](07-latex-3-slike/…) -->
+8. LaTeX 4: predstavitve (Beamer)
+   <!-- - [prosojnice](08-latex-4-predstavitve/…) -->
 9. Excel
    <!-- - [prosojnice](09-excel/…) -->
 10. Mathematica 1: uvod
