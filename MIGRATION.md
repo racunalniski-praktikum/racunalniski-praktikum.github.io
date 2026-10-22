@@ -69,7 +69,7 @@ until the target structure is agreed.
 | 1 | Uvod (o predmetu) | A: `ucbenik/00-uvod.md`; B: `01-uvod/` (partly) | L1 | TBD | [J] B's intro slides also cover terminal/VS Code — split with unit 2; C1 is resolved in `predavanja/00-uvod/` |
 | 2 | VS Code in terminal | A: `ucbenik/01-vscode-in-terminal{.md,/}`; B: `01-uvod/` (partly) | L1 + L2 | TBD | [J] one legacy unit becomes two lectures |
 | 3 | Git in Markdown | A: `ucbenik/02-git-in-markdown{.md,/}`; B: `02-git/` | L3 (+ L1) | TBD | [J] Markdown moves out to L1 (the README exercise is already in the chapter 1 draft); L3 keeps the diff argument |
-| 4 | HTML | A: `ucbenik/04-html{.md,/}` (was `03-html`); B: `03-html/` | L4 | `ucbenik/04-html{.md,/}` | [J] A migrated 2026-10-15; encodings and `podnapisi/` move out to L1 (C3) |
+| 4 | HTML | A: `ucbenik/04-html{.md,/}` (was `03-html`); B: `03-html/` | L4 | `ucbenik/04-html{.md,/}` | [J] A migrated 2026-10-15; encodings and `podnapisi/` move out to L1 (C3); **to do:** open the chapter on the lecture's question (Markdown cannot style; can a plain-text language?), not on the Word argument, which lecture 1 already makes |
 | 5 | CSS | A: deleted 2026-10-15; B: `04-css/` | **dropped** | — | [J] no longer taught; the stylesheet link moved to unit 4 (*Vsebina in videz* and exercise 5) (C2) |
 | 6 | Utrdimo osnove | A: `ucbenik/05-utrdimo-osnove{.md,/}` | L2 + L3 | TBD | [J] regex task 1 → L2; the rest is a mixed revision sheet |
 | 7 | Uvod v LaTeX | A: `ucbenik/06-uvod-v-latex{.md,/}`; B: `05-latex/` | L5 | TBD | [J] |
@@ -233,19 +233,32 @@ messages, so this costs one sentence.
 
 ### 4. HTML
 
-**Bad practice.** Making text bold and bigger to mean a heading. Word's styles are
-the positive case: Word can do this properly.
+**Opening question.** Lecture 1 showed that Word hides the structure under the
+surface, so this lecture does not repeat it. Markdown shows the structure, but it gives
+no control over the appearance. A student who wants a styled document goes back to
+Word: that is the bad practice. The deck opens on one recipe twice, plain in Markdown
+and styled in Word, with a question mark between them. Can a plain-text language
+give both? The Word side is a picture of the final page, `recepti.html`.
 
-**Content.** HTML as the same idea as Markdown, said more loudly. Students know
-Markdown from lecture 1, so the lecture starts directly with HTML.
+**Content.** HTML as the same idea as Markdown, said more loudly: the same recipe in
+both. HTML also has names for what Markdown cannot say, such as the list of times as
+a `dl` and a vegan recipe as `class="veganski"`. CSS gives the appearance. The lecture
+closes on `recepti.html` with `recepti.css`, which answers the opening question.
+Students know Markdown from lecture 1, so the lecture starts directly with HTML.
 
-**CSS is mentioned as existing, but not taught.** When students need it after the
-course, they adjust it with a language model.
+**Students read CSS, but do not write it.** The lecture shows enough to read a
+stylesheet such as `recepti.css`: the syntax of a rule, selectors by element, `id`
+and `class`, `div` and `span`, and the box model, as a picture to keep in mind. When a
+language model restyles a page, the student checks what it changed in the
+stylesheet, so the language-model thread needs reading. Writing CSS waits until
+students need it after the course, and then they do it with a language model. Inline
+`style` and the `<style>` element are not shown. The tutorials stay at changing one
+rule (exercise 5).
 
 **Internet and DNS are trimmed to almost nothing.**
 
-**Theme.** A heading, against text that is bold and bigger. The canonical instance,
-and the lecture is built on it.
+**Theme.** The structure is in the HTML, the appearance in the CSS. One rule for `h2`
+restyles every recipe title.
 
 ### 5. LaTeX intro
 
