@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Upravljanje različic &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=db6da3aa" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '03-upravljanje-razlicic';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Označevalni jezik HTML" href="04-html.html" />
+    <link rel="prev" title="Ukazna vrstica" href="02-ukazna-vrstica.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-besedilne-datoteke.html">Besedilne datoteke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-ukazna-vrstica.html">Ukazna vrstica</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Upravljanje različic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-html.html">Označevalni jezik HTML</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="H-regex.html">Regularni izrazi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L-latex.html">LaTeX: pogosta vprašanja in reševanje težav</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/03-upravljanje-razlicic.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Upravljanje različic</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-orodje-za-upravljanje-razlicic">Git, orodje za upravljanje različic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ko-git-odpre-urejevalnik">Ko Git odpre urejevalnik</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-prvi-koraki-z-gitom">1. naloga: prvi koraki z Gitom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-patrikova-git-zgodba">2. naloga: Patrikova Git zgodba</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dodatni-viri">Dodatni viri</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="upravljanje-razlicic">
+<h1>Upravljanje različic<a class="headerlink" href="#upravljanje-razlicic" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-ukazna"><span class="std std-ref">ukazna vrstica</span></a>,</p></li>
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-vscode"><span class="std std-ref">Visual Studio Code</span></a>.</p></li>
+</ul>
+</div>
+<section id="git-orodje-za-upravljanje-razlicic">
+<h2>Git, orodje za upravljanje različic<a class="headerlink" href="#git-orodje-za-upravljanje-razlicic" title="Link to this heading">#</a></h2>
+<p>Zelo poenostavljeno povedano sistemi za upravljanje različic shranjujejo stanja datotek na tak način, da lahko kadarkoli prikličemo poljubno različico.
+V resnici nam ponujajo še mnogo več, saj med drugim omogočajo:</p>
+<ul class="simple">
+<li><p>povrniti datoteke ali kar celoten projekt v prejšnje stanje,</p></li>
+<li><p>pogledati, kaj natanko se je spremenilo med dvema različicama,</p></li>
+<li><p>pogledati, kdo je kaj spremenil in kdaj,</p></li>
+<li><p>sodelovanje na projektu, kjer lahko več ljudi hkrati ureja iste datoteke.</p></li>
+</ul>
+<p>Najbolj jih potrebujemo takrat, ko datotek ne spreminjamo samo mi.
+Kadar vaše datoteke ureja umetna inteligenca, lahko v enem koraku prepiše celo datoteko, tudi tam, kjer tega niste želeli.
+Z Gitom vidite, katere vrstice je spremenila, in se po potrebi vrnete na prejšnjo različico; brez njega je edina kopija tista, ki jo je pravkar napisala.
+Enako velja, kadar na istih datotekah dela več ljudi.
+Koristni pa so tudi, kadar delamo sami: ob zaključevanju diplomskih del brez njih hitro nastanejo datoteke kot <code class="docutils literal notranslate"><span class="pre">diploma-koncna.tex</span></code>, <code class="docutils literal notranslate"><span class="pre">diploma-koncna2.tex</span></code>, <code class="docutils literal notranslate"><span class="pre">diploma</span> <span class="pre">(zadnja).tex</span></code>, <code class="docutils literal notranslate"><span class="pre">diploma</span> <span class="pre">(oddana).tex</span></code>, itd.</p>
+<p>Pri tem predmetu in še nekaterih drugih (upamo pa, da tudi za lastne potrebe) boste uporabljali orodje <a class="reference external" href="https://git-scm.com">Git</a>, ki je najbolj razširjeno sodobno orodje za upravljanje različic.
+Urejevalnik <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> ima dobro razvito <a class="reference external" href="https://code.visualstudio.com/docs/editor/versioncontrol#_git-support">podporo za Git</a>.
+Predvsem je pomembno, da se naučite, kaj Git z vašimi datotekami počne, in prebrati, kaj vam sporoča o njihovem stanju.</p>
+<p>Za začetek si poglejmo nekaj osnovnih izrazov, ki jih bomo uporabljali:</p>
+<ul class="simple">
+<li><p><em>delovno drevo</em> (angl. <em>working tree</em>) je imenik z vsemi datotekami projekta, na katerem smo vklopili upravljanje različic.</p></li>
+<li><p><em>vnos spremembe</em> (krajše <em>vnos</em>, angl. <em>commit</em>) je osnovna enota upravljanja različic, ki vsebuje zabeleženo stanje datotek skupaj s časom, avtorjem, opisom, podatki o predhodnih vnosih in podobno. Vsak vnos spremembe tvori neko smiselno celoto, na primer popravek enega hrošča, dodatek nove funkcionalnosti, …</p></li>
+<li><p><em>repozitorij</em> (angl. <em>repository</em> ali <em>repo</em>) je zbirka vseh vnosov sprememb.</p></li>
+<li><p><em>klon</em> (angl. <em>clone</em>) je ena izmed kopij repozitorija. Ena se običajno nahaja na javnem strežniku (za primer lahko pogledate gradiva za Uvod v programiranje na <a class="reference external" href="https://github.com/matijapretnar/uvod-v-programiranje">GitHubu</a>), vsak, ki dela na projektu pa ima eno kopijo še v delovnem drevesu (skrito v imeniku <code class="docutils literal notranslate"><span class="pre">.git</span></code>).</p></li>
+</ul>
+<section id="ko-git-odpre-urejevalnik">
+<h3>Ko Git odpre urejevalnik<a class="headerlink" href="#ko-git-odpre-urejevalnik" title="Link to this heading">#</a></h3>
+<p>Nekateri ukazi Gita potrebujejo besedilo, ki ga niste napisali v ukazno vrstico. V takih primerih Git kar v ukazni vrstici odpre urejevalnik, ki ste ga izbrali v <a class="reference internal" href="G-git.html#git-nastavitve-uporabnika"><span class="std std-ref">nastavitvah</span></a>.</p>
+<ol class="arabic simple">
+<li><p>Besedilo napišete ali popravite kot običajno, po njem se premikate s puščicami <kbd>↑↓←→</kbd>.</p></li>
+<li><p>Shranite ga z bližnjico <kbd>Ctrl</kbd>+<kbd>O</kbd> in ime datoteke potrdite z vnašalko.</p></li>
+<li><p>Urejevalnik zaprete z bližnjico <kbd>Ctrl</kbd>+<kbd>X</kbd>, nato Git nadaljuje.</p></li>
+</ol>
+<p>Če še niste nastavili urejevalnika za ukazno vrstico, Git morda odpre urejevalnik <code class="docutils literal notranslate"><span class="pre">vim</span></code>.
+Iz njega pridete tako, da stisnete <kbd>Esc</kbd>, napišete <code class="docutils literal notranslate"><span class="pre">:wq</span></code> in stisnete vnašalko.</p>
+</section>
+</section>
+<section id="naloga-prvi-koraki-z-gitom">
+<h2>1. naloga: prvi koraki z Gitom<a class="headerlink" href="#naloga-prvi-koraki-z-gitom" title="Link to this heading">#</a></h2>
+<p>Glavni namen te naloge je, da računalnik pripravimo za delo z Gitom, spotoma pa še naprej vadimo uporabo ukazne vrstice. Vsi ukazi so pospremljeni z razlagami, da ne boste imeli občutka, da samo ponavljate magične uroke za učiteljem.</p>
+<p>Naloga predpostavlja, da sedite pri istem računalniku kot na prejšnjih vajah. Če ni tako in imenika <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code> z datoteko <code class="docutils literal notranslate"><span class="pre">README.md</span></code> nimate, v 1. koraku imenik <code class="docutils literal notranslate"><span class="pre">rp</span></code> najprej naredite, 3., 4., 7., 8. in 11. korak preskočite, pred 10. korakom pa vrstice iz 3. koraka dodajte v klonirano datoteko <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.
+Imenik <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code> boste med nalogo pobrisali in ga nadomestili s klonom.</p>
+<div class="tip admonition">
+<p class="admonition-title">Nasvet za pomikanje po ukazni vrstici</p>
+<p>Po ukazni vrstici se lahko premikate s puščicami na tipkovnici.
+Za pomikanje po trenutni vrstici lahko uporabite puščici <kbd>←</kbd> in <kbd>→</kbd>.
+Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kbd>↓</kbd>.</p>
+</div>
+<ol class="arabic">
+<li><p>V VSCode odprite imenik <code class="docutils literal notranslate"><span class="pre">rp</span></code> (<em>File</em> &gt; <em>Open Folder</em>).
+Če vas VSCode vpraša, ali avtorjem imenika zaupate (<em>Do you trust the authors?</em>), potrdite, sicer ukazna vrstica ne deluje.
+Odprite še ukazno vrstico: v paleti ukazov (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) izberite ukaz <em>Terminal: Create New Terminal in Editor Area to the Side</em>.
+V sistemu Windows preverite, da na zavihku ukazne vrstice piše <code class="docutils literal notranslate"><span class="pre">bash</span></code> in ne <code class="docutils literal notranslate"><span class="pre">powershell</span></code>; če ne, v paleti ukazov izberite ukaz <em>Terminal: Select Default Profile</em> in nato <em>Git Bash</em>, zavihek zaprite in odprite novo ukazno vrstico.</p></li>
+<li><p>Sledite navodilom za <a class="reference internal" href="G-git.html#git-nastavitve"><span class="std std-ref">nastavitve <code class="docutils literal notranslate"><span class="pre">git</span></code>-a</span></a>, da si nastavite uporabniške nastavitve ter SSH ključ.</p></li>
+<li><p>V VSCode v pogledu z datotekami (<em>Explorer</em>) kliknite imenik <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code> in v njem datoteko <code class="docutils literal notranslate"><span class="pre">README.md</span></code>, da se odpre v urejevalniku.
+Na konec razdelka <em>Bližnjice na tipkovnici</em> dodajte vrstice</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">-</span><span class="w"> </span>VSCode paleta ukazov: &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; (🍎 &lt;kbd&gt;Cmd&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt;)
+<span class="k">-</span><span class="w"> </span>Skok na začetek vrstice: &lt;kbd&gt;Home&lt;/kbd&gt; (🍎 &lt;kbd&gt;Cmd&lt;/kbd&gt;+&lt;kbd&gt;←&lt;/kbd&gt;)
+<span class="k">-</span><span class="w"> </span>Premik za eno besedo naprej: &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;→&lt;/kbd&gt; (🍎 &lt;kbd&gt;Option&lt;/kbd&gt;+&lt;kbd&gt;→&lt;/kbd&gt;)
+<span class="k">-</span><span class="w"> </span>Brisanje vrstice: &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;K&lt;/kbd&gt; (🍎 &lt;kbd&gt;Cmd&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;K&lt;/kbd&gt;)
+<span class="k">-</span><span class="w"> </span>Pretvorba označenega besedila v velike črke: ukaz <span class="ge">_Transform to Uppercase_</span> v paleti ukazov
+</pre></div>
+</div>
+<p>ter datoteko shranite.</p>
+</li>
+<li><p>Zaporedoma napišite ukaze:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">racunalniski-praktikum/README.md</span> <span class="pre">README-staro.md</span></code>: ukaz <code class="docutils literal notranslate"><span class="pre">mv</span></code> (angl. <em>move</em>) premakne datoteko, podano s prvim argumentom, na mesto, podano z drugim, pri čemer jo lahko hkrati tudi preimenujemo. V tem primeru datoteko <code class="docutils literal notranslate"><span class="pre">README.md</span></code> iz imenika <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code> premakne v trenutni imenik, torej <code class="docutils literal notranslate"><span class="pre">rp</span></code>, in jo preimenuje v <code class="docutils literal notranslate"><span class="pre">README-staro.md</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">racunalniski-praktikum</span></code>: preverite, da datoteke <code class="docutils literal notranslate"><span class="pre">README.md</span></code> v imeniku <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code> ni več.
+Če izpiše še kakšno datoteko, jo prav tako premaknite v <code class="docutils literal notranslate"><span class="pre">rp</span></code> (<code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">racunalniski-praktikum/⟨ime⟩</span> <span class="pre">.</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">racunalniski-praktikum</span></code>: ukaz <code class="docutils literal notranslate"><span class="pre">rm</span></code> (angl. <em>remove</em>) z možnostjo <code class="docutils literal notranslate"><span class="pre">-r</span></code> (angl. <em>recursive</em>) pobriše imenik <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code> z vsem, kar je ostalo v njem, tudi s skritimi datotekami, ki jih ustvari operacijski sistem (npr. <code class="docutils literal notranslate"><span class="pre">.DS_Store</span></code>).
+Datotek ne premakne v koš, ampak jih pobriše za vedno.</p></li>
+</ul>
+</li>
+<li><p>Kopirajte naslov svojega repozitorija (ki ste ga ustvarili in oddali v 2. domači nalogi) z GitHuba:</p>
+<ul class="simple">
+<li><p>Odprite stran z vašim repozitorijem v brskalniku in kliknite na zeleni gumb <em>Code</em>.</p></li>
+<li><p>Izberite zavihek <em>Local</em>, pod njim pa zavihek <em>SSH</em>.</p></li>
+<li><p>Kopirajte naslov, ki je videti približno takole:
+<code class="docutils literal notranslate"><span class="pre">git&#64;github.com:⟨uporabnisko-ime⟩/⟨ime-repozitorija⟩.git</span></code></p></li>
+</ul>
+</li>
+<li><p>V ukazni vrstici v imeniku <code class="docutils literal notranslate"><span class="pre">rp</span></code> napišite ukaz</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>⟨naslov-iz-zgornje-tocke⟩<span class="w"> </span>racunalniski-praktikum
+</pre></div>
+</div>
+<p>Drugi argument pove, v kateri imenik naj Git klonira repozitorij; brez njega bi se ustvaril nov imenik z imenom repozitorija.
+Če ste ključ SSH zaščitili z geslom, vas Git vpraša zanj (<em>Enter passphrase for key</em>), enako tudi kasneje ob ukazu <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.
+Med tipkanjem gesla se znaki ne izpisujejo: natipkajte ga in stisnite vnašalko.
+Če vas vpraša, ali zaupate strežniku (<em>The authenticity of host can’t be established.</em>), ste izpustili <a class="reference internal" href="G-git.html#git-ssh-preverjanje"><span class="std std-ref">preverjanje povezave</span></a>: napišite <code class="docutils literal notranslate"><span class="pre">yes</span></code> in stisnite vnašalko.
+Če se izpiše <code class="docutils literal notranslate"><span class="pre">Permission</span> <span class="pre">denied</span> <span class="pre">(publickey)</span></code>, ključ SSH ni pravilno nastavljen; <a class="reference internal" href="G-git.html#git-ssh-preverjanje"><span class="std std-ref">preverite povezavo z GitHubom</span></a> in kloniranje ponovite.
+Datoteka <code class="docutils literal notranslate"><span class="pre">README-staro.md</span></code> vas varno čaka v imeniku <code class="docutils literal notranslate"><span class="pre">rp</span></code>.</p>
+</li>
+<li><p>Preverite, da vam je uspelo: ukaz <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">racunalniski-praktikum</span></code> mora izpisati <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.
+Če ne izpiše ničesar, je repozitorij na GitHubu prazen (3. točka 2. domače naloge ni uspela); prosite za pomoč.
+Nato staro datoteko premaknite nazaj:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>README-staro.md<span class="w"> </span>racunalniski-praktikum
+</pre></div>
+</div>
+</li>
+<li><p>V pogledu z datotekami z desnim klikom na <code class="docutils literal notranslate"><span class="pre">README-staro.md</span></code> izberite <em>Select for Compare</em>, nato z desnim klikom na <code class="docutils literal notranslate"><span class="pre">README.md</span></code> še <em>Compare with Selected</em>.
+Urejevalnik prikaže datoteki vzporedno in označi vrstice, v katerih se razlikujeta.
+Ob vsaki razliki je med datotekama puščica; s klikom nanjo vrstice z leve prenesete na desno, v <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.
+Prenesite vse, kar želite obdržati, vsaj vrstice iz 3. koraka, in datoteko shranite.</p></li>
+<li><p>Preverite, ali Git ve, kdo ste:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>racunalniski-praktikum
+git<span class="w"> </span>config<span class="w"> </span>user.email
+</pre></div>
+</div>
+<p>Ukaz <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">user.email</span></code> izpiše e-naslov, s katerim Git podpiše vaše vnose sprememb; to mora biti naslov, ki ga uporabljate za GitHub.
+Če ne izpiše ničesar, <a class="reference internal" href="G-git.html#git-nastavitve-uporabnika"><span class="std std-ref">uredite nastavitve uporabnika</span></a>, preden nadaljujete.
+To nastavitev potrebujete, da bo GitHub povezal vaše vnose sprememb z vašim uporabniškim računom.</p>
+</li>
+<li><p>Spremembo zabeležite in jo pošljite na GitHub (glejte <a class="reference internal" href="G-git.html#git-osnovni-ukazi"><span class="std std-ref">osnovne ukaze</span></a>).
+V ukazni vrstici napišite ukaze</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+git<span class="w"> </span>add<span class="w"> </span>README.md
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"dodaj bližnjice za VSCode"</span>
+git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>Ukaz <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> izpiše stanje repozitorija: <code class="docutils literal notranslate"><span class="pre">README.md</span></code> je med spremenjenimi datotekami (<em>Changes not staged for commit</em>), <code class="docutils literal notranslate"><span class="pre">README-staro.md</span></code> pa med datotekami, ki jih Git ne spremlja (<em>Untracked files</em>).
+Z <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> v vnos spremembe vključite samo <code class="docutils literal notranslate"><span class="pre">README.md</span></code>, z <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> vnos ustvarite s sporočilom, ki sledi možnosti <code class="docutils literal notranslate"><span class="pre">-m</span></code>, z <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> pa ga pošljete na GitHub.</p>
+</li>
+<li><p>Pobrišite datoteko <code class="docutils literal notranslate"><span class="pre">README-staro.md</span></code> in preverite stanje repozitorija:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>README-staro.md
+git<span class="w"> </span>status
+</pre></div>
+</div>
+<p>Git mora izpisati <em>nothing to commit, working tree clean</em>.</p>
+</li>
+<li><p>Osvežite stran svojega repozitorija na GitHubu in preverite, da so nove vrstice tam.</p></li>
+</ol>
+</section>
+<section id="naloga-patrikova-git-zgodba">
+<h2>2. naloga: Patrikova Git zgodba<a class="headerlink" href="#naloga-patrikova-git-zgodba" title="Link to this heading">#</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Kloniranje repozitorija z nalogo</p>
+<p>Po 1. nalogi je ukazna vrstica v imeniku <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code>. Vrnite se v imenik <code class="docutils literal notranslate"><span class="pre">rp</span></code> z ukazom <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> in s <code class="docutils literal notranslate"><span class="pre">pwd</span></code> preverite, da ste tam, šele nato poženite <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>. Zgodba ne sme pristati znotraj vašega repozitorija.</p>
+</div>
+<p>Navodila naloge so v repozitoriju <a class="reference external" href="https://github.com/racunalniski-praktikum/git-zgodba">git-zgodba</a>.</p>
+</section>
+<section id="dodatni-viri">
+<h2>Dodatni viri<a class="headerlink" href="#dodatni-viri" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://git.bradwoods.io/">Git Time</a>, spletna igrica za spoznavanje Gita, ki jo je razvil Brad Woods.</p></li>
+<li><p><a class="reference external" href="https://learngitbranching.js.org">Learn Git Branching</a>, nekoliko naprednejša spletna igra za spoznavanje Gita s poudarkom na delu z vejami.</p></li>
+<li><p><a class="reference external" href="https://ohmygit.org">Oh My Git!</a>, igra za spoznavanje gita, ki kmalu predstavi, kako lahko na datotekah sodeluje več avtorjev.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02-ukazna-vrstica.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ukazna vrstica</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04-html.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Označevalni jezik HTML</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-orodje-za-upravljanje-razlicic">Git, orodje za upravljanje različic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ko-git-odpre-urejevalnik">Ko Git odpre urejevalnik</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-prvi-koraki-z-gitom">1. naloga: prvi koraki z Gitom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-patrikova-git-zgodba">2. naloga: Patrikova Git zgodba</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dodatni-viri">Dodatni viri</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
