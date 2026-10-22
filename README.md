@@ -13,7 +13,7 @@ druga različica pa je drugo orodje (mystmd) in teh datotek ne prebere.
 Če imate ustrezne pravice, lahko HTML najenostavneje objavite kar prek [GitHub pages](https://pages.github.com):
 
 ```bash
-uv run --with ghp-import ghp-import --no-jekyll --no-history --force --push ucbenik/_build/html
+uv run --with ghp-import ghp-import --no-jekyll --no-history --force --push ucbenik/_build/html && git branch -D gh-pages
 ```
 
 Objava s silo prepiše vejo `gh-pages`, zato pred njo zgradite učbenik na novo.
