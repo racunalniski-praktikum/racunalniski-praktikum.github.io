@@ -218,9 +218,24 @@ Poglejte si, kakšne napake javi LaTeX, če prevajate brez tega: tako jih boste 
   (s končnicami `.aux`, `.fdb_latexmk`, `.fls`, `.log`, `.synctex.gz` in podobno),
   ki so za uporabnika večino časa neuporabne.
   Asistenti vam bodo hvaležni (sčasoma pa boste verjetno hvaležni tudi sami sebi).
-  Pomožnim datotekam tudi ne sledimo z Gitom: naštejemo jih v datoteki [`.gitignore`](git:gitignore).
 * V imenih imenikov nad datoteko `.tex` **ne sme biti šumnikov ali presledkov**.
   LaTeX je tako star, da to lahko povzroča težave, še posebej na operacijskem sistemu Windows.
+
+(latex:gitignore)=
+### Pomožne datoteke in Git
+
+Pomožnih datotek ne shranjujemo v repozitorij: LaTeX jih naredi ob vsakem prevajanju znova, prav tako PDF.
+V glavni imenik repozitorija zato dodamo datoteko [`.gitignore`](git:gitignore), ki Gitu pove, katerih datotek naj ne upošteva.
+Vzorec `*.aux` izključi vse datoteke s končnico `.aux`, v vseh imenikih;
+enako naredimo za druge pomožne končnice (primer je v plonkcu) in za `*.pdf`.
+Izjema so PDF-ji, ki jih v dokument vključimo kot slike:
+vsakega izvzamemo z vrstico za `*.pdf`, ki se začne s klicajem, na primer `!slika.pdf`.
+V repozitoriju tako ostanejo samo izvorne datoteke: `.tex`, `.bib` in slike.
+
+Datoteka `.gitignore` velja samo za datoteke, ki jim Git še ne sledi.
+Pomožna datoteka, ki smo jo zabeležili, preden smo napisali `.gitignore`, ostane v repozitoriju,
+dokler je ne pobrišemo in izbrisa ne zabeležimo kot spremembo.
+Ko jo LaTeX pri naslednjem prevajanju naredi znova, jo Git zaradi datoteke `.gitignore` prezre.
 
 (latex:urejanje-vscode)=
 ## Urejanje v VSCode
@@ -316,8 +331,8 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
     Pomagate si lahko z iskanjem in zamenjavo z regularnimi izrazi;
     vključite tudi razlikovanje velikih in malih črk.
     Kaj naredi vzorec `\. ([a-z])`?
-11. V glavni imenik repozitorija dodajte datoteko [`.gitignore`](git:gitignore),
-    v kateri naštejete pomožne datoteke, ki jih naredi LaTeX.
+11. V glavni imenik repozitorija dodajte datoteko `.gitignore`,
+    v kateri naštejete pomožne datoteke, ki jih naredi LaTeX (razdelek [Pomožne datoteke in Git](latex:gitignore)).
     Pravilno bo napisana, ko boste med spremembami
     videli samo datoteki `urnik.tex` in `.gitignore`.
 12. Zabeležite spremembo in vnose pošljite na GitHub.
