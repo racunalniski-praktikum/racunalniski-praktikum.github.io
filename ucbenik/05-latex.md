@@ -62,19 +62,34 @@ Izpiše jih šele ukaz `\maketitle`, in sicer tam, kjer ga uporabimo, zato moraj
 
 ### Matematika
 
-Tudi za matematični način uporabljamo okolje, in sicer
-`math` za vrstičnega in `displaymath` za prikaznega (tako da izraz stoji v svoji vrstici).
-Ker bi bilo zelo zamudno pisati `\begin{math}1 + 1\end{math}`, ima LaTeX za ti dve okolji posebni okrajšavi:
+Matematični izraz lahko stoji na dveh mestih.
+V _vrstičnem načinu_ (angl. _inline_) je del vrstice z besedilom; zapišemo ga med `\(` in `\)`.
+V _prikaznem načinu_ (angl. _display_) stoji sam v svoji vrstici, sredinsko poravnan; zapišemo ga med `\[` in `\]`.
+Primer z obema načinoma:
 
-```
+```tex
+V pravokotnem trikotniku s katetama \(a\) in \(b\) ter hipotenuzo \(c\) velja
 \[
-  ⟨matematični izraz na sredini vrstice⟩
+  a^2 + b^2 = c^2.
 \]
+Hipotenuza je torej \(c = \sqrt{a^2 + b^2}\).
 ```
 
-ali `\(⟨matematični izraz v vrstici⟩\)`.
-Včasih boste morda videli tudi starejši okrajšavi `$$` za prikazni in `$` za vrstični način.
-Uporabo teh dveh okrajšav odsvetujemo: ko boste naleteli na napako, jo boste veliko težje razbrali.
+LaTeX to prevede v:
+
+V pravokotnem trikotniku s katetama $a$ in $b$ ter hipotenuzo $c$ velja
+$$a^2 + b^2 = c^2.$$
+Hipotenuza je torej $c = \sqrt{a^2 + b^2}$.
+
+Izraz v prikaznem načinu je še vedno del stavka: pred `\[` in za `\]` ni prazne vrstice,
+ločilo na koncu stavka pa stoji znotraj izraza, kot pika v zgornjem primeru.
+V vrstico sodijo kratki izrazi, ki tečejo z besedilom, na primer oznake kot $n$ ali $x_i$;
+v svojo vrstico pa pomembne enačbe in vse, kar je višje od vrstice, na primer ulomki, vsote in integrali.
+
+Zapisa `\(…\)` in `\[…\]` sta okrajšavi za okolji `math` in `displaymath`.
+Včasih boste videli tudi starejši okrajšavi `$` za vrstični in `$$` za prikazni način.
+Uporabo teh dveh odsvetujemo: pozabljen `$` LaTeX opazi šele pri naslednjem `$`,
+zato napako javi daleč od mesta, kjer je nastala.
 
 `````{admonition} Ukazi za matematične izraze
 :class: tip
@@ -288,8 +303,7 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
 7. Sledite navodilom v komentarjih v datoteki `urnik.tex`.
    Kjer v besedilu najdete dva vprašaja `??`, ju nadomestite z ustreznim
    matematičnim izrazom.
-   **Pozor:** dva izraza sta zapisana sredinsko poravnano v svoji vrstici:
-   tam morate uporabiti prikazni način, ne vrstičnega.
+   Dva izraza stojita sama v svoji vrstici: tam uporabite prikazni način, pri vseh ostalih pa vrstičnega.
 8. V besedilu je *16* vezajev in pomišljajev, ki so vsi napisani z znakom `-`.
    Pomišljaje popravite, vezaje pa pustite takšne, kot so.
    Popravite lahko vse naenkrat s pomočjo iskanja in zamenjave.
