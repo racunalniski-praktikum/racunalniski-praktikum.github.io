@@ -15,37 +15,82 @@
     <img class="r-stretch" src="html.svg" alt="HTML" />
 </section>
 
+<section class="center">
+<div style="display: grid; grid-template-columns: auto auto auto; justify-content: center; gap: 1em; align-items: center;">
+<pre style="width: auto; font-size: 0.33em"><code class="language-markdown" data-trim>
+# Palačinke
+
+- moka
+- mleko
+- jajce
+- ščepec soli
+- olje za peko
+
+1. Zmešaj moko, mleko, jajce in sol v gladko maso.
+2. Segrej ponev in naolji.
+3. Peci tanke palačinke z obeh strani.
+
+- Čas priprave: 5 min
+- Čas kuhanja/peke: 15 min
+- Porcije: ~8 palačink
+</code></pre>
+<span style="font-size: 3em">?</span>
+<img src="word.png" alt="Isti recept v Wordu" style="margin: 0; height: 450px; width: auto" />
+</div>
+</section>
+
+<section class="center">
+<div style="display: grid; grid-template-columns: auto auto; justify-content: center; gap: 1em; align-items: center;">
+<pre style="width: auto; font-size: 0.33em"><code class="language-markdown" data-trim>
+# Palačinke
+
+- moka
+- mleko
+- jajce
+- ščepec soli
+- olje za peko
+
+1. Zmešaj moko, mleko, jajce in sol v gladko maso.
+2. Segrej ponev in naolji.
+3. Peci tanke palačinke z obeh strani.
+
+- Čas priprave: 5 min
+- Čas kuhanja/peke: 15 min
+- Porcije: ~8 palačink
+</code></pre>
+<pre style="width: auto; font-size: 0.33em"><code class="language-html" data-trim><script type="text/template">
+<h1>Palačinke</h1>
+
+<ul class="sestavine">
+  <li>moka</li>
+  <li>mleko</li>
+  <li>jajce</li>
+  <li>ščepec soli</li>
+  <li>olje za peko</li>
+</ul>
+
+<ol class="koraki">
+  <li>Zmešaj moko, mleko, jajce in sol v gladko maso.</li>
+  <li>Segrej ponev in naolji.</li>
+  <li>Peci tanke palačinke z obeh strani.</li>
+</ol>
+
+<ul>
+  <dt>Čas priprave</dt>
+  <dd>5 min</dd>
+  <dt>Čas kuhanja/peke</dt>
+  <dd>15 min</dd>
+  <dt>Porcije</dt>
+  <dd>~8 palačink</dd>
+</ul>
+</script></code></pre>
+</div>
+</section>
+
 <section data-markdown class="center">
 <textarea data-template>
 
-```markdown
-# Naslov
-
-Besedilo je lahko **poudarjeno** ter
-vsebuje [povezave](https://www.fmf.uni-lj.si/),
-`programsko kodo` in sezname:
-- prva točka
-- druga točka
-- tretja točka
-```
-
-```html
-<h1>Naslov</h1>
-
-<p>Besedilo je lahko <strong>poudarjeno</strong> ter
-vsebuje <a href="https://www.fmf.uni-lj.si/">povezave</a>,
-<code>programsko kodo</code> in sezname:</p>
-<ul>
-  <li>prva točka</li>
-  <li>druga točka</li>
-  <li>tretja točka</li>
-</ul>
-
-```
-
----
-
-<img class="r-stretch" src="../../ucbenik/04-html/anatomija-znacke.svg" alt="HTML" />
+<img class="r-stretch" src="anatomija-znacke.svg" alt="HTML" />
 
 ---
 
@@ -95,36 +140,12 @@ h1, h2 {
 
 ---
 
-```html
-<znacka style="color: red">...</znacka>`
-```
----
-
 ```html [5]
 <!DOCTYPE html>
 <html>
   <head>
     ...
     <link rel="stylesheet" href="stil.css">
-  </head>
-  <body>
-    ...
-  </body>
-</html>
-```
-
----
-
-```html [5-9]
-<!DOCTYPE html>
-<html>
-  <head>
-    ...
-    <style>
-      body {
-        font-family: serif;
-      }
-    </style>
   </head>
   <body>
     ...
