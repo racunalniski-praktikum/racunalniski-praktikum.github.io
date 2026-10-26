@@ -18,6 +18,9 @@ repository:
 
 # Prosojnice iz imenika predavanja/ objavimo skupaj z učbenikom.
 sphinx:
+  config:
+    language: sl
+
 #   extra_extensions:
 #     - sphinx_proof
   local_extensions:
