@@ -78,7 +78,9 @@ Hipotenuza je torej \(c = \sqrt{a^2 + b^2}\).
 LaTeX to prevede v:
 
 V pravokotnem trikotniku s katetama $a$ in $b$ ter hipotenuzo $c$ velja
+
 $$a^2 + b^2 = c^2.$$
+
 Hipotenuza je torej $c = \sqrt{a^2 + b^2}$.
 
 Izraz v prikaznem načinu je še vedno del stavka: pred `\[` in za `\]` ni prazne vrstice,
