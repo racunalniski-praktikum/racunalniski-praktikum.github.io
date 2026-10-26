@@ -126,21 +126,20 @@ Dodatne nastavitve, kot na primer za velikost strani in osnovno velikost pisave,
 `\documentclass[a4paper, 10pt]{article}`.
 
 V preambulo se nikoli ne piše vsebine, ampak samo ukaze in nastavitve.
-V preambuli v dokument vključimo pakete, uredimo nastavitve in definiramo nove makroje in okolja:
+V preambuli v dokument vključimo pakete, uredimo nastavitve in definiramo nove ukaze in okolja.
 
-* paket vključimo z ukazom `\usepackage[⟨nastavitve⟩]{⟨ime-paketa⟩}`,
-* nove ukaze in okolja definiramo z ukazoma `newcommand` in `newenvironment`.
-
+Paket vključimo z ukazom `\usepackage[⟨nastavitve⟩]{⟨ime-paketa⟩}`.
 Za besedilo v slovenščini v preambulo vključimo tri pakete:
-`babel` z nastavitvijo `slovene` poskrbi za deljenje besed in slovenske napise (na primer _Kazalo_),
-`inputenc` z nastavitvijo `utf8` pove, v katerem kodiranju je zapisana datoteka,
-`fontenc` z nastavitvijo `T1` pa poskrbi, da so šumniki v PDF-ju pravi znaki in ne sestavljeni iz črke in strešice.
 
 ```tex
 \usepackage[slovene]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 ```
+
+Paket `babel` z nastavitvijo `slovene` poskrbi za deljenje besed in slovenske napise (na primer _Kazalo_),
+`inputenc` z nastavitvijo `utf8` pove, v katerem kodiranju je zapisana datoteka,
+`fontenc` z nastavitvijo `T1` pa poskrbi, da so šumniki v PDF-ju pravi znaki in ne sestavljeni iz črke in strešice.
 
 LaTeX ima okoli [6000 paketov](https://www.ctan.org). Najbolj uporabni so že vključeni v
 distribucijo LaTeXa, ki ste jo namestili na svoj računalnik.
