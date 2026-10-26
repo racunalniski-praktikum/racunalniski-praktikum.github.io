@@ -38,6 +38,9 @@ V `.tex` datotekah je namreč veliko koristnih informacih skritih tudi v komenta
 #### 1. Uvodne naloge
 
 - V svoj repozitorij v imenik `07-magicni-kvadrati` shranite [datoteke za nalogo Magični kvadrati](07-okolja-in-sklicevanje/magic.zip).
+- Med njimi je slika `slika.pdf`, ki jo boste vključili v dokument.
+  Vaša datoteka `.gitignore` izključuje vse PDF-je, zato vanjo za vrstico `*.pdf` dodajte vrstico `!slika.pdf`
+  (razdelek [Pomožne datoteke in Git](latex:gitignore)).
 - Rešite prvi sklop nalog (navodila najdete v datoteki `magic.tex`).
 
 #### 2. Okolja AMS
