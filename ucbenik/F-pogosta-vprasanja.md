@@ -122,7 +122,7 @@ Seznam pokaže ukaze, ki so prirejeni tej kombinaciji.
 (faq:ukazna-imenik)=
 ## Odpiranje ukazne vrstice v imeniku
 
-V VSCode v pogledu z datotekami (angl. _Explorer_) desno kliknite na imenik in izberite _Open in Integrated Terminal_.
+V VSCode v datotečnem pogledu (angl. _Explorer_) desno kliknite na imenik in izberite _Open in Integrated Terminal_.
 V podoknu se odpre nova ukazna vrstica v tem imeniku.
 
 Ukazno vrstico lahko odprete tudi kot samostojen program, brez urejevalnika.

@@ -64,7 +64,7 @@ Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kb
    Odprite še ukazno vrstico: v paleti ukazov (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) izberite ukaz _Terminal: Create New Terminal in Editor Area to the Side_.
    V sistemu Windows preverite, da na zavihku ukazne vrstice piše `bash` in ne `powershell`; če ne, v paleti ukazov izberite ukaz _Terminal: Select Default Profile_ in nato _Git Bash_, zavihek zaprite in odprite novo ukazno vrstico.
 1. Sledite navodilom za [nastavitve `git`-a](git:nastavitve), da si nastavite uporabniške nastavitve ter SSH ključ.
-1. V VSCode v pogledu z datotekami (_Explorer_) kliknite imenik `racunalniski-praktikum` in v njem datoteko `README.md`, da se odpre v urejevalniku.
+1. V VSCode v datotečnem pogledu (_Explorer_) kliknite imenik `racunalniski-praktikum` in v njem datoteko `README.md`, da se odpre v urejevalniku.
    Na konec razdelka _Bližnjice na tipkovnici_ dodajte vrstice
    ```markdown
    - VSCode paleta ukazov: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
@@ -101,7 +101,7 @@ Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kb
    ```shell
    mv README-staro.md racunalniski-praktikum
    ```
-1. V pogledu z datotekami z desnim klikom na `README-staro.md` izberite _Select for Compare_, nato z desnim klikom na `README.md` še _Compare with Selected_.
+1. V datotečnem pogledu z desnim klikom na `README-staro.md` izberite _Select for Compare_, nato z desnim klikom na `README.md` še _Compare with Selected_.
    Urejevalnik prikaže datoteki vzporedno in označi vrstice, v katerih se razlikujeta.
    Ob vsaki razliki je med datotekama puščica; s klikom nanjo vrstice z leve prenesete na desno, v `README.md`.
    Prenesite vse, kar želite obdržati, vsaj vrstice iz 3. koraka, in datoteko shranite.
