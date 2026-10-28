@@ -17,6 +17,12 @@ uv run --with ghp-import ghp-import --no-jekyll --no-history --force --push ucbe
 ```
 
 Objava s silo prepiše vejo `gh-pages`, zato pred njo zgradite učbenik na novo.
+Ker gradnja ne pobriše strani, ki jih v učbeniku ni več, pred njo počistite imenik `ucbenik/_build`:
+
+```bash
+uv run jupyter-book clean ucbenik && uv run jupyter-book build ucbenik
+```
+
 Preden se spremembe pokažejo na spletu, mine minuta ali dve.
 
 ## Povezave
