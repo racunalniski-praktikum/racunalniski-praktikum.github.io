@@ -22,14 +22,14 @@
 \end{frame}
 
 \usebackgroundtemplate{%
-  \includegraphics[width=\paperwidth,height=\paperheight]{knuth-katja.jpg}%
+  \includegraphics[width=\paperwidth,trim=0 483 0 0,clip]{knuth-katja.jpg}%
 }
 \begin{frame}
 \end{frame}
 \usebackgroundtemplate{}
 
 \usebackgroundtemplate{%
-  \includegraphics[width=\paperwidth,height=\paperheight]{taocp.jpg}%
+  \makebox[\paperwidth]{\includegraphics[height=\paperheight]{taocp.jpg}}%
 }
 \begin{frame}
 \end{frame}
@@ -43,7 +43,7 @@
         \item Vol.~1 (1968)
         \item Vol.~2 (1969)
         \item Vol.~3 (1973)
-        \item<2> Vol.~2, druga izdaja (1976)
+        \item<2> Vol.~2, druga izdaja (1976--1981)
         \item Vol.~4A (2011)
         \item Vol.~4B (2022)
       \end{itemize}
@@ -271,7 +271,7 @@ est.
 
 \begin{frame}[fragile]{Struktura dokumenta}
 
-\begin{minted}{latex}
+\begin{minted}[fontsize=\footnotesize]{latex}
 \documentclass[11pt,a4paper]{article}
 % preambula
 \usepackage[utf8]{inputenc}
@@ -417,7 +417,7 @@ x \in \mathbb{R}
         \begin{minted}{latex}
 \sum_{i=1}^n a_i^2 = 42
         \end{minted}
-        \[ 2 \left(\left(\left(\sum_{i=1}^n a_i^2 = 42\right)\right)\right) \]
+        \[ \sum_{i=1}^n a_i^2 = 42 \]
       \end{dobroenv}
     \end{column}
   \end{columns}
@@ -449,18 +449,18 @@ A \cap B = \emptyset
     \begin{column}{0.45\textwidth}
       \begin{slaboenv}
         \begin{minted}{latex}
-$2 < x , y > + 3 < y, x >$
+2 < x, y > + 3 < y, x >
         \end{minted}
-        $10 \left< x , y \right> + 3 \left< y, x \right>$
+        \[ 2 < x, y > + 3 < y, x > \]
       \end{slaboenv}
     \end{column}
     \begin{column}{0.45\textwidth}
       \begin{dobroenv}
         \begin{minted}{latex}
-$2 \langle x , y \rangle
-+ 3 \langle y, x \rangle$
+2 \langle x, y \rangle
++ 3 \langle y, x \rangle
         \end{minted}
-        $2 \left< x , y \right> + 3 \langle y, x \rangle$
+        \[ 2 \langle x, y \rangle + 3 \langle y, x \rangle \]
       \end{dobroenv}
     \end{column}
   \end{columns}
