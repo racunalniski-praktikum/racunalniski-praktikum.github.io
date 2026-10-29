@@ -24,7 +24,7 @@ Pomagajte si s preglednimi datotekami, ki ste jih na prejšnjih vajah shranili v
 
 Poleg tega si vam morda pridejo prav tudi naslednji viri:
 
-* [tabela matematičnih simbolov](07-okolja-in-sklicevanje/LaTeX_Simboli.pdf),
+* [tabela matematičnih simbolov](06-okolja-in-sklicevanje/LaTeX_Simboli.pdf),
 * **na lastno odgovornost** lahko uporabite orodje [Detexify](https://detexify.kirelabs.org/classify.html) (na primer, ukaza `in` in `epsilon` izpišeta podobna znaka, ampak v vsaki situaciji je samo en od teh znakov pravi),
 * [generator tabel](https://www.tablesgenerator.com/) pride včasih prav,
 * na portalu [Overleaf](https://www.overleaf.com) je zelo dobra [dokumentacija](https://www.overleaf.com/learn). 
@@ -37,7 +37,7 @@ V `.tex` datotekah je namreč veliko koristnih informacih skritih tudi v komenta
 
 #### 1. Uvodne naloge
 
-- V svoj repozitorij v imenik `07-magicni-kvadrati` shranite [datoteke za nalogo Magični kvadrati](07-okolja-in-sklicevanje/magic.zip).
+- V svoj repozitorij v imenik `06-magicni-kvadrati` shranite [datoteke za nalogo Magični kvadrati](06-okolja-in-sklicevanje/magic.zip).
 - Med njimi je slika `slika.pdf`, ki jo boste vključili v dokument.
   Vaša datoteka `.gitignore` izključuje vse PDF-je, zato vanjo za vrstico `*.pdf` dodajte vrstico `!slika.pdf`
   (razdelek [Pomožne datoteke in Git](latex:gitignore)).
