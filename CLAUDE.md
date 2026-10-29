@@ -60,7 +60,9 @@ Legacy material that is not in the tree:
   not under `predavanja/` (`git show a236246:03-html/prosojnice.html`). A file
   search of the current tree does not find them. To restore a deck next to the
   current ones, run `git archive a236246 02-git | tar -x -C predavanja`; its links
-  to `../pomozno/` work, because `pomozno/` has not changed since,
+  to `../pomozno/` work, because `pomozno/` has since only gained additions
+  (`e574958`: CSS rules for Mermaid diagrams and terminal windows, and a larger
+  font for Mermaid commit labels); `prosojnice.sty` is unchanged,
 - selected content (`gradiva/`, `vaje/`, `domace-naloge/` with its attachments and
   solutions, `v-pripravi.md`) is in the private staff repo `zbornica`.
 
