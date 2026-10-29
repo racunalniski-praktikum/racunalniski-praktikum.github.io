@@ -19,7 +19,7 @@ Prosojnice in datoteke s predavanj pri predmetu Računalniški praktikum. Glavno
    - recepti kot spletna stran: [`recepti.html`](04-html/recepti.html) s slogom [`recepti.css`](04-html/recepti.css)
 5. LaTeX 1: uvod (ukazi in okolja, struktura dokumenta, matematika)
    - [prosojnice](05-latex/prosojnice.pdf)
-   - iste enačbe v različnih datotekah: [`.docx`](05-latex/word-slop/enacbe.docx), [`.md`](05-latex/word-slop/enacbe.md), [`.tex`](05-latex/word-slop/enacbe.tex), [`.pdf`](05-latex/word-slop/enacbe.pdf)
+   - iste enačbe v različnih datotekah: [`.docx`](05-latex/primeri/primer.docx), [`.md`](05-latex/primeri/primer.md), [`.tex`](05-latex/primeri/primer.tex), [`.pdf`](05-latex/primeri/primer.pdf)
 6. LaTeX 2: okolja, sklicevanje (oznake, sklici, citati, BibTeX)
    <!-- - [prosojnice](06-latex-2-okolja-sklicevanje/…) -->
 7. LaTeX 3: slike (različni formati slik, TiKZ)

@@ -1,5 +1,7 @@
 ---
 title: Fourierove vrste, Baselski problem in Gaussov integral
+author: Klavdij Opusnik
+date: 29. oktober 2026
 lang: sl-SI
 ---
 
