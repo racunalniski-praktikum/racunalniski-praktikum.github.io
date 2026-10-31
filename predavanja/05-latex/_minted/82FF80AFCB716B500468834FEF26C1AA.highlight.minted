@@ -1,0 +1,3 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+sin x + sin (x + y)
+\end{MintedVerbatim}

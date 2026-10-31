@@ -1,0 +1,878 @@
+
+<!DOCTYPE html>
+
+
+<html lang="sl" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Uvod v LaTeX &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=db6da3aa" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=a3a20203"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=852ec8ec"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '05-latex';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Abecedni seznam" href="genindex.html" />
+    <link rel="search" title="Išči" href="search.html" />
+    <link rel="next" title="Nameščanje programske opreme" href="A-programska-oprema.html" />
+    <link rel="prev" title="Označevalni jezik HTML" href="04-html.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="sl"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-besedilne-datoteke.html">Besedilne datoteke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-ukazna-vrstica.html">Ukazna vrstica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-upravljanje-razlicic.html">Upravljanje različic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-html.html">Označevalni jezik HTML</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matematični dokumenti</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Uvod v LaTeX</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="H-regex.html">Regularni izrazi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L-latex.html">LaTeX: pogosta vprašanja in reševanje težav</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Prenesite to stran">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/05-latex.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Prenesite izvorno datoteko"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Natisni v PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Celozaslonski način"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Uvod v LaTeX</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Vsebina </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ukazi-in-okolja">Ukazi in okolja</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matematika">Matematika</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struktura-dokumenta">Struktura dokumenta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vsebina-in-videz">Vsebina in videz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pomisljaji-narekovaji-in-presledki">Pomišljaji, narekovaji in presledki</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prevajanje">Prevajanje</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pomozne-datoteke-in-git">Pomožne datoteke in Git</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#urejanje-v-vscode">Urejanje v VSCode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-vscode-in-latex">1. naloga: VSCode in LaTeX</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-urnik">2. naloga: urnik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dodatni-viri">Dodatni viri</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="uvod-v-latex">
+<h1>Uvod v LaTeX<a class="headerlink" href="#uvod-v-latex" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-latex"><span class="std std-ref">LaTeX</span></a>,</p></li>
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-vscode"><span class="std std-ref">Visual Studio Code</span></a> z razširitvijo <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop</a>.</p></li>
+</ul>
+</div>
+<p>LaTeX je sistem za stavljenje besedila.
+Datoteko s končnico <code class="docutils literal notranslate"><span class="pre">.tex</span></code>, ki vsebuje navadno besedilo, označeno s posebnimi okolji in ukazi,
+pretvori v lepo stavljeno besedilo in ga shrani v datoteko PDF s končnico <code class="docutils literal notranslate"><span class="pre">.pdf</span></code>.
+Temu koraku pravimo <em>prevajanje</em> (angl. <em>compile</em>), programu, ki ga opravi, pa <em>prevajalnik</em>:
+izraz je izposojen iz programiranja, kjer prevajalnik izvorno kodo pretvori v program.
+Ideja je enaka kot pri Markdownu in HTML-ju: z dogovorjenimi zaporedji znakov povemo, kaj posamezni deli besedila so,
+kako bodo videti, pa določi LaTeX.</p>
+<section id="ukazi-in-okolja">
+<h2>Ukazi in okolja<a class="headerlink" href="#ukazi-in-okolja" title="Link to this heading">#</a></h2>
+<p>LaTeX dokumente oblikujemo z <em>ukazi</em> (angl. <em>command</em>) in <em>okolji</em> (angl. <em>environment</em>),
+kot pri HTML-ju pa lahko uporabljamo tudi <em>komentarje</em>.
+Ukazom včasih rečemo tudi makroji (angl. <em>macro</em>).
+Kot do sedaj bodo primeri, ki jih morate še popraviti, napisani takole: <code class="docutils literal notranslate"><span class="pre">⟨nadomesti-me⟩</span></code>.
+Pobrišite oklepaje in ustrezno popravite njihovo vsebino.</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="c">% Vse, kar sledi znaku %, je komentar in LaTeX ignorira.</span>
+<span class="c">% Okolja so podobna značkam:</span>
+<span class="k">\begin</span><span class="nb">{</span>⟨ime-okolja⟩<span class="nb">}</span> <span class="c">% začetek okolja</span>
+  ⟨vsebina⟩          <span class="c">% vsebina</span>
+<span class="k">\end</span><span class="nb">{</span>⟨ime-okolja⟩<span class="nb">}</span>   <span class="c">% konec okolja</span>
+
+<span class="c">% Ukazi so bolj enostavni:</span>
+<span class="k">\⟨</span>ime-ukaza⟩
+</pre></div>
+</div>
+<p>Najprej boste srečali ukaz <code class="docutils literal notranslate"><span class="pre">documentclass</span></code> in okolje <code class="docutils literal notranslate"><span class="pre">document</span></code>:</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span> <span class="c">% začetek okolja document</span>
+  Vsebina dokumenta
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>   <span class="c">% konec okolja document</span>
+</pre></div>
+</div>
+<p>Nekateri ukazi in okolja sprejmejo tudi dodatne argumente,
+ki so lahko obvezni (v zavitih oklepajih <code class="docutils literal notranslate"><span class="pre">{}</span></code>) ali neobvezni (v oglatih oklepajih <code class="docutils literal notranslate"><span class="pre">[]</span></code>).</p>
+<ul class="simple">
+<li><p>Ukaz <code class="docutils literal notranslate"><span class="pre">\section{Turingovi</span> <span class="pre">stroji}</span></code> naredi nov razdelek z naslovom „Turingovi stroji“.</p></li>
+<li><p>Ukaz <code class="docutils literal notranslate"><span class="pre">frac</span></code>, ki v matematičnem okolju naredi ulomek, sprejme dva argumenta,
+števec in imenovalec: <code class="docutils literal notranslate"><span class="pre">\frac{22}{7}</span></code> izpiše <span class="math notranslate nohighlight">\(\frac{22}{7}\)</span>.</p></li>
+<li><p>Ukaz <code class="docutils literal notranslate"><span class="pre">rule</span></code> za ločnice, ki nariše pravokotnik, sprejme dva obvezna argumenta in enega neobveznega
+(kako visoko v vrstici stoji ločnica):
+<code class="docutils literal notranslate"><span class="pre">\rule[⟨višina⟩]{⟨dolžina⟩}{⟨širina⟩}</span></code>.</p></li>
+</ul>
+<p>Pri teh vajah boste srečali okolja <code class="docutils literal notranslate"><span class="pre">abstract</span></code>, <code class="docutils literal notranslate"><span class="pre">verbatim</span></code> (oznaka <code class="docutils literal notranslate"><span class="pre">```</span></code> v Markdownu),
+<code class="docutils literal notranslate"><span class="pre">itemize</span></code> in <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> (znački <code class="docutils literal notranslate"><span class="pre">ul</span></code> in <code class="docutils literal notranslate"><span class="pre">ol</span></code> v HTML-ju), v katerih vsak element seznama začne ukaz <code class="docutils literal notranslate"><span class="pre">\item</span></code>.
+Naslov, avtorja in datum dokumenta nastavimo z ukazi <code class="docutils literal notranslate"><span class="pre">\title</span></code>, <code class="docutils literal notranslate"><span class="pre">\author</span></code> in <code class="docutils literal notranslate"><span class="pre">\date</span></code>.
+Ti ukazi ne izpišejo ničesar: LaTeX si podatke o dokumentu (metapodatke) le zapomni.
+Izpiše jih šele ukaz <code class="docutils literal notranslate"><span class="pre">\maketitle</span></code>, in sicer tam, kjer ga uporabimo, zato morajo ukazi za nastavljanje stati pred njim.
+Če datuma ne nastavimo, <code class="docutils literal notranslate"><span class="pre">\maketitle</span></code> izpiše današnjega.</p>
+<section id="matematika">
+<h3>Matematika<a class="headerlink" href="#matematika" title="Link to this heading">#</a></h3>
+<p>Matematični izraz lahko stoji na dveh mestih.
+V <em>vrstičnem načinu</em> (angl. <em>inline</em>) je del vrstice z besedilom; zapišemo ga med <code class="docutils literal notranslate"><span class="pre">\(</span></code> in <code class="docutils literal notranslate"><span class="pre">\)</span></code>.
+V <em>prikaznem načinu</em> (angl. <em>display</em>) stoji sam v svoji vrstici, sredinsko poravnan; zapišemo ga med <code class="docutils literal notranslate"><span class="pre">\[</span></code> in <code class="docutils literal notranslate"><span class="pre">\]</span></code>.
+Primer z obema načinoma:</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span>V pravokotnem trikotniku s katetama <span class="s">\(</span><span class="nb">a</span><span class="s">\)</span> in <span class="s">\(</span><span class="nb">b</span><span class="s">\)</span> ter hipotenuzo <span class="s">\(</span><span class="nb">c</span><span class="s">\)</span> velja
+<span class="sb">\[</span>
+<span class="nb">  a^</span><span class="m">2</span><span class="nb"> </span><span class="o">+</span><span class="nb"> b^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> c^</span><span class="m">2</span><span class="nb">.</span>
+<span class="s">\]</span>
+Hipotenuza je torej <span class="s">\(</span><span class="nb">c </span><span class="o">=</span><span class="nb"> </span><span class="nv">\sqrt</span><span class="nb">{a^</span><span class="m">2</span><span class="nb"> </span><span class="o">+</span><span class="nb"> b^</span><span class="m">2</span><span class="nb">}</span><span class="s">\)</span>.
+</pre></div>
+</div>
+<p>LaTeX to prevede v:</p>
+<p>V pravokotnem trikotniku s katetama <span class="math notranslate nohighlight">\(a\)</span> in <span class="math notranslate nohighlight">\(b\)</span> ter hipotenuzo <span class="math notranslate nohighlight">\(c\)</span> velja</p>
+<div class="math notranslate nohighlight">
+\[a^2 + b^2 = c^2.\]</div>
+<p>Hipotenuza je torej <span class="math notranslate nohighlight">\(c = \sqrt{a^2 + b^2}\)</span>.</p>
+<p>Izraz v prikaznem načinu je še vedno del stavka: pred <code class="docutils literal notranslate"><span class="pre">\[</span></code> in za <code class="docutils literal notranslate"><span class="pre">\]</span></code> ni prazne vrstice,
+ločilo na koncu stavka pa stoji znotraj izraza, kot pika v zgornjem primeru.
+V vrstico sodijo kratki izrazi, ki tečejo z besedilom, na primer oznake kot <span class="math notranslate nohighlight">\(n\)</span> ali <span class="math notranslate nohighlight">\(x_i\)</span>;
+v svojo vrstico pa pomembne enačbe in vse, kar je višje od vrstice, na primer ulomki, vsote in integrali.</p>
+<p>Zapisa <code class="docutils literal notranslate"><span class="pre">\(…\)</span></code> in <code class="docutils literal notranslate"><span class="pre">\[…\]</span></code> sta okrajšavi za okolji <code class="docutils literal notranslate"><span class="pre">math</span></code> in <code class="docutils literal notranslate"><span class="pre">displaymath</span></code>.
+Včasih boste videli tudi starejši okrajšavi <code class="docutils literal notranslate"><span class="pre">$</span></code> za vrstični in <code class="docutils literal notranslate"><span class="pre">$$</span></code> za prikazni način.
+Uporabo teh dveh odsvetujemo: pozabljen <code class="docutils literal notranslate"><span class="pre">$</span></code> LaTeX opazi šele pri naslednjem <code class="docutils literal notranslate"><span class="pre">$</span></code>,
+zato napako javi daleč od mesta, kjer je nastala.</p>
+<div class="tip admonition">
+<p class="admonition-title">Ukazi za matematične izraze</p>
+<p>V matematičnih okoljih lahko uporabljamo ukaze za matematične izraze,
+kot so <code class="docutils literal notranslate"><span class="pre">frac</span></code> za ulomke, <code class="docutils literal notranslate"><span class="pre">int</span></code> za integrale, <code class="docutils literal notranslate"><span class="pre">cdot</span></code> za piko pri množenju, ukaze za matrike itd.
+Ti ukazi delajo <strong>samo v matematičnih okoljih</strong>, izven njih pa sprožijo napako.
+Velja tudi obratno: običajne besede v matematičnem okolju označimo z ukazom <code class="docutils literal notranslate"><span class="pre">\text</span></code>,
+da se pravilno prikažejo. Ta ukaz potrebuje paket <code class="docutils literal notranslate"><span class="pre">amsmath</span></code>.</p>
+</div>
+</section>
+</section>
+<section id="struktura-dokumenta">
+<h2>Struktura dokumenta<a class="headerlink" href="#struktura-dokumenta" title="Link to this heading">#</a></h2>
+<p>LaTeX dokument shranimo v datoteko s končnico <code class="docutils literal notranslate"><span class="pre">.tex</span></code>. Dokument je lahko shranjen
+tudi v večjih datotekah, ki jih z ukazom <code class="docutils literal notranslate"><span class="pre">\input{datoteka.tex}</span></code> vključimo v
+glavno datoteko.
+Struktura glavne LaTeX datoteke je videti takole:</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[⟨nastavitve⟩]</span><span class="nb">{</span>⟨vrsta dokumenta⟩<span class="nb">}</span>
+
+⟨preambula⟩
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+  ⟨vsebina⟩
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Ukaz <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> določa zvrst dokumenta (članek, knjiga, pismo, …),
+ki jo določimo v obveznem argumentu, takole: <code class="docutils literal notranslate"><span class="pre">\documentclass{article}</span></code>.
+Možne zvrsti dokumentov so vnaprej definirane in se razlikujejo tudi po oblikovanju.
+Dodatne nastavitve, kot na primer za velikost strani in osnovno velikost pisave, zapišemo v oglate oklepaje in jih ločimo z vejicami:
+<code class="docutils literal notranslate"><span class="pre">\documentclass[a4paper,</span> <span class="pre">10pt]{article}</span></code>.</p>
+<p>V preambulo se nikoli ne piše vsebine, ampak samo ukaze in nastavitve.
+V preambuli v dokument vključimo pakete, uredimo nastavitve in definiramo nove ukaze in okolja.</p>
+<p>Paket vključimo z ukazom <code class="docutils literal notranslate"><span class="pre">\usepackage[⟨nastavitve⟩]{⟨ime-paketa⟩}</span></code>.
+Za besedilo v slovenščini v preambulo vključimo tri pakete:</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="na">[slovene]</span><span class="nb">{</span>babel<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="nb">{</span>inputenc<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[T1]</span><span class="nb">{</span>fontenc<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Paket <code class="docutils literal notranslate"><span class="pre">babel</span></code> z nastavitvijo <code class="docutils literal notranslate"><span class="pre">slovene</span></code> poskrbi za deljenje besed in slovenske napise (na primer <em>Kazalo</em>),
+<code class="docutils literal notranslate"><span class="pre">inputenc</span></code> z nastavitvijo <code class="docutils literal notranslate"><span class="pre">utf8</span></code> pove, v katerem kodiranju je zapisana datoteka,
+<code class="docutils literal notranslate"><span class="pre">fontenc</span></code> z nastavitvijo <code class="docutils literal notranslate"><span class="pre">T1</span></code> pa poskrbi, da so šumniki v PDF-ju pravi znaki in ne sestavljeni iz črke in strešice.</p>
+<p>LaTeX ima okoli <a class="reference external" href="https://www.ctan.org">6000 paketov</a>. Najbolj uporabni so že vključeni v
+distribucijo LaTeXa, ki ste jo namestili na svoj računalnik.</p>
+</section>
+<section id="vsebina-in-videz">
+<h2>Vsebina in videz<a class="headerlink" href="#vsebina-in-videz" title="Link to this heading">#</a></h2>
+<p>Tudi v LaTeXu bomo v dokumentu <strong>določili vsebinski pomen</strong> elementov besedila:
+z ukazi za nov razdelek, podrazdelek, z okoljem za zapis izreka itd.
+Taka vrsta oblikovanja je dosti bolj prijazna uporabniku, sistematična
+in prilagodljiva.</p>
+<p>Za primer, v LaTeXu vsebinsko oblikujemo besedilo izreka z okoljem <code class="docutils literal notranslate"><span class="pre">theorem</span></code>.
+Videz izreka bi lahko oblikovali neposredno, kot spodaj, vendar
+bi bilo potem težje skrbeti za to, da vsi izreki izgledajo enako,
+da so vsi pravilno oštevilčeni ipd.</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="c">% vsebinsko oblikovanje</span>
+<span class="k">\begin</span><span class="nb">{</span>theorem<span class="nb">}</span>
+  ⟨besedilo izreka⟩
+<span class="k">\end</span><span class="nb">{</span>theorem<span class="nb">}</span>
+
+<span class="c">% neposredno oblikovanje</span>
+<span class="k">\textbf</span><span class="nb">{</span>Izrek 1.1<span class="nb">}</span> <span class="k">\textit</span><span class="nb">{</span>⟨besedilo izreka⟩<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Še nekaj primerov vsebinskega oblikovanja so posebni ukazi za vsebino, kot so
+<code class="docutils literal notranslate"><span class="pre">section</span></code>, <code class="docutils literal notranslate"><span class="pre">subsection</span></code> in <code class="docutils literal notranslate"><span class="pre">footnote</span></code>.
+Isto velja za poudarke: nov pojem v besedilu označimo z ukazom <code class="docutils literal notranslate"><span class="pre">\emph</span></code>, ki pove, da je beseda poudarjena,
+in ne z ukazom <code class="docutils literal notranslate"><span class="pre">\textit</span></code>, ki pove samo, da je ležeča.</p>
+</section>
+<section id="pomisljaji-narekovaji-in-presledki">
+<h2>Pomišljaji, narekovaji in presledki<a class="headerlink" href="#pomisljaji-narekovaji-in-presledki" title="Link to this heading">#</a></h2>
+<p>Nekaj znakov LaTeX stavi drugače, kot jih natipkamo.</p>
+<ul class="simple">
+<li><p>Vezaj je <code class="docutils literal notranslate"><span class="pre">-</span></code>, pomišljaj pa <code class="docutils literal notranslate"><span class="pre">--</span></code>.
+Pomišljaj prepoznamo po tem, da je obdan s presledkoma: <code class="docutils literal notranslate"><span class="pre">--</span></code>.</p></li>
+<li><p>Slovenske narekovaje dobimo z <code class="docutils literal notranslate"><span class="pre">&quot;&gt;takole&quot;&lt;</span></code> ali pa <code class="docutils literal notranslate"><span class="pre">&quot;`takole&quot;'</span></code>.
+Znaka za levi in desni narekovaj nista enaka,
+zato se <em>ne</em> piše <code class="docutils literal notranslate"><span class="pre">'takole'</span></code> ali <code class="docutils literal notranslate"><span class="pre">''takole''</span></code>, še posebej pa ne <code class="docutils literal notranslate"><span class="pre">&quot;takole&quot;</span></code>.</p></li>
+<li><p>Za piko, ki ne pomeni konca stavka, na primer v datumu ter za kraticami <em>npr.</em> in <em>t. i.</em>,
+LaTeX naredi prevelik presledek.
+Navaden presledek za piko dobimo z <code class="docutils literal notranslate"><span class="pre">.\</span> </code> (pika, poševnica nazaj, presledek).</p></li>
+<li><p>Vsaka prazna vrstica začne nov odstavek, ki ga LaTeX zamakne.
+Če vrstica po prazni vrstici ne začne novega odstavka (na primer za primerom kode),
+zamik preprečimo z ukazom <code class="docutils literal notranslate"><span class="pre">\noindent</span></code> ali pa prazno vrstico zapolnimo s komentarjem <code class="docutils literal notranslate"><span class="pre">%</span></code>.</p></li>
+</ul>
+</section>
+<section id="prevajanje">
+<h2>Prevajanje<a class="headerlink" href="#prevajanje" title="Link to this heading">#</a></h2>
+<p>Datoteko <code class="docutils literal notranslate"><span class="pre">.tex</span></code> v PDF pretvori LaTeXov prevajalnik (mi bomo uporabljali <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code>).
+Ponavadi ga je treba pognati večkrat,
+da lahko preračuna sklice na izreke in številke strani.
+Uporabnik lahko to stori bodisi sam bodisi uporabi program <code class="docutils literal notranslate"><span class="pre">latexmk</span></code>,
+ki požene <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> in nekatere druge programe v sklopu sistema LaTeX.
+Celotnemu postopku v angleščini pravijo tudi <em>build</em>, zato ga boste pod tem imenom srečali v VSCode.
+Razširitev LaTeX Workshop v VSCode požene <code class="docutils literal notranslate"><span class="pre">latexmk</span></code> vsakič, ko datoteko shranite;
+prvič pa prevajanje poženete sami, z ukazom <em>LaTeX Workshop: Build LaTeX project</em> iz palete ukazov.
+Kako gre prevajanje, kaže statusna vrstica spodaj levo: med prevajanjem piše <em>↻ Build</em>, ko se konča, pa se pokaže kljukica ✓.</p>
+<p>Najmanjši dokument, ki vam ga bo LaTeX še smiselno prevedel, mora vsebovati
+ukaz <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> in okolje <code class="docutils literal notranslate"><span class="pre">document</span></code>.
+Poglejte si, kakšne napake javi LaTeX, če prevajate brez tega: tako jih boste naslednjič prepoznali.</p>
+<ul class="simple">
+<li><p>Napake, ki jih javlja LaTeX, niso vedno razumljive. Med drugim to pomeni, da
+jih je v besedilu težko najti. En način, da si pri tem pomagamo, je ta, da
+dokument pogosto prevedemo.
+Ni narobe, če datoteko shranite (in s tem prevedete) po vsakem do konca napisanem ukazu.
+Tako boste vedeli, da se je napaka pojavila od takrat, ko
+je LaTeX nazadnje uspešno prevedel dokument.
+Pri tem bodite pozorni na to, kaj se dogaja v statusni vrstici.
+Hitrejši boste s <kbd>Ctrl</kbd>+<kbd>S</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>S</kbd>).</p></li>
+<li><p>Za vsak LaTeX dokument imejte datoteke spravljene v imeniku, ki vsebuje
+samo datoteke za ta dokument. Ta imenik potem odprite v VSCode.
+Razlog za to je, da LaTeX med prevajanjem naredi množico pomožnih datotek
+(s končnicami <code class="docutils literal notranslate"><span class="pre">.aux</span></code>, <code class="docutils literal notranslate"><span class="pre">.fdb_latexmk</span></code>, <code class="docutils literal notranslate"><span class="pre">.fls</span></code>, <code class="docutils literal notranslate"><span class="pre">.log</span></code>, <code class="docutils literal notranslate"><span class="pre">.synctex.gz</span></code> in podobno),
+ki so za uporabnika večino časa neuporabne.
+Asistenti vam bodo hvaležni (sčasoma pa boste verjetno hvaležni tudi sami sebi).</p></li>
+<li><p>V imenih imenikov nad datoteko <code class="docutils literal notranslate"><span class="pre">.tex</span></code> <strong>ne sme biti šumnikov ali presledkov</strong>.
+LaTeX je tako star, da to lahko povzroča težave, še posebej na operacijskem sistemu Windows.</p></li>
+</ul>
+<section id="pomozne-datoteke-in-git">
+<span id="latex-gitignore"></span><h3>Pomožne datoteke in Git<a class="headerlink" href="#pomozne-datoteke-in-git" title="Link to this heading">#</a></h3>
+<p>Pomožnih datotek ne shranjujemo v repozitorij: LaTeX jih naredi ob vsakem prevajanju znova, prav tako PDF.
+V glavni imenik repozitorija zato dodamo datoteko <a class="reference internal" href="G-git.html#git-gitignore"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></span></a>, ki Gitu pove, katerih datotek naj ne upošteva.
+Vzorec <code class="docutils literal notranslate"><span class="pre">*.aux</span></code> izključi vse datoteke s končnico <code class="docutils literal notranslate"><span class="pre">.aux</span></code>, v vseh imenikih;
+enako naredimo za druge pomožne končnice (primer je v plonkcu) in za <code class="docutils literal notranslate"><span class="pre">*.pdf</span></code>.
+Izjema so PDF-ji, ki jih v dokument vključimo kot slike:
+vsakega izvzamemo z vrstico za <code class="docutils literal notranslate"><span class="pre">*.pdf</span></code>, ki se začne s klicajem, na primer <code class="docutils literal notranslate"><span class="pre">!slika.pdf</span></code>.
+V repozitoriju tako ostanejo samo izvorne datoteke: <code class="docutils literal notranslate"><span class="pre">.tex</span></code>, <code class="docutils literal notranslate"><span class="pre">.bib</span></code> in slike.</p>
+<p>Datoteka <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> velja samo za datoteke, ki jim Git še ne sledi.
+Pomožna datoteka, ki smo jo zabeležili, preden smo napisali <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>, ostane v repozitoriju,
+dokler je ne pobrišemo in izbrisa ne zabeležimo kot spremembo.
+Ko jo LaTeX pri naslednjem prevajanju naredi znova, jo Git zaradi datoteke <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> prezre.</p>
+</section>
+</section>
+<section id="urejanje-v-vscode">
+<span id="latex-urejanje-vscode"></span><h2>Urejanje v VSCode<a class="headerlink" href="#urejanje-v-vscode" title="Link to this heading">#</a></h2>
+<p>Podobno kot pri HTML-ju vam bo tudi pri LaTeXu prišla prav paleta ukazov.
+Če vanjo napišete <code class="docutils literal notranslate"><span class="pre">latex</span> <span class="pre">surround</span></code>, najdete dva ukaza, ki izbrano besedilo obdata z ukazom oziroma okoljem;
+podrobneje sta opisana v <a class="reference internal" href="D-paleta-ukazov.html#paleta-ukazov-latex"><span class="std std-ref">plonkcu za paleto ukazov</span></a>.</p>
+<p>Kadar je treba isti popravek narediti na več mestih, sta na voljo dva načina.</p>
+<ul class="simple">
+<li><p><strong>Več kurzorjev.</strong>
+Označite niz, ki se ponavlja, in v paleti ukazov izberite <em>Select All Occurrences of Find Match</em>.
+Ta naredi kurzor za vsako pojavitvijo niza, nato pa vse vrstice uredite hkrati:
+kar natipkate, se zapiše pri vseh kurzorjih.
+Bližnjice za premikanje kurzorjev poiščite v <a class="reference internal" href="B-tipkovnica.html#bliznjice-vscode"><span class="std std-ref">plonkcu</span></a>.</p></li>
+<li><p><strong>Iskanje in zamenjava z regularnimi izrazi.</strong>
+V polju za iskanje (<kbd>Ctrl</kbd>+<kbd>F</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>F</kbd>)
+vklopite iskanje z regularnimi izrazi (gumb z napisom <code class="docutils literal notranslate"><span class="pre">.*</span></code>)
+in po potrebi razlikovanje velikih in malih črk (gumb <code class="docutils literal notranslate"><span class="pre">Aa</span></code>).
+Del vzorca, ki ga zapišete v oklepaje <code class="docutils literal notranslate"><span class="pre">()</span></code>, si urejevalnik zapomni,
+v polju za zamenjavo pa se nanj sklicujete z <code class="docutils literal notranslate"><span class="pre">$1</span></code> (na drugi oklepaj z <code class="docutils literal notranslate"><span class="pre">$2</span></code> in tako naprej).
+Vzorec <code class="docutils literal notranslate"><span class="pre">^(.*)</span> <span class="pre">%</span> <span class="pre">razdelek</span></code> tako ujame vrstice, ki se končajo z nizom <code class="docutils literal notranslate"> <span class="pre">%</span> <span class="pre">razdelek</span></code>,
+in si zapomni, kar je pred njim; zamenjava <code class="docutils literal notranslate"><span class="pre">\section{$1}</span></code> ujeto besedilo obda z ukazom <code class="docutils literal notranslate"><span class="pre">\section</span></code>.</p></li>
+</ul>
+</section>
+<section id="naloga-vscode-in-latex">
+<h2>1. naloga: VSCode in LaTeX<a class="headerlink" href="#naloga-vscode-in-latex" title="Link to this heading">#</a></h2>
+<p>Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
+<a class="reference external" href="https://www.latex-project.org">LaTeX</a>-om.</p>
+<ol class="arabic">
+<li><p>V VSCode odprite imenik <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code> v imeniku <code class="docutils literal notranslate"><span class="pre">rp</span></code> (<em>File</em> &gt; <em>Open Folder</em>).
+Če repozitorija na tem računalniku še nimate, ga najprej <a class="reference internal" href="G-git.html#git-init"><span class="std std-ref">klonirajte</span></a>.
+V njem naredite nov imenik <code class="docutils literal notranslate"><span class="pre">05-latex</span></code>, v tem imeniku še imenik <code class="docutils literal notranslate"><span class="pre">test</span></code>,
+v njem pa novo datoteko <code class="docutils literal notranslate"><span class="pre">latex-test.tex</span></code>, ki jo odprite.</p></li>
+<li><p>Preverite, da spodaj desno v statusni vrstici piše LaTeX;
+če ne, morate verjetno namestiti razširitev LaTeX Workshop.</p></li>
+<li><p>Preverite, da v imenih imenikov nad to datoteko ni nobenih šumnikov ali presledkov.</p></li>
+<li><p>V datoteko <code class="docutils literal notranslate"><span class="pre">latex-test.tex</span></code> prekopirajte spodnje besedilo in jo shranite
+s <kbd>Ctrl</kbd>+<kbd>S</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>S</kbd>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">documentclass</span><span class="p">{</span><span class="n">article</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+\<span class="n">section</span><span class="o">*</span><span class="p">{</span><span class="n">Pitagorov</span> <span class="n">izrek</span><span class="p">}</span>
+<span class="n">V</span> <span class="n">pravokotnem</span> <span class="n">trikotniku</span> <span class="n">s</span> <span class="n">katetama</span> \<span class="p">(</span><span class="n">a</span>\<span class="p">)</span> <span class="ow">in</span> \<span class="p">(</span><span class="n">b</span>\<span class="p">)</span> <span class="n">ter</span> <span class="n">hipotenuzo</span> \<span class="p">(</span><span class="n">c</span>\<span class="p">)</span> <span class="n">velja</span>
+\<span class="p">[</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">^</span><span class="mi">2</span> <span class="o">=</span> <span class="n">c</span><span class="o">^</span><span class="mi">2</span> \<span class="p">]</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>S paleto ukazov poženite ukaz <em>LaTeX Workshop: Build LaTeX project</em>
+in v statusni vrstici počakajte na kljukico ✓.
+V nadaljevanju bi za prevajanje moralo zadoščati, da datoteko shranite.</p></li>
+<li><p>Oglejte si dobljeni rezultat (datoteka <code class="docutils literal notranslate"><span class="pre">latex-test.pdf</span></code>).</p></li>
+<li><p>V urejevalniku spremenite datoteko <code class="docutils literal notranslate"><span class="pre">latex-test.tex</span></code> tako, da bo na koncu enačbe znak za piko <code class="docutils literal notranslate"><span class="pre">.</span></code>.
+Lahko dopišete tudi enačbo z izraženo hipotenuzo <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">...</span></code> (poiščite LaTeX ukaz za koren).</p></li>
+<li><p>Datoteko shranite in si oglejte nov PDF.</p></li>
+<li><p>Če ste na operacijskem sistemu Windows in uporabljate slovensko tipkovnico,
+si preberite <a class="reference internal" href="F-pogosta-vprasanja.html#faq-vscode-latex-si"><span class="std std-ref">navodila za pisanje posebnih znakov</span></a> (če tega še niste naredili).</p></li>
+</ol>
+</section>
+<section id="naloga-urnik">
+<h2>2. naloga: urnik<a class="headerlink" href="#naloga-urnik" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>V glavnem imeniku repozitorija naredite nov imenik <code class="docutils literal notranslate"><span class="pre">latex-pregled</span></code> in
+v njem odpakirajte arhiv <a class="reference download internal" download="" href="_downloads/ecb8c0ecdd0c7f43790af37c31db8614/latex-pregled.zip"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">latex-pregled.zip</span></code></span></a>.
+Te datoteke vam bodo v pomoč pri reševanju nalog.</p></li>
+<li><p>V imenik <code class="docutils literal notranslate"><span class="pre">05-latex</span></code> shranite <a class="reference download internal" download="" href="_downloads/127d2be612f5e51d3b314511a3109281/urnik.zip"><span class="xref download myst">datoteke za nalogo Urnik</span></a> in jih odpakirajte.
+Besedilo v datoteki <code class="docutils literal notranslate"><span class="pre">urnik.tex</span></code> oblikujte v LaTeXu tako,
+da bo prevedena PDF datoteka čim bolj podobna rešitvi (<code class="docutils literal notranslate"><span class="pre">urnik-resitev.pdf</span></code>).
+Vsebina je že označena z okoljem <code class="docutils literal notranslate"><span class="pre">document</span></code>, vrsta dokumenta pa je že nastavljena na <code class="docutils literal notranslate"><span class="pre">article</span></code>.
+Pri reševanju si pomagajte s pregledno datoteko <code class="docutils literal notranslate"><span class="pre">1-osnove.tex</span></code> v imeniku <code class="docutils literal notranslate"><span class="pre">latex-pregled</span></code>.</p></li>
+<li><p>Velikost strani naj bo <code class="docutils literal notranslate"><span class="pre">A4</span></code>, osnovna velikost pisave pa <code class="docutils literal notranslate"><span class="pre">10pt</span></code>.</p></li>
+<li><p>Prve tri vrstice v okolju <code class="docutils literal notranslate"><span class="pre">document</span></code> so naslov, avtor in datum.
+Zapišite jih kot argumente ukazov <code class="docutils literal notranslate"><span class="pre">\title</span></code>, <code class="docutils literal notranslate"><span class="pre">\author</span></code> in <code class="docutils literal notranslate"><span class="pre">\date</span></code>.
+Shranite in si oglejte PDF: naslova, avtorja in datuma v njem ni več.
+Tako je prav: besedilo, ki ga je LaTeX prej izpisal, ste zamenjali z ukazi,
+ki LaTeXu le povedo, kakšni so naslov, avtor in datum.</p></li>
+<li><p>Za temi ukazi dodajte ukaz <code class="docutils literal notranslate"><span class="pre">\maketitle</span></code>.
+Shranite in si oglejte PDF: naslov, avtor in datum so spet v njem, tokrat oblikovani kot naslov članka.</p></li>
+<li><p>V datoteki so naslovi razdelkov, podrazdelkov in podpodrazdelkov
+označeni s komentarji <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">razdelek</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">podrazdelek</span></code> in <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">podpodrazdelek</span></code>.
+Na vseh mestih uporabite ustrezen ukaz (<code class="docutils literal notranslate"><span class="pre">section</span></code>, <code class="docutils literal notranslate"><span class="pre">subsection</span></code> ali <code class="docutils literal notranslate"><span class="pre">subsubsection</span></code>).
+Uporabite enega od <a class="reference internal" href="#latex-urejanje-vscode"><span class="std std-ref">načinov za urejanje več mest hkrati</span></a>:
+več kurzorjev ali iskanje in zamenjavo z regularnimi izrazi.</p></li>
+<li><p>Sledite navodilom v komentarjih v datoteki <code class="docutils literal notranslate"><span class="pre">urnik.tex</span></code>.
+Kjer v besedilu najdete dva vprašaja <code class="docutils literal notranslate"><span class="pre">??</span></code>, ju nadomestite z ustreznim
+matematičnim izrazom.
+Dva izraza stojita sama v svoji vrstici: tam uporabite prikazni način, pri vseh ostalih pa vrstičnega.</p></li>
+<li><p>V besedilu je <em>16</em> vezajev in pomišljajev, ki so vsi napisani z znakom <code class="docutils literal notranslate"><span class="pre">-</span></code>.
+Pomišljaje popravite, vezaje pa pustite takšne, kot so.
+Popravite lahko vse naenkrat s pomočjo iskanja in zamenjave.</p></li>
+<li><p>Na dveh mestih je del besedila zapisan v dvojnih narekovajih;
+poskrbite, da bodo ti pravilni slovenski.
+Uporabite iskanje in zamenjavo z regularnimi izrazi:
+vzorec iz 6. točke morate samo malo popraviti.</p></li>
+<li><p>Poskrbite, da presledki za pikami, ki ne pomenijo konca stavka, ne bodo
+preveliki. Taki so na primer presledki v datumu ter za kraticami npr. in t.i.
+Pomagate si lahko z iskanjem in zamenjavo z regularnimi izrazi;
+vključite tudi razlikovanje velikih in malih črk.
+Kaj naredi vzorec <code class="docutils literal notranslate"><span class="pre">\.</span> <span class="pre">([a-z])</span></code>?</p></li>
+<li><p>V glavni imenik repozitorija dodajte datoteko <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>,
+v kateri naštejete pomožne datoteke, ki jih naredi LaTeX (razdelek <a class="reference internal" href="#latex-gitignore"><span class="std std-ref">Pomožne datoteke in Git</span></a>).
+Pravilno bo napisana, ko boste med spremembami
+videli samo datoteki <code class="docutils literal notranslate"><span class="pre">urnik.tex</span></code> in <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>.</p></li>
+<li><p>Zabeležite spremembo in vnose pošljite na GitHub.</p></li>
+</ol>
+</section>
+<section id="dodatni-viri">
+<h2>Dodatni viri<a class="headerlink" href="#dodatni-viri" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">Learn LaTeX in 30 minutes</a>, uvod v LaTeX na strani Overleaf.</p></li>
+<li><p><a class="reference external" href="https://www.ctan.org">CTAN</a>, zbirka paketov za LaTeX z njihovo dokumentacijo.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04-html.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">nazaj</p>
+        <p class="prev-next-title">Označevalni jezik HTML</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="A-programska-oprema.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">naprej</p>
+        <p class="prev-next-title">Nameščanje programske opreme</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Vsebina
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ukazi-in-okolja">Ukazi in okolja</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matematika">Matematika</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struktura-dokumenta">Struktura dokumenta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vsebina-in-videz">Vsebina in videz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pomisljaji-narekovaji-in-presledki">Pomišljaji, narekovaji in presledki</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prevajanje">Prevajanje</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pomozne-datoteke-in-git">Pomožne datoteke in Git</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#urejanje-v-vscode">Urejanje v VSCode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-vscode-in-latex">1. naloga: VSCode in LaTeX</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-urnik">2. naloga: urnik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dodatni-viri">Dodatni viri</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Avtor Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

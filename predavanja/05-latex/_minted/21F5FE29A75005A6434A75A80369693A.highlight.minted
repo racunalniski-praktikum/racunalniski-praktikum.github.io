@@ -1,0 +1,9 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+dokument.aux
+dokument.fdb\PYGZus{}latexmk
+dokument.fls
+dokument.log
+dokument.pdf
+dokument.synctex.gz
+dokument.tex
+\end{MintedVerbatim}

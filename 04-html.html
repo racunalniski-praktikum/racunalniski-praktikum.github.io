@@ -1,0 +1,859 @@
+
+<!DOCTYPE html>
+
+
+<html lang="sl" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Označevalni jezik HTML &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=db6da3aa" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=a3a20203"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=852ec8ec"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04-html';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Abecedni seznam" href="genindex.html" />
+    <link rel="search" title="Išči" href="search.html" />
+    <link rel="next" title="Uvod v LaTeX" href="05-latex.html" />
+    <link rel="prev" title="Upravljanje različic" href="03-upravljanje-razlicic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="sl"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-besedilne-datoteke.html">Besedilne datoteke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-ukazna-vrstica.html">Ukazna vrstica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-upravljanje-razlicic.html">Upravljanje različic</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Označevalni jezik HTML</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matematični dokumenti</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05-latex.html">Uvod v LaTeX</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="H-regex.html">Regularni izrazi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L-latex.html">LaTeX: pogosta vprašanja in reševanje težav</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Prenesite to stran">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/04-html.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Prenesite izvorno datoteko"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Natisni v PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Celozaslonski način"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Označevalni jezik HTML</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Vsebina </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struktura-dokumenta">Struktura dokumenta</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enostaven-primer-dokumenta-html">Enostaven primer dokumenta HTML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vsebina-dokumenta">Vsebina dokumenta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matematika">Matematika</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vsebina-in-videz">Vsebina in videz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orodja-za-razvijalce">Orodja za razvijalce</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-orodja-za-razvijalce">1. naloga: orodja za razvijalce</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-ogrodje-dokumenta">2. naloga: ogrodje dokumenta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-vsebina">3. naloga: vsebina</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-matematika-in-sklicevanje">4. naloga: matematika in sklicevanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-oblikovanje">5. naloga: oblikovanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dodatni-viri">Dodatni viri</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="oznacevalni-jezik-html">
+<h1>Označevalni jezik HTML<a class="headerlink" href="#oznacevalni-jezik-html" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-vscode"><span class="std std-ref">Visual Studio Code</span></a> z razširitvijo <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint">HTMLHint</a>:
+v pogledu razširitev (angl. <em>Extensions</em>) poiščite <code class="docutils literal notranslate"><span class="pre">HTMLHint</span></code> in kliknite <em>Install</em>,</p></li>
+<li><p>spletni brskalnik, na primer Chrome, Firefox ali Safari.</p></li>
+</ul>
+</div>
+<p>V Wordu lahko naslov naredite tako, da besedilo povečate in odebelite.
+Na pogled je to naslov, za program pa samo večje krepko besedilo:
+ne pojavi se v samodejnem kazalu, bralnik zaslona ga ne prebere kot naslov,
+in če se odločite za drugačen videz naslovov, morate popraviti vsakega posebej.
+Word ima za to sloge, kot je <em>Naslov 1</em> (angl. <em>Heading 1</em>), ki povedo, kaj besedilo je, in ne samo, kako je videti.</p>
+<p>Na tej ideji je zgrajen HTML (angl. <em><strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</em>, označevalni jezik za oblikovanje večpredstavnostnih dokumentov), v katerem so zapisane spletne strani.
+Z značkami povemo, kaj posamezni deli besedila so, na primer naslov, odstavek, seznam, povezava, tabela ali slika; kako bodo videti, določi brskalnik ali pa to določimo <a class="reference internal" href="#html-videz"><span class="std std-ref">posebej</span></a>.
+Markdown iz 1. poglavja dela enako, le da dele besedila označi s kratkimi znaki, HTML pa jih poimenuje: naslov prve ravni je <code class="docutils literal notranslate"><span class="pre">h1</span></code> (angl. <em>heading 1</em>), zato kar v Markdownu zapišemo kot <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Naslov</span></code>, v HTML-ju zapišemo kot <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;Naslov&lt;/h1&gt;</span></code>.</p>
+<section id="struktura-dokumenta">
+<h2>Struktura dokumenta<a class="headerlink" href="#struktura-dokumenta" title="Link to this heading">#</a></h2>
+<p>Dokument HTML je sestavljen iz vsebine in značk (angl. <em>tags</em>).
+Značke prepoznamo po oklepajih <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> in <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, na primer <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span></code> ali <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code>.
+Večina značk ima dva dela: začetek <code class="docutils literal notranslate"><span class="pre">&lt;znacka&gt;</span></code> in konec <code class="docutils literal notranslate"><span class="pre">&lt;/znacka&gt;</span></code>; kar je med njima, je vsebina značke.
+Značke imajo lahko tudi atribute, ki jim dodajo podatke.
+Primer je značka za povezavo <code class="docutils literal notranslate"><span class="pre">a</span></code> (angl. <em>anchor</em>): v atribut <code class="docutils literal notranslate"><span class="pre">href</span></code> napišemo spletni naslov, na katerega kaže povezava, vsebina značke pa je besedilo povezave, ki ga prikaže brskalnik.</p>
+<figure class="align-center" id="slika-anatomija-znacke" style="width: 80%">
+<img alt="Sestavni deli značke" src="_images/anatomija-znacke.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">  Sestavni deli značke HTML</span><a class="headerlink" href="#slika-anatomija-znacke" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Nekatere značke nimajo vsebine, zato tudi ne konca, na primer <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> za sliko.</p>
+<p>Značke lahko gnezdimo eno v drugo: <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=&quot;https://www.fmf.uni-lj.si/&quot;&gt;&lt;em&gt;FMF&lt;/em&gt;&lt;/a&gt;</span></code>.
+Ne smejo pa se prekrivati: od dveh značk je bodisi ena v vsebini druge bodisi se sploh ne prekrivata.
+Narobe je na primer <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=&quot;https://www.fmf.uni-lj.si/&quot;&gt;&lt;em&gt;FMF&lt;/a&gt;&lt;/em&gt;</span></code>.
+Značke si lahko predstavljate kot škatle, ki držijo vsebino in druge škatle.
+Brskalnik napačno gnezdenje večinoma preživi in stran vseeno prikaže, zato napake ne opazite, dokler kode ne preverite.</p>
+<p>Imena značk lahko pišemo z velikimi ali malimi črkami.
+Po dogovoru, ki se ga bomo držali tudi mi, jih pišemo z malimi.
+Zaradi preglednosti vsako značko, ki jo začnemo v novi vrstici, zamaknemo glede na značko, v kateri je; urejevalnik to večinoma naredi sam.
+Značke sredi besedila, kot je povezava <code class="docutils literal notranslate"><span class="pre">a</span></code>, ostanejo v vrstici z besedilom.
+Komentarje, ki jih brskalnik ne prikaže, pišemo med <code class="docutils literal notranslate"><span class="pre">&lt;!--</span></code> in <code class="docutils literal notranslate"><span class="pre">--&gt;</span></code>.</p>
+<section id="enostaven-primer-dokumenta-html">
+<h3>Enostaven primer dokumenta HTML<a class="headerlink" href="#enostaven-primer-dokumenta-html" title="Link to this heading">#</a></h3>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"sl"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Enostavna spletna stran<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- V naslednjih dveh vrsticah je vsebina (telo) spletne strani --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Jaz sem naslov!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>V odstavkih imamo lahko tudi <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://www.fmf.uni-lj.si/"</span><span class="p">&gt;</span>povezave<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Dokument se začne z deklaracijo <code class="docutils literal notranslate"><span class="pre">&lt;!DOCTYPE</span> <span class="pre">html&gt;</span></code>, ki brskalniku pove, da gre za dokument HTML.
+Deklaracija ni značka in nima konca; po dogovoru jo pišemo z velikimi črkami.
+Sledi značka <code class="docutils literal notranslate"><span class="pre">html</span></code>, v kateri je ves dokument.
+Njen atribut <code class="docutils literal notranslate"><span class="pre">lang</span></code> pove, v katerem jeziku je besedilo: <code class="docutils literal notranslate"><span class="pre">sl</span></code> za slovenščino, <code class="docutils literal notranslate"><span class="pre">en</span></code> za angleščino.
+V znački <code class="docutils literal notranslate"><span class="pre">html</span></code> sta dve znački:
+v glavi <code class="docutils literal notranslate"><span class="pre">head</span></code> so podatki o dokumentu, ki jih brskalnik ne prikaže na strani,
+v telesu <code class="docutils literal notranslate"><span class="pre">body</span></code> pa vsebina strani.
+V glavi so na primer</p>
+<ul class="simple">
+<li><p>naslov dokumenta <code class="docutils literal notranslate"><span class="pre">title</span></code>, ki ga brskalnik prikaže na zavihku,</p></li>
+<li><p>značka <code class="docutils literal notranslate"><span class="pre">&lt;meta</span> <span class="pre">charset=&quot;UTF-8&quot;&gt;</span></code>, ki pove, v katerem kodiranju je zapisana datoteka.
+Brez nje brskalnik kodiranje ugane in šumnike lahko prikaže napačno, podobno kot pri podnapisih v 2. poglavju, le v obratni smeri:
+datoteko v UTF-8 prebere, kot da je v Windows-1252, in <code class="docutils literal notranslate"><span class="pre">š</span></code> prikaže kot <code class="docutils literal notranslate"><span class="pre">Å¡</span></code>.</p></li>
+</ul>
+<p>Dokument si lahko predstavljamo tudi kot hierarhijo značk:</p>
+<figure class="align-center" id="slika-html-drevo" style="width: 45%">
+<img alt="Hierarhija značk za zgornji primer dokumenta" src="_images/html-drevo.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">  Hierarhija značk za zgornji primer dokumenta</span><a class="headerlink" href="#slika-html-drevo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="vsebina-dokumenta">
+<h3>Vsebina dokumenta<a class="headerlink" href="#vsebina-dokumenta" title="Link to this heading">#</a></h3>
+<p>V telesu dokumenta najpogosteje uporabljamo naslednje značke:</p>
+<ul class="simple">
+<li><p>naslove <code class="docutils literal notranslate"><span class="pre">h1</span></code> do <code class="docutils literal notranslate"><span class="pre">h6</span></code>: številka pove raven naslova, ne njegove velikosti.
+Naslov strani je <code class="docutils literal notranslate"><span class="pre">h1</span></code>, naslovi razdelkov so <code class="docutils literal notranslate"><span class="pre">h2</span></code>, naslovi podrazdelkov <code class="docutils literal notranslate"><span class="pre">h3</span></code> in tako naprej.</p></li>
+<li><p>odstavke <code class="docutils literal notranslate"><span class="pre">p</span></code> (angl. <em>paragraph</em>),</p></li>
+<li><p>sezname: urejeni seznam <code class="docutils literal notranslate"><span class="pre">ol</span></code> (angl. <em>ordered list</em>) in neurejeni seznam <code class="docutils literal notranslate"><span class="pre">ul</span></code> (angl. <em>unordered list</em>), v katerih je vsak element v svoji znački <code class="docutils literal notranslate"><span class="pre">li</span></code> (angl. <em>list item</em>),</p></li>
+<li><p>citate <code class="docutils literal notranslate"><span class="pre">blockquote</span></code>,</p></li>
+<li><p>povezave <code class="docutils literal notranslate"><span class="pre">a</span></code> z atributom <code class="docutils literal notranslate"><span class="pre">href</span></code>,</p></li>
+<li><p>tabele <code class="docutils literal notranslate"><span class="pre">table</span></code>, v katerih so vrstice <code class="docutils literal notranslate"><span class="pre">tr</span></code> (angl. <em>table row</em>), v vrsticah pa celice <code class="docutils literal notranslate"><span class="pre">td</span></code> (angl. <em>table data</em>) ali celice glave tabele <code class="docutils literal notranslate"><span class="pre">th</span></code> (angl. <em>table header</em>),</p></li>
+<li><p>slike <code class="docutils literal notranslate"><span class="pre">img</span></code> z atributoma <code class="docutils literal notranslate"><span class="pre">src</span></code>, v katerem je pot do slike, in <code class="docutils literal notranslate"><span class="pre">alt</span></code>, v katerem je opis slike.
+Opis se uporabi, kadar se slika ne prikaže, in za dostopnost, na primer ko stran bere bralnik zaslona.</p></li>
+</ul>
+<p>Brskalniku so presledki in prelomi vrstic v izvorni kodi vseeno: več zaporednih presledkov ali praznih vrstic prikaže kot en sam presledek.
+Zato odstavkov ne ločimo s praznimi vrsticami, ampak vsakega označimo z značko <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+<p>Povezava lahko kaže tudi na del iste strani.
+Značka, na katero naj kaže, dobi atribut <code class="docutils literal notranslate"><span class="pre">id</span></code>, povezava pa ima v atributu <code class="docutils literal notranslate"><span class="pre">href</span></code> njegovo vrednost za znakom <code class="docutils literal notranslate"><span class="pre">#</span></code>.
+Povezava <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=&quot;#criticism&quot;&gt;Criticism&lt;/a&gt;</span></code> tako pelje do naslova <code class="docutils literal notranslate"><span class="pre">&lt;h2</span> <span class="pre">id=&quot;criticism&quot;&gt;Criticism&lt;/h2&gt;</span></code>.
+Vrednost atributa <code class="docutils literal notranslate"><span class="pre">id</span></code> se v dokumentu ne sme ponoviti.</p>
+<p>Znački <code class="docutils literal notranslate"><span class="pre">em</span></code> (angl. <em>emphasis</em>) in <code class="docutils literal notranslate"><span class="pre">strong</span></code> povesta, da je besedilo poudarjeno, ne pa, kako je videti.
+Z <code class="docutils literal notranslate"><span class="pre">em</span></code> označimo besedo, ki bi jo pri branju na glas poudarili, s <code class="docutils literal notranslate"><span class="pre">strong</span></code> pa pomembno besedilo, na primer opozorilo ali ključni pojem.
+Brskalnik prvo običajno prikaže ležeče, drugo pa krepko.
+Znački <code class="docutils literal notranslate"><span class="pre">b</span></code> (angl. <em>bold</em>) in <code class="docutils literal notranslate"><span class="pre">i</span></code> (angl. <em>italic</em>), ki povesta samo, kako naj bo besedilo videti, se ne uporabljata več.
+Dobra praksa loči pomen, ki ga povedo značke HTML, od videza, ki ga določi CSS.</p>
+</section>
+<section id="matematika">
+<h3>Matematika<a class="headerlink" href="#matematika" title="Link to this heading">#</a></h3>
+<p>Formul, zapisanih v LaTeX-u, brskalnik sam ne zna prikazati.
+Pomagamo si s knjižnico <a class="reference external" href="https://www.mathjax.org/">MathJax</a>, ki jo v glavi dokumenta vključimo kot skripto:
+brskalnik jo prenese skupaj s stranjo, ta pa poišče formule v sintaksi LaTeX-a in jih izriše.
+Formule med <code class="docutils literal notranslate"><span class="pre">\(</span></code> in <code class="docutils literal notranslate"><span class="pre">\)</span></code> so prikazane v besedilu, formule med <code class="docutils literal notranslate"><span class="pre">\[</span></code> in <code class="docutils literal notranslate"><span class="pre">\]</span></code> pa v svoji vrstici.
+LaTeX boste podrobneje spoznali v naslednjem poglavju.</p>
+</section>
+</section>
+<section id="vsebina-in-videz">
+<span id="html-videz"></span><h2>Vsebina in videz<a class="headerlink" href="#vsebina-in-videz" title="Link to this heading">#</a></h2>
+<p>Kako so videti naslovi, odstavki in tabele, določa jezik CSS (angl. <em><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</em>).
+HTML pove, kaj je kaj, CSS pa določi barve, pisave, razmike, velikosti in postavitev.
+Jezika sta primer <a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_content_and_presentation">ločevanja vsebine in predstavitve</a>, istega načela kot pri slogih v Wordu.</p>
+<p>Slogi so ponavadi v posebni datoteki s končnico <code class="docutils literal notranslate"><span class="pre">.css</span></code>, ki jo vključimo v glavi dokumenta:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"oblikovanje.css"</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Atribut <code class="docutils literal notranslate"><span class="pre">href</span></code> je pot do datoteke, tako kot pri povezavah in slikah.
+Datoteka s slogi je sestavljena iz pravil, kot je</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#8b4513</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To pravilo pove, da naj bodo vsi naslovi <code class="docutils literal notranslate"><span class="pre">h2</span></code> rjavi.
+Ker so naslovi označeni kot naslovi, z eno spremembo pravila spremenimo vse hkrati.
+Besedila, ki je samo povečano in odebeljeno, pravilo za naslove ne zajame.</p>
+<p>Datotek s slogi skoraj nihče ne piše od začetka: skoraj vsak vzame obstoječo in jo prilagodi, ko to potrebuje, na primer s pomočjo jezikovnega modela.
+To pa gre zlahka samo, če je HTML pravilno označen.</p>
+</section>
+<section id="orodja-za-razvijalce">
+<h2>Orodja za razvijalce<a class="headerlink" href="#orodja-za-razvijalce" title="Link to this heading">#</a></h2>
+<p>Spletni brskalniki imajo vgrajena orodja za razvijalce (angl. <em>developer tools</em>),
+s katerimi lahko pregledujete in urejate HTML in CSS strani, iščete napake v skriptah in spremljate, katere datoteke se prenesejo.
+Ko v brskalniku obiščete spletno stran, se na vaš računalnik prenese kopica datotek: dokument HTML, slogi, slike in skripte.
+Brskalnik jih uporabi, da vam prikaže stran.
+Orodja ne kažejo izvorne kode, ampak dokument, kot ga ima brskalnik v pomnilniku: če ga skripta spremeni, se sprememba vidi tam.</p>
+</section>
+<section id="naloga-orodja-za-razvijalce">
+<h2>1. naloga: orodja za razvijalce<a class="headerlink" href="#naloga-orodja-za-razvijalce" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Odprite brskalnik in v njem orodja za razvijalce:</p>
+<ul class="simple">
+<li><p>Chrome: v meniju ⋮ na desnem koncu orodne vrstice izberite <em>More tools</em> &gt; <em>Developer Tools</em>,</p></li>
+<li><p>Firefox: v meniju ☰ na desnem koncu orodne vrstice izberite <em>More tools</em> &gt; <em>Web Developer Tools</em>,</p></li>
+<li><p>Safari: v meniju <em>Develop</em> izberite <em>Show Web Inspector</em>.
+Če menija <em>Develop</em> ne vidite, ga vklopite po <a class="reference external" href="https://support.apple.com/guide/safari/sfri20948/mac">navodilih</a>.</p></li>
+</ul>
+<p>Orodja odpre tudi tipka <kbd>F12</kbd> (v Chromu in Firefoxu) ali bližnjica <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>I</kbd>).</p>
+</li>
+<li><p>V orodjih odprite zavihek <em>Network</em>.</p></li>
+<li><p>V naslovno vrstico brskalnika vpišite <code class="docutils literal notranslate"><span class="pre">https://www.fmf.uni-lj.si/</span></code> in stisnite vnašalko <kbd>↵</kbd>.
+Poglejte, katere datoteke so se prenesle, da se je prikazala prva stran FMF: poleg dokumenta HTML še slogi, slike in skripte.</p></li>
+<li><p>Preklopite na zavihek z drevesom dokumenta (v Chromu in Safariju <em>Elements</em>, v Firefoxu <em>Inspector</em>) in si ga oglejte.
+To ni izvorna koda strani, ampak dokument, kot ga ima brskalnik v pomnilniku; razlika se bo pokazala v 4. nalogi.</p></li>
+</ol>
+</section>
+<section id="naloga-ogrodje-dokumenta">
+<h2>2. naloga: ogrodje dokumenta<a class="headerlink" href="#naloga-ogrodje-dokumenta" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>V VSCode odprite imenik <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code> v imeniku <code class="docutils literal notranslate"><span class="pre">rp</span></code> (<em>File</em> &gt; <em>Open Folder</em>).
+Če repozitorija na tem računalniku še nimate, ga pripravite po navodilih v 1. nalogi 3. poglavja ali prosite za pomoč.
+V njem naredite imenik <code class="docutils literal notranslate"><span class="pre">04-html</span></code>, v tem pa datoteko <code class="docutils literal notranslate"><span class="pre">stran.html</span></code> in jo odprite.</p>
+<figure class="align-center" id="slika-drevo-repozitorij" style="width: 50%">
+<img alt="Drevo imenikov z novo datoteko" src="_images/drevo-repozitorij.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">  Repozitorij <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code> po tej točki</span><a class="headerlink" href="#slika-drevo-repozitorij" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Odprite pogled <em>Problems</em> (<em>View</em> &gt; <em>Problems</em>).
+Ko je kurzor v datoteki <code class="docutils literal notranslate"><span class="pre">stran.html</span></code>, se v njem pojavi opozorilo <code class="docutils literal notranslate"><span class="pre">Doctype</span> <span class="pre">must</span> <span class="pre">be</span> <span class="pre">declared</span> <span class="pre">first</span></code>.
+Za sporočilom piše, katero pravilo je kršeno in v kateri vrstici in stolpcu je težava.
+Če se opozorilo ne pojavi, preverite, da je razširitev HTMLHint nameščena.</p></li>
+<li><p>V prvo vrstico napišite <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> (morda tudi <code class="docutils literal notranslate"><span class="pre">&lt;!</span></code>), počakajte, da se v priročnem meniju pokaže <code class="docutils literal notranslate"><span class="pre">!DOCTYPE</span></code>, in ga izberite z vnašalko <kbd>↵</kbd>.
+V vrstici mora pisati <code class="docutils literal notranslate"><span class="pre">&lt;!DOCTYPE</span> <span class="pre">html&gt;</span></code>; če ne piše, deklaracijo prepišite od tu.</p></li>
+<li><p>V naslednjo vrstico napišite <code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span></code>.
+Ko napišete <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, vam urejevalnik sam dopiše konec značke, kurzor pa ostane med njima.
+Stisnite vnašalko.</p></li>
+<li><p>V značko <code class="docutils literal notranslate"><span class="pre">html</span></code> dodajte eno za drugo znački <code class="docutils literal notranslate"><span class="pre">head</span></code> in <code class="docutils literal notranslate"><span class="pre">body</span></code>, zamaknjeni glede na <code class="docutils literal notranslate"><span class="pre">html</span></code>.
+V pogledu <em>Problems</em> se pojavi novo opozorilo.
+Odpravite ga, pa tudi tisto, ki se pojavi za njim; naslov dokumenta naj bo <code class="docutils literal notranslate"><span class="pre">ISO</span> <span class="pre">3103</span></code>.</p></li>
+<li><p>V glavo, pred značko <code class="docutils literal notranslate"><span class="pre">title</span></code>, dodajte še značko <code class="docutils literal notranslate"><span class="pre">&lt;meta</span> <span class="pre">charset=&quot;UTF-8&quot;&gt;</span></code>.</p></li>
+<li><p>Kodo preverite še na strani <a class="reference external" href="https://validator.w3.org/nu/#textarea">Nu Html Checker</a>, ki je strožja od razširitve HTMLHint:
+prilepite jo v polje in kliknite <em>Check</em>.
+Dodajte atribut za jezik, ki ga predlaga; besedilo, ki ga boste dodali v 3. nalogi, je v angleščini.</p></li>
+<li><p>Počistite vse napake in opozorila v pogledu <em>Problems</em>.
+Če ne veste kako, prosite za pomoč.</p></li>
+<li><p>Zabeležite spremembo v pogledu za upravljanje različic:</p>
+<ol class="arabic simple">
+<li><p>V opravilnem stolpcu kliknite ikono za upravljanje različic (<em>Source Control</em>).</p></li>
+<li><p>Pod napisom <em>Changes</em> je datoteka <code class="docutils literal notranslate"><span class="pre">stran.html</span></code>.
+Ko se z miško zapeljete nad njeno vrstico, se na desni pokažejo ikone.
+Kliknite <kbd>+</kbd> (<em>Stage Changes</em>), ki izvede ukaz <a class="reference internal" href="G-git.html#git-osnovni-ukazi"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code></span></a>.</p></li>
+<li><p>Datoteka se premakne pod napis <em>Staged Changes</em>: v vnos gredo natanko spremembe pod tem napisom.
+V polje nad gumbom <em>Commit</em> napišite sporočilo, na primer <code class="docutils literal notranslate"><span class="pre">Pripravi</span> <span class="pre">ogrodje</span> <span class="pre">dokumenta</span> <span class="pre">HTML</span></code>, in kliknite <em>Commit</em>.</p></li>
+</ol>
+</li>
+</ol>
+<div class="important admonition">
+<p class="admonition-title">Shranite vaje na GitHub</p>
+<p>Na koncu 2. do 5. naloge zabeležite spremembe.
+Če naloge na vajah ne končate, spremembe vseeno zabeležite in v sporočilo napišite na primer <code class="docutils literal notranslate"><span class="pre">V</span> <span class="pre">delu:</span> <span class="pre">...</span></code> s kratkim opisom narejenega.
+<a class="reference external" href="https://www.reddit.com/r/ProgrammerHumor/comments/3nc531/in_case_of_fire/">Preden nehate delati</a>, na vajah ali doma, vnose pošljite na GitHub:
+v paleti ukazov (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) izberite ukaz <em>Git: Push</em>.</p>
+</div>
+</section>
+<section id="naloga-vsebina">
+<h2>3. naloga: vsebina<a class="headerlink" href="#naloga-vsebina" title="Link to this heading">#</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Del domače naloge</p>
+<p>Datoteki <code class="docutils literal notranslate"><span class="pre">stran.html</span></code> in <code class="docutils literal notranslate"><span class="pre">tea-bowl.jpg</span></code>, ki ju boste zabeležili na koncu te naloge, potrebujete za 4. domačo nalogo.</p>
+</div>
+<p>Pri pisanju značk vam bo v pomoč ukaz <em>Wrap with Abbreviation</em> iz palete ukazov,
+več o njem pa si preberite v <a class="reference internal" href="D-paleta-ukazov.html#paleta-ukazov-html"><span class="std std-ref">plonkcu za paleto ukazov</span></a>.</p>
+<p>Če si ne predstavljate, kako se uporablja kakšna značka, zlasti pri seznamih in tabelah,
+poiščite zgled na spletu, denimo na strani <a class="reference external" href="https://www.w3schools.com/html/">W3Schools</a>.</p>
+<ol class="arabic simple">
+<li><p>Datoteko <code class="docutils literal notranslate"><span class="pre">stran.html</span></code> odprite še v brskalniku: v pogledu datotek jo kliknite z desno tipko,
+izberite <em>Reveal in File Explorer</em> (🍎 <em>Reveal in Finder</em>) in jo iz upravitelja datotek povlecite v okno brskalnika.</p></li>
+<li><p>Prenesite datoteko <a class="reference download internal" download="" href="_downloads/cc89766c6b4c9451b07a117efc8022f4/vsebina.txt"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">vsebina.txt</span></code></span></a> (ni je treba shraniti v repozitorij), jo odprite v VSCode in njeno vsebino prilepite v značko <code class="docutils literal notranslate"><span class="pre">body</span></code>.
+Prilepljeno besedilo zamaknite glede na <code class="docutils literal notranslate"><span class="pre">body</span></code>, tako da bo vsaka vrstica za dve ravni odmaknjena od roba:
+označite ga in stisnite <kbd>Tab</kbd>, ki vse označene vrstice zamakne za eno raven (<kbd>Shift</kbd>+<kbd>Tab</kbd> pa nazaj).
+Datoteko <code class="docutils literal notranslate"><span class="pre">stran.html</span></code> shranite.
+Z bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Tab</kbd>) skočite v brskalnik
+in stran osvežite z <kbd>Ctrl</kbd>+<kbd>R</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>R</kbd>).</p></li>
+<li><p>Na začetku besedila, ki ste ga prilepili, označite naslov „ISO 3103“.
+Odprite paleto ukazov (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>),
+začnite tipkati <code class="docutils literal notranslate"><span class="pre">wrap</span></code> in ukaz <em>Wrap with Abbreviation</em> izberite z vnašalko, ko se pojavi na vrhu seznama.
+V pogovorno okno, ki se odpre, napišite ime značke za naslov strani (<code class="docutils literal notranslate"><span class="pre">h1</span></code>) in stisnite vnašalko.
+V vrstici mora zdaj pisati <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;ISO</span> <span class="pre">3103&lt;/h1&gt;</span></code>.
+Naslednjič se bo ukaz na vrhu seznama pojavil že po nekaj natipkanih znakih.</p></li>
+<li><p>Z ustreznimi značkami označite še naslove razdelkov (<code class="docutils literal notranslate"><span class="pre">h2</span></code>):
+„Contents“ za uvodnimi odstavki ter „Details“, „Pot and bowl“, „Criticism“ in „Competing standards“.
+Zadnji štirje so v besedilu dvakrat: naslov razdelka je tisti, pred katerim sta dve prazni vrstici, ne vrstica v seznamu pod „Contents“.
+<em>Namig:</em> z <kbd>Alt</kbd> (🍎 <kbd>Option</kbd>) in levim klikom dodate kurzor, ukaz pa se izvede pri vseh kurzorjih hkrati.</p></li>
+<li><p>Pod naslovom „Contents“ so našteti razdelki. Iz njih naredite urejeni seznam.
+Postavite kurzor na začetek vsake vrstice (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>↑↓</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>↑↓</kbd>),
+pridržite tipko <kbd>Shift</kbd> in stisnite <kbd>End</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>→</kbd>), da označite vsako vrstico s svojim kurzorjem.
+Uporabite ukaz <em>Wrap with Abbreviation</em> z značko <code class="docutils literal notranslate"><span class="pre">li</span></code>: naredi toliko značk, kot imate kurzorjev.
+Nato vse vrstice označite z enim kurzorjem in jih obdajte z značko <code class="docutils literal notranslate"><span class="pre">ol</span></code>.</p></li>
+<li><p>Pod naslovom „Details“ stavek „To maintain consistent results, …“ napoveduje seznam priporočil:
+vsi odstavki za njim naj bodo elementi neurejenega seznama (<code class="docutils literal notranslate"><span class="pre">ul</span></code>).
+Kurzorje postavite s klikanjem, ker bi jih bližnjica iz prejšnjega koraka postavila tudi v prazne vrstice med odstavki.
+Dva elementa (tista s tabelama) sta zapisana v več vrsticah: vsakega posebej označite v celoti in ga šele nato obdajte z značko.</p></li>
+<li><p>Citat (odstavek pod besedilom „The abstract states the following:“) označite z značko <code class="docutils literal notranslate"><span class="pre">blockquote</span></code>.</p></li>
+<li><p>Vse ostale odstavke označite z značko <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p></li>
+<li><p>V prvem odstavku naj bo „ISO 3103“ povezava na Wikipedijo:
+uporabite značko <code class="docutils literal notranslate"><span class="pre">a</span></code>, spletni naslov s konca odstavka pa prestavite v njen atribut <code class="docutils literal notranslate"><span class="pre">href</span></code>.</p></li>
+<li><p>V 2. in 8. elementu seznama pod naslovom „Details“ sta tabeli s po tremi stolpci in tremi vrsticami.
+Zapišite ju z značkami <code class="docutils literal notranslate"><span class="pre">table</span></code>, <code class="docutils literal notranslate"><span class="pre">tr</span></code>, <code class="docutils literal notranslate"><span class="pre">td</span></code> in <code class="docutils literal notranslate"><span class="pre">th</span></code>; celice glave uporabite v prvi vrstici in v prvem stolpcu.</p></li>
+<li><p>Prenesite <a class="reference download internal" download="" href="_downloads/81bb5ec6899d337f8a85fa2794d4be4d/tea-bowl.jpg"><span class="xref download myst">sliko</span></a>, jo premaknite v imenik <code class="docutils literal notranslate"><span class="pre">04-html</span></code> in jo pod naslovom „Details“ vstavite z značko <code class="docutils literal notranslate"><span class="pre">img</span></code> namesto vrstice <code class="docutils literal notranslate"><span class="pre">tea-bowl.jpg</span></code>.
+V atribut <code class="docutils literal notranslate"><span class="pre">src</span></code> napišite pot do slike, v atribut <code class="docutils literal notranslate"><span class="pre">alt</span></code> pa njen opis iz vrstice pod njo, ki jo nato izbrišite.
+V brskalniku preverite, da se slika prikaže.
+Verjetno je prevelika, zato jo za zdaj zakomentirajte: postavite kurzor v vrstico s sliko in v paleti ukazov izberite <em>Add Line Comment</em>.</p></li>
+<li><p>Počistite vse napake in opozorila, kodo pa preverite še z Nu Html Checker kot v 2. nalogi:
+opozori tudi, če je element seznama zunaj seznama ali tabela zunaj svojega elementa seznama, čeprav je stran v brskalniku videti v redu.</p></li>
+<li><p>Zabeležite spremembo: dodajte datoteki <code class="docutils literal notranslate"><span class="pre">stran.html</span></code> in <code class="docutils literal notranslate"><span class="pre">tea-bowl.jpg</span></code> ter napišite uporabno sporočilo, na primer <code class="docutils literal notranslate"><span class="pre">Dodaj</span> <span class="pre">vsebino</span> <span class="pre">dokumenta</span> <span class="pre">HTML</span></code>.</p></li>
+</ol>
+</section>
+<section id="naloga-matematika-in-sklicevanje">
+<h2>4. naloga: matematika in sklicevanje<a class="headerlink" href="#naloga-matematika-in-sklicevanje" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>V drugem odstavku poudarite besedilo „ISO 3103“ na začetku z značko <code class="docutils literal notranslate"><span class="pre">strong</span></code>, besedilo „brewing tea“ pa z značko <code class="docutils literal notranslate"><span class="pre">em</span></code>.</p></li>
+<li><p>Strani dodajte MathJax: sledite navodilom <a class="reference external" href="https://www.mathjax.org/#gettingstarted">Getting Started</a> za MathJax 4
+in kodo, ki vključi skripto, dodajte v glavo dokumenta.
+Na konec telesa dokumenta dodajte formulo, na primer <code class="docutils literal notranslate"><span class="pre">\[x</span> <span class="pre">=</span> <span class="pre">\frac{-b</span> <span class="pre">\pm</span> <span class="pre">\sqrt{b^2-4ac}}{2a}\]</span></code>.
+Za zdaj še ni treba, da razumete, kako formule delujejo.</p></li>
+<li><p>Orodja za razvijalce odprite v zavihku s stranjo <code class="docutils literal notranslate"><span class="pre">stran.html</span></code> (odprta so za vsak zavihek posebej)
+in v zavihku <em>Network</em> poglejte, kaj se zgodi, ko osvežite stran: brskalnik prenese skripto MathJax in pisave.
+V zavihku <em>Elements</em> (<em>Inspector</em>) nato poiščite formulo:
+namesto besedila med <code class="docutils literal notranslate"><span class="pre">\[</span></code> in <code class="docutils literal notranslate"><span class="pre">\]</span></code>, ki ste ga napisali, so v drevesu dokumenta značke, ki jih je vstavila skripta.</p></li>
+<li><p>Formula, ki ste jo napisali, je zapisana v posebni sintaksi, iz katere računalnik vsaj do neke mere razbere, kaj želimo.
+Poskusite ugotoviti, kako deluje: kje so ukazi, kje njihovi argumenti in kako so označeni?</p></li>
+<li><p>Po zgledu zgornje formule, prav tako med <code class="docutils literal notranslate"><span class="pre">\[</span></code> in <code class="docutils literal notranslate"><span class="pre">\]</span></code>, napišite enačbo <span class="math notranslate nohighlight">\(e^{i\pi} + 1 = 0\)</span>
+(poskusite uganiti, kako se napiše črka <span class="math notranslate nohighlight">\(\pi\)</span>).</p></li>
+<li><p>Naslovom razdelkov dodajte atribute <code class="docutils literal notranslate"><span class="pre">id</span></code>, elemente seznama pod naslovom „Contents“ pa spremenite v povezave nanje,
+tako da bo vsak vodil do svojega razdelka.
+Povezave preizkusite: ob kliku se spletnemu naslovu v naslovni vrstici doda <code class="docutils literal notranslate"><span class="pre">#</span></code> in ime razdelka, stran pa skoči nanj.
+Če je stran krajša od okna, okno zožite, da skok vidite.</p></li>
+<li><p>Zabeležite spremembo: dodajte datoteko <code class="docutils literal notranslate"><span class="pre">stran.html</span></code> in napišite uporabno sporočilo, na primer <code class="docutils literal notranslate"><span class="pre">Dodaj</span> <span class="pre">formule</span> <span class="pre">in</span> <span class="pre">sklicevanje</span></code>.</p></li>
+</ol>
+</section>
+<section id="naloga-oblikovanje">
+<h2>5. naloga: oblikovanje<a class="headerlink" href="#naloga-oblikovanje" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Prenesite datoteko <a class="reference download internal" download="" href="_downloads/ca373262f456eb72129c1d9de97982ba/oblikovanje.css"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">oblikovanje.css</span></code></span></a> in jo premaknite v imenik <code class="docutils literal notranslate"><span class="pre">04-html</span></code>.</p></li>
+<li><p>V glavo dokumenta <code class="docutils literal notranslate"><span class="pre">stran.html</span></code> dodajte značko <code class="docutils literal notranslate"><span class="pre">&lt;link</span> <span class="pre">rel=&quot;stylesheet&quot;</span> <span class="pre">href=&quot;oblikovanje.css&quot;&gt;</span></code> in osvežite stran v brskalniku.</p></li>
+<li><p>Odkomentirajte sliko iz 3. naloge: postavite kurzor v vrstico s sliko in v paleti ukazov izberite <em>Remove Line Comment</em>.
+Slog omeji širino slik, zato slika ni več prevelika.</p></li>
+<li><p>V datoteki <code class="docutils literal notranslate"><span class="pre">oblikovanje.css</span></code> poiščite pravilo za naslove <code class="docutils literal notranslate"><span class="pre">h2</span></code> in barvo <code class="docutils literal notranslate"><span class="pre">#8b4513</span></code> zamenjajte s kakšno drugo, na primer <code class="docutils literal notranslate"><span class="pre">darkgreen</span></code> ali <code class="docutils literal notranslate"><span class="pre">#336699</span></code>.
+Datoteko shranite in osvežite stran: barvo je zamenjalo vseh pet naslovov razdelkov.
+Če se sprememba ne pokaže, stran osvežite brez predpomnilnika z <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>
+(🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>, v Safariju <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>R</kbd>).</p></li>
+<li><p>Zabeležite spremembo: dodajte datoteki <code class="docutils literal notranslate"><span class="pre">stran.html</span></code> in <code class="docutils literal notranslate"><span class="pre">oblikovanje.css</span></code>, napišite uporabno sporočilo, na primer <code class="docutils literal notranslate"><span class="pre">Dodaj</span> <span class="pre">slog</span></code>, in vnose pošljite na GitHub.</p></li>
+</ol>
+</section>
+<section id="dodatni-viri">
+<h2>Dodatni viri<a class="headerlink" href="#dodatni-viri" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements">HTML elements reference</a>, seznam vseh značk HTML na spletni strani MDN.</p></li>
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics">CSS styling basics</a>, uvod v CSS na isti strani, če vas zanima več.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03-upravljanje-razlicic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">nazaj</p>
+        <p class="prev-next-title">Upravljanje različic</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05-latex.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">naprej</p>
+        <p class="prev-next-title">Uvod v LaTeX</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Vsebina
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struktura-dokumenta">Struktura dokumenta</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enostaven-primer-dokumenta-html">Enostaven primer dokumenta HTML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vsebina-dokumenta">Vsebina dokumenta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matematika">Matematika</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vsebina-in-videz">Vsebina in videz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orodja-za-razvijalce">Orodja za razvijalce</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-orodja-za-razvijalce">1. naloga: orodja za razvijalce</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-ogrodje-dokumenta">2. naloga: ogrodje dokumenta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-vsebina">3. naloga: vsebina</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-matematika-in-sklicevanje">4. naloga: matematika in sklicevanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-oblikovanje">5. naloga: oblikovanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dodatni-viri">Dodatni viri</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Avtor Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

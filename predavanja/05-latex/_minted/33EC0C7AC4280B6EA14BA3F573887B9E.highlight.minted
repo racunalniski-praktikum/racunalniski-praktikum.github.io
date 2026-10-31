@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+Naj bodo \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{a, b, c }\PYG{n+nv}{\PYGZbs{}in}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}mathbb}\PYG{n+nb}{\PYGZob{}R\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}. Tedaj je
+\PYG{l+s+sb}{\PYGZbs{}[}
+\PYG{n+nb}{  x\PYGZus{}\PYGZob{}}\PYG{l+m}{1}\PYG{n+nb}{, }\PYG{l+m}{2}\PYG{n+nb}{\PYGZcb{} }\PYG{o}{=}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}frac}\PYG{n+nb}{\PYGZob{}}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{b }\PYG{n+nv}{\PYGZbs{}pm}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}sqrt}\PYG{n+nb}{\PYGZob{}b\PYGZca{}}\PYG{l+m}{2}\PYG{n+nb}{ }\PYG{o}{\PYGZhy{}}\PYG{n+nb}{ }\PYG{l+m}{4}\PYG{n+nb}{ac\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{l+m}{2}\PYG{n+nb}{a\PYGZcb{}}
+\PYG{l+s}{\PYGZbs{}]}
+rešitev enačbe \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{ax\PYGZca{}}\PYG{l+m}{2}\PYG{n+nb}{ }\PYG{o}{+}\PYG{n+nb}{ bx }\PYG{o}{+}\PYG{n+nb}{ c }\PYG{o}{=}\PYG{n+nb}{ }\PYG{l+m}{0}\PYG{l+s}{\PYGZdl{}}.
+\end{MintedVerbatim}

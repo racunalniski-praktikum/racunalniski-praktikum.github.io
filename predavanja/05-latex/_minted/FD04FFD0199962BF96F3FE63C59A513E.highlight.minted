@@ -1,0 +1,3 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+sin\PYGZti{}x + sin\PYGZti{}(x + y)
+\end{MintedVerbatim}

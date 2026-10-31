@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+2 \PYG{k}{\PYGZbs{}langle} x, y \PYG{k}{\PYGZbs{}rangle}
++ 3 \PYG{k}{\PYGZbs{}langle} y, x \PYG{k}{\PYGZbs{}rangle}
+\end{MintedVerbatim}

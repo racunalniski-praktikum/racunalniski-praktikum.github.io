@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+  \PYG{l+s}{\PYGZbs{}(}\PYG{n+nb}{ x\PYGZus{}\PYGZob{}}\PYG{l+m}{1}\PYG{n+nb}{, }\PYG{l+m}{2}\PYG{n+nb}{\PYGZcb{} }\PYG{o}{=}\PYG{n+nb}{ … }\PYG{l+s}{\PYGZbs{})}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}

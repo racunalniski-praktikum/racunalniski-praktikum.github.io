@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gh}{\PYGZsh{} Naslov}
+
+Besedilo je lahko \PYG{g+gs}{**poudarjeno**} ter
+vsebuje [\PYG{n+nt}{povezave}](\PYG{n+na}{https://www.fmf.uni\PYGZhy{}lj.si/}),
+\PYG{l+s+sb}{`programsko kodo`} in sezname:
+\PYG{k}{\PYGZhy{}}\PYG{+w}{ }prva točka
+\PYG{k}{\PYGZhy{}}\PYG{+w}{ }druga točka
+\PYG{k}{\PYGZhy{}}\PYG{+w}{ }tretja točka
+\end{MintedVerbatim}

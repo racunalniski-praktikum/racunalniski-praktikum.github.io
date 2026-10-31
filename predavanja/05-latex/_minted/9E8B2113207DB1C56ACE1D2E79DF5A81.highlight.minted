@@ -1,0 +1,13 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZob{}}Naslov\PYG{n+nb}{\PYGZcb{}}
+
+Besedilo je lahko \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}poudarjeno\PYG{n+nb}{\PYGZcb{}} ter
+vsebuje \PYG{k}{\PYGZbs{}href}\PYG{n+nb}{\PYGZob{}}https://www.fmf.uni\PYGZhy{}lj.si/\PYG{n+nb}{\PYGZcb{}\PYGZob{}}povezave\PYG{n+nb}{\PYGZcb{}},
+\PYG{k}{\PYGZbs{}texttt}\PYG{n+nb}{\PYGZob{}}programsko kodo\PYG{n+nb}{\PYGZcb{}} in sezname:
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}item} prva točka
+  \PYG{k}{\PYGZbs{}item} druga točka
+  \PYG{k}{\PYGZbs{}item} tretja točka
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}
