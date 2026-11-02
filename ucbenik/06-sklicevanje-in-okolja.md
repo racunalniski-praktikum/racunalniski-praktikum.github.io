@@ -13,7 +13,7 @@ Datoteko `magic.tex` pripravite tako, da boste z njo dobili PDF dokument,
 čim bolj podoben datoteki `magic-resitev.pdf`.
 Pomagajte si s preglednimi datotekami, ki ste jih na prejšnjih vajah shranili v imenik `latex-pregled`
 (predvsem `2-matematika.tex`, `3-tabele.tex` in `4-citati.tex`).
-Če jih še niste shranili v svoj repozitorij, to naredite zdaj ([`latex-pregled.zip`](05-latex/latex-pregled.zip)).
+Če jih še nimate, v glavni imenik repozitorija odpakirajte arhiv [`latex-pregled.zip`](05-latex/latex-pregled.zip) v imenik `latex-pregled`.
 
 Pregledne datoteke so dokumenti LaTeX, v katerih vsak razdelek na delujočem primeru pokaže eno stvar:
 izrek in dokaz, tabelo, sliko, seznam literature.
@@ -30,7 +30,8 @@ Poleg tega vam morda pridejo prav tudi naslednji viri:
 * na portalu [Overleaf](https://www.overleaf.com) je zelo dobra [dokumentacija](https://www.overleaf.com/learn). 
 
 Kjer v besedilu naletite na niz `!!`, ga sproti nadomestite z matematičnim izrazom, ki ga preberete iz `magic-resitev.pdf`:
-vrstičnega zapišite med `\(` in `\)`, prikaznega med `\[` in `\]`.
+vrstičnega zapišite med `\(` in `\)`, prikaznega med `\[` in `\]`;
+kjer `!!` že stoji v matematičnem okolju, vas na to opozori komentar.
 Ločilo, s katerim se stavek konča, sodi v izraz, kot v [5. poglavju](05-latex.md).
 
 Preden odidete iz predavalnice, spremembe zabeležite in vnose pošljite na GitHub.
@@ -109,10 +110,12 @@ LaTeX v seznam literature uvrsti samo dela, na katera se v besedilu skličete z 
     ta ukaz izriše vodoravno črto.
     Za zgornjo črto dodajte `\hline` še takoj za `\begin{tabular}{…}`.
 4.  Okolje `tabular` označite z okoljem `table`.
+    Okolje začnite z `\begin{table}[!ht]`: dodatek v oglatih oklepajih pove,
+    naj LaTeX tabelo postavi sem (`h`, *here*) ali vsaj na vrh strani (`t`, *top*).
     Vanj dodajte ukaz `centering`, napis nad tabelo z ukazom `caption` in oznako z ukazom `label`;
     besedilo napisa in oznaka sta v komentarju nad tabelo.
 5.  Tabelo polepšajte s paketom `booktabs`; po vsakem od naslednjih korakov si oglejte PDF.
-    Najprej paket vključite in pobrišite vse ukaze `hline`.
+    Najprej paket vključite in v tej tabeli pobrišite vse ukaze `hline`.
 6.  Popravite začetek okolja `tabular` na `\begin{tabular}{lcccccc}\toprule`.
 7.  Popravite celico v glavi, ki je razširjena na 5 stolpcev,
     tako da bo drugi argument ukaza `multicolumn` `c` (namesto `|c|`).
@@ -131,16 +134,18 @@ Označen je s komentarjem `% Začetek magičnega kvadrata`, napis in oznaka sta 
 
 ## 5. naloga: sklici
 
-1.  V okoljih `equation` dodajte oznaki z ukazom `label`, da se boste lahko sklicevali na enačbi;
+1.  Preberite razdelek *Citati in reference* na koncu datoteke `2-matematika.tex`:
+    v njem so uporabljeni vsi trije ukazi za sklicevanje iz te naloge.
+2.  V okoljih `equation` dodajte oznaki z ukazom `label`, da se boste lahko sklicevali na enačbi;
     vrednosti oznak sta v komentarjih v okoljih.
-2.  Povsod, kjer se v besedilu nahaja `??`, dodajte sklic na tabelo ali enačbo.
+3.  Povsod, kjer se v besedilu nahaja `??`, dodajte sklic na tabelo ali enačbo.
     Katera oznaka je prava, piše v komentarju `% sklic` na koncu odstavka.
     -   Za sklice na tabele uporabite ukaz `ref`.
     -   Za sklice na enačbe uporabite ukaz `eqref` iz paketa `amsmath`
         (tega je treba vključiti pred paketom `amsthm`).
     -   Kjer piše *na strani* `??`, uporabite ukaz `pageref`.
-3.  Prevedite in preverite: v PDF-ju ne sme ostati noben `??` ali `!!`.
-4.  Zabeležite spremembe.
+4.  Prevedite in preverite: v PDF-ju ne sme ostati noben `??` ali `!!`.
+5.  Zabeležite spremembe.
 
 ## 6. naloga: definicija novega ukaza za magično konstanto
 
@@ -149,13 +154,12 @@ Ukaz si lahko predstavljate kot okrajšavo za tisto, kar napišete v njegovo def
 
 1.  Preberite razdelek *Makroji* v datoteki `2-matematika.tex`.
 2.  Poiščite prvo pojavitev izraza `M_2`.
-3.  Oblikujte izraz tako, da bo črka M napisana s pisano črko.
-    Kako se to naredi, poiščite v razdelku *Osnovna matematika* v datoteki `2-matematika.tex`:
-    datoteko prevedite, v PDF-ju poiščite pisano črko in poglejte, kako je zapisana v izvorni datoteki.
+3.  Oblikujte oznako `M_2` tako, da bo črka M napisana s pisano črko.
+    Ukaz poiščite v razdelku *Osnovna matematika* v datoteki `2-matematika.tex`.
 4.  V preambulo napišite osnutek definicije novega ukaza:
     `\newcommand{\⟨ime-ukaza⟩}{⟨definicija⟩}`.
     Osnutek popravite tako, da `⟨ime-ukaza⟩` zamenjate z `m`
-    (uporabljali ga boste z `\m`), `⟨definicija⟩` pa z izrazom iz 3. koraka.
+    (uporabljali ga boste z `\m`), `⟨definicija⟩` pa z oblikovano oznako iz 3. koraka.
 5.  Zamenjajte vse pojavitve `M_2` z ukazom `\m`,
     tudi tisto, ki ste jo v 3. koraku oblikovali na roko.
 6.  Prevedite in preverite: črka M v oznaki je povsod pisana, tudi v izreku in v prikazani formuli.
