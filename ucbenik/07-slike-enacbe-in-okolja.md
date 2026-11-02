@@ -63,7 +63,44 @@ Oblikujte obe sliki v besedilu (izpustite tisto na prvi strani) z okoljem `figur
 5.  Povsod, kjer se v besedilu nahaja `??`, dodajte sklic na sliko.
     Kjer potrebujete sklic, na koncu odstavka piše, kateri je pravi.
 
-## 3. naloga: novi okolji `dokaz` in `magic`
+## 3. naloga: definicija novega ukaza `pojem`
+
+Popestrimo definicije. Definirali bomo nov ukaz `pojem`, s katerim bomo zamenjali ukaz `emph`.
+Sledite naslednjim korakom; tako zaporedje lahko uporabite vsakič, ko definirate kak nov ukaz v LaTeX-u.
+
+1.  Najprej oblikujte pojem v prvi definiciji. V argument ukaza `emph` pred besedilo
+    dodajte ukaz `\color{purple}`, ki bo barvo spremenil na vijolično.
+    Ukaz `color` je v paketu `xcolor`, ki ga vključite v preambuli.
+    Barvo lahko izberete sami; kako, piše na [Overleaf-u](https://www.overleaf.com/learn/latex/Using_colours_in_LaTeX).
+2.  V preambulo napišite osnutek definicije novega ukaza:
+    `\newcommand{\⟨ime-ukaza⟩}[⟨st-argumentov⟩]{⟨definicija⟩}`.
+    Dokler so v osnutku oklepaji `⟨⟩`, prevajanje javi napako; to je v redu.
+    Popravite ime ukaza, tako da zamenjate `⟨ime-ukaza⟩` z `pojem`.
+3.  Ukaz bo potreboval samo en argument (besedilo, ki ga oblikujemo), zato nadomestite
+    `⟨st-argumentov⟩` z `1`.
+4.  Zamenjajte `⟨definicija⟩` z oblikovanim besedilom iz prve definicije
+    (`\emph{\color{purple}Magični kvadrat}`).
+5.  V prvi definiciji pobrišite `\color{purple}` in zamenjajte vse pojavitve ukaza `emph`
+    z ukazom `pojem`, ki ste ga ravno definirali.
+    LaTeX bo med prevajanjem nadomestil vse pojavitve ukaza `pojem` (in argumentov)
+    s tistim, kar ste napisali v definicijo novega ukaza.
+    `````{admonition} Globalno spreminjanje ukaza `emph` v `pojem`
+    :class: important
+    Če boste samo globalno zamenjali vse pojavitve `emph` v `pojem`, boste zamenjali tudi tisto v definiciji
+    in dobili `\newcommand{\pojem}[1]{\pojem{\color{purple}Magični kvadrat}}`.
+    Tu ukaz `pojem` kliče samega sebe, kar pomeni, da naj bi se `\pojem{Magični kvadrat}`
+    prevedel v `\pojem{\pojem{\pojem{` v neskončnost (kar v našem končnem svetu ni najbolje).
+    Preden dokument prevedete, preverite, da definicija ukaza `\pojem` ne kliče samega sebe, temveč ukaz `\emph`.
+    `````
+6.  Če prevedete datoteko in pogledate PDF, boste opazili, da so zdaj vsi pojmi `Magični kvadrat`!
+    To popravite tako, da v definiciji ukaza besedilo `Magični kvadrat` nadomestite z `#1`.
+    LaTeX namreč zamenja `#1` v definiciji ukaza z vrednostjo 1. argumenta
+    (pa tudi `#2` z vrednostjo 2. argumenta itd., če bi imeli več kot en argument).
+7.  Prevedite in preverite: vsi pojmi so obarvani, vsak s svojim besedilom,
+    tudi *Lo Shu* in *Kubera-Kolam* v razdelku o zgodovini.
+8.  Zabeležite spremembe.
+
+## 4. naloga: novi okolji `dokaz` in `magic`
 
 ### Okolje `dokaz`
 
