@@ -1,0 +1,196 @@
+\documentclass{beamer}
+\usepackage{../pomozno/prosojnice}
+\setminted{
+    fontsize=\scriptsize
+}
+
+\title{Najpogostejše napake v \LaTeX-u}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}[fragile]{Matematična okolja}
+  \begin{align*}
+	a x^2 + b x + c &= 0 \\
+	\left(x + \frac{b}{2a}\right)^2 &= \frac{b^2-4ac}{4a^2} \\
+	x_{1, 2} &= \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+  \end{align*}
+
+  \begin{minted}{latex}
+\begin{align*}
+a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n &= b_1 \\
+a_{21} x_1 + a_{22} x_2 + \cdots + a_{2n} x_n &= b_2 \\
+&\vdots \\
+a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n &= b_m
+\end{align*}
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Če uporabljate \texttt{align}, uporabite tudi \texttt{\&}}
+    \begin{dobroenv}
+    \begin{minted}{latex}
+    \begin{align*}
+        a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+        a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+                                                     &\vdotswithin{=} \\
+        a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+    \end{align*}
+    \end{minted}
+
+    \begin{align*}
+        a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+        a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+                                                     &\vdotswithin{=} \\
+        a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+    \end{align*}
+    \end{dobroenv}
+\end{frame}
+
+\begin{frame}[fragile]{Če uporabljate \texttt{align}, uporabite tudi \texttt{\&}}
+    \begin{slaboenv}
+    \begin{minted}{latex}
+        \begin{align*}
+            a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n = b_1 \\
+            a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n = b_2 \\
+                                                         \vdotswithin{=} \\
+            a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n = b_n,
+        \end{align*}
+        \end{minted}
+
+    \begin{align*}
+        a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n = b_1 \\
+        a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n = b_2 \\
+                                                     \vdotswithin{=} \\
+        a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n = b_n,
+    \end{align*}
+    \end{slaboenv}
+\end{frame}
+
+\begin{frame}[fragile]{Če uporabljate \texttt{align}, uporabite tudi \texttt{\&}}
+    \begin{slaboenv}
+    \begin{minted}{latex}
+        \begin{align*}
+            a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n = b_1 \\
+            a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n = b_1 + b_2 \\
+                                                         \vdotswithin{=} \\
+            a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n = b_1 + b_2 + \dots + b_n,
+        \end{align*}
+        \end{minted}
+
+    \begin{align*}
+        a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n = b_1 \\
+        a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n = b_1 + b_2 \\
+                                                     \vdotswithin{=} \\
+        a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n = b_1 + b_2 + \dots + b_n,
+    \end{align*}
+    \end{slaboenv}
+\end{frame}
+
+\begin{frame}[fragile]{Če nočete oštevilčenja, uporabite \texttt{align*}}
+    \begin{dobroenv}
+    \begin{minted}{latex}
+        \begin{align*}
+            a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+            a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+                                                         &\vdotswithin{=} \\
+            a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+        \end{align*}
+        \end{minted}
+
+    \begin{align*}
+        a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+        a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+                                                     &\vdotswithin{=} \\
+        a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+    \end{align*}
+    \end{dobroenv}
+\end{frame}
+
+\begin{frame}[fragile]{Če nočete oštevilčenja, uporabite \texttt{align*}}
+    \begin{slaboenv}
+    \begin{minted}{latex}
+        \begin{align}
+            a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+            a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+                                                         &\vdotswithin{=} \\
+            a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+        \end{align}
+        \end{minted}
+
+    \begin{align}
+        a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+        a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+                                                     &\vdotswithin{=} \\
+        a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+    \end{align}
+    \end{slaboenv}
+\end{frame}
+
+\begin{frame}[fragile]{Če nočete oštevilčenja, uporabite \texttt{align*}}
+    \begin{slaboenv}
+    \begin{minted}{latex}
+    \begin{align}
+        a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \nonumber\\
+        a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \nonumber\\
+                                                        &\vdotswithin{=}  \nonumber\\
+        a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n, \nonumber
+    \end{align}
+    \end{minted}
+
+    \begin{align}
+        a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \nonumber\\
+        a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \nonumber\\
+                                                     &\vdotswithin{=}  \nonumber\\
+        a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n, \nonumber
+    \end{align}
+    \end{slaboenv}
+\end{frame}
+
+\begin{frame}[fragile]{Matematične ukaze definirajte brez \texttt{\$}}
+    \begin{slaboenv}
+    \begin{minted}{latex}
+    \newcommand{\Rn}{$\mathbb{R}^n$}
+    Kjer je matrika s koeficienti iz \Rn, $b \in$ \Rn je stolpec skalarjev,
+    $x \in$ \Rn pa stolpec neznank.
+    \end{minted}
+    \newcommand{\Rn}{$\mathbb{R}^n$}
+    Kjer je matrika s koeficienti iz \Rn, $b \in$ \Rn je stolpec skalarjev,
+    $x \in$ \Rn pa stolpec neznank.
+    \end{slaboenv}
+
+    \begin{dobroenv}
+    \begin{minted}{latex}
+    \newcommand{\Rn}{\mathbb{R}^n}
+    Kjer je matrika s koeficienti iz $\Rn$, $b \in \Rn$ je stolpec skalarjev,
+    $x \in \Rn$ pa stolpec neznank.
+    \end{minted}
+    \newcommand{\Rn}{\mathbb{R}^n}
+    Kjer je matrika s koeficienti iz $\Rn$, $b \in \Rn$ je stolpec skalarjev,
+    $x \in \Rn$ pa stolpec neznank.
+    \end{dobroenv}
+\end{frame}
+
+\begin{frame}[fragile]{Uporabite lahko tudi \texttt{\textbackslash ensuremath}}
+    \begin{sprejemljivoenv}
+    \begin{minted}{latex}
+    \newcommand{\Rn}{\ensuremath{\mathbb{R}^n}}
+    Kjer je matrika s koeficienti iz \Rn, $b \in \Rn$ je stolpec skalarjev,
+    $x \in \Rn$ pa stolpec neznank.
+    \end{minted}
+    \newcommand{\Rn}{\ensuremath{\mathbb{R}^n}}
+    Kjer je matrika s koeficienti iz \Rn, $b \in \Rn$ je stolpec skalarjev, $x \in \Rn$ pa stolpec neznank.
+    \end{sprejemljivoenv}
+
+    \begin{dobroenv}[Bolje]
+    \begin{minted}{latex}
+    \newcommand{\Rn}{\mathbb{R}^n}
+    Kjer je matrika s koeficienti iz $\Rn$, $b \in \Rn$ je stolpec skalarjev,
+    $x \in \Rn$ pa stolpec neznank.
+    \end{minted}
+    \newcommand{\Rn}{\mathbb{R}^n}
+    Kjer je matrika s koeficienti iz $\Rn$, $b \in \Rn$ je stolpec skalarjev, $x \in \Rn$ pa stolpec neznank.
+    \end{dobroenv}
+\end{frame}
+
+\end{document}

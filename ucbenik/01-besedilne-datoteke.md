@@ -105,7 +105,7 @@ Barve, ki jih pri tem vidite, niso shranjene v datoteki: urejevalnik jih sproti 
 
 Glavni deli uporabniškega vmesnika VSCode so:
 
-- opravilni stolpec (angl. _Activity Bar_), v katerem preklapljate med različnimi pogledi stranskega menija, kot so datoteke (angl. _Explorer_), upravljanje različic (angl. _Source Control_) in razširitve (angl. _Extensions_),
+- opravilni stolpec (angl. _Activity Bar_), v katerem preklapljate med različnimi pogledi stranskega menija, kot so datotečni pogled (angl. _Explorer_), upravljanje različic (angl. _Source Control_) in razširitve (angl. _Extensions_),
 - glavni stranski meni (angl. _Primary Side Bar_), ki prikazuje izbrani pogled,
 - skupine urejevalnikov (angl. _Editor Groups_), v katerih urejate odprte datoteke,
 - podokno (angl. _Panel_), ki vsebuje npr. ukazno vrstico in sporočila o napakah,
