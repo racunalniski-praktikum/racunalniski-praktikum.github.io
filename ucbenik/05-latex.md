@@ -320,6 +320,9 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
    Kjer v besedilu najdete dva vprašaja `??`, ju nadomestite z ustreznim
    matematičnim izrazom.
    Dva izraza stojita sama v svoji vrstici: tam uporabite prikazni način, pri vseh ostalih pa vrstičnega.
+   Kako v matematičnem izrazu zapišete besede, preberite v razdelku *Osnovna matematika*
+   v pregledni datoteki `2-matematika.tex`.
+   Ukaz, ki ga tam najdete, potrebuje paket `amsmath`, ki ga vključite v preambulo.
 8. V besedilu je *16* vezajev in pomišljajev, ki so vsi napisani z znakom `-`.
    Pomišljaje popravite, vezaje pa pustite takšne, kot so.
    Popravite lahko vse naenkrat s pomočjo iskanja in zamenjave.
