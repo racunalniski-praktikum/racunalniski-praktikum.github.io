@@ -1,4 +1,4 @@
-# Slike, enačbe in okolja
+# Slike
 
 `````{admonition} Programska oprema
 :class: important
@@ -34,11 +34,11 @@ Pisanje novih okolij je lahko zahtevno, zato si ga lahko takole razbijemo na man
 
 ## 1. naloga: uvodne naloge
 
-Nadaljujemo z nalogo Magični kvadrati iz [prejšnjega poglavja](06-sklicevanje-in-okolja.md).
+Nadaljujemo z nalogo Magični kvadrati iz [prejšnjega poglavja](06-sklicevanje-in-definicije.md).
 Datoteka `magic.tex` vsebuje rešitev tamkajšnjih nalog in navodila za nove.
 Pripravite jo tako, da boste z njo dobili PDF dokument, čim bolj podoben datoteki `magic-resitev.pdf`.
 
-- V glavni imenik repozitorija odpakirajte arhiv [`07-magicni-kvadrati.zip`](07-slike-enacbe-in-okolja/07-magicni-kvadrati.zip)
+- V glavni imenik repozitorija odpakirajte arhiv [`07-magicni-kvadrati.zip`](07-slike/07-magicni-kvadrati.zip)
   v imenik `07-magicni-kvadrati` z datotekami za nalogo Magični kvadrati.
 - Med njimi je slika `slika.pdf`, ki jo boste vključili v dokument.
   Vaša datoteka `.gitignore` izključuje vse PDF-je, zato vanjo za vrstico `*.pdf` dodajte vrstico `!slika.pdf`
