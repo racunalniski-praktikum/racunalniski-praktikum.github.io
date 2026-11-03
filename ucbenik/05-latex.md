@@ -139,7 +139,7 @@ Za besedilo v slovenščini v preambulo vključimo tri pakete:
 \usepackage[T1]{fontenc}
 ```
 
-Paket `babel` z nastavitvijo `slovene` poskrbi za deljenje besed in slovenske napise (na primer _Kazalo_),
+Paket `babel` z nastavitvijo `slovene` poskrbi za deljenje besed, slovenske napise (na primer _Kazalo_) in slovenske narekovaje,
 `inputenc` z nastavitvijo `utf8` pove, v katerem kodiranju je zapisana datoteka,
 `fontenc` z nastavitvijo `T1` pa poskrbi, da so šumniki v PDF-ju pravi znaki in ne sestavljeni iz črke in strešice.
 
@@ -320,6 +320,9 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
    Kjer v besedilu najdete dva vprašaja `??`, ju nadomestite z ustreznim
    matematičnim izrazom.
    Dva izraza stojita sama v svoji vrstici: tam uporabite prikazni način, pri vseh ostalih pa vrstičnega.
+   Kako v matematičnem izrazu zapišete besede, preberite v razdelku *Osnovna matematika*
+   v pregledni datoteki `2-matematika.tex`.
+   Ukaz, ki ga tam najdete, potrebuje paket `amsmath`, ki ga vključite v preambulo.
 8. V besedilu je *16* vezajev in pomišljajev, ki so vsi napisani z znakom `-`.
    Pomišljaje popravite, vezaje pa pustite takšne, kot so.
    Popravite lahko vse naenkrat s pomočjo iskanja in zamenjave.
@@ -327,6 +330,7 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
    poskrbite, da bodo ti pravilni slovenski.
    Uporabite iskanje in zamenjavo z regularnimi izrazi:
    vzorec iz 6. točke morate samo malo popraviti.
+   Če se namesto narekovajev v PDF-ju izpišejo drugi znaki, preverite, katere pakete ste vključili v preambulo.
 10. Poskrbite, da presledki za pikami, ki ne pomenijo konca stavka, ne bodo
     preveliki. Taki so na primer presledki v datumu ter za kraticami npr. in t.i.
     Pomagate si lahko z iskanjem in zamenjavo z regularnimi izrazi;
