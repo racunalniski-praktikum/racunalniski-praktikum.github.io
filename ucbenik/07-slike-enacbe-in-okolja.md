@@ -80,17 +80,18 @@ Sledite naslednjim korakom; tako zaporedje lahko uporabite vsakič, ko definirat
     `⟨st-argumentov⟩` z `1`.
 4.  Zamenjajte `⟨definicija⟩` z oblikovanim besedilom iz prve definicije
     (`\emph{\color{purple}Magični kvadrat}`).
-5.  V prvi definiciji pobrišite `\color{purple}` in zamenjajte vse pojavitve ukaza `emph`
-    z ukazom `pojem`, ki ste ga ravno definirali.
+5.  V prvi definiciji pobrišite `\color{purple}`. Nato v besedilu dokumenta
+    (za `\begin{document}`) zamenjajte vse pojavitve ukaza `emph` z ukazom `pojem`,
+    ki ste ga ravno definirali; v definiciji ukaza v preambuli naj `\emph` ostane.
     LaTeX bo med prevajanjem nadomestil vse pojavitve ukaza `pojem` (in argumentov)
     s tistim, kar ste napisali v definicijo novega ukaza.
     `````{admonition} Globalno spreminjanje ukaza `emph` v `pojem`
     :class: important
-    Če boste samo globalno zamenjali vse pojavitve `emph` v `pojem`, boste zamenjali tudi tisto v definiciji
-    in dobili `\newcommand{\pojem}[1]{\pojem{\color{purple}Magični kvadrat}}`.
-    Tu ukaz `pojem` kliče samega sebe, kar pomeni, da naj bi se `\pojem{Magični kvadrat}`
-    prevedel v `\pojem{\pojem{\pojem{` v neskončnost (kar v našem končnem svetu ni najbolje).
-    Preden dokument prevedete, preverite, da definicija ukaza `\pojem` ne kliče samega sebe, temveč ukaz `\emph`.
+    Če bi zamenjali tudi `emph` v preambuli, bi dobili ukaz
+    `\newcommand{\pojem}[1]{\pojem{\color{purple}Magični kvadrat}}`, ki kliče samega sebe:
+    `\pojem{Magični kvadrat}` bi se prevajal v `\pojem{\pojem{\pojem{` v neskončnost
+    (kar v našem končnem svetu ni najbolje). Preden dokument prevedete, preverite,
+    da definicija ukaza `\pojem` kliče ukaz `\emph`, ne samega sebe.
     `````
 6.  Če prevedete datoteko in pogledate PDF, boste opazili, da so zdaj vsi pojmi `Magični kvadrat`!
     To popravite tako, da v definiciji ukaza besedilo `Magični kvadrat` nadomestite z `#1`.
