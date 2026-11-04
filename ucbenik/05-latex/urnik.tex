@@ -99,6 +99,7 @@ katere podatke naj vsebujejo.
 % Kot pri razdelkih si pomagajte z orodjem _Replace_ in regularnimi izrazi - 
 % prav vam bo prišel isti vzorec za poljuben niz znakov, le da bo zdaj obdan z dvema poševnicama.
 
+% začetek okolja itemize
    Razred /Profesor/ vsebuje osebne podatke profesorja (ime in priimek) ter
    podatke o predmetih, ki jih predava. Hkrati moramo za vsako uro v tednu vedeti, če
    je profesor takrat že zaseden, da mu slučajno ne bi dodelili dveh predavanj v istem
@@ -116,6 +117,7 @@ katere podatke naj vsebujejo.
    objekta je smiselno navesti ime predmeta ter tedensko število ur njegove izvedbe.
    Zanima nas tudi, katerim skupinam je predmet namenjen, ter v katerem semestru se bo
    predaval.
+% konec okolja itemize
 
 % Spodnja vrstica ne začne novega odstavka, zato ne bi smela biti zamaknjena.
 % To popravite z ukazom `\noindent` ali pa tako, da odstranite prazno vrstico.
@@ -130,8 +132,9 @@ koliko ur na teden obravnavamo. Ker se šolski tedni periodično ponavljajo, je 
 dovolj, če podamo zasedenost le za en teden.
 
 
-% Besede `bool`, `true`, `false` v spodnjem odstavku naj bodo napisane v pisavi 
-% za izvorno kodo.
+% Besede `bool`, `true`, `false` v spodnjem odstavku naj bodo napisane v pisavi
+% fiksne širine, kakršno uporabljamo za izvorno kodo. Ukaz poiščite v razdelku
+% Izbira in velikost pisave v pregledni datoteki `1-osnove.tex`.
 Tip vrednosti tabele ni striktno določen. Tako bi nekateri programerji uporabili
 celoštevilsko tabelo, kjer bi vrednost 1 pomenila, da je oseba zasedena, vrednost 0
 pa bi predstavljala njeno dosegljivost. Podobno bi postopali, če bi izbrali logični
