@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+
+
+<html lang="sl" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sklicevanje in okolja &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=db6da3aa" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=a3a20203"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=852ec8ec"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '06-sklicevanje-in-okolja';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Abecedni seznam" href="genindex.html" />
+    <link rel="search" title="Išči" href="search.html" />
+    <link rel="next" title="Nameščanje programske opreme" href="A-programska-oprema.html" />
+    <link rel="prev" title="Uvod v LaTeX" href="05-latex.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="sl"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-besedilne-datoteke.html">Besedilne datoteke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-ukazna-vrstica.html">Ukazna vrstica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-upravljanje-razlicic.html">Upravljanje različic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-html.html">Označevalni jezik HTML</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matematični dokumenti</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05-latex.html">Uvod v LaTeX</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sklicevanje in okolja</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="H-regex.html">Regularni izrazi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L-latex.html">LaTeX: pogosta vprašanja in reševanje težav</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Prenesite to stran">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/06-sklicevanje-in-okolja.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Prenesite izvorno datoteko"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Natisni v PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Celozaslonski način"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sklicevanje in okolja</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Vsebina </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magicni-kvadrati">Magični kvadrati</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-uvodne-naloge">1. naloga: uvodne naloge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-okolja-ams">2. naloga: okolja AMS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-seznam-literature">3. naloga: seznam literature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-tabela-in-magicni-kvadrat">4. naloga: tabela in magični kvadrat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-sklici">5. naloga: sklici</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-definicija-novega-ukaza-za-magicno-konstanto">6. naloga: definicija novega ukaza za magično konstanto</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sklicevanje-in-okolja">
+<h1>Sklicevanje in okolja<a class="headerlink" href="#sklicevanje-in-okolja" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-latex"><span class="std std-ref">LaTeX</span></a>,</p></li>
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-vscode"><span class="std std-ref">Visual Studio Code</span></a> in</p></li>
+<li><p>razširitev <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop</a>.</p></li>
+</ul>
+</div>
+<section id="magicni-kvadrati">
+<h2>Magični kvadrati<a class="headerlink" href="#magicni-kvadrati" title="Link to this heading">#</a></h2>
+<p>Datoteko <code class="docutils literal notranslate"><span class="pre">magic.tex</span></code> pripravite tako, da boste z njo dobili PDF dokument,
+čim bolj podoben datoteki <code class="docutils literal notranslate"><span class="pre">magic-resitev.pdf</span></code>.
+Pomagajte si s preglednimi datotekami, ki ste jih na prejšnjih vajah shranili v imenik <code class="docutils literal notranslate"><span class="pre">latex-pregled</span></code>
+(predvsem <code class="docutils literal notranslate"><span class="pre">2-matematika.tex</span></code>, <code class="docutils literal notranslate"><span class="pre">3-tabele.tex</span></code> in <code class="docutils literal notranslate"><span class="pre">4-citati.tex</span></code>).
+Če jih še nimate, v glavni imenik repozitorija odpakirajte arhiv <a class="reference download internal" download="" href="_downloads/ecb8c0ecdd0c7f43790af37c31db8614/latex-pregled.zip"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">latex-pregled.zip</span></code></span></a> v imenik <code class="docutils literal notranslate"><span class="pre">latex-pregled</span></code>.</p>
+<p>Pregledne datoteke so dokumenti LaTeX, v katerih vsak razdelek na delujočem primeru pokaže eno stvar:
+izrek in dokaz, tabelo, sliko, seznam literature.
+Razlage so v komentarjih, primeri v besedilu.
+Prevedite jih in si oglejte PDF, da vidite, kaj vse znajo;
+ko želite vedeti, kako je kaj narejeno, pa odprite datoteko <code class="docutils literal notranslate"><span class="pre">.tex</span></code>.
+Kadar v nalogi piše, naj preberete del katere od preglednih datotek, je torej mišljena datoteka <code class="docutils literal notranslate"><span class="pre">.tex</span></code>, ne PDF.</p>
+<p>Poleg tega vam morda pridejo prav tudi naslednji viri:</p>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="_downloads/4221edab1465f15b6619c674bb758d1b/LaTeX_Simboli.pdf"><span class="xref download myst">tabela matematičnih simbolov</span></a>,</p></li>
+<li><p><strong>na lastno odgovornost</strong> lahko uporabite orodje <a class="reference external" href="https://detexify.kirelabs.org/classify.html">Detexify</a> (na primer, ukaza <code class="docutils literal notranslate"><span class="pre">in</span></code> in <code class="docutils literal notranslate"><span class="pre">epsilon</span></code> izpišeta podobna znaka, ampak v vsaki situaciji je samo en od teh znakov pravi),</p></li>
+<li><p><a class="reference external" href="https://www.tablesgenerator.com/">generator tabel</a> pride včasih prav,</p></li>
+<li><p>na portalu <a class="reference external" href="https://www.overleaf.com">Overleaf</a> je zelo dobra <a class="reference external" href="https://www.overleaf.com/learn">dokumentacija</a>.</p></li>
+</ul>
+<p>Kjer v besedilu naletite na niz <code class="docutils literal notranslate"><span class="pre">!!</span></code>, ga sproti nadomestite z matematičnim izrazom, ki ga preberete iz <code class="docutils literal notranslate"><span class="pre">magic-resitev.pdf</span></code>:
+vrstičnega zapišite med <code class="docutils literal notranslate"><span class="pre">\(</span></code> in <code class="docutils literal notranslate"><span class="pre">\)</span></code>, prikaznega med <code class="docutils literal notranslate"><span class="pre">\[</span></code> in <code class="docutils literal notranslate"><span class="pre">\]</span></code>;
+kjer <code class="docutils literal notranslate"><span class="pre">!!</span></code> že stoji v matematičnem okolju, vas na to opozori komentar.
+Ločilo, s katerim se stavek konča, sodi v izraz, kot v <a class="reference internal" href="05-latex.html"><span class="std std-doc">5. poglavju</span></a>.</p>
+<p>Preden odidete iz predavalnice, spremembe zabeležite in vnose pošljite na GitHub.</p>
+</section>
+<section id="naloga-uvodne-naloge">
+<h2>1. naloga: uvodne naloge<a class="headerlink" href="#naloga-uvodne-naloge" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>V glavni imenik repozitorija odpakirajte arhiv <a class="reference download internal" download="" href="_downloads/208d1d96b95d163a8f39997416f30933/06-magicni-kvadrati.zip"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">06-magicni-kvadrati.zip</span></code></span></a>
+v imenik <code class="docutils literal notranslate"><span class="pre">06-magicni-kvadrati</span></code> z datotekami za nalogo Magični kvadrati.</p></li>
+<li><p>Odprite <code class="docutils literal notranslate"><span class="pre">magic.tex</span></code> in jo prevedite.
+Primerjajte PDF z datoteko <code class="docutils literal notranslate"><span class="pre">magic-resitev.pdf</span></code>, da vidite, kaj je treba še narediti.</p></li>
+<li><p>Rešite prvi sklop nalog: tri kratke naloge na začetku datoteke, označene s komentarji <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">1.</span> <span class="pre">naloga</span></code> do <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">3.</span> <span class="pre">naloga</span></code>.
+Po vsaki prevedite in preverite rezultat.</p></li>
+<li><p>Zabeležite spremembe.</p></li>
+</ul>
+</section>
+<section id="naloga-okolja-ams">
+<h2>2. naloga: okolja AMS<a class="headerlink" href="#naloga-okolja-ams" title="Link to this heading">#</a></h2>
+<p>V tej nalogi boste pripravili in uporabili okolji za definicije in izreke.</p>
+<ol class="arabic simple">
+<li><p>Preberite razdelek <em>Izreki in dokazi</em> v datoteki <code class="docutils literal notranslate"><span class="pre">2-matematika.tex</span></code>.
+Poglejte tudi preambulo te datoteke in bodite pozorni na to, kako sta uporabljena ukaza <code class="docutils literal notranslate"><span class="pre">theoremstyle</span></code> in <code class="docutils literal notranslate"><span class="pre">newtheorem</span></code>.
+Več primerov lahko najdete tudi na
+<a class="reference external" href="https://www.overleaf.com/learn/latex/Theorems_and_proofs#Theorem_styles">Overleaf-u</a>.</p></li>
+<li><p>Ukaza sta v paketu <code class="docutils literal notranslate"><span class="pre">amsthm</span></code>, zato ga vključite v preambuli.
+Nato definirajte okolje <code class="docutils literal notranslate"><span class="pre">definicija</span></code> s slogom <code class="docutils literal notranslate"><span class="pre">definition</span></code>,
+ki na začetku okolja izpiše besedo <code class="docutils literal notranslate"><span class="pre">Definicija</span></code>, in
+okolje <code class="docutils literal notranslate"><span class="pre">izrek</span></code> s slogom <code class="docutils literal notranslate"><span class="pre">plain</span></code>, ki na začetku okolja izpiše besedo <code class="docutils literal notranslate"><span class="pre">Izrek</span></code>.
+Za razliko od pregledne datoteke naj bosta okolji oštevilčeni zaporedno po celem dokumentu,
+vsako s svojim števcem (izpustite argumenta <code class="docutils literal notranslate"><span class="pre">[section]</span></code> in <code class="docutils literal notranslate"><span class="pre">[izrek]</span></code>).</p></li>
+<li><p>Uporabite okolje <code class="docutils literal notranslate"><span class="pre">definicija</span></code>.
+Začetki in konci okolij so v dokumentu že pripravljeni kot komentarji, le odkomentirati jih morate.
+Ker jih je veliko, to naredite z iskanjem in zamenjavo
+(<kbd>Ctrl</kbd>+<kbd>H</kbd> oz. 🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>F</kbd>):
+v polje za iskanje napišite <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">\begin{definicija}</span></code>, v polje za zamenjavo <code class="docutils literal notranslate"><span class="pre">\begin{definicija}</span></code>
+in zamenjajte vse pojavitve (gumb <em>Replace All</em>).
+Nato enako ponovite za <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">\end{definicija}</span></code>.</p></li>
+<li><p>Izrek označite sami: izberite besedilo med komentarjema <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">Začetek</span> <span class="pre">okolja</span> <span class="pre">izrek</span></code> in <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">Konec</span> <span class="pre">okolja</span> <span class="pre">izrek</span></code>
+in ga obdajte z okoljem <code class="docutils literal notranslate"><span class="pre">izrek</span></code> s paleto ukazov
+(<code class="docutils literal notranslate"><span class="pre">latex</span> <span class="pre">surround</span></code>, ukaz, ki doda <code class="docutils literal notranslate"><span class="pre">\begin{}</span></code> in <code class="docutils literal notranslate"><span class="pre">\end{}</span></code>; opis je v <a class="reference internal" href="D-paleta-ukazov.html#paleta-ukazov-latex"><span class="std std-ref">plonkcu</span></a>).</p></li>
+<li><p>Označite še dokaz z okoljem <code class="docutils literal notranslate"><span class="pre">proof</span></code> (začetek in konec sta označena s komentarjem <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">Začetek/Konec</span> <span class="pre">dokaza</span></code>).</p></li>
+<li><p>Prevedite in preverite: definicije in izrek morajo biti oštevilčeni, dokaz pa se mora končati s kvadratkom.</p></li>
+<li><p>Zabeležite spremembe.</p></li>
+</ol>
+</section>
+<section id="naloga-seznam-literature">
+<h2>3. naloga: seznam literature<a class="headerlink" href="#naloga-seznam-literature" title="Link to this heading">#</a></h2>
+<p>LaTeX v seznam literature uvrsti samo dela, na katera se v besedilu skličete z ukazom <code class="docutils literal notranslate"><span class="pre">cite</span></code>.
+Če uporabite samo ukaza <code class="docutils literal notranslate"><span class="pre">bibliographystyle</span></code> in <code class="docutils literal notranslate"><span class="pre">bibliography</span></code>, se zato ne izpiše nič.</p>
+<ol class="arabic simple">
+<li><p>Preberite datoteko <code class="docutils literal notranslate"><span class="pre">4-citati.tex</span></code> in bodite pozorni na to,
+kako se v njej uporablja ukaz <code class="docutils literal notranslate"><span class="pre">cite</span></code> ter
+ukaza <code class="docutils literal notranslate"><span class="pre">bibliographystyle</span></code> in <code class="docutils literal notranslate"><span class="pre">bibliography</span></code>.</p></li>
+<li><p>V datoteki <code class="docutils literal notranslate"><span class="pre">magic.tex</span></code> poiščite komentarje <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">ključ</span></code> na koncu odstavkov.
+V teh odstavkih zamenjajte vsak niz <code class="docutils literal notranslate"><span class="pre">???</span></code> z ukazom <code class="docutils literal notranslate"><span class="pre">cite</span></code> s ključem iz komentarja.
+Če je v odstavku več nizov <code class="docutils literal notranslate"><span class="pre">???</span></code>, sodi prvi ključ k prvemu, drugi k drugemu in tako naprej.</p></li>
+<li><p>Če zdaj prevedete datoteko, se seznam literature še ne izpiše.
+Na mestu komentarja <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">Tu</span> <span class="pre">vstavite</span> <span class="pre">bibliografijo</span></code> na koncu dokumenta dodajte ukaza
+<code class="docutils literal notranslate"><span class="pre">\bibliographystyle{siam}</span></code> in <code class="docutils literal notranslate"><span class="pre">\bibliography{magic}</span></code>
+(argument ukaza <code class="docutils literal notranslate"><span class="pre">bibliography</span></code> je ime datoteke <code class="docutils literal notranslate"><span class="pre">magic.bib</span></code> brez končnice).</p></li>
+<li><p>Prevedite in preverite: seznam literature mora našteti pet virov,
+v besedilu pa namesto <code class="docutils literal notranslate"><span class="pre">???</span></code> stojijo številke v oglatih oklepajih.</p></li>
+<li><p>Zabeležite spremembe.</p></li>
+</ol>
+</section>
+<section id="naloga-tabela-in-magicni-kvadrat">
+<h2>4. naloga: tabela in magični kvadrat<a class="headerlink" href="#naloga-tabela-in-magicni-kvadrat" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Preberite si razdelek <em>Okolji <code class="docutils literal notranslate"><span class="pre">table</span></code> in <code class="docutils literal notranslate"><span class="pre">tabular</span></code></em> v datoteki <code class="docutils literal notranslate"><span class="pre">3-tabele.tex</span></code>,
+pri čemer bodite pozorni na to, kako se pravilno gnezdi okolji <code class="docutils literal notranslate"><span class="pre">table</span></code> in <code class="docutils literal notranslate"><span class="pre">tabular</span></code>,
+ter v katerega od njih sodijo ukazi <code class="docutils literal notranslate"><span class="pre">centering</span></code>, <code class="docutils literal notranslate"><span class="pre">caption</span></code> in <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p></li>
+<li><p>V datoteki poiščite tabelo, ki je označena s komentarjem <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">Začetek</span> <span class="pre">tabele</span></code>,
+in njeno vsebino najprej označite z okoljem <code class="docutils literal notranslate"><span class="pre">tabular</span></code>.
+Okolje začnite z <code class="docutils literal notranslate"><span class="pre">\begin{tabular}{|l|c|c|c|c|c|c|}</span></code>: drugi argument pove,
+da ima tabela 7 stolpcev, od katerih je prvi levo poravnan (<code class="docutils literal notranslate"><span class="pre">l</span></code> za <em>left</em>),
+ostali pa sredinsko (<code class="docutils literal notranslate"><span class="pre">c</span></code> za <em>centered</em>).</p></li>
+<li><p>V vsaki vrstici tabele ločite celice z znakom <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>.
+Prva celica v prvi vrstici je prazna (nad <em>red</em> in <em>število kvadratov</em>), zato se vrstica začne z <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>.
+Druga celica te vrstice se razteza čez 5 stolpcev, kar naredite z ukazom
+<code class="docutils literal notranslate"><span class="pre">\multicolumn{5}{|c|}{točna</span> <span class="pre">vrednost}</span></code>; ta vrstica ima zato samo dva znaka <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>.
+Vsako vrstico zaključite z <code class="docutils literal notranslate"><span class="pre">\\</span></code>, ki naj mu sledi še ukaz <code class="docutils literal notranslate"><span class="pre">hline</span></code>, tako da bo na koncu vrstice pisalo <code class="docutils literal notranslate"><span class="pre">\\\hline</span></code>;
+ta ukaz izriše vodoravno črto.
+Za zgornjo črto dodajte <code class="docutils literal notranslate"><span class="pre">\hline</span></code> še takoj za <code class="docutils literal notranslate"><span class="pre">\begin{tabular}{…}</span></code>.</p></li>
+<li><p>Okolje <code class="docutils literal notranslate"><span class="pre">tabular</span></code> označite z okoljem <code class="docutils literal notranslate"><span class="pre">table</span></code>.
+Okolje začnite z <code class="docutils literal notranslate"><span class="pre">\begin{table}[!ht]</span></code>: dodatek v oglatih oklepajih pove,
+naj LaTeX tabelo postavi sem (<code class="docutils literal notranslate"><span class="pre">h</span></code>, <em>here</em>) ali vsaj na vrh strani (<code class="docutils literal notranslate"><span class="pre">t</span></code>, <em>top</em>).
+Vanj dodajte ukaz <code class="docutils literal notranslate"><span class="pre">centering</span></code>, napis nad tabelo z ukazom <code class="docutils literal notranslate"><span class="pre">caption</span></code> in oznako z ukazom <code class="docutils literal notranslate"><span class="pre">label</span></code>;
+besedilo napisa in oznaka sta v komentarju nad tabelo.</p></li>
+<li><p>Tabelo polepšajte s paketom <code class="docutils literal notranslate"><span class="pre">booktabs</span></code>; po vsakem od naslednjih korakov si oglejte PDF.
+Najprej paket vključite in v tej tabeli pobrišite vse ukaze <code class="docutils literal notranslate"><span class="pre">hline</span></code>.</p></li>
+<li><p>Popravite začetek okolja <code class="docutils literal notranslate"><span class="pre">tabular</span></code> na <code class="docutils literal notranslate"><span class="pre">\begin{tabular}{lcccccc}\toprule</span></code>.</p></li>
+<li><p>Popravite celico v glavi, ki je razširjena na 5 stolpcev,
+tako da bo drugi argument ukaza <code class="docutils literal notranslate"><span class="pre">multicolumn</span></code> <code class="docutils literal notranslate"><span class="pre">c</span></code> (namesto <code class="docutils literal notranslate"><span class="pre">|c|</span></code>).</p></li>
+<li><p>Za prvo vrstico dodajte ukaz <code class="docutils literal notranslate"><span class="pre">midrule</span></code>, za zadnjo vrstico,
+tik pred koncem okolja <code class="docutils literal notranslate"><span class="pre">tabular</span></code>, pa še ukaz <code class="docutils literal notranslate"><span class="pre">bottomrule</span></code>.</p></li>
+</ol>
+<p>Zdaj pa oblikujte še magični kvadrat.
+Označen je s komentarjem <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">Začetek</span> <span class="pre">magičnega</span> <span class="pre">kvadrata</span></code>, napis in oznaka sta v komentarju nad njim.</p>
+<ol class="arabic simple" start="9">
+<li><p>Odkomentirajte tri vrstice s števili in jih označite z okoljem <code class="docutils literal notranslate"><span class="pre">tabular</span></code>
+s tremi sredinsko poravnanimi stolpci ter navpičnimi in vodoravnimi črtami.</p></li>
+<li><p>Kot pri prejšnji tabeli dodajte okolje <code class="docutils literal notranslate"><span class="pre">table</span></code>, napis in oznako ter poravnavo na sredino.</p></li>
+<li><p>Številke povečajte z ukazom <code class="docutils literal notranslate"><span class="pre">\large</span></code> pred <code class="docutils literal notranslate"><span class="pre">\begin{tabular}</span></code> in <code class="docutils literal notranslate"><span class="pre">\normalsize</span></code> za <code class="docutils literal notranslate"><span class="pre">\end{tabular}</span></code>.</p></li>
+<li><p>Prevedite in preverite: obe tabeli morata biti oštevilčeni in imeti napis nad vsebino.</p></li>
+<li><p>Zabeležite spremembe.</p></li>
+</ol>
+</section>
+<section id="naloga-sklici">
+<h2>5. naloga: sklici<a class="headerlink" href="#naloga-sklici" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Preberite razdelek <em>Citati in reference</em> na koncu datoteke <code class="docutils literal notranslate"><span class="pre">2-matematika.tex</span></code>:
+v njem so uporabljeni vsi trije ukazi za sklicevanje iz te naloge.</p></li>
+<li><p>V okoljih <code class="docutils literal notranslate"><span class="pre">equation</span></code> dodajte oznaki z ukazom <code class="docutils literal notranslate"><span class="pre">label</span></code>, da se boste lahko sklicevali na enačbi;
+vrednosti oznak sta v komentarjih v okoljih.</p></li>
+<li><p>Povsod, kjer se v besedilu nahaja <code class="docutils literal notranslate"><span class="pre">??</span></code>, dodajte sklic na tabelo ali enačbo.
+Katera oznaka je prava, piše v komentarju <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">sklic</span></code> na koncu odstavka.</p>
+<ul class="simple">
+<li><p>Za sklice na tabele uporabite ukaz <code class="docutils literal notranslate"><span class="pre">ref</span></code>.</p></li>
+<li><p>Za sklice na enačbe uporabite ukaz <code class="docutils literal notranslate"><span class="pre">eqref</span></code> iz paketa <code class="docutils literal notranslate"><span class="pre">amsmath</span></code>
+(tega je treba vključiti pred paketom <code class="docutils literal notranslate"><span class="pre">amsthm</span></code>).</p></li>
+<li><p>Kjer piše <em>na strani</em> <code class="docutils literal notranslate"><span class="pre">??</span></code>, uporabite ukaz <code class="docutils literal notranslate"><span class="pre">pageref</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Prevedite in preverite: v PDF-ju ne sme ostati noben <code class="docutils literal notranslate"><span class="pre">??</span></code> ali <code class="docutils literal notranslate"><span class="pre">!!</span></code>.</p></li>
+<li><p>Zabeležite spremembe.</p></li>
+</ol>
+</section>
+<section id="naloga-definicija-novega-ukaza-za-magicno-konstanto">
+<h2>6. naloga: definicija novega ukaza za magično konstanto<a class="headerlink" href="#naloga-definicija-novega-ukaza-za-magicno-konstanto" title="Link to this heading">#</a></h2>
+<p>Polepšajmo oznako <span class="math notranslate nohighlight">\(M_2\)</span>: definirali boste nov ukaz, ki jo izpiše.
+Ukaz si lahko predstavljate kot okrajšavo za tisto, kar napišete v njegovo definicijo.</p>
+<ol class="arabic simple">
+<li><p>Preberite razdelek <em>Makroji</em> v datoteki <code class="docutils literal notranslate"><span class="pre">2-matematika.tex</span></code>.</p></li>
+<li><p>Poiščite prvo pojavitev izraza <code class="docutils literal notranslate"><span class="pre">M_2</span></code>.</p></li>
+<li><p>Oblikujte oznako <code class="docutils literal notranslate"><span class="pre">M_2</span></code> tako, da bo črka M napisana s pisano črko.
+Ukaz poiščite v razdelku <em>Osnovna matematika</em> v datoteki <code class="docutils literal notranslate"><span class="pre">2-matematika.tex</span></code>.</p></li>
+<li><p>V preambulo napišite osnutek definicije novega ukaza:
+<code class="docutils literal notranslate"><span class="pre">\newcommand{\⟨ime-ukaza⟩}{⟨definicija⟩}</span></code>.
+Osnutek popravite tako, da <code class="docutils literal notranslate"><span class="pre">⟨ime-ukaza⟩</span></code> zamenjate z <code class="docutils literal notranslate"><span class="pre">m</span></code>
+(uporabljali ga boste z <code class="docutils literal notranslate"><span class="pre">\m</span></code>), <code class="docutils literal notranslate"><span class="pre">⟨definicija⟩</span></code> pa z oblikovano oznako iz 3. koraka.</p></li>
+<li><p>Zamenjajte vse pojavitve <code class="docutils literal notranslate"><span class="pre">M_2</span></code> z ukazom <code class="docutils literal notranslate"><span class="pre">\m</span></code>,
+tudi tisto, ki ste jo v 3. koraku oblikovali na roko.</p></li>
+<li><p>Prevedite in preverite: črka M v oznaki je povsod pisana, tudi v izreku in v prikazani formuli.</p></li>
+<li><p>Zabeležite spremembe in vnose pošljite na GitHub.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05-latex.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">nazaj</p>
+        <p class="prev-next-title">Uvod v LaTeX</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="A-programska-oprema.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">naprej</p>
+        <p class="prev-next-title">Nameščanje programske opreme</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Vsebina
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magicni-kvadrati">Magični kvadrati</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-uvodne-naloge">1. naloga: uvodne naloge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-okolja-ams">2. naloga: okolja AMS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-seznam-literature">3. naloga: seznam literature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-tabela-in-magicni-kvadrat">4. naloga: tabela in magični kvadrat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-sklici">5. naloga: sklici</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-definicija-novega-ukaza-za-magicno-konstanto">6. naloga: definicija novega ukaza za magično konstanto</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Avtor Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
