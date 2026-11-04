@@ -173,6 +173,7 @@ da so vsi pravilno oštevilčeni ipd.
 Isto velja za poudarke: nov pojem v besedilu označimo z ukazom `\emph`, ki pove, da je beseda poudarjena,
 in ne z ukazom `\textit`, ki pove samo, da je ležeča.
 
+(latex:pomisljaji-narekovaji-presledki)=
 ## Pomišljaji, narekovaji in presledki
 
 Nekaj znakov LaTeX stavi drugače, kot jih natipkamo.
@@ -324,10 +325,12 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
    v pregledni datoteki `2-matematika.tex`.
    Ukaz, ki ga tam najdete, potrebuje paket `amsmath`, ki ga vključite v preambulo.
 8. V besedilu je *16* vezajev in pomišljajev, ki so vsi napisani z znakom `-`.
-   Pomišljaje popravite, vezaje pa pustite takšne, kot so.
+   Pomišljaje popravite, vezaje pa pustite takšne, kot so
+   (razdelek [Pomišljaji, narekovaji in presledki](latex:pomisljaji-narekovaji-presledki)).
    Popravite lahko vse naenkrat s pomočjo iskanja in zamenjave.
 9. Na dveh mestih je del besedila zapisan v dvojnih narekovajih;
-   poskrbite, da bodo ti pravilni slovenski.
+   poskrbite, da bodo ti pravilni slovenski
+   (razdelek [Pomišljaji, narekovaji in presledki](latex:pomisljaji-narekovaji-presledki)).
    Uporabite iskanje in zamenjavo z regularnimi izrazi:
    vzorec iz 6. točke morate samo malo popraviti.
    Če se namesto narekovajev v PDF-ju izpišejo drugi znaki, preverite, katere pakete ste vključili v preambulo.
