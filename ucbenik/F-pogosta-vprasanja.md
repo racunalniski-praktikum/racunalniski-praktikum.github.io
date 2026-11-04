@@ -22,6 +22,16 @@ Za odpakiranje arhiva desno kliknete na arhiv in izberete "Extract All..."
 
 Odvisno programov, ki jih imate nameščene, morda zadošča že kar, da dvakrat kliknete na arhiv.
 
+(faq:zip-ustvari)=
+### Kako naredim arhiv
+
+Ko oddajate več datotek v enem arhivu, bodo navodila pogosto zahtevala, da mora biti vsaka datoteka neposredno v arhivu, ne v kakem podimeniku.
+
+- **Windows:** v Raziskovalcu označite datoteke (prvo kliknite, pri ostalih držite <kbd>Ctrl</kbd>), desno kliknite na eno od označenih in izberite _Compress to ZIP file_ (v starejših različicah _Send to_ › _Compressed (zipped) folder_).
+  Arhiv dobi ime prve označene datoteke; preimenujte ga.
+- **macOS:** v Finderju označite datoteke (prvo kliknite, pri ostalih držite <kbd>Cmd</kbd>), desno kliknite na eno od označenih in izberite _Compress N Items_.
+  Nastane `Archive.zip`; preimenujte ga.
+
 
 (faq:koncnice-skrite)=
 ## Končnice datotek in skrite datoteke
