@@ -174,7 +174,7 @@ vsebuje \href{https://www.fmf.uni-lj.si/}{povezave},
   \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{\LaTeX\ vrstice stavi sam}
+\begin{frame}[fragile]{Nove odstavke naredimo s prazno vrstico}
   \begin{slaboenv}
     \begin{minted}[fontsize=\footnotesize]{latex}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -216,27 +216,7 @@ est.
   \end{dobroenv}
 \end{frame}
 
-\begin{frame}[fragile]{Novih odstavkov se ne dela z \texttt{\textbackslash\textbackslash}}
-  \begin{sprejemljivoenv}
-    \begin{minted}[fontsize=\footnotesize]{latex}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Ut id viverra ligula. Phasellus vehicula lorem vitae luctus
-dignissim. \par
-Sed ac justo commodo, fringilla urna ac, efficitur leo.
-Praesent dui odio, accumsan ac sapien nec, interdum volutpat
-est.
-    \end{minted}
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Ut id viverra ligula. Phasellus vehicula lorem vitae luctus
-    dignissim. \par
-    Sed ac justo commodo, fringilla urna ac, efficitur leo.
-    Praesent dui odio, accumsan ac sapien nec, interdum volutpat
-    est.
-  \end{sprejemljivoenv}
-\end{frame}
-
-\begin{frame}[fragile]{Novih odstavkov se ne dela z \texttt{\textbackslash\textbackslash}}
+\begin{frame}[fragile]{Nove odstavke naredimo s prazno vrstico}
   \begin{slaboenv}
     \begin{minted}[fontsize=\footnotesize]{latex}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -256,24 +236,238 @@ est.
   \end{slaboenv}
 \end{frame}
 
-\begin{frame}[fragile]{Novih odstavkov se ne dela z \texttt{\textbackslash\textbackslash}}
-  \begin{slaboenv}
-    \begin{minted}[fontsize=\footnotesize]{latex}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Ut id viverra ligula. Phasellus vehicula lorem vitae luctus
-dignissim. \\[1ex]
-Sed ac justo commodo, fringilla urna ac, efficitur leo.
-Praesent dui odio, accumsan ac sapien nec, interdum volutpat
-est.
-    \end{minted}
+\begin{frame}[fragile]{Matematika}
+  \centering
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Ut id viverra ligula. Phasellus vehicula lorem vitae luctus
-    dignissim. \\[1ex]
-    Sed ac justo commodo, fringilla urna ac, efficitur leo.
-    Praesent dui odio, accumsan ac sapien nec, interdum volutpat
-    est.
-  \end{slaboenv}
+  $$e^{i \pi} + 1 = 0$$
+  \mintinline{latex}|e^{i \pi} + 1 = 0|
+
+  $$\lim_{x \to 0} \frac{\sin x}{x} = 1$$
+  \mintinline{latex}|\lim_{x \to 0} \frac{\sin x}{x} = 1|
+
+  $$\int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}$$
+  \mintinline{latex}|\int_{-\infty}^\infty e^{-x^2}\,dx = \sqrt{\pi}|
+
+\end{frame}
+
+\begin{frame}[fragile]{Vrstični in prikazni način}
+  Naj bodo \(a, b, c \in \mathbb{R}\). Tedaj je
+  \[
+    x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  \]
+  rešitev enačbe \(ax^2 + bx + c = 0\).
+
+  \begin{minted}{latex}
+Naj bodo \(a, b, c \in \mathbb{R}\). Tedaj je
+\[
+  x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+rešitev enačbe \(ax^2 + bx + c = 0\).
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Vrstični in prikazni način}
+  Naj bodo $a, b, c \in \mathbb{R}$. Tedaj je
+  $$
+  x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  $$
+  rešitev enačbe $ax^2 + bx + c = 0$.
+
+  \begin{minted}{latex}
+Naj bodo $a, b, c \in \mathbb{R}$. Tedaj je
+$$
+  x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+rešitev enačbe $ax^2 + bx + c = 0$.
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Vrstični in prikazni način}
+  Naj bodo $a, b, c \in \mathbb{R}$. Tedaj je
+  \[
+    x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  \]
+  rešitev enačbe $ax^2 + bx + c = 0$.
+
+  \begin{minted}{latex}
+Naj bodo $a, b, c \in \mathbb{R}$. Tedaj je
+\[
+  x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+rešitev enačbe $ax^2 + bx + c = 0$.
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Uporabiti morate ustrezne ukaze}
+  \begin{columns}[t]
+    \begin{column}{0.45\textwidth}
+      \begin{slaboenv}
+        \begin{minted}{latex}
+x \epsilon \mathbb{R}
+        \end{minted}
+        \[ x \epsilon \mathbb{R} \]
+      \end{slaboenv}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{dobroenv}
+        \begin{minted}{latex}
+x \in \mathbb{R}
+        \end{minted}
+        \[ x \in \mathbb{R} \]
+      \end{dobroenv}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Uporabiti morate ustrezne ukaze}
+  \begin{columns}[t]
+    \begin{column}{0.45\textwidth}
+      \begin{slaboenv}
+        \begin{minted}{latex}
+\Sigma_{i=1}^n a_i^2 = 42
+        \end{minted}
+        \[ \Sigma_{i=1}^n a_i^2 = 42 \]
+      \end{slaboenv}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{dobroenv}
+        \begin{minted}{latex}
+\sum_{i=1}^n a_i^2 = 42
+        \end{minted}
+        \[ \sum_{i=1}^n a_i^2 = 42 \]
+      \end{dobroenv}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Uporabiti morate ustrezne ukaze}
+  \begin{columns}[t]
+    \begin{column}{0.45\textwidth}
+      \begin{slaboenv}
+        \begin{minted}{latex}
+A \cap B = \phi
+        \end{minted}
+        \[ A \cap B = \phi \]
+      \end{slaboenv}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{dobroenv}
+        \begin{minted}{latex}
+A \cap B = \emptyset
+        \end{minted}
+        \[ A \cap B = \emptyset \]
+      \end{dobroenv}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Uporabiti morate ustrezne ukaze}
+  \begin{columns}[t]
+    \begin{column}{0.45\textwidth}
+      \begin{slaboenv}
+        \begin{minted}{latex}
+2 <x, y> + 3 <y, x>
+        \end{minted}
+        \[ 2 <x, y> + 3 <y, x> \]
+      \end{slaboenv}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{dobroenv}
+        \begin{minted}{latex}
+2 \langle x, y \rangle
++ 3 \langle y, x \rangle
+        \end{minted}
+        \[ 2 \langle x, y \rangle + 3 \langle y, x \rangle \]
+      \end{dobroenv}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Za matematične operacije uporabimo ustrezne ukaze}
+  \begin{columns}[t]
+    \begin{column}{0.45\textwidth}
+      \begin{slaboenv}
+        \begin{minted}{latex}
+sin x + sin (x + y)
+        \end{minted}
+        \[ sin x + sin (x + y) \]
+      \end{slaboenv}
+      \begin{slaboenv}
+        \begin{minted}{latex}
+sin~x + sin~(x + y)
+        \end{minted}
+        \[ sin~x + sin~(x + y) \]
+      \end{slaboenv}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{slaboenv}
+        \begin{minted}[fontsize=\footnotesize]{latex}
+\mathsf{sin}~x + \mathsf{sin}~(x + y)
+        \end{minted}
+        \[ \mathsf{sin}~x + \mathsf{sin}~(x + y) \]
+      \end{slaboenv}
+      \begin{dobroenv}
+        \begin{minted}{latex}
+\sin x + \sin (x + y)
+        \end{minted}
+        \[ \sin x + \sin (x + y) \]
+      \end{dobroenv}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Za sredinsko poravnane izraze uporabljamo prikazni način}
+  \begin{columns}[t]
+    \begin{column}{0.45\textwidth}
+      \begin{slaboenv}
+        \begin{minted}{latex}
+\begin{center}
+  \( e^{i \pi} + 1 = 0 \)
+\end{center}
+        \end{minted}
+        \begin{center}
+          \( e^{i \pi} + 1 = 0 \)
+        \end{center}
+      \end{slaboenv}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{dobroenv}
+        \begin{minted}{latex}
+\[
+  e^{i \pi} + 1 = 0
+\]
+        \end{minted}
+        \[ e^{i \pi} + 1 = 0 \]
+      \end{dobroenv}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Za sredinsko poravnane izraze uporabljamo prikazni način}
+  \begin{columns}[t]
+    \begin{column}{0.45\textwidth}
+      \begin{slaboenv}
+        \begin{minted}[fontsize=\footnotesize]{latex}
+\begin{center}
+  \( x_{1, 2} = … \)
+\end{center}
+        \end{minted}
+        \begin{center}
+          \( x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \)
+        \end{center}
+      \end{slaboenv}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{dobroenv}
+        \begin{minted}[fontsize=\footnotesize]{latex}
+\[
+  x_{1, 2} = …
+\]
+        \end{minted}
+        \[ x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+      \end{dobroenv}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}[fragile]{Struktura dokumenta}
@@ -368,228 +562,10 @@ dokument.tex
   Datoteka \texttt{.gitignore} velja samo za datoteke, ki jim Git še ne sledi.
 \end{frame}
 
-\begin{frame}[fragile]{Matematika}
-  \centering
-
-  $$e^{i \pi} + 1 = 0$$
-  \mintinline{latex}|e^{i \pi} + 1 = 0|
-
-  $$\lim_{x \to 0} \frac{\sin x}{x} = 1$$
-  \mintinline{latex}|\lim_{x \to 0} \frac{\sin x}{x} = 1|
-
-  $$\int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}$$
-  \mintinline{latex}|\int_{-\infty}^\infty e^{-x^2}\,dx = \sqrt{\pi}|
-
-\end{frame}
-
 \begin{frame}[fragile]
   \begin{center}
     \Huge \LaTeX\ izven \LaTeX a
   \end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Uporabiti morate ustrezne ukaze}
-  \begin{columns}[t]
-    \begin{column}{0.45\textwidth}
-      \begin{slaboenv}
-        \begin{minted}{latex}
-x \epsilon \mathbb{R}
-        \end{minted}
-        \[ x \epsilon \mathbb{R} \]
-      \end{slaboenv}
-    \end{column}
-    \begin{column}{0.45\textwidth}
-      \begin{dobroenv}
-        \begin{minted}{latex}
-x \in \mathbb{R}
-        \end{minted}
-        \[ x \in \mathbb{R} \]
-      \end{dobroenv}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}[fragile]{Uporabiti morate ustrezne ukaze}
-  \begin{columns}[t]
-    \begin{column}{0.45\textwidth}
-      \begin{slaboenv}
-        \begin{minted}{latex}
-\Sigma_{i=1}^n a_i^2 = 42
-        \end{minted}
-        \[ \Sigma_{i=1}^n a_i^2 = 42 \]
-      \end{slaboenv}
-    \end{column}
-    \begin{column}{0.45\textwidth}
-      \begin{dobroenv}
-        \begin{minted}{latex}
-\sum_{i=1}^n a_i^2 = 42
-        \end{minted}
-        \[ \sum_{i=1}^n a_i^2 = 42 \]
-      \end{dobroenv}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}[fragile]{Uporabiti morate ustrezne ukaze}
-  \begin{columns}[t]
-    \begin{column}{0.45\textwidth}
-      \begin{slaboenv}
-        \begin{minted}{latex}
-A \cap B = \phi
-        \end{minted}
-        \[ A \cap B = \phi \]
-      \end{slaboenv}
-    \end{column}
-    \begin{column}{0.45\textwidth}
-      \begin{dobroenv}
-        \begin{minted}{latex}
-A \cap B = \emptyset
-        \end{minted}
-        \[ A \cap B = \emptyset \]
-      \end{dobroenv}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}[fragile]{Uporabiti morate ustrezne ukaze}
-  \begin{columns}[t]
-    \begin{column}{0.45\textwidth}
-      \begin{slaboenv}
-        \begin{minted}{latex}
-2 < x, y > + 3 < y, x >
-        \end{minted}
-        \[ 2 < x, y > + 3 < y, x > \]
-      \end{slaboenv}
-    \end{column}
-    \begin{column}{0.45\textwidth}
-      \begin{dobroenv}
-        \begin{minted}{latex}
-2 \langle x, y \rangle
-+ 3 \langle y, x \rangle
-        \end{minted}
-        \[ 2 \langle x, y \rangle + 3 \langle y, x \rangle \]
-      \end{dobroenv}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}[fragile]{Za matematične operacije uporabimo ustrezne ukaze}
-  \begin{columns}[t]
-    \begin{column}{0.45\textwidth}
-      \begin{slaboenv}
-        \begin{minted}{latex}
-sin x + sin (x + y)
-        \end{minted}
-        \[ sin x + sin (x + y) \]
-      \end{slaboenv}
-      \begin{slaboenv}
-        \begin{minted}{latex}
-sin~x + sin~(x + y)
-        \end{minted}
-        \[ sin~x + sin~(x + y) \]
-      \end{slaboenv}
-    \end{column}
-    \begin{column}{0.45\textwidth}
-      \begin{slaboenv}
-        \begin{minted}[fontsize=\footnotesize]{latex}
-\mathsf{sin}~x + \mathsf{sin}~(x + y)
-        \end{minted}
-        \[ \mathsf{sin}~x + \mathsf{sin}~(x + y) \]
-      \end{slaboenv}
-      \begin{dobroenv}
-        \begin{minted}{latex}
-\sin x + \sin (x + y)
-        \end{minted}
-        \[ \sin x + \sin (x + y) \]
-      \end{dobroenv}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}[fragile]{Vrstični in prikazni način}
-  Naj bodo \(a, b, c \in \mathbb{R}\). Tedaj je
-  \[
-    x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-  \]
-  rešitev enačbe \(ax^2 + bx + c = 0\).
-
-  \begin{minted}{latex}
-Naj bodo \(a, b, c \in \mathbb{R}\). Tedaj je
-\[
-  x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-\]
-rešitev enačbe \(ax^2 + bx + c = 0\).
-  \end{minted}
-\end{frame}
-
-\begin{frame}[fragile]{Vrstični in prikazni način}
-  Naj bodo $a, b, c \in \mathbb{R}$. Tedaj je
-  $$
-  x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-  $$
-  rešitev enačbe $ax^2 + bx + c = 0$.
-
-  \begin{minted}{latex}
-Naj bodo $a, b, c \in \mathbb{R}$. Tedaj je
-$$
-  x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-$$
-rešitev enačbe $ax^2 + bx + c = 0$.
-  \end{minted}
-\end{frame}
-
-\begin{frame}[fragile]{Za sredinsko poravnane izraze uporabljamo prikazni način}
-  \begin{columns}[t]
-    \begin{column}{0.45\textwidth}
-      \begin{slaboenv}
-        \begin{minted}{latex}
-\begin{center}
-  \( e^{i \pi} + 1 = 0 \)
-\end{center}
-        \end{minted}
-        \begin{center}
-          \( e^{i \pi} + 1 = 0 \)
-        \end{center}
-      \end{slaboenv}
-    \end{column}
-    \begin{column}{0.45\textwidth}
-      \begin{dobroenv}
-        \begin{minted}{latex}
-\[
-  e^{i \pi} + 1 = 0
-\]
-        \end{minted}
-        \[ e^{i \pi} + 1 = 0 \]
-      \end{dobroenv}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}[fragile]{Za sredinsko poravnane izraze uporabljamo prikazni način}
-  \begin{columns}[t]
-    \begin{column}{0.45\textwidth}
-      \begin{slaboenv}
-        \begin{minted}[fontsize=\footnotesize]{latex}
-\begin{center}
-  \( x_{1, 2} = … \)
-\end{center}
-        \end{minted}
-        \begin{center}
-          \( x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \)
-        \end{center}
-      \end{slaboenv}
-    \end{column}
-    \begin{column}{0.45\textwidth}
-      \begin{dobroenv}
-        \begin{minted}[fontsize=\footnotesize]{latex}
-\[
-  x_{1, 2} = …
-\]
-        \end{minted}
-        \[ x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
-      \end{dobroenv}
-    \end{column}
-  \end{columns}
 \end{frame}
 
 \end{document}
