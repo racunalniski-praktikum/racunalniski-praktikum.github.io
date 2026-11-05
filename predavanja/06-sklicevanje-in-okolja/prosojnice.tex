@@ -1,72 +1,157 @@
 \documentclass[aspectratio=169]{beamer}
 \usepackage{../pomozno/prosojnice}
-\setbeamertemplate{theorems}[numbered]
-{\theoremstyle{plain}
-  \newtheorem{izrek}{Izrek}
-  \newtheorem{posledica}[izrek]{Posledica}
-}
+\usepackage{fontawesome5}
 
-% Definicija okoli za definicije in vaje
-{\theoremstyle{definition}
-  \newtheorem{definicija}[izrek]{Definicija}
-  \newtheorem{vaja}[izrek]{Vaja}
-}
+% Izpis dokumenta na prosojnicah. Številke so natipkane, da kažejo, kaj bi
+% izpisal LaTeX, tudi kadar je izpis napačen.
+\newcommand{\razdelek}[2]{\par\smallskip{\large\bfseries #1\quad #2}\par\smallskip}
+\newcommand{\izrek}[2]{\textbf{Izrek #1 (#2).}}
+\newcommand{\izrekams}[2]{\textbf{Izrek #1} (#2)\textbf{.}}
 
 \begin{document}
-\begin{frame}[fragile]
+\begin{frame}
   \begin{center}
-    \Huge\textbf{Sklicevanje}
+    \Huge\textbf{Sklicevanje in okolja}
   \end{center}
 \end{frame}
 
-\setcounter{izrek}{5}
-\begin{frame}[fragile]
-  \begin{izrek}[Pitagorov izrek]
-    \label{izr:pitagora}
-    V pravokotnem trikotniku s katetama \(a\) in \(b\) ter hipotenuzo \(c\) velja
-    \[
-      a^2 + b^2 = c^2.
-    \]
-  \end{izrek}
-  Izrek~\ref{izr:pitagora} je eden najstarejših izrekov v matematiki.
-  \begin{slaboenv}
-    \begin{minted}{latex}
-\textbf{Izrek~6 (Pitagorov izrek)} \\
-\emph{V pravokotnem trikotniku s katetama \(a\) in \(b\)
-ter hipotenuzo \(c\) velja
-\[ a^2 + b^2 = c^2. \]}
-Izrek~6 je eden najstarejših izrekov v matematiki.
-    \end{minted}
-  \end{slaboenv}
+\section{Sklici}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize]{latex}
+\section{Uvod}
+Trikotnike poznamo že iz osnovne šole.
+
+\section{Pitagorov izrek}
+\textbf{Izrek 2.1 (Pitagorov izrek).}
+\emph{V pravokotnem trikotniku s katetama
+\(a\) in \(b\) ter hipotenuzo \(c\) velja
+\(a^2 + b^2 = c^2\).}
+
+Iz izreka 2.1 izpeljemo razdaljo med
+točkama v prostoru~[1].
+
+\section*{Literatura}
+[1] I. Vidav, \emph{Višja matematika I}, 2008.
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \footnotesize
+      \razdelek{1}{Uvod}
+      Trikotnike poznamo že iz osnovne šole.
+      \razdelek{2}{Pitagorov izrek}
+      \izrek{2.1}{Pitagorov izrek}
+      \emph{V pravokotnem trikotniku s katetama \(a\) in \(b\) ter hipotenuzo \(c\) velja \(a^2 + b^2 = c^2\).}
+
+      Iz izreka 2.1 izpeljemo razdaljo med točkama v prostoru~[1].
+      \razdelek{}{Literatura}
+      [1] I. Vidav, \emph{Višja matematika I}, 2008.
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\setcounter{izrek}{5}
-\begin{frame}[fragile]
-  \begin{izrek}[Pitagorov izrek]
-    % \label{izr:pitagora}
-    V pravokotnem trikotniku s katetama \(a\) in \(b\) ter hipotenuzo \(c\) velja
-    \[
-      a^2 + b^2 = c^2.
-    \]
-  \end{izrek}
-  Izrek~\ref{izr:pitagora} je eden najstarejših izrekov
-  v matematiki.
-  \begin{dobroenv}
-    \begin{minted}{latex}
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize,highlightlines={4-6}]{latex}
+\section{Uvod}
+Trikotnike poznamo že iz osnovne šole.
+
+\section{Talesov izrek}
+\textbf{Izrek 2.1 (Talesov izrek).}
+\emph{Obodni kot nad premerom je pravi.}
+
+\section{Pitagorov izrek}
+\textbf{Izrek 2.1 (Pitagorov izrek).}
+\emph{V pravokotnem trikotniku s katetama
+\(a\) in \(b\) ter hipotenuzo \(c\) velja
+\(a^2 + b^2 = c^2\).}
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \footnotesize
+      \razdelek{1}{Uvod}
+      Trikotnike poznamo že iz osnovne šole.
+      \razdelek{2}{Talesov izrek}
+      \izrek{2.1}{Talesov izrek}
+      \emph{Obodni kot nad premerom je pravi.}
+      \razdelek{3}{Pitagorov izrek}
+      \alert{\izrek{2.1}{Pitagorov izrek}}
+      \emph{V pravokotnem trikotniku s katetama \(a\) in \(b\) ter hipotenuzo \(c\) velja \(a^2 + b^2 = c^2\).}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize]{latex}
+\usepackage{amsthm}
+\newtheorem{izrek}{Izrek}[section]
+...
+\begin{document}
+...
+\section{Pitagorov izrek}
 \begin{izrek}[Pitagorov izrek]
-  \label{izr:pitagora}
-  V pravokotnem trikotniku s katetama \(a\) in \(b\)
-  ter hipotenuzo \(c\) velja
-  \[ a^2 + b^2 = c^2. \]
+  V pravokotnem trikotniku ...
 \end{izrek}
-Izrek~\ref{izr:pitagora} je eden najstarejših izrekov
-v matematiki.
-    \end{minted}
-  \end{dobroenv}
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \footnotesize
+      \razdelek{2}{Pitagorov izrek}
+      \izrekams{2.1}{Pitagorov izrek}
+      \emph{V pravokotnem trikotniku \dots}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]
-  \begin{minted}{latex}
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize,highlightlines={6-9}]{latex}
+\usepackage{amsthm}
+\newtheorem{izrek}{Izrek}[section]
+...
+\begin{document}
+...
+\section{Talesov izrek}
+\begin{izrek}[Talesov izrek]
+  Obodni kot nad premerom je pravi.
+\end{izrek}
+
+\section{Pitagorov izrek}
+\begin{izrek}[Pitagorov izrek]
+  V pravokotnem trikotniku ...
+\end{izrek}
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \footnotesize
+      \razdelek{2}{Talesov izrek}
+      \izrekams{2.1}{Talesov izrek}
+      \emph{Obodni kot nad premerom je pravi.}
+      \razdelek{3}{Pitagorov izrek}
+      \izrekams{3.1}{Pitagorov izrek}
+      \emph{V pravokotnem trikotniku \dots}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{tabular}{ll}
+    \mintinline{latex}|\newtheorem{izrek}{Izrek}| & Izrek 1, Izrek 2, Izrek 3 \\
+    \mintinline{latex}|\newtheorem{izrek}{Izrek}[section]| & Izrek 2.1, Izrek 3.1, Izrek 3.2 \\
+    \mintinline{latex}|\newtheorem{posledica}[izrek]{Posledica}| & Izrek 3.1, Posledica 3.2, Izrek 3.3 \\
+  \end{tabular}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{minted}[fontsize=\scriptsize]{latex}
 {\theoremstyle{plain}
 \newtheorem{izrek}{Izrek}[section]
 \newtheorem{posledica}[izrek]{Posledica}
@@ -74,16 +159,472 @@ v matematiki.
 
 {\theoremstyle{definition}
 \newtheorem{definicija}[izrek]{Definicija}
-\newtheorem{vaja}[izrek]{Vaja}
 }
-  \end{minted}
+      \end{minted}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \footnotesize
+      \razdelek{3}{Pitagorov izrek}
+      \textbf{Definicija 3.1.}
+      Trikotnik je \emph{pravokoten}, če je eden od njegovih kotov pravi.
+      Stranici ob pravem kotu sta kateti, tretja stranica je hipotenuza.
+
+      \medskip
+      \izrekams{3.2}{Pitagorov izrek}
+      \emph{V pravokotnem trikotniku s katetama \(a\) in \(b\) ter hipotenuzo \(c\) velja \(a^2 + b^2 = c^2\).}
+
+      \medskip
+      \textbf{Posledica 3.3.}
+      \emph{V pravokotnem trikotniku je hipotenuza daljša od vsake od katet.}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}[fragile]
-  \begin{minted}{bibtex}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize]{latex}
+\section{Pitagorov izrek}
+\begin{izrek}[Pitagorov izrek]
+  V pravokotnem trikotniku ...
+\end{izrek}
+
+Iz izreka~2.1 izpeljemo razdaljo med
+točkama v prostoru~[1].
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \footnotesize
+      \razdelek{2}{Pitagorov izrek}
+      \izrekams{2.1}{Pitagorov izrek}
+      \emph{V pravokotnem trikotniku \dots}
+
+      Iz izreka~2.1 izpeljemo razdaljo med točkama v prostoru~[1].
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize,highlightlines={1-4}]{latex}
+\section{Talesov izrek}
+\begin{izrek}[Talesov izrek]
+  Obodni kot nad premerom je pravi.
+\end{izrek}
+
+\section{Pitagorov izrek}
+\begin{izrek}[Pitagorov izrek]
+  V pravokotnem trikotniku ...
+\end{izrek}
+
+Iz izreka~2.1 izpeljemo razdaljo med
+točkama v prostoru~[1].
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \footnotesize
+      \razdelek{2}{Talesov izrek}
+      \izrekams{2.1}{Talesov izrek}
+      \emph{Obodni kot nad premerom je pravi.}
+      \razdelek{3}{Pitagorov izrek}
+      \izrekams{3.1}{Pitagorov izrek}
+      \emph{V pravokotnem trikotniku \dots}
+
+      Iz izreka~\alert{2.1} izpeljemo razdaljo med točkama v prostoru~[1].
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize,highlightlines={3,8}]{latex}
+\section{Pitagorov izrek}
+\begin{izrek}[Pitagorov izrek]
+  \label{izr:pitagora}
+  V pravokotnem trikotniku s katetama \(a\)
+  in \(b\) ter hipotenuzo \(c\) velja ...
+\end{izrek}
+
+Iz izreka~\ref{izr:pitagora} izpeljemo
+razdaljo med točkama v prostoru~[1].
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \footnotesize
+      \razdelek{3}{Pitagorov izrek}
+      \izrekams{3.1}{Pitagorov izrek}
+      \emph{V pravokotnem trikotniku s katetama \(a\) in \(b\) ter hipotenuzo \(c\) velja \dots}
+
+      Iz izreka 3.1 izpeljemo razdaljo med točkama v prostoru~[1].
+    \end{column}
+  \end{columns}
+  \bigskip
+\end{frame}
+
+\begin{frame}[fragile]
+  \begin{center}
+    \Large
+    \mintinline{latex}|Iz izreka 2.1|
+    \bigskip
+
+    \mintinline{latex}|Iz izreka~\ref{izr:pitagora}|
+  \end{center}
+  \bigskip
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}{latex}
+Iz izreka~\ref{izr:pitagor}
+izpeljemo razdaljo med
+točkama v prostoru~[1].
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      Iz izreka \textbf{??} izpeljemo razdaljo med točkama v prostoru~[1].
+    \end{column}
+  \end{columns}
+  \bigskip
+  \begin{minted}[fontsize=\footnotesize]{text}
+LaTeX Warning: Reference `izr:pitagor' on page 2 undefined on input line 31.
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{minted}{bash}
+$ pdflatex dokument.tex
+$ pdflatex dokument.tex
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.45\textwidth}
+      \begin{minted}{latex}
+\[
+  a^2 + b^2 = c^2
+\]
+      \end{minted}
+      \[
+        a^2 + b^2 = c^2
+      \]
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{minted}{latex}
+\begin{equation}
+  a^2 + b^2 = c^2
+\end{equation}
+      \end{minted}
+      \begin{equation}
+        a^2 + b^2 = c^2
+      \end{equation}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{minted}{latex}
+\begin{equation}
+  \label{enc:pitagora}
+  a^2 + b^2 = c^2
+\end{equation}
+  \end{minted}
+  \medskip
+
+  \begin{tabular}{ll}
+    \mintinline{latex}|izreka~\ref{izr:pitagora}| & izreka 3.1 \\
+    \mintinline{latex}|enačbe~\eqref{enc:pitagora}| & enačbe (1) \\
+    \mintinline{latex}|na strani~\pageref{izr:pitagora}| & na strani 2 \\
+  \end{tabular}
+  \medskip
+
+  Predpone \texttt{izr:}, \texttt{enc:}, \texttt{tab:} so dogovor.
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{align*}
+    a x^2 + b x + c &= 0 \\
+    \left(x + \frac{b}{2a}\right)^2 &= \frac{b^2-4ac}{4a^2} \\
+    x_{1, 2} &= \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+  \end{align*}
+
+  \begin{minted}{latex}
+\begin{align*}
+  a x^2 + b x + c &= 0 \\
+  \left(x + \frac{b}{2a}\right)^2 &= \frac{b^2-4ac}{4a^2} \\
+  x_{1, 2} &= \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\end{align*}
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Če nočete oštevilčenja, uporabite \texttt{align*}}
+  \begin{dobroenv}
+    \begin{minted}[fontsize=\scriptsize]{latex}
+\begin{align*}
+  a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+  a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+                                               &\vdotswithin{=} \\
+  a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+\end{align*}
+    \end{minted}
+    \small
+    \begin{align*}
+      a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+      a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+      &\vdotswithin{=} \\
+      a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+    \end{align*}
+  \end{dobroenv}
+\end{frame}
+
+\begin{frame}[fragile]{Če nočete oštevilčenja, uporabite \texttt{align*}}
+  \begin{slaboenv}
+    \begin{minted}[fontsize=\scriptsize]{latex}
+\begin{align}
+  a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+  a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+                                               &\vdotswithin{=} \\
+  a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+\end{align}
+    \end{minted}
+    \small
+    \begin{align}
+      a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+      a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+      &\vdotswithin{=} \\
+      a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+    \end{align}
+  \end{slaboenv}
+\end{frame}
+
+\begin{frame}[fragile]{Če nočete oštevilčenja, uporabite \texttt{align*}}
+  \begin{slaboenv}
+    \begin{minted}[fontsize=\scriptsize]{latex}
+\begin{align}
+  a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \nonumber \\
+  a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \nonumber \\
+                                               &\vdotswithin{=} \nonumber \\
+  a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n, \nonumber
+\end{align}
+    \end{minted}
+    \small
+    \begin{align}
+      a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \nonumber \\
+      a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \nonumber \\
+      &\vdotswithin{=} \nonumber \\
+      a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n, \nonumber
+    \end{align}
+  \end{slaboenv}
+\end{frame}
+
+\begin{frame}[fragile]{Če uporabljate \texttt{align}, uporabite tudi \texttt{\&}}
+  \begin{dobroenv}
+    \begin{minted}[fontsize=\scriptsize]{latex}
+\begin{align*}
+  a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+  a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+                                               &\vdotswithin{=} \\
+  a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+\end{align*}
+    \end{minted}
+    \small
+    \begin{align*}
+      a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &= b_1 \\
+      a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &= b_2 \\
+      &\vdotswithin{=} \\
+      a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n &= b_n,
+    \end{align*}
+  \end{dobroenv}
+\end{frame}
+
+\begin{frame}[fragile]{Če uporabljate \texttt{align}, uporabite tudi \texttt{\&}}
+  \begin{slaboenv}
+    \begin{minted}[fontsize=\scriptsize]{latex}
+\begin{align*}
+  a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n = b_1 \\
+  a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n = b_2 \\
+                                               \vdotswithin{=} \\
+  a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n = b_n,
+\end{align*}
+    \end{minted}
+    \small
+    \begin{align*}
+      a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n = b_1 \\
+      a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n = b_2 \\
+      \vdotswithin{=} \\
+      a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n = b_n,
+    \end{align*}
+  \end{slaboenv}
+\end{frame}
+
+\begin{frame}[fragile]{Če uporabljate \texttt{align}, uporabite tudi \texttt{\&}}
+  \begin{slaboenv}
+    \begin{minted}[fontsize=\scriptsize]{latex}
+\begin{align*}
+  a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n = b_1 \\
+  a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n = b_1 + b_2 \\
+                                               \vdotswithin{=} \\
+  a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n = b_1 + b_2 + \dots + b_n,
+\end{align*}
+    \end{minted}
+    \small
+    \begin{align*}
+      a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n = b_1 \\
+      a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n = b_1 + b_2 \\
+      \vdotswithin{=} \\
+      a_{n1} x_1 + a_{n2} x_2 + \dots + a_{nn} x_n = b_1 + b_2 + \dots + b_n,
+    \end{align*}
+  \end{slaboenv}
+\end{frame}
+
+\begin{frame}[fragile]{Tabele se po lahko premikajo po straneh}
+
+  \begin{slaboenv}
+    \begin{minted}{latex}
+\begin{table}[!ht]
+  \centering
+  \caption{Pitagorejske trojice}
+  \begin{tabular}{ccc}
+    3 & 4 & 5 \\
+    5 & 12 & 13 \\
+  \end{tabular}
+\end{table}
+
+Prvih nekaj pitagorejskih trojic je v zgornji tabeli.
+    \end{minted}
+  \end{slaboenv}
+
+\end{frame}
+
+\begin{frame}[fragile]{Tabele se po lahko premikajo po straneh}
+
+  \begin{dobroenv}
+    \begin{minted}[highlightlines=4]{latex}
+\begin{table}[!ht]
+  \centering
+  \caption{Pitagorejske trojice}
+  \label{tab:trojice}
+  \begin{tabular}{ccc}
+    3 & 4 & 5 \\
+    5 & 12 & 13 \\
+  \end{tabular}
+\end{table}
+
+Prvih nekaj pitagorejskih trojic je v tabeli~\ref{tab:trojice}.
+    \end{minted}
+  \end{dobroenv}
+
+\end{frame}
+
+\section{Literatura}
+
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize]{latex}
+...
+Iz izreka~\ref{izr:pitagora} izpeljemo
+razdaljo med točkama v prostoru~[1].
+
+\section*{Literatura}
+[1] I. Vidav, \emph{Višja matematika I}, 2008.
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \footnotesize
+      Iz izreka 3.1 izpeljemo razdaljo med točkama v prostoru~[1].
+      \razdelek{}{Literatura}
+      [1] I. Vidav, \emph{Višja matematika I}, 2008.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize,highlightlines={1-2,8}]{latex}
+Dokaz izreka je že v Evklidovih
+Elementih~[1].
+...
+Iz izreka~\ref{izr:pitagora} izpeljemo
+razdaljo med točkama v prostoru~[2].
+
+\section*{Literatura}
+[1] Evklid, \emph{Elementi}.
+
+[2] I. Vidav, \emph{Višja matematika I}, 2008.
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \footnotesize
+      Dokaz izreka je že v Evklidovih Elementih~[1].
+
+      \dots
+
+      Iz izreka 3.1 izpeljemo razdaljo med točkama v prostoru~\alert{[1]}.
+      \razdelek{}{Literatura}
+      [1] Evklid, \emph{Elementi}.
+
+      [2] I. Vidav, \emph{Višja matematika I}, 2008.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize,highlightlines={1-2},stripnl=false]{latex}
+
+
+...
+Iz izreka~\ref{izr:pitagora} izpeljemo
+razdaljo med točkama v prostoru~[1].
+
+\section*{Literatura}
+[1] Evklid, \emph{Elementi}.
+
+[2] I. Vidav, \emph{Višja matematika I}, 2008.
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \footnotesize
+      \invisible{Dokaz izreka je že v Evklidovih Elementih~[1].}
+
+      \dots
+
+      Iz izreka 3.1 izpeljemo razdaljo med točkama v prostoru~[1].
+      \razdelek{}{Literatura}
+      \alert{[1] Evklid, \emph{Elementi}.}
+
+      [2] I. Vidav, \emph{Višja matematika I}, 2008.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{\texttt{literatura.bib}}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{minted}[fontsize=\scriptsize]{bibtex}
+@book{evklid56,
+  author    = {Evklid},
+  title     = {The Thirteen Books
+               of the Elements},
+  note      = {prevedel T.~L.~Heath},
+  publisher = {Dover},
+  year      = 1956
+}
+      \end{minted}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{minted}[fontsize=\scriptsize]{bibtex}
 @book{vidav08,
   author    = {Ivan Vidav},
-  title     = {Višja matematika I (12.~ponatis)},
+  title     = {Višja matematika I
+               (12.~ponatis)},
   publisher = {DMFA--Založništvo},
   year      = 2008
 }
@@ -93,29 +634,109 @@ v matematiki.
   publisher = {McGraw-Hill},
   year      = 1987
 }
-@unpublished{zapiski,
-  author = {Sašo Strle},
-  title  = {Analiza 1 za študente Finančne matematike},
-  note   = {zapiski predavanj},
-  year   = 2020
-}
-  \end{minted}
+      \end{minted}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]
-  \begin{minted}{latex}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nulla semper, ligula eget porttitor lobortis, lacus ante
-posuere magna, eget dapibus lacus odio sit amet urna.
-Curabitur eget tincidunt lacus~\cite{vidav08}, a mollis
-lectus. Donec non est a eros gravida venenatis nec quis
-elit. Sed vulputate~\cite{analiza1}, neque eget
-pellentesque egestas, eros diam porttitor est, non
-lobortis velit turpis vitae velit.
+\begin{frame}[fragile]{}
+  \begin{minted}[fontsize=\footnotesize]{latex}
+Dokaz izreka je že v Evklidovih Elementih~\cite{evklid56}.
+...
+Iz izreka~\ref{izr:pitagora} izpeljemo razdaljo med točkama
+v prostoru~\cite{vidav08}.
 
 \bibliographystyle{plain}
 \bibliography{literatura}
   \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}{latex}
+Iz izreka~\ref{izr:pitagora}
+izpeljemo razdaljo med
+točkama v prostoru~\cite{vidav}.
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+    Iz izreka 3.1 izpeljemo razdaljo med točkama v prostoru~\textbf{[?]}.
+    \end{column}
+  \end{columns}
+  \bigskip
+  \begin{minted}[fontsize=\footnotesize]{text}
+LaTeX Warning: Citation `vidav' on page 2 undefined on input line 31.
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{minted}{bash}
+$ pdflatex dokument.tex
+$ bibtex dokument
+$ pdflatex dokument.tex
+$ pdflatex dokument.tex
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{tabular}{lll}
+    \mintinline{latex}|\bibliographystyle{plain}| & Elementih~[1] & prostoru~[2] \\
+    \mintinline{latex}|\bibliographystyle{alpha}| & Elementih~[Evk56] & prostoru~[Vid08] \\
+  \end{tabular}
+  \bigskip
+\end{frame}
+
+\begin{frame}[fragile]{Vnosov ne tipkamo sami}
+  \begin{center}
+    \Large
+    \href{https://zbmath.org/}{zbMATH Open \faLockOpen}
+
+    \href{https://mathscinet.ams.org/}{MathSciNet \faLock}
+  \end{center}
+\end{frame}
+
+\section{Lastni ukazi in okolja}
+
+\begin{frame}[fragile]{Za pogoste izraze si definiramo ukaze}
+  \begin{slaboenv}
+    \begin{minted}{latex}
+Kjer je matrika s koeficienti iz $\mathbb{R}^n$, $b \in \mathbb{R}^n$
+je stolpec skalarjev, $x \in \mathbb{R}^n$ pa stolpec neznank.
+    \end{minted}
+  \end{slaboenv}
+
+  \begin{dobroenv}
+    \begin{minted}{latex}
+\newcommand{\Rn}{\mathbb{R}^n}
+Kjer je matrika s koeficienti iz $\Rn$, $b \in \Rn$ je stolpec
+skalarjev, $x \in \Rn$ pa stolpec neznank.
+    \end{minted}
+  \end{dobroenv}
+\end{frame}
+
+\begin{frame}[fragile]{Matematične ukaze definiramo brez \texttt{\$}}
+  \begin{slaboenv}
+    \begin{minted}{latex}
+\newcommand{\Rn}{$\mathbb{R}^n$}
+Kjer je matrika s koeficienti iz \Rn, $b \in$ \Rn je stolpec
+skalarjev, $x \in$ \Rn pa stolpec neznank.
+    \end{minted}
+    \newcommand{\Rn}{$\mathbb{R}^n$}
+    Kjer je matrika s koeficienti iz \Rn, $b \in$ \Rn\ je stolpec skalarjev,
+    $x \in$ \Rn\ pa stolpec neznank.
+  \end{slaboenv}
+
+  \begin{dobroenv}
+    \begin{minted}{latex}
+\newcommand{\Rn}{\mathbb{R}^n}
+Kjer je matrika s koeficienti iz $\Rn$, $b \in \Rn$ je stolpec
+skalarjev, $x \in \Rn$ pa stolpec neznank.
+    \end{minted}
+    \newcommand{\Rn}{\mathbb{R}^n}
+    Kjer je matrika s koeficienti iz $\Rn$, $b \in \Rn$ je stolpec skalarjev,
+    $x \in \Rn$ pa stolpec neznank.
+  \end{dobroenv}
 \end{frame}
 
 \end{document}
