@@ -21,7 +21,8 @@ Prosojnice in datoteke s predavanj pri predmetu Računalniški praktikum. Glavno
    - [prosojnice](05-latex/prosojnice.pdf)
    - iste enačbe v različnih datotekah: [`.docx`](05-latex/primeri/primer.docx), [`.md`](05-latex/primeri/primer.md), [`.tex`](05-latex/primeri/primer.tex), [`.pdf`](05-latex/primeri/primer.pdf)
 6. LaTeX 2: okolja, sklicevanje (oznake, sklici, citati, BibTeX)
-   <!-- - [prosojnice](06-latex-2-okolja-sklicevanje/…) -->
+   - [prosojnice](06-sklicevanje-in-okolja/prosojnice.pdf)
+   - [`napacno.tex`](06-sklicevanje-in-okolja/primeri/napacno.tex) ([`.pdf`](06-sklicevanje-in-okolja/primeri/napacno.pdf)), [`pravilno.tex`](06-sklicevanje-in-okolja/primeri/pravilno.tex) ([`.pdf`](06-sklicevanje-in-okolja/primeri/pravilno.pdf)) z literaturo [`literatura.bib`](06-sklicevanje-in-okolja/primeri/literatura.bib)
 7. LaTeX 3: slike (različni formati slik, TiKZ)
    <!-- - [prosojnice](07-latex-3-slike/…) -->
 8. LaTeX 4: predstavitve (Beamer)
