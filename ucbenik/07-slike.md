@@ -40,6 +40,23 @@ Nov ukaz ali okolje najlažje napišete v štirih korakih:
 * **[K3]** *Na tem mestu te ukaze zamenjajte z novim ukazom ali okoljem.*
 * **[K4]** *Kar se od mesta do mesta spreminja, v definiciji nadomestite z argumenti.*
 
+## Matematična okolja
+
+Paket `amsmath` ima več okolij za zahtevnejše matematične zapise, na primer za matrike, poravnane enačbe in predpise, podane po primerih.
+Vsa delujejo podobno kot okolje `tabular`: stolpce ločite z znakom `&`, vrstice pa z `\\`.
+Determinanto tako zapišete z okoljem `vmatrix`:
+
+```tex
+\[
+\begin{vmatrix}
+   a & b \\
+   c & d
+\end{vmatrix} = ad - bc
+\]
+```
+
+Primere drugih okolij najdete v pregledni datoteki `2-matematika.tex` v imeniku `latex-pregled`, več pa v [Overleafovi dokumentaciji o matrikah](https://www.overleaf.com/learn/latex/Matrices) in v [navodilih za paket `amsmath`](https://ctan.org/pkg/amsmath).
+
 ## 1. naloga: uvodne naloge
 
 Nadaljujemo z nalogo Magični kvadrati iz [prejšnjega poglavja](06-sklicevanje-in-definicije.md).
@@ -134,5 +151,12 @@ Zdaj lahko dokončate dokument:
 
 - uporabite okolje `magic` za vse magične kvadrate in
 - kjer se v besedilu pojavi niz `?!?`, naredite sklic na ustrezen magični kvadrat.
+
+## 5. naloga: matematična okolja
+
+V glavni imenik repozitorija odpakirajte arhiv [`07-matematika.zip`](07-slike/07-matematika.zip) v imenik `07-matematika`.
+Datoteko `matematika.tex` pripravite tako, da boste z njo dobili PDF dokument, čim bolj podoben datoteki `matematika-resitev.pdf`.
+Navodila za posamezne naloge so v komentarjih.
+Če vam zmanjka časa, bomo nalogo dokončali na naslednjih vajah.
 
 Na koncu spremembe zabeležite in vnose pošljite na GitHub.
