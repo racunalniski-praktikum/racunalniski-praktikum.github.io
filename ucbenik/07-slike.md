@@ -156,7 +156,7 @@ Definirajte novo okolje `magic` s tremi argumenti: red kvadrata, opis tabele in 
 Zdaj lahko dokončate dokument:
 
 - uporabite okolje `magic` za vse magične kvadrate in
-- kjer se v besedilu pojavi niz `?!?`, naredite sklic na ustrezen magični kvadrat.
+- kjer se v besedilu pojavi niz `?!?`, naredite sklic na ustrezen magični kvadrat. Katera oznaka je prava, piše v komentarju `% sklic` na koncu odstavka; če je v odstavku več nizov `?!?`, sodi prva oznaka k prvemu, druga k drugemu in tako naprej.
 
 ## 5. naloga: matematična okolja
 
