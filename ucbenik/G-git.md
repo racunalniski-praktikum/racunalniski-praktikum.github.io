@@ -76,7 +76,7 @@ ki jih računalnik ustvari sam (in jih zato lahko ustvarimo na novo):
 - MacOS rad ustvarja datoteke `.DS_Store` in direktorije `__MACOSX`,
 - Windowsi ustvarjajo datoteke `thumbs.db`,
 - Python (ki ga boste srečali pri Uvodu v programiranje) ustvari množico datotek v imeniku `__pycache__`, 
-- LaTeX ustvari PDF datoteke ter pomožne datoteke s končnicami `.aux`, `.log` in podobno). 
+- LaTeX ustvari PDF datoteke ter pomožne datoteke s končnicami `.aux`, `.log` in podobno. 
 
 S tem, ko take datoteke izključimo, poskrbimo, da repozitorij ostane čist, pregleden in lažji za delo.
 Primer ustrezne datoteke `.gitignore` bi bil:
@@ -92,6 +92,9 @@ Primer ustrezne datoteke `.gitignore` bi bil:
 *.fdb_latexmk
 *.toc
 *.fls
+*.idx
+*.ilg
+*.ind
 *.log
 *.nav
 *.out
