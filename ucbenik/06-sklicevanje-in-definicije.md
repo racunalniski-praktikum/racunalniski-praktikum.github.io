@@ -140,10 +140,11 @@ Označen je s komentarjem `% Začetek magičnega kvadrata`, napis in oznaka sta 
     vrednosti oznak sta v komentarjih v okoljih.
 3.  Povsod, kjer se v besedilu nahaja `??`, dodajte sklic na tabelo ali enačbo.
     Katera oznaka je prava, piše v komentarju `% sklic` na koncu odstavka.
-    -   Za sklice na tabele uporabite ukaz `ref`.
+    -   Za sklice na tabele uporabite ukaz `ref`.ucbenik
     -   Za sklice na enačbe uporabite ukaz `eqref` iz paketa `amsmath`
         (tega je treba vključiti pred paketom `amsthm`).
     -   Kjer piše *na strani* `??`, uporabite ukaz `pageref`.
+    -   Med zadnjo besedo in zgornjimi ukazi pišemo tudi znak `~` (primer: `glej~\ref`). To naredi presledek, ki ne more postati nova vrstica, torej če se vrstica konča tik pred referenco, se referenca ne bo postavila v novo vrstico.
 4.  Prevedite in preverite: v PDF-ju ne sme ostati noben `??` ali `!!`.
 5.  Zabeležite spremembe.
 
