@@ -96,15 +96,6 @@ naslednja ukaza.
     Uporabljamo lahko tudi predpise `<3->` (od tretje podprosojnice naprej),
     `<-2>` (prvi dve), `<3,5>` (tretja in peta), pa tudi kombinacije teh predpisov.
 
-Nekatera naprednejša okolja za matematiko se obnašajo kot tabele: 
-predstavljamo si, da vsebino razdelimo v stolpce (ločene z znakom `&`)
-in vrstice (ločene z `\\`).
-Primeri takih okolij so okolja za matrike (več preberite v 
-[Overleaf dokumentaciji](https://www.overleaf.com/learn/latex/Matrices)),
-okolje `cases` in posebni okolji za enačbe: `align` in `multline` 
-(brez črke `i` za `mult`).
-Več o teh okoljih lahko preberete v 
-[dokumentaciji paketa `amsmath`](https://ctan.org/pkg/amsmath) (poiščite _User guide_).
 Tokrat smo paket `amsmath` že vključili (v paketu `predavanja`),
 tako da ga vam ni treba posebej vključevati.
 
