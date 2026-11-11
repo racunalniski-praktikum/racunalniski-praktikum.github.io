@@ -55,6 +55,9 @@ Determinanto tako zapišete z okoljem `vmatrix`:
 \]
 ```
 
+Okolje `vmatrix` (in ostala okolja za matrike) ter okolje `cases` napišete v matematičnem načinu.
+Okolji `align*` in `multline*` pa prikazni način začneta sami, zato ju napišete brez `\[` in `\]`, sicer LaTeX javi napako.
+
 Primere drugih okolij najdete v pregledni datoteki `2-matematika.tex` v imeniku `latex-pregled`, več pa v [Overleafovi dokumentaciji o matrikah](https://www.overleaf.com/learn/latex/Matrices) in v [navodilih za paket `amsmath`](https://ctan.org/pkg/amsmath).
 
 ## 1. naloga: uvodne naloge
