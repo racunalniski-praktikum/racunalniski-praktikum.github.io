@@ -47,7 +47,7 @@ Nekateri ukazi in okolja sprejmejo tudi dodatne argumente,
 ki so lahko obvezni (v zavitih oklepajih `{}`) ali neobvezni (v oglatih oklepajih `[]`).
 
 * Ukaz `\section{Turingovi stroji}` naredi nov razdelek z naslovom "Turingovi stroji".
-* Ukaz `frac`, ki v matematičnem okolju naredi ulomek, sprejme dva argumenta,
+* Ukaz `frac`, ki v matematičnem načinu naredi ulomek, sprejme dva argumenta,
   števec in imenovalec: `\frac{22}{7}` izpiše $\frac{22}{7}$.
 * Ukaz `rule` za ločnice, ki nariše pravokotnik, sprejme dva obvezna argumenta in enega neobveznega
   (kako visoko v vrstici stoji ločnica):
@@ -62,7 +62,7 @@ Izpiše jih šele ukaz `\maketitle`, in sicer tam, kjer ga uporabimo, zato moraj
 
 ### Matematika
 
-Matematični izraz lahko stoji na dveh mestih.
+Matematični izraz zapišemo v _matematičnem načinu_ (angl. _math mode_), ki je lahko vrstični ali prikazni.
 V _vrstičnem načinu_ (angl. _inline_) je del vrstice z besedilom; zapišemo ga med `\(` in `\)`.
 V _prikaznem načinu_ (angl. _display_) stoji sam v svoji vrstici, sredinsko poravnan; zapišemo ga med `\[` in `\]`.
 Primer z obema načinoma:
@@ -95,10 +95,10 @@ zato napako javi daleč od mesta, kjer je nastala.
 
 `````{admonition} Ukazi za matematične izraze
 :class: tip
-V matematičnih okoljih lahko uporabljamo ukaze za matematične izraze,
+V matematičnem načinu lahko uporabljamo ukaze za matematične izraze,
 kot so `frac` za ulomke, `int` za integrale, `cdot` za piko pri množenju, ukaze za matrike itd.
-Ti ukazi delajo **samo v matematičnih okoljih**, izven njih pa sprožijo napako.
-Velja tudi obratno: običajne besede v matematičnem okolju označimo z ukazom `\text`,
+Ti ukazi delajo **samo v matematičnem načinu**, izven njih pa sprožijo napako.
+Velja tudi obratno: običajne besede v matematičnem načinu označimo z ukazom `\text`,
 da se pravilno prikažejo. Ta ukaz potrebuje paket `amsmath`.
 `````
 
