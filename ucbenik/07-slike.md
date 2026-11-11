@@ -63,6 +63,9 @@ Nadaljujemo z nalogo Magični kvadrati iz [prejšnjega poglavja](06-sklicevanje-
 Datoteka `magic.tex` vsebuje rešitev tamkajšnjih nalog in navodila za nove.
 Pripravite jo tako, da boste z njo dobili PDF dokument, čim bolj podoben datoteki `magic-resitev.pdf`.
 
+- Pregledne datoteke v imeniku `latex-pregled` in naloga Magični kvadrati naredijo še pomožne datoteke s končnicami `.bbl`, `.blg`, `.idx`, `.ilg`, `.ind`, `.nav`, `.out`, `.snm` in `.toc`.
+  Vsebino datoteke `.gitignore` v glavnem imeniku repozitorija zamenjajte s primerom iz razdelka [Datoteka `.gitignore`](git:gitignore) v dodatku o Gitu.
+  Na GitHubu preverite, ali ste katero od teh datotek že zabeležili, najverjetneje v imeniku `latex-pregled` ali `06-magicni-kvadrati`; če ste, jo pobrišite in izbris zabeležite.
 - V glavni imenik repozitorija odpakirajte arhiv [`07-magicni-kvadrati.zip`](07-slike/07-magicni-kvadrati.zip)
   v imenik `07-magicni-kvadrati` z datotekami za nalogo Magični kvadrati.
 - Med njimi je slika `slika.pdf`, ki jo boste vključili v dokument.
@@ -145,7 +148,7 @@ Definirajte novo okolje `magic` s tremi argumenti: red kvadrata, opis tabele in 
 * **[K2]** V preambuli pripravite definicijo novega okolja z ukazom `newenvironment`.
     V drugi in tretji argument kopirajte ukaze, ki so v tabeli `table:mag3` označeni s komentarji.
 * **[K3]** Označene ukaze v tabeli `table:mag3` skupaj s komentarji zamenjajte z `\begin{magic}` oziroma `\end{magic}`, vrstice kvadrata pa pustite pri miru.
-* **[K4]** V ukazu `newenvironment` boste morali določiti še [število argumentov](https://www.overleaf.com/learn/latex/Environments#Defining_environments_which_take_arguments) novega okolja. Na vrednosti argumentov se v definiciji okolja sklicujete z `#1` za prvi argument, `#2` za drugi argument in tako naprej.
+* **[K4]** V ukazu `newenvironment` boste morali določiti še [število argumentov](https://www.overleaf.com/learn/latex/Environments#Defining_environments_which_take_arguments) novega okolja. Na vrednosti argumentov se v definiciji okolja sklicujete z `#1` za prvi argument, `#2` za drugi argument in tako naprej. Argumente napišite tudi tam, kjer okolje uporabite: `\begin{magic}{⟨red⟩}{⟨opis⟩}{⟨ime⟩}`.
 
 Zdaj lahko dokončate dokument:
 
