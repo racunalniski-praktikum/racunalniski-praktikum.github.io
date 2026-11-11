@@ -488,6 +488,60 @@ $ pdflatex dokument.tex
   \end{slaboenv}
 \end{frame}
 
+\begin{frame}[fragile]{}
+  \[
+    \begin{vmatrix}
+      a & b \\
+      c & d
+    \end{vmatrix}
+    = ad - bc
+  \]
+
+  \begin{minted}{latex}
+\[
+  \begin{vmatrix}
+    a & b \\
+    c & d
+  \end{vmatrix}
+  = ad - bc
+\]
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \[
+    |x| =
+    \begin{cases}
+      x  & \text{če } x \geq 0, \\
+      -x & \text{če } x < 0.
+    \end{cases}
+  \]
+
+  \begin{minted}{latex}
+\[
+  |x| =
+  \begin{cases}
+    x  & \text{če } x \geq 0, \\
+    -x & \text{če } x < 0.
+  \end{cases}
+\]
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{multline*}
+    (x + y + z)^3 = x^3 + y^3 + z^3 + 3 x^2 y + 3 x^2 z \\
+    + 3 x y^2 + 3 y^2 z + 3 x z^2 + 3 y z^2 + 6 x y z
+  \end{multline*}
+
+  \begin{minted}{latex}
+\begin{multline*}
+  (x + y + z)^3 = x^3 + y^3 + z^3 + 3 x^2 y + 3 x^2 z \\
+  + 3 x y^2 + 3 y^2 z + 3 x z^2 + 3 y z^2 + 6 x y z
+\end{multline*}
+  \end{minted}
+\end{frame}
+
 \begin{frame}[fragile]{Tabele se po lahko premikajo po straneh}
 
   \begin{slaboenv}
@@ -695,7 +749,7 @@ $ pdflatex dokument.tex
   \bigskip
 \end{frame}
 
-\begin{frame}[fragile]{Vnosov ne tipkamo sami}
+\begin{frame}[fragile]{}
   \begin{center}
     \Large
     \href{https://zbmath.org/}{zbMATH Open \faLockOpen}
@@ -704,9 +758,9 @@ $ pdflatex dokument.tex
   \end{center}
 \end{frame}
 
-\section{Lastni ukazi in okolja}
+\section{Lastni ukazi}
 
-\begin{frame}[fragile]{Za pogoste izraze si definiramo ukaze}
+\begin{frame}[fragile]{}
   \begin{slaboenv}
     \begin{minted}{latex}
 Kjer je matrika s koeficienti iz $\mathbb{R}^n$, $b \in \mathbb{R}^n$
@@ -744,6 +798,22 @@ skalarjev, $x \in \Rn$ pa stolpec neznank.
     \newcommand{\Rn}{\mathbb{R}^n}
     Kjer je matrika s koeficienti iz $\Rn$, $b \in \Rn$ je stolpec skalarjev,
     $x \in \Rn$ pa stolpec neznank.
+  \end{dobroenv}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{slaboenv}
+    \begin{minted}{latex}
+Za vsak~$x$ velja $\lVert x \rVert^2 = \langle x, x \rangle$.
+    \end{minted}
+  \end{slaboenv}
+
+  \begin{dobroenv}
+    \begin{minted}{latex}
+\newcommand{\norma}[1]{\lVert #1 \rVert}
+\newcommand{\skalarni}[2]{\langle #1, #2 \rangle}
+Za vsak~$x$ velja $\norma{x}^2 = \skalarni{x}{x}$.
+    \end{minted}
   \end{dobroenv}
 \end{frame}
 
