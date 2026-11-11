@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+% Brownovo gibanje
+% Matej Rojec
+
+\begin{document}
+
+Brownovo gibanje (več v !!) je intuitivno slučajen proces, % Sklic na knjigo
+ki predstavlja naključno gibanje delcev v mediju.
+    
+    % Slika: PerrinPlot2.pdf, velikost scale=0.3
+    % Napis pod sliko: 
+    % Reprodukcija slike iz Jean Baptiste Perrin, \emph{Mouvement brownien et réalité moléculaire}, Ann. de Chimie et de Physique (VIII) 18, 5-114, 1909
+
+    % Začetek definicije
+    Standardno Brownovo gibanje $\{B_t\}_{t \geq 0}$ je slučajen proces z naslednjimi lastnostmi: 
+        $B_0 = 0$.
+        Prirastki $B_{t_n} - B_{t_{n-1}}, B_{t_{n-1}} - B_{t_{n-2}}, \ldots, B_2 - B_1, B_1 - B_0$ so neodvisne slučajne spremenljivke, za vsak $t_0 \leq t_1 \leq \cdots \leq t_{n-1} \leq t_n$.
+        Za vsak $t \geq 0$ in $h > 0$ velja $B_{t+h} - B_t \sim \mathcal{N}(0, h)$.
+        Funkcija $t \mapsto B_t$ je zvezna skoraj gotovo.
+    % Konec definicije
+    
+    Preden zapišemo izrek, definirajmo še pojem časa ustavljanja.
+    
+    % Začetek definicije
+    Slučajna spremenljivka $\tau$ na verjetnostnem prostoru ?? z vrednostmi v ??
+    je čas ustavljanja glede na filtracijo ??, če velja: ??.
+    % Konec definicije
+    
+    Zdaj lahko zapišemo izrek !!. % Sklic na izrek z oznako thm:stopped_brownian
+    
+    % Začetek izreka
+    Naj bo $\{B_t\}_{t \geq 0}$ (standardno) Brownovo gibanje, ?? čas ustavljanja glede na 
+    ?? in naj velja ??.
+    Potem je tudi proces:
+    \[
+    \hat{B} := \{B_{\tau+t} - B_\tau \mid t \geq 0\}
+    \]
+    (standardno) Brownovo gibanje in neodvisen od ??.
+    % Konec izreka
+    
+\end{document}
