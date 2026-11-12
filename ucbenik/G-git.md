@@ -102,6 +102,7 @@ Primer ustrezne datoteke `.gitignore` bi bil:
 *.pyc
 *.snm
 *.synctex.gz
+*.synctex(busy)
 
 # MacOS
 __MACOSX
