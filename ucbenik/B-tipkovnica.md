@@ -84,10 +84,10 @@ Ko se program pojavi v seznamu rezultatov, se nanj premaknite s puščicami <kbd
 
 Marsikatera od teh bližnjic deluje tudi v drugih programih, ki imajo zavihke.
 
-[Vimium](https://vimium.github.io)
-- f: link picker
-- shift+f: link picker in new tab
-- g: focus on textbox (uporabno for searching)
+Če želite po spletu brskati brez miške, si lahko v brskalnik namestite razširitev [Vimium](https://vimium.github.io):
+tipka <kbd>F</kbd> označi povezave na strani, da jih lahko izberete s tipkovnico,
+<kbd>Shift</kbd>+<kbd>F</kbd> izbrano povezavo odpre v novem zavihku,
+<kbd>G</kbd> in nato <kbd>I</kbd> pa postavi kurzor v prvo polje za vnos besedila.
 
 (bliznjice:vscode)=
 ## VSCode bližnjice
