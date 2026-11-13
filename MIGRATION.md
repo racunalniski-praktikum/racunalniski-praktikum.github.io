@@ -288,16 +288,39 @@ preamble, packages, compilation.
 
 A lecture on pictures in general, not on TikZ.
 
-**Content.** Including images in a document. Choosing the right format, vector
-against raster. RGB and CMYK. A TikZ demo.
+**Content.** Including images in a document. Choosing the right format: vector
+against raster, lossless against lossy compression, with a short recap of RGB and
+CMYK. A TikZ demo.
+
+**RGB and CMYK are a recap.** Lecture 4 explains them with the colours of CSS. Here a
+raster picture is shown as a grid of pixels: the Mona Lisa reduced to 12 × 18 large
+pixels, with the RGB numbers of a 3 × 3 block. A photograph makes the grid
+recognisable, and a picture students know well opens the lecture. Run-length encoding
+is then shown on a row of the drawing, because the drawing has the runs of one colour
+that a photograph lacks.
+
+**Run-length encoding shows the idea of lossless compression**: it explains why a
+diagram in flat colours is small as a PNG and a photograph is not. It is the idea
+only. PNG itself compresses with DEFLATE, so the slides must not say that PNG uses
+run-length encoding.
 
 **TikZ is a demo, not a syntax tour.** By the cut criterion, TikZ is what a student
 looks up when they need it. The demo shows what it can do, so that they know it
 exists.
 
-**Escalation.** A picture that scales. A picture you can edit. A picture whose fonts
-match the document. A picture that is revealed in step with what you are saying — the
-last step points forward to Beamer in lecture 8.
+**Escalation.** Raster formats first, PNG against JPG. Then vector formats: a picture
+that scales. Then the question whether it can be even better, answered by TikZ: a
+picture you can edit, whose change Git shows line by line (a PNG is only "binary
+files differ"), a picture whose fonts match the document, and a picture you can
+program. The demo is the construction of the perpendicular, the same picture as the
+raster and vector examples. Its code does the construction: TikZ computes the
+intersections, so the picture stays correct when the point moves. Code with fixed
+coordinates only draws the result, which is a surface with nothing under it. The next step, a picture that is revealed in step with what you are saying,
+is in lecture 8.
+
+**Language-model thread.** Ask a model for TikZ code, compile it, and compare the
+picture with what you asked for. Then move the point: if the model gave fixed
+coordinates, the construction breaks.
 
 **This lecture carries the image-format points of the exam** (exam design in the
 private `zbornica`, `preverjanje-znanja/README.md`). TikZ itself stays unexamined.
@@ -321,6 +344,9 @@ exam task — so these 15–20 minutes and the three tutorial hours that follow 
 whole of its teaching.
 
 **It teaches only presentations and Beamer.** Image formats are in lecture 7.
+
+**A picture that is revealed in step with what you are saying** is the last step of
+the escalation of lecture 7. It leads into Beamer's overlays.
 
 **No instance of the theme, and none is needed.**
 
