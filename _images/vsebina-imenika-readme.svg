@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="277" height="118" viewBox="0 0 277 118" role="img">
+  <style>
+    :root { --barva: #2f3337; }
+    @media (prefers-color-scheme: dark) { :root { --barva: #d6d9dc; } }
+    .i { fill: var(--barva); }
+    .p { fill: var(--barva); opacity: .45; }
+    .c { fill: none; stroke: var(--barva); stroke-width: 1.3; opacity: .65; }
+    text {
+      fill: var(--barva);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 15px;
+      dominant-baseline: central;
+    }
+  </style>
+  <path class="c" d="M22.5,38.0 V59.0 H37.0"/><path class="c" d="M48.5,68.0 V89.0 H63.0"/>
+  <g transform="translate(14.0,22.0)"><path class="i" d="M1,1.5 h5.5 l1.8,1.8 h7.2 a1.5,1.5 0 0 1 1.5,1.5 v7.7 a1.5,1.5 0 0 1 -1.5,1.5 h-14 a1.5,1.5 0 0 1 -1.5,-1.5 v-9.5 a1.5,1.5 0 0 1 1.5,-1.5 z"/></g><text x="39.0" y="29.0">rp</text><g transform="translate(40.0,52.0)"><path class="i" d="M1,1.5 h5.5 l1.8,1.8 h7.2 a1.5,1.5 0 0 1 1.5,1.5 v7.7 a1.5,1.5 0 0 1 -1.5,1.5 h-14 a1.5,1.5 0 0 1 -1.5,-1.5 v-9.5 a1.5,1.5 0 0 1 1.5,-1.5 z"/></g><text x="65.0" y="59.0" font-weight="700">racunalniski-praktikum</text><g transform="translate(66.0,82.0)"><path class="i" d="M0.5,0 h7.5 l4.5,4.5 v8.5 a1,1 0 0 1 -1,1 h-10.5 a1,1 0 0 1 -1,-1 v-12 a1,1 0 0 1 1,-1 z"/><path class="p" d="M8,0 v4.5 h4.5 z"/></g><text x="91.0" y="89.0">README.md</text>
+</svg>
