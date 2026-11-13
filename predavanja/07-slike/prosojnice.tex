@@ -1,0 +1,428 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{../pomozno/prosojnice}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{intersections}
+
+% Konstrukcija pravokotnice, enaka kodi na prosojnicah. Neobvezni argument je
+% povečava (pisava ostane enako velika), obvezna pa oznaka točke T in njen
+% položaj, da lahko pokažemo popravek in premik.
+\newcommand{\pravokotnica}[3][1]{%
+  \begin{tikzpicture}[scale=#1]
+    \coordinate (T) at #3;
+    \draw[blue, very thick, name path=p] (-3, 0) -- (3, 0) node[right] {$p$};
+    \draw[gray, name path=k] (T) ++(210:2) arc (210:330:2);
+    \path[name intersections={of=p and k, by={A, B}}];
+    \draw[gray, name path=m] (A) ++(-70:2) arc (-70:70:2);
+    \draw[gray, name path=n] (B) ++(250:2) arc (250:110:2);
+    \path[name intersections={of=m and n, by={C, T'}}];
+    \draw[red, very thick] (T) -- (C);
+    \fill[blue] (T) circle (2pt) node[above left] {$#2$};
+    \draw (A) circle (1.5pt) node[below left] {$A$};
+    \draw (B) circle (1.5pt) node[below right] {$B$};
+    \draw (C) circle (1.5pt) node[below right] {$C$};
+  \end{tikzpicture}%
+}
+
+% Datoteke diagram.pdf, diagram.png in diagram.jpg so izvozi slike
+% predavanja/07-slike/diagram.tex iz zbornice, kjer je zapisan tudi postopek.
+% Vrstica točk risbe pri stiskanju brez izgub: stolpec 4 je rdeča premica.
+% Barve iz datoteke diagram.png.
+\definecolor{ozadje}{RGB}{255,255,255}
+\definecolor{rdeca}{RGB}{255,0,0}
+\newcommand{\barvatocke}[1]{\ifnum#1=4 rdeca\else ozadje\fi}
+
+% Poenostavljena Mona Lisa: povprečne barve 12 × 18 pravokotnikov slike
+% mona-lisa.png. Datoteko ustvari skripta predavanja/07-slike/mona-lisa-mreza.py
+% iz zbornice.
+\input{mona-lisa-mreza}
+
+\begin{document}
+\begin{frame}
+  \begin{center}
+    \Huge\textbf{Slike}
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize]{latex}
+\usepackage{graphicx}
+...
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.4\textwidth]{mona-lisa.jpg}
+  \caption{Mona Lisa}
+  \label{sl:mona-lisa}
+\end{figure}
+
+Skrivnosten nasmešek lahko vidite na
+sliki~\ref{sl:mona-lisa}.
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \footnotesize
+      \centering
+      \includegraphics[width=0.4\linewidth]{mona-lisa.jpg}
+
+      Slika 1: Mona Lisa
+      \bigskip
+
+      \raggedright
+      Skrivnosten nasmešek lahko vidite na sliki~1.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\section{Rastrske slike}
+
+\begin{frame}{}
+  \centering
+  \begin{tikzpicture}
+    \node[anchor=north west, inner sep=0] at (0, 0)
+      {\includegraphics[height=5.4cm]{mona-lisa.png}};
+    \begin{scope}[shift={(4.4, 0)}, x=0.3cm, y=-0.3cm]
+      \foreach \x/\y/\r/\g/\b in \monalisa {
+        \definecolor{tocka}{RGB}{\r,\g,\b}
+        \filldraw[fill=tocka, draw=tocka] (\x, \y) rectangle ++(1, 1);
+      }
+      \draw[white, thick] (\monalisaizrezx, \monalisaizrezy) rectangle ++(3, 3);
+      \coordinate (izrez-zgoraj) at (\monalisaizrezx + 3, \monalisaizrezy);
+      \coordinate (izrez-spodaj) at (\monalisaizrezx + 3, \monalisaizrezy + 3);
+    \end{scope}
+    \begin{scope}[shift={(9.2, -1)}, x=1.1cm, y=-1.1cm]
+      \foreach \x/\y/\r/\g/\b in \monalisaizrez {
+        \definecolor{tocka}{RGB}{\r,\g,\b}
+        \filldraw[fill=tocka, draw=tocka] (\x, \y) rectangle ++(1, 1);
+        \node[font=\tiny, align=center, text=white] at (\x + 0.5, \y + 0.5) {\r\\\g\\\b};
+      }
+      \draw[gray, dashed] (izrez-zgoraj) -- (0, 0) (izrez-spodaj) -- (0, 3);
+    \end{scope}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+  \begin{columns}[T]
+    \begin{column}{0.45\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \fill[black] (-1.9, -1.7) rectangle (1.9, 1.9);
+        \begin{scope}[blend group=screen]
+          \fill[red] (90:0.6) circle (1);
+          \fill[green] (210:0.6) circle (1);
+          \fill[blue] (330:0.6) circle (1);
+        \end{scope}
+      \end{tikzpicture}
+      \medskip
+
+      \textbf{RGB}: zaslon seva svetlobo.
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \draw[gray!50] (-1.9, -1.7) rectangle (1.9, 1.9);
+        \begin{scope}[blend group=multiply]
+          \fill[cyan] (90:0.6) circle (1);
+          \fill[magenta] (210:0.6) circle (1);
+          \fill[yellow] (330:0.6) circle (1);
+        \end{scope}
+      \end{tikzpicture}
+      \medskip
+
+      \textbf{CMYK}: črnilo vpija svetlobo.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Stiskanje z izgubami}
+  \begin{columns}[T]
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[height=0.6\textheight]{mona-lisa.png}
+
+      PNG (1,8 MB)
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[height=0.6\textheight]{mona-lisa.jpg}
+
+      JPG (309 KB)
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[height=0.6\textheight]{mona-lisa-lo.jpg}
+
+      JPG (31 KB)
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Sliki ustvari skripta predavanja/07-slike/mandelbrot.py iz zbornice.
+\begin{frame}{}
+  \begin{columns}[T]
+    \begin{column}{0.45\textwidth}
+      \centering
+      \includegraphics[width=0.9\linewidth]{mandelbrot.jpg}
+
+      \texttt{mandelbrot.jpg} (48 KB)
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \centering
+      \includegraphics[width=0.9\linewidth]{mandelbrot.png}
+
+      \texttt{mandelbrot.png} (241 KB)
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Stiskanje brez izgub}
+  \centering
+  \begin{tikzpicture}[x=0.9cm, y=-0.9cm]
+    \foreach \x in {0,...,9} {
+      \filldraw[fill=\barvatocke{\x}, draw=gray!50] (\x, 0) rectangle ++(1, 1);
+    }
+  \end{tikzpicture}
+  \bigskip
+
+  \(4 \times (255, 255, 255) \quad 1 \times (255, 0, 0) \quad 5 \times (255, 255, 255)\)
+\end{frame}
+
+\begin{frame}{}
+  \begin{columns}[T]
+    \begin{column}{0.4\textwidth}
+      \centering
+      \includegraphics[width=0.8\linewidth]{diagram.jpg}
+
+      \texttt{diagram.jpg} (24 KB)
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \includegraphics[width=0.8\linewidth]{diagram.png}
+
+      \texttt{diagram.png} (23 KB)
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\section{Vektorske slike}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[T]
+    \begin{column}{0.6\textwidth}
+      \begin{minted}[fontsize=\footnotesize]{html}
+<svg width="300" height="200">
+  <line x1="0" y1="140" x2="300" y2="140"
+        stroke="blue" stroke-width="6"/>
+  <circle cx="150" cy="60" r="8"
+          fill="blue"/>
+</svg>
+      \end{minted}
+    \end{column}
+    \begin{column}{0.35\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.015cm, y=-0.015cm]
+        \draw[gray!50] (0, 0) rectangle (300, 200);
+        \draw[blue, line width=0.09cm] (0, 140) -- (300, 140);
+        \fill[blue] (150, 60) circle (0.12cm);
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{}
+  \begin{columns}[T]
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{diagram.jpg}
+
+      \texttt{diagram.jpg}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{diagram.png}
+
+      \texttt{diagram.png}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{diagram.pdf}
+
+      \texttt{diagram.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\section{TikZ}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[c]
+    \begin{column}{0.66\textwidth}
+      \begin{minted}[fontsize=\scriptsize]{latex}
+\usetikzlibrary{intersections}
+...
+\begin{tikzpicture}
+  \coordinate (T) at (0, 1.4);
+  \draw[blue, very thick, name path=p] (-3, 0) -- (3, 0) node[right] {$p$};
+  \draw[gray, name path=k] (T) ++(210:2) arc (210:330:2);
+  \path[name intersections={of=p and k, by={A, B}}];
+  \draw[gray, name path=m] (A) ++(-70:2) arc (-70:70:2);
+  \draw[gray, name path=n] (B) ++(250:2) arc (250:110:2);
+  \path[name intersections={of=m and n, by={C, T'}}];
+  \draw[red, very thick] (T) -- (C);
+  \fill[blue] (T) circle (2pt) node[above left] {$T$};
+  \draw (A) circle (1.5pt) node[below left] {$A$};
+  \draw (B) circle (1.5pt) node[below right] {$B$};
+  \draw (C) circle (1.5pt) node[below right] {$C$};
+\end{tikzpicture}
+      \end{minted}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \centering
+      \pravokotnica[0.6]{T}{(0, 1.4)}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{}
+  \begin{columns}[T]
+    \begin{column}{0.45\textwidth}
+      \centering
+      Premica \(TC\) je pravokotna na~\(p\).
+      \medskip
+
+      \includegraphics[scale=0.8]{diagram.pdf}
+
+      \texttt{diagram.pdf}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \centering
+      Premica \(TC\) je pravokotna na~\(p\).
+      \medskip
+
+      \pravokotnica[0.8]{T}{(0, 1.4)}
+
+      TikZ
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[c]
+    \begin{column}{0.66\textwidth}
+      \begin{minted}[fontsize=\scriptsize,highlightlines=10]{latex}
+\begin{tikzpicture}
+  \coordinate (T) at (0, 1.4);
+  \draw[blue, very thick, name path=p] (-3, 0) -- (3, 0) node[right] {$p$};
+  \draw[gray, name path=k] (T) ++(210:2) arc (210:330:2);
+  \path[name intersections={of=p and k, by={A, B}}];
+  \draw[gray, name path=m] (A) ++(-70:2) arc (-70:70:2);
+  \draw[gray, name path=n] (B) ++(250:2) arc (250:110:2);
+  \path[name intersections={of=m and n, by={C, T'}}];
+  \draw[red, very thick] (T) -- (C);
+  \fill[blue] (T) circle (2pt) node[above left] {$P$};
+  \draw (A) circle (1.5pt) node[below left] {$A$};
+  \draw (B) circle (1.5pt) node[below right] {$B$};
+  \draw (C) circle (1.5pt) node[below right] {$C$};
+\end{tikzpicture}
+      \end{minted}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \centering
+      \pravokotnica[0.6]{P}{(0, 1.4)}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Izpisa sta dejanska izpisa ukaza git diff --no-index, le poti so skrajšane.
+\begin{frame}[fragile]{}
+  \begin{slaboenv}
+    \begin{minted}[fontsize=\scriptsize]{text}
+$ git diff pravokotnica.png
+diff --git a/pravokotnica.png b/pravokotnica.png
+index 1927dbc..8e6821d 100644
+Binary files a/pravokotnica.png and b/pravokotnica.png differ
+    \end{minted}
+  \end{slaboenv}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{dobroenv}
+    \begin{minted}[fontsize=\scriptsize]{diff}
+$ git diff pravokotnica.tex
+diff --git a/pravokotnica.tex b/pravokotnica.tex
+index e330e92..6189458 100644
+--- a/pravokotnica.tex
++++ b/pravokotnica.tex
+@@ -7,7 +7,7 @@
+   \draw[gray, name path=n] (B) ++(250:2) arc (250:110:2);
+   \path[name intersections={of=m and n, by={C, T'}}];
+   \draw[red, very thick] (T) -- (C);
+-  \fill[blue] (T) circle (2pt) node[above left] {$T$};
++  \fill[blue] (T) circle (2pt) node[above left] {$P$};
+   \draw (A) circle (1.5pt) node[below left] {$A$};
+   \draw (B) circle (1.5pt) node[below right] {$B$};
+   \draw (C) circle (1.5pt) node[below right] {$C$};
+    \end{minted}
+  \end{dobroenv}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[c]
+    \begin{column}{0.66\textwidth}
+      \begin{minted}[fontsize=\scriptsize,highlightlines=2]{latex}
+\begin{tikzpicture}
+  \coordinate (T) at (0.8, 1.2);
+  \draw[blue, very thick, name path=p] (-3, 0) -- (3, 0) node[right] {$p$};
+  \draw[gray, name path=k] (T) ++(210:2) arc (210:330:2);
+  \path[name intersections={of=p and k, by={A, B}}];
+  \draw[gray, name path=m] (A) ++(-70:2) arc (-70:70:2);
+  \draw[gray, name path=n] (B) ++(250:2) arc (250:110:2);
+  \path[name intersections={of=m and n, by={C, T'}}];
+  \draw[red, very thick] (T) -- (C);
+  \fill[blue] (T) circle (2pt) node[above left] {$T$};
+  \draw (A) circle (1.5pt) node[below left] {$A$};
+  \draw (B) circle (1.5pt) node[below right] {$B$};
+  \draw (C) circle (1.5pt) node[below right] {$C$};
+\end{tikzpicture}
+      \end{minted}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \centering
+      \pravokotnica[0.6]{T}{(0.8, 1.2)}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{columns}[c]
+    \begin{column}{0.55\textwidth}
+      \begin{minted}[fontsize=\scriptsize]{latex}
+\begin{tikzpicture}
+  \foreach \i in {1,...,12}
+    \foreach \j in {\i,...,12}
+      \draw[blue] (30*\i:2) -- (30*\j:2);
+\end{tikzpicture}
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \foreach \i in {1,...,12}
+          \foreach \j in {\i,...,12}
+            \draw[blue] (30*\i:2) -- (30*\j:2);
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Naslovnica je prva stran priročnika iz TeX Live 2026 (PGF 3.1.11a), izrezana z
+%   gs -sDEVICE=pdfwrite -dFirstPage=1 -dLastPage=1 -o pgfmanual-naslovnica.pdf pgfmanual.pdf
+\begin{frame}{}
+  \centering
+  \href{https://tikz.dev}{\includegraphics[height=0.85\textheight]{pgfmanual-naslovnica.pdf}}
+\end{frame}
+
+\end{document}
