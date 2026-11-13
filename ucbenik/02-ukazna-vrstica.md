@@ -142,7 +142,8 @@ Z nekaj dodatnimi znaki opišemo bolj zapletene vzorce: en znak iz nabora, ponov
 | `\|`   | izbira                                 | `pes\|kuža\|maček` se ujema s katerokoli od treh besed        |
 | `(…)`  | skupina                                | `(ha)+` se ujema s `ha`, `haha`, `hahaha` …                   |
 
-Ponovitev in izbira veljata za en znak ali za skupino v okroglih oklepajih.
+Ponovitev velja za en znak ali za skupino v okroglih oklepajih.
+Izbira pa sega do roba izraza ali skupine: `pes|kuža` izbira med celima besedama, `kuž(a|ek)` pa samo med koncema `a` in `ek`, zato se ujema s `kuža` in `kužek`.
 Oklepaji hkrati označijo skupino (angl. _capture group_): del besedila, ki se ujema z vsebino oklepajev, si iskalnik zapomni, zato se nanj lahko sklicujemo.
 
 Regularne izraze boste uporabljali na dveh mestih.
