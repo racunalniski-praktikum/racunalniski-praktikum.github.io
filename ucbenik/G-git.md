@@ -103,6 +103,9 @@ Primer ustrezne datoteke `.gitignore` bi bil:
 *.synctex.gz
 *.synctex(busy)
 
+# Arhivi, iz katerih smo datoteke že odpakirali
+*.zip
+
 # MacOS
 __MACOSX
 .DS_Store
