@@ -74,7 +74,7 @@ Dober primer tega so datoteke, specifične za naš računalnik, varnostno občut
 ki jih računalnik ustvari sam (in jih zato lahko ustvarimo na novo):
 
 - MacOS rad ustvarja datoteke `.DS_Store` in direktorije `__MACOSX`,
-- Windowsi ustvarjajo datoteke `thumbs.db`,
+- Windowsi ustvarjajo datoteke `Thumbs.db`,
 - Python (ki ga boste srečali pri Uvodu v programiranje) ustvari množico datotek v imeniku `__pycache__`, 
 - LaTeX ustvari PDF datoteke ter pomožne datoteke s končnicami `.aux`, `.log` in podobno. 
 
@@ -99,7 +99,6 @@ Primer ustrezne datoteke `.gitignore` bi bil:
 *.nav
 *.out
 *.pdf
-*.pyc
 *.snm
 *.synctex.gz
 *.synctex(busy)
@@ -109,10 +108,11 @@ __MACOSX
 .DS_Store
 
 # Windows
-thumbs.db
+Thumbs.db
 
 # Python
 __pycache__
+*.pyc
 ```
 
 (git:nastavitve)=

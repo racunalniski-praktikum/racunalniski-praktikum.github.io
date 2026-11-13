@@ -229,10 +229,11 @@ Poglejte si, kakšne napake javi LaTeX, če prevajate brez tega: tako jih boste 
 Pomožnih datotek ne shranjujemo v repozitorij: LaTeX jih naredi ob vsakem prevajanju znova, prav tako PDF.
 V glavni imenik repozitorija zato dodamo datoteko [`.gitignore`](git:gitignore), ki Gitu pove, katerih datotek naj ne upošteva.
 Vzorec `*.aux` izključi vse datoteke s končnico `.aux`, v vseh imenikih;
-enako naredimo za druge pomožne končnice (primer je v plonkcu) in za `*.pdf`.
+enako naredimo za druge pomožne končnice in za `*.pdf`.
 Izjema so PDF-ji, ki jih v dokument vključimo kot slike:
 vsakega izvzamemo z vrstico za `*.pdf`, ki se začne s klicajem, na primer `!slika.pdf`.
 V repozitoriju tako ostanejo samo izvorne datoteke: `.tex`, `.bib` in slike.
+Za vsebino datoteke uporabimo primer iz razdelka [Datoteka `.gitignore`](git:gitignore) v dodatku o Gitu.
 
 Datoteka `.gitignore` velja samo za datoteke, ki jim Git še ne sledi.
 Pomožna datoteka, ki smo jo zabeležili, preden smo napisali `.gitignore`, ostane v repozitoriju,
@@ -339,8 +340,8 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
     Pomagate si lahko z iskanjem in zamenjavo z regularnimi izrazi;
     vključite tudi razlikovanje velikih in malih črk.
     Kaj naredi vzorec `\. ([a-z])`?
-11. V glavni imenik repozitorija dodajte datoteko `.gitignore`,
-    v kateri naštejete pomožne datoteke, ki jih naredi LaTeX (razdelek [Pomožne datoteke in Git](latex:gitignore)).
+11. V glavni imenik repozitorija dodajte datoteko `.gitignore` z vsebino primera iz razdelka
+    [Datoteka `.gitignore`](git:gitignore) v dodatku o Gitu (zakaj, pove razdelek [Pomožne datoteke in Git](latex:gitignore)).
     Pravilno bo napisana, ko boste med spremembami
     videli samo datoteki `urnik.tex` in `.gitignore`.
 12. Zabeležite spremembo in vnose pošljite na GitHub.

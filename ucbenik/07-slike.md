@@ -67,7 +67,8 @@ Datoteka `magic.tex` vsebuje rešitev tamkajšnjih nalog in navodila za nove.
 Pripravite jo tako, da boste z njo dobili PDF dokument, čim bolj podoben datoteki `magic-resitev.pdf`.
 
 - Pregledne datoteke v imeniku `latex-pregled` in naloga Magični kvadrati naredijo še pomožne datoteke s končnicami `.bbl`, `.blg`, `.idx`, `.ilg`, `.ind`, `.nav`, `.out`, `.snm` in `.toc`.
-  Vsebino datoteke `.gitignore` v glavnem imeniku repozitorija zamenjajte s primerom iz razdelka [Datoteka `.gitignore`](git:gitignore) v dodatku o Gitu.
+  Preverite, ali je vsebina datoteke `.gitignore` v glavnem imeniku repozitorija enaka primeru iz razdelka [Datoteka `.gitignore`](git:gitignore) v dodatku o Gitu;
+  če ni, jo z njim zamenjajte.
   Na GitHubu preverite, ali ste katero od teh datotek že zabeležili, najverjetneje v imeniku `latex-pregled` ali `06-magicni-kvadrati`; če ste, jo pobrišite in izbris zabeležite.
 - V glavni imenik repozitorija odpakirajte arhiv [`07-magicni-kvadrati.zip`](07-slike/07-magicni-kvadrati.zip)
   v imenik `07-magicni-kvadrati` z datotekami za nalogo Magični kvadrati.
