@@ -342,8 +342,8 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
     Kaj naredi vzorec `\. ([a-z])`?
 11. V glavni imenik repozitorija dodajte datoteko `.gitignore` z vsebino primera iz razdelka
     [Datoteka `.gitignore`](git:gitignore) v dodatku o Gitu (zakaj, pove razdelek [Pomožne datoteke in Git](latex:gitignore)).
-    Pravilno bo napisana, ko boste med spremembami
-    videli samo datoteki `urnik.tex` in `.gitignore`.
+    Pravilno bo napisana, ko med spremembami ne bo več nobene pomožne datoteke
+    (`.aux`, `.log` in podobnih), nobenega PDF-ja in nobenega arhiva ZIP.
 12. Zabeležite spremembo in vnose pošljite na GitHub.
 
 ## Dodatni viri
