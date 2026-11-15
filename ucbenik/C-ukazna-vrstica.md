@@ -7,7 +7,7 @@
   spremeni trenutni delovni imenik v skladu s potjo (relativno ali absolutno), ki jo podamo.
   Primeri:
     - `cd ..` spremeni trenutni delovni imenik na en imenik višje v hierarhiji (oz. na starša, oz. na en imenik bližje korenskemu, npr. iz `Users/racunalniski-praktikum/vaje1` v `Users/racunalniski-praktikum`),
-    - `cd ~` spremeni trenutni delovni imenik na domači imenik uporabnika (`/c/Users/⟨uporabnisko-ime⟩` na Windows in `/Users/⟨uporabnisko-ime⟩` na MacOS),
+    - `cd ~` spremeni trenutni delovni imenik na domači imenik uporabnika (`/c/Users/⟨uporabnisko-ime⟩` na Windows in `/Users/⟨uporabnisko-ime⟩` na macOS),
     - `cd ../⟨sosednji-imenik⟩` spremeni delovni imenik na imenik `⟨sosednji-imenik⟩`, ki se nahaja v istem staršu kot trenutni delovni imenik (seveda, če ta obstaja, npr. iz `Users/racunalniski-praktikum/vaje1` v `Users/racunalniski-praktikum/vaje2`),
     - podobno se lahko premaknemo tudi za več imenikov navzgor, npr. iz `Users/racunalniski-praktikum/vaje1` v `Users` z ukazom `cd ../..`,
     - `cd -` spremeni delovni imenik na prejšnji delovni imenik 

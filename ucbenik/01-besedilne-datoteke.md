@@ -33,7 +33,7 @@ Kazalca postavite na črki <kbd>F</kbd> in <kbd>J</kbd>. Ti dve tipki sta na tip
 Hitri programerji ne uporabljajo miške, ker jih le-ta upočasni.
 Pomembno je, da se naučite uporabljati bližnjice v vseh programih, ki jih uporabljate pogosto.
 Veliko bližnjic se da uporabiti z eno roko.
-Desničarji lahko na primer z levo roko uporabijo bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (<kbd>Cmd</kbd>+<kbd>Tab</kbd> na MacOS) za preklapljanje med okni, medtem ko imajo desno roko na miški.
+Desničarji lahko na primer z levo roko uporabijo bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (<kbd>Cmd</kbd>+<kbd>Tab</kbd> na macOS) za preklapljanje med okni, medtem ko imajo desno roko na miški.
 
 ## Navadno besedilo in označevalni jeziki
 
@@ -128,7 +128,7 @@ Več informacij:
 2. Zapomnite si svoj rezultat (WPM – words per minute), saj ga boste vpisali v anketo, ki jo boste reševali za domačo nalogo.
    Rezultati bodo objavljeni anonimno, vi pa boste videli, kam se uvrščate.
 
-`````{admonition} Nasvet za operacijski sistem MacOS
+`````{admonition} Nasvet za operacijski sistem macOS
 :class: tip
 Za tipkanje redkejših znakov si pomagajte s programom [Keyboard Viewer](https://support.apple.com/en-gb/guide/mac-help/mchlp1015/mac),
 ki je že nameščen na vašem sistemu.
@@ -182,7 +182,7 @@ Ta (ali podoben) način označevanja je kar običajen za mesta, kjer morate vnes
 
 `````{admonition} Pozor, uvajamo standarden zapis
 :class: important
-Z znakom 🍎 označujemo, kar velja za MacOS.
+Z znakom 🍎 označujemo, kar velja za macOS.
 `````
 
 ### 3.1 Pripravite se za delo (brez miške)
@@ -191,7 +191,7 @@ S tipkovnico in čim manjšo uporabo miške naredite naslednja opravila:
 
 1. Odprite svoj domači imenik v upravitelju datotek:
    - na Windows v Raziskovalcu (angl. _File Explorer_): `C:\Users\⟨uporabnisko-ime⟩`,
-   - na MacOS v Finderju: `/Users/⟨uporabnisko-ime⟩`,
+   - na macOS v Finderju: `/Users/⟨uporabnisko-ime⟩`,
    - na Linuxu: `/home/⟨uporabnisko-ime⟩`.
 2. V njem ustvarite imenik za Računalniški praktikum (npr. `C:\Users\⟨uporabnisko-ime⟩\rp`), v njem pa imenik `racunalniski-praktikum`.
    Zunanji imenik je vaš: poimenujete ga lahko po svoje in vanj boste dali vse, kar je povezano s predmetom.

@@ -33,7 +33,7 @@ iskanjem po datotekah (prvič v nalogi 2.3), do katerega dostopate z bližnjico
 
 Prehajanje med izvorno kodo v `.tex` datoteki in PDF datoteko v VSCode:
 
-|                 | Windows                                     |  MacOS                                        |
+|                 | Windows                                     |  macOS                                        |
 |:----------------|:-------------------------------------------:|:---------------------------------------------:|
 | iz `.tex` v PDF | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> | <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> |
 | iz PDF v `.tex` | <kbd>Ctrl</kbd>+klik                        | <kbd>Ctrl</kbd>+klik                          |

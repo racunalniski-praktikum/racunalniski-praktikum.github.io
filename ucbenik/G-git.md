@@ -73,7 +73,7 @@ V datoteko `.gitignore` naštejemo vse datoteke, ki jim v Gitu ne želimo sledit
 Dober primer tega so datoteke, specifične za naš računalnik, varnostno občutljive datoteke in datoteke, 
 ki jih računalnik ustvari sam (in jih zato lahko ustvarimo na novo):
 
-- MacOS rad ustvarja datoteke `.DS_Store` in direktorije `__MACOSX`,
+- macOS rad ustvarja datoteke `.DS_Store` in direktorije `__MACOSX`,
 - Windowsi ustvarjajo datoteke `Thumbs.db`,
 - Python (ki ga boste srečali pri Uvodu v programiranje) ustvari množico datotek v imeniku `__pycache__`, 
 - LaTeX ustvari PDF datoteke ter pomožne datoteke s končnicami `.aux`, `.log` in podobno. 
@@ -228,7 +228,7 @@ Ob prvi povezavi vas program vpraša, ali zaupate strežniku (_The authenticity 
 
 <!-- ### 5. Gesla za ključ nočete prepogosto vpisovati
 
-- MacOS: sledite navodilom v dokumentaciji, razdelek [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent). -->
+- macOS: sledite navodilom v dokumentaciji, razdelek [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent). -->
 
 (git:vscode)=
 ## Git, GitHub in VSCode
