@@ -138,8 +138,11 @@ Pri tem sledite štirim korakom z začetka poglavja, označenim s [K1]–[K4].
 Oblikujte dokaz izreka z novim okoljem `dokaz`.
 To okolje naj bo kar enako okolju `proof` iz paketa `amsthm`, le da namesto besede *Dokaz* piše *Dokaz izreka*.
 
-1. **[K1]** Kako namesto besede *Dokaz* napišete poljubno besedilo, piše v razdelku 5.1 _The beginning of a proof_ [navodil za paket `amsthm`](https://mirrors.ctan.org/macros/latex/required/amscls/doc/amsthdoc.pdf). Tako oblikujte dokaz izreka.
-2. Sledite korakoma **[K2]** in **[K3]**.
+1. **[K1]** Kako namesto besede *Dokaz* napišete poljubno besedilo, piše v prvem odstavku razdelka 5.1 _The beginning of a proof_ [navodil za paket `amsthm`](https://mirrors.ctan.org/macros/latex/required/amscls/doc/amsthdoc.pdf), ki se konča s primerom; preostanka razdelka ne potrebujete. Tako oblikujte dokaz izreka.
+2. **[K2]** V preambulo napišite osnutek definicije novega okolja:
+   `\newenvironment{⟨ime-okolja⟩}{⟨pred-vsebino⟩}{⟨za-vsebino⟩}`.
+   Zamenjajte `⟨ime-okolja⟩` z `dokaz`, `⟨pred-vsebino⟩` z `\begin{proof}[Dokaz izreka]`, `⟨za-vsebino⟩` pa z `\end{proof}`.
+3. **[K3]** V dokazu izreka ta dva ukaza zamenjajte z `\begin{dokaz}` oziroma `\end{dokaz}`.
 
 ### Okolje `magic`
 
@@ -149,7 +152,7 @@ Definirajte novo okolje `magic` s tremi argumenti: red kvadrata, opis tabele in 
   Zdaj popravite argument okolja `tabular`, v katerem naštejete poravnave stolpcev z določilom `|*{3}{c|}` (namesto `|c|c|c|`). 
   To določilo pomeni, da ima tabela najprej navpično črto (`|`), ki ji sledijo trije sredinsko poravnani stolpci, vsak z navpično črto na desni.
   V splošnem določilo `*{⟨n⟩}{⟨poravnave⟩}` `n`-krat ponovi poravnave iz drugega argumenta.
-* **[K2]** V preambuli pripravite definicijo novega okolja z ukazom `newenvironment`.
+* **[K2]** V preambuli tako kot za okolje `dokaz` pripravite osnutek definicije okolja `magic`.
     V drugi in tretji argument kopirajte ukaze, ki so v tabeli `table:mag3` označeni s komentarji.
 * **[K3]** Označene ukaze v tabeli `table:mag3` skupaj s komentarji zamenjajte z `\begin{magic}` oziroma `\end{magic}`, vrstice kvadrata pa pustite pri miru.
 * **[K4]** V ukazu `newenvironment` boste morali določiti še [število argumentov](https://www.overleaf.com/learn/latex/Environments#Defining_environments_which_take_arguments) novega okolja. Na vrednosti argumentov se v definiciji okolja sklicujete z `#1` za prvi argument, `#2` za drugi argument in tako naprej. Argumente napišite tudi tam, kjer okolje uporabite: `\begin{magic}{⟨red⟩}{⟨opis⟩}{⟨ime⟩}`.
