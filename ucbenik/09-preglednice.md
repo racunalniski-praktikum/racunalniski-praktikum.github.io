@@ -176,7 +176,6 @@ Predpostavite, da rezervoar vedno napolnimo do vrha.
 2.  V stolpcu `Plačano` izračunajte, koliko smo plačali za gorivo: litre pomnožite s ceno, ki je veljala na dan točenja.
     Ceno poiščite v tabeli `cene` s funkcijo `XLOOKUP`.
     *Namig:* cena velja od datuma v stolpcu `Veljavnost` do naslednje spremembe, zato iščete zadnji datum, ki ni poznejši od datuma točenja; to določite s petim argumentom.
-    Rezultat preverite na prvi vrstici, kjer mora priti 58,30 €.
 3.  V stolpcu `Poraba` izračunajte porabo v litrih na 100 km po formuli $100 \cdot \frac{\text{litri}}{\text{prevoženo}}$.
     Prva vrstica naj tudi tu ostane prazna.
 4.  Stolpec `Prikaz` že vsebuje vrednosti iz stolpca `Poraba`; prikažite jih s stolpci.
@@ -185,22 +184,29 @@ Predpostavite, da rezervoar vedno napolnimo do vrha.
     Brez zadnjih dveh nastavitev se vsi stolpci začnejo pri nič in so skoraj enako dolgi.
 5.  *Dodatno:* sestavite vrtilno tabelo, ki po mesecih pokaže skupno število prevoženih kilometrov in povprečno porabo, kot na dnu slike.
 
-## Točkovanje (dodatna naloga)
+## 4. naloga: točkovanje (dodatna naloga)
 
-V delovnem zvezku `tockovanje.xlsx` so zbrani podatki o točkovanju
-testa, ki so ga pisali študenti. Vsaka naloga je bila točkovana s
-plusom, krogcem ali minusom (minusi v tabelo niso vpisani), vrednosti
-plusa in krogca pa so različne pri posameznih nalogah.
+V delovnem zvezku `tockovanje.xlsx` je točkovanje testa, ki so ga pisali študenti.
+Vsaka postavka je ocenjena s plusom ali krogcem, minusi pa niso vpisani.
+Koliko točk prinese plus in koliko krogec, je za vsako postavko zapisano v stolpcih `C` in `D`.
 
-![image](09-preglednice/tockovanje.png)
+:::{figure-md} slika:tockovanje
+![Rešena naloga s točkovanjem testa](09-preglednice/tockovanje.png)
 
-1.  Stolpce uredite tako, da bodo priimki študentov urejeni po abecednem
-    vrstnem redu: **Data** > **Sort**, pod **Options** pa izberete **Sort from left to right**. 
-    Ni nujno, da se bodo šumniki uredili pravilno, to je za zdaj ok.
-2.  Na obarvanih poljih (vrstice 14, 24, 43 in 45), izračunajte dosežene
-    točke s funkcijama `SUM` in `SUMIF`. Formule najprej sestavite
-    za enega študenta in jih kopirajte k drugim.
-3.  Pod "Rezultati testa" kopirajte imena, priimke in dosežene
-    točke (vrednosti, ne formul): uporabite menija **Copy** in **Paste Special**.
-4.  Študente uredite padajoče po doseženih točkah in izračunajte ocene.
+&nbsp; Rešena naloga s točkovanjem testa
+:::
 
+1.  Študente uredite po abecedi priimkov.
+    Ker so študenti v stolpcih in ne v vrsticah, izberite obseg `E2:R42`, v oknu _Data_ > _Sort_ pod _Options_ izberite _Sort left to right_ in nato urejanje po vrstici 2.
+    Vrstni red črk s strešico je odvisen od jezikovnih nastavitev, zato se lahko razlikuje od slike.
+2.  V obarvanih vrsticah 14, 24 in 43 izračunajte točke posameznega sklopa.
+    V stolpcih `C` in `D` seštejte, koliko točk prinesejo vsi plusi oziroma vsi krogci sklopa.
+    Za vsakega študenta seštejte vrednosti njegovih plusov in krogcev s funkcijo `SUMIF`, ki deluje podobno kot `AVERAGEIF`.
+    Formulo sestavite za prvega študenta in jo kopirajte k drugim; prej premislite, kateri sklici se morajo pri kopiranju premakniti in kateri ne.
+    V vrstici 45 seštejte točke vseh treh sklopov.
+3.  Pod naslov _Rezultati testa_ prenesite priimke, imena in skupne točke študentov.
+    Izberite priimke in imena (`E2:R3`), jih kopirajte, kliknite celico `T6` in izberite _Paste Special_ z možnostma _Values_ in _Transpose_; druga vrstice zamenja s stolpci.
+    Enako prenesite točke iz vrstice 45 v stolpec `Točke`: možnost _Values_ poskrbi, da se prenesejo števila in ne formule.
+4.  Študente v tabeli rezultatov uredite padajoče po točkah in v stolpcu `Ocena` izračunajte oceno.
+    Ocena je 6 za 50 do 59 točk, 7 za 60 do 69 točk in tako naprej do 10; pod 50 točkami naj celica ostane prazna.
+    *Namig:* desetice števila točk dobite s funkcijo `TRUNC`, prazno celico pa s funkcijo `IF`.
