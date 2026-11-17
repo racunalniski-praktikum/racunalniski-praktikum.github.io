@@ -131,29 +131,33 @@ Podatki so v tabeli `Rezultati`, povzetek po skupinah pa boste sestavili v tabel
     *Namig:* izberite priimke in imena od prve vrstice podatkov navzdol, v meniju _Conditional Formatting_ izberite _New Rule_ in nato pravilo s formulo (🍎 slog _Classic_), formula pa je `$E4<50`.
     Znak `$` zaklene stolpec `E`, zato se priimek in ime ravnata po točkah v svoji vrstici.
 
-## Smučanje (vrtilna tabela)
+## 2. naloga: zmage v smučanju
 
-V datoteki `smucanje.csv` so zbrani podatki o skupnih zmagah v
-svetovnem pokalu v alpskem smučanju. Podatki so ločeni z vejicami,
-uporabljena je kodna tabela `UTF-8`. Podatke uvozite v delovni zvezek
-`smucanje.xlsx` na list `Podatki`. 
-Tabelo z uvoženimi podatki poimenujte `Zmagovalci`. 
+V datoteki `smucanje.csv` so zbrani podatki o skupnih zmagah v svetovnem pokalu v alpskem smučanju.
+Podatki so ločeni z vejicami, datoteka pa je kodirana v UTF-8.
 
-1.  [Poglejte](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576), 
-    kako se v Excelu naredi vrtilno tabelo.
-2.  Naredite nov list `Zmage` na katerem sestavite vrtilno tabelo in diagram, 
-    kot je prikazano na sliki.
-    Pri izbiri podatkov za vrtilno tabelo lahko napišete kar `Podatki!Zmagovalci`.
-3.  Prva vrtilna tabela naj vsebuje pregled zmag po državah in spolu
-    tekmovalcev. Vrtilno tabelo poimenujte `PoDrzavah`. Tabelo uredite
-    padajoče po skupnem številu zmag.
-4.  Druga vrtilna tabela naj prikazuje zmagovalce iz Evrope, ki so zmagali
-    vsaj dvakrat. Ustrezen filter najdete v meniju, ki vam ga odpre gumb za
-    filtriranje v glavi tabele. Izberite ustrezno polje in uredite
-    filtriranje po vrednost. Te razdelite na moške in ženske kot prikazuje
-    slika in tabelo uredite padajoče po skupnem številu zmag.
+:::{figure-md} slika:smucanje
+![Vrtilni tabeli in diagram z zmagami v smučanju](09-preglednice/smucanje.png)
 
-![image](09-preglednice/smucanje.png)
+&nbsp; Vrtilni tabeli in diagram z zmagami v smučanju
+:::
+
+1.  Podatke uvozite v nov delovni zvezek in ga shranite kot `smucanje.xlsx`.
+    List z uvoženimi podatki preimenujte v `Podatki`, tabelo pa v `Zmagovalci`.
+    *Namig:* v oknu za uvoz preverite, da sta izbrana kodiranje UTF-8 (_File Origin_) in ločilo vejica (_Delimiter_); uvoz podatke sam spremeni v tabelo.
+2.  Na novem listu `Zmage` sestavite vrtilno tabelo, ki za vsako državo pokaže število zmag moških in žensk, kot na levi strani slike.
+    Države uredite padajoče po skupnem številu zmag.
+    *Namig:* zmage prešteje polje z besedilom, na primer `Zmagovalec`, ko ga povlečete v območje _Values_; polje `Leto` bi Excel seštel.
+    Za urejanje desno kliknite eno od števil v stolpcu s skupnim številom zmag in izberite _Sort_ > _Sort Largest to Smallest_.
+3.  Vrtilni tabeli dodajte diagram, kot je na sliki.
+    *Namig:* izberite celico v vrtilni tabeli in na zavihku _Insert_ izberite naložen stolpični diagram (angl. _Stacked Column_).
+4.  Ob prvo postavite drugo vrtilno tabelo, ki pokaže zmagovalce iz Evrope z vsaj dvema zmagama, ločeno za moške in ženske, kot na desni strani slike.
+    Zmagovalce uredite padajoče po številu zmag.
+    *Namigi:*
+    - Polje `Država` povlecite v območje _Filters_; v filtru nad tabelo vključite možnost _Select Multiple Items_ in odstranite kljukici pri državah `ZDA` in `Kanada`.
+    - V območje _Rows_ povlecite polje `Spol`, pod njega pa polje `Zmagovalec`.
+    - Za pogoj vsaj dveh zmag kliknite puščico v glavi vrtilne tabele, izberite polje `Zmagovalec` in nato _Value Filters_ > _Greater Than Or Equal To_.
+    - Za urejanje v istem meniju izberite _More Sort Options_ in padajoče urejanje po številu zmag.
 
 ## Poraba (`MATCH` in `INDEX`)
 
