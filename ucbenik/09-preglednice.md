@@ -159,28 +159,31 @@ Podatki so ločeni z vejicami, datoteka pa je kodirana v UTF-8.
     - Za pogoj vsaj dveh zmag kliknite puščico v glavi vrtilne tabele, izberite polje `Zmagovalec` in nato _Value Filters_ > _Greater Than Or Equal To_.
     - Za urejanje v istem meniju izberite _More Sort Options_ in padajoče urejanje po številu zmag.
 
-## Poraba (`MATCH` in `INDEX`)
+## 3. naloga: poraba goriva
 
-V delovnem zvezku `poraba.xlsx` so vpisani podatki o tem, kdaj in
-koliko goriva smo dotočili v avto. Predpostavite, da gorivo vedno
-dotočimo do polnega.
+V delovnem zvezku `poraba.xlsx` je zapisano, kdaj in koliko goriva smo natočili v avto in koliko je takrat kazal števec kilometrov.
+Točenja so v tabeli `poraba`, cene bencina pa v tabeli `cene`.
+Predpostavite, da rezervoar vedno napolnimo do vrha.
 
-1.  Izračunajte prevožene kilometre (pri tem izpustite prvo vrstico).
-    Gumbe v glavi tabele lahko skrijete na zavihku *Table* (možnost
-    *Filter Button*).
-2.  S pomočjo funkcij `MATCH` in `INDEX` izračunajte ceno natočenega
-    goriva.
-3.  Porabo (litre na 100 km) izračunate po formuli
-    $100 \cdot \frac{\text{litri}}{\text{prevoženo}}$.
-4.  V zadnjem stolpcu grafično prikaži porabo. S formulo kopirajte
-    vrednost iz stolpca Poraba. Za zadnji stolpec uporabite pogojno
-    oblikovanje: **Conditional Formatting** > **Highest Value**. 
-    Za *minimum* in *maksimum* iz menija izberite *Lowest
-    Value* in *Highest Value*.
-5.  Sestavite vrtilno tabelo s pregledom prevoženih kilometrov in porabe
-    po mesecih. Stolpec skupno lahko skrijete na zavihku *Design*.
+:::{figure-md} slika:poraba
+![Rešena naloga s porabo goriva](09-preglednice/poraba.png)
 
-![image](09-preglednice/poraba.png)
+&nbsp; Rešena naloga s porabo goriva
+:::
+
+1.  V stolpcu `Prevoženo` izračunajte, koliko kilometrov smo prevozili od prejšnjega točenja: od stanja števca odštejte stanje v prejšnji vrstici.
+    Prva vrstica nima prejšnjega stanja, zato naj ostane prazna.
+2.  V stolpcu `Plačano` izračunajte, koliko smo plačali za gorivo: litre pomnožite s ceno, ki je veljala na dan točenja.
+    Ceno poiščite v tabeli `cene` s funkcijo `XLOOKUP`.
+    *Namig:* cena velja od datuma v stolpcu `Veljavnost` do naslednje spremembe, zato iščete zadnji datum, ki ni poznejši od datuma točenja; to določite s petim argumentom.
+    Rezultat preverite na prvi vrstici, kjer mora priti 58,30 €.
+3.  V stolpcu `Poraba` izračunajte porabo v litrih na 100 km po formuli $100 \cdot \frac{\text{litri}}{\text{prevoženo}}$.
+    Prva vrstica naj tudi tu ostane prazna.
+4.  Stolpec `Prikaz` že vsebuje vrednosti iz stolpca `Poraba`; prikažite jih s stolpci.
+    Izberite celice stolpca `Prikaz` in v meniju _Conditional Formatting_ izberite _Data Bars_ > _More Rules_.
+    Vključite možnost _Show Bar Only_, pri _Minimum_ izberite _Lowest Value_, pri _Maximum_ pa _Highest Value_.
+    Brez zadnjih dveh nastavitev se vsi stolpci začnejo pri nič in so skoraj enako dolgi.
+5.  *Dodatno:* sestavite vrtilno tabelo, ki po mesecih pokaže skupno število prevoženih kilometrov in povprečno porabo, kot na dnu slike.
 
 ## Točkovanje (dodatna naloga)
 
