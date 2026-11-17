@@ -7,7 +7,6 @@ copyright: "2024"
 exclude_patterns:
   - 05-utrdimo-osnove.md
   - 08-predstavitve.md
-  - 09-risanje.md
   - 10-razpredelnice.md
   - 11-racunanje-z-mathematico.md
   - 12-risanje-in-enacbe.md
