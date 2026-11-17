@@ -34,7 +34,7 @@ Naslove osi, legendo in oznake podatkov dodate na zavihku _Chart Design_ z ukazo
 **Zapolnjevanje celic.**
 Izbrana celica ali obseg celic ima v spodnjem desnem kotu kvadratek (angl. _fill handle_).
 Ko ga povlečete, Excel izbiro razširi na nove celice: posamezno vrednost kopira, zaporedje, na primer `1` in `2` ali datum, pa nadaljuje.
-Formula se pri tem prilagodi novemu mestu, kot opisuje naslednji odstavek.
+Formula se pri tem prilagodi novemu mestu, kot opisuje razdelek _Delo s podatki_.
 Dvoklik na kvadratek zapolni stolpec navzdol do zadnje vrstice s podatki v sosednjem stolpcu.
 
 **Sklici v formulah.**
@@ -42,14 +42,69 @@ Formula se začne z znakom `=`.
 Na celico se v njej sklicujete z njenim naslovom, na primer `B3`, na obseg celic pa z naslovoma zgornje leve in spodnje desne celice, ločenima z dvopičjem, na primer `B2:D10`.
 Naslova vam ni treba tipkati: med pisanjem formule kliknite celico ali povlecite čez obseg.
 Na celico na drugem listu se sklicujete z imenom lista in klicajem, na primer `Podatki!B3`; če ime lista vsebuje presledek, ga zapišite v enojnih narekovajih, na primer `'Rezultati 2026'!B3`.
-Sklic je običajno relativen: ko formulo kopirate eno vrstico niže, se `B3` spremeni v `B4`.
-Znak `$` pred oznako stolpca ali vrstice to oznako zaklene, zato se `$B$3` pri kopiranju ne spremeni, v `B$3` pa se lahko spremeni le stolpec.
+
+## Delo s podatki
+
+**Relativni in absolutni sklici.**
+V formuli lahko uporabite vrednosti iz drugih celic: `=B3*C3` zmnoži vrednosti celic `B3` in `C3`, in ko se katera od njiju spremeni, se rezultat izračuna na novo.
+Tak sklic na celico je običajno relativen: Excel si ne zapomni naslova, ampak to, kje celica leži glede na formulo, na primer dve celici levo od nje.
+Ko formulo kopirate, se zato sklic premakne z njo: če jo kopirate eno vrstico niže, se `B3` spremeni v `B4`.
+Znak `$` pred oznako stolpca ali vrstice to oznako zaklene in sklic postane absoluten: `$B$3` se pri kopiranju ne spremeni, v `$B3` ostane enak stolpec, v `B$3` pa vrstica.
+Absolutni sklic potrebujete, kadar se vse kopije formule sklicujejo na isto celico, na primer na celico s stopnjo davka: `=C3*$F$1`.
 Med vrstami sklica preklapljate s tipko <kbd>F4</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>T</kbd>).
+
+**Tabela.**
+Podatke, na primer seznam nakupov s stolpci `Kraj`, `Cena` in `Količina`, spremenite v tabelo (angl. _table_) tako, da izberete eno od celic in na zavihku _Insert_ izberete _Table_ (<kbd>Ctrl</kbd>+<kbd>T</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>T</kbd>).
+Excel zdaj ve, kje se podatki začnejo in končajo, prvo vrstico pa obravnava kot glavo z imeni stolpcev.
+Tabela se sama razširi, ko ji dodate vrstico ali stolpec.
+Excel ji da ime, kot je `Table1`; smiselno ime, na primer `Nakupi`, ji določite na zavihku _Table Design_ (🍎 _Table_), v polju _Table Name_.
+
+**Formule z imeni stolpcev.**
+V formuli se na stolpec tabele sklicujete z imenom namesto z naslovi celic: `=AVERAGE(Nakupi[Cena])` izračuna povprečje stolpca `Cena` v tabeli `Nakupi`.
+Znotraj tabele zapis `[@Cena]` pomeni vrednost stolpca `Cena` v isti vrstici, zato `=[@Cena]*[@Količina]` izračuna znesek za vsako vrstico posebej.
+Takih sklicev vam ni treba tipkati: Excel jih zapiše sam, ko med pisanjem formule kliknete celico ali izberete stolpec tabele.
+Formula, ki jo vpišete v eno celico stolpca, se sama razširi na ves stolpec tabele.
+
+**Funkcije s pogojem.**
+Funkcija `IF` ima tri argumente: pogoj, vrednost, ki jo vrne, če pogoj drži, in vrednost, ki jo vrne, če ne drži, na primer `=IF([@Cena]>100, "drago", "poceni")`.
+Funkciji `COUNTIF` in `AVERAGEIF` upoštevata samo celice, ki ustrezajo kriteriju: `=COUNTIF(Nakupi[Kraj], "Ljubljana")` prešteje nakupe v Ljubljani, `=AVERAGEIF(Nakupi[Kraj], "Ljubljana", Nakupi[Cena])` pa izračuna njihovo povprečno ceno.
+Argumente ločuje vejica ali podpičje, odvisno od regionalnih nastavitev računalnika; pravo ločilo vam Excel pokaže v namigu, ki se izpiše med pisanjem formule.
+
+**Iskanje z `XLOOKUP`.**
+Funkcija `XLOOKUP` poišče vrednost v enem stolpcu in vrne vrednost iz iste vrstice drugega stolpca.
+Če imate poleg nakupov še tabelo `Kraji` s stolpcema `Ime` in `Pošta`, formula `=XLOOKUP([@Kraj], Kraji[Ime], Kraji[Pošta])` za vsak nakup poišče vrstico z njegovim krajem in vrne vrednost iz stolpca `Pošta`.
+Če iskane vrednosti ni, vrne napako `#N/A`.
+S petim argumentom določite, kaj naj stori, kadar natančnega zadetka ni: z `-1` vzame naslednjo manjšo vrednost, z `1` naslednjo večjo.
+Četrti argument, ki pove, kaj naj vrne, če zadetka ni, lahko pri tem pustite prazen: `=XLOOKUP(⟨vrednost⟩, ⟨kje iščemo⟩, ⟨kaj vrnemo⟩, , -1)`.
+
+**Vrtilna tabela.**
+Vrtilna tabela (angl. _PivotTable_) povzame podatke iz tabele brez formul.
+Naredite jo tako, da izberete celico v tabeli in na zavihku _Insert_ izberete _PivotTable_.
+Stolpce tabele, ki se tu imenujejo polja (angl. _fields_), razporedite v štiri območja.
+Območji _Rows_ in _Columns_ določata, po čem so podatki razdeljeni v skupine, območje _Values_, kaj se za vsako skupino izračuna (vsota, število, povprečje, najmanjša ali največja vrednost), območje _Filters_ pa, kateri podatki so sploh upoštevani.
+Vrtilna tabela se ne posodobi sama: ko se podatki spremenijo, jo osvežite z ukazom _Refresh_ na zavihku _PivotTable Analyze_.
+
+**Pogojno oblikovanje.**
+S pogojnim oblikovanjem (_Home_ > _Conditional Formatting_) videz celice določite s pravilom, na primer da so vrednosti pod 50 rdeče.
+Ko se vrednost spremeni, se videz spremeni z njo.
+Celica, ki jo pobarvate ročno, ostane pobarvana, tudi ko barva ne drži več.
+
+**Uvoz podatkov.**
+Datoteko CSV uvozite z ukazom _Data_ > _From Text/CSV_, kjer izberete kodiranje datoteke in ločilo med podatki.
+Če jo samo odprete z dvoklikom, Excel oboje ugiba po regionalnih nastavitvah računalnika: šumniki se lahko pokvarijo, podatki, ločeni z vejicami, pa pristanejo v enem samem stolpcu.
 
 ## Datoteke z nalogami
 
 1. Za vajo lahko doma rešujete [uvodne naloge iz Excela](09-preglednice/excel-uvodne.zip).
 2. Datoteke za vaje najdete v arhivu [`09-preglednice.zip`](09-preglednice/09-preglednice.zip).
+
+Večina korakov v nalogah utrjuje snov iz razdelka _Delo s podatki_.
+Nekaj korakov pa samo pokaže, kaj Excel še zmore, na primer tortni diagram na sliki pri prvi nalogi.
+Pri teh so navodila namenoma kratka, saj je za potrebe tega predmeta dovolj, da veste, da možnost obstaja.
+Kako se kaj takega naredi, vprašajte jezikovni model, na primer Gemini v Googlovem iskalniku, in mu povejte, ali Excel uporabljate v sistemu Windows ali macOS.
+Odgovor preverite.
+Pri diagramu ali oblikovanju takoj vidite, ali je rezultat tak kot na sliki.
+Pri formuli to ni dovolj, saj lahko tudi napačna formula vrne števila, ki so videti pravilna, zato eno vrstico izračunajte še na roke.
 
 ## Rezultati
 
