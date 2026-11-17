@@ -98,12 +98,16 @@ Datoteko CSV uvozite z ukazom _Data_ > _From Text/CSV_, kjer izberete kodiranje 
 1. Za vajo lahko doma rešujete [uvodne naloge iz Excela](09-preglednice/excel-uvodne.zip).
 2. Datoteke za vaje najdete v arhivu [`09-preglednice.zip`](09-preglednice/09-preglednice.zip).
 
+Slike pri nalogah kažejo rešene delovne zvezke, kot jih Excel natisne.
+Na zaslonu so videti nekoliko drugače: brez črt med vsemi celicami, z gumbi za filtriranje v glavah tabel in morda z drugače zapisanimi datumi.
+S slikami zato primerjajte vsebino tabel, ne njihovega videza.
+
 Večina korakov v nalogah utrjuje snov iz razdelka _Delo s podatki_.
 Nekaj korakov, označenih z *Dodatno*, pa samo pokaže, kaj Excel še zmore, na primer tortni diagram na sliki pri prvi nalogi.
 Pri teh so navodila namenoma kratka, saj je za potrebe tega predmeta dovolj, da veste, da možnost obstaja.
 Kako se kaj takega naredi, vprašajte jezikovni model, na primer Gemini v Googlovem iskalniku, in mu povejte, ali Excel uporabljate v sistemu Windows ali macOS.
 Odgovor preverite.
-Pri diagramu ali oblikovanju takoj vidite, ali je rezultat tak kot na sliki.
+Pri diagramu ali pogojnem oblikovanju takoj vidite, ali rezultat kaže isto kot slika.
 Pri formuli to ni dovolj, saj lahko tudi napačna formula vrne števila, ki so videti pravilna, zato eno vrstico izračunajte še na roke.
 
 ## 1. naloga: rezultati testa
