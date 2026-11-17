@@ -99,40 +99,37 @@ Datoteko CSV uvozite z ukazom _Data_ > _From Text/CSV_, kjer izberete kodiranje 
 2. Datoteke za vaje najdete v arhivu [`09-preglednice.zip`](09-preglednice/09-preglednice.zip).
 
 Večina korakov v nalogah utrjuje snov iz razdelka _Delo s podatki_.
-Nekaj korakov pa samo pokaže, kaj Excel še zmore, na primer tortni diagram na sliki pri prvi nalogi.
+Nekaj korakov, označenih z *Dodatno*, pa samo pokaže, kaj Excel še zmore, na primer tortni diagram na sliki pri prvi nalogi.
 Pri teh so navodila namenoma kratka, saj je za potrebe tega predmeta dovolj, da veste, da možnost obstaja.
 Kako se kaj takega naredi, vprašajte jezikovni model, na primer Gemini v Googlovem iskalniku, in mu povejte, ali Excel uporabljate v sistemu Windows ali macOS.
 Odgovor preverite.
 Pri diagramu ali oblikovanju takoj vidite, ali je rezultat tak kot na sliki.
 Pri formuli to ni dovolj, saj lahko tudi napačna formula vrne števila, ki so videti pravilna, zato eno vrstico izračunajte še na roke.
 
-## Rezultati
+## 1. naloga: rezultati testa
 
-V zvezku `rezultati.xlsx` so zbrani rezultati testa, ki so ga študenti
-pisali v treh skupinah.
+V delovnem zvezku `rezultati.xlsx` so rezultati testa, ki so ga študenti pisali v treh skupinah.
+Podatki so v tabeli `Rezultati`, povzetek po skupinah pa boste sestavili v tabeli `Skupine`.
 
-![image](09-preglednice/rezultati.png)
+:::{figure-md} slika:rezultati
+![Rešena naloga z rezultati testa](09-preglednice/rezultati.png)
 
-1.  Odstranite stolpec `H` in študente uredite naraščajoče po
-    priimkih.
-2.  V stolpcu `F` s funkcijo `IF` sestavite formulo, ki pove, ali
-    ima študent vsaj $50$ točk. V stolpcu `I` sestavite formulo, ki
-    prešteje, koliko študentov je pisalo test v vsaki skupini (uporabite
-    `COUNTIF`). V stolpcu `J` s funkcijo `AVERAGEIF` izračunajte
-    povprečno število točk za vsako skupino. Rezultat naj bo izpisan na
-    dve decimalki (ne zaokrožen).
-3.  Tabelo podobno zgornji sestavite še z vrtilno tabelo. Prikažite
-    udeležbo, povprečje, minimalno ter maksimalno število točk. *Namig:*
-    polje Točke lahko v vrednostih vrtilne tabele uporabite več kot
-    enkrat, z različnimi funkcijami združevanja.
-4.  Sestavite 3D tortni diagram z udeležbo po skupinah. Odmaknite
-    največji kos in dodajte oznake z udeležbo. Sestavite stolpični
-    diagram s povprečji točk po skupinah za leti 2021 in 2022. Popravite
-    število decimalk na navpični osi, dodajte oznake osi in legendo.
-5.  Točke manjše od $50$ s pogojnim oblikovanjem pobarvajte rdeče, prav
-    tako pa tudi priimke in imena študentov, ki niso opravili testa.
-    *Namig:* v meniju za pogojno oblikovanje poiščite **New Rule** in izberite slog
-    **Classic** ter oblikovanje s formulo: `$E3<50`.
+&nbsp; Rešena naloga z rezultati testa
+:::
+
+1.  Študente uredite naraščajoče po priimkih.
+2.  V stolpcu `Opravil` s funkcijo `IF` sestavite formulo, ki pove, ali ima študent vsaj 50 točk (`da` ali `ne`).
+    V tabeli `Skupine` s funkcijo `COUNTIF` v stolpcu `Udeležba` preštejte, koliko študentov je pisalo test v vsaki skupini, s funkcijo `AVERAGEIF` pa v stolpcu `2022` izračunajte povprečno število točk skupine.
+    Povprečje naj bo izpisano na dve decimalki, vrednost v celici pa naj ostane nezaokrožena.
+3.  Enak povzetek sestavite še z [vrtilno tabelo](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576), ki jo postavite pod tabelo `Skupine`.
+    Za vsako skupino naj prikaže udeležbo, povprečje ter največje in najmanjše število točk.
+    *Namig:* polje `Točke` lahko v območje _Values_ povlečete večkrat in vsakič izberete drugo funkcijo.
+4.  Sestavite stolpični diagram s povprečji točk po skupinah za leti 2021 in 2022 ter mu dodajte naslova osi in legendo.
+    *Dodatno:* tortni diagram na sliki pokaže udeležbo po skupinah, največji kos je odmaknjen, ob kosih pa so oznake z udeležbo.
+5.  Točke, manjše od 50, s pogojnim oblikovanjem pobarvajte rdeče.
+    Rdeče pobarvajte tudi priimke in imena študentov, ki testa niso opravili.
+    *Namig:* izberite priimke in imena od prve vrstice podatkov navzdol, v meniju _Conditional Formatting_ izberite _New Rule_ in nato pravilo s formulo (🍎 slog _Classic_), formula pa je `$E4<50`.
+    Znak `$` zaklene stolpec `E`, zato se priimek in ime ravnata po točkah v svoji vrstici.
 
 ## Smučanje (vrtilna tabela)
 
