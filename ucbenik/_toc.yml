@@ -16,7 +16,7 @@ parts:
   - file: 05-latex.md
   - file: 06-sklicevanje-in-definicije.md
   - file: 07-slike.md
-#   - file: 08-predstavitve.md
+  - file: 08-predstavitve.md
 # - caption: Razpredelnice
 #   chapters:
 #   - file: 10-razpredelnice.md
