@@ -25,15 +25,15 @@ Kljub temu bomo na vajah nekaj pozornosti posvetili nekaterim pomembnim temam iz
 
 ## Datoteke z nalogami
 
-1. Za vajo lahko doma rešujete [uvodne naloge iz Excela](10-razpredelnice/excel-uvodne.zip).
-2. Datoteke za vaje najdete v arhivu [`10-razpredelnice.zip`](10-razpredelnice/10-razpredelnice.zip).
+1. Za vajo lahko doma rešujete [uvodne naloge iz Excela](09-preglednice/excel-uvodne.zip).
+2. Datoteke za vaje najdete v arhivu [`10-razpredelnice.zip`](09-preglednice/10-razpredelnice.zip).
 
 ## Rezultati
 
 V zvezku `rezultati.xlsx` so zbrani rezultati testa, ki so ga študenti
 pisali v treh skupinah.
 
-![image](10-razpredelnice/rezultati.png)
+![image](09-preglednice/rezultati.png)
 
 1.  Odstranite stolpec `H` in študente uredite naraščajoče po
     priimkih.
@@ -78,7 +78,7 @@ Tabelo z uvoženimi podatki poimenujte `Zmagovalci`.
     filtriranje po vrednost. Te razdelite na moške in ženske kot prikazuje
     slika in tabelo uredite padajoče po skupnem številu zmag.
 
-![image](10-razpredelnice/smucanje.png)
+![image](09-preglednice/smucanje.png)
 
 ## Poraba (`MATCH` in `INDEX`)
 
@@ -101,7 +101,7 @@ dotočimo do polnega.
 5.  Sestavite vrtilno tabelo s pregledom prevoženih kilometrov in porabe
     po mesecih. Stolpec skupno lahko skrijete na zavihku *Design*.
 
-![image](10-razpredelnice/poraba.png)
+![image](09-preglednice/poraba.png)
 
 ## Točkovanje (dodatna naloga)
 
@@ -110,7 +110,7 @@ testa, ki so ga pisali študenti. Vsaka naloga je bila točkovana s
 plusom, krogcem ali minusom (minusi v tabelo niso vpisani), vrednosti
 plusa in krogca pa so različne pri posameznih nalogah.
 
-![image](10-razpredelnice/tockovanje.png)
+![image](09-preglednice/tockovanje.png)
 
 1.  Stolpce uredite tako, da bodo priimki študentov urejeni po abecednem
     vrstnem redu: **Data** > **Sort**, pod **Options** pa izberete **Sort from left to right**. 
