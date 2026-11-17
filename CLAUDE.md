@@ -89,6 +89,7 @@ Legacy material that is not in the tree:
 - Terminology, HTML: *označevalni jezik za oblikovanje večpredstavnostnih dokumentov* (per Islovar). Never *nadbesedilo* or any other gloss of *hypertext*.
 - Terminology, CSS: a selector is an *izbiralec*, glossed `(angl. _selector_)` where a chapter first uses it; a class is a *razred*. *Selektor* appears at most as a gloss, as in past exams. Never *izbirnik*.
 - Terminology, LaTeX: math mode is *matematični način*, of two kinds, *vrstični* (`\(…\)`) and *prikazni* (`\[…\]`). *Matematično okolje* is only an environment, such as those of `amsmath`.
+- Terminology, spreadsheets: a spreadsheet is a *preglednica* (per Islovar), both the document and the program. Never *razpredelnica*, except where we quote Moodle's own labels, such as *ocenjevalna razpredelnica*.
 - Spelling: *VSCode* (full name *Visual Studio Code* only at first mention and in the software admonitions).
 - Platform baseline: prose states the behaviour of Git Bash on Windows (in the VSCode terminal) as the plain fact; what works elsewhere is an add-on in parentheses naming the system, e.g. `(na macOS \d sicer deluje)`.
 - Terminal: chapters and exercises use the terminal inside VSCode. A separate Git Bash or Terminal window appears only as a reference, in the keyboard appendix and the FAQ. Installation instructions (appendix A) say just *ukazna vrstica*: either the VSCode terminal or a separate one will do.
@@ -157,6 +158,7 @@ Legacy material that is not in the tree:
 - 2026-11-11 — Math mode is *matematični način*. Chapter 5 called it *matematično okolje*, which clashed with chapter 7's section *Matematična okolja* on the `amsmath` environments. Applied in `05-latex.md`, `06-sklicevanje-in-definicije.md` and `urnik-namigi.tex`.
 - 2026-11-12 — The source of a picture that a slide deck includes as a file lives in the private `zbornica`, in `predavanja/NN-ime/`, the same path as the deck here; the deck holds only the exports. This extends the 2026-10-07 entry from the textbook to the slides. A picture drawn in TikZ on a slide needs no separate source, because the deck is its source. The source records how it was exported. First applied to `diagram.{pdf,png,jpg}` of lecture 7.
 - 2026-11-18 — A CSS selector is an *izbiralec*. It is the word of the exams since 2022 (*izbiralec (selektor)*) and of the 2025/26 chapter on CSS, and it is the noun of *izbrati*, the verb the prose uses. *Izbirnik*, which Islovar gives for *selector*, is a menu or picker in a user interface (Islovar, SSKJ), not the CSS term. *Selektor*, used by the Slovenian Wikipedia, is not taken as the main term, so that the textbook and the exams agree. Applied in `04-html.md`, *Vsebina in videz*, which now shows selecting by class and by `id`, because homework 6 and the exam use both.
+- 2026-11-17 — A spreadsheet is a *preglednica*, the Islovar term (status *urejeno*), which covers both the document and the program. The legacy chapter *Razpredelnice* used a word that Islovar does not list. Applied in `09-preglednice.md`; the archive `excel-uvodne.zip` follows, because the PDF inside it says *razpredelnic*.
 
 ## Open questions
 
