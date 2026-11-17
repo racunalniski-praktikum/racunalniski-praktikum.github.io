@@ -175,7 +175,7 @@ Med izvorno kodo v datoteki `.tex` in PDF-jem v VSCode prehajate z bližnjicami:
 |                 | Windows                                     |  macOS                                        |
 |:----------------|:-------------------------------------------:|:---------------------------------------------:|
 | iz `.tex` v PDF | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> | <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> |
-| iz PDF v `.tex` | <kbd>Ctrl</kbd>+klik                        | <kbd>Ctrl</kbd>+klik                          |
+| iz PDF v `.tex` | <kbd>Ctrl</kbd>+klik                        | <kbd>Cmd</kbd>+klik                           |
 
 `````{admonition} Shranite vaje na strežnik
 :class: important
