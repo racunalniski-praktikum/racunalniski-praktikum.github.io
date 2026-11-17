@@ -422,6 +422,90 @@ G1.
 
 **Theme.** A named table, against cells that are merely next to each other.
 
+### 10 to 12. Mathematica: the restructuring (in progress, 2026-11-17)
+
+The three weeks are being restructured, tutorials and lectures both. The plans for
+lectures 10, 11 and 12 below predate this and are not yet rewritten to match.
+
+**Agreed.**
+
+- **Week 1 holds all the basics**, each in its simplest form:
+  - calculator-type computation, including derivatives and integrals,
+  - variables,
+  - basic function definitions,
+  - basic rewrite rules,
+  - a basic plot of a function,
+  - basic graphics: geometry drawn from primitives, not function plots.
+
+  The list is not closed.
+- **The following weeks raise the complexity, mainly by combining the basics.**
+- **`Table` is used**, where last year's tutorials did not use it. The simplest use
+  is tabulating the values of a function.
+- **Rewrite rules enter in week 1 as the way to plug a value in**: `izraz /. x -> 3`,
+  never `x = 3`. The exposition shows the derivative that fails after `x = 3` and
+  gives `Clear` as the repair. `=` is then left with one job, naming a thing.
+- The exercises may change a lot.
+
+**Open.**
+
+- `Table` in week 1 or week 2. Proposed: the flat form `Table[f[x], {x, 0, 5}]` in
+  week 1, because its iterator is the one in `Sum` and `Plot`; a table of pairs in
+  week 2, because it needs nested lists.
+- Where vectors and matrices go. They are a topic, not a level of complexity.
+- What each of the three lectures covers.
+- The number and name of the chapters. Week 1 is still in
+  `ucbenik/11-racunanje-z-mathematico.md`.
+
+**The progression.** Complexity rises from week to week. The principle is agreed;
+what weeks 2 and 3 hold is proposed, not agreed.
+
+- **Week 1: one basic at a time.** A task is one or two lines and uses one new
+  thing: compute, name, plug in, define a function, plot, draw. Nothing is combined
+  yet. (Agreed.)
+- **Week 2: two or three basics combined in one task.** A task has several steps,
+  and each step names its result and uses the results before it. (Proposed.)
+  - A plot with marked points: `Plot` with the graphics primitives of week 1, through
+    `Epilog`. Last year `Epilog` was given as a line to copy.
+  - A function and its equations: define, solve, plot. `Solve` is new here; its
+    output is read with the rules of week 1, and the several-parameter form
+    `formula /. {a -> 1, b -> -3, c -> 2}` is the bridge.
+  - `Table` with the basics: a table of values next to the plot, a table of plots, a
+    table of solutions.
+  - Last year's function analysis (define, plot, solve, limit) and area exercises
+    (solve, integrate, fill, `Show`) are already of this kind and can move nearly as
+    they are.
+- **Week 3: a whole task, then a parameter that moves.** The student builds the
+  static picture from the pieces of weeks 1 and 2, then wraps it in `Manipulate`,
+  which is `Table` with a slider. (Proposed.)
+  - Last year's tangent, perpendicular and implicit-curve exercises are of this kind.
+
+**The test for week 1** (proposed): a thing is a week-1 basic if a later week
+combines it with something else. It is what puts graphics primitives in week 1, and
+what takes last year's polynomial exercises out of it.
+
+**Taught last year, not yet placed.**
+
+- Equations: `Solve`, `NSolve`, `FindRoot`, `Reduce` for inequalities, systems,
+  parameters, word problems; rules as the output of `Solve`.
+- `=` against `:=`, shown with `RandomInteger`.
+- Plot options (`ExclusionsStyle`, `Epilog`, `Filling`, `AspectRatio`), `Show`,
+  `ParametricPlot`, `ContourPlot`.
+- One-sided limits, infinite sums, `Simplify`.
+- Polynomials: `Factor` with an extension, `Expand`, `Collect`, `Exponent`.
+- The working habit: one task per cell, `ClearAll` at the top, one option per line.
+- Anonymous functions (`Function`, `|->`, `# &`), for reading the documentation.
+- Vectors: dot and cross product, length, the equation of a plane. Matrices:
+  determinant, eigenvalues, eigenvectors, diagonalisation. Symbolic proofs of
+  identities.
+- From the lectures: `Select` with predicates, set operations, `TableForm`, `Which`,
+  `NIntegrate`, regions and `Area`, `Probability`, `Minimize` and `Maximize`,
+  `DiscretePlot`, the Monte Carlo method.
+
+**Status.** The week-1 exposition is drafted in
+`ucbenik/11-racunanje-z-mathematico.md`. Its examples have not been run in
+Mathematica. The exercise notebook `mathematica1.nb` is unchanged, so rules,
+functions, `Plot` and `Graphics` have no exercises yet.
+
 ### 10. Mathematica — why do you trust it?
 
 **Bad practice.** Using an LLM for everything: expensive, slow, unpredictable.
