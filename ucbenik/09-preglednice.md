@@ -1,27 +1,50 @@
-# Razpredelnice
+# Preglednice
 
 `````{admonition} Programska oprema
 :class: important
 - [Excel](namestitev:microsoft)
 `````
 
-Ponavadi se izkaže, da ste se s programom Excel že kdaj prej spoznali,
-zato bomo pri vajah skočili na naprednejše teme.
-Predpostavljamo, da znate začetna poglavja 
-[vodiča po Excelu](https://support.microsoft.com/en-us/office/what-is-excel-94b00f50-5896-479c-b0c5-ff74603b35a3),
-do vključno poglavja o diagramih ("Charts"), od tega pri poglavju "Formulas & functions" le razdelek "Overview of formulas in Excel"; 
-Še posebej pomembno je, da znate:
+Excel je program za delo s preglednicami (angl. _spreadsheet_); podobno delujeta Numbers na macOS in Google Sheets v spletnem brskalniku.
+Datoteka Excel vsebuje delovni zvezek (angl. _workbook_), ta pa poimenovane delovne liste (angl. _worksheet_), katerih imena so na dnu okna.
+List je razdeljen na vrstice, označene s števili, in stolpce, označene s črkami.
+Na preseku vrstice in stolpca je celica, njen naslov pa sestavljata oznaki stolpca in vrstice, na primer `B3`.
+Podatke v preglednico običajno zapišemo tako, da vsaka vrstica ustreza eni opazovani enoti, na primer študentu, vsak stolpec pa eni njeni lastnosti, na primer številu točk.
 
-- urejati stolpce, vrstice in liste zvezka, izbirati in premikati celice in razpone celic,
-- urejati tabele in diagrame,
-- znate [kopirati vsebino celic z okvirčkom](https://support.microsoft.com/en-us/office/fill-data-automatically-in-worksheet-cells-74e31bdd-d993-45da-aa82-35a236c5b5db), 
-- narediti [sklic na drugo celico ali razpon celic](https://support.microsoft.com/en-us/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173),
+Excel ste najverjetneje že kdaj uporabljali, zato predpostavljamo, da poznate začetna poglavja [vodiča po Excelu](https://support.microsoft.com/en-us/office/what-is-excel-94b00f50-5896-479c-b0c5-ff74603b35a3) do vključno poglavja o diagramih (angl. _Charts_), od poglavja _Formulas & functions_ pa le razdelek _Overview of formulas in Excel_.
+Še posebej pomembno je, da znate opravila, ki jih na kratko povzemamo spodaj.
 
-Kljub temu bomo na vajah nekaj pozornosti posvetili nekaterim pomembnim temam iz teh poglavij:
+**Vrstice, stolpci in listi.**
+Vrstico ali stolpec vstavite ali izbrišete tako, da desno kliknete njegovo oznako (številko vrstice ali črko stolpca) in izberete _Insert_ ali _Delete_.
+Širino stolpca spremenite tako, da povlečete desni rob njegove oznake; z dvoklikom na ta rob se stolpec razširi ravno toliko, da je vsa vsebina vidna.
+Nov list dodate z gumbom `+` ob zavihkih listov na dnu okna, preimenujete ga z dvoklikom na zavihek, vrstni red listov pa spremenite tako, da zavihek povlečete.
 
-- [pretvarjanje besedila v stolpce](https://support.microsoft.com/en-us/office/split-text-into-different-columns-with-the-convert-text-to-columns-wizard-30b14928-5550-41f5-97ca-7a3e9c363ed7) in
-- [uvoz podatkov iz datotek](https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba),
-- [pogojno oblikovanje](https://support.microsoft.com/en-us/office/conditional-formatting-7957ee2d-c54e-4230-961f-175fad32972c),
+**Izbiranje in premikanje celic.**
+Obseg celic izberete tako, da povlečete od ene vogalne celice do nasprotne, ali tako, da kliknete prvo celico, nato pa s pritisnjeno tipko <kbd>Shift</kbd> še zadnjo.
+S pritisnjeno tipko <kbd>Ctrl</kbd> (🍎 <kbd>Cmd</kbd>) izbiri dodate celice, ki niso sosednje.
+Klik na oznako vrstice ali stolpca izbere celo vrstico ali stolpec.
+Izbiro premaknete tako, da povlečete njen rob, ko se kazalec spremeni v štiri puščice.
+Formule, ki se sklicujejo na premaknjene celice, se pri tem popravijo same.
+
+**Diagrami.**
+Izberite podatke skupaj z naslovi stolpcev in na zavihku _Insert_ izberite vrsto diagrama.
+Ko je diagram izbran, se na traku pojavita zavihka _Chart Design_ in _Format_.
+Naslove osi, legendo in oznake podatkov dodate na zavihku _Chart Design_ z ukazom _Add Chart Element_, podatke, ki jih diagram prikazuje, pa spremenite z ukazom _Select Data_.
+
+**Zapolnjevanje celic.**
+Izbrana celica ali obseg celic ima v spodnjem desnem kotu kvadratek (angl. _fill handle_).
+Ko ga povlečete, Excel izbiro razširi na nove celice: posamezno vrednost kopira, zaporedje, na primer `1` in `2` ali datum, pa nadaljuje.
+Formula se pri tem prilagodi novemu mestu, kot opisuje naslednji odstavek.
+Dvoklik na kvadratek zapolni stolpec navzdol do zadnje vrstice s podatki v sosednjem stolpcu.
+
+**Sklici v formulah.**
+Formula se začne z znakom `=`.
+Na celico se v njej sklicujete z njenim naslovom, na primer `B3`, na obseg celic pa z naslovoma zgornje leve in spodnje desne celice, ločenima z dvopičjem, na primer `B2:D10`.
+Naslova vam ni treba tipkati: med pisanjem formule kliknite celico ali povlecite čez obseg.
+Na celico na drugem listu se sklicujete z imenom lista in klicajem, na primer `Podatki!B3`; če ime lista vsebuje presledek, ga zapišite v enojnih narekovajih, na primer `'Rezultati 2026'!B3`.
+Sklic je običajno relativen: ko formulo kopirate eno vrstico niže, se `B3` spremeni v `B4`.
+Znak `$` pred oznako stolpca ali vrstice to oznako zaklene, zato se `$B$3` pri kopiranju ne spremeni, v `B$3` pa se lahko spremeni le stolpec.
+Med vrstami sklica preklapljate s tipko <kbd>F4</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>T</kbd>).
 
 ## Datoteke z nalogami
 
