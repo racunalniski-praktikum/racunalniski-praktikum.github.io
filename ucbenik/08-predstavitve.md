@@ -10,7 +10,7 @@
 ## Paket `beamer`
 
 Prosojnice v LaTeXu naredite z razredom dokumenta `beamer`.
-Kot do zdaj vsebino pišemo v okolje `document`.
+Kot do zdaj vsebino pišete v okolje `document`.
 Vsako prosojnico napišete v okolje `frame`, njen naslov pa lahko napišete na dva načina:
 z ukazom `\frametitle` ali kot argument okolja.
 
