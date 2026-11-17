@@ -77,7 +77,7 @@ until the target structure is agreed.
 | 9 | Predstavitve | A: `ucbenik/08-predstavitve{.md,/}`; B: `07-predstavitve/` | L8 | `ucbenik/08-predstavitve{.md,/}` | [J] A migrated 2026-11-17, still hidden in `_toc.yml` until Katja has read it; it took over the exercises on columns and pictures, on tables and on TikZ from unit 10; its math practice (*Matematika, 1. del*) moves out to standalone material that homework 8 offers to check (**to do**); B's image-format slides move out to L7 (unit 10). Beamer is examined, as one variant of the LaTeX task — keep the material that supports it |
 | 10 | Risanje (TikZ) | A: deleted 2026-11-17; no B counterpart | L7 + L8 | — | [J] merged into unit 9: its exercises on columns and pictures, on tables and on TikZ are exercises 4–6 of chapter 8, rebuilt on the perpendicular construction from lecture 7; its exercises on moving files and on pgfplots are dropped; its math practice (*Matematika, 2. del*) moves out together with that of unit 9. L7 is on pictures in general (including images, formats, RGB and CMYK), with TikZ only as a demo; gains image formats from unit 9 |
 | 11 | Pogoste napake v LaTeXu | B: `08-poprava/` | split across L5–L8 | TBD | [J] no longer one lecture — becomes ten-minute openers (C4) |
-| 12 | Razpredelnice | A: `ucbenik/10-razpredelnice{.md,/}`; B: `09-excel/` | L9 | TBD | [J] no deck, by design — taught live in Excel (G1); rebuild `rezultati.xlsx` on the five-task exam (G5) |
+| 12 | Preglednice | A: `ucbenik/09-preglednice{.md,/}` (was `10-razpredelnice`); B: `09-excel/` | L9 | `ucbenik/09-preglednice{.md,/}` | [J] no deck, by design — taught live in Excel (G1); rebuild `rezultati.xlsx` on the five-task exam (G5) |
 | 13 | Mathematica | A: `ucbenik/{11,12,13}-*{.md,/}`; B: `10-mathematica/` | L10 + L11 + L12 (+ L13–14) | TBD | [J] three tool-tour chapters become three argued lectures — a rewrite, not a move (C5); no deck, by design — taught live (G1); rewrite rules are missing everywhere (G6) |
 | 14 | Dodatki / plonkci (A–H) | A: `ucbenik/{A..H}-*.md` | support | TBD | [M] except `H-regex.md` → L2 (C6) and `A-programska-oprema.md`, which needs new entries (G3) |
 | 15 | Slide infrastructure | B: `pomozno/` | all | TBD | [J] blocked on the slides-technology decision |
@@ -580,7 +580,7 @@ These are not contradictions. They are lectures with no source to migrate.
   the wrong thing about their own exam.
   Publication check, done 2026-09-21: both grade datasets are safe to make public.
   The slides file carries no names, only enrolment numbers running sequentially from
-  `27000001`. The 28 names in `A: ucbenik/10-razpredelnice/` are invented.
+  `27000001`. The 28 names in `A: ucbenik/09-preglednice/` are invented.
 - **G6 — Nothing on Mathematica's rewrite rules.** `->`, `/.`, and `:=` against `=`
   appear in no chapter, no notebook and no tutorial sheet, and they were absent from
   the first version of the plan. Lecture 11 now names them, so they are new writing

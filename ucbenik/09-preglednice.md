@@ -49,7 +49,7 @@ Med vrstami sklica preklapljate s tipko <kbd>F4</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>
 ## Datoteke z nalogami
 
 1. Za vajo lahko doma rešujete [uvodne naloge iz Excela](09-preglednice/excel-uvodne.zip).
-2. Datoteke za vaje najdete v arhivu [`10-razpredelnice.zip`](09-preglednice/10-razpredelnice.zip).
+2. Datoteke za vaje najdete v arhivu [`09-preglednice.zip`](09-preglednice/09-preglednice.zip).
 
 ## Rezultati
 
