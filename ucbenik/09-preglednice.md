@@ -173,7 +173,7 @@ Podatki so ločeni z vejicami, datoteka pa je kodirana v UTF-8.
 ## 3. naloga: poraba goriva
 
 V delovnem zvezku `poraba.xlsx` je zapisano, kdaj in koliko goriva smo natočili v avto in koliko je takrat kazal števec kilometrov.
-Točenja so v tabeli `poraba`, cene bencina pa v tabeli `cene`.
+Točenja so v tabeli `Poraba`, cene bencina pa v tabeli `Cene`.
 Predpostavite, da rezervoar vedno napolnimo do vrha.
 
 :::{figure-md} slika:poraba
@@ -185,7 +185,7 @@ Predpostavite, da rezervoar vedno napolnimo do vrha.
 1.  V stolpcu `Prevoženo` izračunajte, koliko kilometrov smo prevozili od prejšnjega točenja: od stanja števca odštejte stanje v prejšnji vrstici.
     Prva vrstica nima prejšnjega stanja, zato naj ostane prazna.
 2.  V stolpcu `Plačano` izračunajte, koliko smo plačali za gorivo: litre pomnožite s ceno, ki je veljala na dan točenja.
-    Ceno poiščite v tabeli `cene` s funkcijo `XLOOKUP`.
+    Ceno poiščite v tabeli `Cene` s funkcijo `XLOOKUP`.
     *Namig:* cena velja od datuma v stolpcu `Veljavnost` do naslednje spremembe, zato iščete zadnji datum, ki ni poznejši od datuma točenja; to določite s petim argumentom.
 3.  V stolpcu `Poraba` izračunajte porabo v litrih na 100 km po formuli $100 \cdot \frac{\text{litri}}{\text{prevoženo}}$.
     Prva vrstica naj tudi tu ostane prazna.
