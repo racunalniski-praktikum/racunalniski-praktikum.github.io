@@ -6,10 +6,16 @@
 `````
 
 Excel je program za delo s preglednicami (angl. _spreadsheet_); podobno delujeta Numbers na macOS in Google Sheets v spletnem brskalniku.
-Datoteka Excel vsebuje delovni zvezek (angl. _workbook_), ta pa poimenovane delovne liste (angl. _worksheet_), katerih imena so na dnu okna.
-List je razdeljen na vrstice, označene s števili, in stolpce, označene s črkami.
-Na preseku vrstice in stolpca je celica, njen naslov pa sestavljata oznaki stolpca in vrstice, na primer `B3`.
-Podatke v preglednico običajno zapišemo tako, da vsaka vrstica ustreza eni opazovani enoti, na primer študentu, vsak stolpec pa eni njeni lastnosti, na primer številu točk.
+Datoteka programa Excel je delovni zvezek (angl. _workbook_) z enim ali več delovnimi listi (angl. _worksheet_).
+Dele preglednice kaže {numref}`slika:deli-preglednice`.
+
+:::{figure-md} slika:deli-preglednice
+:width: 70%
+:align: center
+![Deli preglednice](09-preglednice/deli-preglednice.svg)
+
+&nbsp; Deli preglednice
+:::
 
 Excel ste najverjetneje že kdaj uporabljali, zato predpostavljamo, da poznate začetna poglavja [vodiča po Excelu](https://support.microsoft.com/en-us/office/what-is-excel-94b00f50-5896-479c-b0c5-ff74603b35a3) do vključno poglavja o diagramih (angl. _Charts_), od poglavja _Formulas & functions_ pa le razdelek _Overview of formulas in Excel_.
 Še posebej pomembno je, da znate opravila, ki jih na kratko povzemamo spodaj.
@@ -54,7 +60,8 @@ Absolutni sklic potrebujete, kadar se vse kopije formule sklicujejo na isto celi
 Med vrstami sklica preklapljate s tipko <kbd>F4</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>T</kbd>).
 
 **Tabela.**
-Podatke, na primer seznam nakupov s stolpci `Kraj`, `Cena` in `Količina`, spremenite v tabelo (angl. _table_) tako, da izberete eno od celic in na zavihku _Insert_ izberete _Table_ (<kbd>Ctrl</kbd>+<kbd>T</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>T</kbd>).
+Podatke zapišite tako, da vsaka vrstica ustreza eni enoti, vsak stolpec pa eni njeni lastnosti: v seznamu nakupov je vsak nakup v svoji vrstici, stolpci pa so `Kraj`, `Cena` in `Količina`.
+Take podatke spremenite v tabelo (angl. _table_) tako, da izberete eno od celic in na zavihku _Insert_ izberete _Table_ (<kbd>Ctrl</kbd>+<kbd>T</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>T</kbd>).
 Excel zdaj ve, kje se podatki začnejo in končajo, prvo vrstico pa obravnava kot glavo z imeni stolpcev.
 Tabela se sama razširi, ko ji dodate vrstico ali stolpec.
 Excel ji da ime, kot je `Table1`; smiselno ime, na primer `Nakupi`, ji določite na zavihku _Table Design_ (🍎 _Table_), v polju _Table Name_.
