@@ -128,7 +128,7 @@ Primeri:
 - z <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd> (na MacOS z <kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd>) označujemo po besedah,
 - z <kbd>Ctrl</kbd>+<kbd>Home</kbd> (na MacOS <kbd>Cmd</kbd>+<kbd>↑</kbd>) označimo besedilo od kurzorja do začetka dokumenta.
 
-Tipko <kbd>Esc</kbd> lahko služi za:
+Tipka <kbd>Esc</kbd> lahko služi za:
 - izhod iz označevanja,
 - izhod iz načina z večimi kurzorji,
 - izhod iz pogovornega okna za iskanje (nazaj vedno lahko skočite z ustrezno bližnjico).
