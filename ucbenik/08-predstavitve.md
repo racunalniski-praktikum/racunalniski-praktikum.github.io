@@ -153,6 +153,7 @@ Kadar se vrstni red odkrivanja ne ujema z vrstnim redom kode,
 uporabite ukaz `\onslide` s predpisom, a brez argumenta:
 `\onslide<3->` velja za vse ukaze, ki mu sledijo, do naslednjega ukaza `\onslide`.
 Poznejši ukaz `\onslide` ima lahko manjšo številko od prejšnjega, na primer `\onslide<1->`.
+Na koncu slike napišite še ukaz `\onslide` brez predpisa, sicer zadnji predpis velja tudi za številko prosojnice.
 Predpisa ne pišite neposredno k ukazu za črto z imenom, na primer `\draw<2->[name path=k]`:
 na podprosojnicah, kjer črte ni, je TikZ ne pozna in presečišč ne more izračunati.
 
@@ -222,14 +223,14 @@ Naloge rešujte po vrsti, saj so pomembnejše na začetku.
 
 1.  V datoteki `prosojnice.tex` pod razdelek *Stolpci in slike*
     vključite datoteko `prosojnice/4-stolpci-slike.tex`.
-2.  Na prosojnici v datoteki `4-stolpci-slike.tex` vsebino postavite v dva stolpca:
+2.  V datoteki `4-stolpci-slike.tex` popravite pot do slike `fig-1.png`, da se bo slika vključila
+    (razdelek [Vključevanje datotek](predstavitve:vkljucevanje)).
+    Ostalih slik še ne odkomentirajte.
+3.  Vsebino prosojnice postavite v dva stolpca:
     v levega besedilo, v desnega sliko (razdelek [Stolpci](predstavitve:stolpci)).
     Levi stolpec naj ima širino `0.55\textwidth`, desni pa `0.45\textwidth`.
     Sliko v desnem stolpcu poravnajte na sredino.
-3.  Popravite pot do slike `fig-1.png`, da se bo slika vključila
-    (razdelek [Vključevanje datotek](predstavitve:vkljucevanje)).
-    Ostalih slik še ne odkomentirajte.
-4.  Odkomentirajte ostale slike in nastavite odkrivanje besedila in slik tako, kot je v rešitvi.
+4.  Odkomentirajte ostale slike, popravite poti do njih in nastavite odkrivanje besedila in slik tako, kot je v rešitvi.
     Vsakemu elementu seznama in vsaki sliki dodajte ustrezen predpis
     (razdelek [Postopno odkrivanje](predstavitve:odkrivanje)).
 
