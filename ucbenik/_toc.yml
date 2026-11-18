@@ -17,9 +17,9 @@ parts:
   - file: 06-sklicevanje-in-definicije.md
   - file: 07-slike.md
   - file: 08-predstavitve.md
-# - caption: Preglednice
-#   chapters:
-#   - file: 09-preglednice.md
+- caption: Preglednice
+  chapters:
+  - file: 09-preglednice.md
 # - caption: Simbolno računanje
 #   chapters:
 #   - file: 11-racunanje-z-mathematico.md

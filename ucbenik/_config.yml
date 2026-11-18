@@ -6,7 +6,6 @@ copyright: "2024"
 # Poglavje razkrijemo tako, da ga odstranimo od tod IN odkomentiramo v _toc.yml.
 exclude_patterns:
   - 05-utrdimo-osnove.md
-  - 09-preglednice.md
   - 11-racunanje-z-mathematico.md
   - 12-risanje-in-enacbe.md
   - 13-animiranje-vektorji-matrike.md
