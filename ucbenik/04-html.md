@@ -150,8 +150,8 @@ To pravilo pove, da naj bodo vsi naslovi `h2` rjavi.
 Ker so naslovi označeni kot naslovi, z eno spremembo pravila spremenimo vse hkrati.
 Besedila, ki je samo povečano in odebeljeno, pravilo za naslove ne zajame.
 
-Del pravila pred zavitim oklepajem je selektor (angl. _selector_): pove, za katere elemente pravilo velja.
-Selektor `h2` izbere vse elemente `h2`.
+Del pravila pred zavitim oklepajem je izbiralec (angl. _selector_): pove, za katere elemente pravilo velja.
+Izbiralec `h2` izbere vse elemente `h2`.
 Elemente lahko izberemo tudi drugače kot po znački; eden od pogostih načinov je razred.
 Elementom, za katere naj pravilo velja, v HTML dodamo atribut `class` z imenom razreda, ki ga izberemo sami:
 
@@ -159,7 +159,7 @@ Elementom, za katere naj pravilo velja, v HTML dodamo atribut `class` z imenom r
 <p class="opomba">To je opomba.</p>
 ```
 
-V datoteki s slogi razred izberemo s selektorjem, ki se začne s piko:
+V datoteki s slogi razred izberemo z izbiralcem, ki se začne s piko:
 
 ```css
 .opomba {
@@ -168,7 +168,7 @@ V datoteki s slogi razred izberemo s selektorjem, ki se začne s piko:
 ```
 
 To pravilo velja za vse elemente z razredom `opomba`, ne glede na značko; odstavki brez tega razreda ostanejo, kakršni so.
-Podobno selektor `#criticism` izbere element z atributom `id="criticism"`.
+Podobno izbiralec `#criticism` izbere element z atributom `id="criticism"`.
 
 Datotek s slogi skoraj nihče ne piše od začetka: skoraj vsak vzame obstoječo in jo prilagodi, ko to potrebuje, na primer s pomočjo jezikovnega modela.
 To pa gre zlahka samo, če je HTML pravilno označen.
