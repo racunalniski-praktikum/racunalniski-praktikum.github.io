@@ -7,7 +7,7 @@
 
 Excel je program za delo s preglednicami (angl. _spreadsheet_); podobno delujeta Numbers na macOS in Google Sheets v spletnem brskalniku.
 Datoteka programa Excel je delovni zvezek (angl. _workbook_) z enim ali več delovnimi listi (angl. _worksheet_).
-Dele preglednice kaže {numref}`slika:deli-preglednice`.
+Dele preglednice kaže {numref}`slika %s <slika:deli-preglednice>`.
 
 :::{figure-md} slika:deli-preglednice
 :width: 70%

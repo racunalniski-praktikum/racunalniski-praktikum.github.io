@@ -17,6 +17,9 @@ repository:
 sphinx:
   config:
     language: sl
+    # Slike oštevilčimo po slovensko; privzeto je "Fig. 9".
+    numfig_format:
+      figure: "Slika %s"
 
 #   extra_extensions:
 #     - sphinx_proof
