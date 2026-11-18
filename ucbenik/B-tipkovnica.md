@@ -117,6 +117,7 @@ Do njih lahko dostopate z bližnjico <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd
 | Ustvari novo datoteko          | <kbd>Ctrl</kbd>+<kbd>N</kbd>                              | <kbd>Cmd</kbd>+<kbd>N</kbd>                      |
 | Odpiranje datoteke             | <kbd>Ctrl</kbd>+<kbd>O</kbd>                              | <kbd>Cmd</kbd>+<kbd>O</kbd>                      |
 | Odpiranje imenika              | <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>O</kbd> | <kbd>Cmd</kbd>+<kbd>O</kbd>                      |
+| Zapiranje datoteke             | <kbd>Ctrl</kbd>+<kbd>W</kbd>                              | <kbd>Cmd</kbd>+<kbd>W</kbd>                      |
 | Odpri predogled <sup>2</sup>   | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>             | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>     |
 | Išči po datotekah              | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>             | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>     |
 

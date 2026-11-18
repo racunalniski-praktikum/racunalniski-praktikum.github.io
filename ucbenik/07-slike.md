@@ -76,6 +76,8 @@ Pripravite jo tako, da boste z njo dobili PDF dokument, čim bolj podoben datote
   Vaša datoteka `.gitignore` izključuje vse PDF-je, zato vanjo za vrstico `*.pdf` dodajte vrstico `!slika.pdf`
   (razdelek [Pomožne datoteke in Git](latex:gitignore)).
 - Na začetek dokumenta vključite sliko `slika.pdf` (navodila najdete v datoteki `magic.tex`).
+  Ukaz `\includegraphics` je del paketa `graphicx`.
+  Datoteka `magic.tex` ta paket v preambuli že vključi; kjer ga ni, ga vključite sami z ukazom `\usepackage{graphicx}`.
 
 ## 2. naloga: oblikovanje slik
 
