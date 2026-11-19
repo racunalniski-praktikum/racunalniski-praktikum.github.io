@@ -136,7 +136,7 @@ ki je že nameščen na vašem sistemu.
 
 `````{admonition} Vaja za doma
 :class: tip
-Odločite se za postavitev tipkovnice (slovensko, angleško, Dvořak, ...) in približno 15 minut vadite tipkanje. Izberite vaje tako, da bo tipkovnica v lekcijah čim bolj podobna izbrani.
+Odločite se za postavitev tipkovnice (slovensko, angleško, Dvorak, ...) in približno 15 minut vadite tipkanje. Izberite vaje tako, da bo tipkovnica v lekcijah čim bolj podobna izbrani.
 
 - Na strani [Touch Typing Study](https://www.typingstudy.com/sl-slovenian-1/lesson/1/part/1) so lekcije nekoliko manj barvite, imate pa veliko izbiro postavitev tipkovnic, vključno s slovensko.
 - Če uporabljate angleško tipkovnico, lahko začnete s [prvo lekcijo na TypingTest.com](https://www.typingtest.com/trainer/applet.html?course_url=course_descriptions/fl5_us_sr_touchtyping.xml&lesson_id=A001) ali z lekcijami na [Typing.com](https://www.typing.com/student/lessons).
