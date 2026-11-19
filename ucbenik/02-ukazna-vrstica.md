@@ -87,8 +87,8 @@ naprednejšim uporabnikom računalnika pa še vedno pride prav.
 Ukazi v ukazni vrstici so programi.
 Besede za imenom programa so njegovi _argumenti_: podatki, ki jih program potrebuje za izvedbo svoje naloge.
 Argument, ki se začne z `-`, je _možnost_: ne pove, s čim naj program dela, ampak kako.
-Program `cd` (kratko za angl. _change directory_) uporabimo z enim argumentom, potjo do imenika, v katerega se hočemo prestaviti,
-program `pwd` (kratko za angl. _print working directory_) pa argumentov ne potrebuje.
+Ukaz `cd` (kratko za angl. _change directory_) uporabimo z enim argumentom, potjo do imenika, v katerega se hočemo prestaviti,
+ukaz `pwd` (kratko za angl. _print working directory_) pa argumentov ne potrebuje.
 
 :::{figure-md} slika:anatomija-ukaza
 :width: 80%
