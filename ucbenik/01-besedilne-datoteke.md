@@ -228,14 +228,14 @@ Računalniški praktikum
 <!-- To je komentar, ki bo na prikazanem Markdownu skrit. 
      V tem besedilu so v komentarjih napisana navodila za reševanje. Pustite jih v datoteki. -->
 
-<!-- 2. nivojski razdelek -->
+<!-- podnaslov (2. raven) -->
 Bližnjice na tipkovnici
 
 Kopiraj označeno v odložišče: Ctrl+C (**C**opy)
 Izreži označeno v odložišče: Ctrl+X
 Prilepi vsebino odložišča: Ctrl+V
 
-<!-- 2. nivojski razdelek -->
+<!-- podnaslov (2. raven) -->
 Koda
 
 Včasih pride prav značka kbd za tipke. Značko uporabimo takole:
@@ -244,7 +244,7 @@ Včasih pride prav značka kbd za tipke. Značko uporabimo takole:
 <kbd>Ctrl</kbd>
 <!-- konec bloka kode -->
 
-<!-- 2. nivojski razdelek -->
+<!-- podnaslov (2. raven) -->
 Domača naloga
 
 <!-- Spodnji seznam bo pripravil seznam nalog. Na GitHubu bodo lepo vidna potrditvena polja, 
@@ -253,7 +253,7 @@ Domača naloga
 - [ ] Izberite si še tri bližnjice, ki jih še ne uporabljate redno, in se jih naučite. 
       Dodajte jih v prvi razdelek tega dokumenta.
 
-<!-- 2. nivojski razdelek -->
+<!-- podnaslov (2. raven) -->
 Uporabne povezave
 
 FMF učilnica <!-- https://ucilnica.fmf.uni-lj.si/ -->
