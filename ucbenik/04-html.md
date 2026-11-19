@@ -150,6 +150,26 @@ To pravilo pove, da naj bodo vsi naslovi `h2` rjavi.
 Ker so naslovi označeni kot naslovi, z eno spremembo pravila spremenimo vse hkrati.
 Besedila, ki je samo povečano in odebeljeno, pravilo za naslove ne zajame.
 
+Del pravila pred zavitim oklepajem je izbiralec (angl. _selector_): pove, za katere elemente pravilo velja.
+Izbiralec `h2` izbere vse elemente `h2`.
+Elemente lahko izberemo tudi drugače kot po znački; eden od pogostih načinov je razred.
+Elementom, za katere naj pravilo velja, v HTML dodamo atribut `class` z imenom razreda, ki ga izberemo sami:
+
+```html
+<p class="opomba">To je opomba.</p>
+```
+
+V datoteki s slogi razred izberemo z izbiralcem, ki se začne s piko:
+
+```css
+.opomba {
+  font-style: italic;
+}
+```
+
+To pravilo velja za vse elemente z razredom `opomba`, ne glede na značko; odstavki brez tega razreda ostanejo, kakršni so.
+Podobno izbiralec `#criticism` izbere element z atributom `id="criticism"`.
+
 Datotek s slogi skoraj nihče ne piše od začetka: skoraj vsak vzame obstoječo in jo prilagodi, ko to potrebuje, na primer s pomočjo jezikovnega modela.
 To pa gre zlahka samo, če je HTML pravilno označen.
 
@@ -180,7 +200,8 @@ Orodja ne kažejo izvorne kode, ampak dokument, kot ga ima brskalnik v pomnilnik
 
 1. V VSCode odprite imenik `racunalniski-praktikum` v imeniku `rp` (_File_ > _Open Folder_).
    Če repozitorija na tem računalniku še nimate, ga pripravite po navodilih v 1. nalogi 3. poglavja ali prosite za pomoč.
-   V njem naredite imenik `04-html`, v tem pa datoteko `stran.html` in jo odprite.
+   V njem naredite imenik `04-html`, v tem pa datoteko `stran.html` in jo odprite:
+   v datotečnem pogledu (angl. _Explorer_) z desnim klikom na imenik izberite _New Folder..._ oziroma _New File..._.
 
    :::{figure-md} slika:drevo-repozitorij
    :width: 50%

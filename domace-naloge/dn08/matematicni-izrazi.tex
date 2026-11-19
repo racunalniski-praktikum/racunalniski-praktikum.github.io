@@ -1,0 +1,167 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amsmath,amsfonts}
+
+\setlength{\parindent}{0mm}
+
+\begin{document}
+
+% Datoteko dopolnite tako, da bo PDF čim bolj podoben datoteki
+% matematicni-izrazi-resitev.pdf.
+% Kjer piše ??, manjka matematični izraz.
+% Matematičnih nalog ne rešujte, samo zapišite matematične izraze.
+
+\section*{Logika in množice}
+
+\begin{enumerate}
+\item
+Poišči preneksno obliko formule ??.
+
+\item
+Definiramo množici ?? in ??.
+V ravnino nariši:
+\begin{enumerate}
+\item ??
+\item ??
+\end{enumerate}
+
+\item
+Dokaži:
+\begin{itemize}
+\item ??
+\item ??
+\end{itemize}
+\end{enumerate}
+
+\section*{Analiza}
+
+\begin{enumerate}
+\item
+Pokaži, da je funkcija ?? enakomerno zvezna na ??.
+
+\item
+Katero krivuljo določa naslednji parametrični zapis?
+% Pomagajte si z dokumentacijo o razmikih v matematičnem načinu:
+% https://www.overleaf.com/learn/latex/Spacing_in_math_mode
+\[
+x(t) = a \cos t, ?? % tu manjka ukaz za presledek
+y(t) = b \sin t, ?? % tu manjka ukaz za presledek
+t \in [0, 2 \pi]
+\]
+
+\item
+Pokaži, da ima ?? inverzno funkcijo in izračunaj ??.
+
+\item
+Izračunaj integral
+% V rešitvi je integral zapisan v vrstičnem načinu, a v prikaznem slogu.
+% To dosežete tako, da v matematičnem načinu najprej uporabite ukaz displaystyle.
+% Pred dx je presledek: pravi ukaz je \,
+??
+% \frac{2+\sqrt{x+1}}{(x+1)^2-\sqrt{x+1}}
+
+\item
+Naj bo \(g\) zvezna funkcija. Ali posplošeni integral
+??
+konvergira ali divergira? Utemelji.
+
+\item
+S Taylorjevo formulo pokaži, da v okolici točke \(0\) velja
+??
+\end{enumerate}
+
+\section*{Kompleksna števila}
+
+\begin{enumerate}
+\item
+Naj bo \(z\) kompleksno število, \(z \ne 1\) in ??.
+Dokaži, da je število \( i \, \frac{z+1}{z-1} \) realno.
+
+\item
+Poenostavi izraz:
+% V rešitvi so notranji ulomki zapisani z ukazom dfrac.
+??
+\end{enumerate}
+
+\section*{Zaporedja, vrste in limite}
+
+\begin{enumerate}
+\item
+Z indukcijo dokaži, da za vsako naravno število \(n\) velja
+??
+
+\item
+Naj bo ?? absolutno konvergentna vrsta in \(a_n \ne -1\).
+Dokaži, da je tudi vrsta \(\sum_{n=1}^\infty \frac{a_n}{1+a_n}\)
+absolutno konvergentna.
+
+\item
+Izračunaj limito
+??
+
+\item
+Za dani zaporedji preveri, ali sta konvergentni.
+% Pomagajte si s spodnjima delno pripravljenima matematičnima izrazoma:
+% a_n = \sqrt{2+\sqrt{2+\dots+\sqrt{2}}} \qquad
+% b_n = \sin(\sin(\dots(\sin 1)\dots))
+% Zaviti oklepaj pod izrazom naredi ukaz underbrace: \underbrace{izraz}_{napis}.
+% Besedilo v napisu napišite z ukazom text, presledek pred njim pa z znakom ~.
+??
+\end{enumerate}
+
+\section*{Algebra}
+
+\begin{enumerate}
+\item
+Vektorja ??
+sta pravokotna in imata dolžino 1. Določi kot med vektorjema \(\vec{a}\) in \(\vec{b}\).
+
+\item
+Izračunaj
+??
+% 1 2 3 4 5 6
+% 4 5 2 6 3 1
+\end{enumerate}
+
+\section*{Velika determinanta}
+
+Izračunaj naslednjo determinanto \(2n \times 2n\), ki ima na neoznačenih mestih ničle.
+% Prazna mesta v determinanti dobite tako, da med znakoma & ne napišete ničesar.
+% Pike naredijo ukazi cdots (vodoravne), vdots (navpične) in ddots (poševne).
+??
+% 1  1
+% 2  2
+%
+% n-1  n-1
+% 1  2  n-1  n  n+1  n+2  2n
+% n+1  n+1
+% n+2  n+2
+%
+% 2n  2n
+
+\section*{Grupe}
+
+Naj bo
+% Definiciji množic G in H sta v rešitvi poravnani pri enačaju, z okoljem align*.
+% Zavita oklepaja napišete kot \{ in \}, presledek za podpičjem pa z ukazom \;
+??
+\begin{enumerate}
+\item
+Pokaži, da je \(G\) podgrupa v grupi ??
+neničelnih kompleksnih števil za običajno množenje.
+
+\item
+Pokaži, da je \(H\) podgrupa v aditivni grupi ??
+ravninskih vektorjev za običajno seštevanje po komponentah.
+
+\item
+Pokaži, da je preslikava \(f:H\to G\), podana s pravilom
+??
+izomorfizem grup \(G\) in \(H\).
+\end{enumerate}
+
+\end{document}

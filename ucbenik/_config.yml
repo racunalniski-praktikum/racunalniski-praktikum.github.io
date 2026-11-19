@@ -6,9 +6,6 @@ copyright: "2024"
 # Poglavje razkrijemo tako, da ga odstranimo od tod IN odkomentiramo v _toc.yml.
 exclude_patterns:
   - 05-utrdimo-osnove.md
-  - 08-predstavitve.md
-  - 09-risanje.md
-  - 10-razpredelnice.md
   - 11-racunanje-z-mathematico.md
   - 12-risanje-in-enacbe.md
   - 13-animiranje-vektorji-matrike.md
@@ -19,6 +16,9 @@ repository:
 sphinx:
   config:
     language: sl
+    # Slike oštevilčimo po slovensko; privzeto je "Fig. 9".
+    numfig_format:
+      figure: "Slika %s"
 
 #   extra_extensions:
 #     - sphinx_proof

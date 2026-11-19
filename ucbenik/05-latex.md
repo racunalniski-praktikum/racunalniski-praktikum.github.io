@@ -238,6 +238,8 @@ Za vsebino datoteke uporabimo primer iz razdelka [Datoteka `.gitignore`](git:git
 Datoteka `.gitignore` velja samo za datoteke, ki jim Git še ne sledi.
 Pomožna datoteka, ki smo jo zabeležili, preden smo napisali `.gitignore`, ostane v repozitoriju,
 dokler je ne pobrišemo in izbrisa ne zabeležimo kot spremembo.
+Izbris zabeležimo z istimi ukazi kot spremembo: pobrisano datoteko dodamo z `git add ⟨ime-datoteke⟩`,
+čeprav je v imeniku ni več, in vnos ustvarimo z `git commit`.
 Ko jo LaTeX pri naslednjem prevajanju naredi znova, jo Git zaradi datoteke `.gitignore` prezre.
 
 (latex:urejanje-vscode)=

@@ -56,7 +56,7 @@ Kopiranje velikih datotek lahko traja dlje, premik znotraj istega diska pa se zg
 datoteka se v resnici ne premakne, spremeni se le zapis o tem, v katerem imeniku je.
 
 Imenik lahko vsebuje druge imenike, ti spet svoje, in tako naprej.
-To strukturo si lahko predstavljamo kot podrto drevo, kot na {numref}`slika:drevo-domaci`:
+To strukturo si lahko predstavljamo kot podrto drevo, kot na {numref}`sliki %s <slika:drevo-domaci>`:
 korenski imenik, ki vsebuje vse druge, je skrajno levo, vsak imenik je zamaknjen pod tistega, v katerem je, datoteke pa so listi na koncih vej.
 Pot (angl. _path_) do datoteke našteje imenike od korena do nje.
 
@@ -172,7 +172,7 @@ dopolni vam ukaz, kar še posebej pride prav pri dolgih imenih s presledki.
 Ne pozabite, da taka imena postavimo med narekovaje: `"To je dolgo ime z veliko presledki"`.
 
 1. Prenesite arhiv [`skrati.zip`](02-ukazna-vrstica/skrati.zip) in ga [odpakirajte](faq:zip).
-   Nastali imenik `skrati` premaknite v imenik `rp`, ki ste ga naredili na prejšnjih vajah, poleg imenika `racunalniski-praktikum`, kot na {numref}`slika:drevo-domaci`.
+   Nastali imenik `skrati` premaknite v imenik `rp`, ki ste ga naredili na prejšnjih vajah, poleg imenika `racunalniski-praktikum`, kot na {numref}`sliki %s <slika:drevo-domaci>`.
 2. V VSCode odprite imenik `rudnik` (_File_ > _Open Folder_) in nato s paleto ukazov še ukazno vrstico (_Terminal: Create New Terminal in Editor Area to the Side_).
    Če vas VSCode vpraša, ali avtorjem imenika zaupate (_Do you trust the authors?_), potrdite, sicer ukazna vrstica ne deluje.
 3. Odprite še datoteko `skrati.pdf`.
@@ -235,3 +235,5 @@ S spleta ste prenesli podnapise za film, a so nekatere črke napačne.
    z možnostjo `-E` (angl. _extended_) pa, naj vzorec bere v razširjeni sintaksi, isti, kot jo pozna VSCode.
    Vzorca `\d` `grep` ne pozna, zato števke opišite z `[0-9]` (na macOS `\d` sicer deluje).
    Zakaj je število pol manjše kot v urejevalniku?
+7. Preštejte še vrstice, v katerih nastopa Grozd ali Gornik.
+   Vzorec z izbiro `|` je opisan v razdelku *Regularni izrazi*.

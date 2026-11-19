@@ -117,6 +117,7 @@ Do njih lahko dostopate z bližnjico <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd
 | Ustvari novo datoteko          | <kbd>Ctrl</kbd>+<kbd>N</kbd>                              | <kbd>Cmd</kbd>+<kbd>N</kbd>                      |
 | Odpiranje datoteke             | <kbd>Ctrl</kbd>+<kbd>O</kbd>                              | <kbd>Cmd</kbd>+<kbd>O</kbd>                      |
 | Odpiranje imenika              | <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>O</kbd> | <kbd>Cmd</kbd>+<kbd>O</kbd>                      |
+| Zapiranje datoteke             | <kbd>Ctrl</kbd>+<kbd>W</kbd>                              | <kbd>Cmd</kbd>+<kbd>W</kbd>                      |
 | Odpri predogled <sup>2</sup>   | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>             | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>     |
 | Išči po datotekah              | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>             | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>     |
 
@@ -127,7 +128,7 @@ Primeri:
 - z <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd> (na macOS z <kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd>) označujemo po besedah,
 - z <kbd>Ctrl</kbd>+<kbd>Home</kbd> (na macOS <kbd>Cmd</kbd>+<kbd>↑</kbd>) označimo besedilo od kurzorja do začetka dokumenta.
 
-Tipko <kbd>Esc</kbd> lahko služi za:
+Tipka <kbd>Esc</kbd> lahko služi za:
 - izhod iz označevanja,
 - izhod iz načina z večimi kurzorji,
 - izhod iz pogovornega okna za iskanje (nazaj vedno lahko skočite z ustrezno bližnjico).
@@ -167,4 +168,4 @@ Opombe:
 |                 | Windows                                     |  macOS                                        |
 |:----------------|:-------------------------------------------:|:---------------------------------------------:|
 | iz `.tex` v PDF | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> | <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> |
-| iz PDF v `.tex` | <kbd>Ctrl</kbd>+klik                        | <kbd>Ctrl</kbd>+klik                          |
+| iz PDF v `.tex` | <kbd>Ctrl</kbd>+klik                        | <kbd>Cmd</kbd>+klik                           |
