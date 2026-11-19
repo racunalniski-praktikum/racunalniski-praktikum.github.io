@@ -27,7 +27,7 @@ Pri namestitvi bodite pozorni na možnosti, še posebej na to, da imate obkljuka
 * Ena od nastavitev pri namestivi sprašuje, ali naj se VSCode doda v `PATH`. Tu **morate odgovoriti pritrdilno**. ([Kaj je `PATH`?](https://en.wikipedia.org/wiki/PATH_(variable)))
 * Priporočamo, da naredite asociacijo med VSCode in tipi datotek, ki jih zna urejati (angl. _file associations_).
 
-### Dodatna navodila za operacijski sistem MacOS
+### Dodatna navodila za operacijski sistem macOS
 
 * Prenesli ste ZIP datoteko, ki jo odpakirajte, nato pa prestavite program v _Applications_.
 
@@ -43,9 +43,9 @@ S spletne strani [git](https://git-scm.com/download/win) prenesite in namestite 
 Git je orodje za upravljanje različic, poleg tega pa Git for Windows ponuja še močno ukazno vrstico.
 Nato v VSCode [nastavite Git Bash za privzeto ukazno vrstico](faq:vscode-bash).
 
-### Navodila za operacijski sistem MacOS
+### Navodila za operacijski sistem macOS
 
-Če uporabljate MacOS, imate dve možnosti: lahko namestite XCode, ali pa samo XCode Command Line Tools. 
+Če uporabljate macOS, imate dve možnosti: lahko namestite XCode, ali pa samo XCode Command Line Tools. 
 XCode je Appleov paket razvojnih orodij in prevajalnikov - za potrebe Računalniškega praktikuma jih ne potrebujete.
 Namestite ga, če se boste počutili bolje z nameščenim prevajalnikom za C.
 **Opozorilo:** XCode zasede med 3GB in 4GB, za nemoteno delovanje pa potrebujete kakih 40GB prostega prostora na disku (te številke niso zelo točne).
@@ -93,13 +93,13 @@ Ta navodila predpostavljajo, da imate že nameščen urejevalnik [Visual Studio 
 3. Če je treba, popravite znake `{`, `}` in `@` v VSCode: sledite navodilom v razdelku [VSCode, LaTeX, Windows in slovenska tipkovnica](faq:vscode-latex-si) pod pogostimi vprašanji.
 4. [Preverite namestitev](latex:preverjanje-namestitve).
 
-### Navodila za operacijski sistem MacOS
+### Navodila za operacijski sistem macOS
 
 Ta navodila predpostavljajo, da imate že nameščen urejevalnik [Visual Studio Code](namestitev:vscode) in [orodja za ukazno vrstico](namestitev:ukazna).
 
 1. Preverite, da imate nameščen Perl tako, da v ukazno vrstico napišete `perl -v`. 
    Če je vse ok, se bodo izpisale informacije o verziji programa, sicer pa `zsh: command not found: perl` (v tem primeru namestite Perl, npr. s Homebrew).
-2. Namestite [MacTeX](https://www.tug.org/mactex/) distribucijo [TeX live](https://tug.org/texlive/) za MacOS. Če imate že nameščen Homebrew, v ukazno vrstico prilepite [ustrezno formulo, ki jo kopirate s Homebrew strani](https://formulae.brew.sh/cask/mactex). Sicer sledite navodilom na strani distribucije.
+2. Namestite [MacTeX](https://www.tug.org/mactex/) distribucijo [TeX live](https://tug.org/texlive/) za macOS. Če imate že nameščen Homebrew, v ukazno vrstico prilepite [ustrezno formulo, ki jo kopirate s Homebrew strani](https://formulae.brew.sh/cask/mactex). Sicer sledite navodilom na strani distribucije.
 3. [Preverite namestitev](latex:preverjanje-namestitve).
 
 ### Navodila za operacijski sistem Linux

@@ -33,7 +33,7 @@ Kazalca postavite na črki <kbd>F</kbd> in <kbd>J</kbd>. Ti dve tipki sta na tip
 Hitri programerji ne uporabljajo miške, ker jih le-ta upočasni.
 Pomembno je, da se naučite uporabljati bližnjice v vseh programih, ki jih uporabljate pogosto.
 Veliko bližnjic se da uporabiti z eno roko.
-Desničarji lahko na primer z levo roko uporabijo bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (<kbd>Cmd</kbd>+<kbd>Tab</kbd> na MacOS) za preklapljanje med okni, medtem ko imajo desno roko na miški.
+Desničarji lahko na primer z levo roko uporabijo bližnjico <kbd>Alt</kbd>+<kbd>Tab</kbd> (<kbd>Cmd</kbd>+<kbd>Tab</kbd> na macOS) za preklapljanje med okni, medtem ko imajo desno roko na miški.
 
 ## Navadno besedilo in označevalni jeziki
 
@@ -128,7 +128,7 @@ Več informacij:
 2. Zapomnite si svoj rezultat (WPM – words per minute), saj ga boste vpisali v anketo, ki jo boste reševali za domačo nalogo.
    Rezultati bodo objavljeni anonimno, vi pa boste videli, kam se uvrščate.
 
-`````{admonition} Nasvet za operacijski sistem MacOS
+`````{admonition} Nasvet za operacijski sistem macOS
 :class: tip
 Za tipkanje redkejših znakov si pomagajte s programom [Keyboard Viewer](https://support.apple.com/en-gb/guide/mac-help/mchlp1015/mac),
 ki je že nameščen na vašem sistemu.
@@ -136,7 +136,7 @@ ki je že nameščen na vašem sistemu.
 
 `````{admonition} Vaja za doma
 :class: tip
-Odločite se za postavitev tipkovnice (slovensko, angleško, Dvořak, ...) in približno 15 minut vadite tipkanje. Izberite vaje tako, da bo tipkovnica v lekcijah čim bolj podobna izbrani.
+Odločite se za postavitev tipkovnice (slovensko, angleško, Dvorak, ...) in približno 15 minut vadite tipkanje. Izberite vaje tako, da bo tipkovnica v lekcijah čim bolj podobna izbrani.
 
 - Na strani [Touch Typing Study](https://www.typingstudy.com/sl-slovenian-1/lesson/1/part/1) so lekcije nekoliko manj barvite, imate pa veliko izbiro postavitev tipkovnic, vključno s slovensko.
 - Če uporabljate angleško tipkovnico, lahko začnete s [prvo lekcijo na TypingTest.com](https://www.typingtest.com/trainer/applet.html?course_url=course_descriptions/fl5_us_sr_touchtyping.xml&lesson_id=A001) ali z lekcijami na [Typing.com](https://www.typing.com/student/lessons).
@@ -182,7 +182,7 @@ Ta (ali podoben) način označevanja je kar običajen za mesta, kjer morate vnes
 
 `````{admonition} Pozor, uvajamo standarden zapis
 :class: important
-Z znakom 🍎 označujemo, kar velja za MacOS.
+Z znakom 🍎 označujemo, kar velja za macOS.
 `````
 
 ### 3.1 Pripravite se za delo (brez miške)
@@ -191,7 +191,7 @@ S tipkovnico in čim manjšo uporabo miške naredite naslednja opravila:
 
 1. Odprite svoj domači imenik v upravitelju datotek:
    - na Windows v Raziskovalcu (angl. _File Explorer_): `C:\Users\⟨uporabnisko-ime⟩`,
-   - na MacOS v Finderju: `/Users/⟨uporabnisko-ime⟩`,
+   - na macOS v Finderju: `/Users/⟨uporabnisko-ime⟩`,
    - na Linuxu: `/home/⟨uporabnisko-ime⟩`.
 2. V njem ustvarite imenik za Računalniški praktikum (npr. `C:\Users\⟨uporabnisko-ime⟩\rp`), v njem pa imenik `racunalniski-praktikum`.
    Zunanji imenik je vaš: poimenujete ga lahko po svoje in vanj boste dali vse, kar je povezano s predmetom.
@@ -228,14 +228,14 @@ Računalniški praktikum
 <!-- To je komentar, ki bo na prikazanem Markdownu skrit. 
      V tem besedilu so v komentarjih napisana navodila za reševanje. Pustite jih v datoteki. -->
 
-<!-- 2. nivojski razdelek -->
+<!-- podnaslov (2. raven) -->
 Bližnjice na tipkovnici
 
 Kopiraj označeno v odložišče: Ctrl+C (**C**opy)
 Izreži označeno v odložišče: Ctrl+X
 Prilepi vsebino odložišča: Ctrl+V
 
-<!-- 2. nivojski razdelek -->
+<!-- podnaslov (2. raven) -->
 Koda
 
 Včasih pride prav značka kbd za tipke. Značko uporabimo takole:
@@ -244,7 +244,7 @@ Včasih pride prav značka kbd za tipke. Značko uporabimo takole:
 <kbd>Ctrl</kbd>
 <!-- konec bloka kode -->
 
-<!-- 2. nivojski razdelek -->
+<!-- podnaslov (2. raven) -->
 Domača naloga
 
 <!-- Spodnji seznam bo pripravil seznam nalog. Na GitHubu bodo lepo vidna potrditvena polja, 
@@ -253,7 +253,7 @@ Domača naloga
 - [ ] Izberite si še tri bližnjice, ki jih še ne uporabljate redno, in se jih naučite. 
       Dodajte jih v prvi razdelek tega dokumenta.
 
-<!-- 2. nivojski razdelek -->
+<!-- podnaslov (2. raven) -->
 Uporabne povezave
 
 FMF učilnica <!-- https://ucilnica.fmf.uni-lj.si/ -->
@@ -269,9 +269,9 @@ in sledite spodnjim navodilom.
 3. Označite glavni naslov in razdelke. V navadnem besedilu jih lahko prepoznate po tem, da je v vrstici nad njimi _komentar_
    (besedilo med znaki `<!--` in `-->`, ki se ne izpiše).
 4. V razdelku "Bližnjice na tipkovnici" uredite vrstice tako, da se bodo izpisale kot neoštevilčen seznam.
-   Pomagajte si z [večimi kurzorji](bliznjice:kurzorji) (angl. _multi-cursor_).
+   Pomagajte si z [več kurzorji](bliznjice:kurzorji) (angl. _multi-cursor_).
 5. V seznamu besede "Kopiraj", "Izreži" in "Prilepi" označite kot ležeče (angl. _italic_).
-   Tudi tu si lahko pomagate z večimi kurzorji: s <kbd>Ctrl</kbd>+<kbd>←→</kbd> (🍎 <kbd>Option</kbd>+<kbd>←→</kbd>) se lahko premikate med besedami.
+   Tudi tu si lahko pomagate z več kurzorji: s <kbd>Ctrl</kbd>+<kbd>←→</kbd> (🍎 <kbd>Option</kbd>+<kbd>←→</kbd>) se lahko premikate med besedami.
 6. V prvem odstavku razdelka "Koda" označite `kbd` kot kodo v besedilu (angl. _inline code_).
 7. Označite blok kode (angl. _code block_). Komentarja povesta, kje se blok začne in kje konča.
 8. V razdelku "Uporabne povezave" vrstice označite kot oštevilčen seznam.

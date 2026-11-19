@@ -8,19 +8,19 @@ Oznake nekaterih tipk:
 - <kbd>↹</kbd> za tipko <kbd>Tab</kbd>,
 - <kbd>⎇</kbd> za tipko <kbd>Alt</kbd>,
 - <kbd>⊞</kbd> za tipko <kbd>Windows</kbd> (tudi <kbd>Win</kbd>, na Windows),
-- <kbd>⌥</kbd> za tipko <kbd>Option</kbd> (na MacOS),
-- <kbd>⌘</kbd> za tipko <kbd>Command</kbd>  (tudi <kbd>Cmd</kbd>, na MacOS),
+- <kbd>⌥</kbd> za tipko <kbd>Option</kbd> (na macOS),
+- <kbd>⌘</kbd> za tipko <kbd>Command</kbd>  (tudi <kbd>Cmd</kbd>, na macOS),
 
 
 Pregledi bližnjic na tipkovnici v dokumentaciji:
 
 - [Windows](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec)
-- [MacOS](https://support.apple.com/en-gb/102650)
+- [macOS](https://support.apple.com/en-gb/102650)
 - [VSCode](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference)
 
 ## Glavne bližnjice na tipkovnici
 
-|                                          | Windows                                       |  MacOS                                       |
+|                                          | Windows                                       |  macOS                                       |
 |:-----------------------------------------|:---------------------------------------------:|:--------------------------------------------:|
 | Kopiraj označeno v odložišče             | <kbd>Ctrl</kbd>+<kbd>C</kbd>                  | <kbd>Cmd</kbd>+<kbd>C</kbd>                  |
 | Izreži označeno v odložišče              | <kbd>Ctrl</kbd>+<kbd>X</kbd>                  | <kbd>Cmd</kbd>+<kbd>X</kbd>                  |
@@ -37,7 +37,7 @@ Pregledi bližnjic na tipkovnici v dokumentaciji:
 
 <sup>1</sup> Pogosto pride prav tudi ubežnica <kbd>Esc</kbd>.
 
-`````{admonition} Nasvet za operacijski sistem MacOS
+`````{admonition} Nasvet za operacijski sistem macOS
 :class: tip
 V večini programov so bližnjice za iskanje, shranjevanje, ipd. enake, ampak so tudi izjeme.
 `````
@@ -51,7 +51,7 @@ Programe najlažje poženemo tako, da uporabimo ustrezno bližnjico na tipkovnic
   ki ga želite zagnati, z bližnjico <kbd>Win</kbd>+<kbd>R</kbd> poženete program Run. V vpisno polje napišete ime programa in stisnete vnašalko <kbd>↵</kbd>.
 * **Windows, iskanje v meniju start.** Stisnite tipko <kbd>Win</kbd> in začnite pisati ime programa. Ko se program pojavi v seznamu rezultatov,
   se nanj premaknite s puščicami <kbd>↑↓←→</kbd> in stisnite vnašalko <kbd>↵</kbd>, da ga poženete.
-* **MacOS.** <kbd>Cmd</kbd>+<kbd>Space</kbd>
+* **macOS.** <kbd>Cmd</kbd>+<kbd>Space</kbd>
 
 Ponavadi nam pogovorno okno ponudi pravi program še preden ime napišemo do konca.
 Po potrebi se v seznamu do programa premaknemo s tipkama <kbd>↑</kbd> in <kbd>↓</kbd>, nato pa izbiro potrdimo z vnašalko <kbd>↵</kbd>.
@@ -68,14 +68,14 @@ Kot samostojen program jo poženete takole:
 **Windows:** Stisnite tipko <kbd>Win</kbd> in začnite tipkati `git bash`. Ko se program pojavi v seznamu rezultatov,
   se nanj premaknite s puščicami <kbd>↑↓←→</kbd> in stisnite vnašalko <kbd>↵</kbd>, da ga poženete.
 
-**MacOS:** Stisnite <kbd>Cmd</kbd>+<kbd>Space</kbd> in začnite pisati `Terminal`. 
+**macOS:** Stisnite <kbd>Cmd</kbd>+<kbd>Space</kbd> in začnite pisati `Terminal`. 
 Ko se program pojavi v seznamu rezultatov, se nanj premaknite s puščicami <kbd>↑↓</kbd> in stisnite vnašalko <kbd>↵</kbd>, da ga poženete.
 
 
 (bliznjice:brskalniki)=
 ## Brskalniki
 
-|                                          | Windows                                       |  MacOS                                       |
+|                                          | Windows                                       |  macOS                                       |
 |:-----------------------------------------|:---------------------------------------------:|:--------------------------------------------:|
 | Fokus na naslovno vrstico                | <kbd>Ctrl</kbd>+<kbd>L</kbd>                  | <kbd>Cmd</kbd>+<kbd>L</kbd>                  |
 | Odpiranje novega okna (**N**ew)          | <kbd>Ctrl</kbd>+<kbd>N</kbd>                  | <kbd>Cmd</kbd>+<kbd>N</kbd>                  |
@@ -92,7 +92,7 @@ tipka <kbd>F</kbd> označi povezave na strani, da jih lahko izberete s tipkovnic
 (bliznjice:vscode)=
 ## VSCode bližnjice
 
-Tu omenjamo samo nekaj najbolj uporabnih bližnjic za tipkovnico. Več si lahko preberete v dokumentaciji urejevalnika, kjer je tudi [seznam vseh privzetih bližnjic](https://code.visualstudio.com/docs/getstarted/keybindings#_default-keyboard-shortcuts) (prikažejo se bližnjice za vaš operacijski sistem). Nekoliko skrčen seznam se da videti tudi v preglednicah za [Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) in [MacOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf).
+Tu omenjamo samo nekaj najbolj uporabnih bližnjic za tipkovnico. Več si lahko preberete v dokumentaciji urejevalnika, kjer je tudi [seznam vseh privzetih bližnjic](https://code.visualstudio.com/docs/getstarted/keybindings#_default-keyboard-shortcuts) (prikažejo se bližnjice za vaš operacijski sistem). Nekoliko skrčen seznam se da videti tudi v preglednicah za [Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) in [macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf).
 
 V VSCode si lahko pogledate vse bližnjice na vašem računalniku v nastavitvah za bližnjice. 
 Do njih lahko dostopate z bližnjico <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>S</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>K</kbd> <kbd>Cmd</kbd>+<kbd>S</kbd>).
@@ -100,7 +100,7 @@ Do njih lahko dostopate z bližnjico <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd
 (bliznjice:vscode-splosne)=
 ### Splošne bližnjice
 
-|                                | Windows                                                   |  MacOS                                           |
+|                                | Windows                                                   |  macOS                                           |
 |:-------------------------------|:---------------------------------------------------------:|:------------------------------------------------:|
 | Paleta ukazov                  | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>             | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>     |
 | Premikanje vzdolž cele besede  | <kbd>Ctrl</kbd>+<kbd>←→</kbd>                             | <kbd>Option</kbd>+<kbd>←→</kbd>                  |
@@ -125,12 +125,12 @@ Do njih lahko dostopate z bližnjico <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd
 
 Če med premikanjem držimo tipko <kbd>Shift</kbd>, označimo besedilo med začetkom in koncem premikanja.
 Primeri: 
-- z <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd> (na MacOS z <kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd>) označujemo po besedah,
-- z <kbd>Ctrl</kbd>+<kbd>Home</kbd> (na MacOS <kbd>Cmd</kbd>+<kbd>↑</kbd>) označimo besedilo od kurzorja do začetka dokumenta.
+- z <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd> (na macOS z <kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd>) označujemo po besedah,
+- z <kbd>Ctrl</kbd>+<kbd>Home</kbd> (na macOS <kbd>Cmd</kbd>+<kbd>↑</kbd>) označimo besedilo od kurzorja do začetka dokumenta.
 
 Tipka <kbd>Esc</kbd> lahko služi za:
 - izhod iz označevanja,
-- izhod iz načina z večimi kurzorji,
+- izhod iz načina z več kurzorji,
 - izhod iz pogovornega okna za iskanje (nazaj vedno lahko skočite z ustrezno bližnjico).
 
 (bliznjice:vscode-ukazna)=
@@ -148,9 +148,9 @@ Na slovenski tipkovnici znak &#96; sicer natipkate z <kbd>AltGr</kbd>+<kbd>7</kb
 Bližnjica namreč ne določa znaka, ampak tipko, VSCode pa tipko <kbd>AltGr</kbd> obravnava kot <kbd>Ctrl</kbd>+<kbd>Alt</kbd> (podobno težavo opisujejo [pogosta vprašanja](faq:vscode-latex-si)).
 
 (bliznjice:kurzorji)=
-### Delo z večimi kurzorji
+### Delo z več kurzorji
 
-|                                          | Windows                                       |  MacOS                                           |
+|                                          | Windows                                       |  macOS                                           |
 |:-----------------------------------------|:---------------------------------------------:|:------------------------------------------------:|
 | Dodaj kurzor na mestu klika              | <kbd>Alt</kbd> + levi klik                    | <kbd>Option</kbd> + levi  klik                   |
 | Dodaj kurzor zgoraj/spodaj               | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>↑↓</kbd>  | <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>↑↓</kbd>   |
@@ -165,7 +165,7 @@ Opombe:
 
 ### LaTeX
 
-|                 | Windows                                     |  MacOS                                        |
+|                 | Windows                                     |  macOS                                        |
 |:----------------|:-------------------------------------------:|:---------------------------------------------:|
 | iz `.tex` v PDF | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> | <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> |
 | iz PDF v `.tex` | <kbd>Ctrl</kbd>+klik                        | <kbd>Cmd</kbd>+klik                           |

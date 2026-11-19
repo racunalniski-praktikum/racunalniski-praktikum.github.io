@@ -88,7 +88,7 @@ V navodilih bo včasih tudi povezava na bolj podrobna navodila.
     Poskenirajte QR kodo. Na naslovu, kamor boste prišli, bo preostanek navodil za to nalogo.
     Na računalniku lahko naredite zajem zaslona (lahko si pomagate s pomočjo za operacijski sistem 
     [Windows](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b) ali
-    [MacOS](https://support.apple.com/en-us/102646)) 
+    [macOS](https://support.apple.com/en-us/102646)) 
     in uporabite spletno orodje, kot je npr. [QR code reader](https://qrcodedynamic.com/qr-reader)
 
 ## 3. naloga: postavite spletno stran

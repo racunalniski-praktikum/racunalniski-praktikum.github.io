@@ -18,7 +18,7 @@ Stisnjene imenike prepoznate po zadrgi na ikoni in po končnici ZIP.
 
 Za odpakiranje arhiva desno kliknete na arhiv in izberete "Extract All..."
 
-### MacOS
+### macOS
 
 Odvisno programov, ki jih imate nameščene, morda zadošča že kar, da dvakrat kliknete na arhiv.
 
@@ -62,7 +62,7 @@ skrite datoteke pokažete ali spet skrijete s <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<k
 
 - Na fakulteti (Windows): `/c/Users/⟨fmf-uporabnisko-ime⟩`
 - Vaš računalnik (Windows): `/c/Users/⟨domace-uporabnisko-ime⟩`
-- MacOS: `/Users/⟨domace-uporabnisko-ime⟩`
+- macOS: `/Users/⟨domace-uporabnisko-ime⟩`
 
 Na domači imenik se lahko v ukazni vrstici sklicujete z znakom `~` (tilda).
 Na primer, če se želite premakniti v domači imenik, lahko napišete `cd ~`.
@@ -148,7 +148,7 @@ V obeh primerih je zadnja vrstica v oknu oblike `$`: to je pozivnik, za katerim 
 Preverite, kje ste: natipkajte `pwd` in pritisnite vnašalko <kbd>↵</kbd>; izpiše se pot do imenika, v katerem ste.
 Če ni pravi ali če ne veste, kako naprej, prosite za pomoč.
 
-### MacOS
+### macOS
 
 V Finderju desno kliknite na imenik in izberite _Services_ > _New Terminal at Folder_. Odprlo se bo novo okno z ukazno vrstico.
 Zadnja vrstica v oknu bi morala biti oblike `⟨uporabnisko-ime⟩@⟨ime-racunalnika⟩ ⟨imenik⟩ %`.

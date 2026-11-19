@@ -50,7 +50,7 @@ Pospravljene datoteke s smiselnimi imeni ji torej pomagajo prav toliko kot vam.
 Datoteke pospravljate tako, da ustvarite imenike (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>) in datoteke vanje premaknete.
 Lažje gre z dvema oknoma: imenik odprite v novem zavihku in zavihek odvlecite v svoje okno.
 Več datotek izberete hkrati: s pritisnjeno tipko <kbd>Ctrl</kbd> (🍎 <kbd>Cmd</kbd>) dodajate posamezne datoteke, s <kbd>Shift</kbd> pa izberete vse med dvema.
-Isti tipki delujeta tudi pri izbiranju besed v urejevalniku ali celic v preglednici.
+Isti tipki delujeta tudi pri izbiranju celic v preglednici.
 Datoteko lahko namesto premika tudi kopirate.
 Kopiranje velikih datotek lahko traja dlje, premik znotraj istega diska pa se zgodi v trenutku:
 datoteka se v resnici ne premakne, spremeni se le zapis o tem, v katerem imeniku je.
@@ -87,8 +87,8 @@ naprednejšim uporabnikom računalnika pa še vedno pride prav.
 Ukazi v ukazni vrstici so programi.
 Besede za imenom programa so njegovi _argumenti_: podatki, ki jih program potrebuje za izvedbo svoje naloge.
 Argument, ki se začne z `-`, je _možnost_: ne pove, s čim naj program dela, ampak kako.
-Program `cd` (kratko za angl. _change directory_) uporabimo z enim argumentom, potjo do imenika, v katerega se hočemo prestaviti,
-program `pwd` (kratko za angl. _print working directory_) pa argumentov ne potrebuje.
+Ukaz `cd` (kratko za angl. _change directory_) uporabimo z enim argumentom, potjo do imenika, v katerega se hočemo prestaviti,
+ukaz `pwd` (kratko za angl. _print working directory_) pa argumentov ne potrebuje.
 
 :::{figure-md} slika:anatomija-ukaza
 :width: 80%
