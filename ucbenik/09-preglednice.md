@@ -17,7 +17,7 @@ Dele preglednice kaže {numref}`slika %s <slika:deli-preglednice>`.
 &nbsp; Deli preglednice
 :::
 
-Excel ste najverjetneje že kdaj uporabljali, zato predpostavljamo, da poznate začetna poglavja [vodiča po Excelu](https://support.microsoft.com/en-us/office/what-is-excel-94b00f50-5896-479c-b0c5-ff74603b35a3) do vključno poglavja o diagramih (angl. _Charts_), od poglavja _Formulas & functions_ pa le razdelek _Overview of formulas in Excel_.
+Excel ste najverjetneje že kdaj uporabljali, zato predpostavljamo, da poznate strani [vodiča po Excelu](https://support.microsoft.com/en-us/office/what-is-excel-94b00f50-5896-479c-b0c5-ff74603b35a3) iz skupine _Get started_ do vključno strani _Create a chart from start to finish_ in stran [_Overview of formulas in Excel_](https://support.microsoft.com/en-us/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173).
 Še posebej pomembno je, da znate opravila, ki jih na kratko povzemamo spodaj.
 
 **Vrstice, stolpci in listi.**
@@ -97,7 +97,7 @@ Ko se vrednost spremeni, se videz spremeni z njo.
 Celica, ki jo pobarvate ročno, ostane pobarvana, tudi ko barva ne drži več.
 
 **Uvoz podatkov.**
-Datoteko CSV uvozite z ukazom _Data_ > _From Text/CSV_, kjer izberete kodiranje datoteke in ločilo med podatki.
+Datoteko CSV uvozite z ukazom _Data_ > _From Text/CSV_ (🍎 _Data_ > _Get Data (Power Query)_ > _Text/CSV_), kjer izberete kodiranje datoteke in ločilo med podatki.
 Če jo samo odprete z dvoklikom, Excel oboje ugiba po regionalnih nastavitvah računalnika: šumniki se lahko pokvarijo, podatki, ločeni z vejicami, pa pristanejo v enem samem stolpcu.
 
 ## Datoteke z nalogami
@@ -129,9 +129,11 @@ Podatki so v tabeli `Rezultati`, povzetek po skupinah pa boste sestavili v tabel
 :::
 
 1.  Študente uredite naraščajoče po priimkih.
+    *Namig:* izberite celico v tabeli in na zavihku _Data_ kliknite _Sort_; v oknu za urejanje nastavite stolpec `Priimek` in vrstni red _A to Z_.
 2.  V stolpcu `Opravil` s funkcijo `IF` sestavite formulo, ki pove, ali ima študent vsaj 50 točk (`da` ali `ne`).
     V tabeli `Skupine` s funkcijo `COUNTIF` v stolpcu `Udeležba` preštejte, koliko študentov je pisalo test v vsaki skupini, s funkcijo `AVERAGEIF` pa v stolpcu `2022` izračunajte povprečno število točk skupine.
     Povprečje naj bo izpisano na dve decimalki, vrednost v celici pa naj ostane nezaokrožena.
+    *Namig:* število izpisanih decimalk nastavite z gumboma _Increase Decimal_ in _Decrease Decimal_ na zavihku _Home_; vrednost v celici ostane enaka.
 3.  Enak povzetek sestavite še z [vrtilno tabelo](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576), ki jo postavite pod tabelo `Skupine`.
     Za vsako skupino naj prikaže udeležbo, povprečje ter največje in najmanjše število točk.
     *Namig:* polje `Točke` lahko v območje _Values_ povlečete večkrat in vsakič izberete drugo funkcijo.
@@ -183,12 +185,12 @@ Predpostavite, da rezervoar vedno napolnimo do vrha.
 :::
 
 1.  V stolpcu `Prevoženo` izračunajte, koliko kilometrov smo prevozili od prejšnjega točenja: od stanja števca odštejte stanje v prejšnji vrstici.
-    Prva vrstica nima prejšnjega stanja, zato naj ostane prazna.
+    Prva vrstica nima prejšnjega stanja, zato naj ostane prazna: če Excel formulo razširi na ves stolpec in se v prvi vrstici pokaže napaka `#VALUE!`, vsebino te celice izbrišite.
 2.  V stolpcu `Plačano` izračunajte, koliko smo plačali za gorivo: litre pomnožite s ceno, ki je veljala na dan točenja.
     Ceno poiščite v tabeli `Cene` s funkcijo `XLOOKUP`.
     *Namig:* cena velja od datuma v stolpcu `Veljavnost` do naslednje spremembe, zato iščete zadnji datum, ki ni poznejši od datuma točenja; to določite s petim argumentom.
 3.  V stolpcu `Poraba` izračunajte porabo v litrih na 100 km po formuli $100 \cdot \frac{\text{litri}}{\text{prevoženo}}$.
-    Prva vrstica naj tudi tu ostane prazna.
+    Prva vrstica naj tudi tu ostane prazna; morebitno napako v njej izbrišite.
 4.  Stolpec `Prikaz` že vsebuje vrednosti iz stolpca `Poraba`; prikažite jih s stolpci.
     Izberite celice stolpca `Prikaz` in v meniju _Conditional Formatting_ izberite _Data Bars_ > _More Rules_.
     Vključite možnost _Show Bar Only_, pri _Minimum_ izberite _Lowest Value_, pri _Maximum_ pa _Highest Value_.
@@ -219,5 +221,5 @@ Koliko točk prinese plus in koliko krogec, je za vsako postavko zapisano v stol
     Izberite priimke in imena (`E2:R3`), jih kopirajte, kliknite celico `T6` in izberite _Paste Special_ z možnostma _Values_ in _Transpose_; druga vrstice zamenja s stolpci.
     Enako prenesite točke iz vrstice 45 v stolpec `Točke`: možnost _Values_ poskrbi, da se prenesejo števila in ne formule.
 4.  Študente v tabeli rezultatov uredite padajoče po točkah in v stolpcu `Ocena` izračunajte oceno.
-    Ocena je 6 za 50 do 59 točk, 7 za 60 do 69 točk in tako naprej do 10; pod 50 točkami naj celica ostane prazna.
-    *Namig:* desetice števila točk dobite s funkcijo `TRUNC`, prazno celico pa s funkcijo `IF`.
+    Ocena je 6 za 50 do 59 točk, 7 za 60 do 69 točk in tako naprej do 10 za 90 do 100 točk; pod 50 točkami naj celica ostane prazna.
+    *Namig:* desetice števila točk dobite s funkcijo `TRUNC`, prazno celico pa s funkcijo `IF`. Preverite, kaj formula vrne za 100 točk.
