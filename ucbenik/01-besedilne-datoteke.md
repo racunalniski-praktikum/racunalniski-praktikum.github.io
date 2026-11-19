@@ -269,9 +269,9 @@ in sledite spodnjim navodilom.
 3. Označite glavni naslov in razdelke. V navadnem besedilu jih lahko prepoznate po tem, da je v vrstici nad njimi _komentar_
    (besedilo med znaki `<!--` in `-->`, ki se ne izpiše).
 4. V razdelku "Bližnjice na tipkovnici" uredite vrstice tako, da se bodo izpisale kot neoštevilčen seznam.
-   Pomagajte si z [večimi kurzorji](bliznjice:kurzorji) (angl. _multi-cursor_).
+   Pomagajte si z [več kurzorji](bliznjice:kurzorji) (angl. _multi-cursor_).
 5. V seznamu besede "Kopiraj", "Izreži" in "Prilepi" označite kot ležeče (angl. _italic_).
-   Tudi tu si lahko pomagate z večimi kurzorji: s <kbd>Ctrl</kbd>+<kbd>←→</kbd> (🍎 <kbd>Option</kbd>+<kbd>←→</kbd>) se lahko premikate med besedami.
+   Tudi tu si lahko pomagate z več kurzorji: s <kbd>Ctrl</kbd>+<kbd>←→</kbd> (🍎 <kbd>Option</kbd>+<kbd>←→</kbd>) se lahko premikate med besedami.
 6. V prvem odstavku razdelka "Koda" označite `kbd` kot kodo v besedilu (angl. _inline code_).
 7. Označite blok kode (angl. _code block_). Komentarja povesta, kje se blok začne in kje konča.
 8. V razdelku "Uporabne povezave" vrstice označite kot oštevilčen seznam.

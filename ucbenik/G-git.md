@@ -270,7 +270,7 @@ ki ji sledi Id. Primeri ustreznih sporočil: `closes #1`, `Opravljeno, resolve #
 ## Zlivanje sprememb in konflikti
 
 Ta razdelek je vključen za primer, če kaj ne bo šlo po načrtu.
-Če na repozitoriju dela več ljudi ali delate na večih računalnikih, se lahko zgodi, 
+Če na repozitoriju dela več ljudi ali delate na več računalnikih, se lahko zgodi, 
 da se sprememb ne da enostavno uskladiti. 
 
 Če je na strežniku vnos, ki ga v našem repozitoriju še ni, se lokalnih vnosov ne bo dalo poslati na strežnik. 

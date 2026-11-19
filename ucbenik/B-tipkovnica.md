@@ -130,7 +130,7 @@ Primeri:
 
 Tipka <kbd>Esc</kbd> lahko služi za:
 - izhod iz označevanja,
-- izhod iz načina z večimi kurzorji,
+- izhod iz načina z več kurzorji,
 - izhod iz pogovornega okna za iskanje (nazaj vedno lahko skočite z ustrezno bližnjico).
 
 (bliznjice:vscode-ukazna)=
@@ -148,7 +148,7 @@ Na slovenski tipkovnici znak &#96; sicer natipkate z <kbd>AltGr</kbd>+<kbd>7</kb
 Bližnjica namreč ne določa znaka, ampak tipko, VSCode pa tipko <kbd>AltGr</kbd> obravnava kot <kbd>Ctrl</kbd>+<kbd>Alt</kbd> (podobno težavo opisujejo [pogosta vprašanja](faq:vscode-latex-si)).
 
 (bliznjice:kurzorji)=
-### Delo z večimi kurzorji
+### Delo z več kurzorji
 
 |                                          | Windows                                       |  macOS                                           |
 |:-----------------------------------------|:---------------------------------------------:|:------------------------------------------------:|
