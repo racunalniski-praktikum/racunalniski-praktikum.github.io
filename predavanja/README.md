@@ -25,8 +25,8 @@ Prosojnice in datoteke s predavanj pri predmetu Računalniški praktikum. Glavno
    - [`napacno.tex`](06-sklicevanje-in-okolja/primeri/napacno.tex) ([`.pdf`](06-sklicevanje-in-okolja/primeri/napacno.pdf)), [`pravilno.tex`](06-sklicevanje-in-okolja/primeri/pravilno.tex) ([`.pdf`](06-sklicevanje-in-okolja/primeri/pravilno.pdf)) z literaturo [`literatura.bib`](06-sklicevanje-in-okolja/primeri/literatura.bib)
 7. LaTeX 3: slike (vključevanje slik, formati slik, TikZ)
    - [prosojnice](07-slike/prosojnice.pdf)
-8. LaTeX 4: predstavitve (Beamer)
-   <!-- - [prosojnice](08-latex-4-predstavitve/…) -->
+8. LaTeX 4: predstavitve (nasveti za predstavitve, Beamer: razkrivanje po korakih, teme, stolpci)
+   - [prosojnice](08-predstavitve/prosojnice.pdf), sestavljene iz treh dokumentov v različnih temah in razmerjih: [`berlin-4-3.tex`](08-predstavitve/berlin-4-3.tex), [`berlin-16-9.tex`](08-predstavitve/berlin-16-9.tex), [`prosojnice.tex`](08-predstavitve/prosojnice.tex)
 9. Excel
    <!-- - [prosojnice](09-excel/…) -->
 10. Mathematica 1: uvod

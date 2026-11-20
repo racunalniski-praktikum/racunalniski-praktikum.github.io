@@ -1,0 +1,63 @@
+% Drugi del predavanja: od široke prosojnice nasveta 4 do slabe prosojnice
+% nasveta 6, v temi Berlin in razmerju 16 : 9. O razdelitvi na tri dokumente
+% glej stevilke.tex, o zgradbi predavanja pa berlin-4-3.tex.
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[slovene]{babel}
+\usepackage{amsmath}
+\usepackage{minted}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usetheme{Berlin}
+\input{stevilke}
+
+\title{Predstavitve}
+\author{Računalniški praktikum}
+
+% Pomanjšana prosojnica iz teme.pdf: prvi argument je stran, drugi ime teme.
+\newcommand{\tema}[2]{%
+  \begin{minipage}[t]{0.32\textwidth}
+    \centering
+    \fbox{\includegraphics[page=#1, width=0.95\textwidth]{teme}}\\[-0.5ex]
+    {\tiny #2}
+  \end{minipage}%
+}
+
+\begin{document}
+\input{berlin-4-3.stevec}
+
+% Ista prosojnica kot na koncu berlin-4-3.tex, zdaj v širokem formatu in le z
+% zadnjim korakom, saj je slika že zgrajena.
+\newcommand{\vsotakoraki}{4}
+\input{vsota}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}[page number]
+\setbeamertemplate{page number in head/foot}[framenumber]
+
+% Ista prosojnica kot na začetku tega dokumenta, zdaj brez glave in noge.
+\input{vsota}
+
+% Ista prosojnica v šestih Beamerjevih temah. Slike so izvožene iz zbornice,
+% predavanja/08-predstavitve/izvoz.sh.
+\begin{frame}{Beamerjeve privzete teme imajo veliko odvečnih elementov}
+  \centering
+  \tema{1}{Madrid}\hfill\tema{2}{Warsaw}\hfill\tema{3}{AnnArbor}
+
+  \medskip
+  \tema{4}{Antibes}\hfill\tema{5}{PaloAlto}\hfill\tema{6}{Darmstadt}
+\end{frame}
+
+
+\begin{frame}[fragile]{Odstranite odvečne privzete nastavitve}
+  \begin{minted}[fontsize=\footnotesize]{latex}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}[page number]
+\setbeamertemplate{page number in head/foot}[framenumber]
+  \end{minted}
+\end{frame}
+
+\end{document}
