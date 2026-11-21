@@ -15,6 +15,7 @@ _build/
 *.synctex.gz
 *.toc
 *.vrb
+*.stevec
 _minted*
 
 ucbenik/06-uvod-v-latex/urnik.pdf

@@ -332,21 +332,78 @@ private `zbornica`, `preverjanje-znanja/README.md`). TikZ itself stays unexamine
 This lecture is really *how to give a talk*. The bad practice is a slide you read
 aloud.
 
+**The main thread is what a student must know about giving a talk; Beamer is a side
+note.** The deck starts as a bad talk and fixes one problem at a time, and each fix
+shows the next problem. The good version of one rule is often the bad version of the
+next. Some rules have a slide that breaks the rule while it states it; the others
+start on a new slide. Rules 5–8 have a short frame of Beamer code. Students see the
+code of everything else in the LaTeX source of the deck, which `predavanja/README.md`
+links to, not in footnotes on the slides. The deck goes from the `Berlin` theme at
+4:3 (rules 1–4; rules 1–3 open on a section page), to `Berlin` at 16:9 (rules 4–5),
+to Metropolis at 16:9 (rules 6–8). The PDF need not work as a handout: the textbook
+gives the reasons.
+
+1. *Ne berite prosojnic.* The opening slide is one long paragraph, which the lecturer
+   reads aloud: slides help the speaker show what is easier to explain with a
+   picture; the ideal slide is empty, and everything on a slide earns its place by
+   showing what is hard to say; text the audience can read alone belongs in notes or
+   the textbook; the audience reads faster than you speak, does not know whether to
+   read or to listen, and finishes first.
+2. *Osredotočite se na eno stvar.* A slide titled *Zakaj?* shows six reasons at once,
+   and the lecturer does not read it. The fix is the next slide: the overlay commands
+   `\only`, `\onslide`, `\alert` and `\invisible`, each explained in words and
+   revealed one at a time.
+3. *Slika je vredna več kot tisoč besed.* That slide, all words, is the bad version of
+   this rule. The same title follows with the difference between `\only` and
+   `\onslide` as a diagram that grows step by step.
+4. *V matematiki so slike sploh pomembne.* Two blocks: a proof by induction that
+   \(1 + \dots + n = n(n + 1)/2\), in small type, and a TikZ picture that grows step by
+   step, two staircases that make an \(n \times (n + 1)\) rectangle. Shown first at
+   4:3, where it is cramped, then at 16:9, where only its last step is shown, because
+   the picture has already been built.
+5. *Odstranite odvečne privzete nastavitve.* The navigation symbols, the headline
+   and the footline go; the frame title and the frame number stay. The proof slide is
+   shown again without them. Then one slide shows the same typical slide in six of
+   Beamer's themes (Madrid, Warsaw, AnnArbor, Antibes, PaloAlto, Darmstadt), each full
+   of such elements. Code: the `\setbeamertemplate` lines.
+6. *Raje uporabite temo z boljšimi privzetimi nastavitvami.* Code:
+   `\usetheme{metropolis}`, next to six pages of the demo that TeX Live ships with the
+   theme (title, section, lists, blocks, plot, standout).
+7. *Ne skačite po prosojnicah.* The slide with the six themes comes back, now in
+   Metropolis; then the code: `\againframe`. The deck itself copies that slide,
+   because `\againframe` cannot reach a frame in another document.
+8. *Vrstice naj ne bodo predolge.* The rule is first one long line across the wide
+   slide, then a narrow column next to its own code. Code: `columns`.
+
+The deck ends on a full-frame photograph of people around a campfire, without a
+title: a talk is a story. No slide lists the rules again, and there is no automatic
+table of contents.
+
+The thumbnails of rules 5–7 are exported by `predavanja/08-predstavitve/izvoz.sh` in
+`zbornica`. The photograph is in the public domain (Forest Service Northern Region,
+*Meadow Creek Campfire*, Wikimedia Commons); the deck names the source in a comment.
+
 **Keep the advice, drop the reason.** The standing advice was: use PowerPoint for
 mathematics talks *because* equations are hard to write in it. The norm is right —
 slide after slide of equations is a bad talk. The reason is not. It rests on a defect
 of the tool, a model removes the defect, and it points students away from Beamer,
-which is what the exam tests. State the norm directly instead.
+which is what the exam tests. Rule 4 shows the norm instead: a proof in equations
+next to a picture that shows why the formula holds.
 
-**Beamer gets 15–20 minutes at the end**, enough that the tutorials have something to
-build on. Note that Beamer is examined — it is one of the two variants of the LaTeX
-exam task — so these 15–20 minutes and the three tutorial hours that follow are the
-whole of its teaching.
+Note that Beamer is examined — it is one of the two variants of the LaTeX exam task —
+so this lecture and the three tutorial hours that follow are the whole of its
+teaching. The tutorials drill what the lecture only shows.
 
 **It teaches only presentations and Beamer.** Image formats are in lecture 7.
 
 **A picture that is revealed in step with what you are saying** is the last step of
-the escalation of lecture 7. It leads into Beamer's overlays.
+the escalation of lecture 7. Rules 3 and 4 take it up; the perpendicular construction
+of lecture 7 does not return.
+
+**No language-model demo.** A demo was planned after the story: three prompts with
+more and more detail (only the topic; the rules; the story and the structure of the
+talk), with the verdict that the more of the story the speaker gives, the better the
+deck. It was dropped because the students already knew what to expect.
 
 **No instance of the theme, and none is needed.**
 
