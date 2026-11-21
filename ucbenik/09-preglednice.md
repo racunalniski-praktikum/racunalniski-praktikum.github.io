@@ -105,6 +105,8 @@ Datoteko CSV uvozite z ukazom _Data_ > _From Text/CSV_ (🍎 _Data_ > _Get Data 
 1. Za vajo lahko doma rešujete [uvodne naloge iz Excela](09-preglednice/excel-uvodne.zip).
 2. Datoteke za vaje najdete v arhivu [`09-preglednice.zip`](09-preglednice/09-preglednice.zip).
 
+Oba arhiva pred delom [odpakirajte](faq:zip).
+
 Slike pri nalogah kažejo rešene delovne zvezke, kot jih Excel natisne.
 Na zaslonu so videti nekoliko drugače: brez črt med vsemi celicami, z gumbi za filtriranje v glavah tabel in morda z drugače zapisanimi datumi.
 S slikami zato primerjajte vsebino tabel, ne njihovega videza.

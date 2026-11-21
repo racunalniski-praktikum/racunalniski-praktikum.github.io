@@ -10,9 +10,11 @@ Poleg tega, da datoteke potem zasedejo manj prostora, je to tudi priročen nači
 
 ### Windows
 
-Operacijski sistem Windows precej dobro zakriva razlike med stisnjenimi in navadnimi imeniki.
-V večini primerov ne boste imeli težav, če ZIP datoteke ne boste odpakirali, sta pa vsaj dve izjemi:
-do čudnega obnašanja lahko pride pri HTML in CSS datotekah, ter pri LaTeX datotekah.
+Windows arhiv pokaže kot navaden imenik in datoteke v njem lahko odprete z dvoklikom.
+Pri tem Windows odprto datoteko skopira v začasni imenik, brez datotek, ki so ob njej.
+LaTeX tako ne najde datotek, ki jih dokument vključuje, brskalnik pa ne najde slik in slogov strani.
+Excel spremembe shrani v začasno kopijo, ne v arhiv.
+Zato arhiv pred delom vedno odpakirajte.
 
 Stisnjene imenike prepoznate po zadrgi na ikoni in po končnici ZIP.
 
@@ -20,7 +22,7 @@ Za odpakiranje arhiva desno kliknete na arhiv in izberete "Extract All..."
 
 ### macOS
 
-Odvisno programov, ki jih imate nameščene, morda zadošča že kar, da dvakrat kliknete na arhiv.
+Arhiv odpakirate z dvoklikom: ob arhivu se pojavi imenik z odpakiranimi datotekami.
 
 (faq:zip-ustvari)=
 ### Kako naredim arhiv
