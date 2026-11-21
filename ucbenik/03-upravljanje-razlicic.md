@@ -44,6 +44,7 @@ Nekateri ukazi Gita potrebujejo besedilo, ki ga niste napisali v ukazno vrstico.
 
 Če še niste nastavili urejevalnika za ukazno vrstico, Git morda odpre urejevalnik `vim`.
 Iz njega pridete tako, da stisnete <kbd>Esc</kbd>, napišete `:wq` in stisnete vnašalko.
+Ob ukazu `git commit` pred tem stisnite <kbd>i</kbd> in napišite sporočilo vnosa, sicer Git vnosa ne zabeleži.
 
 ## 1. naloga: prvi koraki z Gitom
 
