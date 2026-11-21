@@ -109,7 +109,7 @@ Ta navodila predpostavljajo, da imate že nameščen urejevalnik [Visual Studio 
 (namestitev:mathematica)=
 ## Mathematica
 
-Mathematica je sistem za numerično in simbolno računanje. Namestite jo na domači računalnik, pri čemer sledite [navodilom za namestitev Mathematice](https://www.fmf.uni-lj.si/sl/racunalniski-center/mathematica-za-studente/).
+Mathematica je program za simbolno računanje. Namestite jo na domači računalnik, pri čemer sledite [navodilom za namestitev Mathematice](https://www.fmf.uni-lj.si/sl/racunalniski-center/mathematica-za-studente/).
 
 V navodilih zgoraj (morda) manjka korak. Ko se registrirate, pridobite aktivacijsko kodo ter se prijavite in potrdite svojo e-pošto, lahko program prenesete s strani, na kateri ste pridobili aktivacijsko kodo.
 

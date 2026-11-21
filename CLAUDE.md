@@ -89,6 +89,7 @@ Legacy material that is not in the tree:
 - Terminology, HTML: *označevalni jezik za oblikovanje večpredstavnostnih dokumentov* (per Islovar). Never *nadbesedilo* or any other gloss of *hypertext*.
 - Terminology, CSS: a selector is an *izbiralec*, glossed `(angl. _selector_)` where a chapter first uses it; a class is a *razred*. *Selektor* appears at most as a gloss, as in past exams. Never *izbirnik*.
 - Terminology, LaTeX: math mode is *matematični način*, of two kinds, *vrstični* (`\(…\)`) and *prikazni* (`\[…\]`). *Matematično okolje* is only an environment, such as those of `amsmath`.
+- Terminology, Mathematica: Mathematica is a *program za simbolno računanje*. Not *sistem za računalniško algebro* or another gloss of *computer algebra system*.
 - Terminology, spreadsheets: a spreadsheet is a *preglednica* (per Islovar), both the document and the program. Never *razpredelnica*, except where we quote Moodle's own labels, such as *ocenjevalna razpredelnica*.
 - Spelling: *VSCode* (full name *Visual Studio Code* only at first mention and in the software admonitions).
 - Platform baseline: prose states the behaviour of Git Bash on Windows (in the VSCode terminal) as the plain fact; what works elsewhere is an add-on in parentheses naming the system, e.g. `(na macOS \d sicer deluje)`.
@@ -161,6 +162,7 @@ Legacy material that is not in the tree:
 - 2026-11-17 — A spreadsheet is a *preglednica*, the Islovar term (status *urejeno*), which covers both the document and the program. The legacy chapter *Razpredelnice* used a word that Islovar does not list.
 - 2026-11-17 — Tutorials may send students to a language model for steps that only show what a tool can do. Such steps are marked *Dodatno* and kept brief; students ask a model (the text names Gemini in Google Search as an example) and check the answer, by eye for appearance and by hand for a formula. This follows the weekly language-model thread. The 2026-09-21 sentence "The tutorials do not use Copilot" was about CSS in chapter 4 and still holds there. First applied in `09-preglednice.md`.
 - 2026-11-17 — Lookup in spreadsheets is taught with `XLOOKUP`, which replaces `INDEX` with `MATCH`. It is one of the chapter's main topics, not an extra. It needs Excel 2021 or Microsoft 365. Applied in `09-preglednice.md` and in the Poraba handout and solution in `zbornica`; the expected-knowledge list for the exam in `zbornica` still names `INDEX` and `MATCH`.
+- 2026-11-21 — Mathematica is a *program za simbolno računanje*. Islovar has no entry for *computer algebra* or *symbolic computation*; its nearest entry is the general *računanje* (*computing, computation*). The wording follows the caption *Simbolno računanje* of the Mathematica part of the textbook. Applied in `10-osnove-mathematice.md` and in `A-programska-oprema.md`, which said *sistem za numerično in simbolno računanje*.
 
 ## Open questions
 
