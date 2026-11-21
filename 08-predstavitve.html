@@ -1,0 +1,824 @@
+
+<!DOCTYPE html>
+
+
+<html lang="sl" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Predstavitve &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=db6da3aa" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=a3a20203"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=852ec8ec"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '08-predstavitve';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Abecedni seznam" href="genindex.html" />
+    <link rel="search" title="Išči" href="search.html" />
+    <link rel="next" title="Preglednice" href="09-preglednice.html" />
+    <link rel="prev" title="Slike" href="07-slike.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="sl"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-besedilne-datoteke.html">Besedilne datoteke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-ukazna-vrstica.html">Ukazna vrstica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-upravljanje-razlicic.html">Upravljanje različic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-html.html">Označevalni jezik HTML</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matematični dokumenti</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05-latex.html">Uvod v LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-sklicevanje-in-definicije.html">Sklicevanje in definicije</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-slike.html">Slike</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Predstavitve</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Preglednice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="09-preglednice.html">Preglednice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="H-regex.html">Regularni izrazi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L-latex.html">LaTeX: pogosta vprašanja in reševanje težav</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Prenesite to stran">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/08-predstavitve.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Prenesite izvorno datoteko"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Natisni v PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Celozaslonski način"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Predstavitve</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Vsebina </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paket-beamer">Paket <code class="docutils literal notranslate"><span class="pre">beamer</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postopno-odkrivanje">Postopno odkrivanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloki">Bloki</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stolpci">Stolpci</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vkljucevanje-datotek">Vključevanje datotek</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risanje-s-paketom-tikz">Risanje s paketom TikZ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pregledne-datoteke-in-vscode">Pregledne datoteke in VSCode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-osnovna-struktura-dokumenta">1. naloga: osnovna struktura dokumenta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-vkljucevanje-datotek-in-postopno-odkrivanje">2. naloga: vključevanje datotek in postopno odkrivanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-postopno-odkrivanje-enacb">3. naloga: postopno odkrivanje enačb</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-stolpci-in-slike">4. naloga: stolpci in slike</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-postopno-odkrivanje-tabel">5. naloga: postopno odkrivanje tabel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-risanje-s-paketom-tikz">6. naloga: risanje s paketom TikZ</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="predstavitve">
+<h1>Predstavitve<a class="headerlink" href="#predstavitve" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-latex"><span class="std std-ref">LaTeX</span></a>,</p></li>
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-vscode"><span class="std std-ref">Visual Studio Code</span></a> in</p></li>
+<li><p>razširitev <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop</a>.</p></li>
+</ul>
+</div>
+<section id="paket-beamer">
+<h2>Paket <code class="docutils literal notranslate"><span class="pre">beamer</span></code><a class="headerlink" href="#paket-beamer" title="Link to this heading">#</a></h2>
+<p>Prosojnice v LaTeXu naredite z razredom dokumenta <code class="docutils literal notranslate"><span class="pre">beamer</span></code>.
+Kot do zdaj vsebino pišete v okolje <code class="docutils literal notranslate"><span class="pre">document</span></code>.
+Vsako prosojnico napišete v okolje <code class="docutils literal notranslate"><span class="pre">frame</span></code>, njen naslov pa lahko napišete na dva načina:
+z ukazom <code class="docutils literal notranslate"><span class="pre">\frametitle</span></code> ali kot argument okolja.</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>beamer<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>frame<span class="nb">}</span>
+  <span class="k">\frametitle</span><span class="nb">{</span>Naslov prosojnice z ukazom frametitle<span class="nb">}</span>
+  ⟨vsebina⟩
+<span class="k">\end</span><span class="nb">{</span>frame<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>frame<span class="nb">}{</span>Naslov prosojnice v argumentu okolja<span class="nb">}</span>
+  ⟨vsebina⟩
+<span class="k">\end</span><span class="nb">{</span>frame<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Podatke za naslovno stran nastavite enako kot v članku, z ukazi <code class="docutils literal notranslate"><span class="pre">\title</span></code>, <code class="docutils literal notranslate"><span class="pre">\author</span></code> in <code class="docutils literal notranslate"><span class="pre">\date</span></code>;
+prosojnice poznajo še ukaza <code class="docutils literal notranslate"><span class="pre">\subtitle</span></code> za podnaslov in <code class="docutils literal notranslate"><span class="pre">\institute</span></code> za ustanovo.
+Ukaze lahko napišete v preambulo ali za <code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code>,
+vedno pa pred prosojnico z naslovno stranjo.
+To namesto ukaza <code class="docutils literal notranslate"><span class="pre">\maketitle</span></code> izpiše ukaz <code class="docutils literal notranslate"><span class="pre">\titlepage</span></code>, ki ga napišete v svojo prosojnico.
+Če datuma ne nastavite, se izpiše današnji; z <code class="docutils literal notranslate"><span class="pre">\date{}</span></code> ga izklopite.</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\title</span><span class="nb">{</span>Kako pripravimo prosojnice<span class="nb">}</span>
+<span class="k">\subtitle</span><span class="nb">{</span>Prvi koraki<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Ana Novak<span class="nb">}</span>
+<span class="k">\institute</span><span class="nb">{</span>Fakulteta za matematiko in fiziko<span class="nb">}</span>
+<span class="k">\date</span><span class="nb">{}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>frame<span class="nb">}</span>
+  <span class="k">\titlepage</span>
+<span class="k">\end</span><span class="nb">{</span>frame<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Ukaze <code class="docutils literal notranslate"><span class="pre">\section</span></code> pišite med prosojnicami, nikoli znotraj okolja <code class="docutils literal notranslate"><span class="pre">frame</span></code>.
+Iz razdelkov <code class="docutils literal notranslate"><span class="pre">beamer</span></code> sestavi kazalo vsebine, ki ga na prosojnico postavite z ukazom <code class="docutils literal notranslate"><span class="pre">\tableofcontents</span></code>.</p>
+<p>Celoten primer prosojnic je v pregledni datoteki <code class="docutils literal notranslate"><span class="pre">5-prosojnice.tex</span></code> v imeniku <code class="docutils literal notranslate"><span class="pre">latex-pregled</span></code>,
+več pa piše v <a class="reference external" href="https://www.overleaf.com/learn/latex/Beamer">Overleafovi dokumentaciji o paketu <code class="docutils literal notranslate"><span class="pre">beamer</span></code></a>.</p>
+</section>
+<section id="postopno-odkrivanje">
+<span id="predstavitve-odkrivanje"></span><h2>Postopno odkrivanje<a class="headerlink" href="#postopno-odkrivanje" title="Link to this heading">#</a></h2>
+<p>Ena prosojnica je lahko v PDF-ju več strani, ki jim pravimo podprosojnice:
+vsaka naslednja odkrije nekaj več vsebine.
+Najpreprostejši način je ukaz <code class="docutils literal notranslate"><span class="pre">\pause</span></code>: kar mu sledi, se pokaže šele na naslednji podprosojnici.</p>
+<p>Natančneje določite odkrivanje s predpisom med oklepajema <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> in <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>,
+ki ga napišete med ime ukaza in njegov prvi argument.
+Tako <code class="docutils literal notranslate"><span class="pre">\item&lt;3-&gt;</span></code> pokaže element seznama od tretje podprosojnice naprej,
+<code class="docutils literal notranslate"><span class="pre">\textbf&lt;2&gt;{beseda}</span></code> pa besedo poudari samo na drugi.
+Predpis je lahko ena številka (<code class="docutils literal notranslate"><span class="pre">&lt;4&gt;</span></code>), razpon (<code class="docutils literal notranslate"><span class="pre">&lt;2-5&gt;</span></code>),
+razpon brez konca ali začetka (<code class="docutils literal notranslate"><span class="pre">&lt;3-&gt;</span></code> od tretje naprej, <code class="docutils literal notranslate"><span class="pre">&lt;-2&gt;</span></code> prvi dve)
+ali naštevanje (<code class="docutils literal notranslate"><span class="pre">&lt;3,5&gt;</span></code>), pa tudi kombinacija teh.</p>
+<p>Če naj se elementi seznama odkrivajo po vrsti, ni treba predpisa dodati vsakemu elementu:
+dovolj je, da okolju <code class="docutils literal notranslate"><span class="pre">itemize</span></code> ali <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> dodate neobvezni argument <code class="docutils literal notranslate"><span class="pre">[&lt;+-&gt;]</span></code>.</p>
+<p>Ukaza <code class="docutils literal notranslate"><span class="pre">\only</span></code> in <code class="docutils literal notranslate"><span class="pre">\onslide</span></code> postavita vsebino samo na izbrane podprosojnice.
+Razlikujeta se v tem, kaj naredita na ostalih:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">\only&lt;1&gt;{vsebina}</span></code> na ostalih podprosojnicah ne naredi ničesar, kot da vsebine ne bi bilo;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\onslide&lt;2-5&gt;{vsebina}</span></code> na ostalih podprosojnicah pusti prazen prostor, kjer bi vsebina stala,
+zato se preostala vsebina ne premika.</p></li>
+</ul>
+</section>
+<section id="bloki">
+<span id="predstavitve-bloki"></span><h2>Bloki<a class="headerlink" href="#bloki" title="Link to this heading">#</a></h2>
+<p>Del vsebine prosojnice lahko poudarite z blokom.
+Okolje <code class="docutils literal notranslate"><span class="pre">block</span></code> je namenjeno splošnemu poudarku, <code class="docutils literal notranslate"><span class="pre">exampleblock</span></code> primerom, <code class="docutils literal notranslate"><span class="pre">alertblock</span></code> pa opozorilom.
+Razlikujejo se po barvi, vsa pa imajo obvezen argument, naslov bloka.
+Naslov lahko izpustite, argumenta pa ne: blok brez naslova ima prazen argument <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>exampleblock<span class="nb">}{</span>Primer<span class="nb">}</span>
+  Ukaz <span class="k">\texttt</span><span class="nb">{</span>pause<span class="nb">}</span> odkrije vsebino prosojnice po kosih.
+<span class="k">\end</span><span class="nb">{</span>exampleblock<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>block<span class="nb">}{}</span>
+  Ta blok nima naslova.
+<span class="k">\end</span><span class="nb">{</span>block<span class="nb">}</span>
+</pre></div>
+</div>
+</section>
+<section id="stolpci">
+<span id="predstavitve-stolpci"></span><h2>Stolpci<a class="headerlink" href="#stolpci" title="Link to this heading">#</a></h2>
+<p>Vsebino prosojnice razdelite v stolpce z okoljem <code class="docutils literal notranslate"><span class="pre">columns</span></code>, v katerem je vsak stolpec svoje okolje <code class="docutils literal notranslate"><span class="pre">column</span></code>.
+Okolje <code class="docutils literal notranslate"><span class="pre">column</span></code> ima obvezen argument, širino stolpca, ki jo navadno podate kot del širine besedila,
+na primer <code class="docutils literal notranslate"><span class="pre">0.5\textwidth</span></code>.</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>columns<span class="nb">}</span>
+  <span class="k">\begin</span><span class="nb">{</span>column<span class="nb">}{</span>0.5<span class="k">\textwidth</span><span class="nb">}</span>
+    ⟨levi stolpec⟩
+  <span class="k">\end</span><span class="nb">{</span>column<span class="nb">}</span>
+  <span class="k">\begin</span><span class="nb">{</span>column<span class="nb">}{</span>0.5<span class="k">\textwidth</span><span class="nb">}</span>
+    ⟨desni stolpec⟩
+  <span class="k">\end</span><span class="nb">{</span>column<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>columns<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Vsebino stolpca poravnate na sredino z ukazom <code class="docutils literal notranslate"><span class="pre">\centering</span></code> na začetku stolpca.
+Več piše v razdelku o stolpcih v <a class="reference external" href="https://www.overleaf.com/learn/latex/Beamer_Presentations%3A_A_Tutorial_for_Beginners_(Part_2)%E2%80%94Lists%2C_Columns%2C_Pictures%2C_Descriptions_and_Tables#Columns">Overleafovem uvodnem tečaju o predstavitvah</a>.</p>
+</section>
+<section id="vkljucevanje-datotek">
+<span id="predstavitve-vkljucevanje"></span><h2>Vključevanje datotek<a class="headerlink" href="#vkljucevanje-datotek" title="Link to this heading">#</a></h2>
+<p>Daljši dokument je preglednejši, če ga razdelite na več datotek.
+Ukaz <code class="docutils literal notranslate"><span class="pre">\input{⟨pot⟩}</span></code> na svoje mesto vstavi vsebino datoteke.
+Pot je relativna: pove, kako od imenika z glavno datoteko pridete do vključene datoteke
+(o poteh več v <a class="reference internal" href="02-ukazna-vrstica.html"><span class="std std-doc">2. poglavju</span></a>).
+Če je datoteka <code class="docutils literal notranslate"><span class="pre">uvod.tex</span></code> v istem imeniku kot glavna datoteka, napišete <code class="docutils literal notranslate"><span class="pre">\input{uvod.tex}</span></code>,
+če je v njegovem podimeniku <code class="docutils literal notranslate"><span class="pre">poglavja</span></code>, pa <code class="docutils literal notranslate"><span class="pre">\input{poglavja/uvod.tex}</span></code>.</p>
+<p>Relativne glede na imenik z glavno datoteko so poti tudi v vključenih datotekah.
+Če datoteka <code class="docutils literal notranslate"><span class="pre">poglavja/uvod.tex</span></code> vključi sliko iz imenika <code class="docutils literal notranslate"><span class="pre">slike</span></code>, ki je poleg glavne datoteke,
+je prava pot <code class="docutils literal notranslate"><span class="pre">slike/graf.png</span></code>, ne <code class="docutils literal notranslate"><span class="pre">../slike/graf.png</span></code>.</p>
+</section>
+<section id="risanje-s-paketom-tikz">
+<span id="predstavitve-tikz"></span><h2>Risanje s paketom TikZ<a class="headerlink" href="#risanje-s-paketom-tikz" title="Link to this heading">#</a></h2>
+<p>Če želite risati s paketom TikZ, ga vključite v preambulo z ukazom <code class="docutils literal notranslate"><span class="pre">\usepackage{tikz}</span></code>.
+Sliko nato narišete v okolju <code class="docutils literal notranslate"><span class="pre">tikzpicture</span></code>.
+Če naj TikZ sam izračuna presečišča črt, potrebujete še knjižnico <code class="docutils literal notranslate"><span class="pre">intersections</span></code>,
+ki jo pod paketom vključite z <code class="docutils literal notranslate"><span class="pre">\usetikzlibrary{intersections}</span></code>.</p>
+<p>Na <a class="reference external" href="https://racunalniski-praktikum.github.io/predavanja/07-slike/prosojnice.pdf">prosojnicah 7. predavanja</a>
+je koda, ki nariše konstrukcijo pravokotnice.
+Presečišča v njej izračuna TikZ, zato slika ostane pravilna, tudi če premaknete izhodiščno točko.
+Ukaz <code class="docutils literal notranslate"><span class="pre">\pause</span></code> deluje tudi v okolju <code class="docutils literal notranslate"><span class="pre">tikzpicture</span></code>, vendar sliko odkriva v vrstnem redu,
+v katerem so zapisani ukazi.
+Koda s predavanja točke nariše čisto na koncu, zato bi se z ukazom <code class="docutils literal notranslate"><span class="pre">\pause</span></code> pokazale zadnje,
+čeprav v konstrukciji nastopijo prej.
+Kadar se vrstni red odkrivanja ne ujema z vrstnim redom kode,
+uporabite ukaz <code class="docutils literal notranslate"><span class="pre">\onslide</span></code> s predpisom, a brez argumenta:
+<code class="docutils literal notranslate"><span class="pre">\onslide&lt;3-&gt;</span></code> velja za vse ukaze, ki mu sledijo, do naslednjega ukaza <code class="docutils literal notranslate"><span class="pre">\onslide</span></code>.
+Poznejši ukaz <code class="docutils literal notranslate"><span class="pre">\onslide</span></code> ima lahko manjšo številko od prejšnjega, na primer <code class="docutils literal notranslate"><span class="pre">\onslide&lt;1-&gt;</span></code>.
+Na koncu slike napišite še ukaz <code class="docutils literal notranslate"><span class="pre">\onslide</span></code> brez predpisa, sicer zadnji predpis velja tudi za številko prosojnice.
+Predpisa ne pišite neposredno k ukazu za črto z imenom, na primer <code class="docutils literal notranslate"><span class="pre">\draw&lt;2-&gt;[name</span> <span class="pre">path=k]</span></code>:
+na podprosojnicah, kjer črte ni, je TikZ ne pozna in presečišč ne more izračunati.</p>
+</section>
+<section id="pregledne-datoteke-in-vscode">
+<h2>Pregledne datoteke in VSCode<a class="headerlink" href="#pregledne-datoteke-in-vscode" title="Link to this heading">#</a></h2>
+<p>V navodilih ne bo vedno pisalo, kako se kaj naredi.
+Takrat si pomagajte s preglednimi datotekami in iskanjem po spletu.
+Kadar v nalogi piše, naj preberete del katere od preglednih datotek,
+je ponavadi mišljeno, da preberete <code class="docutils literal notranslate"><span class="pre">.tex</span></code> datoteko in ne prevedene PDF datoteke.
+V <code class="docutils literal notranslate"><span class="pre">.tex</span></code> datotekah je namreč veliko koristnih informacij skritih tudi v komentarjih.</p>
+<p>Pri iskanju informacij v preglednih datotekah si lahko pomagate z
+iskanjem po datotekah (prvič v nalogi 1.3.3), do katerega dostopate z bližnjico
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>).
+Pri tem načinu iskanja se izpiše seznam zadetkov po datotekah.
+Če kliknete na vrstico z rezultatom, se bo datoteka na tistem mestu odprla v urejevalniku.</p>
+<p>Med izvorno kodo v datoteki <code class="docutils literal notranslate"><span class="pre">.tex</span></code> in PDF-jem v VSCode prehajate z bližnjicami:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-center"><p>Windows</p></th>
+<th class="head text-center"><p>macOS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>iz <code class="docutils literal notranslate"><span class="pre">.tex</span></code> v PDF</p></td>
+<td class="text-center"><p><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd></p></td>
+<td class="text-center"><p><kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>iz PDF v <code class="docutils literal notranslate"><span class="pre">.tex</span></code></p></td>
+<td class="text-center"><p><kbd>Ctrl</kbd>+klik</p></td>
+<td class="text-center"><p><kbd>Cmd</kbd>+klik</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Shranite vaje na strežnik</p>
+<p>Preden odidete iz predavalnice, spremembe zabeležite in vnose pošljite na GitHub.</p>
+<p>V tem poglavju je več nalog, kot jih boste utegnili rešiti med vajami.
+Priporočamo, da preostanek naredite doma.
+Naloge rešujte po vrsti, saj so pomembnejše na začetku.</p>
+</div>
+</section>
+<section id="naloga-osnovna-struktura-dokumenta">
+<h2>1. naloga: osnovna struktura dokumenta<a class="headerlink" href="#naloga-osnovna-struktura-dokumenta" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>V glavni imenik repozitorija odpakirajte arhiv <a class="reference download internal" download="" href="_downloads/fe61318f38aac481edc84c7794eeeba9/08-prosojnice.zip"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">08-prosojnice.zip</span></code></span></a> v imenik <code class="docutils literal notranslate"><span class="pre">08-prosojnice</span></code>.
+V vseh nalogah boste datoteko <code class="docutils literal notranslate"><span class="pre">prosojnice.tex</span></code> dopolnjevali tako,
+da bo z njo dobljeni PDF čim bolj podoben datoteki <code class="docutils literal notranslate"><span class="pre">prosojnice-resitev.pdf</span></code>.</p></li>
+<li><p>Preberite pregledno datoteko <code class="docutils literal notranslate"><span class="pre">5-prosojnice.tex</span></code> v imeniku <code class="docutils literal notranslate"><span class="pre">latex-pregled</span></code>.
+Poiščite uporabe ukaza <code class="docutils literal notranslate"><span class="pre">documentclass</span></code>, ukaza <code class="docutils literal notranslate"><span class="pre">titlepage</span></code> in okolja <code class="docutils literal notranslate"><span class="pre">frame</span></code>.
+Datoteko prevedite in si oglejte, kako se postopoma prikazuje prosojnica z naslovom <em>Prikažimo vsebino po kosih</em>.</p></li>
+<li><p>V datoteki <code class="docutils literal notranslate"><span class="pre">prosojnice.tex</span></code> pripravite preambulo, naslovno stran in kazalo vsebine.
+Navodila so v komentarjih, ki se začnejo na primer z <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">Naloga</span> <span class="pre">1.3.2</span></code> (za 2. del 3. točke 1. naloge).</p></li>
+<li><p>Prevedite in poglejte, kje v PDF-ju se pojavijo naslovi razdelkov.</p></li>
+</ol>
+</section>
+<section id="naloga-vkljucevanje-datotek-in-postopno-odkrivanje">
+<h2>2. naloga: vključevanje datotek in postopno odkrivanje<a class="headerlink" href="#naloga-vkljucevanje-datotek-in-postopno-odkrivanje" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>V datoteki <code class="docutils literal notranslate"><span class="pre">prosojnice.tex</span></code> pod razdelek <em>Paket <code class="docutils literal notranslate"><span class="pre">beamer</span></code></em>
+vključite datoteko <code class="docutils literal notranslate"><span class="pre">prosojnice/2-paket-beamer.tex</span></code>
+(razdelek <a class="reference internal" href="#predstavitve-vkljucevanje"><span class="std std-ref">Vključevanje datotek</span></a>).</p></li>
+<li><p>Prevedite datoteko <code class="docutils literal notranslate"><span class="pre">prosojnice.tex</span></code> in primerjajte PDF z vsebino datoteke <code class="docutils literal notranslate"><span class="pre">2-paket-beamer.tex</span></code>.
+Kako so v njej napisani naslovi prosojnic?</p></li>
+<li><p>Na prosojnicah v datoteki <code class="docutils literal notranslate"><span class="pre">2-paket-beamer.tex</span></code> pripravite postopno odkrivanje in bloke,
+kot piše v komentarjih (razdelka <a class="reference internal" href="#predstavitve-odkrivanje"><span class="std std-ref">Postopno odkrivanje</span></a>
+in <a class="reference internal" href="#predstavitve-bloki"><span class="std std-ref">Bloki</span></a>).
+Prevajajte datoteko <code class="docutils literal notranslate"><span class="pre">prosojnice.tex</span></code>, čeprav spreminjate datoteko <code class="docutils literal notranslate"><span class="pre">2-paket-beamer.tex</span></code>.</p></li>
+</ol>
+</section>
+<section id="naloga-postopno-odkrivanje-enacb">
+<h2>3. naloga: postopno odkrivanje enačb<a class="headerlink" href="#naloga-postopno-odkrivanje-enacb" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>V datoteki <code class="docutils literal notranslate"><span class="pre">prosojnice.tex</span></code> pod razdelek <em>Paketa <code class="docutils literal notranslate"><span class="pre">amsmath</span></code> in <code class="docutils literal notranslate"><span class="pre">amsfonts</span></code></em>
+vključite datoteko <code class="docutils literal notranslate"><span class="pre">prosojnice/3-odkrivanje-v-okolju-align.tex</span></code>.
+Paketa <code class="docutils literal notranslate"><span class="pre">amsmath</span></code> vam ni treba vključiti, ker ga vključi že paket <code class="docutils literal notranslate"><span class="pre">predavanja</span></code>.</p></li>
+<li><p>Na prosojnici v tej datoteki pripravite postopno odkrivanje enačbe,
+kot piše v komentarju (razdelek <a class="reference internal" href="#predstavitve-odkrivanje"><span class="std std-ref">Postopno odkrivanje</span></a>).</p></li>
+</ol>
+</section>
+<section id="naloga-stolpci-in-slike">
+<h2>4. naloga: stolpci in slike<a class="headerlink" href="#naloga-stolpci-in-slike" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>V datoteki <code class="docutils literal notranslate"><span class="pre">prosojnice.tex</span></code> pod razdelek <em>Stolpci in slike</em>
+vključite datoteko <code class="docutils literal notranslate"><span class="pre">prosojnice/4-stolpci-slike.tex</span></code>.</p></li>
+<li><p>V datoteki <code class="docutils literal notranslate"><span class="pre">4-stolpci-slike.tex</span></code> popravite pot do slike <code class="docutils literal notranslate"><span class="pre">fig-1.png</span></code>, da se bo slika vključila
+(razdelek <a class="reference internal" href="#predstavitve-vkljucevanje"><span class="std std-ref">Vključevanje datotek</span></a>).
+Ostalih slik še ne odkomentirajte.</p></li>
+<li><p>Vsebino prosojnice postavite v dva stolpca:
+v levega besedilo, v desnega sliko (razdelek <a class="reference internal" href="#predstavitve-stolpci"><span class="std std-ref">Stolpci</span></a>).
+Levi stolpec naj ima širino <code class="docutils literal notranslate"><span class="pre">0.55\textwidth</span></code>, desni pa <code class="docutils literal notranslate"><span class="pre">0.45\textwidth</span></code>.
+Sliko v desnem stolpcu poravnajte na sredino.</p></li>
+<li><p>Odkomentirajte ostale slike, popravite poti do njih in nastavite odkrivanje besedila in slik tako, kot je v rešitvi.
+Vsakemu elementu seznama in vsaki sliki dodajte ustrezen predpis
+(razdelek <a class="reference internal" href="#predstavitve-odkrivanje"><span class="std std-ref">Postopno odkrivanje</span></a>).</p></li>
+</ol>
+</section>
+<section id="naloga-postopno-odkrivanje-tabel">
+<h2>5. naloga: postopno odkrivanje tabel<a class="headerlink" href="#naloga-postopno-odkrivanje-tabel" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>V preambuli datoteke <code class="docutils literal notranslate"><span class="pre">prosojnice.tex</span></code> vključite paket <code class="docutils literal notranslate"><span class="pre">array</span></code>.
+Ta omogoča določila stolpcev, ki jih potrebujete za odkrivanje tabele po stolpcih.</p></li>
+<li><p>V datoteki <code class="docutils literal notranslate"><span class="pre">prosojnice.tex</span></code> pod razdelek <em>Paket <code class="docutils literal notranslate"><span class="pre">beamer</span></code> in tabele</em>
+vključite datoteko <code class="docutils literal notranslate"><span class="pre">prosojnice/5-beamer-tabele.tex</span></code>.</p></li>
+<li><p>Na prvi prosojnici v datoteki <code class="docutils literal notranslate"><span class="pre">5-beamer-tabele.tex</span></code> dodajte ukaze <code class="docutils literal notranslate"><span class="pre">\pause</span></code>,
+da se bo tabela odkrivala po vrsticah kot v rešitvi.</p></li>
+<li><p>Na drugi prosojnici dopolnite odkrivanje po stolpcih, da bo tako kot v rešitvi.
+Stolpce tabele določa argument okolja <code class="docutils literal notranslate"><span class="pre">tabular</span></code>, na primer <code class="docutils literal notranslate"><span class="pre">{c|cccc}</span></code>:
+vsaka črka je en stolpec.
+Paket <code class="docutils literal notranslate"><span class="pre">array</span></code> doda dve določili, ki ju napišete ob črko stolpca:
+<code class="docutils literal notranslate"><span class="pre">&gt;{⟨koda⟩}</span></code> pred črko vstavi kodo na začetek vsake celice tega stolpca,
+<code class="docutils literal notranslate"><span class="pre">&lt;{⟨koda⟩}</span></code> za črko pa na konec vsake celice.
+Tabela z argumentom <code class="docutils literal notranslate"><span class="pre">{c|&gt;{\onslide&lt;2-&gt;}c&lt;{\onslide}ccc}</span></code> tako pokaže stolpec A
+šele na drugi podprosojnici, ostale stolpce pa ves čas.
+Ukaz <code class="docutils literal notranslate"><span class="pre">\onslide&lt;2-&gt;</span></code> velja za vse, kar mu sledi, tudi za naslednje celice,
+zato ga na koncu stolpca prekliče <code class="docutils literal notranslate"><span class="pre">\onslide</span></code> brez predpisa.
+Podoben primer je v razdelku <em>Uncovering a Table Columnwise</em>
+<a class="reference external" href="https://mirrors.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf">dokumentacije paketa <code class="docutils literal notranslate"><span class="pre">beamer</span></code></a>.</p></li>
+</ol>
+</section>
+<section id="naloga-risanje-s-paketom-tikz">
+<h2>6. naloga: risanje s paketom TikZ<a class="headerlink" href="#naloga-risanje-s-paketom-tikz" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>V preambuli datoteke <code class="docutils literal notranslate"><span class="pre">prosojnice.tex</span></code> vključite paket <code class="docutils literal notranslate"><span class="pre">tikz</span></code> in knjižnico <code class="docutils literal notranslate"><span class="pre">intersections</span></code>
+(razdelek <a class="reference internal" href="#predstavitve-tikz"><span class="std std-ref">Risanje s paketom TikZ</span></a>).</p></li>
+<li><p>V datoteki <code class="docutils literal notranslate"><span class="pre">prosojnice.tex</span></code> pod razdelek <em>Risanje s paketom TikZ</em>
+vključite datoteko <code class="docutils literal notranslate"><span class="pre">prosojnice/6-risanje-tikz.tex</span></code>.
+V njej je koda s 7. predavanja, ki nariše konstrukcijo pravokotnice.</p></li>
+<li><p>Z ukazi <code class="docutils literal notranslate"><span class="pre">\onslide</span></code> poskrbite, da se bo konstrukcija odkrivala po korakih kot v rešitvi.
+Vrstic kode ne prestavljajte.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="07-slike.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">nazaj</p>
+        <p class="prev-next-title">Slike</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="09-preglednice.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">naprej</p>
+        <p class="prev-next-title">Preglednice</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Vsebina
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paket-beamer">Paket <code class="docutils literal notranslate"><span class="pre">beamer</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postopno-odkrivanje">Postopno odkrivanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloki">Bloki</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stolpci">Stolpci</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vkljucevanje-datotek">Vključevanje datotek</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risanje-s-paketom-tikz">Risanje s paketom TikZ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pregledne-datoteke-in-vscode">Pregledne datoteke in VSCode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-osnovna-struktura-dokumenta">1. naloga: osnovna struktura dokumenta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-vkljucevanje-datotek-in-postopno-odkrivanje">2. naloga: vključevanje datotek in postopno odkrivanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-postopno-odkrivanje-enacb">3. naloga: postopno odkrivanje enačb</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-stolpci-in-slike">4. naloga: stolpci in slike</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-postopno-odkrivanje-tabel">5. naloga: postopno odkrivanje tabel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-risanje-s-paketom-tikz">6. naloga: risanje s paketom TikZ</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Avtor Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

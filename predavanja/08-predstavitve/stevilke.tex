@@ -1,0 +1,14 @@
+% Predavanje je razdeljeno na tri dokumente, ker se tema in razmerje sredi
+% dokumenta ne dasta zamenjati: berlin-4-3.tex, berlin-16-9.tex in
+% prosojnice.tex, ki prva dva vključi. Številke prosojnic se nadaljujejo iz
+% dokumenta v dokument: ob koncu dokument zapiše zadnjo številko v datoteko
+% ⟨ime⟩.stevec, naslednji pa jo prebere z \input{⟨ime⟩.stevec}. Dokumente zato
+% prevajajte po vrsti.
+\makeatletter
+\AtEndDocument{%
+  \newwrite\stevec
+  \immediate\openout\stevec=\jobname.stevec
+  \immediate\write\stevec{\string\setcounter{framenumber}{\the\c@framenumber}}%
+  \immediate\closeout\stevec
+}
+\makeatother
