@@ -74,12 +74,12 @@ Preverite, da je bila namestitev uspešna tako, da v ukazno vrstico napišete `x
 (namestitev:latex)=
 ## LaTeX
 
-Za začetek v VSCode namestite paket LaTeX Workshop:
+Za začetek v VSCode namestite razširitev LaTeX Workshop:
 1. v meniju View:Extensions (razdelek se bo odprl na levi) 
 2. v iskalno polje zgoraj levo vpišete "LaTeX Workshop",
-3. izberete podaljšek [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) in ga namestite, ki olajša delo z LaTeX-om v urejevalniku Visual Studio Code (v naslednjih korakih boste namestili še verzijo LaTeX-a za vaš operacijski sistem). 
+3. izberete razširitev [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), ki olajša delo z LaTeX-om v urejevalniku Visual Studio Code, in jo namestite (v naslednjih korakih boste namestili še verzijo LaTeX-a za vaš operacijski sistem). 
 
-Če ne uporabljate urejevalnika VSCode, poglejte, če za vaš urejevalnik obstaja kak podaljšek za LaTeX.
+Če ne uporabljate urejevalnika VSCode, poglejte, ali za vaš urejevalnik obstaja kaka razširitev za LaTeX.
 
 ### Navodila za operacijski sistem Windows
 
