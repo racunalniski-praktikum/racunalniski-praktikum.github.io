@@ -99,7 +99,7 @@ ukaz `pwd` (kratko za angl. _print working directory_) pa argumentov ne potrebuj
 :::
 
 Dele ukaza ločijo presledki, zato ime s presledki postavimo med narekovaje:
-brez njih bi `cd Vhodna dvorana` pomenilo premik v imenik `Vhodna` z odvečnim argumentom `dvorana`.
+brez njih bi imel ukaz `cd Vhodna dvorana` dva argumenta, `Vhodna` in `dvorana`, in bi javil napako.
 Ukazi imajo lahko še druge dele, a te bomo spoznavali sproti, ko jih bomo potrebovali.
 
 Ukazno vrstico boste uporabljali kar v urejevalniku VSCode.
