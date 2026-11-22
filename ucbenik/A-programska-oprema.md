@@ -24,7 +24,7 @@ Pri namestitvi bodite pozorni na možnosti, še posebej na to, da imate obkljuka
 
 * Ne uporabljajte namestitve z ZIP datoteko, ker se stvari ne bodo pravilno nastavile.
 * Prenesli ste `.exe` datoteko, ki jo poženete kot administrator za vse uporabnike.
-* Ena od nastavitev pri namestivi sprašuje, ali naj se VSCode doda v `PATH`. Tu **morate odgovoriti pritrdilno**. ([Kaj je `PATH`?](https://en.wikipedia.org/wiki/PATH_(variable)))
+* Ena od nastavitev pri namestitvi sprašuje, ali naj se VSCode doda v `PATH`. Tu **morate odgovoriti pritrdilno**. ([Kaj je `PATH`?](https://en.wikipedia.org/wiki/PATH_(variable)))
 * Priporočamo, da naredite asociacijo med VSCode in tipi datotek, ki jih zna urejati (angl. _file associations_).
 
 ### Dodatna navodila za operacijski sistem macOS
@@ -123,4 +123,4 @@ Univerza v Ljubljani vsem študentom omogoča dostop do programske opreme in sto
 Na domačem računalniku imejte nameščeno aplikacijo [Zoom](https://zoom.us). Upamo, da je ne boste potrebovali. Aplikacijo lahko namestite tudi na svoj telefon.
 
 Če na Zoomu še nimate uporabniškega imena, ga ustvarite. Nastavite svoje pravo ime in
-priimek, ker se tako spodobi. Tudi profesorji ne predavanjo pod vzdevkom `FunnyBunny42`.
+priimek, ker se tako spodobi. Tudi profesorji ne predavajo pod vzdevkom `FunnyBunny42`.
