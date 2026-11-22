@@ -106,7 +106,7 @@ Najprej preverite, če sploh morate kaj popraviti. Odprite VSCode in naredite no
 V datoteko napišite zgornje znake. Če jih lahko napišete, je vse ok, sicer pa berite naprej.
 
 Težava je v tem, da ima VSCode definirane bližnjice (angl. _keyboard shortcut_)
-<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>, <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd> in <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> ter še nekatere druge, hkrati pa <kbd>AltGr</kbd> obravnava kot <kbd>Ctrl</kbd>+<kbd>Alt</kbd>. Ko torej pritisnemo <kbd>AltGr</kbd>+<kbd>V</kbd>, to za VSCode pomeni <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> in izvede se ukaz, ki je prirejen tej kombinaciji tipk (ta ukaz je "Build LaTeX project"), namesto da bi vstavil želeni znak `{`.
+<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>, <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd> in <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> ter še nekatere druge, hkrati pa <kbd>AltGr</kbd> obravnava kot <kbd>Ctrl</kbd>+<kbd>Alt</kbd>. Ko torej pritisnemo <kbd>AltGr</kbd>+<kbd>B</kbd>, to za VSCode pomeni <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> in izvede se ukaz, ki je prirejen tej kombinaciji tipk (ta ukaz je "Build LaTeX project"), namesto da bi vstavil želeni znak `{`.
 
 Težavo odpravimo tako, da v spisku bližnjic odstranimo povezavo <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> (in ostale neželene bližnjice), takole:
 
