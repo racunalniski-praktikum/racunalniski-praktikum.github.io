@@ -251,7 +251,7 @@ Kadar je treba isti popravek narediti na več mestih, sta na voljo dva načina.
 
 * **Več kurzorjev.**
   Označite niz, ki se ponavlja, in v paleti ukazov izberite _Select All Occurrences of Find Match_.
-  Ta naredi kurzor za vsako pojavitvijo niza, nato pa vse vrstice uredite hkrati:
+  Ta izbere vse pojavitve niza in na koncu vsake postavi kurzor, nato pa jih uredite hkrati:
   kar natipkate, se zapiše pri vseh kurzorjih.
   Bližnjice za premikanje kurzorjev poiščite v [plonkcu](bliznjice:vscode).
 * **Iskanje in zamenjava z regularnimi izrazi.**
