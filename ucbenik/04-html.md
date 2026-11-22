@@ -113,7 +113,7 @@ Vrednost atributa `id` se v dokumentu ne sme ponoviti.
 Znački `em` (angl. _emphasis_) in `strong` povesta, da je besedilo poudarjeno, ne pa, kako je videti.
 Z `em` označimo besedo, ki bi jo pri branju na glas poudarili, s `strong` pa pomembno besedilo, na primer opozorilo ali ključni pojem.
 Brskalnik prvo običajno prikaže ležeče, drugo pa krepko.
-Znački `b` (angl. _bold_) in `i` (angl. _italic_), ki povesta samo, kako naj bo besedilo videti, se ne uporabljata več.
+Značk `b` (angl. _bold_) in `i` (angl. _italic_), ki povesta samo, kako naj bo besedilo videti, za poudarek ne uporabljamo.
 Dobra praksa loči pomen, ki ga povedo značke HTML, od videza, ki ga določi CSS.
 
 ### Matematika
