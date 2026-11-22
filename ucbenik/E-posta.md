@@ -60,7 +60,8 @@ Večina profesorjev in asistentov ne zna več tekoče govoriti pogovornega jezik
 Poskrbite, da bo iz vašega sporočila jasno, kaj želite. Tudi če se vam zdi, da je iz opisa situacije to razvidno, je ponavadi dobro zaključiti npr. s kakim od spodnjih stavkov:
 
 - "Bi se lahko ta teden oglasil/a pri vas na govorilnih urah, da mi pomagate?"
-- ...
+- "Mi lahko pojasnite, zakaj sem pri 2. domači nalogi izgubil/a točke?"
+- "Ali lahko ta teden izjemoma pridem na vaje v drugo skupino?"
 
 
 ## Razno
