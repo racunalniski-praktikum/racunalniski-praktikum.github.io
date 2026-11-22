@@ -105,7 +105,7 @@ zato jih označimo z ukazom `\text`. Ta ukaz potrebuje paket `amsmath`.
 ## Struktura dokumenta
 
 LaTeX dokument shranimo v datoteko s končnico `.tex`. Dokument je lahko shranjen
-tudi v večjih datotekah, ki jih z ukazom `\input{datoteka.tex}` vključimo v
+tudi v več datotekah, ki jih z ukazom `\input{datoteka.tex}` vključimo v
 glavno datoteko.
 Struktura glavne LaTeX datoteke je videti takole:
 
