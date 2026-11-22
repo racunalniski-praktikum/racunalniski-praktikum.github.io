@@ -441,9 +441,11 @@ lectures 10, 11 and 12 below predate this and are not yet rewritten to match.
 - **The following weeks raise the complexity, mainly by combining the basics.**
 - **`Table` is used**, where last year's tutorials did not use it. The simplest use
   is tabulating the values of a function.
-- **Rewrite rules enter in week 1 as the way to plug a value in**: `polinom /. x -> 3`,
-  never `x = 3`. The exposition shows the derivative that fails after `x = 3` and
-  gives `Clear` as the repair. `=` is then left with one job, naming a thing.
+- **Rewrite rules enter in week 1 as the way to plug a value in**: checking whether
+  `x = 2` solves an equation with `enacba /. x -> 2`, never by assigning `x = 2`. The
+  exposition shows the check that silently goes wrong after `x = 2` and gives
+  `Clear` as the repair. `=` is then left with one job, naming a thing, and `==`
+  compares the two sides. The example prepares `Solve`, which returns rules.
 - The exercises may change a lot.
 
 **Open.**
