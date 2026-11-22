@@ -153,23 +153,21 @@ z ukazi za nov razdelek, podrazdelek, z okoljem za zapis izreka itd.
 Taka vrsta oblikovanja je dosti bolj prijazna uporabniku, sistematična
 in prilagodljiva.
 
-Za primer, v LaTeXu vsebinsko oblikujemo besedilo izreka z okoljem `theorem`.
-Videz izreka bi lahko oblikovali neposredno, kot spodaj, vendar
-bi bilo potem težje skrbeti za to, da so vsi izreki videti enako,
+Za primer, v LaTeXu naslov razdelka označimo z ukazom `section`.
+Videz naslova bi lahko oblikovali neposredno, kot spodaj, vendar
+bi bilo potem težje skrbeti za to, da so vsi naslovi videti enako,
 da so vsi pravilno oštevilčeni ipd.
 
 ```tex
 % vsebinsko oblikovanje
-\begin{theorem}
-  ⟨besedilo izreka⟩
-\end{theorem}
+\section{Turingovi stroji}
 
 % neposredno oblikovanje
-\textbf{Izrek 1.1} \textit{⟨besedilo izreka⟩}
+\textbf{\Large 1 Turingovi stroji}
 ```
 
-Še nekaj primerov vsebinskega oblikovanja so posebni ukazi za vsebino, kot so
-`section`, `subsection` in `footnote`.
+Še nekaj primerov vsebinskega oblikovanja so posebni ukazi za vsebino, kot sta
+`subsection` in `footnote`.
 Isto velja za poudarke: nov pojem v besedilu označimo z ukazom `\emph`, ki pove, da je beseda poudarjena,
 in ne z ukazom `\textit`, ki pove samo, da je ležeča.
 
