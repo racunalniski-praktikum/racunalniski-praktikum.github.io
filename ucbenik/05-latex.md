@@ -155,7 +155,7 @@ in prilagodljiva.
 
 Za primer, v LaTeXu vsebinsko oblikujemo besedilo izreka z okoljem `theorem`.
 Videz izreka bi lahko oblikovali neposredno, kot spodaj, vendar
-bi bilo potem težje skrbeti za to, da vsi izreki izgledajo enako,
+bi bilo potem težje skrbeti za to, da so vsi izreki videti enako,
 da so vsi pravilno oštevilčeni ipd.
 
 ```tex

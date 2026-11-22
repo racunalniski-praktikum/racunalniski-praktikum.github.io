@@ -37,7 +37,7 @@ Desničarji lahko na primer z levo roko uporabijo bližnjico <kbd>Alt</kbd>+<kbd
 
 ## Navadno besedilo in označevalni jeziki
 
-Navadno besedilo (angl. _plain text_) je besedilo, ki vsebuje samo znake (črke, številke, ločila), brez dodatnih informacij o izgledu.
+Navadno besedilo (angl. _plain text_) je besedilo, ki vsebuje samo znake (črke, številke, ločila), brez dodatnih informacij o videzu.
 V navadnem besedilu urejamo samo znake, ne pa tudi vrste pisave, barve ali velikosti in ne moremo uporabljati krepkega ali poševnega tiska, tabel in slik.
 
 `````{admonition} Primer oblikovanega besedila
@@ -98,7 +98,7 @@ Seveda pa lahko uporabljate kak drug urejevalnik, pod pogojem, da ga res dobro p
 
 Urejevalniki, kot je VSCode, so namenjeni predvsem razvijalcem programske opreme in omogočajo urejanje izvorne kode programov.
 V primerjavi s programi, kot je Microsoft Word, v VSCode ne določate, kako naj bo naslov videti, ampak označite, kateri del besedila je naslov.
-Kmalu boste opazili, da urejevalnik sam od sebe spreminja izgled določenih delov besedila.
+Kmalu boste opazili, da urejevalnik sam od sebe spreminja videz določenih delov besedila.
 Temu rečemo poudarjanje sintakse (angl. _syntax highlighting_).
 Pomaga nam, da hitreje razberemo pomen izvorne kode (ali pa najdemo napake v njej).
 Barve, ki jih pri tem vidite, niso shranjene v datoteki: urejevalnik jih sproti določi sam, zato se spremenijo, ko zamenjate temo.
@@ -156,7 +156,7 @@ Ob rednih vajah boste tekoče tipkali do konca semestra.
 1. Poženite VSCode.
 2. Preletite razdelek o [uporabniškem vmesniku](https://code.visualstudio.com/docs/getstarted/userinterface).
    Bodite pozorni na osnovno razporeditev in na svojem računalniku poiščite glavne dele vmesnika, opisane v razdelku [Urejevalnik VSCode](urejevalnik:vscode).
-3. V dokumentaciji poiščite, kako spremenite temo (izgled, angl. _Color Theme_) urejevalnika in jo spremenite na tako, ki vam je všeč.
+3. V dokumentaciji poiščite, kako spremenite temo (videz, angl. _Color Theme_) urejevalnika in jo spremenite na tako, ki vam je všeč.
 4. Zaprite urejevalnik.
 
 ## 3. naloga: pripravite datoteko README
