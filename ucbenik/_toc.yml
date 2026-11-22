@@ -20,9 +20,9 @@ parts:
 - caption: Preglednice
   chapters:
   - file: 09-preglednice.md
-# - caption: Simbolno računanje
-#   chapters:
-#   - file: 10-osnove-mathematice.md
+- caption: Simbolno računanje
+  chapters:
+  - file: 10-osnove-mathematice.md
 #   - file: 12-risanje-in-enacbe.md
 #   - file: 13-animiranje-vektorji-matrike.md
 - caption: Plonkci in ostali dodatki
