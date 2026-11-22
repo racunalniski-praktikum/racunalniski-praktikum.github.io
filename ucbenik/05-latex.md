@@ -97,9 +97,9 @@ zato napako javi daleč od mesta, kjer je nastala.
 :class: tip
 V matematičnem načinu lahko uporabljamo ukaze za matematične izraze,
 kot so `frac` za ulomke, `int` za integrale, `cdot` za piko pri množenju, ukaze za matrike itd.
-Ti ukazi delajo **samo v matematičnem načinu**, izven njih pa sprožijo napako.
-Velja tudi obratno: običajne besede v matematičnem načinu označimo z ukazom `\text`,
-da se pravilno prikažejo. Ta ukaz potrebuje paket `amsmath`.
+Ti ukazi delajo **samo v matematičnem načinu**, zunaj njega pa sprožijo napako.
+Velja tudi obratno: običajne besede se v matematičnem načinu ne izpišejo pravilno,
+zato jih označimo z ukazom `\text`. Ta ukaz potrebuje paket `amsmath`.
 `````
 
 ## Struktura dokumenta
