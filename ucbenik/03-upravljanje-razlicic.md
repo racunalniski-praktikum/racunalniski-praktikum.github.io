@@ -111,7 +111,7 @@ Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kb
    cd racunalniski-praktikum
    git config user.email
    ```
-   Ukaz `git config user.email` izpiše e-naslov, s katerim Git podpiše vaše vnose sprememb; to mora biti naslov, ki ga uporabljate za GitHub.
+   Ukaz `git config user.email` izpiše e-naslov, ki ga Git zapiše v vaše vnose sprememb; to mora biti naslov, ki ga uporabljate za GitHub.
    Če ne izpiše ničesar, [uredite nastavitve uporabnika](git:nastavitve-uporabnika), preden nadaljujete.
    To nastavitev potrebujete, da bo GitHub povezal vaše vnose sprememb z vašim uporabniškim računom.
 1. Spremembo zabeležite in jo pošljite na GitHub (glejte [osnovne ukaze](git:osnovni-ukazi)).
