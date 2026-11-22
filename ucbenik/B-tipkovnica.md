@@ -33,7 +33,7 @@ Pregledi bližnjic na tipkovnici v dokumentaciji:
 | Preklapljanje med okni                   | <kbd>Alt</kbd>+<kbd>Tab</kbd>                 | <kbd>Cmd</kbd>+<kbd>Tab</kbd>                |
 | Preklapljanje med okni istega programa   | -                                             | <kbd>Cmd</kbd>+<kbd>`</kbd>                  |
 | Upravljanje z okni                       | <kbd>Win</kbd>+<kbd>↑↓←→</kbd>                | - |
-| Zapiranje programa                       | <kbd>Alt</kbd>+<kbd>F4</kbd>                  | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd> |
+| Zapiranje programa                       | <kbd>Alt</kbd>+<kbd>F4</kbd>                  | <kbd>Cmd</kbd>+<kbd>Q</kbd>                  |
 
 <sup>1</sup> Pogosto pride prav tudi ubežnica <kbd>Esc</kbd>.
 
