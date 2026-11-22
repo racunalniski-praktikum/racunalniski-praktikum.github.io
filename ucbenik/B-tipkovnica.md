@@ -126,7 +126,7 @@ Do njih lahko dostopate z bližnjico <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd
 Če med premikanjem držimo tipko <kbd>Shift</kbd>, označimo besedilo med začetkom in koncem premikanja.
 Primeri: 
 - z <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd> (na macOS z <kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd>) označujemo po besedah,
-- z <kbd>Ctrl</kbd>+<kbd>Home</kbd> (na macOS <kbd>Cmd</kbd>+<kbd>↑</kbd>) označimo besedilo od kurzorja do začetka dokumenta.
+- z <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Home</kbd> (na macOS <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>) označimo besedilo od kurzorja do začetka dokumenta.
 
 Tipka <kbd>Esc</kbd> lahko služi za:
 - izhod iz označevanja,
