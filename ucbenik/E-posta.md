@@ -27,7 +27,7 @@ Verjetno bi najprej odprli tisto, ki je drugačno.
 ```
 Pozdravljeni/Spoštovani,
 
-Sem študent/ka na programu ⟨program⟩ pri predmetu ⟨predmet⟩.
+sem študent/ka programa ⟨program⟩ in obiskujem predmet ⟨predmet⟩.
 
 ⟨vsebina-sporocila⟩
 
@@ -41,7 +41,7 @@ Primer izpolnjene predloge:
 ```
 Spoštovani,
 
-Sem študentka na programu Matematika pri predmetu Računalniški praktikum.
+sem študentka programa Matematika in obiskujem predmet Računalniški praktikum.
 
 Pri včerajšnji domači nalogi se mi v predogledu datoteke README.md ne prikaže slika, čeprav je slika v istem imeniku kot datoteka. Preverila sem pot do slike, a napake nisem našla. Bi se lahko ta teden oglasila pri vas na govorilnih urah, da mi pomagate?
 
