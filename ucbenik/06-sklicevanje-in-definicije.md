@@ -32,7 +32,7 @@ Poleg tega vam morda pridejo prav tudi naslednji viri:
 Kjer v besedilu naletite na niz `!!`, ga sproti nadomestite z matematičnim izrazom, ki ga preberete iz `magic-resitev.pdf`:
 vrstičnega zapišite med `\(` in `\)`, prikaznega med `\[` in `\]`;
 kjer `!!` že stoji v matematičnem načinu, vas na to opozori komentar.
-Ločilo, s katerim se stavek konča, sodi v izraz, kot v [5. poglavju](05-latex.md).
+Ločilo, ki sledi prikaznemu izrazu, zapišite znotraj `\[` in `\]`, ločilo za vrstičnim izrazom pa za `\)`, kot v [5. poglavju](05-latex.md).
 
 Preden odidete iz predavalnice, spremembe zabeležite in vnose pošljite na GitHub.
 ## 1. naloga: uvodne naloge

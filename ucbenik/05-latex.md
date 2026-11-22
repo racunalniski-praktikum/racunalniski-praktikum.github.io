@@ -84,7 +84,7 @@ $$a^2 + b^2 = c^2.$$
 Hipotenuza je torej $c = \sqrt{a^2 + b^2}$.
 
 Izraz v prikaznem načinu je še vedno del stavka: pred `\[` in za `\]` ni prazne vrstice,
-ločilo na koncu stavka pa stoji znotraj izraza, kot pika v zgornjem primeru.
+ločilo, ki sledi izrazu, pa zapišemo znotraj njega, kot piko v zgornjem primeru.
 V vrstico sodijo kratki izrazi, ki tečejo z besedilom, na primer oznake kot $n$ ali $x_i$;
 v svojo vrstico pa pomembne enačbe in vse, kar je višje od vrstice, na primer ulomki, vsote in integrali.
 
