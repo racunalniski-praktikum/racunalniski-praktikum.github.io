@@ -95,7 +95,7 @@ V telesu dokumenta najpogosteje uporabljamo naslednje značke:
 - naslove `h1` do `h6`: številka pove raven naslova, ne njegove velikosti.
   Naslov strani je `h1`, naslovi razdelkov so `h2`, naslovi podrazdelkov `h3` in tako naprej.
 - odstavke `p` (angl. _paragraph_),
-- sezname: urejeni seznam `ol` (angl. _ordered list_) in neurejeni seznam `ul` (angl. _unordered list_), v katerih je vsak element v svoji znački `li` (angl. _list item_),
+- sezname: oštevilčeni seznam `ol` (angl. _ordered list_) in neoštevilčeni seznam `ul` (angl. _unordered list_), v katerih je vsak element v svoji znački `li` (angl. _list item_),
 - citate `blockquote`,
 - povezave `a` z atributom `href`,
 - tabele `table`, v katerih so vrstice `tr` (angl. _table row_), v vrsticah pa celice `td` (angl. _table data_) ali celice glave tabele `th` (angl. _table header_),
@@ -276,13 +276,13 @@ poiščite zgled na spletu, denimo na strani [W3Schools](https://www.w3schools.c
     "Contents" za uvodnimi odstavki ter "Details", "Pot and bowl", "Criticism" in "Competing standards".
     Zadnji štirje so v besedilu dvakrat: naslov razdelka je tisti, pred katerim sta dve prazni vrstici, ne vrstica v seznamu pod "Contents".
     _Namig:_ z <kbd>Alt</kbd> (🍎 <kbd>Option</kbd>) in levim klikom dodate kurzor, ukaz pa se izvede pri vseh kurzorjih hkrati.
- 5. Pod naslovom "Contents" so našteti razdelki. Iz njih naredite urejeni seznam.
+ 5. Pod naslovom "Contents" so našteti razdelki. Iz njih naredite oštevilčeni seznam.
     Postavite kurzor na začetek vsake vrstice (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>↑↓</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>↑↓</kbd>),
     pridržite tipko <kbd>Shift</kbd> in stisnite <kbd>End</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>→</kbd>), da označite vsako vrstico s svojim kurzorjem.
     Uporabite ukaz _Wrap with Abbreviation_ z značko `li`: naredi toliko značk, kot imate kurzorjev.
     Nato vse vrstice označite z enim kurzorjem in jih obdajte z značko `ol`.
  6. Pod naslovom "Details" stavek "To maintain consistent results, ..." napoveduje seznam priporočil:
-    vsi odstavki za njim naj bodo elementi neurejenega seznama (`ul`).
+    vsi odstavki za njim naj bodo elementi neoštevilčenega seznama (`ul`).
     Kurzorje postavite s klikanjem, ker bi jih bližnjica iz prejšnjega koraka postavila tudi v prazne vrstice med odstavki.
     Dva elementa (tista s tabelama) sta zapisana v več vrsticah: vsakega posebej označite v celoti in ga šele nato obdajte z značko.
  7. Citat (odstavek pod besedilom "The abstract states the following:") označite z značko `blockquote`.
