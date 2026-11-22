@@ -199,7 +199,8 @@ Orodja ne kažejo izvorne kode, ampak dokument, kot ga ima brskalnik v pomnilnik
 ## 2. naloga: ogrodje dokumenta
 
 1. V VSCode odprite imenik `racunalniski-praktikum` v imeniku `rp` (_File_ > _Open Folder_).
-   Če repozitorija na tem računalniku še nimate, ga pripravite po navodilih v 1. nalogi 3. poglavja ali prosite za pomoč.
+   Če repozitorija na tem računalniku še nimate, ga klonirajte, po potrebi pa prej še [nastavite Git](git:nastavitve).
+   Če niste prepričani, kaj od tega potrebujete, prosite za pomoč.
    V njem naredite imenik `04-html`, v tem pa datoteko `stran.html` in jo odprite:
    v datotečnem pogledu (angl. _Explorer_) z desnim klikom na imenik izberite _New Folder..._ oziroma _New File..._.
 

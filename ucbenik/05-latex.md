@@ -269,7 +269,8 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
 [LaTeX](https://www.latex-project.org)-om.
 
 1. V VSCode odprite imenik `racunalniski-praktikum` v imeniku `rp` (_File_ > _Open Folder_).
-   Če repozitorija na tem računalniku še nimate, ga najprej [klonirajte](git:init).
+   Če repozitorija na tem računalniku še nimate, ga klonirajte, po potrebi pa prej še [nastavite Git](git:nastavitve).
+   Če niste prepričani, kaj od tega potrebujete, prosite za pomoč.
    V njem naredite nov imenik `05-latex`, v tem imeniku še imenik `test`,
    v njem pa novo datoteko `latex-test.tex`, ki jo odprite.
 2. Preverite, da spodaj desno v statusni vrstici piše LaTeX;
