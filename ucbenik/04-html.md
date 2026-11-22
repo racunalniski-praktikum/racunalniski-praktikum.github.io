@@ -258,7 +258,7 @@ več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
 Če si ne predstavljate, kako se uporablja kakšna značka, zlasti pri seznamih in tabelah,
 poiščite zgled na spletu, denimo na strani [W3Schools](https://www.w3schools.com/html/).
 
- 1. Datoteko `stran.html` odprite še v brskalniku: v pogledu datotek jo kliknite z desno tipko,
+ 1. Datoteko `stran.html` odprite še v brskalniku: v datotečnem pogledu jo kliknite z desno tipko,
     izberite _Reveal in File Explorer_ (🍎 _Reveal in Finder_) in jo iz upravitelja datotek povlecite v okno brskalnika.
  2. Prenesite datoteko [`vsebina.txt`](04-html/vsebina.txt) (ni je treba shraniti v repozitorij), jo odprite v VSCode in njeno vsebino prilepite v značko `body`.
     Prilepljeno besedilo zamaknite glede na `body`, tako da bo vsaka vrstica za dve ravni odmaknjena od roba:
