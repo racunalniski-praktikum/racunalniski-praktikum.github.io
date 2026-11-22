@@ -78,7 +78,7 @@ until the target structure is agreed.
 | 10 | Risanje (TikZ) | A: deleted 2026-11-17; no B counterpart | L7 + L8 | — | [J] merged into unit 9: its exercises on columns and pictures, on tables and on TikZ are exercises 4–6 of chapter 8, rebuilt on the perpendicular construction from lecture 7; its exercises on moving files and on pgfplots are dropped; its math practice (*Matematika, 2. del*) moves out together with that of unit 9. L7 is on pictures in general (including images, formats, RGB and CMYK), with TikZ only as a demo; gains image formats from unit 9 |
 | 11 | Pogoste napake v LaTeXu | B: `08-poprava/` | split across L5–L8 | TBD | [J] no longer one lecture — becomes ten-minute openers (C4) |
 | 12 | Preglednice | A: `ucbenik/09-preglednice{.md,/}` (was `10-razpredelnice`); B: `09-excel/` | L9 | `ucbenik/09-preglednice{.md,/}` | [J] no deck, by design — taught live in Excel (G1); rebuild `rezultati.xlsx` on the five-task exam (G5) |
-| 13 | Mathematica | A: `ucbenik/{11,12,13}-*{.md,/}`; B: `10-mathematica/` | L10 + L11 + L12 (+ L13–14) | TBD | [J] three tool-tour chapters become three argued lectures — a rewrite, not a move (C5); no deck, by design — taught live (G1); rewrite rules are missing everywhere (G6) |
+| 13 | Mathematica | A: `ucbenik/10-osnove-mathematice{.md,/}` (was `11-racunanje-z-mathematico`), `ucbenik/{12,13}-*{.md,/}`; B: `10-mathematica/` | L10 + L11 + L12 (+ L13–14) | TBD | [J] three tool-tour chapters become three argued lectures — a rewrite, not a move (C5); no deck, by design — taught live (G1); rewrite rules are missing everywhere (G6) |
 | 14 | Dodatki / plonkci (A–H) | A: `ucbenik/{A..H}-*.md` | support | TBD | [M] except `H-regex.md` → L2 (C6) and `A-programska-oprema.md`, which needs new entries (G3) |
 | 15 | Slide infrastructure | B: `pomozno/` | all | TBD | [J] blocked on the slides-technology decision |
 | 16 | Book build config | A: `ucbenik/{_config.yml,_toc.yml,_toc-plan.yml,myst.yml,_static/,extensions/}` | — | TBD | [J] blocked on jupyter-book vs mystmd; fix old repo URL; both TOCs still list CSS (C2) |
@@ -421,6 +421,92 @@ real course grades file. Conditional formatting as the closing item.
 G1.
 
 **Theme.** A named table, against cells that are merely next to each other.
+
+### 10 to 12. Mathematica: the restructuring (in progress, 2026-11-17)
+
+The three weeks are being restructured, tutorials and lectures both. The plans for
+lectures 10, 11 and 12 below predate this and are not yet rewritten to match.
+
+**Agreed.**
+
+- **Week 1 holds all the basics**, each in its simplest form:
+  - calculator-type computation, including derivatives and integrals,
+  - variables,
+  - basic function definitions,
+  - basic rewrite rules,
+  - a basic plot of a function,
+  - basic graphics: geometry drawn from primitives, not function plots.
+
+  The list is not closed.
+- **The following weeks raise the complexity, mainly by combining the basics.**
+- **`Table` is used**, where last year's tutorials did not use it. The simplest use
+  is tabulating the values of a function.
+- **Rewrite rules enter in week 1 as the way to plug a value in**: checking whether
+  `x = 2` solves an equation with `enacba /. x -> 2`, never by assigning `x = 2`. The
+  exposition shows the check that silently goes wrong after `x = 2` and gives
+  `Clear` as the repair. `=` is then left with one job, naming a thing, and `==`
+  compares the two sides. The example prepares `Solve`, which returns rules.
+- The exercises may change a lot.
+
+**Open.**
+
+- `Table` in week 1 or week 2. Proposed: the flat form `Table[f[x], {x, 0, 5}]` in
+  week 1, because its iterator is the one in `Sum` and `Plot`; a table of pairs in
+  week 2, because it needs nested lists.
+- Where vectors and matrices go. They are a topic, not a level of complexity.
+- What each of the three lectures covers.
+- The number and name of the chapters for weeks 2 and 3. Week 1 is chapter 10,
+  `ucbenik/10-osnove-mathematice.md` (was `11-racunanje-z-mathematico`).
+
+**The progression.** Complexity rises from week to week. The principle is agreed;
+what weeks 2 and 3 hold is proposed, not agreed.
+
+- **Week 1: one basic at a time.** A task is one or two lines and uses one new
+  thing: compute, name, plug in, define a function, plot, draw. Nothing is combined
+  yet. (Agreed.)
+- **Week 2: two or three basics combined in one task.** A task has several steps,
+  and each step names its result and uses the results before it. (Proposed.)
+  - A plot with marked points: `Plot` with the graphics primitives of week 1, through
+    `Epilog`. Last year `Epilog` was given as a line to copy.
+  - A function and its equations: define, solve, plot. `Solve` is new here; its
+    output is read with the rules of week 1, and the several-parameter form
+    `formula /. {a -> 1, b -> -3, c -> 2}` is the bridge.
+  - `Table` with the basics: a table of values next to the plot, a table of plots, a
+    table of solutions.
+  - Last year's function analysis (define, plot, solve, limit) and area exercises
+    (solve, integrate, fill, `Show`) are already of this kind and can move nearly as
+    they are.
+- **Week 3: a whole task, then a parameter that moves.** The student builds the
+  static picture from the pieces of weeks 1 and 2, then wraps it in `Manipulate`,
+  which is `Table` with a slider. (Proposed.)
+  - Last year's tangent, perpendicular and implicit-curve exercises are of this kind.
+
+**The test for week 1** (proposed): a thing is a week-1 basic if a later week
+combines it with something else. It is what puts graphics primitives in week 1, and
+what takes last year's polynomial exercises out of it.
+
+**Taught last year, not yet placed.**
+
+- Equations: `Solve`, `NSolve`, `FindRoot`, `Reduce` for inequalities, systems,
+  parameters, word problems; rules as the output of `Solve`.
+- `=` against `:=`, shown with `RandomInteger`.
+- Plot options (`ExclusionsStyle`, `Epilog`, `Filling`, `AspectRatio`), `Show`,
+  `ParametricPlot`, `ContourPlot`.
+- One-sided limits, infinite sums, `Simplify`.
+- Polynomials: `Factor` with an extension, `Expand`, `Collect`, `Exponent`.
+- The working habit: one task per cell, `ClearAll` at the top, one option per line.
+- Anonymous functions (`Function`, `|->`, `# &`), for reading the documentation.
+- Vectors: dot and cross product, length, the equation of a plane. Matrices:
+  determinant, eigenvalues, eigenvectors, diagonalisation. Symbolic proofs of
+  identities.
+- From the lectures: `Select` with predicates, set operations, `TableForm`, `Which`,
+  `NIntegrate`, regions and `Area`, `Probability`, `Minimize` and `Maximize`,
+  `DiscretePlot`, the Monte Carlo method.
+
+**Status.** The week-1 exposition is drafted in
+`ucbenik/10-osnove-mathematice.md`. Its examples were run in Mathematica 15.0 on
+2026-11-21. The exercise notebook `mathematica1.nb` is unchanged, so rules,
+functions, `Plot` and `Graphics` have no exercises yet.
 
 ### 10. Mathematica — why do you trust it?
 
