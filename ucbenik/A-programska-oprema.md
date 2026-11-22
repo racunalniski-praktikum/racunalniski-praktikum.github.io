@@ -24,7 +24,7 @@ Pri namestitvi bodite pozorni na možnosti, še posebej na to, da imate obkljuka
 
 * Ne uporabljajte namestitve z ZIP datoteko, ker se stvari ne bodo pravilno nastavile.
 * Prenesli ste `.exe` datoteko, ki jo poženete kot administrator za vse uporabnike.
-* Ena od nastavitev pri namestivi sprašuje, ali naj se VSCode doda v `PATH`. Tu **morate odgovoriti pritrdilno**. ([Kaj je `PATH`?](https://en.wikipedia.org/wiki/PATH_(variable)))
+* Ena od nastavitev pri namestitvi sprašuje, ali naj se VSCode doda v `PATH`. Tu **morate odgovoriti pritrdilno**. ([Kaj je `PATH`?](https://en.wikipedia.org/wiki/PATH_(variable)))
 * Priporočamo, da naredite asociacijo med VSCode in tipi datotek, ki jih zna urejati (angl. _file associations_).
 
 ### Dodatna navodila za operacijski sistem macOS
@@ -74,12 +74,12 @@ Preverite, da je bila namestitev uspešna tako, da v ukazno vrstico napišete `x
 (namestitev:latex)=
 ## LaTeX
 
-Za začetek v VSCode namestite paket LaTeX Workshop:
+Za začetek v VSCode namestite razširitev LaTeX Workshop:
 1. v meniju View:Extensions (razdelek se bo odprl na levi) 
 2. v iskalno polje zgoraj levo vpišete "LaTeX Workshop",
-3. izberete podaljšek [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) in ga namestite, ki olajša delo z LaTeX-om v urejevalniku Visual Studio Code (v naslednjih korakih boste namestili še verzijo LaTeX-a za vaš operacijski sistem). 
+3. izberete razširitev [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), ki olajša delo z LaTeX-om v urejevalniku Visual Studio Code, in jo namestite (v naslednjih korakih boste namestili še verzijo LaTeX-a za vaš operacijski sistem). 
 
-Če ne uporabljate urejevalnika VSCode, poglejte, če za vaš urejevalnik obstaja kak podaljšek za LaTeX.
+Če ne uporabljate urejevalnika VSCode, poglejte, ali za vaš urejevalnik obstaja kaka razširitev za LaTeX.
 
 ### Navodila za operacijski sistem Windows
 
@@ -123,4 +123,4 @@ Univerza v Ljubljani vsem študentom omogoča dostop do programske opreme in sto
 Na domačem računalniku imejte nameščeno aplikacijo [Zoom](https://zoom.us). Upamo, da je ne boste potrebovali. Aplikacijo lahko namestite tudi na svoj telefon.
 
 Če na Zoomu še nimate uporabniškega imena, ga ustvarite. Nastavite svoje pravo ime in
-priimek, ker se tako spodobi. Tudi profesorji ne predavanjo pod vzdevkom `FunnyBunny42`.
+priimek, ker se tako spodobi. Tudi profesorji ne predavajo pod vzdevkom `FunnyBunny42`.

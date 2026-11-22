@@ -100,7 +100,7 @@ Od zdaj naprej se bo z ukazom **Terminal** > **New Terminal** odprl Git Bash.
 (faq:vscode-latex-si)=
 ### LaTeX in slovenska tipkovnica
 
-Ko delamo s slovensko tipkovnico, v urejevalnik VSCode v načinu dela LaTeX včasih ne delujejo znaki `{`, `}`, `@`, ki jih natipkamo z <kbd>AltGr</kbd>+<kbd>B</kbd>, <kbd>AltGr</kbd>+<kbd>N</kbd> in <kbd>AltGr</kbd>+<kbd>V</kbd>.
+Ko delamo s slovensko tipkovnico, v urejevalniku VSCode v načinu dela LaTeX včasih ne delujejo znaki `{`, `}`, `@`, ki jih natipkamo z <kbd>AltGr</kbd>+<kbd>B</kbd>, <kbd>AltGr</kbd>+<kbd>N</kbd> in <kbd>AltGr</kbd>+<kbd>V</kbd>.
 
 Najprej preverite, če sploh morate kaj popraviti. Odprite VSCode in naredite novo datoteko, ki jo poimenujte npr. `test.tex` (važno je, da ima končnico `.tex`).
 V datoteko napišite zgornje znake. Če jih lahko napišete, je vse ok, sicer pa berite naprej.
@@ -113,7 +113,7 @@ Težavo odpravimo tako, da v spisku bližnjic odstranimo povezavo <kbd>Ctrl</kbd
 1. Odpremo datoteko LaTeX, da se aktivira LaTeX paket.
 2. <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>S</kbd>, prikaže se spisek vseh bližnjic.
 3. V iskalnik vtipkamo neželeno bližnjico (se pravi, natipkamo besedilo `ctrl+alt+b`)
-4. Poiščemo _Build LaTeX Project_ in z desnim gumbkom kliknjemo nanj.
+4. Poiščemo _Build LaTeX Project_ in z desnim gumbkom kliknemo nanj.
 5. Izberemo "remove keyboard binding".
 
 Sedaj bi moral delati znak `{`. Podobno popravimo ostale znake. Mimogrede, "Build LaTeX project" lahko še vedno dobimo, ker je vezan tudi na bližnjico <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>. Sicer pa lahko sami dodajamo nove bližnjice v spisku vseh bližnjic.

@@ -27,7 +27,7 @@ Verjetno bi najprej odprli tisto, ki je drugačno.
 ```
 Pozdravljeni/Spoštovani,
 
-Sem študent/ka na programu ⟨program⟩ pri predmetu ⟨predmet⟩.
+sem študent/ka programa ⟨program⟩ in obiskujem predmet ⟨predmet⟩.
 
 ⟨vsebina-sporocila⟩
 
@@ -41,7 +41,7 @@ Primer izpolnjene predloge:
 ```
 Spoštovani,
 
-Sem študentka na programu Matematika pri predmetu Računalniški praktikum.
+sem študentka programa Matematika in obiskujem predmet Računalniški praktikum.
 
 Pri včerajšnji domači nalogi se mi v predogledu datoteke README.md ne prikaže slika, čeprav je slika v istem imeniku kot datoteka. Preverila sem pot do slike, a napake nisem našla. Bi se lahko ta teden oglasila pri vas na govorilnih urah, da mi pomagate?
 
@@ -60,7 +60,8 @@ Večina profesorjev in asistentov ne zna več tekoče govoriti pogovornega jezik
 Poskrbite, da bo iz vašega sporočila jasno, kaj želite. Tudi če se vam zdi, da je iz opisa situacije to razvidno, je ponavadi dobro zaključiti npr. s kakim od spodnjih stavkov:
 
 - "Bi se lahko ta teden oglasil/a pri vas na govorilnih urah, da mi pomagate?"
-- ...
+- "Mi lahko pojasnite, zakaj sem pri 2. domači nalogi izgubil/a točke?"
+- "Ali lahko ta teden izjemoma pridem na vaje v drugo skupino?"
 
 
 ## Razno

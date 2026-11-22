@@ -84,7 +84,7 @@ $$a^2 + b^2 = c^2.$$
 Hipotenuza je torej $c = \sqrt{a^2 + b^2}$.
 
 Izraz v prikaznem načinu je še vedno del stavka: pred `\[` in za `\]` ni prazne vrstice,
-ločilo na koncu stavka pa stoji znotraj izraza, kot pika v zgornjem primeru.
+ločilo, ki sledi izrazu, pa zapišemo znotraj njega, kot piko v zgornjem primeru.
 V vrstico sodijo kratki izrazi, ki tečejo z besedilom, na primer oznake kot $n$ ali $x_i$;
 v svojo vrstico pa pomembne enačbe in vse, kar je višje od vrstice, na primer ulomki, vsote in integrali.
 
@@ -97,15 +97,15 @@ zato napako javi daleč od mesta, kjer je nastala.
 :class: tip
 V matematičnem načinu lahko uporabljamo ukaze za matematične izraze,
 kot so `frac` za ulomke, `int` za integrale, `cdot` za piko pri množenju, ukaze za matrike itd.
-Ti ukazi delajo **samo v matematičnem načinu**, izven njih pa sprožijo napako.
-Velja tudi obratno: običajne besede v matematičnem načinu označimo z ukazom `\text`,
-da se pravilno prikažejo. Ta ukaz potrebuje paket `amsmath`.
+Ti ukazi delajo **samo v matematičnem načinu**, zunaj njega pa sprožijo napako.
+Velja tudi obratno: običajne besede se v matematičnem načinu ne izpišejo pravilno,
+zato jih označimo z ukazom `\text`. Ta ukaz potrebuje paket `amsmath`.
 `````
 
 ## Struktura dokumenta
 
 LaTeX dokument shranimo v datoteko s končnico `.tex`. Dokument je lahko shranjen
-tudi v večjih datotekah, ki jih z ukazom `\input{datoteka.tex}` vključimo v
+tudi v več datotekah, ki jih z ukazom `\input{datoteka.tex}` vključimo v
 glavno datoteko.
 Struktura glavne LaTeX datoteke je videti takole:
 
@@ -153,23 +153,21 @@ z ukazi za nov razdelek, podrazdelek, z okoljem za zapis izreka itd.
 Taka vrsta oblikovanja je dosti bolj prijazna uporabniku, sistematična
 in prilagodljiva.
 
-Za primer, v LaTeXu vsebinsko oblikujemo besedilo izreka z okoljem `theorem`.
-Videz izreka bi lahko oblikovali neposredno, kot spodaj, vendar
-bi bilo potem težje skrbeti za to, da vsi izreki izgledajo enako,
+Za primer, v LaTeXu naslov razdelka označimo z ukazom `section`.
+Videz naslova bi lahko oblikovali neposredno, kot spodaj, vendar
+bi bilo potem težje skrbeti za to, da so vsi naslovi videti enako,
 da so vsi pravilno oštevilčeni ipd.
 
 ```tex
 % vsebinsko oblikovanje
-\begin{theorem}
-  ⟨besedilo izreka⟩
-\end{theorem}
+\section{Turingovi stroji}
 
 % neposredno oblikovanje
-\textbf{Izrek 1.1} \textit{⟨besedilo izreka⟩}
+\textbf{\Large 1 Turingovi stroji}
 ```
 
-Še nekaj primerov vsebinskega oblikovanja so posebni ukazi za vsebino, kot so
-`section`, `subsection` in `footnote`.
+Še nekaj primerov vsebinskega oblikovanja so posebni ukazi za vsebino, kot sta
+`subsection` in `footnote`.
 Isto velja za poudarke: nov pojem v besedilu označimo z ukazom `\emph`, ki pove, da je beseda poudarjena,
 in ne z ukazom `\textit`, ki pove samo, da je ležeča.
 
@@ -253,7 +251,7 @@ Kadar je treba isti popravek narediti na več mestih, sta na voljo dva načina.
 
 * **Več kurzorjev.**
   Označite niz, ki se ponavlja, in v paleti ukazov izberite _Select All Occurrences of Find Match_.
-  Ta naredi kurzor za vsako pojavitvijo niza, nato pa vse vrstice uredite hkrati:
+  Ta izbere vse pojavitve niza in na koncu vsake postavi kurzor, nato pa jih uredite hkrati:
   kar natipkate, se zapiše pri vseh kurzorjih.
   Bližnjice za premikanje kurzorjev poiščite v [plonkcu](bliznjice:vscode).
 * **Iskanje in zamenjava z regularnimi izrazi.**
@@ -271,7 +269,8 @@ Najprej preverimo, ali je vaš urejevalnik pripravljen za delo z
 [LaTeX](https://www.latex-project.org)-om.
 
 1. V VSCode odprite imenik `racunalniski-praktikum` v imeniku `rp` (_File_ > _Open Folder_).
-   Če repozitorija na tem računalniku še nimate, ga najprej [klonirajte](git:init).
+   Če repozitorija na tem računalniku še nimate, ga klonirajte, po potrebi pa prej še [nastavite Git](git:nastavitve).
+   Če niste prepričani, kaj od tega potrebujete, prosite za pomoč.
    V njem naredite nov imenik `05-latex`, v tem imeniku še imenik `test`,
    v njem pa novo datoteko `latex-test.tex`, ki jo odprite.
 2. Preverite, da spodaj desno v statusni vrstici piše LaTeX;

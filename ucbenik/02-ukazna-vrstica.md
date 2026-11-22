@@ -99,7 +99,7 @@ ukaz `pwd` (kratko za angl. _print working directory_) pa argumentov ne potrebuj
 :::
 
 Dele ukaza ločijo presledki, zato ime s presledki postavimo med narekovaje:
-brez njih bi `cd Vhodna dvorana` pomenilo premik v imenik `Vhodna` z odvečnim argumentom `dvorana`.
+brez njih bi imel ukaz `cd Vhodna dvorana` dva argumenta, `Vhodna` in `dvorana`, in bi javil napako.
 Ukazi imajo lahko še druge dele, a te bomo spoznavali sproti, ko jih bomo potrebovali.
 
 Ukazno vrstico boste uporabljali kar v urejevalniku VSCode.
@@ -232,7 +232,7 @@ S spleta ste prenesli podnapise za film, a so nekatere črke napačne.
    grep -cE "⟨vzorec⟩" podnapisi.srt
    ```
    Z možnostjo `-c` (angl. _count_) ukazu povemo, naj izpiše samo število zadetkov,
-   z možnostjo `-E` (angl. _extended_) pa, naj vzorec bere v razširjeni sintaksi, isti, kot jo pozna VSCode.
+   z možnostjo `-E` (angl. _extended_) pa, naj vzorec bere v razširjeni sintaksi, podobni tisti, ki jo pozna VSCode.
    Vzorca `\d` `grep` ne pozna, zato števke opišite z `[0-9]` (na macOS `\d` sicer deluje).
    Zakaj je število pol manjše kot v urejevalniku?
 7. Preštejte še vrstice, v katerih nastopa Grozd ali Gornik.

@@ -33,7 +33,7 @@ Pregledi bližnjic na tipkovnici v dokumentaciji:
 | Preklapljanje med okni                   | <kbd>Alt</kbd>+<kbd>Tab</kbd>                 | <kbd>Cmd</kbd>+<kbd>Tab</kbd>                |
 | Preklapljanje med okni istega programa   | -                                             | <kbd>Cmd</kbd>+<kbd>`</kbd>                  |
 | Upravljanje z okni                       | <kbd>Win</kbd>+<kbd>↑↓←→</kbd>                | - |
-| Zapiranje programa                       | <kbd>Alt</kbd>+<kbd>F4</kbd>                  | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd> |
+| Zapiranje programa                       | <kbd>Alt</kbd>+<kbd>F4</kbd>                  | <kbd>Cmd</kbd>+<kbd>Q</kbd>                  |
 
 <sup>1</sup> Pogosto pride prav tudi ubežnica <kbd>Esc</kbd>.
 
@@ -126,7 +126,7 @@ Do njih lahko dostopate z bližnjico <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd
 Če med premikanjem držimo tipko <kbd>Shift</kbd>, označimo besedilo med začetkom in koncem premikanja.
 Primeri: 
 - z <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd> (na macOS z <kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>←→</kbd>) označujemo po besedah,
-- z <kbd>Ctrl</kbd>+<kbd>Home</kbd> (na macOS <kbd>Cmd</kbd>+<kbd>↑</kbd>) označimo besedilo od kurzorja do začetka dokumenta.
+- z <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Home</kbd> (na macOS <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>) označimo besedilo od kurzorja do začetka dokumenta.
 
 Tipka <kbd>Esc</kbd> lahko služi za:
 - izhod iz označevanja,

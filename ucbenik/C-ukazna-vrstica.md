@@ -12,7 +12,7 @@
     - podobno se lahko premaknemo tudi za več imenikov navzgor, npr. iz `Users/racunalniski-praktikum/vaje1` v `Users` z ukazom `cd ../..`,
     - `cd -` spremeni delovni imenik na prejšnji delovni imenik 
       (če smo se nazadnje premaknili iz `Users/racunalniski-praktikum/vaje1` v `Users/racunalniski-praktikum/vaje2`, 
-      premaknemo nazaj v `Users/racunalniski-praktikum/vaje1`).
+      se premaknemo nazaj v `Users/racunalniski-praktikum/vaje1`).
 - Ukaz [`ls`](https://en.wikipedia.org/wiki/Ls) (_**l**i**s**t_) izpiše seznam datotek in imenikov. 
   Če ne podamo dodatnih argumentov ali možnosti, to naredi za trenutni delovni imenik.
   Če podamo pot, izpiše seznam vsebine za imenik na koncu poti.
@@ -29,4 +29,17 @@
   kadar želimo datoteko ustvariti ali samo posodobiti podatke o njej 
   (s `touch` lahko posodobimo tudi podatke o imeniku, ustvarimo pa ga lahko z `mkdir`).
 - Program [`nano`](https://en.wikipedia.org/wiki/GNU_nano) je preprost urejevalnik navadnega besedila za ukazno vrstico.
-  uporabimo ga tako: `nano ⟨datoteka⟩`.
+  Uporabimo ga tako: `nano ⟨datoteka⟩`.
+- Ukaz [`mv`](https://en.wikipedia.org/wiki/Mv_(Unix)) (_**m**o**v**e_) premakne datoteko, podano s prvim argumentom, na mesto, podano z drugim, pri čemer jo lahko hkrati tudi preimenuje.
+  Primeri:
+    - `mv README.md README-staro.md` preimenuje datoteko `README.md` v `README-staro.md`,
+    - `mv README-staro.md racunalniski-praktikum` premakne datoteko `README-staro.md` v imenik `racunalniski-praktikum` (seveda, če ta obstaja).
+- Ukaz [`rm`](https://en.wikipedia.org/wiki/Rm_(Unix)) (_**r**e**m**ove_) pobriše podane datoteke.
+  Pobrisane datoteke ne gredo v koš, zato jih ne moremo obnoviti.
+  Primeri:
+    - `rm README-staro.md` pobriše datoteko `README-staro.md`,
+    - `rm -r ⟨imenik⟩` z možnostjo `-r` (_**r**ecursive_) pobriše imenik z vso vsebino.
+- Ukaz [`grep`](https://en.wikipedia.org/wiki/Grep) izpiše vrstice datoteke, v katerih se ujema podani vzorec (regularni izraz).
+  Primeri:
+    - `grep -E "Grozd|Gornik" podnapisi.srt` izpiše vrstice datoteke `podnapisi.srt`, v katerih nastopa `Grozd` ali `Gornik` (`grep` pozna izbiro `|` in skupine šele z možnostjo `-E`),
+    - `grep -c -E "Grozd|Gornik" podnapisi.srt` z možnostjo `-c` (_**c**ount_) izpiše samo število takih vrstic.

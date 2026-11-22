@@ -95,7 +95,7 @@ V telesu dokumenta najpogosteje uporabljamo naslednje značke:
 - naslove `h1` do `h6`: številka pove raven naslova, ne njegove velikosti.
   Naslov strani je `h1`, naslovi razdelkov so `h2`, naslovi podrazdelkov `h3` in tako naprej.
 - odstavke `p` (angl. _paragraph_),
-- sezname: urejeni seznam `ol` (angl. _ordered list_) in neurejeni seznam `ul` (angl. _unordered list_), v katerih je vsak element v svoji znački `li` (angl. _list item_),
+- sezname: oštevilčeni seznam `ol` (angl. _ordered list_) in neoštevilčeni seznam `ul` (angl. _unordered list_), v katerih je vsak element v svoji znački `li` (angl. _list item_),
 - citate `blockquote`,
 - povezave `a` z atributom `href`,
 - tabele `table`, v katerih so vrstice `tr` (angl. _table row_), v vrsticah pa celice `td` (angl. _table data_) ali celice glave tabele `th` (angl. _table header_),
@@ -113,7 +113,7 @@ Vrednost atributa `id` se v dokumentu ne sme ponoviti.
 Znački `em` (angl. _emphasis_) in `strong` povesta, da je besedilo poudarjeno, ne pa, kako je videti.
 Z `em` označimo besedo, ki bi jo pri branju na glas poudarili, s `strong` pa pomembno besedilo, na primer opozorilo ali ključni pojem.
 Brskalnik prvo običajno prikaže ležeče, drugo pa krepko.
-Znački `b` (angl. _bold_) in `i` (angl. _italic_), ki povesta samo, kako naj bo besedilo videti, se ne uporabljata več.
+Značk `b` (angl. _bold_) in `i` (angl. _italic_), ki povesta samo, kako naj bo besedilo videti, za poudarek ne uporabljamo.
 Dobra praksa loči pomen, ki ga povedo značke HTML, od videza, ki ga določi CSS.
 
 ### Matematika
@@ -137,7 +137,7 @@ Slogi so ponavadi v posebni datoteki s končnico `.css`, ki jo vključimo v glav
 <link rel="stylesheet" href="oblikovanje.css">
 ```
 
-Atribut `href` je pot do datoteke, tako kot pri povezavah in slikah.
+Atribut `href` je pot do datoteke, tako kot `href` pri povezavah in `src` pri slikah.
 Datoteka s slogi je sestavljena iz pravil, kot je
 
 ```css
@@ -199,7 +199,8 @@ Orodja ne kažejo izvorne kode, ampak dokument, kot ga ima brskalnik v pomnilnik
 ## 2. naloga: ogrodje dokumenta
 
 1. V VSCode odprite imenik `racunalniski-praktikum` v imeniku `rp` (_File_ > _Open Folder_).
-   Če repozitorija na tem računalniku še nimate, ga pripravite po navodilih v 1. nalogi 3. poglavja ali prosite za pomoč.
+   Če repozitorija na tem računalniku še nimate, ga klonirajte, po potrebi pa prej še [nastavite Git](git:nastavitve).
+   Če niste prepričani, kaj od tega potrebujete, prosite za pomoč.
    V njem naredite imenik `04-html`, v tem pa datoteko `stran.html` in jo odprite:
    v datotečnem pogledu (angl. _Explorer_) z desnim klikom na imenik izberite _New Folder..._ oziroma _New File..._.
 
@@ -258,7 +259,7 @@ več o njem pa si preberite v [plonkcu za paleto ukazov](paleta-ukazov:html).
 Če si ne predstavljate, kako se uporablja kakšna značka, zlasti pri seznamih in tabelah,
 poiščite zgled na spletu, denimo na strani [W3Schools](https://www.w3schools.com/html/).
 
- 1. Datoteko `stran.html` odprite še v brskalniku: v pogledu datotek jo kliknite z desno tipko,
+ 1. Datoteko `stran.html` odprite še v brskalniku: v datotečnem pogledu jo kliknite z desno tipko,
     izberite _Reveal in File Explorer_ (🍎 _Reveal in Finder_) in jo iz upravitelja datotek povlecite v okno brskalnika.
  2. Prenesite datoteko [`vsebina.txt`](04-html/vsebina.txt) (ni je treba shraniti v repozitorij), jo odprite v VSCode in njeno vsebino prilepite v značko `body`.
     Prilepljeno besedilo zamaknite glede na `body`, tako da bo vsaka vrstica za dve ravni odmaknjena od roba:
@@ -276,13 +277,13 @@ poiščite zgled na spletu, denimo na strani [W3Schools](https://www.w3schools.c
     "Contents" za uvodnimi odstavki ter "Details", "Pot and bowl", "Criticism" in "Competing standards".
     Zadnji štirje so v besedilu dvakrat: naslov razdelka je tisti, pred katerim sta dve prazni vrstici, ne vrstica v seznamu pod "Contents".
     _Namig:_ z <kbd>Alt</kbd> (🍎 <kbd>Option</kbd>) in levim klikom dodate kurzor, ukaz pa se izvede pri vseh kurzorjih hkrati.
- 5. Pod naslovom "Contents" so našteti razdelki. Iz njih naredite urejeni seznam.
+ 5. Pod naslovom "Contents" so našteti razdelki. Iz njih naredite oštevilčeni seznam.
     Postavite kurzor na začetek vsake vrstice (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>↑↓</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>↑↓</kbd>),
     pridržite tipko <kbd>Shift</kbd> in stisnite <kbd>End</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>→</kbd>), da označite vsako vrstico s svojim kurzorjem.
     Uporabite ukaz _Wrap with Abbreviation_ z značko `li`: naredi toliko značk, kot imate kurzorjev.
     Nato vse vrstice označite z enim kurzorjem in jih obdajte z značko `ol`.
  6. Pod naslovom "Details" stavek "To maintain consistent results, ..." napoveduje seznam priporočil:
-    vsi odstavki za njim naj bodo elementi neurejenega seznama (`ul`).
+    vsi odstavki za njim naj bodo elementi neoštevilčenega seznama (`ul`).
     Kurzorje postavite s klikanjem, ker bi jih bližnjica iz prejšnjega koraka postavila tudi v prazne vrstice med odstavki.
     Dva elementa (tista s tabelama) sta zapisana v več vrsticah: vsakega posebej označite v celoti in ga šele nato obdajte z značko.
  7. Citat (odstavek pod besedilom "The abstract states the following:") označite z značko `blockquote`.

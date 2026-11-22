@@ -31,7 +31,7 @@ Za začetek si poglejmo nekaj osnovnih izrazov, ki jih bomo uporabljali:
 - _delovno drevo_ (angl. _working tree_) je imenik z vsemi datotekami projekta, na katerem smo vklopili upravljanje različic.
 - _vnos spremembe_ (krajše _vnos_, angl. _commit_) je osnovna enota upravljanja različic, ki vsebuje zabeleženo stanje datotek skupaj s časom, avtorjem, opisom, podatki o predhodnih vnosih in podobno. Vsak vnos spremembe tvori neko smiselno celoto, na primer popravek enega hrošča, dodatek nove funkcionalnosti, ...
 - _repozitorij_ (angl. _repository_ ali _repo_) je zbirka vseh vnosov sprememb.
-- _klon_ (angl. _clone_) je ena izmed kopij repozitorija. Ena se običajno nahaja na javnem strežniku (za primer lahko pogledate gradiva za Uvod v programiranje na [GitHubu](https://github.com/matijapretnar/uvod-v-programiranje)), vsak, ki dela na projektu pa ima eno kopijo še v delovnem drevesu (skrito v imeniku `.git`).
+- _klon_ (angl. _clone_) je ena izmed kopij repozitorija. Ena se običajno nahaja na javnem strežniku (za primer lahko pogledate gradiva za Uvod v programiranje na [GitHubu](https://github.com/matijapretnar/uvod-v-programiranje)), vsak, ki dela na projektu, pa ima eno kopijo še v delovnem drevesu (skrito v imeniku `.git`).
 
 ### Ko Git odpre urejevalnik
 
@@ -111,7 +111,7 @@ Za pomikanje po zgodovini ukazov lahko uporabite puščici <kbd>↑</kbd> in <kb
    cd racunalniski-praktikum
    git config user.email
    ```
-   Ukaz `git config user.email` izpiše e-naslov, s katerim Git podpiše vaše vnose sprememb; to mora biti naslov, ki ga uporabljate za GitHub.
+   Ukaz `git config user.email` izpiše e-naslov, ki ga Git zapiše v vaše vnose sprememb; to mora biti naslov, ki ga uporabljate za GitHub.
    Če ne izpiše ničesar, [uredite nastavitve uporabnika](git:nastavitve-uporabnika), preden nadaljujete.
    To nastavitev potrebujete, da bo GitHub povezal vaše vnose sprememb z vašim uporabniškim računom.
 1. Spremembo zabeležite in jo pošljite na GitHub (glejte [osnovne ukaze](git:osnovni-ukazi)).
