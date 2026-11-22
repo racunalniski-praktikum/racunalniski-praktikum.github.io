@@ -232,7 +232,7 @@ S spleta ste prenesli podnapise za film, a so nekatere črke napačne.
    grep -cE "⟨vzorec⟩" podnapisi.srt
    ```
    Z možnostjo `-c` (angl. _count_) ukazu povemo, naj izpiše samo število zadetkov,
-   z možnostjo `-E` (angl. _extended_) pa, naj vzorec bere v razširjeni sintaksi, isti, kot jo pozna VSCode.
+   z možnostjo `-E` (angl. _extended_) pa, naj vzorec bere v razširjeni sintaksi, podobni tisti, ki jo pozna VSCode.
    Vzorca `\d` `grep` ne pozna, zato števke opišite z `[0-9]` (na macOS `\d` sicer deluje).
    Zakaj je število pol manjše kot v urejevalniku?
 7. Preštejte še vrstice, v katerih nastopa Grozd ali Gornik.
