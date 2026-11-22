@@ -25,7 +25,7 @@ Kadar v nalogi piše, naj preberete del katere od preglednih datotek, je torej m
 Poleg tega vam morda pridejo prav tudi naslednji viri:
 
 * [tabela matematičnih simbolov](06-sklicevanje-in-definicije/LaTeX_Simboli.pdf),
-* **na lastno odgovornost** lahko uporabite orodje [Detexify](https://detexify.kirelabs.org/classify.html) (na primer, ukaza `in` in `epsilon` izpišeta podobna znaka, ampak v vsaki situaciji je samo en od teh znakov pravi),
+* **na lastno odgovornost** lahko uporabite orodje [Detexify](https://detexify.kirelabs.org/classify.html) (na primer, ukaza `in` in `epsilon` izpišeta podobna znaka, ampak v vsaki situaciji je samo eden od teh znakov pravi),
 * [generator tabel](https://www.tablesgenerator.com/) pride včasih prav,
 * na portalu [Overleaf](https://www.overleaf.com) je zelo dobra [dokumentacija](https://www.overleaf.com/learn). 
 
