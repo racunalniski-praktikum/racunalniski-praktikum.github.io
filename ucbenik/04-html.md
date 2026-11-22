@@ -137,7 +137,7 @@ Slogi so ponavadi v posebni datoteki s končnico `.css`, ki jo vključimo v glav
 <link rel="stylesheet" href="oblikovanje.css">
 ```
 
-Atribut `href` je pot do datoteke, tako kot pri povezavah in slikah.
+Atribut `href` je pot do datoteke, tako kot `href` pri povezavah in `src` pri slikah.
 Datoteka s slogi je sestavljena iz pravil, kot je
 
 ```css
