@@ -160,7 +160,7 @@ Najprej [odprite ukazno vrstico v VSCode](bliznjice:vscode-ukazna), nato pa v nj
    git config --global core.editor nano
    ```
 
-4. Preverite, če ste nastavitve uspešno shranili z ukazom:
+4. Z naslednjim ukazom preverite, ali ste nastavitve uspešno shranili:
 
    ```shell
    git config --list

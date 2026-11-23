@@ -19,7 +19,7 @@ V pravokotnem trikotniku s katetama \(a\) in \(b\) ter hipotenuzo \(c\) velja
 2. LaTeX lahko ne dela tudi, če imate datoteko shranjeno na Namizju ali v OneDrive.
 
 Če še vedno ne dela, preverite, da ste [namestili vse programe](namestitev:latex).
-1. V ukazni vrstici preverite, če se odzove Perl z `perl -v` (to izpiše verzijo).
+1. V ukazni vrstici preverite, ali se odzove Perl z `perl -v` (to izpiše verzijo).
 2. Ali imate nameščeno distribucijo LaTeX-a za vaš operacijski sistem (MikTeX/MacTeX/...)? Namestitev lahko preverite v ukazni vrstici z ukazoma `pdflatex -version` in `latexmk -version`. Če se izpišeta verziji programov, je to dobro.
 3. Ali imate nameščeno razširitev za VSCode LaTeX Workshop?
 4. Ali ste ponovno zagnali računalnik, odkar ste namestili zgornje programe? Če ne, to naredite zdaj.
