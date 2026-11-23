@@ -450,9 +450,6 @@ lectures 10, 11 and 12 below predate this and are not yet rewritten to match.
 
 **Open.**
 
-- `Table` in week 1 or week 2. Proposed: the flat form `Table[f[x], {x, 0, 5}]` in
-  week 1, because its iterator is the one in `Sum` and `Plot`; a table of pairs in
-  week 2, because it needs nested lists.
 - Where vectors and matrices go. They are a topic, not a level of complexity.
 - What each of the three lectures covers.
 - The number and name of the chapters for weeks 2 and 3. Week 1 is chapter 10,
@@ -472,7 +469,9 @@ what weeks 2 and 3 hold is proposed, not agreed.
     output is read with the rules of week 1, and the several-parameter form
     `formula /. {a -> 1, b -> -3, c -> 2}` is the bridge.
   - `Table` with the basics: a table of values next to the plot, a table of plots, a
-    table of solutions.
+    table of solutions. `Table` first appears here, not in week 1 (decided
+    2026-11-23: chapter 10 was published without it). Its iterator `{x, 0, 5}` is
+    the one students know from `Sum` and `Plot` in week 1.
   - Last year's function analysis (define, plot, solve, limit) and area exercises
     (solve, integrate, fill, `Show`) are already of this kind and can move nearly as
     they are.

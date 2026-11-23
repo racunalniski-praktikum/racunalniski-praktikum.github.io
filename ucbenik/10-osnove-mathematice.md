@@ -58,7 +58,7 @@ Izvajanje prekinete s tipkama <kbd>Alt</kbd>+<kbd>.</kbd> (🍎 <kbd>Cmd</kbd>+<
 Na desnem robu zvezka ima vsaka celica oglat zaklepaj (angl. _cell bracket_).
 Vhodno celico in njen rezultat združuje v skupino še en, zunanji zaklepaj.
 S klikom na zaklepaj izberete celico, s klikom na zunanji zaklepaj pa celo skupino.
-Kar ste izbrali, izbrišete s tipko <kbd>Backspace</kbd>; če izberete skupino, tako izbrišete vhodno celico in njen rezultat hkrati.
+Kar ste izbrali, izbrišete s tipko <kbd>Backspace</kbd> (🍎 <kbd>Delete</kbd>); če izberete skupino, tako izbrišete vhodno celico in njen rezultat hkrati.
 Z dvojnim klikom na zunanji zaklepaj skupino zaprete ali odprete: zaprta skupina kaže samo vhodno celico.
 
 **Posebni znaki in grške črke.**
