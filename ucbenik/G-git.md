@@ -3,6 +3,7 @@
 Pogled _Source Control_ v stranskem meniju urejevalnika VSCode ima tri dele (ponavadi se ne izpišejo vsi).
 Razdelek _Changes_ vsebuje datoteke, ki so se spremenile od zadnjega vnosa spremembe (angl. _commit_),
 razdelek _Staged Changes_ pa datoteke, ki bodo vključene v naslednji vnos.
+Tretji razdelek, _Merge Changes_, se pokaže samo ob [konfliktih pri združevanju](git:konflikti).
 
 Več o shranjevanju sprememb v Git si lahko preberete v prijaznem povzetku na 
 [Atlassian spletni strani](https://www.atlassian.com/git/tutorials/saving-changes),
@@ -267,21 +268,21 @@ To se naredi tako, da poiščete identifikator zadeve
 ki ji sledi Id. Primeri ustreznih sporočil: `closes #1`, `Opravljeno, resolve #42` in `fix #8, zdaj pa zares`. Primeri neustreznih sporočil: `zapri #13`, `Tako ne gre, fix #⟨507⟩`, ali `resolved 37`.
 
 (git:konflikti)=
-## Zlivanje sprememb in konflikti
+## Združevanje sprememb in konflikti
 
 Ta razdelek je vključen za primer, če kaj ne bo šlo po načrtu.
 Če na repozitoriju dela več ljudi ali delate na več računalnikih, se lahko zgodi, 
 da se sprememb ne da enostavno uskladiti. 
 
 Če je na strežniku vnos, ki ga v našem repozitoriju še ni, se lokalnih vnosov ne bo dalo poslati na strežnik. 
-Najprej je treba povleči vnose s strežnika na računalnik ter jih zliti (angl. _merge_) z lokalnimi.
+Najprej je treba povleči vnose s strežnika na računalnik ter jih združiti (angl. _merge_) z lokalnimi.
 Šele nato lahko vse skupaj pošljete na strežnik. 
 To najenostavneje naredimo z gumbom za sinhronizacijo, pri čemer Git pazi, da se nobena izmed sprememb ne izgubi. 
 Na primer, če je v spremembi na eni strani popravljena vrstica na enem koncu datoteke, 
 v spremembi na drugi strani pa vrstica na drugem koncu datoteke, bosta v združeni različici spremenjeni obe vrstici.
 
 Prelepo bi bilo, če bi bilo vedno tako :smile:. 
-Če je na obeh straneh spremenjena ista vrstica, nastane konflikt pri zlivanju (angl. _merge conflict_), 
+Če je na obeh straneh spremenjena ista vrstica, nastane konflikt pri združevanju (angl. _merge conflict_), 
 ki ga je treba natančno pogledati in razrešiti ročno. 
 Git take konflikte označi v datoteki sami in sicer tako, da na mesto konflikta vstavi posebna ločila ter vsebini obeh različic. 
 
@@ -339,4 +340,4 @@ Und da sie fortan jeden Tag bei Barbara waren
 Nannte man sie bald die "Rhabarberbar-Barbaren"
 ```
 
-Nato shranimo datoteko, zabeležimo spremembo, ter zlite spremembe pošljemo na strežnik.
+Nato shranimo datoteko, zabeležimo spremembo, ter združene spremembe pošljemo na strežnik.
