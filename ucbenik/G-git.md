@@ -183,9 +183,9 @@ Ko vas program vpraša, kam naj se ključ shrani, s pritiskom na vnašalko potrd
 datoteko `id_ed25519` (na starejših sistemih `id_rsa`) v imeniku `.ssh` v vašem domačem imeniku
 (npr. `/c/Users/⟨fmf-uporabnisko-ime⟩/` oz. 🍎 `/Users/⟨domace-uporabnisko-ime⟩`).
 Vanjo program shrani zasebni ključ, poleg nje pa v datoteko s končnico `.pub` še javnega.
+Če program sporoči, da datoteka že obstaja (_already exists. Overwrite (y/n)?_), ključ na tem računalniku že imate: odgovorite `n` in nadaljujte z 2. korakom.
 Priporočamo, da si nastavite dobro geslo, še posebej, če ste na računalniku na fakulteti.
 Geslo vpišete dvakrat; med tipkanjem se znaki ne izpisujejo.
-Če program sporoči, da datoteka že obstaja (_already exists. Overwrite (y/n)?_), ključ na tem računalniku že imate: odgovorite `n` in nadaljujte z 2. korakom.
 Gesla ne pozabite, saj ga boste potrebovali pri kloniranju in nalaganju repozitorijev.
 
 Če boste Git uporabljali na več računalnikih, potrebujete na vsakem računalniku svoj ključ.
