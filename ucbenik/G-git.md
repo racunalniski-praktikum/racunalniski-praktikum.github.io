@@ -246,7 +246,7 @@ Izberite gumb _Allow_. Prestaviti bi vas moralo v brskalnik, kjer se prijavite
 
 Ukaz <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> > **Git: Clone** > **Clone from GitHub** 
 vam ponudi seznam repozitorijev, do katerih imate dostop.
-Zaenkrat je videti, kot da ta ukaz uporablja manj varno kloniranje s protokolom HTTPS,
+Ta ukaz repozitorij privzeto klonira s protokolom HTTPS,
 pri tem predmetu pa bomo uporabljali protokol SSH.
 
 (git:issues)=
