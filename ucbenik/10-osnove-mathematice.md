@@ -231,7 +231,7 @@ f[x_] := x^2 + 1
 
 Na levi strani definicije za vsako spremenljivko napišete podčrtaj, na desni pa ne.
 V tem poglavju je dovolj, da ga vedno napišete za spremenljivke na levi strani `:=`.
-Če funkcijo definirate z operatorjem `:=` in ne z enačajem, se ne bo obnašala po vaših pričakovanjih.
+Funkcijo definirajte z operatorjem `:=` in ne z enačajem, sicer se ne bo obnašala po vaših pričakovanjih.
 
 Zdaj `f[3]` vrne `10`, `f[t + 1]` vrne `1 + (1 + t)^2`, `f'[x]` pa odvod `2 x`.
 Vrednosti funkcije v več točkah hkrati izračuna funkcija `Table`: `Table[f[x], {x, 0, 3}]` vrne seznam `{1, 2, 5, 10}`.
