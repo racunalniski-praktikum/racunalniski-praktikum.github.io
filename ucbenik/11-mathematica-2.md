@@ -325,7 +325,7 @@ V `Show` lahko sestavite tudi grafe in slike iz funkcije `Graphics`.
 :::{figure-md} slika:graf-nicle-ploscina
 :width: 50%
 :align: center
-![Graf funkcije 1 − x² na intervalu od −2 do 2 z rdečima ničlama in pobarvanim območjem med grafom in osjo](11-enacbe-in-grafi/graf-nicle-ploscina.png)
+![Graf funkcije 1 − x² na intervalu od −2 do 2 z rdečima ničlama in pobarvanim območjem med grafom in osjo](11-mathematica-2/graf-nicle-ploscina.png)
 
 &nbsp; Graf z označenima ničlama in pobarvanim območjem
 :::
@@ -342,4 +342,4 @@ Pri nalogah iz več korakov se tega obvarujete z dvema navadama:
 
 ## Naloge
 
-Rešite naloge v [zvezku](11-enacbe-in-grafi/mathematica2.nb).
+Rešite naloge v [zvezku](11-mathematica-2/mathematica2.nb).

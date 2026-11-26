@@ -506,7 +506,7 @@ what takes last year's polynomial exercises out of it.
 
 **Status.** Week 1 is published as `ucbenik/10-osnove-mathematice.md`, with its
 exercise notebook `mathematica1.nb`. Its examples were run in Mathematica 15.0.
-Week 2 is drafted on the branch `mathematica-2` as `ucbenik/11-enacbe-in-grafi.md`;
+Week 2 is drafted on the branch `mathematica-2` as `ucbenik/11-mathematica-2.md`;
 its notebook is still last year's.
 
 ### 10. Mathematica — why do you trust it?
