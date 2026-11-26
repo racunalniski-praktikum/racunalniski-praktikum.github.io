@@ -469,9 +469,11 @@ what weeks 2 and 3 hold is proposed, not agreed.
     output is read with the rules of week 1, and the several-parameter form
     `formula /. {a -> 1, b -> -3, c -> 2}` is the bridge.
   - `Table` with the basics: a table of values next to the plot, a table of plots, a
-    table of solutions. `Table` first appears here, not in week 1 (decided
-    2026-11-23: chapter 10 was published without it). Its iterator `{x, 0, 5}` is
-    the one students know from `Sum` and `Plot` in week 1.
+    table of solutions. Week 1 already shows its simplest use, tabulating the
+    values of a function, next to lists and set operations (`Divisors`,
+    `Intersection`, `Union`). This was added on 2026-11-26, after chapter 10 was
+    published, and reverses the 2026-11-23 decision that `Table` first appears in
+    week 2.
   - Last year's function analysis (define, plot, solve, limit) and area exercises
     (solve, integrate, fill, `Show`) are already of this kind and can move nearly as
     they are.
@@ -498,14 +500,14 @@ what takes last year's polynomial exercises out of it.
 - Vectors: dot and cross product, length, the equation of a plane. Matrices:
   determinant, eigenvalues, eigenvectors, diagonalisation. Symbolic proofs of
   identities.
-- From the lectures: `Select` with predicates, set operations, `TableForm`, `Which`,
+- From the lectures: `Select` with predicates, `TableForm`, `Which`,
   `NIntegrate`, regions and `Area`, `Probability`, `Minimize` and `Maximize`,
   `DiscretePlot`, the Monte Carlo method.
 
-**Status.** The week-1 exposition is drafted in
-`ucbenik/10-osnove-mathematice.md`. Its examples were run in Mathematica 15.0 on
-2026-11-21. The exercise notebook `mathematica1.nb` is unchanged, so rules,
-functions, `Plot` and `Graphics` have no exercises yet.
+**Status.** Week 1 is published as `ucbenik/10-osnove-mathematice.md`, with its
+exercise notebook `mathematica1.nb`. Its examples were run in Mathematica 15.0.
+Week 2 is drafted on the branch `mathematica-2` as `ucbenik/11-enacbe-in-grafi.md`;
+its notebook is still last year's.
 
 ### 10. Mathematica — why do you trust it?
 
