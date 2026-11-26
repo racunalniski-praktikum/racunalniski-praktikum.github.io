@@ -29,6 +29,7 @@ sphinx:
 #     - sphinx_proof
   local_extensions:
     predavanja: 'extensions/'
+    mathematica_celice: 'extensions/'
     # semantic: 'extensions/'
 
 # semantic:
