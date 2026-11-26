@@ -10,7 +10,7 @@ parts:
   - file: 02-ukazna-vrstica.md
   - file: 03-upravljanje-razlicic.md
   - file: 04-html.md
-#   - file: 05-utrdimo-osnove.md
+#   - file: 13-utrdimo-osnove.md
 - caption: Matematični dokumenti
   chapters:
   - file: 05-latex.md

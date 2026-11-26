@@ -44,7 +44,7 @@ V navodilih bo včasih tudi povezava na bolj podrobna navodila.
 Če obvladate ukazno vrstico, urejevalnik in Git, se lahko poskusite skozi nalogo prebiti brez navodil.
 `````
 
- 1. Začnite tako, da naložite arhiv (stisnjeni imenik) s [poglavji Visoške kronike](05-utrdimo-osnove/visoska-kronika.zip).
+ 1. Začnite tako, da naložite arhiv (stisnjeni imenik) s [poglavji Visoške kronike](13-utrdimo-osnove/visoska-kronika.zip).
  2. Imenik morate [odpakirati](faq:zip), sicer ne boste mogli nadaljevati.
     V poglavjih Visoške kronike je skrita QR koda, do katere boste prišli v naslednjih korakih.
  3. [Odprite imenik `visoska-kronika` v ukazni vrstici](faq:ukazna-imenik). 
