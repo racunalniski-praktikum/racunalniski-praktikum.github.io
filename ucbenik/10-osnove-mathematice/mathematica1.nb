@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     15240,        461]
-NotebookOptionsPosition[     11596,        390]
-NotebookOutlinePosition[     12028,        407]
-CellTagsIndexPosition[     11985,        404]
+NotebookDataLength[     17050,        509]
+NotebookOptionsPosition[     13085,        433]
+NotebookOutlinePosition[     13517,        450]
+CellTagsIndexPosition[     13474,        447]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -139,6 +139,29 @@ Cell[BoxData[
  RowBox[{"(*", 
   RowBox[{"prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}],
    "*)"}]], "Input",ExpressionUUID->"abf5d6bd-750a-4733-a18b-f40bafa1c103"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Subsection"],
+ ". naloga:"
+}], "Subsection",ExpressionUUID->"716d8644-d9c2-47e9-9241-6720bf285e73"],
+
+Cell[TextData[{
+ "1. Izra\[CHacek]unajte seznam skupnih deliteljev \[SHacek]tevil 42 in 108.\n\
+2. Iz seznama izberite najve\[CHacek]ji element in rezultat preverite s \
+funkcijo ",
+ StyleBox["GCD", "Code"],
+ ".\n3. V dokumentaciji poi\[SHacek]\[CHacek]ite funkcijo, ki vrne dol\
+\[ZHacek]ino seznama, in z njo pre\[SHacek]tejte skupne delitelje."
+}], "Text",ExpressionUUID->"459db669-6cd8-4c85-8ba1-79a6e6ff1f35"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"prostor", " ", "za", " ", "va\[SHacek]e", " ", "re\[SHacek]itve"}],
+   "*)"}]], "Input",ExpressionUUID->"6f9ba8dc-3e36-403b-bfb9-3f8a34db11fc"]
 }, Open  ]]
 }, Open  ]],
 
@@ -288,7 +311,7 @@ Cell[TextData[{
 }], "Subsection",ExpressionUUID->"27d9e3d6-f1d1-490b-bc6c-1196db9d9bf5"],
 
 Cell[TextData[{
- "Definirajte funkcijo ",
+ "1. Definirajte funkcijo ",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -308,6 +331,26 @@ Cell[TextData[{
    RowBox[{
     SuperscriptBox["f", "\[Prime]"], "(", "x", ")"}], TraditionalForm]],
   ExpressionUUID->"641fb46d-5b78-452a-8f01-3e807437e47d"],
+ ".\n2. S funkcijo ",
+ StyleBox["Table", "Code"],
+ " izra\[CHacek]unajte vrednosti funkcije ",
+ Cell[BoxData[
+  FormBox["f", TraditionalForm]],ExpressionUUID->
+  "b463240f-0917-4e4d-ba8c-ec9b7819907e"],
+ " v celih \[SHacek]tevilih od ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"-", "3"}], TraditionalForm]],ExpressionUUID->
+  "b152c92b-ee4f-45c1-a48c-2eec1c1a2ca3"],
+ " do ",
+ Cell[BoxData[
+  FormBox["3", TraditionalForm]],ExpressionUUID->
+  "94246296-88cb-4fe0-b253-ba3c35f25cb5"],
+ ".\n3. Iz tabele preberite, med katerima zaporednima celima \
+\[SHacek]teviloma le\[ZHacek]i vsaka ni\[CHacek]la funkcije ",
+ Cell[BoxData[
+  FormBox["f", TraditionalForm]],ExpressionUUID->
+  "8efc0775-94a6-428a-9f97-8aae19fd4c18"],
  "."
 }], "Text",ExpressionUUID->"6e66b1b9-803b-4bd0-914c-18f0a13d5912"],
 
@@ -424,42 +467,47 @@ Cell[CellGroupData[{
 Cell[2452, 86, 130, 4, 70, "Subsection",ExpressionUUID->"25d578ef-5a46-4873-8b9b-4a440f461297"],
 Cell[2585, 92, 1308, 43, 70, "Text",ExpressionUUID->"e2b0efd3-22e1-4115-a3d0-738c321f1686"],
 Cell[3896, 137, 184, 3, 70, "Input",ExpressionUUID->"abf5d6bd-750a-4733-a18b-f40bafa1c103"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4117, 145, 130, 4, 70, "Subsection",ExpressionUUID->"716d8644-d9c2-47e9-9241-6720bf285e73"],
+Cell[4250, 151, 414, 7, 70, "Text",ExpressionUUID->"459db669-6cd8-4c85-8ba1-79a6e6ff1f35"],
+Cell[4667, 160, 184, 3, 70, "Input",ExpressionUUID->"6f9ba8dc-3e36-403b-bfb9-3f8a34db11fc"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4129, 146, 99, 0, 70, "Section",ExpressionUUID->"bfd1324b-58ce-4ee9-b37b-20df3186a657"],
+Cell[4900, 169, 99, 0, 70, "Section",ExpressionUUID->"bfd1324b-58ce-4ee9-b37b-20df3186a657"],
 Cell[CellGroupData[{
-Cell[4253, 150, 130, 4, 70, "Subsection",ExpressionUUID->"d64786eb-6765-4183-ade0-4172de8314ec"],
-Cell[4386, 156, 846, 21, 70, "Text",ExpressionUUID->"b21ae854-99c7-4f01-9df7-938598dff268"],
-Cell[5235, 179, 184, 3, 70, "Input",ExpressionUUID->"df5d8286-edbc-42ad-b991-4804ad23ce48"]
+Cell[5024, 173, 130, 4, 70, "Subsection",ExpressionUUID->"d64786eb-6765-4183-ade0-4172de8314ec"],
+Cell[5157, 179, 846, 21, 70, "Text",ExpressionUUID->"b21ae854-99c7-4f01-9df7-938598dff268"],
+Cell[6006, 202, 184, 3, 70, "Input",ExpressionUUID->"df5d8286-edbc-42ad-b991-4804ad23ce48"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5456, 187, 130, 4, 70, "Subsection",ExpressionUUID->"4530fc6d-7f6e-4367-80d2-f2d6c01a64fa"],
-Cell[5589, 193, 1339, 39, 70, "Text",ExpressionUUID->"ece76aac-2530-4ec4-922a-e8e13233e783"],
-Cell[6931, 234, 184, 3, 70, "Input",ExpressionUUID->"8b3b33ac-a9e4-4fee-a371-81f9a9dc14cd"]
+Cell[6227, 210, 130, 4, 70, "Subsection",ExpressionUUID->"4530fc6d-7f6e-4367-80d2-f2d6c01a64fa"],
+Cell[6360, 216, 1339, 39, 70, "Text",ExpressionUUID->"ece76aac-2530-4ec4-922a-e8e13233e783"],
+Cell[7702, 257, 184, 3, 70, "Input",ExpressionUUID->"8b3b33ac-a9e4-4fee-a371-81f9a9dc14cd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7152, 242, 130, 4, 70, "Subsection",ExpressionUUID->"8030a0fa-d39f-40c5-9c07-b0b7f6572728"],
-Cell[7285, 248, 882, 25, 70, "Text",ExpressionUUID->"e5deb601-0eb8-424f-ab64-4b6d41e1470d"],
-Cell[8170, 275, 184, 3, 70, "Input",ExpressionUUID->"f528fef7-4105-4ea2-a2be-04fa349a568c"]
+Cell[7923, 265, 130, 4, 70, "Subsection",ExpressionUUID->"8030a0fa-d39f-40c5-9c07-b0b7f6572728"],
+Cell[8056, 271, 882, 25, 70, "Text",ExpressionUUID->"e5deb601-0eb8-424f-ab64-4b6d41e1470d"],
+Cell[8941, 298, 184, 3, 70, "Input",ExpressionUUID->"f528fef7-4105-4ea2-a2be-04fa349a568c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8391, 283, 130, 4, 70, "Subsection",ExpressionUUID->"27d9e3d6-f1d1-490b-bc6c-1196db9d9bf5"],
-Cell[8524, 289, 710, 22, 70, "Text",ExpressionUUID->"6e66b1b9-803b-4bd0-914c-18f0a13d5912"],
-Cell[9237, 313, 184, 3, 70, "Input",ExpressionUUID->"fc520655-fffe-45d9-9899-b6f5b8db0fac"]
+Cell[9162, 306, 130, 4, 70, "Subsection",ExpressionUUID->"27d9e3d6-f1d1-490b-bc6c-1196db9d9bf5"],
+Cell[9295, 312, 1428, 42, 70, "Text",ExpressionUUID->"6e66b1b9-803b-4bd0-914c-18f0a13d5912"],
+Cell[10726, 356, 184, 3, 70, "Input",ExpressionUUID->"fc520655-fffe-45d9-9899-b6f5b8db0fac"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9470, 322, 81, 0, 70, "Section",ExpressionUUID->"97a583e8-413b-4ad0-8f8c-676a397f8fb3"],
+Cell[10959, 365, 81, 0, 70, "Section",ExpressionUUID->"97a583e8-413b-4ad0-8f8c-676a397f8fb3"],
 Cell[CellGroupData[{
-Cell[9576, 326, 130, 4, 70, "Subsection",ExpressionUUID->"92e343bf-03af-47fb-9d46-89cdf6a36a85"],
-Cell[9709, 332, 910, 26, 70, "Text",ExpressionUUID->"180f75d7-bccc-4869-8e6b-0c7fcf13d64f"],
-Cell[10622, 360, 184, 3, 70, "Input",ExpressionUUID->"a9048d88-0034-4fb8-a162-e692ce5cb593"]
+Cell[11065, 369, 130, 4, 70, "Subsection",ExpressionUUID->"92e343bf-03af-47fb-9d46-89cdf6a36a85"],
+Cell[11198, 375, 910, 26, 70, "Text",ExpressionUUID->"180f75d7-bccc-4869-8e6b-0c7fcf13d64f"],
+Cell[12111, 403, 184, 3, 70, "Input",ExpressionUUID->"a9048d88-0034-4fb8-a162-e692ce5cb593"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10843, 368, 130, 4, 70, "Subsection",ExpressionUUID->"ae2975a8-38cf-4692-9fe9-258e3d64f9e3"],
-Cell[10976, 374, 393, 6, 70, "Text",ExpressionUUID->"19f31244-d7d4-48d6-a61a-e2f55aabb2d3"],
-Cell[11372, 382, 184, 3, 70, "Input",ExpressionUUID->"1d95b3c5-ea71-4ae6-a77d-aad6a0cca5f3"]
+Cell[12332, 411, 130, 4, 70, "Subsection",ExpressionUUID->"ae2975a8-38cf-4692-9fe9-258e3d64f9e3"],
+Cell[12465, 417, 393, 6, 70, "Text",ExpressionUUID->"19f31244-d7d4-48d6-a61a-e2f55aabb2d3"],
+Cell[12861, 425, 184, 3, 70, "Input",ExpressionUUID->"1d95b3c5-ea71-4ae6-a77d-aad6a0cca5f3"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

@@ -143,6 +143,23 @@ Nedoločenemu integralu Mathematica ne pripiše konstante.
 Seznam `{x, 0, 1}` v določenem integralu pove, da `x` teče od `0` do `1`.
 Enak seznam določa meje vsote, `{k, 1, 100}`, pri risanju grafov pa interval.
 
+### Seznami
+
+Mathematica ne računa le s števili in izrazi, temveč tudi s seznami.
+Nekatere funkcije seznam vrnejo kot rezultat, druge ga sprejmejo kot argument.
+Množic Mathematica ne loči od seznamov: množico zapišete kot seznam, funkcije za množice pa vrnejo seznam brez ponovitev, urejen po velikosti.
+
+| | Vnos | Rezultat |
+|---|---|---|
+| delitelji števila | `Divisors[12]` | `{1, 2, 3, 4, 6, 12}` |
+| presek | `Intersection[Divisors[12], Divisors[18]]` | `{1, 2, 3, 6}` |
+| unija | `Union[{3, 1, 2}, {2, 4}]` | `{1, 2, 3, 4}` |
+| največji element | `Max[{1, 2, 3, 6}]` | `6` |
+| računanje po elementih | `{1, 2, 3}^2` | `{1, 4, 9}` |
+
+Presek iz tabele je seznam skupnih deliteljev števil 12 in 18, njegov največji element pa njun največji skupni delitelj; enak rezultat vrne `GCD[12, 18]`.
+Seznami se v tem poglavju pojavijo še večkrat: z njimi zamenjate več simbolov hkrati, narišete več grafov v isto sliko in sestavite sliko iz geometrijskih objektov.
+
 ### Spremenljivke
 
 Z enačajem priredimo izrazu ali vrednosti ime:
@@ -217,6 +234,8 @@ V tem poglavju je dovolj, da ga vedno napišete za spremenljivke na levi strani 
 Če funkcijo definirate z operatorjem `:=` in ne z enačajem, se ne bo obnašala po vaših pričakovanjih.
 
 Zdaj `f[3]` vrne `10`, `f[t + 1]` vrne `1 + (1 + t)^2`, `f'[x]` pa odvod `2 x`.
+Vrednosti funkcije v več točkah hkrati izračuna funkcija `Table`: `Table[f[x], {x, 0, 3}]` vrne seznam `{1, 2, 5, 10}`.
+Seznam `{x, 0, 3}` pove, da `x` teče od `0` do `3`, enako kot pri vsoti.
 
 Če podčrtaj pozabite, funkcija ne deluje: `f[3]` ostane `f[3]`.
 
