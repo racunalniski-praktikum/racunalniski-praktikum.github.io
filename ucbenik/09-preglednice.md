@@ -100,6 +100,12 @@ Celica, ki jo pobarvate ročno, ostane pobarvana, tudi ko barva ne drži več.
 Datoteko CSV uvozite z ukazom _Data_ > _From Text/CSV_ (🍎 _Data_ > _Get Data (Power Query)_ > _Text/CSV_), kjer izberete kodiranje datoteke in ločilo med podatki.
 Če jo samo odprete z dvoklikom, Excel oboje ugiba po regionalnih nastavitvah računalnika: šumniki se lahko pokvarijo, podatki, ločeni z vejicami, pa pristanejo v enem samem stolpcu.
 
+V datoteki CSV so vrednosti ločene z vejico ali s podpičjem, decimalno ločilo pa je, odvisno od regionalnih nastavitev, pika ali vejica.
+Kjer je decimalno ločilo vejica, kot v slovenskih nastavitvah, vrednosti ločuje podpičje, sicer bi se število `3,5` prebralo kot dve vrednosti.
+Zato je pri takih nastavitvah podpičje tudi ločilo med argumenti formul.
+Če decimalno ločilo v datoteki ni enako kot v nastavitvah, Excel števil ne prepozna in jih uvozi kot besedilo ali kot datume.
+Ločilo med vrednostmi izberete v oknu za uvoz, decimalno ločilo pa v Excelu nastavite z _File_ > _Options_ > _Advanced_ > _Use system separators_ (🍎 _Excel_ > _Preferences_ > _Edit_ > _Use system settings_).
+
 ## Datoteke z nalogami
 
 1. Za vajo lahko doma rešujete [uvodne naloge iz Excela](09-preglednice/excel-uvodne.zip).
