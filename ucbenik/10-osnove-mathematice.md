@@ -1,4 +1,4 @@
-# Osnovna uporaba Mathematice
+# Mathematica 1
 
 `````{admonition} Programska oprema
 :class: important
@@ -164,7 +164,7 @@ Seznami se v tem poglavju pojavijo še večkrat: z njimi zamenjate več simbolov
 
 Z enačajem priredimo izrazu ali vrednosti ime:
 
-```
+```mathematica
 g = 9.81
 enacba = x^2 - 5 x + 6 == 0
 ```
@@ -187,7 +187,7 @@ Velja v vseh celicah in tudi v drugih odprtih zvezkih.
 
 Ali je $x = 2$ rešitev enačbe, lahko preverite na primer s _prepisovalnim pravilom_ (angl. _rule_):
 
-```
+```mathematica
 enacba /. x -> 2
 ```
 
@@ -200,7 +200,7 @@ Zato lahko takoj zatem preverite drugo število: `enacba /. x -> 4` vrne `False`
 
 Navidez zelo podoben rezultat bi lahko dosegli tudi tako, da bi vrednost `x` nastavili z enačajem:
 
-```
+```mathematica
 x = 2
 enacba
 ```
@@ -212,7 +212,7 @@ Mathematica bo `enacba` povsod prebrala kot `True`, tudi če bi napisali
 Več simbolov hkrati zamenjate s seznamom pravil.
 Tako v isto formulo vstavite različne nabore vrednosti:
 
-```
+```mathematica
 diskriminanta = b^2 - 4 a c
 diskriminanta /. {a -> 1, b -> -3, c -> 2}
 diskriminanta /. {a -> 1, b -> 2, c -> 5}
@@ -225,7 +225,7 @@ Pravila ste že srečali v limiti, `Limit[Sin[x]/x, x -> 0]`, in jih boste še p
 ### Funkcije
 Kadar boste v isti izraz vrednosti vstavljali večkrat, definirajte funkcijo:
 
-```
+```mathematica
 f[x_] := x^2 + 1
 ```
 
@@ -246,14 +246,14 @@ Mathematica nariše dve vrsti slik: grafe, ki jih izračuna iz predpisa funkcije
 ### Grafi funkcij
 Graf funkcije nariše funkcija `Plot`:
 
-```
+```mathematica
 Plot[x^2, {x, -2, 2}]
 ```
 
 Drugi argument, `{x, -2, 2}`, pove, da `x` teče od `-2` do `2`, enako kot pri določenem integralu.
 Narišete lahko izraz, funkcijo, ki ste jo definirali, ali več grafov hkrati, če jih naštejete v seznamu:
 
-```
+```mathematica
 Plot[f[x], {x, -2, 2}]
 Plot[{Sin[x], Cos[x]}, {x, 0, 2 Pi}]
 ```
@@ -271,7 +271,7 @@ Druga vrstica nariše oba grafa v isto sliko, vsakega v svoji barvi, kot kaže {
 Videz grafa določite z nastavitvami (angl. _options_).
 Nastavitve so pravila, ki jih naštejete za drugim argumentom:
 
-```
+```mathematica
 Plot[f[x], {x, -2, 2}, PlotRange -> {0, 3}]
 ```
 
@@ -281,7 +281,7 @@ Ostale nastavitve so naštete v dokumentaciji funkcije `Plot`.
 ### Geometrijski objekti
 Slike, ki niso grafi funkcij, sestavite iz geometrijskih objektov s funkcijo `Graphics`:
 
-```
+```mathematica
 Graphics[{Circle[{0, 0}, 1], Point[{1, 0}], Line[{{-1, 0}, {0, 1}}]}]
 ```
 
@@ -294,7 +294,7 @@ Objekte naštejete v seznamu, točko pa podate kot seznam dveh koordinat, na pri
 Barvo objektov in velikost točk določite tako, da ju v seznamu napišete pred objekt, na primer `Red` ali `PointSize[Large]`; veljata za vse objekte, ki sledijo.
 Koordinatni osi doda nastavitev `Axes`:
 
-```
+```mathematica
 Graphics[{Circle[{0, 0}, 1], Red, PointSize[Large], Point[{1, 0}]}, Axes -> True]
 ```
 
