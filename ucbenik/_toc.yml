@@ -22,7 +22,7 @@ parts:
   - file: 09-preglednice.md
 - caption: Simbolno računanje
   chapters:
-  - file: 10-osnove-mathematice.md
+  - file: 10-mathematica-1.md
 #   - file: 11-mathematica-2.md
 #   - file: 13-animiranje-vektorji-matrike.md
 - caption: Plonkci in ostali dodatki

@@ -16,7 +16,7 @@ Vse tri kaže {numref}`slika %s <slika:celice>`.
 :::{figure-md} slika:celice
 :width: 60%
 :align: center
-![Celice v zvezku](10-osnove-mathematice/celice.png)
+![Celice v zvezku](10-mathematica-1/celice.png)
 
 &nbsp; Celice v zvezku: besedilo, izveden izraz z rezultatom in nedokončan izraz
 :::
@@ -100,7 +100,7 @@ Mathematica imena v vhodnih celicah barva, zato napako pogosto opazite, še pred
 :::{figure-md} slika:barve
 :width: 60%
 :align: center
-![Štiri vhodne celice s komentarji, v katerih so imena in oklepaj obarvani različno](10-osnove-mathematice/barve.png)
+![Štiri vhodne celice s komentarji, v katerih so imena in oklepaj obarvani različno](10-mathematica-1/barve.png)
 
 &nbsp; Barve v vhodnih celicah
 :::
@@ -120,7 +120,7 @@ Mathematica računa natančno, dokler ne zahtevate drugače.
 :::{figure-md} slika:natancno-racunanje
 :width: 60%
 :align: center
-![Izvedeni celici z izrazoma 1/3 + 1/6 in Sqrt[8] ter rezultatoma 1/2 in 2 Sqrt[2]](10-osnove-mathematice/natancno-racunanje.png)
+![Izvedeni celici z izrazoma 1/3 + 1/6 in Sqrt[8] ter rezultatoma 1/2 in 2 Sqrt[2]](10-mathematica-1/natancno-racunanje.png)
 
 &nbsp; Natančna rezultata: ulomek in izraz s korenom
 :::
@@ -263,7 +263,7 @@ Druga vrstica nariše oba grafa v isto sliko, vsakega v svoji barvi, kot kaže {
 :::{figure-md} slika:graf-sinus-kosinus
 :width: 50%
 :align: center
-![Grafa funkcij sinus in kosinus na intervalu od 0 do 2π](10-osnove-mathematice/graf-sinus-kosinus.png)
+![Grafa funkcij sinus in kosinus na intervalu od 0 do 2π](10-mathematica-1/graf-sinus-kosinus.png)
 
 &nbsp; Grafa sinusa in kosinusa v isti sliki
 :::
@@ -303,7 +303,7 @@ Rezultat kaže {numref}`slika %s <slika:kroznica-tocka>`.
 :::{figure-md} slika:kroznica-tocka
 :width: 35%
 :align: center
-![Enotska krožnica z rdečo točko v (1, 0) in koordinatnima osema](10-osnove-mathematice/kroznica-tocka.png)
+![Enotska krožnica z rdečo točko v (1, 0) in koordinatnima osema](10-mathematica-1/kroznica-tocka.png)
 
 &nbsp; Krožnica z rdečo točko in koordinatnima osema
 :::
@@ -313,4 +313,4 @@ Druge objekte, na primer `Disk`, `Rectangle` in `Triangle`, najdete v dokumentac
 ## Naloge
 
 - Preletite [seznam bližnjic na tipkovnici](https://reference.wolfram.com/language/tutorial/KeyboardShortcutListing.html). V njem poiščite bližnjici za prekinitev izvajanja in za celico z besedilom.
-- Rešite naloge v [zvezku](10-osnove-mathematice/mathematica1.nb).
+- Rešite naloge v [zvezku](10-mathematica-1/mathematica1.nb).

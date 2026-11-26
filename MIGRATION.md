@@ -78,7 +78,7 @@ until the target structure is agreed.
 | 10 | Risanje (TikZ) | A: deleted 2026-11-17; no B counterpart | L7 + L8 | — | [J] merged into unit 9: its exercises on columns and pictures, on tables and on TikZ are exercises 4–6 of chapter 8, rebuilt on the perpendicular construction from lecture 7; its exercises on moving files and on pgfplots are dropped; its math practice (*Matematika, 2. del*) moves out together with that of unit 9. L7 is on pictures in general (including images, formats, RGB and CMYK), with TikZ only as a demo; gains image formats from unit 9 |
 | 11 | Pogoste napake v LaTeXu | B: `08-poprava/` | split across L5–L8 | TBD | [J] no longer one lecture — becomes ten-minute openers (C4) |
 | 12 | Preglednice | A: `ucbenik/09-preglednice{.md,/}` (was `10-razpredelnice`); B: `09-excel/` | L9 | `ucbenik/09-preglednice{.md,/}` | [J] no deck, by design — taught live in Excel (G1); rebuild `rezultati.xlsx` on the five-task exam (G5) |
-| 13 | Mathematica | A: `ucbenik/10-osnove-mathematice{.md,/}` (was `11-racunanje-z-mathematico`), `ucbenik/{12,13}-*{.md,/}`; B: `10-mathematica/` | L10 + L11 + L12 (+ L13–14) | TBD | [J] three tool-tour chapters become three argued lectures — a rewrite, not a move (C5); no deck, by design — taught live (G1); rewrite rules are missing everywhere (G6) |
+| 13 | Mathematica | A: `ucbenik/10-mathematica-1{.md,/}` (was `11-racunanje-z-mathematico`), `ucbenik/{12,13}-*{.md,/}`; B: `10-mathematica/` | L10 + L11 + L12 (+ L13–14) | TBD | [J] three tool-tour chapters become three argued lectures — a rewrite, not a move (C5); no deck, by design — taught live (G1); rewrite rules are missing everywhere (G6) |
 | 14 | Dodatki / plonkci (A–H) | A: `ucbenik/{A..H}-*.md` | support | TBD | [M] except `H-regex.md` → L2 (C6) and `A-programska-oprema.md`, which needs new entries (G3) |
 | 15 | Slide infrastructure | B: `pomozno/` | all | TBD | [J] blocked on the slides-technology decision |
 | 16 | Book build config | A: `ucbenik/{_config.yml,_toc.yml,_toc-plan.yml,myst.yml,_static/,extensions/}` | — | TBD | [J] blocked on jupyter-book vs mystmd; fix old repo URL; both TOCs still list CSS (C2) |
@@ -453,7 +453,7 @@ lectures 10, 11 and 12 below predate this and are not yet rewritten to match.
 - Where vectors and matrices go. They are a topic, not a level of complexity.
 - What each of the three lectures covers.
 - The number and name of the chapters for weeks 2 and 3. Week 1 is chapter 10,
-  `ucbenik/10-osnove-mathematice.md` (was `11-racunanje-z-mathematico`).
+  `ucbenik/10-mathematica-1.md` (was `11-racunanje-z-mathematico`).
 
 **The progression.** Complexity rises from week to week. The principle is agreed;
 what weeks 2 and 3 hold is proposed, not agreed.
@@ -504,7 +504,7 @@ what takes last year's polynomial exercises out of it.
   `NIntegrate`, regions and `Area`, `Probability`, `Minimize` and `Maximize`,
   `DiscretePlot`, the Monte Carlo method.
 
-**Status.** Week 1 is published as `ucbenik/10-osnove-mathematice.md`, with its
+**Status.** Week 1 is published as `ucbenik/10-mathematica-1.md`, with its
 exercise notebook `mathematica1.nb`. Its examples were run in Mathematica 15.0.
 Week 2 is drafted on the branch `mathematica-2` as `ucbenik/11-mathematica-2.md`;
 its notebook is still last year's.
