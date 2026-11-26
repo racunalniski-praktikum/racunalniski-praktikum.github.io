@@ -23,7 +23,7 @@ parts:
 - caption: Simbolno računanje
   chapters:
   - file: 10-osnove-mathematice.md
-#   - file: 12-risanje-in-enacbe.md
+#   - file: 11-enacbe-in-grafi.md
 #   - file: 13-animiranje-vektorji-matrike.md
 - caption: Plonkci in ostali dodatki
   chapters:

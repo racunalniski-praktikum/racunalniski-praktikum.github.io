@@ -6,7 +6,7 @@ copyright: "2024"
 # Poglavje razkrijemo tako, da ga odstranimo od tod IN odkomentiramo v _toc.yml.
 exclude_patterns:
   - 05-utrdimo-osnove.md
-  - 12-risanje-in-enacbe.md
+  - 11-enacbe-in-grafi.md
   - 13-animiranje-vektorji-matrike.md
 repository:
   url: 'https://github.com/katjabercic/racunalniski-praktikum'
@@ -18,6 +18,12 @@ sphinx:
     # Slike oštevilčimo po slovensko; privzeto je "Fig. 9".
     numfig_format:
       figure: "Slika %s"
+    # Gumb za kopiranje v primerih iz Mathematice kopira le vnos, brez oznak In in Out.
+    copybutton_prompt_text: "In\\[\\d+\\]:= "
+    copybutton_prompt_is_regexp: true
+    copybutton_only_copy_prompt_lines: true
+    # Vnos, ki se nadaljuje v naslednji vrstici, se konča z vejico.
+    copybutton_line_continuation_character: ","
 
 #   extra_extensions:
 #     - sphinx_proof
