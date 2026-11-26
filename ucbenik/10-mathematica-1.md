@@ -314,3 +314,4 @@ Druge objekte, na primer `Disk`, `Rectangle` in `Triangle`, najdete v dokumentac
 
 - Preletite [seznam bližnjic na tipkovnici](https://reference.wolfram.com/language/tutorial/KeyboardShortcutListing.html). V njem poiščite bližnjici za prekinitev izvajanja in za celico z besedilom.
 - Rešite naloge v [zvezku](10-mathematica-1/mathematica1.nb).
+- Zvezek shranite v glavni imenik svojega repozitorija `racunalniski-praktikum`, preden odidete iz predavalnice, pa ga zabeležite in vnos pošljite na GitHub.
