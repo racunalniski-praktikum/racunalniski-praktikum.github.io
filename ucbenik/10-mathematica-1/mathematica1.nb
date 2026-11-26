@@ -28,11 +28,7 @@ Cell["Ra\[CHacek]unanje", "Section",ExpressionUUID->"a2d751b4-961a-415c-a9f8-8be
 
 Cell[CellGroupData[{
 
-Cell[TextData[{
- 
- CounterBox["Subsection"],
- ". naloga:"
-}], "Subsection",ExpressionUUID->"5a598e8d-91fb-4597-b6e0-f014c5c35323"],
+Cell["1. naloga", "Subsection",ExpressionUUID->"5a598e8d-91fb-4597-b6e0-f014c5c35323"],
 
 Cell[TextData[{
  "Izra\[CHacek]unajte natan\[CHacek]no vrednost izraza ",
@@ -59,11 +55,7 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[TextData[{
- 
- CounterBox["Subsection"],
- ". naloga:"
-}], "Subsection",ExpressionUUID->"2cb78585-464d-4601-82d8-77b5bbbc8c66"],
+Cell["2. naloga", "Subsection",ExpressionUUID->"2cb78585-464d-4601-82d8-77b5bbbc8c66"],
 
 Cell[TextData[{
  "V dokumentaciji poi\[SHacek]\[CHacek]ite funkcijo za ra\[CHacek]unanje \
@@ -71,7 +63,7 @@ logaritmov in izra\[CHacek]unajte ",
  Cell[BoxData[
   FormBox[
    RowBox[{
-    SubscriptBox["log", "10"], "10", "x"}], TraditionalForm]],ExpressionUUID->
+    SubscriptBox["log", "3"], "81"}], TraditionalForm]],ExpressionUUID->
   "46fb98db-c8c2-463b-9852-381e9cd3fb92"],
  "."
 }], "Text",ExpressionUUID->"83e011c6-fb5e-4bd7-b47e-f5bc3cb6f106"],
@@ -84,11 +76,7 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[TextData[{
- 
- CounterBox["Subsection"],
- ". naloga:"
-}], "Subsection",ExpressionUUID->"25d578ef-5a46-4873-8b9b-4a440f461297"],
+Cell["3. naloga", "Subsection",ExpressionUUID->"25d578ef-5a46-4873-8b9b-4a440f461297"],
 
 Cell[TextData[{
  "Izra\[CHacek]unajte:\n1. odvod funkcije ",
@@ -132,6 +120,12 @@ Cell[TextData[{
     RowBox[{"|", "x", "|", 
      RowBox[{"ctg", " ", "x"}]}]}], TraditionalForm]],ExpressionUUID->
   "dada50ae-666f-4a98-a4c2-2be5e4b28a93"],
+ ". Funkciji za absolutno vrednost in kotangens poi\[SHacek]\[CHacek]ite v \
+dokumentaciji, nastavitev za levo limito pa v razdelku ",
+ StyleBox["Details and Options",
+  FontSlant->"Italic"],
+ " na strani funkcije ",
+ StyleBox["Limit", "Code"],
  "."
 }], "Text",ExpressionUUID->"e2b0efd3-22e1-4115-a3d0-738c321f1686"],
 
@@ -143,11 +137,7 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[TextData[{
- 
- CounterBox["Subsection"],
- ". naloga:"
-}], "Subsection",ExpressionUUID->"716d8644-d9c2-47e9-9241-6720bf285e73"],
+Cell["4. naloga", "Subsection",ExpressionUUID->"716d8644-d9c2-47e9-9241-6720bf285e73"],
 
 Cell[TextData[{
  "1. Izra\[CHacek]unajte seznam skupnih deliteljev \[SHacek]tevil 42 in 108.\n\
@@ -171,11 +161,7 @@ Cell["Spremenljivke in funkcije", "Section",ExpressionUUID->"bfd1324b-58ce-4ee9-
 
 Cell[CellGroupData[{
 
-Cell[TextData[{
- 
- CounterBox["Subsection"],
- ". naloga:"
-}], "Subsection",ExpressionUUID->"d64786eb-6765-4183-ade0-4172de8314ec"],
+Cell["5. naloga", "Subsection",ExpressionUUID->"d64786eb-6765-4183-ade0-4172de8314ec"],
 
 Cell[TextData[{
  "1. V dokumentaciji poi\[SHacek]\[CHacek]ite konstanto ",
@@ -208,11 +194,7 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[TextData[{
- 
- CounterBox["Subsection"],
- ". naloga:"
-}], "Subsection",ExpressionUUID->"4530fc6d-7f6e-4367-80d2-f2d6c01a64fa"],
+Cell["6. naloga", "Subsection",ExpressionUUID->"4530fc6d-7f6e-4367-80d2-f2d6c01a64fa"],
 
 Cell[TextData[{
  "1. Polinomu ",
@@ -263,11 +245,7 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[TextData[{
- 
- CounterBox["Subsection"],
- ". naloga:"
-}], "Subsection",ExpressionUUID->"8030a0fa-d39f-40c5-9c07-b0b7f6572728"],
+Cell["7. naloga", "Subsection",ExpressionUUID->"8030a0fa-d39f-40c5-9c07-b0b7f6572728"],
 
 Cell[TextData[{
  "1. Izrazu ",
@@ -304,11 +282,7 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[TextData[{
- 
- CounterBox["Subsection"],
- ". naloga:"
-}], "Subsection",ExpressionUUID->"27d9e3d6-f1d1-490b-bc6c-1196db9d9bf5"],
+Cell["8. naloga", "Subsection",ExpressionUUID->"27d9e3d6-f1d1-490b-bc6c-1196db9d9bf5"],
 
 Cell[TextData[{
  "1. Definirajte funkcijo ",
@@ -367,11 +341,7 @@ Cell["Risanje", "Section",ExpressionUUID->"97a583e8-413b-4ad0-8f8c-676a397f8fb3"
 
 Cell[CellGroupData[{
 
-Cell[TextData[{
- 
- CounterBox["Subsection"],
- ". naloga:"
-}], "Subsection",ExpressionUUID->"92e343bf-03af-47fb-9d46-89cdf6a36a85"],
+Cell["9. naloga", "Subsection",ExpressionUUID->"92e343bf-03af-47fb-9d46-89cdf6a36a85"],
 
 Cell[TextData[{
  "1. Nari\[SHacek]ite graf funkcije ",
@@ -409,11 +379,7 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[TextData[{
- 
- CounterBox["Subsection"],
- ". naloga:"
-}], "Subsection",ExpressionUUID->"ae2975a8-38cf-4692-9fe9-258e3d64f9e3"],
+Cell["10. naloga", "Subsection",ExpressionUUID->"ae2975a8-38cf-4692-9fe9-258e3d64f9e3"],
 
 Cell["\<\
 Nari\[SHacek]ite kro\[ZHacek]nico s sredi\[SHacek]\[CHacek]em v izhodi\
