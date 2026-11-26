@@ -6,31 +6,63 @@
 - [Visual Studio Code](namestitev:vscode).
 `````
 
-## 1. naloga: opisovanje vzorcev z regularnimi izrazi
+## 1. naloga: postavite spletno stran
 
-[Regularni izrazi](https://en.wikipedia.org/wiki/Regular_expression) 
-(angl. _regular expressions_ ali kratko _regex_) so zaporedja znakov, 
-s katerimi lahko opišemo vzorce v navadnem besedilu.
+To nalogo lahko naredite tudi doma.
 
-Natančno ujemanje ste gotovo že kdaj videli - to je najbolj enostavna vrsta
-regularnega izraza. V besedilu bi lahko poiskali vse pojavitve besede `kuža` z
-regularnim izrazom `kuža`. Kaj pa če želite poiskati vse številke v besedilu? To
-bi naredili z regularnim izrazom `\d+`: `\d` je vzorec ki predstavlja eno
-(katerokoli) števko, `+` pa pomeni eno ali več ponovitev tistega, kar piše pred
-znakom.
+Spletno stran lahko postavite kar iz repozitorija na GitHubu: tako je postavljen tudi ta učbenik.
+V tej nalogi boste postavili svojo stran.
 
-Obstaja več verzij regularnih izrazov, ki so si precej sorodne, lahko pa se tudi
-razlikujejo. Nekatere npr. nimajo posebnega vzorca za števke, tako da je treba
-števke opisati z vzorcem `[0-9]`.
+1. [Naredite nov repozitorij](git:init) z imenom `⟨uporabnisko-ime⟩.github.io`:
+   niz `⟨uporabnisko-ime⟩` zamenjajte z vašim uporabniškim imenom na GitHubu.
+   Če boste repozitorij poimenovali drugače, bo vaša spletna stran stala
+   na drugem naslovu, kot bo zahtevala domača naloga.
+   Repozitorij klonirajte z urejevalnikom VSCode.
+2. V repozitoriju naredite novo HTML datoteko z imenom `index.html`.
+   Ime je pomembno, spletna stran sicer ne bo delovala.
+   V datoteko lahko prilepite spodnjo vsebino in jo po želji popravite.
+   ```html
+   <!DOCTYPE html>
+   <html lang="sl">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Moja spletna stran</title>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+         }
+         h1 {
+            color: #0077cc;
+            margin-bottom: 20px;
+         }
+         p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Naslov polepša stran</h1>
+      <p>Tu lahko kaj napišete, ali pa tudi ne.</p>
+   </body>
+   </html>
+   ```
+3. [Zabeležite spremembe](git:osnovni-ukazi) in jih pošljite na strežnik.
+4. V brskalniku obiščite svoj repozitorij in pojdite na zavihek _Settings_.
+5. V stranskem meniju izberite _Pages_.
+6. V razdelku _Build and deployment_ pod _Branch_ izberite glavno vejo
+   (`main` ali `master`) in kliknite na gumb _Save_.
+7. Čez nekaj časa (do 10 minut) se bo stran posodobila z naslovom 
+   vaše spletne strani, ki bi moral biti `⟨uporabnisko-ime⟩.github.io`.
+   Pisalo bo _"Your site is live at ..."_.
 
-Regularni izrazi so lahko sila uporabni, in ta naloga je namenjena temu,
-da se z njimi na kratko seznanite. 
-
-Kakih 20 minut rešujte lekcije na spletni strani [RegexOne](https://regexone.com),
-na spletni strani [RegexLearn](https://regexlearn.com/learn/regex101), ali pa na obeh.
-Na gumb _Continue_ vam ni treba klikniti, dovolj je, da stisnete vnašalko <kbd>↵</kbd>.
-Če ste regularne izraze že kdaj uporabljali, se lahko preizkusite v 
-[regex križanki](https://regexcrossword.com).
+Če boste urejali katero od datotek spletne strani, ter zabeležene spremembe
+poslali na strežnik, se bo v nekaj minutah (ponavadi hitreje, kot v desetih)
+posodobila tudi spletna stran.
 
 ## 2. naloga: ukazna vrstica, urejevalnik in Git
 
@@ -90,63 +122,3 @@ V navodilih bo včasih tudi povezava na bolj podrobna navodila.
     [Windows](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b) ali
     [macOS](https://support.apple.com/en-us/102646)) 
     in uporabite spletno orodje, kot je npr. [QR code reader](https://qrcodedynamic.com/qr-reader)
-
-## 3. naloga: postavite spletno stran
-
-To nalogo lahko naredite tudi doma.
-
-Zdaj ste videli že kar nekaj repozitorijev, ki uporabljajo GitHub-ovo
-podporo za postavitev spletne strani: zapiski, ter obe strani, 
-ki ste jih obiskali v prejšnji nalogi.
-V tej nalogi boste postavili svojo stran.
-
-1. [Naredite nov repozitorij](git:init) z imenom `⟨uporabnisko-ime⟩.github.io`:
-   niz `⟨uporabnisko-ime⟩` zamenjajte z vašim uporabniškim imenom na GitHubu.
-   Če boste repozitorij poimenovali drugače, bo vaša spletna stran stala
-   na drugem naslovu, kot bo zahtevala domača naloga.
-   Repozitorij klonirajte z urejevalnikom VSCode.
-2. V repozitoriju naredite novo HTML datoteko z imenom `index.html`.
-   Ime je pomembno, spletna stran sicer ne bo delovala.
-   V datoteko lahko prilepite spodnjo vsebino in jo po želji popravite.
-   ```html
-   <!DOCTYPE html>
-   <html lang="sl">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Moja spletna stran</title>
-      <style>
-         body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-         }
-         h1 {
-            color: #0077cc;
-            margin-bottom: 20px;
-         }
-         p {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-         }
-      </style>
-   </head>
-   <body>
-      <h1>Naslov polepša stran</h1>
-      <p>Tu lahko kaj napišete, ali pa tudi ne.</p>
-   </body>
-   </html>
-   ```
-3. [Zabeležite spremembe](git:osnovni-ukazi) in jih pošljite na strežnik.
-4. V brskalniku obiščite svoj repozitorij in pojdite na zavihek _Settings_.
-5. V stranskem meniju izberite _Pages_.
-6. V razdelku _Build and deployment_ pod _Branch_ izberite glavno vejo
-   (`main` ali `master`) in kliknite na gumb _Save_.
-7. Čez nekaj časa (do 10 minut) se bo stran posodobila z naslovom 
-   vaše spletne strani, ki bi moral biti `⟨uporabnisko-ime⟩.github.io`.
-   Pisalo bo _"Your site is live at ..."_.
-
-Če boste urejali katero od datotek spletne strani, ter zabeležene spremembe
-poslali na strežnik, se bo v nekaj minutah (ponavadi hitreje, kot v desetih)
-posodobila tudi spletna stran.
