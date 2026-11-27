@@ -20,7 +20,7 @@ In:= resitve = Solve[enacba, x]
 Out= {{x -> 2}, {x -> 3}}
 ```
 
-Rezultat je seznam rešitev, v katerem je vsaka rešitev zapisana s prepisovalnim pravilom. Rešitve torej lahko uporabite enako kot pravila v prejšnjem poglavju, z operatorjem `/.`:
+Rezultat je seznam rešitev, v katerem je vsaka rešitev zapisana s prepisovalnim pravilom. Rešitve torej lahko uporabite enako kot prepisovalna pravila v prejšnjem poglavju, z operatorjem `/.`:
 
 ```mathematica
 In:= x /. resitve
@@ -89,7 +89,7 @@ Out= {x -> 0.739085}
 ```
 
 V seznamu `{x, 1}` je `1` začetni približek.
-Ker je rešitev ena sama, rezultat ni seznam rešitev, temveč seznam pravil, zato z `/.` dobite kar število:
+Ker je rešitev ena sama, rezultat ni seznam rešitev, temveč seznam prepisovalnih pravil, zato z `/.` dobite kar število:
 
 ```mathematica
 In:= x /. FindRoot[Cos[x] == x, {x, 1}]
@@ -109,7 +109,7 @@ Out= x < 2 || x > 3
 ```
 
 V drugem rezultatu `||` pomeni »ali«.
-Rezultat `Reduce` ni pravilo, temveč pogoj, ki ga mora izpolnjevati `x`.
+Rezultat `Reduce` ni prepisovalno pravilo, temveč pogoj, ki ga mora izpolnjevati `x`.
 Vanj lahko z `/.` vstavite vrednosti, enako kot v enačbo:
 
 ```mathematica
@@ -119,7 +119,7 @@ Out= {False, True, False}
 
 Vrednost `3` pogoja ne izpolnjuje, ker je neenačba stroga.
 
-## Tabele
+## Delo s seznami
 
 Funkcijo `Table` ste spoznali v prejšnjem poglavju.
 Korak lahko podate kot četrti element seznama, vrednosti spremenljivke pa lahko tudi naštejete:
@@ -142,8 +142,6 @@ In:= Table[Plot[x^n, {x, -1, 1}], {n, 1, 4}]
 ```
 
 Prvi primer vrne rešitve enačbe $x^2 = a$ za štiri vrednosti parametra $a$, drugi pa nariše štiri grafe drugega ob drugem.
-
-## Delo s seznami
 
 Seznam zaporednih celih števil vrne funkcija `Range`.
 Funkcija `Select` iz seznama izbere elemente, ki izpolnjujejo pogoj, `Length` pa vrne dolžino seznama:
@@ -190,7 +188,15 @@ Out= {6, 6, 8}
 `Length[delitelji]` prešteje elemente seznama `delitelji`, torej tri sezname, `Length /@ delitelji` pa elemente vsakega od njih.
 Mnoge funkcije, na primer računske operacije, same delujejo po elementih, kot ste videli v prejšnjem poglavju; `Map` potrebujete za tiste, ki tega ne počnejo.
 
-Posamezen element seznama vrne funkcija `Part`, ki jo običajno zapišete z dvojnimi oglatimi oklepaji:
+Posamezen element seznama vrne funkcija `Part`.
+Prvi argument je seznam, drugi pa mesto elementa v njem:
+
+```mathematica
+In:= Part[prastevila, 3]
+Out= 5
+```
+
+Običajno jo zapišete krajše, z dvojnimi oglatimi oklepaji za seznamom:
 
 ```mathematica
 In:= prastevila[[3]]
@@ -206,11 +212,12 @@ Out= 3
 Elementi so oštevilčeni od `1` naprej.
 Ime `resitve` ima še vedno vrednost iz začetka poglavja, zato `resitve[[2]]` vrne drugo rešitev enačbe, z `/.` pa njeno vrednost.
 
-## Vzorci v definicijah
+## Definicije funkcij z vzorci
 
-Podčrtaj na levi strani definicije pomeni, da je `x_` vzorec: ujema se s katerimkoli argumentom, Mathematica pa na desni strani vsak `x` zamenja s tem argumentom.
-Definicija je torej prepisovalno pravilo, ki ga Mathematica uporabi povsod, kjer se izraz ujema z levo stranjo.
-Za isto funkcijo lahko podate več pravil, na primer posebej za izbrane vrednosti argumenta:
+Podčrtaj na levi strani definicije funkcije (na primer `f[x_] := x^2 + 1` iz prejšnjega poglavja) pomeni, da je `x_` vzorec: ujema se s katerimkoli argumentom, Mathematica pa na desni strani vsak `x` zamenja s tem argumentom.
+Definicija funkcije je prepisovalno pravilo, kakršna ste že uporabljali z `/.`.
+Tega prepisovalnega pravila vam ni treba uporabiti z `/.`, ker ga Mathematica uporabi sama: vsak izraz, ki se ujema z levo stranjo, nadomesti z desno.
+Za isto funkcijo lahko podate več prepisovalnih pravil, na primer posebej za izbrane vrednosti argumenta:
 
 ```mathematica
 In:= fib[1] := 1
@@ -223,7 +230,7 @@ In:= Table[fib[n], {n, 1, 10}]
 Out= {1, 1, 2, 3, 5, 8, 13, 21, 34, 55}
 ```
 
-Mathematica najprej poskusi pravila za izbrane vrednosti in šele nato splošno pravilo, zato se računanje pri `fib[1]` in `fib[2]` ustavi.
+Mathematica najprej poskusi prepisovalna pravila za izbrane vrednosti in šele nato splošno prepisovalno pravilo, zato se računanje pri `fib[1]` in `fib[2]` ustavi.
 
 Vzorec ima lahko tudi obliko.
 Če je argument točka, ga zapišete kot seznam dveh vzorcev:
@@ -241,7 +248,7 @@ Out= razdalja[{0, 0}, 5]
 Če se argument z vzorcem ne ujema, Mathematica izraza ne izračuna, tako kot `f[3]` v prejšnjem poglavju, ko ste pozabili podčrtaj.
 
 Vzorec se lahko ujema tudi z obliko izraza.
-Funkcija `odvod` ima pravilo za potence, za sinus in za vsoto:
+Spodnja funkcija `odvod` ima prepisovalno pravilo za potence, za sinus in za vsoto:
 
 ```mathematica
 In:= odvod[x^n_] := n x^(n - 1)
@@ -257,8 +264,8 @@ In:= odvod[Cos[x]]
 Out= odvod[Cos[x]]
 ```
 
-Argument `x^3 + Sin[x]` se ujema z vzorcem `u_ + v_`, zato `odvod` odvaja vsak sumand posebej, vsak sumand pa se ujema z enim od preostalih dveh pravil.
-Za kosinus pravila ni, zato `odvod[Cos[x]]` ostane neizračunan.
+Argument `x^3 + Sin[x]` se ujema z vzorcem `u_ + v_`, zato `odvod` odvaja vsak sumand posebej, vsak sumand pa se ujema z enim od preostalih dveh prepisovalnih pravil.
+Za kosinus prepisovalnega pravila ni, zato `odvod[Cos[x]]` ostane neizračunan.
 
 ```mathematica
 In:= odvod[x^2 + x]
@@ -266,7 +273,7 @@ Out= 2 x + odvod[x]
 ```
 
 Sumand `x` se z vzorcem `x^n_` ne ujema, čeprav je matematično enak `x^1`: vzorec primerja obliko izraza, ne njegove vrednosti.
-Manjkajoče pravilo dodate brez podčrtaja, da se ujema le s simbolom `x`:
+Manjkajoče prepisovalno pravilo dodate brez podčrtaja, da se ujema le s simbolom `x`:
 
 ```mathematica
 In:= odvod[x] := 1
@@ -275,7 +282,7 @@ In:= odvod[x^2 + x]
 Out= 1 + 2 x
 ```
 
-S podčrtajem bi se pravilo ujemalo s čimer koli:
+S podčrtajem bi se prepisovalno pravilo ujemalo s čimer koli:
 
 ```mathematica
 In:= odvod[x_] := 1
@@ -284,15 +291,15 @@ In:= odvod[Cos[x]]
 Out= 1
 ```
 
-Mathematica še vedno najprej poskusi bolj določena pravila, zato `odvod[x^3 + Sin[x]]` še vedno vrne `3 x^2 + Cos[x]`.
+Mathematica še vedno najprej poskusi bolj določena prepisovalna pravila, zato `odvod[x^3 + Sin[x]]` še vedno vrne `3 x^2 + Cos[x]`.
 Za kosinus pa namesto neizračunanega izraza zdaj dobite napačen rezultat `1`.
 
-Vsa pravila, ki jih ima funkcija, izpiše `?odvod`.
-Nova definicija z enako levo stranjo staro zamenja, definicija z drugačno levo stranjo pa doda novo pravilo.
-Napačno pravilo `odvod[x_] := 1` zato ostane, dokler ne pobrišete vseh pravil funkcije s `Clear[odvod]`.
+Vsa prepisovalna pravila, ki jih ima funkcija, izpiše `?odvod`.
+Nova definicija z enako levo stranjo staro zamenja, definicija z drugačno levo stranjo pa doda novo prepisovalno pravilo.
+Napačno prepisovalno pravilo `odvod[x_] := 1` zato ostane, dokler ne pobrišete vseh prepisovalnih pravil funkcije s `Clear[odvod]`.
 
-Funkcija `odvod` odvaja le po `x`, ker je simbol `x` zapisan v njenih pravilih.
-Za odvod po drugi spremenljivki to spremenljivko podate kot drugi argument in jo v pravilih zapišete z vzorcem:
+Funkcija `odvod` odvaja le po `x`, ker je simbol `x` zapisan v njenih prepisovalnih pravilih.
+Za odvod po drugi spremenljivki to spremenljivko podate kot drugi argument in jo v prepisovalnih pravilih zapišete z vzorcem:
 
 ```mathematica
 In:= Clear[odvod]
@@ -307,8 +314,58 @@ In:= odvod[t^3 + Sin[t], t]
 Out= 3 t^2 + Cos[t]
 ```
 
-Ime `y_` se v vsakem pravilu pojavi dvakrat.
-Vzorec se ujema le, če se obe pojavitvi ujemata z istim izrazom, zato pravilo za potence odvaja `t^3` po `t`, ne pa po `x`.
+Ime `y_` se v vsakem prepisovalnem pravilu pojavi dvakrat.
+Vzorec se ujema le, če se obe pojavitvi ujemata z istim izrazom, zato prepisovalno pravilo za potence odvaja `t^3` po `t`, ne pa po `x`.
+
+## Takojšnje in zakasnjeno prirejanje
+
+Simbolu lahko vrednost priredite z enojnim enačajem `=` ali z `:=`.
+Pri `=` Mathematica desno stran izračuna takoj in si zapomni rezultat.
+Pri `:=` si zapomni desno stran, kot je zapisana, izračuna pa jo vsakič, ko simbol uporabite.
+Razliko pokaže funkcija `RandomInteger`, ki ob vsakem klicu vrne novo naključno število:
+
+```mathematica
+In:= a = RandomInteger[{0, 10}]
+Out= 7
+
+In:= {a, a, a}
+Out= {7, 7, 7}
+
+In:= b := RandomInteger[{0, 10}]
+
+In:= {b, b, b}
+Out= {10, 8, 2}
+```
+
+Simbol `a` je dobil eno naključno število, simbol `b` pa ob vsaki uporabi izbere novo.
+Vaša števila bodo drugačna.
+
+Zato funkcije definirate s `:=`.
+Z `=` bi Mathematica desno stran izračunala že ob definiciji, in če bi `x` takrat imel vrednost, bi jo vstavila:
+
+```mathematica
+In:= x = 2
+Out= 2
+
+In:= g[x_] = x^2 + 1
+Out= 5
+
+In:= g[10]
+Out= 5
+
+In:= h[x_] := x^2 + 1
+
+In:= h[10]
+Out= 101
+
+In:= Clear[x]
+```
+
+Funkcija `g` vrne `5` pri vsakem argumentu, ker je desna stran postala `5`, še preden je Mathematica shranila prepisovalno pravilo.
+Funkcija `h` desno stran izračuna šele, ko jo uporabite, in sicer z argumentom namesto `x`.
+
+Dvojni enačaj `==` pa je nekaj povsem drugega: ne priredi ničesar, temveč primerja levo in desno stran.
+`2 + 2 == 4` vrne `True`, `x^2 == 4` pa ostane enačba, ker `x` nima vrednosti, in prav takšno enačbo podate funkciji `Solve`.
 
 ## Več o grafih
 
@@ -357,7 +414,7 @@ Mathematica si zapomni vse, kar ste izvedli, zato lahko ime iz ene naloge pokvar
 Pri nalogah iz več korakov se tega obvarujete z dvema navadama:
 
 * Vsako nalogo rešite v svoji celici in celico začnite s `Clear` za vsa imena, ki jih v njej definirate, na primer `Clear[prastevila, ostanek1]`.
-  Tako se celica vsakič izvede enako, tudi ko jo po popravku izvedete znova, in v njej ne ostanejo stara pravila, kot napačno pravilo funkcije `odvod`.
+  Tako se celica vsakič izvede enako, tudi ko jo po popravku izvedete znova, in v njej ne ostanejo stara prepisovalna pravila, kot napačno prepisovalno pravilo funkcije `odvod`.
 * Dolge klice razdelite v več vrstic, vsako nastavitev v svojo, kot pri `graf1` zgoraj.
   Manjkajočo vejico ali oklepaj tako najdete hitreje.
 
