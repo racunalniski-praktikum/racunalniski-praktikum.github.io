@@ -6,7 +6,6 @@ copyright: "2024"
 # Poglavje razkrijemo tako, da ga odstranimo od tod IN odkomentiramo v _toc.yml.
 exclude_patterns:
   - 13-utrdimo-osnove.md
-  - 11-mathematica-2.md
   - 13-animiranje-vektorji-matrike.md
 repository:
   url: 'https://github.com/katjabercic/racunalniski-praktikum'
