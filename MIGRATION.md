@@ -447,13 +447,14 @@ lectures 10, 11 and 12 below predate this and are not yet rewritten to match.
   `Clear` as the repair. `=` is then left with one job, naming a thing, and `==`
   compares the two sides. The example prepares `Solve`, which returns rules.
 - The exercises may change a lot.
+- **The chapters are called *Mathematica 1*, *Mathematica 2* and *Mathematica 3***,
+  one per week, in `ucbenik/10-mathematica-1.md`, `ucbenik/11-mathematica-2.md` and,
+  for week 3, `ucbenik/12-mathematica-3.md`. Week 1 was `11-racunanje-z-mathematico`.
 
 **Open.**
 
 - Where vectors and matrices go. They are a topic, not a level of complexity.
 - What each of the three lectures covers.
-- The number and name of the chapters for weeks 2 and 3. Week 1 is chapter 10,
-  `ucbenik/10-mathematica-1.md` (was `11-racunanje-z-mathematico`).
 
 **The progression.** Complexity rises from week to week. The principle is agreed;
 what weeks 2 and 3 hold is proposed, not agreed.
@@ -462,21 +463,19 @@ what weeks 2 and 3 hold is proposed, not agreed.
   thing: compute, name, plug in, define a function, plot, draw. Nothing is combined
   yet. (Agreed.)
 - **Week 2: two or three basics combined in one task.** A task has several steps,
-  and each step names its result and uses the results before it. (Proposed.)
-  - A plot with marked points: `Plot` with the graphics primitives of week 1, through
-    `Epilog`. Last year `Epilog` was given as a line to copy.
-  - A function and its equations: define, solve, plot. `Solve` is new here; its
-    output is read with the rules of week 1, and the several-parameter form
-    `formula /. {a -> 1, b -> -3, c -> 2}` is the bridge.
-  - `Table` with the basics: a table of values next to the plot, a table of plots, a
-    table of solutions. Week 1 already shows its simplest use, tabulating the
-    values of a function, next to lists and set operations (`Divisors`,
-    `Intersection`, `Union`). This was added on 2026-11-26, after chapter 10 was
-    published, and reverses the 2026-11-23 decision that `Table` first appears in
-    week 2.
-  - Last year's function analysis (define, plot, solve, limit) and area exercises
-    (solve, integrate, fill, `Show`) are already of this kind and can move nearly as
-    they are.
+  and each step names its result and uses the results before it. (Agreed, written as
+  chapter 11.)
+  - Equations: `Solve`, whose rewrite rules feed a next step, systems, `Reals`,
+    `NSolve` and `Root`, `FindRoot`, `Reduce`.
+  - Lists: `Table` with a step and with a list of values, `Range`, `Select` with
+    predicates, `Length`, `Map` and `/@`, `Part`.
+  - Argument patterns: a definition is a rewrite rule; rules for chosen values, for
+    structured arguments, and a symbolic derivative `odvod`.
+  - `=` against `:=`, shown with `RandomInteger`; `==` compares.
+  - Plots with `Epilog`, `Filling` and `Show`.
+  - The exercises: three `Solve` tasks, a plot with marked roots and stationary
+    points, two list tasks, `odvod` extended, a die thrown with `=` and with `:=`, and
+    one function analysis in ten steps.
 - **Week 3: a whole task, then a parameter that moves.** The student builds the
   static picture from the pieces of weeks 1 and 2, then wraps it in `Manipulate`,
   which is `Table` with a slider. (Proposed.)
@@ -488,26 +487,22 @@ what takes last year's polynomial exercises out of it.
 
 **Taught last year, not yet placed.**
 
-- Equations: `Solve`, `NSolve`, `FindRoot`, `Reduce` for inequalities, systems,
-  parameters, word problems; rules as the output of `Solve`.
-- `=` against `:=`, shown with `RandomInteger`.
-- Plot options (`ExclusionsStyle`, `Epilog`, `Filling`, `AspectRatio`), `Show`,
-  `ParametricPlot`, `ContourPlot`.
+- Plot options (`AspectRatio`), `ParametricPlot`, `ContourPlot`.
 - One-sided limits, infinite sums, `Simplify`.
 - Polynomials: `Factor` with an extension, `Expand`, `Collect`, `Exponent`.
-- The working habit: one task per cell, `ClearAll` at the top, one option per line.
 - Anonymous functions (`Function`, `|->`, `# &`), for reading the documentation.
 - Vectors: dot and cross product, length, the equation of a plane. Matrices:
   determinant, eigenvalues, eigenvectors, diagonalisation. Symbolic proofs of
   identities.
-- From the lectures: `Select` with predicates, `TableForm`, `Which`,
+- From the lectures: `TableForm`, `Which`,
   `NIntegrate`, regions and `Area`, `Probability`, `Minimize` and `Maximize`,
   `DiscretePlot`, the Monte Carlo method.
 
 **Status.** Week 1 is published as `ucbenik/10-mathematica-1.md`, with its
 exercise notebook `mathematica1.nb`. Its examples were run in Mathematica 15.0.
-Week 2 is drafted on the branch `mathematica-2` as `ucbenik/11-mathematica-2.md`;
-its notebook is still last year's.
+Week 2 is drafted on the branch `mathematica-2` as `ucbenik/11-mathematica-2.md`,
+with its exercise notebook `mathematica2.nb`. Both exercise notebooks are generated
+from their solutions in `zbornica` with `orodja/izrocek.wls`.
 
 ### 10. Mathematica — why do you trust it?
 
