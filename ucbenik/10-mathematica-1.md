@@ -162,15 +162,15 @@ Seznami se v tem poglavju pojavijo še večkrat: z njimi zamenjate več simbolov
 
 ### Spremenljivke
 
-Z enačajem priredimo izrazu ali vrednosti ime:
+Z enačajem simbolu priredite vrednost, na primer število ali enačbo:
 
 ```mathematica
 g = 9.81
 enacba = x^2 - 5 x + 6 == 0
 ```
 
-Odslej Mathematica ime `enacba` povsod nadomesti z enačbo `6 - 5 x + x^2 == 0` (člene uredi po svoje).
-V drugi vrstici nastopata dva različna enačaja: enojni `=` priredi ime, dvojni `==` pa primerja levo in desno stran in vrne logično vrednost `True` ali `False`.
+Odslej Mathematica simbol `enacba` povsod nadomesti z enačbo `6 - 5 x + x^2 == 0` (člene uredi po svoje).
+V drugi vrstici nastopata dva različna enačaja: enojni `=` priredi vrednost, dvojni `==` pa primerja levo in desno stran in vrne logično vrednost `True` ali `False`.
 Ker `x` nima vrednosti, Mathematica primerjave ne more izračunati in vrne kar enačbo.
 
 `````{admonition} Svoja imena pišite z malo začetnico
@@ -180,8 +180,8 @@ Vsa vgrajena imena se začnejo z veliko začetnico.
 Z veliko začetnico pa lahko po nesreči izberete že vgrajeno ime; npr. `E = 5` javi napako, ker je `E` vgrajena konstanta (Eulerjevo število).
 `````
 
-Ime velja, dokler ga ne počistite s funkcijo `Clear`, na primer `Clear[enacba]`, ali ne ustavite jedra.
-Velja v vseh celicah in tudi v drugih odprtih zvezkih.
+Simbol obdrži vrednost, dokler ga ne počistite s funkcijo `Clear`, na primer `Clear[enacba]`, ali ne ustavite jedra.
+Vrednost velja v vseh celicah in tudi v drugih odprtih zvezkih.
 
 ### Prepisovalna pravila
 
