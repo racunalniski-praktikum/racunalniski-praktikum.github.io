@@ -1,0 +1,60 @@
+# Osnovni podatki o predmetu
+
+## Učitelji
+
+### Predavatelj
+
+- Matija Pretnar, pisarna: 5.19 (Jadranska 21)
+
+### Asistenti
+
+- Katja Berčič, pisarna: 5.07 (Jadranska 21)
+- Matjaž Zaveršnik, pisarna: P.10 (Jadranska 21)
+- Timotej Lazar, pisarna: 3.13 (Jadranska 21)
+
+### Demonstratorji
+
+- Nives Gošnjak
+- Živa Hegler
+- Vida Mlinar
+- Anja Rupnik
+- Jure Smolar
+- Filip Štamcar
+- Ruslan Urazbakhtin
+- Alja Zaletelj
+
+## Pravila ocenjevanja
+
+- Pri predmetu dobite eno oceno.
+- Pisno oceno pridobite z reševanjem domačih nalog in pisnim izpitom:
+  - Domače naloge: do 10 točk
+    - Vsaka naloga bo vredna 1 točko.
+    - Domačo nalogo lahko rešujete kakor želite (v skupini, z UI, …)
+  - Pisni izpit: 100 točk
+    - Pisni izpit rešujete samostojno na šolskih računalnikih.
+    - Na izpitih bo uporaba spleta omejena, uporaba UI bo prepovedana.
+    - Pisni izpiti bodo trije, šteje najboljša pridobljena ocena.
+    - Na vsak izpit se morate prijaviti prek VISa.
+    - To velja tudi, če popravljate oceno, zato morate prej obvestiti predavatelja, da vas odjavi s prejšnjega roka.
+- Zbranih 100 točk šteje za maksimalno možno oceno, kriterij je standarden (≥90% = 10, ≥80% = 9, ≥70% = 8, ≥60% = 7, ≥50% = 6).
+- Dodatne točke lahko dobite tudi s popravljanjem napak v zapiskih. Na napako lahko opozorite tako, da na GitHubu odprete issue, še bolje pa je, če jo sami rešite prek pull requesta.
+
+## Načrt dela
+
+| Termin                   | Vaje (FIN & MAT (pon), PED (sre)) | Predavanja ((čet & pet)                ) | Vaje (FIN (čet), APF & APM (pet)) |
+| ------------------------ | --------------------------------- | ---------------------------------------- | --------------------------------- |
+| 1.–2. oktober            | /                                 | Urejanje besedil                         | Urejanje besedil                  |
+| 5.–9. oktober            | Urejanje besedil                  | Ukazna vrstica                           | Ukazna vrstica                    |
+| 12.–16. oktober          | Ukazna vrstica                    | Upravljanje različic                     | Upravljanje različic              |
+| 19.–23. oktober          | Upravljanje različic              | HTML                                     | HTML                              |
+| 26.–30. oktober          | HTML                              | LaTeX 1: uvod                            | LaTeX 1: uvod                     |
+| 2.–6. november           | LaTeX 1: uvod                     | LaTeX 2: okolja, sklicevanje             | LaTeX 2: okolja, sklicevanje      |
+| 9.–13. november          | LaTeX 2: okolja, sklicevanje      | LaTeX 3: predstavitve                    | LaTeX 3: predstavitve             |
+| 16.–20. november         | LaTeX 3: predstavitve             | LaTeX 4: slike                           | LaTeX 4: slike                    |
+| 23.–27. november         | LaTeX 4: slike                    | Excel                                    | Excel                             |
+| 1\. november–4. december | Excel                             | Mathematica 1: uvod                      | Mathematica 1: uvod               |
+| 7.–11. december          | Mathematica 1: uvod               | Mathematica 2: tabele                    | Mathematica 2: tabele             |
+| 14.–18. december         | Mathematica 2: tabele             | Mathematica 3: vizualizacija             | Mathematica 3: vizualizacija      |
+| 21.–25. december         | Mathematica 3: vizualizacija      | /                                        | /                                 |
+| 4.–8. januar             | Utrjevanje                        | Kako deluje UI?                          | Utrjevanje                        |
+| 11.–15. januar           | Utrjevanje                        | Lokalni modeli UI                        | Utrjevanje                        |

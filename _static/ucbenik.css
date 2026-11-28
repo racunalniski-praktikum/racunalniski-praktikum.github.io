@@ -1,0 +1,10 @@
+.avtor {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+/* Brez ligatur v kodi: sicer se na primer `<3->` prikaže kot `<3→`. */
+code, kbd, pre {
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "calt" 0;
+}

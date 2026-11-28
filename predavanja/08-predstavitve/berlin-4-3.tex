@@ -1,0 +1,120 @@
+% Prvi del predavanja: nasveti 1–3 in utesnjena prosojnica nasveta 4, v temi
+% Berlin in razmerju 4 : 3. Predavanje se začne kot slabo predavanje in
+% popravlja po eno težavo naenkrat; vsak popravek pokaže naslednjo težavo. Vsak
+% nasvet ima kratko prosojnico s kodo. O razdelitvi na tri dokumente glej
+% stevilke.tex.
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[slovene]{babel}
+\usepackage{amsmath}
+\usepackage{minted}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usetheme{Berlin}
+\input{stevilke}
+
+\newcommand{\ukaz}[1]{\texttt{\textbackslash#1}}
+
+% Majhna prosojnica s tremi vrsticami za sliko o \only in \onslide. Prvi
+% argument je središče, drugi vsebina, ki jo narišemo vanjo.
+\newcommand{\mala}[2]{%
+  \begin{scope}[shift={#1}]
+    \draw[gray] (-0.8, -0.7) rectangle (0.8, 0.7);
+    #2
+  \end{scope}%
+}
+
+\AtBeginSection{
+  \begin{frame}
+    \sectionpage
+  \end{frame}
+}
+
+\title{Predstavitve}
+\author{Računalniški praktikum}
+\date{18.~november~2026}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Ne berite prosojnic}
+
+% Predavatelj prosojnico prebere na glas, besedo za besedo. Besedilo namenoma
+% sega čez spodnji rob.
+\begin{frame}{Ne berite prosojnic}
+  Prosojnice niso namenjene temu, da bi nanje zapisali vse, kar
+  povemo, temveč temu, da predavatelju pomagajo pokazati tisto, kar je
+  lažje razložiti s sliko kot z besedami. Idealna prosojnica je zato
+  prazna, vsaka stvar na njej pa si mora svoje mesto prislužiti s tem,
+  da pokaže nekaj, kar je težko povedati. Besedilo, ki ga poslušalci
+  lahko preberejo sami, sodi v zapiske ali učbenik, ne na prosojnico.
+  Če prosojnica le ponovi tisto, kar predavatelj tako ali tako pove,
+  poslušalcem odvrača pozornost, saj ne vedo, ali naj berejo ali
+  poslušajo. Še več, poslušalci berejo hitreje od predavatelja, zato
+  do konca besedila pridejo pred njim in začnejo razmišljati o drugih
+  stvareh.
+\end{frame}
+
+\section{Osredotočite se na eno stvar}
+
+% Predavatelj te prosojnice ne bere.
+\begin{frame}{Zakaj?}
+  \begin{itemize}
+    \item poslušalci vedo, na kaj naj bodo pozorni
+    \item na prosojnici je več prostora, da pokažemo idejo
+    \item poslušalci vas prehitijo in nehajo poslušati
+    \item eno samo idejo lahko smiselno povzamete v naslovu
+    \item v Beamerju novo prosojnico naredimo z okoljem \texttt{frame}
+    \item Beamer zna vsebino razkrivati po korakih
+  \end{itemize}
+\end{frame}
+
+% Slaba prosojnica naslednjega nasveta: možnosti, opisane z besedami.
+\begin{frame}{Beamer razkriva vsebino na več načinov}
+  \begin{itemize}[<+->]
+    \item Ukaz \ukaz{only<2>\{\dots\}} vsebino prikaže samo na drugem koraku, na
+      ostalih korakih pa je ni in ne zaseda prostora.
+    \item Ukaz \ukaz{onslide<2>\{\dots\}} vsebino na ostalih korakih skrije,
+      prostor zanjo pa ostane.
+    \item Ukaz \ukaz{alert<2>\{\dots\}} vsebino na drugem koraku poudari, na
+      ostalih pa jo prikaže kot običajno besedilo.
+    \item Ukaz \ukaz{invisible<2>\{\dots\}} vsebino skrije samo na drugem koraku,
+      prostor zanjo pa ostane.
+  \end{itemize}
+\end{frame}
+
+\section{Slika je vredna več kot tisoč besed}
+
+% Slika se gradi po korakih. Ukaz \only spremeni velikost slike, zato je meja
+% slike določena vnaprej.
+\begin{frame}{Beamer razkriva vsebino na več načinov}
+  \centering
+  \begin{tikzpicture}[font=\footnotesize]
+    \useasboundingbox (-0.1, -2.7) rectangle (8.9, 1.4);
+    \foreach \k in {1, 2, 3} {
+      \node at (2 + 2 * \k, 1.1) {\k.\ korak};
+    }
+    \node[anchor=west, align=left, font=\ttfamily\footnotesize] at (0, 0)
+      {A\\\textbackslash only<2>\{B\}\\C};
+    \mala{(4, 0)}{\node at (0, 0.4) {A}; \node at (0, 0) {C};}
+    \mala{(6, 0)}{\node at (0, 0.4) {A}; \node at (0, 0) {B}; \node at (0, -0.4) {C};}
+    \mala{(8, 0)}{\node at (0, 0.4) {A}; \node at (0, 0) {C};}
+    \only<2->{
+      \node[anchor=west, align=left, font=\ttfamily\footnotesize] at (0, -1.9)
+        {A\\\textbackslash onslide<2>\{B\}\\C};
+      \mala{(4, -1.9)}{\node at (0, 0.4) {A}; \draw[gray!50, dashed] (-0.25, -0.15) rectangle (0.25, 0.15); \node at (0, -0.4) {C};}
+      \mala{(6, -1.9)}{\node at (0, 0.4) {A}; \node at (0, 0) {B}; \node at (0, -0.4) {C};}
+      \mala{(8, -1.9)}{\node at (0, 0.4) {A}; \draw[gray!50, dashed] (-0.25, -0.15) rectangle (0.25, 0.15); \node at (0, -0.4) {C};}
+    }
+  \end{tikzpicture}
+\end{frame}
+
+% V razmerju 4 : 3 sta dokaza utesnjena; to vodi v širok format.
+\newcommand{\vsotakoraki}{1-}
+\input{vsota}
+
+\end{document}

@@ -1,0 +1,881 @@
+
+<!DOCTYPE html>
+
+
+<html lang="sl" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mathematica 1 &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=eb76cb1f" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=a3a20203"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=25418326"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=852ec8ec"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '10-mathematica-1';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Abecedni seznam" href="genindex.html" />
+    <link rel="search" title="Išči" href="search.html" />
+    <link rel="next" title="Mathematica 2" href="11-mathematica-2.html" />
+    <link rel="prev" title="Preglednice" href="09-preglednice.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="sl"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-besedilne-datoteke.html">Besedilne datoteke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-ukazna-vrstica.html">Ukazna vrstica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-upravljanje-razlicic.html">Upravljanje različic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-html.html">Označevalni jezik HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13-utrdimo-osnove.html">Utrdimo osnove</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matematični dokumenti</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05-latex.html">Uvod v LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-sklicevanje-in-definicije.html">Sklicevanje in definicije</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-slike.html">Slike</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-predstavitve.html">Predstavitve</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Preglednice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="09-preglednice.html">Preglednice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simbolno računanje</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Mathematica 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-mathematica-2.html">Mathematica 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="H-regex.html">Regularni izrazi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L-latex.html">LaTeX: pogosta vprašanja in reševanje težav</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Prenesite to stran">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/10-mathematica-1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Prenesite izvorno datoteko"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Natisni v PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Celozaslonski način"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mathematica 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Vsebina </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uporabniski-vmesnik">Uporabniški vmesnik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#osnovna-sintaksa">Osnovna sintaksa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#racunanje">Računanje</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natancno-in-numericno-racunanje">Natančno in numerično računanje</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#odvodi-integrali-vsote-in-limite">Odvodi, integrali, vsote in limite</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seznami">Seznami</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spremenljivke">Spremenljivke</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prepisovalna-pravila">Prepisovalna pravila</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funkcije">Funkcije</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risanje">Risanje</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grafi-funkcij">Grafi funkcij</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrijski-objekti">Geometrijski objekti</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloge">Naloge</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="mathematica-1">
+<h1>Mathematica 1<a class="headerlink" href="#mathematica-1" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-mathematica"><span class="std std-ref">Mathematica</span></a></p></li>
+</ul>
+</div>
+<p>Mathematica je program za simbolno računanje, kar med drugim pomeni, da poleg običajnega računanja s števili zna integrirati, računati limite, risati grafe in še kaj.</p>
+<section id="uporabniski-vmesnik">
+<h2>Uporabniški vmesnik<a class="headerlink" href="#uporabniski-vmesnik" title="Link to this heading">#</a></h2>
+<p>Z Mathematico delate v oknu zvezka (angl. <em>notebook</em>).
+Vsak zvezek je sestavljen iz celic, te pa so treh vrst: celice z besedilom (angl. <em>text cell</em>), vhodne celice (angl. <em>input cell</em>) in izhodne celice (angl. <em>output cell</em>).
+Vse tri kaže <a class="reference internal" href="#slika-celice"><span class="std std-numref">slika 14</span></a>.</p>
+<figure class="align-center" id="slika-celice" style="width: 60%">
+<img alt="Celice v zvezku" src="_images/celice.png" />
+<figcaption>
+<p><span class="caption-number">Slika 14 </span><span class="caption-text">  Celice v zvezku: besedilo, izveden izraz z rezultatom in nedokončan izraz</span><a class="headerlink" href="#slika-celice" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Na vrhu je celica z besedilom, napisana v običajni pisavi.</p>
+<p>Pod njo je vhodna celica z izrazom <code class="docutils literal notranslate"><span class="pre">6*7</span></code>.
+Vhodne celice prepoznate po krepki pisavi, v kateri so vsi znaki enako široki.
+Ta celica je že izvedena, zato ima oznako <code class="docutils literal notranslate"><span class="pre">In[1]:=</span></code>.
+Pod njo je izhodna celica z rezultatom <code class="docutils literal notranslate"><span class="pre">42</span></code> in oznako z isto številko, <code class="docutils literal notranslate"><span class="pre">Out[1]=</span></code>.</p>
+<p>Zadnja celica na sliki je vhodna, a še ni izvedena, zato nima oznake.
+Ker izraz v njej ni dokončan, Mathematica obarva oklepaja, ki nimata para, in vejico, za katero ni ničesar.</p>
+<p><strong>Nova celica.</strong>
+Novo vhodno celico dodate tako, da kliknete v prostor pod celico ali med dve celici, kjer se pojavi vodoravna črta, in začnete tipkati.
+Celica nastane šele, ko napišete prvi znak.
+Če želite celico z besedilom, kliknite na isto mesto in pred tipkanjem pritisnite <kbd>Alt</kbd>+<kbd>7</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>7</kbd>) ali v meniju izberite <strong>Format</strong> &gt; <strong>Style</strong> &gt; <strong>Text</strong>.</p>
+<div class="warning admonition">
+<p class="admonition-title">Pozor pri kopiranju izrazov</p>
+<p>Izraz, ki ga kopirate iz celice z besedilom ali iz datoteke PDF, se pogosto ne izvede, ker so nekateri znaki v njem samo videti pravi, Mathematica pa jih ne zna prebrati.
+Tak izraz je zanesljiveje pretipkati.</p>
+</div>
+<p><strong>Izvajanje.</strong>
+Vhodno celico izvedete s tipkama <kbd>Shift</kbd>+<kbd>Enter</kbd>.
+Celica dobi oznako s številko, pod njo pa se pokaže izhodna celica z rezultatom, kot na <a class="reference internal" href="#slika-celice"><span class="std std-numref">sliki 14</span></a>.
+V eno celico lahko napišete več izrazov, vsakega v svojo vrstico; Mathematica izpiše rezultat vsakega posebej.
+Če vrstico končate s podpičjem, Mathematica njenega rezultata ne izpiše.</p>
+<p>Številke v oznakah <code class="docutils literal notranslate"><span class="pre">In</span></code> in <code class="docutils literal notranslate"><span class="pre">Out</span></code> sledijo zaporedju izvajanja: celico z oznako <code class="docutils literal notranslate"><span class="pre">In[3]</span></code> ste izvedli tretjo.
+Mathematica si zapomni vse, kar ste izvedli, zato je pomemben vrstni red izvajanja in ne vrstni red celic v zvezku.</p>
+<p>Izvajanje prekinete s tipkama <kbd>Alt</kbd>+<kbd>.</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>.</kbd>) ali z <strong>Evaluation</strong> &gt; <strong>Abort Evaluation</strong>.
+Če to ne pomaga, ustavite jedro z <strong>Evaluation</strong> &gt; <strong>Quit Kernel</strong> &gt; <strong>Local</strong>.</p>
+<p><strong>Izbiranje in brisanje celic.</strong>
+Na desnem robu zvezka ima vsaka celica oglat zaklepaj (angl. <em>cell bracket</em>).
+Vhodno celico in njen rezultat združuje v skupino še en, zunanji zaklepaj.
+S klikom na zaklepaj izberete celico, s klikom na zunanji zaklepaj pa celo skupino.
+Kar ste izbrali, izbrišete s tipko <kbd>Backspace</kbd> (🍎 <kbd>Delete</kbd>); če izberete skupino, tako izbrišete vhodno celico in njen rezultat hkrati.
+Z dvojnim klikom na zunanji zaklepaj skupino zaprete ali odprete: zaprta skupina kaže samo vhodno celico.</p>
+<p><strong>Posebni znaki in grške črke.</strong>
+Grške črke in druge posebne znake napišete s kratkim imenom (angl. <em>alias</em>) med dvema pritiskoma tipke <kbd>Esc</kbd>: črko alfa na primer kot <kbd>Esc</kbd> <code class="docutils literal notranslate"><span class="pre">a</span></code> <kbd>Esc</kbd>.
+Po prvem pritisku se v celici pokaže znak <code class="docutils literal notranslate"><span class="pre">⋮</span></code>, po drugem pa se zapis spremeni v želeni znak.
+Več o tem preberite v <a class="reference external" href="https://reference.wolfram.com/language/howto/TypeAGreekLetter.html">dokumentaciji</a>.</p>
+<p><strong>Dokumentacija.</strong>
+Mathematica ima več tisoč vgrajenih funkcij.
+Najpogostejše si boste zapomnili, za ostale pa je dovolj, da jih znate poiskati.
+Kratek opis funkcije dobite z vprašajem pred njenim imenom, na primer <code class="docutils literal notranslate"><span class="pre">?Plot</span></code>.
+Celotno dokumentacijo odprete s <strong>Help</strong> &gt; <strong>Wolfram Documentation</strong>.
+Primeri v njej so celice, ki jih lahko spremenite in izvedete.</p>
+</section>
+<section id="osnovna-sintaksa">
+<h2>Osnovna sintaksa<a class="headerlink" href="#osnovna-sintaksa" title="Link to this heading">#</a></h2>
+<p>Matematične izraze pišete precej podobno kot v LaTeXu: <code class="docutils literal notranslate"><span class="pre">x^2</span></code> ostane <code class="docutils literal notranslate"><span class="pre">x^2</span></code>, <code class="docutils literal notranslate"><span class="pre">\sin</span> <span class="pre">x</span></code> pa postane <code class="docutils literal notranslate"><span class="pre">Sin[x]</span></code>.
+Množenje zapišete z zvezdico ali s presledkom: <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">b</span></code> sta produkta.
+Zapis <code class="docutils literal notranslate"><span class="pre">ab</span></code> brez presledka je en sam simbol z imenom <code class="docutils literal notranslate"><span class="pre">ab</span></code>.</p>
+<p><strong>Oklepaji.</strong></p>
+<ul class="simple">
+<li><p>Z okroglimi oklepaji združujete dele izraza, kot v matematiki: <code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">+</span> <span class="pre">2)*3</span></code>.</p></li>
+<li><p>V oglatih oklepajih naštejete argumente funkcije, ločene z vejicami: <code class="docutils literal notranslate"><span class="pre">f[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code>.</p></li>
+<li><p>V zavitih oklepajih zapišete sezname (<code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3}</span></code>), koordinate točk (<code class="docutils literal notranslate"><span class="pre">{Cos[x],</span> <span class="pre">Sin[x]}</span></code>) in množice (<code class="docutils literal notranslate"><span class="pre">{rdeča,</span> <span class="pre">zelena,</span> <span class="pre">modra}</span></code>).</p></li>
+</ul>
+<p><strong>Imena.</strong>
+Vgrajene funkcije in konstante se začnejo z veliko začetnico: <code class="docutils literal notranslate"><span class="pre">Sin[x]</span></code> je sinus, <code class="docutils literal notranslate"><span class="pre">sin</span></code> pa je za Mathematico neznano ime.
+Najpogostejše konstante so <code class="docutils literal notranslate"><span class="pre">Pi</span></code>, <code class="docutils literal notranslate"><span class="pre">E</span></code>, imaginarna enota <code class="docutils literal notranslate"><span class="pre">I</span></code> in neskončnost <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>.</p>
+<p><strong>Barve.</strong>
+Mathematica imena v vhodnih celicah barva, zato napako pogosto opazite, še preden celico izvedete (<a class="reference internal" href="#slika-barve"><span class="std std-numref">slika 15</span></a>):</p>
+<ul class="simple">
+<li><p>Modra so imena, ki jih Mathematica ne pozna, na primer <code class="docutils literal notranslate"><span class="pre">sin</span></code>. Modro ime je torej vaše lastno ali pa tipkarska napaka.</p></li>
+<li><p>Črna so imena, ki jih pozna: ko <code class="docutils literal notranslate"><span class="pre">sin</span></code> popravite v <code class="docutils literal notranslate"><span class="pre">Sin</span></code>, počrni.</p></li>
+<li><p>Zelene so vezane spremenljivke, na primer <code class="docutils literal notranslate"><span class="pre">k</span></code> v vsoti <code class="docutils literal notranslate"><span class="pre">Sum[1/k^2,</span> <span class="pre">{k,</span> <span class="pre">1,</span> <span class="pre">Infinity}]</span></code>. Dokumentacija jim pravi <em>local variables</em>.</p></li>
+<li><p>Vijoličen je oklepaj brez para in vejica, za katero ni ničesar.</p></li>
+</ul>
+<figure class="align-center" id="slika-barve" style="width: 60%">
+<img alt="Štiri vhodne celice s komentarji, v katerih so imena in oklepaj obarvani različno" src="_images/barve.png" />
+<figcaption>
+<p><span class="caption-number">Slika 15 </span><span class="caption-text">  Barve v vhodnih celicah</span><a class="headerlink" href="#slika-barve" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Za vsakim izrazom na sliki je komentar: besedilo med <code class="docutils literal notranslate"><span class="pre">(*</span></code> in <code class="docutils literal notranslate"><span class="pre">*)</span></code>, ki ga Mathematica ne izvede.</p>
+</section>
+<section id="racunanje">
+<h2>Računanje<a class="headerlink" href="#racunanje" title="Link to this heading">#</a></h2>
+<p>Mathematico lahko uporabljate kot kalkulator, vendar zna več: računa natančno in tudi z izrazi, v katerih nastopajo simboli.
+Rezultate poimenujete, vanje vstavljate vrednosti in iz njih sestavljate funkcije.</p>
+<section id="natancno-in-numericno-racunanje">
+<h3>Natančno in numerično računanje<a class="headerlink" href="#natancno-in-numericno-racunanje" title="Link to this heading">#</a></h3>
+<p>Mathematica računa natančno, dokler ne zahtevate drugače.
+<a class="reference internal" href="#slika-natancno-racunanje"><span class="std std-numref">Slika 16</span></a> kaže, kaj dobite, če izvedete celici z izrazoma <code class="docutils literal notranslate"><span class="pre">1/3</span> <span class="pre">+</span> <span class="pre">1/6</span></code> in <code class="docutils literal notranslate"><span class="pre">Sqrt[8]</span></code>.</p>
+<figure class="align-center" id="slika-natancno-racunanje" style="width: 60%">
+<img alt="Izvedeni celici z izrazoma 1/3 + 1/6 in Sqrt[8] ter rezultatoma 1/2 in 2 Sqrt[2]" src="_images/natancno-racunanje.png" />
+<figcaption>
+<p><span class="caption-number">Slika 16 </span><span class="caption-text">  Natančna rezultata: ulomek in izraz s korenom</span><a class="headerlink" href="#slika-natancno-racunanje" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Rezultata sta ulomek in izraz s korenom, ne decimalna približka.
+Numerično vrednost izračuna funkcija <code class="docutils literal notranslate"><span class="pre">N</span></code>, ki ji kot drugi argument lahko podate število mest: <code class="docutils literal notranslate"><span class="pre">N[Pi,</span> <span class="pre">20]</span></code> vrne <code class="docutils literal notranslate"><span class="pre">3.1415926535897932385</span></code>.
+Numeričen je tudi rezultat vsakega izraza, v katerem nastopa število z decimalno piko: <code class="docutils literal notranslate"><span class="pre">1/3.</span></code> vrne <code class="docutils literal notranslate"><span class="pre">0.333333</span></code>.</p>
+</section>
+<section id="odvodi-integrali-vsote-in-limite">
+<h3>Odvodi, integrali, vsote in limite<a class="headerlink" href="#odvodi-integrali-vsote-in-limite" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Vnos</p></th>
+<th class="head"><p>Rezultat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>odvod</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">D[x^3,</span> <span class="pre">x]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">x^2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>nedoločeni integral</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Integrate[x^2,</span> <span class="pre">x]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x^3/3</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>določeni integral</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Integrate[x^2,</span> <span class="pre">{x,</span> <span class="pre">0,</span> <span class="pre">1}]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1/3</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>vsota</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Sum[k,</span> <span class="pre">{k,</span> <span class="pre">1,</span> <span class="pre">100}]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5050</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>limita</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Limit[Sin[x]/x,</span> <span class="pre">x</span> <span class="pre">-&gt;</span> <span class="pre">0]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Nedoločenemu integralu Mathematica ne pripiše konstante.
+Seznam <code class="docutils literal notranslate"><span class="pre">{x,</span> <span class="pre">0,</span> <span class="pre">1}</span></code> v določenem integralu pove, da <code class="docutils literal notranslate"><span class="pre">x</span></code> teče od <code class="docutils literal notranslate"><span class="pre">0</span></code> do <code class="docutils literal notranslate"><span class="pre">1</span></code>.
+Enak seznam določa meje vsote, <code class="docutils literal notranslate"><span class="pre">{k,</span> <span class="pre">1,</span> <span class="pre">100}</span></code>, pri risanju grafov pa interval.</p>
+</section>
+<section id="seznami">
+<h3>Seznami<a class="headerlink" href="#seznami" title="Link to this heading">#</a></h3>
+<p>Mathematica ne računa le s števili in izrazi, temveč tudi s seznami.
+Nekatere funkcije seznam vrnejo kot rezultat, druge ga sprejmejo kot argument.
+Množic Mathematica ne loči od seznamov: množico zapišete kot seznam, funkcije za množice pa vrnejo seznam brez ponovitev, urejen po velikosti.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Vnos</p></th>
+<th class="head"><p>Rezultat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>delitelji števila</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Divisors[12]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">6,</span> <span class="pre">12}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>presek</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Intersection[Divisors[12],</span> <span class="pre">Divisors[18]]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">6}</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>unija</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Union[{3,</span> <span class="pre">1,</span> <span class="pre">2},</span> <span class="pre">{2,</span> <span class="pre">4}]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>največji element</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Max[{1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">6}]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">6</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>računanje po elementih</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3}^2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">4,</span> <span class="pre">9}</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Presek iz tabele je seznam skupnih deliteljev števil 12 in 18, njegov največji element pa njun največji skupni delitelj; enak rezultat vrne <code class="docutils literal notranslate"><span class="pre">GCD[12,</span> <span class="pre">18]</span></code>.
+Seznami se v tem poglavju pojavijo še večkrat: z njimi zamenjate več simbolov hkrati, narišete več grafov v isto sliko in sestavite sliko iz geometrijskih objektov.</p>
+</section>
+<section id="spremenljivke">
+<h3>Spremenljivke<a class="headerlink" href="#spremenljivke" title="Link to this heading">#</a></h3>
+<p>Z enačajem simbolu priredite vrednost, na primer število ali enačbo:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.81</span>
+<span class="n">enacba</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>Odslej Mathematica simbol <code class="docutils literal notranslate"><span class="pre">enacba</span></code> povsod nadomesti z enačbo <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">-</span> <span class="pre">5</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">x^2</span> <span class="pre">==</span> <span class="pre">0</span></code> (člene uredi po svoje).
+V drugi vrstici nastopata dva različna enačaja: enojni <code class="docutils literal notranslate"><span class="pre">=</span></code> priredi vrednost, dvojni <code class="docutils literal notranslate"><span class="pre">==</span></code> pa primerja levo in desno stran in vrne logično vrednost <code class="docutils literal notranslate"><span class="pre">True</span></code> ali <code class="docutils literal notranslate"><span class="pre">False</span></code>.
+Ker <code class="docutils literal notranslate"><span class="pre">x</span></code> nima vrednosti, Mathematica primerjave ne more izračunati in vrne kar enačbo.</p>
+<div class="tip admonition">
+<p class="admonition-title">Svoja imena pišite z malo začetnico</p>
+<p>Vsa vgrajena imena se začnejo z veliko začetnico.
+Če svoja imena pišete z malo začetnico, se torej nikoli ne bodo ujemala z vgrajenimi.
+Z veliko začetnico pa lahko po nesreči izberete že vgrajeno ime; npr. <code class="docutils literal notranslate"><span class="pre">E</span> <span class="pre">=</span> <span class="pre">5</span></code> javi napako, ker je <code class="docutils literal notranslate"><span class="pre">E</span></code> vgrajena konstanta (Eulerjevo število).</p>
+</div>
+<p>Simbol obdrži vrednost, dokler ga ne počistite s funkcijo <code class="docutils literal notranslate"><span class="pre">Clear</span></code>, na primer <code class="docutils literal notranslate"><span class="pre">Clear[enacba]</span></code>, ali ne ustavite jedra.
+Vrednost velja v vseh celicah in tudi v drugih odprtih zvezkih.</p>
+</section>
+<section id="prepisovalna-pravila">
+<h3>Prepisovalna pravila<a class="headerlink" href="#prepisovalna-pravila" title="Link to this heading">#</a></h3>
+<p>Ali je <span class="math notranslate nohighlight">\(x = 2\)</span> rešitev enačbe, lahko preverite na primer s <em>prepisovalnim pravilom</em> (angl. <em>rule</em>):</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">enacba</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>Rezultat je <code class="docutils literal notranslate"><span class="pre">True</span></code>.
+Pravilo <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-&gt;</span> <span class="pre">2</span></code> pomeni »<code class="docutils literal notranslate"><span class="pre">x</span></code> zamenjaj z <code class="docutils literal notranslate"><span class="pre">2</span></code>«, operator <code class="docutils literal notranslate"><span class="pre">/.</span></code> pa pravilo uporabi na izrazu, ki stoji pred njim.
+Puščico napišete z znakoma <code class="docutils literal notranslate"><span class="pre">-</span></code> in <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, Mathematica pa ju sama združi v <code class="docutils literal notranslate"><span class="pre">→</span></code>.</p>
+<p>Pravilo velja samo za ta izračun: <code class="docutils literal notranslate"><span class="pre">x</span></code> je po njem še vedno simbol brez vrednosti, <code class="docutils literal notranslate"><span class="pre">enacba</span></code> pa še vedno enačba.
+Zato lahko takoj zatem preverite drugo število: <code class="docutils literal notranslate"><span class="pre">enacba</span> <span class="pre">/.</span> <span class="pre">x</span> <span class="pre">-&gt;</span> <span class="pre">4</span></code> vrne <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>Navidez zelo podoben rezultat bi lahko dosegli tudi tako, da bi vrednost <code class="docutils literal notranslate"><span class="pre">x</span></code> nastavili z enačajem:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="n">enacba</span>
+</pre></div>
+</div>
+<p>Rezultat je spet <code class="docutils literal notranslate"><span class="pre">True</span></code>, vendar bo <code class="docutils literal notranslate"><span class="pre">x</span></code> odslej imel vrednost <code class="docutils literal notranslate"><span class="pre">2</span></code> povsod, v vseh celicah, dokler ga ne počistite s <code class="docutils literal notranslate"><span class="pre">Clear[x]</span></code>.
+Mathematica bo <code class="docutils literal notranslate"><span class="pre">enacba</span></code> povsod prebrala kot <code class="docutils literal notranslate"><span class="pre">True</span></code>, tudi če bi napisali
+<code class="docutils literal notranslate"><span class="pre">enacba</span> <span class="pre">/.</span> <span class="pre">x</span> <span class="pre">-&gt;</span> <span class="pre">4</span></code> (kljub temu, da <span class="math notranslate nohighlight">\(4\)</span> ni rešitev).</p>
+<p>Več simbolov hkrati zamenjate s seznamom pravil.
+Tako v isto formulo vstavite različne nabore vrednosti:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">diskriminanta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">c</span>
+<span class="n">diskriminanta</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="p">{</span><span class="n">a</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span>
+<span class="n">diskriminanta</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="p">{</span><span class="n">a</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Zadnji dve vrstici vrneta <code class="docutils literal notranslate"><span class="pre">1</span></code> in <code class="docutils literal notranslate"><span class="pre">-16</span></code>, simboli <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">c</span></code> pa ostanejo brez vrednosti.</p>
+<p>Pravila ste že srečali v limiti, <code class="docutils literal notranslate"><span class="pre">Limit[Sin[x]/x,</span> <span class="pre">x</span> <span class="pre">-&gt;</span> <span class="pre">0]</span></code>, in jih boste še pri risanju.</p>
+</section>
+<section id="funkcije">
+<h3>Funkcije<a class="headerlink" href="#funkcije" title="Link to this heading">#</a></h3>
+<p>Kadar boste v isti izraz vrednosti vstavljali večkrat, definirajte funkcijo:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">[</span><span class="nv">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Na levi strani definicije za vsako spremenljivko napišete podčrtaj, na desni pa ne.
+V tem poglavju je dovolj, da ga vedno napišete za spremenljivke na levi strani <code class="docutils literal notranslate"><span class="pre">:=</span></code>.
+Funkcijo definirajte z operatorjem <code class="docutils literal notranslate"><span class="pre">:=</span></code> in ne z enačajem, sicer se ne bo obnašala po vaših pričakovanjih.</p>
+<p>Zdaj <code class="docutils literal notranslate"><span class="pre">f[3]</span></code> vrne <code class="docutils literal notranslate"><span class="pre">10</span></code>, <code class="docutils literal notranslate"><span class="pre">f[t</span> <span class="pre">+</span> <span class="pre">1]</span></code> vrne <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">(1</span> <span class="pre">+</span> <span class="pre">t)^2</span></code>, <code class="docutils literal notranslate"><span class="pre">f'[x]</span></code> pa odvod <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">x</span></code>.
+Vrednosti funkcije v več točkah hkrati izračuna funkcija <code class="docutils literal notranslate"><span class="pre">Table</span></code>: <code class="docutils literal notranslate"><span class="pre">Table[f[x],</span> <span class="pre">{x,</span> <span class="pre">0,</span> <span class="pre">3}]</span></code> vrne seznam <code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">5,</span> <span class="pre">10}</span></code>.
+Seznam <code class="docutils literal notranslate"><span class="pre">{x,</span> <span class="pre">0,</span> <span class="pre">3}</span></code> pove, da <code class="docutils literal notranslate"><span class="pre">x</span></code> teče od <code class="docutils literal notranslate"><span class="pre">0</span></code> do <code class="docutils literal notranslate"><span class="pre">3</span></code>, enako kot pri vsoti.</p>
+<p>Če podčrtaj pozabite, funkcija ne deluje: <code class="docutils literal notranslate"><span class="pre">f[3]</span></code> ostane <code class="docutils literal notranslate"><span class="pre">f[3]</span></code>.</p>
+</section>
+</section>
+<section id="risanje">
+<h2>Risanje<a class="headerlink" href="#risanje" title="Link to this heading">#</a></h2>
+<p>Mathematica nariše dve vrsti slik: grafe, ki jih izračuna iz predpisa funkcije, in slike, ki jih sami sestavite iz geometrijskih objektov.</p>
+<section id="grafi-funkcij">
+<h3>Grafi funkcij<a class="headerlink" href="#grafi-funkcij" title="Link to this heading">#</a></h3>
+<p>Graf funkcije nariše funkcija <code class="docutils literal notranslate"><span class="pre">Plot</span></code>:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">Plot</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p>Drugi argument, <code class="docutils literal notranslate"><span class="pre">{x,</span> <span class="pre">-2,</span> <span class="pre">2}</span></code>, pove, da <code class="docutils literal notranslate"><span class="pre">x</span></code> teče od <code class="docutils literal notranslate"><span class="pre">-2</span></code> do <code class="docutils literal notranslate"><span class="pre">2</span></code>, enako kot pri določenem integralu.
+Narišete lahko izraz, funkcijo, ki ste jo definirali, ali več grafov hkrati, če jih naštejete v seznamu:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">Plot</span><span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">}]</span>
+<span class="n">Plot</span><span class="p">[{</span><span class="n">Sin</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">x</span><span class="p">]},</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">Pi</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p>Druga vrstica nariše oba grafa v isto sliko, vsakega v svoji barvi, kot kaže <a class="reference internal" href="#slika-graf-sinus-kosinus"><span class="std std-numref">slika 17</span></a>.</p>
+<figure class="align-center" id="slika-graf-sinus-kosinus" style="width: 50%">
+<img alt="Grafa funkcij sinus in kosinus na intervalu od 0 do 2π" src="_images/graf-sinus-kosinus.png" />
+<figcaption>
+<p><span class="caption-number">Slika 17 </span><span class="caption-text">  Grafa sinusa in kosinusa v isti sliki</span><a class="headerlink" href="#slika-graf-sinus-kosinus" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Videz grafa določite z nastavitvami (angl. <em>options</em>).
+Nastavitve so pravila, ki jih naštejete za drugim argumentom:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">Plot</span><span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="n">PlotRange</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p>Nastavitev <code class="docutils literal notranslate"><span class="pre">PlotRange</span></code> določi, kateri del navpične osi je prikazan.
+Ostale nastavitve so naštete v dokumentaciji funkcije <code class="docutils literal notranslate"><span class="pre">Plot</span></code>.</p>
+</section>
+<section id="geometrijski-objekti">
+<h3>Geometrijski objekti<a class="headerlink" href="#geometrijski-objekti" title="Link to this heading">#</a></h3>
+<p>Slike, ki niso grafi funkcij, sestavite iz geometrijskih objektov s funkcijo <code class="docutils literal notranslate"><span class="pre">Graphics</span></code>:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">Graphics</span><span class="p">[{</span><span class="n">Circle</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">Point</span><span class="p">[{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}],</span><span class="w"> </span><span class="n">Line</span><span class="p">[{{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">}}]}]</span>
+</pre></div>
+</div>
+<p>Objekte naštejete v seznamu, točko pa podate kot seznam dveh koordinat, na primer <code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">0}</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Circle[{0,</span> <span class="pre">0},</span> <span class="pre">1]</span></code> je krožnica s središčem <code class="docutils literal notranslate"><span class="pre">{0,</span> <span class="pre">0}</span></code> in polmerom <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Point[{1,</span> <span class="pre">0}]</span></code> je točka.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line[{{-1,</span> <span class="pre">0},</span> <span class="pre">{0,</span> <span class="pre">1}}]</span></code> je daljica med točkama; z več točkami v seznamu dobite lomljenko.</p></li>
+</ul>
+<p>Barvo objektov in velikost točk določite tako, da ju v seznamu napišete pred objekt, na primer <code class="docutils literal notranslate"><span class="pre">Red</span></code> ali <code class="docutils literal notranslate"><span class="pre">PointSize[Large]</span></code>; veljata za vse objekte, ki sledijo.
+Koordinatni osi doda nastavitev <code class="docutils literal notranslate"><span class="pre">Axes</span></code>:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">Graphics</span><span class="p">[{</span><span class="n">Circle</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">Red</span><span class="p">,</span><span class="w"> </span><span class="n">PointSize</span><span class="p">[</span><span class="n">Large</span><span class="p">],</span><span class="w"> </span><span class="n">Point</span><span class="p">[{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}]},</span><span class="w"> </span><span class="n">Axes</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">True</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Rezultat kaže <a class="reference internal" href="#slika-kroznica-tocka"><span class="std std-numref">slika 18</span></a>.</p>
+<figure class="align-center" id="slika-kroznica-tocka" style="width: 35%">
+<img alt="Enotska krožnica z rdečo točko v (1, 0) in koordinatnima osema" src="_images/kroznica-tocka.png" />
+<figcaption>
+<p><span class="caption-number">Slika 18 </span><span class="caption-text">  Krožnica z rdečo točko in koordinatnima osema</span><a class="headerlink" href="#slika-kroznica-tocka" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Druge objekte, na primer <code class="docutils literal notranslate"><span class="pre">Disk</span></code>, <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> in <code class="docutils literal notranslate"><span class="pre">Triangle</span></code>, najdete v dokumentaciji funkcije <code class="docutils literal notranslate"><span class="pre">Graphics</span></code>.</p>
+</section>
+</section>
+<section id="naloge">
+<h2>Naloge<a class="headerlink" href="#naloge" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Preletite <a class="reference external" href="https://reference.wolfram.com/language/tutorial/KeyboardShortcutListing.html">seznam bližnjic na tipkovnici</a>. V njem poiščite bližnjici za prekinitev izvajanja in za celico z besedilom.</p></li>
+<li><p>Rešite naloge v <a class="reference download internal" download="" href="_downloads/972b646b27107b0c1c28fb35a06854f0/mathematica1.nb"><span class="xref download myst">zvezku</span></a>.</p></li>
+<li><p>Zvezek shranite v glavni imenik svojega repozitorija <code class="docutils literal notranslate"><span class="pre">racunalniski-praktikum</span></code>, preden odidete iz predavalnice, pa ga zabeležite in vnos pošljite na GitHub.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="09-preglednice.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">nazaj</p>
+        <p class="prev-next-title">Preglednice</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="11-mathematica-2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">naprej</p>
+        <p class="prev-next-title">Mathematica 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Vsebina
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uporabniski-vmesnik">Uporabniški vmesnik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#osnovna-sintaksa">Osnovna sintaksa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#racunanje">Računanje</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natancno-in-numericno-racunanje">Natančno in numerično računanje</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#odvodi-integrali-vsote-in-limite">Odvodi, integrali, vsote in limite</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seznami">Seznami</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spremenljivke">Spremenljivke</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prepisovalna-pravila">Prepisovalna pravila</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funkcije">Funkcije</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risanje">Risanje</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grafi-funkcij">Grafi funkcij</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrijski-objekti">Geometrijski objekti</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloge">Naloge</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Avtor Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

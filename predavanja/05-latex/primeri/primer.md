@@ -1,0 +1,193 @@
+---
+title: Fourierove vrste, Baselski problem in Gaussov integral
+author: Klavdij Opusnik
+date: 29. oktober 2026
+lang: sl-SI
+---
+
+# Ortogonalnost trigonometrijskih funkcij
+
+Naj bosta $m, n \in \mathbb{N}$. Za vse take $m$ in $n$ veljajo zveze
+
+$$\int_{-\pi}^{\pi} \sin(mx) \sin(nx) \, dx = \begin{cases} \pi, & m = n, \\ 0, & m \neq n, \end{cases}$$
+
+$$\int_{-\pi}^{\pi} \cos(mx) \cos(nx) \, dx = \begin{cases} \pi, & m = n, \\ 0, & m \neq n, \end{cases}$$
+
+$$\int_{-\pi}^{\pi} \sin(mx) \cos(nx) \, dx = 0.$$
+
+Prvo zvezo dokažemo z adicijskim izrekom. Ker je
+$\sin \alpha \sin \beta = \frac{1}{2} \bigl( \cos(\alpha - \beta) - \cos(\alpha + \beta) \bigr)$,
+je za $m \neq n$
+
+$$\begin{aligned}
+\int_{-\pi}^{\pi} \sin(mx) \sin(nx) \, dx
+&= \frac{1}{2} \int_{-\pi}^{\pi} \bigl( \cos((m - n)x) - \cos((m + n)x) \bigr) \, dx \\
+&= \frac{1}{2} \left[ \frac{\sin((m - n)x)}{m - n} - \frac{\sin((m + n)x)}{m + n} \right]_{-\pi}^{\pi} \\
+&= 0,
+\end{aligned}$$
+
+saj je $\sin(k\pi) = 0$ za vsak $k \in \mathbb{Z}$. Za $m = n$ pa je
+
+$$\int_{-\pi}^{\pi} \sin^2(nx) \, dx = \frac{1}{2} \int_{-\pi}^{\pi} \bigl( 1 - \cos(2nx) \bigr) \, dx = \frac{1}{2} \cdot 2\pi = \pi.$$
+
+Drugo in tretjo zvezo dokažemo enako, z identitetama
+
+$$\cos \alpha \cos \beta = \frac{1}{2} \bigl( \cos(\alpha - \beta) + \cos(\alpha + \beta) \bigr),$$
+
+$$\sin \alpha \cos \beta = \frac{1}{2} \bigl( \sin(\alpha - \beta) + \sin(\alpha + \beta) \bigr).$$
+
+# Fourierova vrsta
+
+Naj bo $f \colon [-\pi, \pi] \to \mathbb{R}$ integrabilna funkcija. Njena *Fourierova vrsta* je
+
+$$f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} \bigl( a_n \cos(nx) + b_n \sin(nx) \bigr),$$
+
+kjer so koeficienti enaki
+
+$$a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos(nx) \, dx, \qquad b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin(nx) \, dx.$$
+
+Formuli za koeficienta dobimo iz ortogonalnosti: vrsto pomnožimo s $\cos(mx)$ oziroma s $\sin(mx)$ in jo integriramo po členih. Od vseh členov ostane samo tisti z indeksom $n = m$.
+
+## Pravokotni signal
+
+Za zgled vzemimo liho funkcijo
+
+$$f(x) = \operatorname{sgn} x = \begin{cases} -1, & -\pi < x < 0, \\ 0, & x = 0, \\ 1, & 0 < x < \pi. \end{cases}$$
+
+Ker je $f$ liha, je $f(x) \cos(nx)$ liha funkcija, zato je $a_n = 0$ za vse $n \geq 0$. Funkcija $f(x) \sin(nx)$ je soda, zato je
+
+$$\begin{aligned}
+b_n &= \frac{2}{\pi} \int_{0}^{\pi} \sin(nx) \, dx
+= \frac{2}{\pi} \left[ -\frac{\cos(nx)}{n} \right]_{0}^{\pi}
+= \frac{2}{n\pi} \bigl( 1 - \cos(n\pi) \bigr)
+= \frac{2}{n\pi} \bigl( 1 - (-1)^n \bigr) \\
+&= \begin{cases} \dfrac{4}{n\pi}, & n \text{ lih}, \\ 0, & n \text{ sod}. \end{cases}
+\end{aligned}$$
+
+Fourierova vrsta pravokotnega signala je torej
+
+$$\begin{aligned}
+\operatorname{sgn} x &= \frac{4}{\pi} \sum_{k=0}^{\infty} \frac{\sin\bigl((2k + 1)x\bigr)}{2k + 1} \\
+&= \frac{4}{\pi} \left( \sin x + \frac{\sin(3x)}{3} + \frac{\sin(5x)}{5} + \cdots \right), \qquad -\pi < x < \pi.
+\end{aligned}$$
+
+Vrsta konvergira k $f(x)$ v vsaki točki, v kateri je $f$ zvezna, v točki $x = 0$ pa k povprečju leve in desne limite, $\frac{1}{2} \bigl( f(0^-) + f(0^+) \bigr) = 0$.
+
+## Leibnizova vrsta
+
+Vstavimo $x = \frac{\pi}{2}$. Ker je $\sin\bigl((2k + 1)\frac{\pi}{2}\bigr) = (-1)^k$, dobimo
+
+$$1 = \frac{4}{\pi} \sum_{k=0}^{\infty} \frac{(-1)^k}{2k + 1}, \qquad \text{torej} \qquad \frac{\pi}{4} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \sum_{k=0}^{\infty} \frac{(-1)^k}{2k + 1}.$$
+
+# Parsevalova enakost in Baselski problem
+
+Za kvadratno integrabilno funkcijo $f$ velja *Parsevalova enakost*
+
+$$\frac{1}{\pi} \int_{-\pi}^{\pi} \lvert f(x) \rvert^2 \, dx = \frac{a_0^2}{2} + \sum_{n=1}^{\infty} \bigl( a_n^2 + b_n^2 \bigr).$$
+
+Za pravokotni signal je $\lvert f(x) \rvert^2 = 1$ povsod razen v točki $0$, zato je leva stran enaka $\frac{1}{\pi} \cdot 2\pi = 2$. Na desni ostanejo samo lihi koeficienti $b_{2k+1} = \frac{4}{(2k + 1)\pi}$:
+
+$$2 = \sum_{k=0}^{\infty} \frac{16}{\pi^2 (2k + 1)^2}, \qquad \text{torej} \qquad \sum_{k=0}^{\infty} \frac{1}{(2k + 1)^2} = \frac{\pi^2}{8}.$$
+
+Naj bo $S = \sum_{n=1}^{\infty} \frac{1}{n^2}$. Vsoto razdelimo na sode in lihe člene:
+
+$$\begin{aligned}
+S &= \sum_{k=1}^{\infty} \frac{1}{(2k)^2} + \sum_{k=0}^{\infty} \frac{1}{(2k + 1)^2} \\
+&= \frac{1}{4} \sum_{k=1}^{\infty} \frac{1}{k^2} + \frac{\pi^2}{8} \\
+&= \frac{S}{4} + \frac{\pi^2}{8}.
+\end{aligned}$$
+
+Od tod je $\frac{3}{4} S = \frac{\pi^2}{8}$ in
+
+$$\boxed{\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.}$$
+
+Na enak način dobimo še vsoto alternirajoče vrste:
+
+$$\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^2} = \sum_{k=0}^{\infty} \frac{1}{(2k + 1)^2} - \sum_{k=1}^{\infty} \frac{1}{(2k)^2} = \frac{\pi^2}{8} - \frac{1}{4} \cdot \frac{\pi^2}{6} = \frac{\pi^2}{12}.$$
+
+# Gaussov integral
+
+Izračunajmo
+
+$$I = \int_{-\infty}^{\infty} e^{-x^2} \, dx.$$
+
+Nedoločenega integrala funkcije $e^{-x^2}$ ne moremo zapisati z elementarnimi funkcijami, zato si pomagamo z dvojnim integralom. Po Fubinijevem izreku je
+
+$$I^2 = \left( \int_{-\infty}^{\infty} e^{-x^2} \, dx \right) \left( \int_{-\infty}^{\infty} e^{-y^2} \, dy \right) = \iint_{\mathbb{R}^2} e^{-(x^2 + y^2)} \, dx \, dy.$$
+
+Preidemo na polarne koordinate $x = r \cos \varphi$, $y = r \sin \varphi$. Jacobijeva determinanta te preslikave je
+
+$$\det \frac{\partial(x, y)}{\partial(r, \varphi)} = \begin{vmatrix} \cos \varphi & -r \sin \varphi \\ \sin \varphi & r \cos \varphi \end{vmatrix} = r \cos^2 \varphi + r \sin^2 \varphi = r,$$
+
+zato je
+
+$$\begin{aligned}
+I^2 &= \int_{0}^{2\pi} \int_{0}^{\infty} e^{-r^2} \, r \, dr \, d\varphi
+= 2\pi \int_{0}^{\infty} r e^{-r^2} \, dr \\
+&= 2\pi \left[ -\frac{1}{2} e^{-r^2} \right]_{0}^{\infty}
+= 2\pi \cdot \frac{1}{2}
+= \pi.
+\end{aligned}$$
+
+Ker je $I > 0$, je
+
+$$\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}.$$
+
+## Normalna porazdelitev
+
+Z uvedbo nove spremenljivke $x = \frac{t - \mu}{\sigma \sqrt{2}}$, kjer je $\sigma > 0$, dobimo
+
+$$\int_{-\infty}^{\infty} \frac{1}{\sigma \sqrt{2\pi}} \exp\left( -\frac{(t - \mu)^2}{2\sigma^2} \right) dt = \frac{1}{\sigma \sqrt{2\pi}} \cdot \sigma \sqrt{2} \cdot \sqrt{\pi} = 1,$$
+
+zato je funkcija pod integralom gostota verjetnosti. To je gostota normalne porazdelitve $N(\mu, \sigma^2)$.
+
+## Funkcija gama
+
+Funkcijo gama za $s > 0$ definiramo z integralom
+
+$$\Gamma(s) = \int_{0}^{\infty} t^{s - 1} e^{-t} \, dt.$$
+
+Z integracijo po delih dobimo $\Gamma(s + 1) = s \, \Gamma(s)$, iz $\Gamma(1) = 1$ pa sledi $\Gamma(n + 1) = n!$ za vsak $n \in \mathbb{N}$. Z uvedbo nove spremenljivke $t = u^2$, $dt = 2u \, du$ dobimo
+
+$$\Gamma\left( \frac{1}{2} \right) = \int_{0}^{\infty} t^{-1/2} e^{-t} \, dt = \int_{0}^{\infty} \frac{1}{u} e^{-u^2} \, 2u \, du = 2 \int_{0}^{\infty} e^{-u^2} \, du = \sqrt{\pi},$$
+
+od tod pa na primer
+
+$$\Gamma\left( \frac{5}{2} \right) = \frac{3}{2} \cdot \frac{1}{2} \cdot \Gamma\left( \frac{1}{2} \right) = \frac{3\sqrt{\pi}}{4}.$$
+
+# Vandermondova determinanta
+
+Naj bodo $x_1, x_2, \ldots, x_n$ realna števila. Vandermondova matrika je
+
+$$V = \begin{pmatrix}
+1 & x_1 & x_1^2 & \cdots & x_1^{n-1} \\
+1 & x_2 & x_2^2 & \cdots & x_2^{n-1} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & x_n & x_n^2 & \cdots & x_n^{n-1}
+\end{pmatrix},$$
+
+njena determinanta pa je
+
+$$\det V = \prod_{1 \leq i < j \leq n} (x_j - x_i).$$
+
+Za $n = 3$ formulo preverimo neposredno. Od drugega in tretjega stolpca odštejemo $x_1$-kratnik prejšnjega stolpca, začnemo pri zadnjem:
+
+$$\begin{aligned}
+\begin{vmatrix} 1 & x_1 & x_1^2 \\ 1 & x_2 & x_2^2 \\ 1 & x_3 & x_3^2 \end{vmatrix}
+&= \begin{vmatrix} 1 & 0 & 0 \\ 1 & x_2 - x_1 & x_2(x_2 - x_1) \\ 1 & x_3 - x_1 & x_3(x_3 - x_1) \end{vmatrix} \\
+&= (x_2 - x_1)(x_3 - x_1) \begin{vmatrix} 1 & x_2 \\ 1 & x_3 \end{vmatrix} \\
+&= (x_2 - x_1)(x_3 - x_1)(x_3 - x_2).
+\end{aligned}$$
+
+Determinanta je torej različna od nič natanko takrat, ko so števila $x_1, \ldots, x_n$ paroma različna. V tem primeru ima sistem
+
+$$\begin{aligned}
+c_0 + c_1 x_1 + c_2 x_1^2 + \cdots + c_{n-1} x_1^{n-1} &= y_1, \\
+c_0 + c_1 x_2 + c_2 x_2^2 + \cdots + c_{n-1} x_2^{n-1} &= y_2, \\
+&\;\;\vdots \\
+c_0 + c_1 x_n + c_2 x_n^2 + \cdots + c_{n-1} x_n^{n-1} &= y_n
+\end{aligned}$$
+
+natanko eno rešitev: skozi $n$ točk $(x_i, y_i)$ z različnimi absciscami poteka natanko en polinom stopnje največ $n - 1$. Zapišemo ga lahko v Lagrangeevi obliki
+
+$$p(x) = \sum_{i=1}^{n} y_i \prod_{\substack{j = 1 \\ j \neq i}}^{n} \frac{x - x_j}{x_i - x_j}.$$

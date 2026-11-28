@@ -1,0 +1,56 @@
+% Dva dokaza formule za vsoto prvih n števil. Prosojnico vključita
+% berlin-4-3.tex, kjer je utesnjena, in berlin-16-9.tex, kjer je najprej še z
+% glavo in nogo, nato pa brez njiju. Dokument mora naložiti paketa amsmath in
+% tikz s knjižnico decorations.pathreplacing ter z ukazom \vsotakoraki določiti,
+% katere korake prosojnice pokaže: v berlin-4-3.tex vse (1-), v
+% berlin-16-9.tex le zadnjega (4), saj se tam slika ne gradi več.
+\begin{frame}<\vsotakoraki>{V matematiki so slike sploh pomembne}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Indukcija}
+        \scriptsize
+        % Razmik okoli izpeljave ostane sicer takšen kot pri običajni velikosti.
+        \setlength{\abovedisplayskip}{3pt}
+        \setlength{\belowdisplayskip}{3pt}
+        Trdimo, da za vsak \(n \geq 1\) velja
+        \(1 + 2 + \dots + n = n(n + 1)/2\).
+
+        \emph{Baza.} Za \(n = 1\) je leva stran \(1\), desna pa
+        \(1 \cdot 2/2 = 1\).
+
+        \emph{Korak.} Predpostavimo, da formula velja za \(n\). Po indukcijski
+        predpostavki je
+        \begin{align*}
+          &1 + \dots + n + (n + 1)
+          = \frac{n(n + 1)}{2} + (n + 1) \\
+          &= \frac{n(n + 1) + 2(n + 1)}{2}
+          = \frac{(n + 1)(n + 2)}{2},
+        \end{align*}
+        kar je formula za \(n + 1\). Po načelu indukcije formula velja za vsak
+        \(n \geq 1\).
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Slika}
+        \centering
+        % Modro stopnišče je 1 + 2 + 3 + 4, rdeče je enako, le obrnjeno. Skupaj
+        % dasta pravokotnik n × (n + 1).
+        \begin{tikzpicture}[x=0.45cm, y=0.45cm]
+          \useasboundingbox (-0.5, -1.2) rectangle (6, 5.2);
+          \foreach \i in {1, ..., 4}
+            \foreach \j in {1, ..., \i}
+              \fill[blue!60, draw=white] (\i - 1, \j - 1) rectangle ++(1, 1);
+          \foreach \i in {1, ..., 4}
+            \foreach \j in {\i, ..., 4}
+              \fill<2->[red!60, draw=white] (\i - 1, \j) rectangle ++(1, 1);
+          \draw<3->[decorate, decoration={brace, mirror}] (0, -0.2) -- (4, -0.2)
+            node[midway, below=2pt] {\(n\)};
+          \draw<3->[decorate, decoration={brace, mirror}] (4.2, 0) -- (4.2, 5)
+            node[midway, right=2pt] {\(n + 1\)};
+        \end{tikzpicture}
+
+        \onslide<4->{\(2 (1 + \dots + n) = n (n + 1)\)}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}

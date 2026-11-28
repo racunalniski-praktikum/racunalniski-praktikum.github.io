@@ -1,0 +1,925 @@
+
+<!DOCTYPE html>
+
+
+<html lang="sl" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mathematica 2 &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=eb76cb1f" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=a3a20203"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=25418326"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=852ec8ec"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '11-mathematica-2';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Abecedni seznam" href="genindex.html" />
+    <link rel="search" title="Išči" href="search.html" />
+    <link rel="next" title="Nameščanje programske opreme" href="A-programska-oprema.html" />
+    <link rel="prev" title="Mathematica 1" href="10-mathematica-1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="sl"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-besedilne-datoteke.html">Besedilne datoteke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-ukazna-vrstica.html">Ukazna vrstica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-upravljanje-razlicic.html">Upravljanje različic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-html.html">Označevalni jezik HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13-utrdimo-osnove.html">Utrdimo osnove</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matematični dokumenti</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05-latex.html">Uvod v LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-sklicevanje-in-definicije.html">Sklicevanje in definicije</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-slike.html">Slike</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-predstavitve.html">Predstavitve</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Preglednice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="09-preglednice.html">Preglednice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simbolno računanje</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="10-mathematica-1.html">Mathematica 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Mathematica 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="H-regex.html">Regularni izrazi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L-latex.html">LaTeX: pogosta vprašanja in reševanje težav</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Prenesite to stran">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/11-mathematica-2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Prenesite izvorno datoteko"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Natisni v PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Celozaslonski način"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mathematica 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Vsebina </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enacbe-in-neenacbe">Enačbe in neenačbe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solve"><code class="docutils literal notranslate"><span class="pre">Solve</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nsolve"><code class="docutils literal notranslate"><span class="pre">NSolve</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#findroot"><code class="docutils literal notranslate"><span class="pre">FindRoot</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduce"><code class="docutils literal notranslate"><span class="pre">Reduce</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#delo-s-seznami">Delo s seznami</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select"><code class="docutils literal notranslate"><span class="pre">Select</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map"><code class="docutils literal notranslate"><span class="pre">Map</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicije-funkcij-z-vzorci">Definicije funkcij z vzorci</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primer-odvajanje">Primer: odvajanje</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#takojsnje-in-zakasnjeno-prirejanje">Takojšnje in zakasnjeno prirejanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vec-o-grafih">Več o grafih</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloge">Naloge</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="mathematica-2">
+<h1>Mathematica 2<a class="headerlink" href="#mathematica-2" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-mathematica"><span class="std std-ref">Mathematica</span></a></p></li>
+</ul>
+</div>
+<p>V tem poglavju boste znanje iz prejšnjega poglavja uporabili na zahtevnejših primerih z več koraki.
+Pri njih vam bosta pomagali dve navadi:</p>
+<ul class="simple">
+<li><p>Vsako nalogo rešite v svoji celici, celico pa začnite s funkcijo <code class="docutils literal notranslate"><span class="pre">Clear</span></code> za vse simbole, ki jih v njej definirate (na primer <code class="docutils literal notranslate"><span class="pre">Clear[n,</span> <span class="pre">stevila]</span></code>).
+Mathematica si namreč zapomni vsako definicijo, ki ste jo izvedli, zato lahko simbol iz prejšnje naloge pokvari naslednjo.
+S <code class="docutils literal notranslate"><span class="pre">Clear</span></code> se celica vsakič izvede enako, tudi ko jo po popravku izvedete znova.</p></li>
+<li><p>Dolge klice razdelite v več vrstic (na primer <code class="docutils literal notranslate"><span class="pre">graf1</span></code> spodaj).
+Manjkajočo vejico ali oklepaj tako najdete hitreje.</p></li>
+</ul>
+<section id="enacbe-in-neenacbe">
+<h2>Enačbe in neenačbe<a class="headerlink" href="#enacbe-in-neenacbe" title="Link to this heading">#</a></h2>
+<p>Za reševanje enačb in neenačb boste uporabljali štiri funkcije:</p>
+<ul class="simple">
+<li><p>natančne rešitve enačbe ali sistema enačb: <code class="docutils literal notranslate"><span class="pre">Solve</span></code>,</p></li>
+<li><p>številski približki rešitev: <code class="docutils literal notranslate"><span class="pre">NSolve</span></code>,</p></li>
+<li><p>enačbe, ki niso polinomske, na primer <span class="math notranslate nohighlight">\(\cos x = x\)</span>: <code class="docutils literal notranslate"><span class="pre">FindRoot</span></code>,</p></li>
+<li><p>neenačbe: <code class="docutils literal notranslate"><span class="pre">Reduce</span></code>.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Solve</span></code> in <code class="docutils literal notranslate"><span class="pre">NSolve</span></code> sta namenjena predvsem polinomskim enačbam.</p>
+<section id="solve">
+<h3><code class="docutils literal notranslate"><span class="pre">Solve</span></code><a class="headerlink" href="#solve" title="Link to this heading">#</a></h3>
+<p>Enačbe in sisteme enačb rešujete s funkcijo <code class="docutils literal notranslate"><span class="pre">Solve</span></code>, ki sprejme dva argumenta.
+V prvem podate enačbo ali seznam enačb, v drugem pa neznanko ali seznam neznank, ki jih iščete.
+Rezultat je seznam rešitev, v katerem je vsaka rešitev seznam prepisovalnih pravil, po eno za vsako neznanko.
+Rešitve torej lahko uporabite z operatorjem <code class="docutils literal notranslate"><span class="pre">/.</span></code>, ki izraz na levi izračuna za vsako rešitev posebej:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">enacba</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">resitve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Solve</span><span class="p">[</span><span class="n">enacba</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">}}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="n">resitve</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">enacba</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="n">resitve</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">True</span><span class="p">,</span><span class="w"> </span><span class="n">True</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Sistem enačb zapišete kot seznam enačb, neznanke pa kot seznam neznank.
+V tem primeru bo rezultat ena rešitev, ki določa vse neznanke.
+Tu se vidi, zakaj <code class="docutils literal notranslate"><span class="pre">Solve</span></code> ne vrača samo številskih rešitev: prepisovalna pravila povedo, kateri neznanki pripada katera vrednost.
+Če želite dobiti samo vrednosti obeh neznank, lahko prepisovalni pravili uporabite na seznamu neznank:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">sistem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">resitev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Solve</span><span class="p">[</span><span class="n">sistem</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">}]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">}}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">}</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="n">resitev</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">}}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Solve</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Reals</span><span class="p">]</span><span class="w"> </span><span class="c">(* Samo realne rešitve *)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">}}</span>
+</pre></div>
+</div>
+<p>Za kvadratno enačbo poznate obrazec, ki rešitve izrazi z osnovnimi računskimi operacijami in kvadratnim korenom.
+Za enačbe pete in višjih stopenj takega obrazca v splošnem ni.
+V takih primerih <code class="docutils literal notranslate"><span class="pre">Solve</span></code> rešitev včasih le opiše z izrazom <code class="docutils literal notranslate"><span class="pre">Root</span></code>.
+V prvem delu <code class="docutils literal notranslate"><span class="pre">#1</span></code> stoji namesto neznanke, drugi del pa pove, za katero ničlo gre:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Solve</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="mi">5</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Reals</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Root</span><span class="p">[</span><span class="mi">-1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">#1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">#1</span><span class="o">^</span><span class="mi">5</span><span class="w"> </span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]}}</span>
+</pre></div>
+</div>
+</section>
+<section id="nsolve">
+<h3><code class="docutils literal notranslate"><span class="pre">NSolve</span></code><a class="headerlink" href="#nsolve" title="Link to this heading">#</a></h3>
+<p>Številski približek izračuna funkcija <code class="docutils literal notranslate"><span class="pre">NSolve</span></code>, ki podobno kot <code class="docutils literal notranslate"><span class="pre">Solve</span></code> sprejme argument <code class="docutils literal notranslate"><span class="pre">Reals</span></code>.
+Ker <code class="docutils literal notranslate"><span class="pre">NSolve</span></code> računa s približki (tako kot <code class="docutils literal notranslate"><span class="pre">N</span></code>), pri vstavljanju rešitve v enačbo ne dobite natanko <code class="docutils literal notranslate"><span class="pre">0</span></code>, temveč zelo majhno število:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">priblizek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NSolve</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="mi">5</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Reals</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">1.1673</span><span class="p">}}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">5</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="n">priblizek</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">4.44089</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">-16</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="findroot">
+<h3><code class="docutils literal notranslate"><span class="pre">FindRoot</span></code><a class="headerlink" href="#findroot" title="Link to this heading">#</a></h3>
+<p>Za druge enačbe, na primer <span class="math notranslate nohighlight">\(\cos x = x\)</span>, uporabite <code class="docutils literal notranslate"><span class="pre">FindRoot</span></code>, ki poišče samo eno rešitev blizu začetnega približka.
+Če ima enačba več rešitev, jih poiščete z različnimi začetnimi približki:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">resitev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindRoot</span><span class="p">[</span><span class="n">Cos</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">}]</span><span class="w"> </span><span class="c">(* Začetni približek 1 *)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">0.739085</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="reduce">
+<h3><code class="docutils literal notranslate"><span class="pre">Reduce</span></code><a class="headerlink" href="#reduce" title="Link to this heading">#</a></h3>
+<p>Neenačbe rešuje funkcija <code class="docutils literal notranslate"><span class="pre">Reduce</span></code>, ki vrne pogoj, ki ga mora izpolnjevati spremenljivka:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">pogoj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Reduce</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Reduce</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">pogoj</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="p">{{</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">}}</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">False</span><span class="p">,</span><span class="w"> </span><span class="n">True</span><span class="p">,</span><span class="w"> </span><span class="n">False</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="delo-s-seznami">
+<h2>Delo s seznami<a class="headerlink" href="#delo-s-seznami" title="Link to this heading">#</a></h2>
+<p>Funkcijo <code class="docutils literal notranslate"><span class="pre">Table</span></code> ste spoznali v prejšnjem poglavju.
+Seznam za spremenljivko lahko zapišete na več načinov:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Table[⟨izraz⟩,</span> <span class="pre">{⟨i⟩,</span> <span class="pre">⟨max⟩}]</span></code>: <code class="docutils literal notranslate"><span class="pre">⟨i⟩</span></code> teče od <code class="docutils literal notranslate"><span class="pre">1</span></code> do <code class="docutils literal notranslate"><span class="pre">⟨max⟩</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Table[⟨izraz⟩,</span> <span class="pre">{⟨i⟩,</span> <span class="pre">⟨min⟩,</span> <span class="pre">⟨max⟩}]</span></code>: <code class="docutils literal notranslate"><span class="pre">⟨i⟩</span></code> teče od <code class="docutils literal notranslate"><span class="pre">⟨min⟩</span></code> do <code class="docutils literal notranslate"><span class="pre">⟨max⟩</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Table[⟨izraz⟩,</span> <span class="pre">{⟨i⟩,</span> <span class="pre">⟨min⟩,</span> <span class="pre">⟨max⟩,</span> <span class="pre">⟨korak⟩}]</span></code>: <code class="docutils literal notranslate"><span class="pre">⟨i⟩</span></code> teče od <code class="docutils literal notranslate"><span class="pre">⟨min⟩</span></code> do <code class="docutils literal notranslate"><span class="pre">⟨max⟩</span></code> s korakom <code class="docutils literal notranslate"><span class="pre">⟨korak⟩</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Table[⟨izraz⟩,</span> <span class="pre">{⟨i⟩,</span> <span class="pre">⟨seznam</span> <span class="pre">vrednosti⟩}]</span></code>: <code class="docutils literal notranslate"><span class="pre">⟨i⟩</span></code> zavzame naštete vrednosti.</p></li>
+</ul>
+<p>Izraz v tabeli je lahko karkoli, kar ste spoznali do zdaj, tudi rešitev enačbe ali graf.
+Prvi spodnji primer vrne rešitve enačbe <span class="math notranslate nohighlight">\(x^2 = a\)</span> za štiri vrednosti parametra <span class="math notranslate nohighlight">\(a\)</span>, drugi pa nariše štiri grafe drugega ob drugem.</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">n</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.25</span><span class="p">}]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0625</span><span class="p">,</span><span class="w"> </span><span class="mf">0.25</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5625</span><span class="p">,</span><span class="w"> </span><span class="mf">1.</span><span class="p">}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">n</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">}}]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">49</span><span class="p">}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">x</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="n">Solve</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">}]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="o">-</span><span class="n">Sqrt</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">Sqrt</span><span class="p">[</span><span class="mi">2</span><span class="p">]},</span><span class="w"> </span><span class="p">{</span><span class="o">-</span><span class="n">Sqrt</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="n">Sqrt</span><span class="p">[</span><span class="mi">3</span><span class="p">]},</span><span class="w"> </span><span class="p">{</span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">}}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">Plot</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">}],</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p>Seznam zaporednih celih števil vrne funkcija <code class="docutils literal notranslate"><span class="pre">Range</span></code>, <code class="docutils literal notranslate"><span class="pre">Length</span></code> pa vrne dolžino seznama.</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Range</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Length</span><span class="p">[</span><span class="n">prastevila</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">15</span>
+</pre></div>
+</div>
+<p>Posamezen element seznama vrne funkcija <code class="docutils literal notranslate"><span class="pre">Part</span></code>.
+Prvi argument je seznam, drugi pa mesto elementa v njem; elementi so oštevilčeni od <code class="docutils literal notranslate"><span class="pre">1</span></code> naprej.
+Običajno jo zapišete krajše, z dvojnimi oglatimi oklepaji za seznamom.
+Simbol <code class="docutils literal notranslate"><span class="pre">resitve</span></code> ima še vedno vrednost iz začetka poglavja, zato v spodnjem primeru <code class="docutils literal notranslate"><span class="pre">resitve[[2]]</span></code> vrne drugo rešitev enačbe, z <code class="docutils literal notranslate"><span class="pre">/.</span></code> pa njeno vrednost:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Part</span><span class="p">[</span><span class="n">prastevila</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">22</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">prastevila</span><span class="p">[[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">resitve</span><span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">24</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="n">resitve</span><span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">25</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+</pre></div>
+</div>
+<section id="select">
+<h3><code class="docutils literal notranslate"><span class="pre">Select</span></code><a class="headerlink" href="#select" title="Link to this heading">#</a></h3>
+<p>Funkcija <code class="docutils literal notranslate"><span class="pre">Select</span></code> iz seznama izbere elemente, ki izpolnjujejo pogoj
+Drugi argument funkcije <code class="docutils literal notranslate"><span class="pre">Select</span></code> je pogoj: funkcija, ki za vsak element vrne <code class="docutils literal notranslate"><span class="pre">True</span></code> ali <code class="docutils literal notranslate"><span class="pre">False</span></code>.
+Takim funkcijam pravimo predikati.
+Imena vgrajenih predikatov se končajo s <code class="docutils literal notranslate"><span class="pre">Q</span></code> (angl. <em>question</em>), na primer <code class="docutils literal notranslate"><span class="pre">PrimeQ</span></code>, <code class="docutils literal notranslate"><span class="pre">EvenQ</span></code> in <code class="docutils literal notranslate"><span class="pre">OddQ</span></code>.
+Svoj predikat definirate kot vsako drugo funkcijo.
+Spodnji predikat preveri, ali je ostanek pri deljenju s <code class="docutils literal notranslate"><span class="pre">4</span></code> enak <code class="docutils literal notranslate"><span class="pre">1</span></code>; ostanek izračuna funkcija <code class="docutils literal notranslate"><span class="pre">Mod</span></code>:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">prastevila</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Select</span><span class="p">[</span><span class="n">Range</span><span class="p">[</span><span class="mi">50</span><span class="p">],</span><span class="w"> </span><span class="n">PrimeQ</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">26</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w"> </span><span class="mi">43</span><span class="p">,</span><span class="w"> </span><span class="mi">47</span><span class="p">}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">ostanek1</span><span class="p">[</span><span class="nv">n_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">Mod</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Select</span><span class="p">[</span><span class="n">prastevila</span><span class="p">,</span><span class="w"> </span><span class="n">ostanek1</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">28</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="map">
+<h3><code class="docutils literal notranslate"><span class="pre">Map</span></code><a class="headerlink" href="#map" title="Link to this heading">#</a></h3>
+<p>Funkcija <code class="docutils literal notranslate"><span class="pre">Map</span></code> uporabi funkcijo na vsakem elementu seznama.
+Mnoge funkcije, na primer računske operacije, same delujejo po elementih, kot ste videli v prejšnjem poglavju; <code class="docutils literal notranslate"><span class="pre">Map</span></code> potrebujete za tiste, ki tega ne počnejo.
+Namesto <code class="docutils literal notranslate"><span class="pre">Map[f,</span> <span class="pre">seznam]</span></code> lahko pišete tudi <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">/&#64;</span> <span class="pre">seznam</span></code>.
+V spodnjem primeru je <code class="docutils literal notranslate"><span class="pre">delitelji</span></code> seznam treh seznamov:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Length[delitelji]</span></code> prešteje elemente seznama <code class="docutils literal notranslate"><span class="pre">delitelji</span></code>, torej tri sezname,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Length</span> <span class="pre">/&#64;</span> <span class="pre">delitelji</span></code> prešteje elemente vsakega od njih.</p></li>
+</ul>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">delitelji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Map</span><span class="p">[</span><span class="n">Divisors</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">}]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">29</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">}}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">30</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Length</span><span class="p">[</span><span class="n">delitelji</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">30</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Length</span><span class="w"> </span><span class="o">/@</span><span class="w"> </span><span class="n">delitelji</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">31</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="definicije-funkcij-z-vzorci">
+<h2>Definicije funkcij z vzorci<a class="headerlink" href="#definicije-funkcij-z-vzorci" title="Link to this heading">#</a></h2>
+<p>Podčrtaj na levi strani definicije funkcije (na primer <code class="docutils literal notranslate"><span class="pre">f[x_]</span> <span class="pre">:=</span> <span class="pre">x^2</span> <span class="pre">+</span> <span class="pre">1</span></code> iz prejšnjega poglavja) pomeni, da je <code class="docutils literal notranslate"><span class="pre">x_</span></code> vzorec: ujema se s katerimkoli argumentom, Mathematica pa na desni strani vsak <code class="docutils literal notranslate"><span class="pre">x</span></code> zamenja s tem argumentom.
+Definicija funkcije je v resnici prepisovalno pravilo (le da vam ni treba uporabiti operatorja <code class="docutils literal notranslate"><span class="pre">/.</span></code>).
+Mathematica vsak izraz, ki se ujema z levo stranjo, nadomesti z desno stranjo.
+Če se argument ne ujema z nobenim od vzorcev, Mathematica izraza ne izračuna.
+Za isto funkcijo lahko podate več prepisovalnih pravil, na primer za izbrane vrednosti argumenta.
+Mathematica najprej poskusi prepisovalna pravila za izbrane vrednosti in šele nato splošno prepisovalno pravilo.
+V spodnjem primeru splošno prepisovalno pravilo prepisuje <code class="docutils literal notranslate"><span class="pre">fib[n]</span></code> v <code class="docutils literal notranslate"><span class="pre">fib[n</span> <span class="pre">-</span> <span class="pre">1]</span> <span class="pre">+</span> <span class="pre">fib[n</span> <span class="pre">-</span> <span class="pre">2]</span></code>, dokler ne pride do <code class="docutils literal notranslate"><span class="pre">fib[1]</span></code> in <code class="docutils literal notranslate"><span class="pre">fib[2]</span></code>.
+Tam se uporabita prepisovalni pravili za izbrani vrednosti, ki vrneta <code class="docutils literal notranslate"><span class="pre">1</span></code>, zato se računanje ustavi.</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">fib</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">33</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">fib</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">fib</span><span class="p">[</span><span class="nv">n_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">fib</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fib</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="n">fib</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">35</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">55</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Vzorec ima lahko tudi obliko.</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">36</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">razdalja</span><span class="p">[{</span><span class="nv">x1_</span><span class="p">,</span><span class="w"> </span><span class="nv">y1_</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">x2_</span><span class="p">,</span><span class="w"> </span><span class="nv">y2_</span><span class="p">}]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">Sqrt</span><span class="p">[(</span><span class="n">x2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">y2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">37</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">razdalja</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">}]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">37</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">38</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">razdalja</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="mi">5</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">38</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="n">razdalja</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<section id="primer-odvajanje">
+<h3>Primer: odvajanje<a class="headerlink" href="#primer-odvajanje" title="Link to this heading">#</a></h3>
+<p>Spodnja funkcija <code class="docutils literal notranslate"><span class="pre">odvod</span></code> ima prepisovalno pravilo za potence, za sinus in za vsoto.</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">39</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="nv">n_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">40</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">Sin</span><span class="p">[</span><span class="n">x</span><span class="p">]]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">41</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="nv">u_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">v_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">v</span><span class="p">]</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">42</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">x</span><span class="p">]]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">42</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">43</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">Cos</span><span class="p">[</span><span class="n">x</span><span class="p">]]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">43</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">Cos</span><span class="p">[</span><span class="n">x</span><span class="p">]]</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">44</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">44</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">odvod[x^3</span> <span class="pre">+</span> <span class="pre">Sin[x]]</span></code>: argument se ujema z vzorcem <code class="docutils literal notranslate"><span class="pre">u_</span> <span class="pre">+</span> <span class="pre">v_</span></code>, zato <code class="docutils literal notranslate"><span class="pre">odvod</span></code> odvaja vsak sumand posebej, vsak sumand pa se ujema z enim od preostalih dveh prepisovalnih pravil,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">odvod[Cos[x]]</span></code> ostane neizračunan, ker za kosinus prepisovalnega pravila ni,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">odvod[x^2</span> <span class="pre">+</span> <span class="pre">x]</span></code> ostane delno neizračunan: sumand <code class="docutils literal notranslate"><span class="pre">x</span></code> se z vzorcem <code class="docutils literal notranslate"><span class="pre">x^n_</span></code> ne ujema, čeprav je matematično enak <code class="docutils literal notranslate"><span class="pre">x^1</span></code>, ker vzorec primerja obliko izraza, ne njegove vrednosti.</p></li>
+</ul>
+<p>Manjkajoče prepisovalno pravilo dodate brez podčrtaja, da se ujema le s simbolom <code class="docutils literal notranslate"><span class="pre">x</span></code>:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">45</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">46</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">46</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">x</span>
+</pre></div>
+</div>
+<p>Vsa prepisovalna pravila, ki jih ima funkcija, izpiše <code class="docutils literal notranslate"><span class="pre">?odvod</span></code>.
+Nova definicija z enako levo stranjo staro zamenja, definicija z drugačno levo stranjo pa doda novo prepisovalno pravilo.
+Stara prepisovalna pravila ostanejo, dokler jih ne pobrišete s <code class="docutils literal notranslate"><span class="pre">Clear[odvod]</span></code>.</p>
+<p>Funkcija <code class="docutils literal notranslate"><span class="pre">odvod</span></code> odvaja le po <code class="docutils literal notranslate"><span class="pre">x</span></code>, ker je simbol <code class="docutils literal notranslate"><span class="pre">x</span></code> zapisan v njenih prepisovalnih pravilih.
+Za odvod po drugi spremenljivki to spremenljivko podate kot drugi argument in jo v prepisovalnih pravilih zapišete z vzorcem <code class="docutils literal notranslate"><span class="pre">y_</span></code>.
+Vzorec <code class="docutils literal notranslate"><span class="pre">y_</span></code> se v vsakem prepisovalnem pravilu pojavi dvakrat.
+Vzorec se ujema le, če se obe pojavitvi ujemata z istim izrazom, zato prepisovalno pravilo za potence odvaja <code class="docutils literal notranslate"><span class="pre">t^3</span></code> po <code class="docutils literal notranslate"><span class="pre">t</span></code>, ne pa po <code class="docutils literal notranslate"><span class="pre">x</span></code>:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">47</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Clear</span><span class="p">[</span><span class="n">odvod</span><span class="p">]</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">48</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="nv">y_</span><span class="o">^</span><span class="nv">n_</span><span class="p">,</span><span class="w"> </span><span class="nv">y_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="n">y</span><span class="o">^</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">49</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">Sin</span><span class="p">[</span><span class="nv">y_</span><span class="p">],</span><span class="w"> </span><span class="nv">y_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">y</span><span class="p">]</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="nv">u_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">v_</span><span class="p">,</span><span class="w"> </span><span class="nv">y_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">]</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">51</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">odvod</span><span class="p">[</span><span class="n">t</span><span class="o">^</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Sin</span><span class="p">[</span><span class="n">t</span><span class="p">],</span><span class="w"> </span><span class="n">t</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">51</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">t</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Cos</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="takojsnje-in-zakasnjeno-prirejanje">
+<h2>Takojšnje in zakasnjeno prirejanje<a class="headerlink" href="#takojsnje-in-zakasnjeno-prirejanje" title="Link to this heading">#</a></h2>
+<p>Simbolu lahko vrednost priredite z enojnim enačajem <code class="docutils literal notranslate"><span class="pre">=</span></code> ali z <code class="docutils literal notranslate"><span class="pre">:=</span></code>.
+Pri <code class="docutils literal notranslate"><span class="pre">=</span></code> Mathematica desno stran izračuna takoj in si zapomni rezultat.
+Pri <code class="docutils literal notranslate"><span class="pre">:=</span></code> si zapomni desno stran, kot je zapisana, izračuna pa jo vsakič, ko simbol uporabite.
+Razliko pokaže funkcija <code class="docutils literal notranslate"><span class="pre">RandomInteger</span></code>, ki ob vsakem klicu vrne novo naključno število.
+Vaša števila bodo drugačna, vendar bo simbol <code class="docutils literal notranslate"><span class="pre">a</span></code> dobil eno naključno število, simbol <code class="docutils literal notranslate"><span class="pre">b</span></code> pa ob vsaki uporabi izbral novo:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">52</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RandomInteger</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">52</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">7</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">53</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">}</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">53</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">}</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">54</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">RandomInteger</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}]</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">55</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">}</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">55</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Zato funkcije definirate s <code class="docutils literal notranslate"><span class="pre">:=</span></code>.
+Z <code class="docutils literal notranslate"><span class="pre">=</span></code> bi Mathematica desno stran izračunala že ob definiciji, in če bi <code class="docutils literal notranslate"><span class="pre">x</span></code> takrat imel vrednost, bi jo vstavila.
+V spodnjem primeru ima <code class="docutils literal notranslate"><span class="pre">x</span></code> vrednost <code class="docutils literal notranslate"><span class="pre">2</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">g</span></code> vrne <code class="docutils literal notranslate"><span class="pre">5</span></code> pri vsakem argumentu, ker je desna stran postala <code class="docutils literal notranslate"><span class="pre">5</span></code>, še preden je Mathematica shranila prepisovalno pravilo,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h</span></code> desno stran izračuna šele, ko jo uporabite, in sicer z argumentom namesto <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+</ul>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">56</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">56</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">57</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">g</span><span class="p">[</span><span class="nv">x_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">57</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">58</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">g</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">58</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">59</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">h</span><span class="p">[</span><span class="nv">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">60</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">h</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">60</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mi">101</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">61</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Clear</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Dvojni enačaj <code class="docutils literal notranslate"><span class="pre">==</span></code> pa je nekaj povsem drugega: ne priredi ničesar, temveč primerja levo in desno stran.
+<code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">4</span></code> vrne <code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">x^2</span> <span class="pre">==</span> <span class="pre">4</span></code> pa ostane enačba, ker <code class="docutils literal notranslate"><span class="pre">x</span></code> nima vrednosti, in prav takšno enačbo podate funkciji <code class="docutils literal notranslate"><span class="pre">Solve</span></code>.</p>
+</section>
+<section id="vec-o-grafih">
+<h2>Več o grafih<a class="headerlink" href="#vec-o-grafih" title="Link to this heading">#</a></h2>
+<p>Graf lahko dopolnite z nastavitvami in ga združite z drugimi slikami.
+Nastavitev <code class="docutils literal notranslate"><span class="pre">Epilog</span></code> grafu doda geometrijske objekte, ki jih zapišete enako kot v funkciji <code class="docutils literal notranslate"><span class="pre">Graphics</span></code>.
+Funkcija <code class="docutils literal notranslate"><span class="pre">Point</span></code> s seznamom točk nariše vse točke hkrati.
+Nastavitev <code class="docutils literal notranslate"><span class="pre">Filling</span> <span class="pre">-&gt;</span> <span class="pre">Axis</span></code> pobarva območje med grafom in abscisno osjo:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">62</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">graf1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Plot</span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span>
+<span class="w">  </span><span class="n">Epilog</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="n">Red</span><span class="p">,</span><span class="w"> </span><span class="n">PointSize</span><span class="p">[</span><span class="n">Large</span><span class="p">],</span><span class="w"> </span><span class="n">Point</span><span class="p">[{{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}}]}]</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">63</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">graf2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Plot</span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="n">Filling</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Axis</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Funkcija <code class="docutils literal notranslate"><span class="pre">Show</span></code> nariše več slik v isti koordinatni sistem.
+Interval in nastavitve vzame od prve slike, zato je na <a class="reference internal" href="#slika-graf-nicle-ploscina"><span class="std std-numref">sliki 19</span></a> prikazan cel interval od <code class="docutils literal notranslate"><span class="pre">-2</span></code> do <code class="docutils literal notranslate"><span class="pre">2</span></code>.
+V <code class="docutils literal notranslate"><span class="pre">Show</span></code> lahko sestavite tudi grafe in slike iz funkcije <code class="docutils literal notranslate"><span class="pre">Graphics</span></code>:</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">64</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Show</span><span class="p">[</span><span class="n">graf1</span><span class="p">,</span><span class="w"> </span><span class="n">graf2</span><span class="p">]</span>
+</pre></div>
+</div>
+<figure class="align-center" id="slika-graf-nicle-ploscina" style="width: 50%">
+<img alt="Graf funkcije 1 − x² na intervalu od −2 do 2 z rdečima ničlama in pobarvanim območjem med grafom in osjo" src="_images/graf-nicle-ploscina.png" />
+<figcaption>
+<p><span class="caption-number">Slika 19 </span><span class="caption-text">  Graf z označenima ničlama in pobarvanim območjem</span><a class="headerlink" href="#slika-graf-nicle-ploscina" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="naloge">
+<h2>Naloge<a class="headerlink" href="#naloge" title="Link to this heading">#</a></h2>
+<p>Rešite naloge v <a class="reference download internal" download="" href="_downloads/30a0ed0a09b158e834825a92b7f2863c/mathematica2.nb"><span class="xref download myst">zvezku</span></a>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="10-mathematica-1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">nazaj</p>
+        <p class="prev-next-title">Mathematica 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="A-programska-oprema.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">naprej</p>
+        <p class="prev-next-title">Nameščanje programske opreme</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Vsebina
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enacbe-in-neenacbe">Enačbe in neenačbe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solve"><code class="docutils literal notranslate"><span class="pre">Solve</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nsolve"><code class="docutils literal notranslate"><span class="pre">NSolve</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#findroot"><code class="docutils literal notranslate"><span class="pre">FindRoot</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduce"><code class="docutils literal notranslate"><span class="pre">Reduce</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#delo-s-seznami">Delo s seznami</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select"><code class="docutils literal notranslate"><span class="pre">Select</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map"><code class="docutils literal notranslate"><span class="pre">Map</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicije-funkcij-z-vzorci">Definicije funkcij z vzorci</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primer-odvajanje">Primer: odvajanje</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#takojsnje-in-zakasnjeno-prirejanje">Takojšnje in zakasnjeno prirejanje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vec-o-grafih">Več o grafih</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloge">Naloge</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Avtor Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

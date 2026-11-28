@@ -1,0 +1,769 @@
+
+<!DOCTYPE html>
+
+
+<html lang="sl" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Preglednice &#8212; Računalniški praktikum</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/ucbenik.css?v=eb76cb1f" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=a3a20203"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=25418326"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=852ec8ec"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '09-preglednice';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Abecedni seznam" href="genindex.html" />
+    <link rel="search" title="Išči" href="search.html" />
+    <link rel="next" title="Mathematica 1" href="10-mathematica-1.html" />
+    <link rel="prev" title="Predstavitve" href="08-predstavitve.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="sl"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Računalniški praktikum</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Išči</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Uvod
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnovne veščine</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-besedilne-datoteke.html">Besedilne datoteke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-ukazna-vrstica.html">Ukazna vrstica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-upravljanje-razlicic.html">Upravljanje različic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-html.html">Označevalni jezik HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13-utrdimo-osnove.html">Utrdimo osnove</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matematični dokumenti</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05-latex.html">Uvod v LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-sklicevanje-in-definicije.html">Sklicevanje in definicije</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-slike.html">Slike</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-predstavitve.html">Predstavitve</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Preglednice</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Preglednice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simbolno računanje</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="10-mathematica-1.html">Mathematica 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-mathematica-2.html">Mathematica 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plonkci in ostali dodatki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A-programska-oprema.html">Nameščanje programske opreme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B-tipkovnica.html">Plonkec za uporabo tipkovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-ukazna-vrstica.html">Plonkec za ukazno vrstico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D-paleta-ukazov.html">Paleta ukazov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E-posta.html">Pisanje e-pošte profesorjem in asistentom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="F-pogosta-vprasanja.html">Pogosta vprašanja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="G-git.html">Plonkec za Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="H-regex.html">Regularni izrazi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L-latex.html">LaTeX: pogosta vprašanja in reševanje težav</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Prenesite to stran">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/09-preglednice.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Prenesite izvorno datoteko"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Natisni v PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Celozaslonski način"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Preglednice</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Vsebina </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#delo-s-podatki">Delo s podatki</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datoteke-z-nalogami">Datoteke z nalogami</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-rezultati-testa">1. naloga: rezultati testa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-zmage-v-smucanju">2. naloga: zmage v smučanju</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-poraba-goriva">3. naloga: poraba goriva</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-tockovanje-dodatna-naloga">4. naloga: točkovanje (dodatna naloga)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="preglednice">
+<h1>Preglednice<a class="headerlink" href="#preglednice" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Programska oprema</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="A-programska-oprema.html#namestitev-microsoft"><span class="std std-ref">Excel</span></a></p></li>
+</ul>
+</div>
+<p>Excel je program za delo s preglednicami (angl. <em>spreadsheet</em>); podobno delujeta Numbers na macOS in Google Sheets v spletnem brskalniku.
+Datoteka programa Excel je delovni zvezek (angl. <em>workbook</em>) z enim ali več delovnimi listi (angl. <em>worksheet</em>).
+Dele preglednice kaže <a class="reference internal" href="#slika-deli-preglednice"><span class="std std-numref">slika 9</span></a>.</p>
+<figure class="align-center" id="slika-deli-preglednice" style="width: 70%">
+<img alt="Deli preglednice" src="_images/deli-preglednice.svg" />
+<figcaption>
+<p><span class="caption-number">Slika 9 </span><span class="caption-text">  Deli preglednice</span><a class="headerlink" href="#slika-deli-preglednice" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Excel ste najverjetneje že kdaj uporabljali, zato predpostavljamo, da poznate strani <a class="reference external" href="https://support.microsoft.com/en-us/office/what-is-excel-94b00f50-5896-479c-b0c5-ff74603b35a3">vodiča po Excelu</a> iz skupine <em>Get started</em> do vključno strani <em>Create a chart from start to finish</em> in stran <a class="reference external" href="https://support.microsoft.com/en-us/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173"><em>Overview of formulas in Excel</em></a>.
+Še posebej pomembno je, da znate opravila, ki jih na kratko povzemamo spodaj.</p>
+<p><strong>Vrstice, stolpci in listi.</strong>
+Vrstico ali stolpec vstavite ali izbrišete tako, da desno kliknete njegovo oznako (številko vrstice ali črko stolpca) in izberete <em>Insert</em> ali <em>Delete</em>.
+Širino stolpca spremenite tako, da povlečete desni rob njegove oznake; z dvoklikom na ta rob se stolpec razširi ravno toliko, da je vsa vsebina vidna.
+Nov list dodate z gumbom <code class="docutils literal notranslate"><span class="pre">+</span></code> ob zavihkih listov na dnu okna, preimenujete ga z dvoklikom na zavihek, vrstni red listov pa spremenite tako, da zavihek povlečete.</p>
+<p><strong>Izbiranje in premikanje celic.</strong>
+Obseg celic izberete tako, da povlečete od ene vogalne celice do nasprotne, ali tako, da kliknete prvo celico, nato pa s pritisnjeno tipko <kbd>Shift</kbd> še zadnjo.
+S pritisnjeno tipko <kbd>Ctrl</kbd> (🍎 <kbd>Cmd</kbd>) izbiri dodate celice, ki niso sosednje.
+Klik na oznako vrstice ali stolpca izbere celo vrstico ali stolpec.
+Izbiro premaknete tako, da povlečete njen rob, ko se kazalec spremeni v štiri puščice.
+Formule, ki se sklicujejo na premaknjene celice, se pri tem popravijo same.</p>
+<p><strong>Diagrami.</strong>
+Izberite podatke skupaj z naslovi stolpcev in na zavihku <em>Insert</em> izberite vrsto diagrama.
+Ko je diagram izbran, se na traku pojavita zavihka <em>Chart Design</em> in <em>Format</em>.
+Naslove osi, legendo in oznake podatkov dodate na zavihku <em>Chart Design</em> z ukazom <em>Add Chart Element</em>, podatke, ki jih diagram prikazuje, pa spremenite z ukazom <em>Select Data</em>.</p>
+<p><strong>Zapolnjevanje celic.</strong>
+Izbrana celica ali obseg celic ima v spodnjem desnem kotu kvadratek (angl. <em>fill handle</em>).
+Ko ga povlečete, Excel izbiro razširi na nove celice: posamezno vrednost kopira, zaporedje, na primer <code class="docutils literal notranslate"><span class="pre">1</span></code> in <code class="docutils literal notranslate"><span class="pre">2</span></code> ali datum, pa nadaljuje.
+Formula se pri tem prilagodi novemu mestu, kot opisuje razdelek <em>Delo s podatki</em>.
+Dvoklik na kvadratek zapolni stolpec navzdol do zadnje vrstice s podatki v sosednjem stolpcu.</p>
+<p><strong>Sklici v formulah.</strong>
+Formula se začne z znakom <code class="docutils literal notranslate"><span class="pre">=</span></code>.
+Na celico se v njej sklicujete z njenim naslovom, na primer <code class="docutils literal notranslate"><span class="pre">B3</span></code>, na obseg celic pa z naslovoma zgornje leve in spodnje desne celice, ločenima z dvopičjem, na primer <code class="docutils literal notranslate"><span class="pre">B2:D10</span></code>.
+Naslova vam ni treba tipkati: med pisanjem formule kliknite celico ali povlecite čez obseg.
+Na celico na drugem listu se sklicujete z imenom lista in klicajem, na primer <code class="docutils literal notranslate"><span class="pre">Podatki!B3</span></code>; če ime lista vsebuje presledek, ga zapišite v enojnih narekovajih, na primer <code class="docutils literal notranslate"><span class="pre">'Rezultati</span> <span class="pre">2026'!B3</span></code>.</p>
+<section id="delo-s-podatki">
+<h2>Delo s podatki<a class="headerlink" href="#delo-s-podatki" title="Link to this heading">#</a></h2>
+<p><strong>Relativni in absolutni sklici.</strong>
+V formuli lahko uporabite vrednosti iz drugih celic: <code class="docutils literal notranslate"><span class="pre">=B3*C3</span></code> zmnoži vrednosti celic <code class="docutils literal notranslate"><span class="pre">B3</span></code> in <code class="docutils literal notranslate"><span class="pre">C3</span></code>, in ko se katera od njiju spremeni, se rezultat izračuna na novo.
+Tak sklic na celico je običajno relativen: Excel si ne zapomni naslova, ampak to, kje celica leži glede na formulo, na primer dve celici levo od nje.
+Ko formulo kopirate, se zato sklic premakne z njo: če jo kopirate eno vrstico niže, se <code class="docutils literal notranslate"><span class="pre">B3</span></code> spremeni v <code class="docutils literal notranslate"><span class="pre">B4</span></code>.
+Znak <code class="docutils literal notranslate"><span class="pre">$</span></code> pred oznako stolpca ali vrstice to oznako zaklene in sklic postane absoluten: <code class="docutils literal notranslate"><span class="pre">$B$3</span></code> se pri kopiranju ne spremeni, v <code class="docutils literal notranslate"><span class="pre">$B3</span></code> ostane enak stolpec, v <code class="docutils literal notranslate"><span class="pre">B$3</span></code> pa vrstica.
+Absolutni sklic potrebujete, kadar se vse kopije formule sklicujejo na isto celico, na primer na celico s stopnjo davka: <code class="docutils literal notranslate"><span class="pre">=C3*$F$1</span></code>.
+Med vrstami sklica preklapljate s tipko <kbd>F4</kbd> (🍎 <kbd>Cmd</kbd>+<kbd>T</kbd>).</p>
+<p><strong>Tabela.</strong>
+Podatke zapišite tako, da vsaka vrstica ustreza eni enoti, vsak stolpec pa eni njeni lastnosti: v seznamu nakupov je vsak nakup v svoji vrstici, stolpci pa so <code class="docutils literal notranslate"><span class="pre">Kraj</span></code>, <code class="docutils literal notranslate"><span class="pre">Cena</span></code> in <code class="docutils literal notranslate"><span class="pre">Količina</span></code>.
+Take podatke spremenite v tabelo (angl. <em>table</em>) tako, da izberete eno od celic in na zavihku <em>Insert</em> izberete <em>Table</em> (<kbd>Ctrl</kbd>+<kbd>T</kbd>, 🍎 <kbd>Cmd</kbd>+<kbd>T</kbd>).
+Excel zdaj ve, kje se podatki začnejo in končajo, prvo vrstico pa obravnava kot glavo z imeni stolpcev.
+Tabela se sama razširi, ko ji dodate vrstico ali stolpec.
+Excel ji da ime, kot je <code class="docutils literal notranslate"><span class="pre">Table1</span></code>; smiselno ime, na primer <code class="docutils literal notranslate"><span class="pre">Nakupi</span></code>, ji določite na zavihku <em>Table Design</em> (🍎 <em>Table</em>), v polju <em>Table Name</em>.</p>
+<p><strong>Formule z imeni stolpcev.</strong>
+V formuli se na stolpec tabele sklicujete z imenom namesto z naslovi celic: <code class="docutils literal notranslate"><span class="pre">=AVERAGE(Nakupi[Cena])</span></code> izračuna povprečje stolpca <code class="docutils literal notranslate"><span class="pre">Cena</span></code> v tabeli <code class="docutils literal notranslate"><span class="pre">Nakupi</span></code>.
+Znotraj tabele zapis <code class="docutils literal notranslate"><span class="pre">[&#64;Cena]</span></code> pomeni vrednost stolpca <code class="docutils literal notranslate"><span class="pre">Cena</span></code> v isti vrstici, zato <code class="docutils literal notranslate"><span class="pre">=[&#64;Cena]*[&#64;Količina]</span></code> izračuna znesek za vsako vrstico posebej.
+Takih sklicev vam ni treba tipkati: Excel jih zapiše sam, ko med pisanjem formule kliknete celico ali izberete stolpec tabele.
+Formula, ki jo vpišete v eno celico stolpca, se sama razširi na ves stolpec tabele.</p>
+<p><strong>Funkcije s pogojem.</strong>
+Funkcija <code class="docutils literal notranslate"><span class="pre">IF</span></code> ima tri argumente: pogoj, vrednost, ki jo vrne, če pogoj drži, in vrednost, ki jo vrne, če ne drži, na primer <code class="docutils literal notranslate"><span class="pre">=IF([&#64;Cena]&gt;100,</span> <span class="pre">&quot;drago&quot;,</span> <span class="pre">&quot;poceni&quot;)</span></code>.
+Funkciji <code class="docutils literal notranslate"><span class="pre">COUNTIF</span></code> in <code class="docutils literal notranslate"><span class="pre">AVERAGEIF</span></code> upoštevata samo celice, ki ustrezajo kriteriju: <code class="docutils literal notranslate"><span class="pre">=COUNTIF(Nakupi[Kraj],</span> <span class="pre">&quot;Ljubljana&quot;)</span></code> prešteje nakupe v Ljubljani, <code class="docutils literal notranslate"><span class="pre">=AVERAGEIF(Nakupi[Kraj],</span> <span class="pre">&quot;Ljubljana&quot;,</span> <span class="pre">Nakupi[Cena])</span></code> pa izračuna njihovo povprečno ceno.
+Argumente ločuje vejica ali podpičje, odvisno od regionalnih nastavitev računalnika; pravo ločilo vam Excel pokaže v namigu, ki se izpiše med pisanjem formule.</p>
+<p><strong>Iskanje z <code class="docutils literal notranslate"><span class="pre">XLOOKUP</span></code>.</strong>
+Funkcija <code class="docutils literal notranslate"><span class="pre">XLOOKUP</span></code> poišče vrednost v enem stolpcu in vrne vrednost iz iste vrstice drugega stolpca.
+Če imate poleg nakupov še tabelo <code class="docutils literal notranslate"><span class="pre">Kraji</span></code> s stolpcema <code class="docutils literal notranslate"><span class="pre">Ime</span></code> in <code class="docutils literal notranslate"><span class="pre">Pošta</span></code>, formula <code class="docutils literal notranslate"><span class="pre">=XLOOKUP([&#64;Kraj],</span> <span class="pre">Kraji[Ime],</span> <span class="pre">Kraji[Pošta])</span></code> za vsak nakup poišče vrstico z njegovim krajem in vrne vrednost iz stolpca <code class="docutils literal notranslate"><span class="pre">Pošta</span></code>.
+Če iskane vrednosti ni, vrne napako <code class="docutils literal notranslate"><span class="pre">#N/A</span></code>.
+S petim argumentom določite, kaj naj stori, kadar natančnega zadetka ni: z <code class="docutils literal notranslate"><span class="pre">-1</span></code> vzame naslednjo manjšo vrednost, z <code class="docutils literal notranslate"><span class="pre">1</span></code> naslednjo večjo.
+Četrti argument, ki pove, kaj naj vrne, če zadetka ni, lahko pri tem pustite prazen: <code class="docutils literal notranslate"><span class="pre">=XLOOKUP(⟨vrednost⟩,</span> <span class="pre">⟨kje</span> <span class="pre">iščemo⟩,</span> <span class="pre">⟨kaj</span> <span class="pre">vrnemo⟩,</span> <span class="pre">,</span> <span class="pre">-1)</span></code>.</p>
+<p><strong>Vrtilna tabela.</strong>
+Vrtilna tabela (angl. <em>PivotTable</em>) povzame podatke iz tabele brez formul.
+Naredite jo tako, da izberete celico v tabeli in na zavihku <em>Insert</em> izberete <em>PivotTable</em>.
+Stolpce tabele, ki se tu imenujejo polja (angl. <em>fields</em>), razporedite v štiri območja.
+Območji <em>Rows</em> in <em>Columns</em> določata, po čem so podatki razdeljeni v skupine, območje <em>Values</em>, kaj se za vsako skupino izračuna (vsota, število, povprečje, najmanjša ali največja vrednost), območje <em>Filters</em> pa, kateri podatki so sploh upoštevani.
+Vrtilna tabela se ne posodobi sama: ko se podatki spremenijo, jo osvežite z ukazom <em>Refresh</em> na zavihku <em>PivotTable Analyze</em>.</p>
+<p><strong>Pogojno oblikovanje.</strong>
+S pogojnim oblikovanjem (<em>Home</em> &gt; <em>Conditional Formatting</em>) videz celice določite s pravilom, na primer da so vrednosti pod 50 rdeče.
+Ko se vrednost spremeni, se videz spremeni z njo.
+Celica, ki jo pobarvate ročno, ostane pobarvana, tudi ko barva ne drži več.</p>
+<p><strong>Uvoz podatkov.</strong>
+Datoteko CSV uvozite z ukazom <em>Data</em> &gt; <em>From Text/CSV</em> (🍎 <em>Data</em> &gt; <em>Get Data (Power Query)</em> &gt; <em>Text/CSV</em>), kjer izberete kodiranje datoteke in ločilo med podatki.
+Če jo samo odprete z dvoklikom, Excel oboje ugiba po regionalnih nastavitvah računalnika: šumniki se lahko pokvarijo, podatki, ločeni z vejicami, pa pristanejo v enem samem stolpcu.</p>
+<p>V datoteki CSV so vrednosti ločene z vejico ali s podpičjem, decimalno ločilo pa je, odvisno od regionalnih nastavitev, pika ali vejica.
+Kjer je decimalno ločilo vejica, kot v slovenskih nastavitvah, vrednosti ločuje podpičje, sicer bi se število <code class="docutils literal notranslate"><span class="pre">3,5</span></code> prebralo kot dve vrednosti.
+Zato je pri takih nastavitvah podpičje tudi ločilo med argumenti formul.
+Če decimalno ločilo v datoteki ni enako kot v nastavitvah, Excel števil ne prepozna in jih uvozi kot besedilo ali kot datume.
+Ločilo med vrednostmi izberete v oknu za uvoz, decimalno ločilo pa v Excelu nastavite z <em>File</em> &gt; <em>Options</em> &gt; <em>Advanced</em> &gt; <em>Use system separators</em> (🍎 <em>Excel</em> &gt; <em>Preferences</em> &gt; <em>Edit</em> &gt; <em>Use system settings</em>).</p>
+</section>
+<section id="datoteke-z-nalogami">
+<h2>Datoteke z nalogami<a class="headerlink" href="#datoteke-z-nalogami" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Za vajo lahko doma rešujete <a class="reference download internal" download="" href="_downloads/d5ef889b246e9aca44caabc414080ac4/excel-uvodne.zip"><span class="xref download myst">uvodne naloge iz Excela</span></a>.</p></li>
+<li><p>Datoteke za vaje najdete v arhivu <a class="reference download internal" download="" href="_downloads/b5e7dd5a2c43c9e6d4ab3bd3de4e0c09/09-preglednice.zip"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">09-preglednice.zip</span></code></span></a>.</p></li>
+</ol>
+<p>Oba arhiva pred delom <a class="reference internal" href="F-pogosta-vprasanja.html#faq-zip"><span class="std std-ref">odpakirajte</span></a>.</p>
+<p>Slike pri nalogah kažejo rešene delovne zvezke, kot jih Excel natisne.
+Na zaslonu so videti nekoliko drugače: brez črt med vsemi celicami, z gumbi za filtriranje v glavah tabel in morda z drugače zapisanimi datumi.
+S slikami zato primerjajte vsebino tabel, ne njihovega videza.</p>
+<p>Večina korakov v nalogah utrjuje snov iz razdelka <em>Delo s podatki</em>.
+Nekaj korakov, označenih z <em>Dodatno</em>, pa samo pokaže, kaj Excel še zmore, na primer tortni diagram na sliki pri prvi nalogi.
+Pri teh so navodila namenoma kratka, saj je za potrebe tega predmeta dovolj, da veste, da možnost obstaja.
+Kako se kaj takega naredi, vprašajte jezikovni model, na primer Gemini v Googlovem iskalniku, in mu povejte, ali Excel uporabljate v sistemu Windows ali macOS.
+Odgovor preverite.
+Pri diagramu ali pogojnem oblikovanju takoj vidite, ali rezultat kaže isto kot slika.
+Pri formuli to ni dovolj, saj lahko tudi napačna formula vrne števila, ki so videti pravilna, zato eno vrstico izračunajte še na roke.</p>
+</section>
+<section id="naloga-rezultati-testa">
+<h2>1. naloga: rezultati testa<a class="headerlink" href="#naloga-rezultati-testa" title="Link to this heading">#</a></h2>
+<p>V delovnem zvezku <code class="docutils literal notranslate"><span class="pre">rezultati.xlsx</span></code> so rezultati testa, ki so ga študenti pisali v treh skupinah.
+Podatki so v tabeli <code class="docutils literal notranslate"><span class="pre">Rezultati</span></code>, povzetek po skupinah pa boste sestavili v tabeli <code class="docutils literal notranslate"><span class="pre">Skupine</span></code>.</p>
+<figure class="align-default" id="slika-rezultati">
+<img alt="Rešena naloga z rezultati testa" src="_images/rezultati.png" />
+<figcaption>
+<p><span class="caption-number">Slika 10 </span><span class="caption-text">  Rešena naloga z rezultati testa</span><a class="headerlink" href="#slika-rezultati" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Študente uredite naraščajoče po priimkih.
+<em>Namig:</em> izberite celico v tabeli in na zavihku <em>Data</em> kliknite <em>Sort</em>; v oknu za urejanje nastavite stolpec <code class="docutils literal notranslate"><span class="pre">Priimek</span></code> in vrstni red <em>A to Z</em>.</p></li>
+<li><p>V stolpcu <code class="docutils literal notranslate"><span class="pre">Opravil</span></code> s funkcijo <code class="docutils literal notranslate"><span class="pre">IF</span></code> sestavite formulo, ki pove, ali ima študent vsaj 50 točk (<code class="docutils literal notranslate"><span class="pre">da</span></code> ali <code class="docutils literal notranslate"><span class="pre">ne</span></code>).
+V tabeli <code class="docutils literal notranslate"><span class="pre">Skupine</span></code> s funkcijo <code class="docutils literal notranslate"><span class="pre">COUNTIF</span></code> v stolpcu <code class="docutils literal notranslate"><span class="pre">Udeležba</span></code> preštejte, koliko študentov je pisalo test v vsaki skupini, s funkcijo <code class="docutils literal notranslate"><span class="pre">AVERAGEIF</span></code> pa v stolpcu <code class="docutils literal notranslate"><span class="pre">2022</span></code> izračunajte povprečno število točk skupine.
+Povprečje naj bo izpisano na dve decimalki, vrednost v celici pa naj ostane nezaokrožena.
+<em>Namig:</em> število izpisanih decimalk nastavite z gumboma <em>Increase Decimal</em> in <em>Decrease Decimal</em> na zavihku <em>Home</em>; vrednost v celici ostane enaka.</p></li>
+<li><p>Enak povzetek sestavite še z <a class="reference external" href="https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576">vrtilno tabelo</a>, ki jo postavite pod tabelo <code class="docutils literal notranslate"><span class="pre">Skupine</span></code>.
+Za vsako skupino naj prikaže udeležbo, povprečje ter največje in najmanjše število točk.
+<em>Namig:</em> polje <code class="docutils literal notranslate"><span class="pre">Točke</span></code> lahko v območje <em>Values</em> povlečete večkrat in vsakič izberete drugo funkcijo.</p></li>
+<li><p>Sestavite stolpični diagram s povprečji točk po skupinah za leti 2021 in 2022 ter mu dodajte naslova osi in legendo.
+<em>Dodatno:</em> tortni diagram na sliki pokaže udeležbo po skupinah, največji kos je odmaknjen, ob kosih pa so oznake z udeležbo.</p></li>
+<li><p>Točke, manjše od 50, s pogojnim oblikovanjem pobarvajte rdeče.
+Rdeče pobarvajte tudi priimke in imena študentov, ki testa niso opravili.
+<em>Namig:</em> izberite priimke in imena od prve vrstice podatkov navzdol, v meniju <em>Conditional Formatting</em> izberite <em>New Rule</em> in nato pravilo s formulo (🍎 slog <em>Classic</em>), formula pa je <code class="docutils literal notranslate"><span class="pre">$E4&lt;50</span></code>.
+Znak <code class="docutils literal notranslate"><span class="pre">$</span></code> zaklene stolpec <code class="docutils literal notranslate"><span class="pre">E</span></code>, zato se priimek in ime ravnata po točkah v svoji vrstici.</p></li>
+</ol>
+</section>
+<section id="naloga-zmage-v-smucanju">
+<h2>2. naloga: zmage v smučanju<a class="headerlink" href="#naloga-zmage-v-smucanju" title="Link to this heading">#</a></h2>
+<p>V datoteki <code class="docutils literal notranslate"><span class="pre">smucanje.csv</span></code> so zbrani podatki o skupnih zmagah v svetovnem pokalu v alpskem smučanju.
+Podatki so ločeni z vejicami, datoteka pa je kodirana v UTF-8.</p>
+<figure class="align-default" id="slika-smucanje">
+<img alt="Vrtilni tabeli in diagram z zmagami v smučanju" src="_images/smucanje.png" />
+<figcaption>
+<p><span class="caption-number">Slika 11 </span><span class="caption-text">  Vrtilni tabeli in diagram z zmagami v smučanju</span><a class="headerlink" href="#slika-smucanje" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Podatke uvozite v nov delovni zvezek in ga shranite kot <code class="docutils literal notranslate"><span class="pre">smucanje.xlsx</span></code>.
+List z uvoženimi podatki preimenujte v <code class="docutils literal notranslate"><span class="pre">Podatki</span></code>, tabelo pa v <code class="docutils literal notranslate"><span class="pre">Zmagovalci</span></code>.
+<em>Namig:</em> v oknu za uvoz preverite, da sta izbrana kodiranje UTF-8 (<em>File Origin</em>) in ločilo vejica (<em>Delimiter</em>); uvoz podatke sam spremeni v tabelo.</p></li>
+<li><p>Na novem listu <code class="docutils literal notranslate"><span class="pre">Zmage</span></code> sestavite vrtilno tabelo, ki za vsako državo pokaže število zmag moških in žensk, kot na levi strani slike.
+Države uredite padajoče po skupnem številu zmag.
+<em>Namig:</em> zmage prešteje polje z besedilom, na primer <code class="docutils literal notranslate"><span class="pre">Zmagovalec</span></code>, ko ga povlečete v območje <em>Values</em>; polje <code class="docutils literal notranslate"><span class="pre">Leto</span></code> bi Excel seštel.
+Za urejanje desno kliknite eno od števil v stolpcu s skupnim številom zmag in izberite <em>Sort</em> &gt; <em>Sort Largest to Smallest</em>.</p></li>
+<li><p>Vrtilni tabeli dodajte diagram, kot je na sliki.
+<em>Namig:</em> izberite celico v vrtilni tabeli in na zavihku <em>Insert</em> izberite naložen stolpični diagram (angl. <em>Stacked Column</em>).</p></li>
+<li><p>Ob prvo postavite drugo vrtilno tabelo, ki pokaže zmagovalce iz Evrope z vsaj dvema zmagama, ločeno za moške in ženske, kot na desni strani slike.
+Zmagovalce uredite padajoče po številu zmag.
+<em>Namigi:</em></p>
+<ul class="simple">
+<li><p>Polje <code class="docutils literal notranslate"><span class="pre">Država</span></code> povlecite v območje <em>Filters</em>; v filtru nad tabelo vključite možnost <em>Select Multiple Items</em> in odstranite kljukici pri državah <code class="docutils literal notranslate"><span class="pre">ZDA</span></code> in <code class="docutils literal notranslate"><span class="pre">Kanada</span></code>.</p></li>
+<li><p>V območje <em>Rows</em> povlecite polje <code class="docutils literal notranslate"><span class="pre">Spol</span></code>, pod njega pa polje <code class="docutils literal notranslate"><span class="pre">Zmagovalec</span></code>.</p></li>
+<li><p>Za pogoj vsaj dveh zmag kliknite puščico v glavi vrtilne tabele, izberite polje <code class="docutils literal notranslate"><span class="pre">Zmagovalec</span></code> in nato <em>Value Filters</em> &gt; <em>Greater Than Or Equal To</em>.</p></li>
+<li><p>Za urejanje v istem meniju izberite <em>More Sort Options</em> in padajoče urejanje po številu zmag.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="naloga-poraba-goriva">
+<h2>3. naloga: poraba goriva<a class="headerlink" href="#naloga-poraba-goriva" title="Link to this heading">#</a></h2>
+<p>V delovnem zvezku <code class="docutils literal notranslate"><span class="pre">poraba.xlsx</span></code> je zapisano, kdaj in koliko goriva smo natočili v avto in koliko je takrat kazal števec kilometrov.
+Točenja so v tabeli <code class="docutils literal notranslate"><span class="pre">Poraba</span></code>, cene bencina pa v tabeli <code class="docutils literal notranslate"><span class="pre">Cene</span></code>.
+Predpostavite, da rezervoar vedno napolnimo do vrha.</p>
+<figure class="align-default" id="slika-poraba">
+<img alt="Rešena naloga s porabo goriva" src="_images/poraba.png" />
+<figcaption>
+<p><span class="caption-number">Slika 12 </span><span class="caption-text">  Rešena naloga s porabo goriva</span><a class="headerlink" href="#slika-poraba" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>V stolpcu <code class="docutils literal notranslate"><span class="pre">Prevoženo</span></code> izračunajte, koliko kilometrov smo prevozili od prejšnjega točenja: od stanja števca odštejte stanje v prejšnji vrstici.
+Prva vrstica nima prejšnjega stanja, zato naj ostane prazna: če Excel formulo razširi na ves stolpec in se v prvi vrstici pokaže napaka <code class="docutils literal notranslate"><span class="pre">#VALUE!</span></code>, vsebino te celice izbrišite.</p></li>
+<li><p>V stolpcu <code class="docutils literal notranslate"><span class="pre">Plačano</span></code> izračunajte, koliko smo plačali za gorivo: litre pomnožite s ceno, ki je veljala na dan točenja.
+Ceno poiščite v tabeli <code class="docutils literal notranslate"><span class="pre">Cene</span></code> s funkcijo <code class="docutils literal notranslate"><span class="pre">XLOOKUP</span></code>.
+<em>Namig:</em> cena velja od datuma v stolpcu <code class="docutils literal notranslate"><span class="pre">Veljavnost</span></code> do naslednje spremembe, zato iščete zadnji datum, ki ni poznejši od datuma točenja; to določite s petim argumentom.</p></li>
+<li><p>V stolpcu <code class="docutils literal notranslate"><span class="pre">Poraba</span></code> izračunajte porabo v litrih na 100 km po formuli <span class="math notranslate nohighlight">\(100 \cdot \frac{\text{litri}}{\text{prevoženo}}\)</span>.
+Prva vrstica naj tudi tu ostane prazna; morebitno napako v njej izbrišite.</p></li>
+<li><p>Stolpec <code class="docutils literal notranslate"><span class="pre">Prikaz</span></code> že vsebuje vrednosti iz stolpca <code class="docutils literal notranslate"><span class="pre">Poraba</span></code>; prikažite jih s stolpci.
+Izberite celice stolpca <code class="docutils literal notranslate"><span class="pre">Prikaz</span></code> in v meniju <em>Conditional Formatting</em> izberite <em>Data Bars</em> &gt; <em>More Rules</em>.
+Vključite možnost <em>Show Bar Only</em>, pri <em>Minimum</em> izberite <em>Lowest Value</em>, pri <em>Maximum</em> pa <em>Highest Value</em>.
+Brez zadnjih dveh nastavitev se vsi stolpci začnejo pri nič in so skoraj enako dolgi.</p></li>
+<li><p><em>Dodatno:</em> sestavite vrtilno tabelo, ki po mesecih pokaže skupno število prevoženih kilometrov in povprečno porabo, kot na dnu slike.</p></li>
+</ol>
+</section>
+<section id="naloga-tockovanje-dodatna-naloga">
+<h2>4. naloga: točkovanje (dodatna naloga)<a class="headerlink" href="#naloga-tockovanje-dodatna-naloga" title="Link to this heading">#</a></h2>
+<p>V delovnem zvezku <code class="docutils literal notranslate"><span class="pre">tockovanje.xlsx</span></code> je točkovanje testa, ki so ga pisali študenti.
+Vsaka postavka je ocenjena s plusom ali krogcem, minusi pa niso vpisani.
+Koliko točk prinese plus in koliko krogec, je za vsako postavko zapisano v stolpcih <code class="docutils literal notranslate"><span class="pre">C</span></code> in <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+<figure class="align-default" id="slika-tockovanje">
+<img alt="Rešena naloga s točkovanjem testa" src="_images/tockovanje.png" />
+<figcaption>
+<p><span class="caption-number">Slika 13 </span><span class="caption-text">  Rešena naloga s točkovanjem testa</span><a class="headerlink" href="#slika-tockovanje" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Študente uredite po abecedi priimkov.
+Ker so študenti v stolpcih in ne v vrsticah, izberite obseg <code class="docutils literal notranslate"><span class="pre">E2:R42</span></code>, v oknu <em>Data</em> &gt; <em>Sort</em> pod <em>Options</em> izberite <em>Sort left to right</em> in nato urejanje po vrstici 2.
+Vrstni red črk s strešico je odvisen od jezikovnih nastavitev, zato se lahko razlikuje od slike.</p></li>
+<li><p>V obarvanih vrsticah 14, 24 in 43 izračunajte točke posameznega sklopa.
+V stolpcih <code class="docutils literal notranslate"><span class="pre">C</span></code> in <code class="docutils literal notranslate"><span class="pre">D</span></code> seštejte, koliko točk prinesejo vsi plusi oziroma vsi krogci sklopa.
+Za vsakega študenta seštejte vrednosti njegovih plusov in krogcev s funkcijo <code class="docutils literal notranslate"><span class="pre">SUMIF</span></code>, ki deluje podobno kot <code class="docutils literal notranslate"><span class="pre">AVERAGEIF</span></code>.
+Formulo sestavite za prvega študenta in jo kopirajte k drugim; prej premislite, kateri sklici se morajo pri kopiranju premakniti in kateri ne.
+V vrstici 45 seštejte točke vseh treh sklopov.</p></li>
+<li><p>Pod naslov <em>Rezultati testa</em> prenesite priimke, imena in skupne točke študentov.
+Izberite priimke in imena (<code class="docutils literal notranslate"><span class="pre">E2:R3</span></code>), jih kopirajte, kliknite celico <code class="docutils literal notranslate"><span class="pre">T6</span></code> in izberite <em>Paste Special</em> z možnostma <em>Values</em> in <em>Transpose</em>; druga vrstice zamenja s stolpci.
+Enako prenesite točke iz vrstice 45 v stolpec <code class="docutils literal notranslate"><span class="pre">Točke</span></code>: možnost <em>Values</em> poskrbi, da se prenesejo števila in ne formule.</p></li>
+<li><p>Študente v tabeli rezultatov uredite padajoče po točkah in v stolpcu <code class="docutils literal notranslate"><span class="pre">Ocena</span></code> izračunajte oceno.
+Ocena je 6 za 50 do 59 točk, 7 za 60 do 69 točk in tako naprej do 10 za 90 do 100 točk; pod 50 točkami naj celica ostane prazna.
+<em>Namig:</em> desetice števila točk dobite s funkcijo <code class="docutils literal notranslate"><span class="pre">TRUNC</span></code>, prazno celico pa s funkcijo <code class="docutils literal notranslate"><span class="pre">IF</span></code>. Preverite, kaj formula vrne za 100 točk.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="08-predstavitve.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">nazaj</p>
+        <p class="prev-next-title">Predstavitve</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="10-mathematica-1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">naprej</p>
+        <p class="prev-next-title">Mathematica 1</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Vsebina
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#delo-s-podatki">Delo s podatki</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datoteke-z-nalogami">Datoteke z nalogami</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-rezultati-testa">1. naloga: rezultati testa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-zmage-v-smucanju">2. naloga: zmage v smučanju</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-poraba-goriva">3. naloga: poraba goriva</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naloga-tockovanje-dodatna-naloga">4. naloga: točkovanje (dodatna naloga)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Avtor Katja Berčič, Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
