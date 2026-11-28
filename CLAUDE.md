@@ -91,6 +91,8 @@ Legacy material that is not in the tree:
 - Terminology, CSS: a selector is an *izbiralec*, glossed `(angl. _selector_)` where a chapter first uses it; a class is a *razred*. *Selektor* appears at most as a gloss, as in past exams. Never *izbirnik*.
 - Terminology, LaTeX: math mode is *matematični način*, of two kinds, *vrstični* (`\(…\)`) and *prikazni* (`\[…\]`). *Matematično okolje* is only an environment, such as those of `amsmath`.
 - Terminology, Mathematica: Mathematica is a *program za simbolno računanje*. Not *sistem za računalniško algebro* or another gloss of *computer algebra system*.
+- Terminology, Mathematica: a rewrite rule is a *prepisovalno pravilo*, written in full also where a sentence refers back. Never the bare *pravilo*.
+- Mathematica examples: an example shows the notebook cells, `In:=` before the input and `Out=` before the result, in a ```` ```mathematica ```` block, instead of a sentence that states the result. The numbering is added at build time (`ucbenik/extensions/mathematica_celice.py`).
 - Terminology, spreadsheets: a spreadsheet is a *preglednica* (per Islovar), both the document and the program. Never *razpredelnica*, except where we quote Moodle's own labels, such as *ocenjevalna razpredelnica*.
 - Spelling: *VSCode* (full name *Visual Studio Code* only at first mention and in the software admonitions).
 - Platform baseline: prose states the behaviour of Git Bash on Windows (in the VSCode terminal) as the plain fact; what works elsewhere is an add-on in parentheses naming the system, e.g. `(na macOS \d sicer deluje)`.
