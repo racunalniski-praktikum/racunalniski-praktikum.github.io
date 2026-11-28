@@ -94,7 +94,7 @@ V navodilih bo včasih tudi povezava na bolj podrobna navodila.
     head -n 58 poglavje12.txt | tail -n 21
     ```
     Kaj mislite, da naredijo posamezni deli ukaza?
- 6. V tem koraku bomo poiskali vse vrstice v datotekah v tem repozitoriju, ki se začnejo z znakom `#`, ki mu sledita dve števki. 
+ 6. V tem koraku bomo poiskali vse vrstice v datotekah v tem imeniku, ki se začnejo z znakom `#`, ki mu sledita dve števki. 
     To naredimo z ukazom `grep` za iskanje z regularnimi izrazi:
     ```bash
     grep -r "#[0-9][0-9]" .
