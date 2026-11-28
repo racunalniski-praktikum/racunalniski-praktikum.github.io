@@ -5,7 +5,6 @@ copyright: "2024"
 # Skrita poglavja se sploh ne zgradijo: brez strani, brez iskalnega indeksa.
 # Poglavje razkrijemo tako, da ga odstranimo od tod IN odkomentiramo v _toc.yml.
 exclude_patterns:
-  - 13-utrdimo-osnove.md
   - 13-animiranje-vektorji-matrike.md
 repository:
   url: 'https://github.com/katjabercic/racunalniski-praktikum'
