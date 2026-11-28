@@ -71,13 +71,13 @@ until the target structure is agreed.
 | 3 | Git in Markdown | A: `ucbenik/02-git-in-markdown{.md,/}`; B: `02-git/` | L3 (+ L1) | TBD | [J] Markdown moves out to L1 (the README exercise is already in the chapter 1 draft); L3 keeps the diff argument |
 | 4 | HTML | A: `ucbenik/04-html{.md,/}` (was `03-html`); B: `03-html/` | L4 | `ucbenik/04-html{.md,/}` | [J] A migrated 2026-10-15; encodings and `podnapisi/` move out to L1 (C3); **to do:** open the chapter on the lecture's question (Markdown cannot style; can a plain-text language?), not on the Word argument, which lecture 1 already makes; **to do:** decide whether MathJax (subsection *Matematika* and steps 2–5 of the 4th exercise) moves to the chapter 5 tutorial — students meet it before they know any LaTeX. Against: the exercise is built as a preview (guess the commands and arguments), and the frame *LaTeX izven LaTeXa* in lecture 5 can pay it off. Decide with Katja, who wrote the exercise |
 | 5 | CSS | A: deleted 2026-10-15; B: `04-css/` | **dropped** | — | [J] no longer taught; the stylesheet link moved to unit 4 (*Vsebina in videz* and exercise 5) (C2) |
-| 6 | Utrdimo osnove | A: `ucbenik/05-utrdimo-osnove{.md,/}` | L2 + L3 | TBD | [J] regex task 1 → L2; the rest is a mixed revision sheet |
+| 6 | Utrdimo osnove | A: `ucbenik/13-utrdimo-osnove{.md,/}` (was `05-utrdimo-osnove`) | L2 + L3 | TBD | [J] regex task 1 → L2; the rest is a mixed revision sheet |
 | 7 | Uvod v LaTeX | A: `ucbenik/06-uvod-v-latex{.md,/}`; B: `05-latex/` | L5 | TBD | [J] **to do (2027/28):** introduce jumping between the `.tex` and the PDF here, where students first compile; move the section *Pregledne datoteke in VSCode* from chapter 8 here with it, and merge into it the paragraph on the reference files at the top of chapter 6, which says the same |
 | 8 | Okolja in sklicevanje | A: `ucbenik/07-okolja-in-sklicevanje{.md,/}`; B: `06-sklicevanje/` | L6 | TBD | [J] |
 | 9 | Predstavitve | A: `ucbenik/08-predstavitve{.md,/}`; B: `07-predstavitve/` | L8 | `ucbenik/08-predstavitve{.md,/}` | [J] A migrated 2026-11-17, still hidden in `_toc.yml` until Katja has read it; it took over the exercises on columns and pictures, on tables and on TikZ from unit 10; its math practice (*Matematika, 1. del*) moves out to standalone material that homework 8 offers to check (**to do**); B's image-format slides move out to L7 (unit 10). Beamer is examined, as one variant of the LaTeX task — keep the material that supports it |
 | 10 | Risanje (TikZ) | A: deleted 2026-11-17; no B counterpart | L7 + L8 | — | [J] merged into unit 9: its exercises on columns and pictures, on tables and on TikZ are exercises 4–6 of chapter 8, rebuilt on the perpendicular construction from lecture 7; its exercises on moving files and on pgfplots are dropped; its math practice (*Matematika, 2. del*) moves out together with that of unit 9. L7 is on pictures in general (including images, formats, RGB and CMYK), with TikZ only as a demo; gains image formats from unit 9 |
 | 11 | Pogoste napake v LaTeXu | B: `08-poprava/` | split across L5–L8 | TBD | [J] no longer one lecture — becomes ten-minute openers (C4) |
-| 12 | Preglednice | A: `ucbenik/09-preglednice{.md,/}` (was `10-razpredelnice`); B: `09-excel/` | L9 | `ucbenik/09-preglednice{.md,/}` | [J] no deck, by design — taught live in Excel (G1); rebuild `rezultati.xlsx` on the five-task exam (G5) |
+| 12 | Preglednice | A: `ucbenik/09-preglednice{.md,/}` (was `10-razpredelnice`); B: `09-excel/` | L9 | `ucbenik/09-preglednice{.md,/}` | [J] no deck, by design — taught live in Excel (G1); `predavanja/09-preglednice/` keeps the four-task 2025/26 results until the 2026/27 results exist (G5) |
 | 13 | Mathematica | A: `ucbenik/10-mathematica-1{.md,/}` (was `11-racunanje-z-mathematico`), `ucbenik/{12,13}-*{.md,/}`; B: `10-mathematica/` | L10 + L11 + L12 (+ L13–14) | TBD | [J] three tool-tour chapters become three argued lectures — a rewrite, not a move (C5); no deck, by design — taught live (G1); rewrite rules are missing everywhere (G6) |
 | 14 | Dodatki / plonkci (A–H) | A: `ucbenik/{A..H}-*.md` | support | TBD | [M] except `H-regex.md` → L2 (C6) and `A-programska-oprema.md`, which needs new entries (G3) |
 | 15 | Slide infrastructure | B: `pomozno/` | all | TBD | [J] blocked on the slides-technology decision |
@@ -710,16 +710,19 @@ These are not contradictions. They are lectures with no source to migrate.
 - **G4 — The text-file exam task has to be written from scratch.** Nothing in the
   legacy material can be adapted. The exam itself is not in this repo and stays in
   the private `zbornica`, with its design in `preverjanje-znanja/README.md`.
-- **G5 — The Excel grades file encodes the old exam.** `B: 09-excel/rezultati.xlsx` is
-  the file lecture 9 builds its pivot tables on. Its columns are
-  `HTML | LaTeX | Excel | Mathematica` — **the four-task exam.**
-  **To do: rebuild it on the new five-task split** (text files, HTML, LaTeX, Excel,
-  Mathematica) before lecture 9 uses it. Otherwise the lecture teaches pivot tables
-  over a structure the course no longer has, and the exercise quietly tells students
-  the wrong thing about their own exam.
-  Publication check, done 2026-09-21: both grade datasets are safe to make public.
-  The slides file carries no names, only enrolment numbers running sequentially from
-  `27000001`. The 28 names in `A: ucbenik/09-preglednice/` are invented.
+- **G5 — The Excel grades file encodes the old exam. Deferred 2026-11-27.**
+  `B: 09-excel/rezultati.xlsx` is the file lecture 9 builds its pivot tables on. Its
+  columns are `HTML | LaTeX | Excel | Mathematica` — **the four-task exam.**
+  It is now `predavanja/09-preglednice/`: the raw data as `podatki.xlsx` and five
+  CSVs, and the finished workbook as `rezultati.xlsx`. The four tasks are kept on
+  purpose, because they are the real results of the 2025/26 term and no five-task
+  results exist yet.
+  **To do: rebuild it on the five-task results of 2026/27** (text files, HTML, LaTeX,
+  Excel, Mathematica) once they exist.
+  Publication check, done 2026-09-21 and again 2026-11-27: both grade datasets are
+  safe to make public. The enrolment numbers run sequentially from `27000001`, and
+  the names in `predavanja/09-preglednice/` and the 28 names in
+  `A: ucbenik/09-preglednice/` are invented.
 - **G6 — Nothing on Mathematica's rewrite rules.** `->`, `/.`, and `:=` against `=`
   appear in no chapter, no notebook and no tutorial sheet, and they were absent from
   the first version of the plan. Lecture 11 now names them, so they are new writing

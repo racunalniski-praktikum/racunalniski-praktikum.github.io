@@ -27,8 +27,8 @@ Prosojnice in datoteke s predavanj pri predmetu Računalniški praktikum. Glavno
    - [prosojnice](07-slike/prosojnice.pdf)
 8. LaTeX 4: predstavitve (nasveti za predstavitve, Beamer: razkrivanje po korakih, teme, stolpci)
    - [prosojnice](08-predstavitve/prosojnice.pdf), sestavljene iz treh dokumentov v različnih temah in razmerjih: [`berlin-4-3.tex`](08-predstavitve/berlin-4-3.tex), [`berlin-16-9.tex`](08-predstavitve/berlin-16-9.tex), [`prosojnice.tex`](08-predstavitve/prosojnice.tex)
-9. Excel
-   <!-- - [prosojnice](09-excel/…) -->
+9. Preglednice
+   - anonimizirani rezultati predmeta: surovi podatki [`podatki.xlsx`](09-preglednice/podatki.xlsx) (tudi v CSV: [študenti](09-preglednice/studenti.csv), [domače naloge](09-preglednice/dn.csv), izpiti [1](09-preglednice/izpit-1.csv), [2](09-preglednice/izpit-2.csv), [3](09-preglednice/izpit-3.csv)) in urejena preglednica [`rezultati.xlsx`](09-preglednice/rezultati.xlsx)
 10. Mathematica 1: uvod
     <!-- - [prosojnice](10-mathematica-1-uvod/…) -->
 11. Mathematica 2: tabele
